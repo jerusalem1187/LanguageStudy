@@ -8,7 +8,7 @@
 <meta name="srs-save-kind" content="file">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>语言复习 · SRS</title>
-<style>
+<style id="srs-style">
 :root{color-scheme:light;--ink:#192638;--muted:#526075;--line:#dbe2eb;--blue:#2057aa;--soft:#edf3ff;--paper:#fff;--bg:#f4f6fa;--red:#a23232;--green:#236043;--amber:#825400;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);line-height:1.65}button,input,textarea,select{font:inherit}button,select,input[type=file]{max-width:100%}button{min-height:44px;padding:.55rem 1rem;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:8px;cursor:pointer}button:hover{background:var(--soft);border-color:#9cb4d7}button:disabled{cursor:default;opacity:.55}button.primary{background:var(--blue);color:white;border-color:var(--blue)}:focus-visible{outline:3px solid #d18718;outline-offset:3px}input:not([type=file]),select,textarea{padding:.65rem .75rem;border:1px solid #a7b4c7;border-radius:7px;background:white;color:var(--ink);min-height:44px;font-size:1rem}textarea{display:block;width:100%;min-height:150px;resize:vertical}input[type=file]{display:block;width:100%;padding:.5rem 0}label{display:block;font-weight:600;margin-bottom:.4rem}h1,h2,h3,h4,p{margin:0 0 .8rem}h1{font-size:1.25rem;letter-spacing:.04em}h2{font-size:1.5rem}h3{font-size:1.15rem}h4{font-size:1rem}a{color:var(--blue)}small,.muted{color:var(--muted);font-size:.9rem}.top{position:sticky;top:0;z-index:10;background:white;border-bottom:1px solid var(--line)}.top-inner,.page{width:min(1120px,100%);margin:auto;padding:1rem 1.4rem}.top-row,.row{display:flex;align-items:center;justify-content:space-between;gap:.8rem;flex-wrap:wrap}.top-row h1{margin:0}.save-status{font-size:.9rem;color:var(--muted)}.dirty{color:var(--amber);font-weight:650}.state-source{font-size:.85rem;color:var(--muted);margin-top:.45rem;overflow-wrap:anywhere}.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:.35rem;margin:0 0 1.25rem}.tabs button{border:0;background:transparent;border-radius:0;border-bottom:3px solid transparent}.tabs button[aria-current=page]{color:var(--blue);border-color:var(--blue);font-weight:700}.notice:empty{display:none}.notice{background:#fff5dc;border:1px solid #e7cf9a;border-radius:8px;padding:.7rem 1rem;margin:0 0 1rem;overflow-wrap:anywhere}.panel{background:white;border:1px solid var(--line);border-radius:12px;padding:1.4rem;margin-bottom:1.2rem;min-width:0}.study{max-width:820px;margin:auto}.counts{display:flex;gap:2rem;margin:1rem 0;flex-wrap:wrap}.count strong{font-size:1.75rem;font-variant-numeric:tabular-nums;margin-right:.35rem}.kicker{font-size:.9rem;color:var(--muted);margin-bottom:1rem}.front{font-size:clamp(2rem,6vw,3rem);line-height:1.45;overflow-wrap:anywhere;margin:1rem 0}.ru-text{font-family:Georgia,"Times New Roman",serif}.example{font-size:1.15rem;margin:1rem 0;white-space:pre-wrap;overflow-wrap:anywhere}.back{border-top:1px solid var(--line);padding-top:1.2rem;margin-top:1.2rem}.meaning{font-size:1.4rem;white-space:pre-wrap;overflow-wrap:anywhere}.answer-input{width:100%;margin:.45rem 0 1rem}.grade-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem;margin-top:1.2rem}.grade{padding:.8rem .4rem;min-width:0}.grade strong,.grade span{display:block}.grade small{display:block;font-size:.8rem}.grade[data-grade="0"]{color:var(--red)}.grade[data-grade="3"]{color:var(--amber)}.grade[data-grade="4"]{color:var(--blue)}.grade[data-grade="5"]{color:var(--green)}.grade.suggested{box-shadow:inset 0 0 0 2px currentColor;background:var(--soft)}.feedback{padding:.65rem .85rem;border-radius:7px;background:var(--soft);margin:.8rem 0;white-space:pre-wrap}.feedback.wrong{background:#fff0ec;color:#7d3226}.feedback.symbols{background:#fff5dc;color:var(--amber)}.actions{display:flex;gap:.65rem;align-items:center;flex-wrap:wrap;margin-top:.8rem}.course-picker{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.3rem}.course-picker button{text-align:left;padding:1rem}.course-picker strong,.course-picker span{display:block}.course-picker button[aria-pressed=true]{background:var(--soft);border-color:var(--blue)}.lesson-text{max-width:850px}.lesson-text ul,.help ul{padding-left:1.35rem}.lesson-text li,.help li{margin:.4rem 0}.table-wrap{max-width:100%;overflow:auto;margin:.8rem 0 1.2rem;border:1px solid var(--line);border-radius:7px}table{border-collapse:collapse;width:100%;text-align:left;font-size:.95rem}th,td{padding:.65rem .75rem;border-bottom:1px solid var(--line);vertical-align:top}th{background:#f0f4f9;font-weight:650}tbody tr:last-child td{border-bottom:0}.vocab{min-width:760px}.vocab td:first-child{width:18%;font-size:1.05rem}.vocab td:nth-child(2){width:17%}.vocab td:nth-child(3){width:32%}.vocab small{display:block;margin-top:.2rem;overflow-wrap:anywhere}.alphabet{min-width:540px}.alphabet .letter{font-size:1.5rem;font-family:Georgia,"Times New Roman",serif}.italic{font-style:italic;font-family:Georgia,"Times New Roman",serif;font-size:1.6em}.alphabet .italic{font-size:1.5rem}.exercise-list{display:grid;gap:.9rem}.exercise{padding:1rem;border:1px solid var(--line);border-radius:8px}.exercise input,.exercise select{max-width:100%;width:22rem}.exercise .feedback{margin-bottom:0}.settings-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start}.settings-grid .panel{margin:0}.span-all{grid-column:1/-1}.limit-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.limit-row input{width:100%}.stats-table{min-width:800px}summary{cursor:pointer;min-height:44px;padding:.4rem 0;font-weight:650}.empty{text-align:center;padding:2.5rem 1rem}.kbd{margin-top:1.1rem;font-size:.85rem;color:var(--muted)}.foot{font-size:.85rem;color:var(--muted);margin:1.5rem 0}.inline-code{font-family:ui-monospace,monospace;overflow-wrap:anywhere}.review-card:focus{outline:none}.loading{padding:2rem}button.secondary{color:var(--blue)}
 @media(max-width:640px){.top-inner,.page{padding:.8rem 1rem}.panel{padding:1rem}.settings-grid,.course-picker{grid-template-columns:1fr}.span-all{grid-column:auto}.top-row{gap:.5rem}.grade-grid{grid-template-columns:1fr 1fr}.counts{gap:1.2rem}.tabs{gap:0}.tabs button{padding:.55rem .35rem}.actions button{flex-grow:1}.top .actions{margin:0}.state-source{font-size:.8rem}.limit-row{grid-template-columns:1fr}.front{margin:.8rem 0}.exercise input,.exercise select{width:100%}.save-status{font-size:.8rem}}
@@ -1821,6 +1821,996 @@
     "example_zh": "这是旅馆。",
     "note": "名词（阳）；重音在 е；词尾 ь 仍是阳性；对应英语 hotel",
     "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0052",
+    "lang": "ru",
+    "lesson": "ru-02",
+    "front": "журна́л",
+    "back": "杂志",
+    "example": "Э́то журна́л.",
+    "example_zh": "这是杂志。",
+    "note": "名词（阳）；假朋友提醒：英语 magazine 对应 журна́л；магазин 是商店；journal 也可指期刊",
+    "tags": "国际词;名词;假朋友"
+  },
+  {
+    "id": "ru-0053",
+    "lang": "ru",
+    "lesson": "ru-02",
+    "front": "магази́н",
+    "back": "商店",
+    "example": "Э́то магази́н.",
+    "example_zh": "这是商店。",
+    "note": "名词（阳）；假朋友：像英语 magazine，但不是杂志；杂志是 журна́л",
+    "tags": "国际词;名词;假朋友"
+  },
+  {
+    "id": "ru-0054",
+    "lang": "ru",
+    "lesson": "ru-02",
+    "front": "аэропо́рт",
+    "back": "机场",
+    "example": "Э́то аэропо́рт.",
+    "example_zh": "这是机场。",
+    "note": "名词（阳）；对应英语 airport；注意开头 аэ",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0055",
+    "lang": "ru",
+    "lesson": "ru-02",
+    "front": "авто́бус",
+    "back": "公共汽车",
+    "example": "Э́то авто́бус.",
+    "example_zh": "这是公共汽车。",
+    "note": "名词（阳）；对应英语 bus / autobus",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0056",
+    "lang": "ru",
+    "lesson": "ru-02",
+    "front": "а́дрес",
+    "back": "地址",
+    "example": "Э́то а́дрес.",
+    "example_zh": "这是地址。",
+    "note": "名词（阳）；对应英语 address；俄语只写一个 д 和一个 с",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0057",
+    "lang": "ru",
+    "lesson": "ru-02",
+    "front": "до́ктор",
+    "back": "医生",
+    "example": "Э́то до́ктор.",
+    "example_zh": "这是医生。",
+    "note": "名词（阳）；对应英语 doctor",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0058",
+    "lang": "ru",
+    "lesson": "ru-02",
+    "front": "дире́ктор",
+    "back": "主任；经理",
+    "example": "Э́то дире́ктор.",
+    "example_zh": "这是主任。",
+    "note": "名词（阳）；对应英语 director；重音在 е",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0059",
+    "lang": "ru",
+    "lesson": "ru-02",
+    "front": "инжене́р",
+    "back": "工程师",
+    "example": "Э́то инжене́р.",
+    "example_zh": "这是工程师。",
+    "note": "名词（阳）；对应英语 engineer；重音在最后的 е",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0060",
+    "lang": "ru",
+    "lesson": "ru-02",
+    "front": "футбо́л",
+    "back": "足球",
+    "example": "Э́то футбо́л.",
+    "example_zh": "这是足球。",
+    "note": "名词（阳）；对应英语 football",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0061",
+    "lang": "ru",
+    "lesson": "ru-02",
+    "front": "баскетбо́л",
+    "back": "篮球",
+    "example": "Э́то баскетбо́л.",
+    "example_zh": "这是篮球。",
+    "note": "名词（阳）；对应英语 basketball",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0062",
+    "lang": "ru",
+    "lesson": "ru-02",
+    "front": "гита́ра",
+    "back": "吉他",
+    "example": "Э́то гита́ра.",
+    "example_zh": "这是吉他。",
+    "note": "名词（阴）；对应英语 guitar",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0063",
+    "lang": "ru",
+    "lesson": "ru-02",
+    "front": "шокола́д",
+    "back": "巧克力",
+    "example": "Э́то шокола́д.",
+    "example_zh": "这是巧克力。",
+    "note": "名词（阳）；对应英语 chocolate",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0064",
+    "lang": "ru",
+    "lesson": "ru-02",
+    "front": "сала́т",
+    "back": "沙拉",
+    "example": "Э́то сала́т.",
+    "example_zh": "这是沙拉。",
+    "note": "名词（阳）；对应英语 salad",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0065",
+    "lang": "ru",
+    "lesson": "ru-02",
+    "front": "фи́льм",
+    "back": "电影",
+    "example": "Э́то фи́льм.",
+    "example_zh": "这是电影。",
+    "note": "名词（阳）；对应英语 film；保留 ь",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0066",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "я",
+    "back": "我",
+    "example": "Я тут.",
+    "example_zh": "我在这里。",
+    "note": "人称代词；第一人称单数；单音节不另标重音",
+    "tags": "代词"
+  },
+  {
+    "id": "ru-0067",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "ты",
+    "back": "你",
+    "example": "Ты тут?",
+    "example_zh": "你在这里吗？",
+    "note": "人称代词；第二人称单数",
+    "tags": "代词"
+  },
+  {
+    "id": "ru-0068",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "он",
+    "back": "他",
+    "example": "Он студе́нт.",
+    "example_zh": "他是学生。",
+    "note": "人称代词；第三人称单数阳性",
+    "tags": "代词"
+  },
+  {
+    "id": "ru-0069",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "она́",
+    "back": "她",
+    "example": "Она́ тут.",
+    "example_zh": "她在这里。",
+    "note": "人称代词；第三人称单数阴性",
+    "tags": "代词"
+  },
+  {
+    "id": "ru-0070",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "оно́",
+    "back": "它（中性）",
+    "example": "Э́то окно́. Оно́ тут.",
+    "example_zh": "这是窗户。它在这里。",
+    "note": "人称代词；第三人称单数中性；与所指名词的语法性别一致",
+    "tags": "代词"
+  },
+  {
+    "id": "ru-0071",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "мы",
+    "back": "我们",
+    "example": "Мы тут.",
+    "example_zh": "我们在这里。",
+    "note": "人称代词；第一人称复数",
+    "tags": "代词"
+  },
+  {
+    "id": "ru-0072",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "вы",
+    "back": "你们；您",
+    "example": "Вы там?",
+    "example_zh": "你们在那里吗？",
+    "note": "人称代词；第二人称复数；也用于敬称单人",
+    "tags": "代词"
+  },
+  {
+    "id": "ru-0073",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "они́",
+    "back": "他们；她们；它们",
+    "example": "Они́ там.",
+    "example_zh": "他们在那里。",
+    "note": "人称代词；第三人称复数，不分性别",
+    "tags": "代词"
+  },
+  {
+    "id": "ru-0074",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "э́то",
+    "back": "这；这是",
+    "example": "Э́то дом.",
+    "example_zh": "这是房子。",
+    "note": "指示用语；Э́то… 整体表示这是……",
+    "tags": "指示词"
+  },
+  {
+    "id": "ru-0075",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "кто",
+    "back": "谁",
+    "example": "Кто э́то?",
+    "example_zh": "这是谁？",
+    "note": "疑问代词；问人",
+    "tags": "疑问词"
+  },
+  {
+    "id": "ru-0076",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "что",
+    "back": "什么",
+    "example": "Что э́то?",
+    "example_zh": "这是什么？",
+    "note": "疑问代词；问事物",
+    "tags": "疑问词"
+  },
+  {
+    "id": "ru-0077",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "где",
+    "back": "哪里；在哪里",
+    "example": "Где кни́га?",
+    "example_zh": "书在哪里？",
+    "note": "疑问副词；问位置",
+    "tags": "疑问词"
+  },
+  {
+    "id": "ru-0078",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "как",
+    "back": "怎样；如何",
+    "example": "Как ты?",
+    "example_zh": "你怎么样？",
+    "note": "疑问副词；这里是简短问候",
+    "tags": "疑问词"
+  },
+  {
+    "id": "ru-0079",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "да",
+    "back": "是；对",
+    "example": "Да, э́то дом.",
+    "example_zh": "对，这是房子。",
+    "note": "肯定答语",
+    "tags": "常用词"
+  },
+  {
+    "id": "ru-0080",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "нет",
+    "back": "不；不是（否定答语）",
+    "example": "Нет, э́то не дом.",
+    "example_zh": "不，这不是房子。",
+    "note": "否定答语；表示没有时的格以后学",
+    "tags": "常用词"
+  },
+  {
+    "id": "ru-0081",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "не",
+    "back": "不（用于否定）",
+    "example": "Э́то не кни́га.",
+    "example_zh": "这不是书。",
+    "note": "否定词；与后面的词分开写",
+    "tags": "常用词"
+  },
+  {
+    "id": "ru-0082",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "и",
+    "back": "和；与",
+    "example": "Ма́ма и па́па тут.",
+    "example_zh": "妈妈和爸爸在这里。",
+    "note": "连词；连接并列项",
+    "tags": "连词"
+  },
+  {
+    "id": "ru-0083",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "а",
+    "back": "而；但（引出对照）",
+    "example": "Он тут, а она́ там.",
+    "example_zh": "他在这里，而她在那里。",
+    "note": "连词；а 前通常有逗号；注意使用俄语 а",
+    "tags": "连词"
+  },
+  {
+    "id": "ru-0084",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "тут",
+    "back": "这里；在这里",
+    "example": "Кни́га тут.",
+    "example_zh": "书在这里。",
+    "note": "地点副词",
+    "tags": "副词"
+  },
+  {
+    "id": "ru-0085",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "там",
+    "back": "那里；在那里",
+    "example": "Дом там.",
+    "example_zh": "房子在那里。",
+    "note": "地点副词",
+    "tags": "副词"
+  },
+  {
+    "id": "ru-0086",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "здра́вствуйте",
+    "back": "您好；你们好",
+    "example": "Здра́вствуйте!",
+    "example_zh": "您好！",
+    "note": "礼貌问候；注意 здравств 中的字母都要写",
+    "tags": "问候"
+  },
+  {
+    "id": "ru-0087",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "приве́т",
+    "back": "你好（熟人间）",
+    "example": "Приве́т, ма́ма!",
+    "example_zh": "你好，妈妈！",
+    "note": "熟人间的问候语；此处按问候用语记",
+    "tags": "问候"
+  },
+  {
+    "id": "ru-0088",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "спаси́бо",
+    "back": "谢谢",
+    "example": "Спаси́бо, па́па!",
+    "example_zh": "谢谢，爸爸！",
+    "note": "礼貌用语",
+    "tags": "问候"
+  },
+  {
+    "id": "ru-0089",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "пожа́луйста",
+    "back": "请；不客气",
+    "example": "Спаси́бо! — Пожа́луйста!",
+    "example_zh": "谢谢！——不客气！",
+    "note": "礼貌用语；保留 й",
+    "tags": "问候"
+  },
+  {
+    "id": "ru-0090",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "до свида́ния",
+    "back": "再见",
+    "example": "До свида́ния!",
+    "example_zh": "再见！",
+    "note": "多词短语；分开写；这里整体识别",
+    "tags": "问候;phrase"
+  },
+  {
+    "id": "ru-0091",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "извини́те",
+    "back": "对不起；请原谅",
+    "example": "Извини́те, где метро́?",
+    "example_zh": "请问，地铁在哪里？",
+    "note": "礼貌致歉或引起注意；这里整词记",
+    "tags": "问候"
+  },
+  {
+    "id": "ru-0092",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "дом",
+    "back": "房子；家",
+    "example": "Э́то дом.",
+    "example_zh": "这是房子。",
+    "note": "名词（阳）",
+    "tags": "名词"
+  },
+  {
+    "id": "ru-0093",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "ма́ма",
+    "back": "妈妈",
+    "example": "Ма́ма тут.",
+    "example_zh": "妈妈在这里。",
+    "note": "名词（阴）",
+    "tags": "名词;家庭"
+  },
+  {
+    "id": "ru-0094",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "па́па",
+    "back": "爸爸",
+    "example": "Па́па там.",
+    "example_zh": "爸爸在那里。",
+    "note": "名词（阳）；虽以 а 结尾仍为阳性",
+    "tags": "名词;家庭"
+  },
+  {
+    "id": "ru-0095",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "брат",
+    "back": "兄弟",
+    "example": "Э́то брат.",
+    "example_zh": "这是兄弟。",
+    "note": "名词（阳）；不区分哥哥、弟弟",
+    "tags": "名词;家庭"
+  },
+  {
+    "id": "ru-0096",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "сестра́",
+    "back": "姐妹",
+    "example": "Сестра́ тут.",
+    "example_zh": "姐妹在这里。",
+    "note": "名词（阴）；不区分姐姐、妹妹",
+    "tags": "名词;家庭"
+  },
+  {
+    "id": "ru-0097",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "друг",
+    "back": "朋友（男性）",
+    "example": "Э́то друг.",
+    "example_zh": "这是朋友。",
+    "note": "名词（阳）",
+    "tags": "名词;人"
+  },
+  {
+    "id": "ru-0098",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "кни́га",
+    "back": "书",
+    "example": "Кни́га там.",
+    "example_zh": "书在那里。",
+    "note": "名词（阴）；复数主格 кни́ги，г 后写 и",
+    "tags": "名词"
+  },
+  {
+    "id": "ru-0099",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "стол",
+    "back": "桌子",
+    "example": "Э́то стол.",
+    "example_zh": "这是桌子。",
+    "note": "名词（阳）",
+    "tags": "名词"
+  },
+  {
+    "id": "ru-0100",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "окно́",
+    "back": "窗户",
+    "example": "Э́то окно́.",
+    "example_zh": "这是窗户。",
+    "note": "名词（中）",
+    "tags": "名词"
+  },
+  {
+    "id": "ru-0101",
+    "lang": "ru",
+    "lesson": "ru-03",
+    "front": "го́род",
+    "back": "城市",
+    "example": "Э́то го́род.",
+    "example_zh": "这是城市。",
+    "note": "名词（阳）；重音在第一个 о",
+    "tags": "名词"
+  },
+  {
+    "id": "ru-0102",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "Меня́ зову́т …",
+    "back": "我叫……",
+    "example": "Меня́ зову́т Анто́н.",
+    "example_zh": "我叫安东。",
+    "note": "省略号处换成姓名；Анто́н 是男性名字；先整句记",
+    "tags": "句型;phrase"
+  },
+  {
+    "id": "ru-0103",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "Я из Кита́я",
+    "back": "我来自中国",
+    "example": "Я из Кита́я.",
+    "example_zh": "我来自中国。",
+    "note": "Кита́я 来自 Кита́й；из 后的格以后学，先整句记",
+    "tags": "句型;phrase"
+  },
+  {
+    "id": "ru-0104",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "Я студе́нт",
+    "back": "我是学生（男性）",
+    "example": "Я студе́нт.",
+    "example_zh": "我是男学生。",
+    "note": "студе́нт 为阳性；女性写 Я студе́нтка；先整句记",
+    "tags": "句型;phrase"
+  },
+  {
+    "id": "ru-0105",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "Я рабо́таю",
+    "back": "我工作",
+    "example": "Я рабо́таю.",
+    "example_zh": "我工作。",
+    "note": "рабо́таю 是 рабо́тать 的 я 形式；先整句记",
+    "tags": "句型;phrase"
+  },
+  {
+    "id": "ru-0106",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "Я живу́ в Пеки́не",
+    "back": "我住在北京",
+    "example": "Я живу́ в Пеки́не.",
+    "example_zh": "我住在北京。",
+    "note": "в + 前置格第 7 周学；Пеки́не 来自 Пеки́н；这里整句记",
+    "tags": "句型;phrase"
+  },
+  {
+    "id": "ru-0107",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "Я говорю́ по-кита́йски и по-англи́йски",
+    "back": "我会说中文和英语",
+    "example": "Я говорю́ по-кита́йски и по-англи́йски.",
+    "example_zh": "我会说中文和英语。",
+    "note": "两个 по- 都用连字符；这里只练书面自我介绍",
+    "tags": "句型;phrase"
+  },
+  {
+    "id": "ru-0108",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "Я изуча́ю ру́сский язы́к",
+    "back": "我学习俄语",
+    "example": "Я изуча́ю ру́сский язы́к.",
+    "example_zh": "我学习俄语。",
+    "note": "изуча́ю 是 изуча́ть 的 я 形式；先整句记",
+    "tags": "句型;phrase"
+  },
+  {
+    "id": "ru-0109",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "оди́н",
+    "back": "1",
+    "example": "Оди́н — э́то 1.",
+    "example_zh": "这个俄语数词表示 1。",
+    "note": "数词；阳性形式；阴性 одна́、中性 одно́，以后学搭配",
+    "tags": "数字"
+  },
+  {
+    "id": "ru-0110",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "два",
+    "back": "2",
+    "example": "Два — э́то 2.",
+    "example_zh": "这个俄语数词表示 2。",
+    "note": "数词；阳性、中性形式；阴性 две，以后学搭配",
+    "tags": "数字"
+  },
+  {
+    "id": "ru-0111",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "три",
+    "back": "3",
+    "example": "Три — э́то 3.",
+    "example_zh": "这个俄语数词表示 3。",
+    "note": "数词；本课先记独立词形，数词后的名词变化以后学",
+    "tags": "数字"
+  },
+  {
+    "id": "ru-0112",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "четы́ре",
+    "back": "4",
+    "example": "Четы́ре — э́то 4.",
+    "example_zh": "这个俄语数词表示 4。",
+    "note": "数词；本课先记独立词形，数词后的名词变化以后学",
+    "tags": "数字"
+  },
+  {
+    "id": "ru-0113",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "пять",
+    "back": "5",
+    "example": "Пять — э́то 5.",
+    "example_zh": "这个俄语数词表示 5。",
+    "note": "数词；词尾保留 ь",
+    "tags": "数字"
+  },
+  {
+    "id": "ru-0114",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "шесть",
+    "back": "6",
+    "example": "Шесть — э́то 6.",
+    "example_zh": "这个俄语数词表示 6。",
+    "note": "数词；词尾保留 ь",
+    "tags": "数字"
+  },
+  {
+    "id": "ru-0115",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "семь",
+    "back": "7",
+    "example": "Семь — э́то 7.",
+    "example_zh": "这个俄语数词表示 7。",
+    "note": "数词；词尾保留 ь",
+    "tags": "数字"
+  },
+  {
+    "id": "ru-0116",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "во́семь",
+    "back": "8",
+    "example": "Во́семь — э́то 8.",
+    "example_zh": "这个俄语数词表示 8。",
+    "note": "数词；重音在 о；词尾保留 ь",
+    "tags": "数字"
+  },
+  {
+    "id": "ru-0117",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "де́вять",
+    "back": "9",
+    "example": "Де́вять — э́то 9.",
+    "example_zh": "这个俄语数词表示 9。",
+    "note": "数词；重音在 е；词尾保留 ь",
+    "tags": "数字"
+  },
+  {
+    "id": "ru-0118",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "де́сять",
+    "back": "10",
+    "example": "Де́сять — э́то 10.",
+    "example_zh": "这个俄语数词表示 10。",
+    "note": "数词；重音在 е；词尾保留 ь",
+    "tags": "数字"
+  },
+  {
+    "id": "ru-0119",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "хоро́ший",
+    "back": "好的",
+    "example": "Э́то хоро́ший друг.",
+    "example_zh": "这是一位好朋友。",
+    "note": "形容词；阳性单数主格；阴性 хоро́шая；中性 хоро́шее",
+    "tags": "形容词"
+  },
+  {
+    "id": "ru-0120",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "но́вый",
+    "back": "新的",
+    "example": "Э́то но́вый дом.",
+    "example_zh": "这是一所新房子。",
+    "note": "形容词；阳性单数主格；阴性 но́вая；中性 но́вое",
+    "tags": "形容词"
+  },
+  {
+    "id": "ru-0121",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "большо́й",
+    "back": "大的",
+    "example": "Э́то большо́й го́род.",
+    "example_zh": "这是一座大城市。",
+    "note": "形容词；阳性单数主格；阴性 больша́я；中性 большо́е；保留 ь",
+    "tags": "形容词"
+  },
+  {
+    "id": "ru-0122",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "ма́ленький",
+    "back": "小的",
+    "example": "Э́то ма́ленький стол.",
+    "example_zh": "这是一张小桌子。",
+    "note": "形容词；阳性单数主格；阴性 ма́ленькая；中性 ма́ленькое；保留 ь",
+    "tags": "形容词"
+  },
+  {
+    "id": "ru-0123",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "ру́сский",
+    "back": "俄罗斯的；俄语的",
+    "example": "Э́то ру́сский язы́к.",
+    "example_zh": "这是俄语。",
+    "note": "形容词；阳性单数主格；阴性 ру́сская；写 сс；语言形容词小写",
+    "tags": "形容词"
+  },
+  {
+    "id": "ru-0124",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "кита́йский",
+    "back": "中国的；中文的",
+    "example": "Э́то кита́йский язы́к.",
+    "example_zh": "这是中文。",
+    "note": "形容词；阳性单数主格；阴性 кита́йская；语言形容词小写",
+    "tags": "形容词"
+  },
+  {
+    "id": "ru-0125",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "сего́дня",
+    "back": "今天",
+    "example": "Сего́дня я тут.",
+    "example_zh": "今天我在这里。",
+    "note": "时间副词；保留 г，按词形记",
+    "tags": "副词"
+  },
+  {
+    "id": "ru-0126",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "сейча́с",
+    "back": "现在",
+    "example": "Сейча́с я тут.",
+    "example_zh": "现在我在这里。",
+    "note": "时间副词；保留 й",
+    "tags": "副词"
+  },
+  {
+    "id": "ru-0127",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "рабо́тать",
+    "back": "工作",
+    "example": "Я могу́ рабо́тать.",
+    "example_zh": "我可以工作。",
+    "note": "动词不定式；未完成体；第一变位；я рабо́таю / ты рабо́таешь；例句 могу́ 表示可以，先整块理解",
+    "tags": "动词;不定式"
+  },
+  {
+    "id": "ru-0128",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "жить",
+    "back": "住；生活",
+    "example": "Я могу́ жить.",
+    "example_zh": "我可以住。",
+    "note": "动词不定式；未完成体；第一变位（词干变化）；я живу́ / ты живёшь，不按 -ить 猜成第二变位；例句 могу́ 表示可以，先整块理解",
+    "tags": "动词;不定式"
+  },
+  {
+    "id": "ru-0129",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "говори́ть",
+    "back": "说；交谈",
+    "example": "Я могу́ говори́ть.",
+    "example_zh": "我可以说。",
+    "note": "动词不定式；未完成体；第二变位；я говорю́ / ты говори́шь；例句 могу́ 表示可以，先整块理解",
+    "tags": "动词;不定式"
+  },
+  {
+    "id": "ru-0130",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "изуча́ть",
+    "back": "学习；研究",
+    "example": "Я могу́ изуча́ть.",
+    "example_zh": "我可以学习。",
+    "note": "动词不定式；未完成体；第一变位；я изуча́ю / ты изуча́ешь；例句 могу́ 表示可以，先整块理解",
+    "tags": "动词;不定式"
+  },
+  {
+    "id": "ru-0131",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "чита́ть",
+    "back": "读",
+    "example": "Я могу́ чита́ть.",
+    "example_zh": "我可以读。",
+    "note": "动词不定式；未完成体；第一变位；я чита́ю / ты чита́ешь；例句 могу́ 表示可以，先整块理解",
+    "tags": "动词;不定式"
+  },
+  {
+    "id": "ru-0132",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "писа́ть",
+    "back": "写",
+    "example": "Я могу́ писа́ть.",
+    "example_zh": "我可以写。",
+    "note": "动词不定式；未完成体；第一变位（с → ш）；я пишу́ / ты пи́шешь；例句 могу́ 表示可以，先整块理解",
+    "tags": "动词;不定式"
+  },
+  {
+    "id": "ru-0133",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "семья́",
+    "back": "家庭",
+    "example": "Э́то семья́.",
+    "example_zh": "这是家庭。",
+    "note": "名词（阴）；保留分隔用的 ь",
+    "tags": "名词"
+  },
+  {
+    "id": "ru-0134",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "сын",
+    "back": "儿子",
+    "example": "Э́то сын.",
+    "example_zh": "这是儿子。",
+    "note": "名词（阳）",
+    "tags": "名词"
+  },
+  {
+    "id": "ru-0135",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "дочь",
+    "back": "女儿",
+    "example": "Э́то дочь.",
+    "example_zh": "这是女儿。",
+    "note": "名词（阴）；ч 后的 ь 标记阴性",
+    "tags": "名词"
+  },
+  {
+    "id": "ru-0136",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "Кита́й",
+    "back": "中国",
+    "example": "Э́то Кита́й.",
+    "example_zh": "这是中国。",
+    "note": "名词（阳）；国家名大写",
+    "tags": "名词"
+  },
+  {
+    "id": "ru-0137",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "Росси́я",
+    "back": "俄罗斯",
+    "example": "Э́то Росси́я.",
+    "example_zh": "这是俄罗斯。",
+    "note": "名词（阴）；国家名大写；写 сс",
+    "tags": "名词"
+  },
+  {
+    "id": "ru-0138",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "Пеки́н",
+    "back": "北京",
+    "example": "Э́то Пеки́н.",
+    "example_zh": "这是北京。",
+    "note": "名词（阳）；城市名大写",
+    "tags": "名词"
+  },
+  {
+    "id": "ru-0139",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "Москва́",
+    "back": "莫斯科",
+    "example": "Э́то Москва́.",
+    "example_zh": "这是莫斯科。",
+    "note": "名词（阴）；城市名大写；重音在 а",
+    "tags": "名词"
+  },
+  {
+    "id": "ru-0140",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "язы́к",
+    "back": "语言；舌头",
+    "example": "Э́то язы́к.",
+    "example_zh": "这是语言。",
+    "note": "名词（阳）；本课例句指语言",
+    "tags": "名词"
+  },
+  {
+    "id": "ru-0141",
+    "lang": "ru",
+    "lesson": "ru-04",
+    "front": "рабо́та",
+    "back": "工作（名词）",
+    "example": "Э́то рабо́та.",
+    "example_zh": "这是工作（名词）。",
+    "note": "名词（阴）；与动词 рабо́тать 区分",
+    "tags": "名词"
   }
 ]</script>
 <script type="application/json" id="state-data">{
@@ -2187,7 +3177,7 @@
     }
   ]
 }</script>
-<script>
+<script id="srs-app">
 (() => {
 'use strict';
 
@@ -2213,6 +3203,7 @@ const validISO = value => typeof value === 'string' && /^\d{4}-\d\d-\d\dT\d\d:\d
 const validId = value => typeof value === 'string' && /^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$/.test(value);
 const own = (obj,key) => Object.prototype.hasOwnProperty.call(obj,key);
 const isLetter = row => row.lang === 'ru' && row.tags.split(';').includes('letter');
+const recognitionOnly = row => row.tags.split(';').some(tag => tag === 'letter' || tag === 'phrase');
 function validateRows(value) {
   if (!Array.isArray(value) || value.length > 50000) throw new Error('卡片应为数组，最多 50000 条词条。');
   const seen = new Set();
@@ -2312,7 +3303,7 @@ function schedule(previous, grade, day) {
   return {due,ivl,ease,reps,lapses:old.lapses+(grade === 0 ? 1 : 0),last:day,first:old.first || old.last || day};
 }
 function expandCards(rows) {
-  return rows.flatMap(row => (isLetter(row) ? ['r'] : ['r','p']).map(direction => ({id:row.id+':'+direction,direction,row})));
+  return rows.flatMap(row => (recognitionOnly(row) ? ['r'] : ['r','p']).map(direction => ({id:row.id+':'+direction,direction,row})));
 }
 function cardOrder(a,b) {
   return a.row.lesson.localeCompare(b.row.lesson,undefined,{numeric:true}) || a.row.id.localeCompare(b.row.id,undefined,{numeric:true}) || (a.direction === b.direction ? 0 : a.direction === 'r' ? -1 : 1);
@@ -2380,8 +3371,40 @@ function statistics(rows,state,day) {
 }
 
 // 课程内容。练习不写入复习状态。
+const RU03_READING = {
+  title:'家与书',
+  sentences:[
+    {text:'Э́то дом.',zh:'这是房子。'},
+    {text:'Тут ма́ма и па́па.',zh:'妈妈和爸爸在这里。'},
+    {text:'Э́то брат.',zh:'这是兄弟。'},
+    {text:'Он студе́нт.',zh:'他是学生。'},
+    {text:'Где кни́га?',zh:'书在哪里？'},
+    {text:'Кни́га там.',zh:'书在那里。'}
+  ],
+  questions:[
+    {prompt:'阅读：谁是学生？',options:['兄弟','妈妈','爸爸'],answer:'兄弟'},
+    {prompt:'阅读：书在哪里？',options:['这里','那里','短文没有提到书'],answer:'那里'},
+    {prompt:'阅读：第二句提到了谁？',options:['医生和学生','朋友和姐妹','妈妈和爸爸'],answer:'妈妈和爸爸'}
+  ]
+};
+const RU04_READING = {
+  title:'安东的自我介绍',
+  sentences:[
+    {text:'Меня́ зову́т Анто́н.',zh:'我叫安东。'},
+    {text:'Я из Кита́я.',zh:'我来自中国。'},
+    {text:'Я студе́нт.',zh:'我是学生。'},
+    {text:'Я живу́ в Пеки́не.',zh:'我住在北京。'},
+    {text:'Я говорю́ по-кита́йски и по-англи́йски.',zh:'我会说中文和英语。'},
+    {text:'Я изуча́ю ру́сский язы́к.',zh:'我学习俄语。'}
+  ],
+  questions:[
+    {prompt:'阅读：安东来自哪里？',options:['俄罗斯','中国','短文没有说明'],answer:'中国'},
+    {prompt:'阅读：安东住在哪座城市？',options:['北京','莫斯科','短文没有说明'],answer:'北京'},
+    {prompt:'阅读：安东正在学习哪种语言？',options:['英语','中文','俄语'],answer:'俄语'}
+  ]
+};
 const LESSONS = {
-  'es-01': {name:'西语文字与拼写，第一批词',lang:'es',exercises:[
+  'es-01': {name:'西语文字与拼写，第一批词',lang:'es',week:1,dates:'09-14 至 09-20',goal:'辨认字母、重音符号与常见词形，开始第一批词的读写。',writingTask:'抄写 5 句，再用本课词写 5 句。',explanation:spanishExplanation,reading:null,exercises:[
     {prompt:'补重音符号：tambien',answer:'también'},
     {prompt:'补重音符号：telefono',answer:'teléfono'},
     {prompt:'补重音符号：dificil',answer:'difícil'},
@@ -2393,7 +3416,7 @@ const LESSONS = {
     {prompt:'填空：¿____ está la casa?（房子在哪里？填小写词形。）',answer:'dónde'},
     {prompt:'填空：Quiero ____ español.（我想学西班牙语。）',answer:'estudiar'}
   ]},
-  'ru-01': {name:'西里尔字母',lang:'ru',exercises:[
+  'ru-01': {name:'西里尔字母',lang:'ru',week:1,dates:'09-14 至 09-20',goal:'认全 33 个字母，辨别印刷体和斜体。',writingTask:'每天手写 8–10 个字母；周末不看提示默写 33 个字母。',explanation:russianExplanation,reading:null,exercises:[
     {prompt:'看斜体，输入对应的小写印刷体：',italic:'т',answer:'т'},
     {prompt:'看斜体，输入对应的小写印刷体：',italic:'д',answer:'д'},
     {prompt:'看斜体，输入对应的小写印刷体：',italic:'и',answer:'и'},
@@ -2404,6 +3427,38 @@ const LESSONS = {
     {prompt:'看中文打俄语：电话（可不输入重音）',answer:'телефо́н'},
     {prompt:'看中文打俄语：音乐（可不输入重音）',answer:'му́зыка'},
     {prompt:'看中文打俄语：咖啡（可不输入重音）',answer:'ко́фе'}
+  ]},
+  'ru-02': {name:'打字与更多国际词',lang:'ru',week:2,dates:'09-21 至 09-27',goal:'不看键盘打出 33 个字母；认得字母表顺序。',writingTask:'每天打 20 个词，可从 ru-01、ru-02 选词重复练。',explanation:russianTypingExplanation,reading:null,exercises:[
+    {prompt:'看中文打俄语：杂志（可不输入重音）',answer:'журна́л'},
+    {prompt:'看中文打俄语：商店',answer:'магази́н'},
+    {prompt:'看中文打俄语：机场',answer:'аэропо́рт'},
+    {prompt:'看中文打俄语：公共汽车',answer:'авто́бус'},
+    {prompt:'看中文打俄语：地址',answer:'а́дрес'},
+    {prompt:'看中文打俄语：吉他',answer:'гита́ра'},
+    {prompt:'字母表顺序：哪个字母在前？',options:['Ё','Е'],answer:'Е'},
+    {prompt:'字母表顺序：哪个字母在前？',options:['Ы','Ъ'],answer:'Ъ'},
+    {prompt:'看斜体，写出整词的小写印刷体：',italic:'дире́ктор',answer:'дире́ктор'},
+    {prompt:'看斜体，写出整词的小写印刷体：',italic:'фи́льм',answer:'фи́льм'}
+  ]},
+  'ru-03': {name:'拼写规则与第一批常用词',lang:'ru',week:3,dates:'09-28 至 10-04',goal:'能解释 книги、пишу、хорошее 为什么这么写；抄写课文 5 句。',writingTask:'从本课短文选 5 句抄写，检查字母、大小写和标点。',explanation:russianSpellingExplanation,reading:RU03_READING,exercises:[
+    {prompt:'拼写规则：книг_（书的复数，кни́га → кни́г_）。只填缺少的一个字母。',answer:'и'},
+    {prompt:'拼写规则：пиш_（我写，重音在词尾）。只填缺少的一个字母。',answer:'у'},
+    {prompt:'拼写规则：хоро́ш_е（好的，中性；空格不重读）。只填缺少的一个字母。',answer:'е'},
+    {prompt:'拼写规则：больш_́е（大的，中性；空格重读）。只填缺少的一个字母。',answer:'о'},
+    {prompt:'看中文写俄语：她',answer:'она́'},
+    {prompt:'看中文写俄语：谢谢',answer:'спаси́бо'},
+    {prompt:'看中文写俄语：书',answer:'кни́га'},
+    ...RU03_READING.questions
+  ]},
+  'ru-04': {name:'复习与自我介绍句型',lang:'ru',week:4,dates:'10-05 至 10-11',goal:'默写 ru-01 到 ru-03 的词正确率达到 80%；能写 5 句自我介绍。10-11 为月度检查点 1。',writingTask:'写 5 句自我介绍；周末按下方说明做月度检查点 1 自测（framework/metrics-and-review.md）。',explanation:russianIntroductionExplanation,reading:RU04_READING,exercises:[
+    {prompt:'看中文写俄语：今天',answer:'сего́дня'},
+    {prompt:'看中文写俄语：新的（阳性单数）',answer:'но́вый'},
+    {prompt:'看中文写俄语：家庭',answer:'семья́'},
+    {prompt:'看中文写俄语：读（不定式）',answer:'чита́ть'},
+    {prompt:'看中文写俄语：中国（国家名，首字母大写）',answer:'Кита́й'},
+    {prompt:'数字：用俄语写 4',answer:'четы́ре'},
+    {prompt:'数字：用俄语写 8',answer:'во́семь'},
+    ...RU04_READING.questions
   ]}
 };
 function spanishExplanation() {
@@ -2440,11 +3495,59 @@ function russianExplanation() {
   <h4>国际词</h4><p>本课准备了 18 个国际词，按词表标注记性别。例句统一用 Э́то…（这是……），不要求先学变格。前几周可先做下方页内练习；若暂不引入俄语 SRS 新卡，可在设置把 ru 每日新卡数设为 0，到期卡仍会出现。</p></div>`;
 }
 
+function russianTypingExplanation() {
+  return `<div class="lesson-text"><p>每天 10 分钟：看一行键位约 2 分钟，打 20 个词约 6 分钟，再做 1–2 题。三天过完三行，之后重复；不要求一天做完 10 题。</p>
+  <h4>ЙЦУКЕН：按美式实体键找俄语字母</h4><p>表中“俄语 ← 美式键”表示切换输入源后按哪个键；不按 Shift 时输出小写，按 Shift 得大写。三行表列 32 个字母，ё 单列在表后。</p>
+  <div class="table-wrap" tabindex="0" aria-label="ЙЦУКЕН 三行键位"><table><thead><tr><th>行</th><th>俄语字母 ← 美式键</th></tr></thead><tbody>
+  <tr><th>上排</th><td lang="ru">й ← Q · ц ← W · у ← E · к ← R · е ← T · н ← Y · г ← U · ш ← I · щ ← O · з ← P · х ← [ · ъ ← ]</td></tr>
+  <tr><th>中排</th><td lang="ru">ф ← A · ы ← S · в ← D · а ← F · п ← G · р ← H · о ← J · л ← K · д ← L · ж ← ; · э ← '</td></tr>
+  <tr><th>下排</th><td lang="ru">я ← Z · ч ← X · с ← C · м ← V · и ← B · т ← N · ь ← M · б ← , · ю ← .</td></tr>
+  </tbody></table></div><p><strong>四个位置单独记：</strong>й 在 Q，ь 在 M，ъ 在右方括号 ]；macOS“俄语”的 ё 在美式反斜杠键 &#92;，常见 PC ЙЦУКЕН／macOS“俄语－PC”的 ё 在数字 1 左侧的反引号键。不要把这两种布局的 ё 键位混用。</p>
+  <h4>macOS“俄语－语音”：按拉丁字母位置对应</h4><p>这是另一套布局：例如 R → р、F → ф；它不把输入的整段拉丁字母自动转成俄语。只选一套练习，避免每天换。</p>
+  <div class="table-wrap" tabindex="0" aria-label="俄语语音布局三行键位"><table><thead><tr><th>美式行</th><th>美式键 → 俄语</th></tr></thead><tbody>
+  <tr><th>上排</th><td lang="ru">Q → я · W → ш · E → е · R → р · T → т · Y → ы · U → у · I → и · O → о · P → п · [ → ю · ] → ж · &#92; → э</td></tr>
+  <tr><th>中排</th><td lang="ru">A → а · S → с · D → д · F → ф · G → г · H → ч · J → й · K → к · L → л</td></tr>
+  <tr><th>下排</th><td lang="ru">Z → з · X → х · C → ц · V → в · B → б · N → н · M → м</td></tr>
+  </tbody></table></div><p>其余：反引号键 → щ，减号 - → ь，等号 = → ъ；<strong>Option + E → ё</strong>（Option + Shift + E → Ё），й 在 J。这里是 macOS 自带“俄语－语音”的美式键位；其他系统的 phonetic 布局可能不同，按实际输入源的键盘查看器确认。</p>
+  <h4>字母表顺序：查词典用</h4><p lang="ru" class="ru-text">А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я</p><p>33 个：Е 后是 Ё，И 后是 Й；末段是 Щ → Ъ → Ы → Ь → Э → Ю → Я。键盘顺序不是字母表顺序。词典按字母排序比较词；有些词典把 ё 合在 е 的位置检索。</p>
+  <h4>两张词卡容易看错</h4><p lang="ru">журна́л = 杂志；магази́н = 商店。</p><p>英语 magazine 的“杂志”应写 журна́л；магази́н 是假朋友。词卡以 U+0301 标重音，日常打字与页内练习可省略它；ё、й 和 ь、ъ 仍要写全。</p></div>`;
+}
+function russianSpellingExplanation() {
+  return `<div class="lesson-text"><p>每天 10 分钟：复习一条规则约 2 分钟，读、抄 1–2 句约 5 分钟，再做 1–2 题。全周完成规则、10 题和 5 句抄写。</p>
+  <h4>三条拼写规则</h4><ul>
+  <li><strong>七字母：</strong>г к х ж ч ш щ 后写 и，不写 ы：кни́га → кни́ги（书，复数）。先记“г 后用 и”。</li>
+  <li><strong>八字母：</strong>г к х ж ч ш щ ц 后通常写 у / а，不写 ю / я：пишу́（我写），不能写 пишю；слы́шат（他们听见）用 а。这是常见词和词尾的规则，外来词、专名可能有例外。</li>
+  <li><strong>五字母：</strong>ж ч ш щ ц 后的词尾，非重读时写 е，不写 о：хоро́шее（好的，中性），ш 后的 е 不重读；但 большо́е（大的，中性）这里重读，写 о。<strong>这条依赖重音</strong>，不能把所有词根中的 о 一律改成 е。</li></ul>
+  <h4>ь 的三种用法</h4><ul><li>标记前面辅音的软化：мать（母亲）。</li><li>分隔：семья́（家庭），ь 不能漏。</li><li>语法标记：ж ш ч щ 结尾的阴性名词带 ь，如 ночь（夜晚）；阳性不带，如 нож（刀）。第二人称单数常见词尾 -ешь / -ишь 也保留 ь，如 пи́шешь（你写）。</li></ul>
+  <h4>ъ、ё 与字形</h4><p>ъ 常见于辅音结尾的前缀与 е ё ю я 之间，作分隔：подъе́зд（楼门入口）；外来词 объе́кт（对象）中也保留。ё 常在印刷品中写作 е：ещё → еще（还；再）；看到 е 要留意原词是否含 ё。本课卡片保留标准词形，别把 ё、й 上的符号当作可省略的重音。</p>
+  <h4>大小写与标点</h4><p>句首和专名大写；语言、国籍形容词、月份、星期通常小写：ру́сский、янва́рь、понеде́льник。书信中对单个人敬称可写 Вы。俄语引号用 «…»；主句和从句的边界通常加逗号，如 Я зна́ю, что э́то дом.（我知道这是一所房子。）即使英语对应位置不写逗号，俄语也要检查。</p>
+  <p>规则例词用于观察拼写，不要求本周全部背诵。下方六句短文只用 ru-01、ru-02 和本课词；现在时的“是”常不写，Э́то дом. 就是“这是房子”。抄写时可保留教材重音，自己打字可不标 U+0301。</p></div>`;
+}
+function russianIntroductionExplanation() {
+  return `<div class="lesson-text"><p>每天 10 分钟：先默写几词约 3 分钟，再读一个句型并替换自己的信息约 5 分钟，最后做 1–2 题。10 题分几天做完。</p>
+  <h4>先复习</h4><p>不看提示默写或打出 33 个字母，再对照 ru-01；从 ru-01 至 ru-03 的非字母词随机选 20 个，看中文默写，答对至少 16 个（80%）。重音 U+0301 可省略，ё、й、ь、ъ 和字母本身不能省。复述 кни́ги、пишу́、хоро́шее 的规则。</p>
+  <h4>自我介绍：先按整句记</h4><div class="table-wrap"><table><thead><tr><th>句型</th><th>中文与替换提示</th></tr></thead><tbody>
+  <tr><td lang="ru">Меня́ зову́т …</td><td>我叫……；把省略号换成姓名。</td></tr>
+  <tr><td lang="ru">Я из Кита́я.</td><td>我来自中国。Кита́я 来自 Кита́й，这里的格以后学。</td></tr>
+  <tr><td lang="ru">Я студе́нт. / Я рабо́таю.</td><td>我是学生（男性）／我工作。女学生写 Я студе́нтка；选择符合自己情况的一句。</td></tr>
+  <tr><td lang="ru">Я живу́ в Пеки́не.</td><td>我住在北京。в + 前置格第 7 周学，这里整句记；Пеки́не 来自 Пеки́н。</td></tr>
+  <tr><td lang="ru">Я говорю́ по-кита́йски и по-англи́йски.</td><td>我会说中文和英语。两个 по- 后都有连字符；这里只写句子，不做口语练习。</td></tr>
+  <tr><td lang="ru">Я изуча́ю ру́сский язы́к.</td><td>我学习俄语。ру́сский 小写，写两个 с。</td></tr>
+  </tbody></table></div><p>这些句型加 phrase 标签，只生成识别卡。写作时从中选 5 句，换成真实信息；动词变位和格的完整表留到相应周次。</p>
+  <h4>数字 1–10</h4><p lang="ru">1 оди́н · 2 два · 3 три · 4 четы́ре · 5 пять · 6 шесть · 7 семь · 8 во́семь · 9 де́вять · 10 де́сять</p><p>保留 5–10 词尾的 ь。先记独立数字，数词与名词的搭配以后学。词表中的形容词用阳性单数；不定式的 note 标第一／第二变位，жить 虽以 -ить 结尾仍是第一变位。</p>
+  <details><summary>10-11 月度检查点 1：周末自测</summary><p>按 framework/metrics-and-review.md，替代当周周志；限时写作单独用 15 分钟，不挤进平日的 10 分钟。</p><ol>
+  <li>读一段没读过的当前级别教材或双语文本（约 100 词），不查词典，用中文记要点，再对照译文，读懂比例评 1–5。</li>
+  <li>15 分钟内不查词典写本月一件事，俄语探索期目标 50 词；之后自行修改并把错误记入 russian/errors.md。</li>
+  <li>记录 SRS 总卡数、已掌握数和正确率，并注明统计日期范围；记录 time.csv 的本月及累计小时。</li>
+  <li>兴趣评 1–5，写下下个月是否想继续。字母默写与本周 5 句自我介绍也一起留作对照。</li></ol></details></div>`;
+}
+
 // 本地缓存与文件保存。
 let rows, state, source = '文件', dirty = false, revision = 0;
 let lastSaved = document.querySelector('meta[name="srs-saved-at"]').content;
 let saveKind = document.querySelector('meta[name="srs-save-kind"]').content;
 let storageWarning = '', notice = '', saving = false, handleReady = false, fileHandle = null;
+let fileSnapshot = null, overwritePending = null, handleNeedsStore = false;
 let tab = 'review', language = 'all', lesson = 'es-01', session = null;
 let revealed = false, typedAnswer = '', feedback = null;
 const exerciseWork = new Map();
@@ -2467,12 +3570,40 @@ function safeJSON(value) {
 }
 function serializeDocument(doc, cardSnapshot, stateSnapshot, savedAt, kind) {
   const copy = doc.cloneNode(true);
+  const head = copy.head, body = copy.body;
+  head.replaceChildren(...['meta[charset]','meta[name="viewport"]','meta[name="srs-saved-at"]','meta[name="srs-save-kind"]','title','style#srs-style'].map(selector => head.querySelector(selector)));
+  body.replaceChildren(...['app','cards-data','state-data','srs-app'].map(id => copy.getElementById(id)));
+  copy.documentElement.replaceChildren(head,body);
+  for (const node of [copy.documentElement,body]) {
+    for (const attribute of [...node.attributes]) node.removeAttribute(attribute.name);
+  }
+  copy.documentElement.setAttribute('lang','zh-CN');
   copy.getElementById('app').replaceChildren();
   copy.getElementById('cards-data').textContent = safeJSON(cardSnapshot);
   copy.getElementById('state-data').textContent = safeJSON(stateSnapshot);
   copy.querySelector('meta[name="srs-saved-at"]').content = savedAt;
   copy.querySelector('meta[name="srs-save-kind"]').content = kind;
   return '<!DOCTYPE html>\n'+copy.documentElement.outerHTML;
+}
+function snapshotDocument(doc) {
+  const cards = JSON.parse(doc.getElementById('cards-data').textContent);
+  const progress = JSON.parse(doc.getElementById('state-data').textContent);
+  if (!Array.isArray(cards) || !validISO(progress.updatedAt)) throw new Error('文件中的卡片或进度快照无效。');
+  return JSON.stringify({cardCount:cards.length,updatedAt:progress.updatedAt});
+}
+async function checkFileBeforeSave(picked) {
+  const text = await (await fileHandle.getFile()).text();
+  // 新建的空文件还没有 SRS 快照；已有文件（含无法解析的文件）须检查。
+  if (picked && text === '') { overwritePending = null; return true; }
+  let diskSnapshot = null;
+  try { diskSnapshot = snapshotDocument(new DOMParser().parseFromString(text,'text/html')); } catch (_) {}
+  if (diskSnapshot !== fileSnapshot && !(overwritePending?.handle === fileHandle && overwritePending.snapshot === diskSnapshot)) {
+    overwritePending = {handle:fileHandle,snapshot:diskSnapshot};
+    showNotice('文件在本页打开后被外部修改（可能是新课程或另一台设备的进度）。请先重新打开页面；仍要覆盖请再点一次保存');
+    return false;
+  }
+  overwritePending = null;
+  return true;
 }
 function handleStore(mode, value) {
   return new Promise((resolve,reject) => {
@@ -2525,11 +3656,13 @@ async function saveFile({asNew=false,forceDownload=false} = {}) {
     let picked = false;
     if (usePicker) {
       if (!fileHandle || asNew) {
-        const handle = await window.showSaveFilePicker({suggestedName:'index.html',types:[{description:'SRS 页面（HTML）',accept:{'text/html':['.html']}}]});
-        fileHandle = handle; picked = true;
+        const handle = await window.showSaveFilePicker({id:'language-srs',suggestedName:'index.html',types:[{description:'SRS 页面（HTML）',accept:{'text/html':['.html']}}]});
+        fileHandle = handle; picked = true; handleNeedsStore = true;
+        overwritePending = null;
       } else if (await fileHandle.queryPermission({mode:'readwrite'}) !== 'granted') {
         if (await fileHandle.requestPermission({mode:'readwrite'}) !== 'granted') throw new Error('未取得文件写入权限。可在设置中另存为或下载 HTML。');
       }
+      if (!await checkFileBeforeSave(picked)) return;
     }
     const cardSnapshot = cloneValue(rows), stateSnapshot = cloneValue(state);
     stateSnapshot.log = pruneLog(stateSnapshot.log);
@@ -2539,10 +3672,11 @@ async function saveFile({asNew=false,forceDownload=false} = {}) {
     if (usePicker) {
       writable = await fileHandle.createWritable();
       await writable.write(html); await writable.close(); writable = null;
+      fileSnapshot = JSON.stringify({cardCount:cardSnapshot.length,updatedAt:stateSnapshot.updatedAt});
       adoptSaved(cardSnapshot,stateSnapshot,savedAt,kind,savedRevision);
       let handleWarning = '';
-      if (picked) {
-        try { await handleStore('put',fileHandle); } catch (_) { handleWarning = ' 浏览器未能记住文件位置，下次打开可能需要重选。'; }
+      if (handleNeedsStore) {
+        try { await handleStore('put',fileHandle); handleNeedsStore = false; } catch (_) { handleWarning = ' 浏览器未能记住文件位置，下次打开可能需要重选。'; }
       }
       showNotice('已保存到文件。'+(dirty ? ' 保存期间有新进度，请再保存一次。' : '')+handleWarning);
     } else {
@@ -2567,6 +3701,10 @@ function renderHeader() {
   if (!node) return;
   const time = lastSaved && validISO(lastSaved) ? new Date(lastSaved).toLocaleString('zh-CN',{hour12:false}) : '尚未手动保存';
   node.innerHTML = `<div class="top-inner"><div class="top-row"><h1>语言复习 <small>SRS · v1</small></h1><div class="actions"><span class="save-status ${dirty?'dirty':''}">${dirty?'有未保存更改':'无未保存更改'}</span><button class="primary" data-action="save" ${saving || !handleReady?'disabled':''}>${saving?'保存中…':'保存'}</button></div></div><div class="state-source">当前状态来源：${esc(source)} · 最后保存时间：${esc(time)}${saveKind === 'download'?'（下载生成，请确认下载完成）':''}${storageWarning?' · '+esc(storageWarning):''}</div>${dirty && source !== '文件'?'<div class="state-source dirty">有未保存到文件的进度，记得保存</div>':''}</div>`;
+  for (const button of document.querySelectorAll('[data-action="save"]')) {
+    button.textContent = saving ? '保存中…' : overwritePending ? '仍要覆盖' : '保存';
+    button.disabled = saving || !handleReady;
+  }
 }
 function render() {
   document.getElementById('app').innerHTML = `<header class="top" id="header"></header><main class="page"><nav class="tabs" aria-label="主导航">${[['review','复习'],['lessons','课程'],['stats','统计'],['settings','设置']].map(([key,label]) => `<button data-tab="${key}" ${tab===key?'aria-current="page"':''}>${label}</button>`).join('')}</nav><div class="notice" id="notice" role="status" aria-live="polite">${esc(notice)}</div><section id="content" aria-label="${{review:'复习',lessons:'课程',stats:'统计',settings:'设置'}[tab]}"></section><p class="foot">当前只学读写。v1 冻结至 2026-12-06 复盘，中间只修 bug。</p></main>`;
@@ -2599,28 +3737,31 @@ function renderReview() {
   }).join('')}</div><p class="muted">建议只是默认高亮，最终评分由你决定。</p></div>`;
   return `<div class="study">${controls}<article class="panel review-card" id="review-card" tabindex="-1"><p class="kicker">${esc(row.lesson)} · ${spelling?'拼写卡':isLetter(row)?'字母识别卡':'识别卡'} · ${status} · 剩余 ${left} 张（含重学 ${session.again.length} 张）</p>${front}${back}</article><p class="kbd">空格：翻面／提交（输入框外） · Enter：提交拼写 · 1 / 2 / 3 / 4：评分。输入框内可正常输入空格。</p></div>`;
 }
+function renderExercise(exercise,i,current) {
+  const key = lesson+':'+i, work = exerciseWork.get(key), result = work?.result;
+  return `<form class="exercise" data-exercise="${i}"><label for="exercise-${i}">${i+1}. ${esc(exercise.prompt)} ${exercise.italic?`<i class="italic" lang="ru">${esc(exercise.italic)}</i>`:''}</label>${exercise.options?`<select name="answer" id="exercise-${i}" required><option value="">请选择</option>${exercise.options.map(option=>`<option value="${esc(option)}" ${work?.answer===option?'selected':''}>${esc(option)}</option>`).join('')}</select>`:`<input name="answer" id="exercise-${i}" type="text" lang="${current.lang}" value="${esc(work?.answer || '')}" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" enterkeyhint="done">`}<div class="actions"><button type="submit">检查</button></div><div class="exercise-result" aria-live="polite">${result?exerciseFeedback(result,exercise.answer):''}</div></form>`;
+}
 function renderLessons() {
   const current = LESSONS[lesson], lessonRows = rows.filter(row => row.lesson === lesson);
-  return `<h2>课程</h2><div class="course-picker">${Object.entries(LESSONS).map(([id,value]) => `<button data-lesson="${id}" aria-pressed="${lesson===id}"><strong>${id} · ${value.name}</strong><span class="muted">${rows.filter(row=>row.lesson===id).length} 条词条／字母 · 10 题练习</span></button>`).join('')}</div>
-  <section class="panel"><h3>一、讲解</h3>${lesson==='es-01'?spanishExplanation():russianExplanation()}</section>
-  <section class="panel"><h3>二、词表</h3><p class="muted">${lessonRows.length} 条；识别与拼写共 ${expandCards(lessonRows).length} 张卡。字母只生成识别卡。窄屏表格可横向滚动。</p><details><summary>展开本课全部词条与例句</summary><div class="table-wrap" tabindex="0" aria-label="可横向滚动的词表"><table class="vocab"><thead><tr><th>词条／字母</th><th>中文</th><th>例句</th><th>说明</th></tr></thead><tbody>${lessonRows.map(row=>`<tr><td lang="${row.lang}" class="${row.lang==='ru'?'ru-text':''}">${esc(row.front)}<small>${esc(row.id)} · ${isLetter(row)?'识别':'识别＋拼写'}</small></td><td>${esc(row.back)}</td><td><span lang="${row.lang}">${esc(row.example)}</span><small>${esc(row.example_zh)}</small></td><td>${esc(row.note)}<small>${esc(row.tags.split(';').join(' · '))}</small></td></tr>`).join('')}</tbody></table></div></details></section>
-  <section class="panel"><h3>三、练习</h3><p class="muted">页内即时判定，不计入 SRS。按词表大小写输入；输入框已关闭自动大写和拼写纠正。</p><div class="exercise-list">${current.exercises.map((exercise,i)=> {
-    const key = lesson+':'+i, work = exerciseWork.get(key), result = work?.result;
-    return `<form class="exercise" data-exercise="${i}"><label for="exercise-${i}">${i+1}. ${esc(exercise.prompt)} ${exercise.italic?`<i class="italic" lang="ru">${esc(exercise.italic)}</i>`:''}</label>${exercise.options?`<select name="answer" id="exercise-${i}" required><option value="">请选择</option>${exercise.options.map(option=>`<option value="${esc(option)}" ${work?.answer===option?'selected':''}>${esc(option)}</option>`).join('')}</select>`:`<input name="answer" id="exercise-${i}" type="text" lang="${current.lang}" value="${esc(work?.answer || '')}" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" enterkeyhint="done">`}<div class="actions"><button type="submit">检查</button></div><div class="exercise-result" aria-live="polite">${result?exerciseFeedback(result,exercise.answer):''}</div></form>`;
-  }).join('')}</div></section>`;
+  const reading = current.reading, questions = reading?.questions || [];
+  return `<h2>课程</h2>${LANGS.map(lang => `<section aria-label="${lang==='es'?'西语':'俄语'}课程"><h3>${lang==='es'?'es · 西语':'ru · 俄语'}</h3><div class="course-picker">${Object.entries(LESSONS).filter(([,value])=>value.lang===lang).map(([id,value]) => `<button data-lesson="${esc(id)}" aria-pressed="${lesson===id}"><strong>${esc(id)} · ${esc(value.name)}</strong><span class="muted">第 ${value.week} 周 · ${esc(value.dates)} · ${rows.filter(row=>row.lesson===id).length} 条词条／字母 · ${value.exercises.length} 题练习</span></button>`).join('')}</div></section>`).join('')}
+  <section class="panel"><h3>${esc(lesson)} · ${esc(current.name)}</h3><p class="kicker">第 ${current.week} 周 · 2026 年 ${esc(current.dates)}${current.lang==='ru'?' · 每天 10 分钟':''}</p><p><strong>本课目标：</strong>${esc(current.goal)}</p><p><strong>本周写作任务：</strong>${esc(current.writingTask)}</p><h3>一、讲解</h3>${current.explanation()}</section>
+  <section class="panel"><h3>二、词表</h3><p class="muted">${lessonRows.length} 条；识别与拼写共 ${expandCards(lessonRows).length} 张卡。letter / phrase 词条只生成识别卡。窄屏表格可横向滚动。</p><details><summary>展开本课全部词条与例句</summary><div class="table-wrap" tabindex="0" aria-label="可横向滚动的词表"><table class="vocab"><thead><tr><th>词条／字母</th><th>中文</th><th>例句</th><th>说明</th></tr></thead><tbody>${lessonRows.map(row=>`<tr><td lang="${row.lang}" class="${row.lang==='ru'?'ru-text':''}">${esc(row.front)}<small>${esc(row.id)} · ${recognitionOnly(row)?'识别':'识别＋拼写'}</small></td><td>${esc(row.back)}</td><td><span lang="${row.lang}">${esc(row.example)}</span><small>${esc(row.example_zh)}</small></td><td>${esc(row.note)}<small>${esc(row.tags.split(';').join(' · '))}</small></td></tr>`).join('')}</tbody></table></div></details></section>
+  <section class="panel"><h3>三、练习</h3><p class="muted">全课 ${current.exercises.length} 题${reading?'（含下方 3 道阅读理解）':''}。页内即时判定，不计入 SRS。按词表大小写输入；输入框已关闭自动大写和拼写纠正。</p><div class="exercise-list">${current.exercises.map((exercise,i)=>questions.includes(exercise)?'':renderExercise(exercise,i,current)).join('')}</div></section>
+  ${reading?`<section class="panel"><h3>四、阅读 · ${esc(reading.title)}</h3>${reading.sentences.map(sentence=>`<div><p class="example ru-text" lang="${current.lang}">${esc(sentence.text)}</p><details><summary>查看本句中文</summary><p>${esc(sentence.zh)}</p></details></div>`).join('')}<div class="exercise-list">${questions.map(question=>renderExercise(question,current.exercises.indexOf(question),current)).join('')}</div></section>`:''}`;
 }
 function exerciseFeedback(result,answer) {
   return `<p class="feedback ${result.kind}">${esc(result.message)}${result.grade===4?'。':'；正确写法：'+esc(answer)+'。'}</p>`;
 }
 function renderStats() {
   const stats = statistics(rows,state,localDay());
-  return `<h2>统计</h2><div class="panel"><p>按复习卡计数：同一词条的识别卡、拼写卡分别计数。字母仅一张。</p><div class="table-wrap" tabindex="0" aria-label="可横向滚动的统计表"><table class="stats-table"><thead><tr><th>语言</th><th>总卡数</th><th>新卡</th><th>学习中</th><th>已掌握</th><th>今日到期</th><th>近 30 天复习数</th><th>正确率</th></tr></thead><tbody>${stats.map(s=>`<tr><th>${s.lang==='es'?'es · 西语':'ru · 俄语'}</th><td>${s.total}</td><td>${s.new}</td><td>${s.learning}</td><td>${s.mastered}</td><td>${s.due}</td><td>${s.reviews}</td><td>${s.accuracy}</td></tr>`).join('')}</tbody></table></div><p class="muted">新卡＝尚未评分（含尚未开放的拼写卡）；学习中＝已评分且间隔 &lt;21 天；已掌握＝间隔 ≥21 天。今日到期包含逾期卡和待重学卡。</p><p class="muted">最近 30 天含今天，按本地日历统计每次评分；Again 以外算对。同一张卡重学会产生多次记录。日志只保留今天及之前 59 个本地日期。</p></div>`;
+  return `<h2>统计</h2><div class="panel"><p>按复习卡计数：同一词条的识别卡、拼写卡分别计数。letter / phrase 词条仅一张。</p><div class="table-wrap" tabindex="0" aria-label="可横向滚动的统计表"><table class="stats-table"><thead><tr><th>语言</th><th>总卡数</th><th>新卡</th><th>学习中</th><th>已掌握</th><th>今日到期</th><th>近 30 天复习数</th><th>正确率</th></tr></thead><tbody>${stats.map(s=>`<tr><th>${s.lang==='es'?'es · 西语':'ru · 俄语'}</th><td>${s.total}</td><td>${s.new}</td><td>${s.learning}</td><td>${s.mastered}</td><td>${s.due}</td><td>${s.reviews}</td><td>${s.accuracy}</td></tr>`).join('')}</tbody></table></div><p class="muted">新卡＝尚未评分（含尚未开放的拼写卡）；学习中＝已评分且间隔 &lt;21 天；已掌握＝间隔 ≥21 天。今日到期包含逾期卡和待重学卡。</p><p class="muted">最近 30 天含今天，按本地日历统计每次评分；Again 以外算对。同一张卡重学会产生多次记录。日志只保留今天及之前 59 个本地日期。</p></div>`;
 }
 function renderSettings() {
   return `<h2>设置</h2><div class="settings-grid">
   <section class="panel"><h3>每日新卡数</h3><form id="limits"><div class="limit-row"><div><label for="limit-es">es · 西语</label><input id="limit-es" name="es" type="number" min="0" max="999" step="1" required value="${state.settings.newPerDay.es}"></div><div><label for="limit-ru">ru · 俄语</label><input id="limit-ru" name="ru" type="number" min="0" max="999" step="1" required value="${state.settings.newPerDay.ru}"></div></div><div class="actions"><button type="submit">应用设置</button></div></form><p class="muted">0 表示暂停新卡，到期卡照常复习。两个方向分别占一个新卡名额；修改额度不会删除进度。</p></section>
-  <section class="panel"><h3>保存文件</h3><p>评分后会自动缓存。点保存把卡片和进度写入 HTML，保存后再人工提交和推送 Git。</p><div class="actions"><button class="primary" data-action="save">保存</button><button data-action="save-as">另存为</button><button data-action="download-html">下载 HTML</button></div><p class="muted">Chrome / Edge 首次选择文件位置，之后复用。其他浏览器下载一份新文件。GitHub Pages 页面不能直接改仓库。</p></section>
-  <section class="panel span-all"><h3>导入卡片 CSV</h3><p class="muted">按 id 更新内容和增加词条，保留已有复习状态。请保留原 id；字母行的 tags 需包含 letter。</p><label for="csv-file">选择 CSV 文件</label><input id="csv-file" type="file" accept=".csv,text/csv"><label for="csv-text">或粘贴 CSV（含表头）</label><textarea id="csv-text" spellcheck="false" placeholder="id,lang,lesson,front,back,example,example_zh,note,tags"></textarea><div class="actions"><button data-action="import-csv">导入粘贴的卡片</button></div></section>
+  <section class="panel"><h3>保存文件</h3><p>评分后会自动缓存。点保存把卡片和进度写入 HTML，保存后再人工提交和推送 Git。</p><div class="actions"><button class="primary" data-action="save" ${saving || !handleReady?'disabled':''}>${saving?'保存中…':overwritePending?'仍要覆盖':'保存'}</button><button data-action="save-as">另存为</button><button data-action="download-html">下载 HTML</button></div><p class="muted">Chrome / Edge 首次选择文件位置，之后复用。其他浏览器下载一份新文件。GitHub Pages 页面不能直接改仓库。</p></section>
+  <section class="panel span-all"><h3>导入卡片 CSV</h3><p class="muted">按 id 更新内容和增加词条，保留已有复习状态。请保留原 id；字母行的 tags 需包含 letter；整句短语用 phrase，仅生成识别卡。</p><label for="csv-file">选择 CSV 文件</label><input id="csv-file" type="file" accept=".csv,text/csv"><label for="csv-text">或粘贴 CSV（含表头）</label><textarea id="csv-text" spellcheck="false" placeholder="id,lang,lesson,front,back,example,example_zh,note,tags"></textarea><div class="actions"><button data-action="import-csv">导入粘贴的卡片</button></div></section>
   <section class="panel span-all"><h3>导出／导入进度</h3><p>在手机导出，在电脑导入。同一张卡取 last 日期更晚的记录；同日比较该卡最近评分时间，仍相同则保留当前记录。导入保留本机的每日新卡设置。</p><div class="actions"><button data-action="copy-progress">复制进度 JSON</button><button data-action="export-progress">下载进度 JSON</button></div><label for="progress-file">选择进度 JSON 文件</label><input id="progress-file" type="file" accept=".json,application/json"><label for="progress-text">或粘贴进度 JSON</label><textarea id="progress-text" spellcheck="false" placeholder="粘贴完整状态 JSON"></textarea><div class="actions"><button data-action="import-progress">合并粘贴的进度</button></div><p class="muted">进度 JSON 不包含卡片内容。两台设备应使用相同卡片；暂时未知的卡片进度会保留，之后导入对应 CSV 即可继续。</p></section>
   <section class="panel span-all help"><h3>帮助</h3><ol><li>先在课程页看讲解和词表，再到复习页选语言。</li><li>先尝试回忆，再翻面评分。拼写题可按 Enter 提交，符号提示只给建议。</li><li>Again 会在本次队列末尾再出；刷新后仍以到期卡出现。日期按设备本地时区计算。</li><li>每天结束时点保存。iPhone 上的进度只在当前浏览器缓存；需要合并时导出 JSON，到电脑导入后保存。</li><li>加卡片时编辑 srs/cards/*.csv，在此页导入，再保存。页面不会自行读取 CSV。</li></ol><p>本地缓存按页面路径区分，不是跨设备同步；清理浏览器数据、使用隐私模式或换路径都可能影响缓存。下载后请确认文件确实已保留。</p><p>v1 冻结到 2026-12-06 复盘前，只修 bug，不加功能。完整说明见同目录 README.md。</p></section></div>`;
 }
@@ -2755,16 +3896,21 @@ function bindEvents() {
 
 // 启动。
 function initialize() {
+  fileSnapshot = snapshotDocument(document);
   rows = validateRows(JSON.parse(document.getElementById('cards-data').textContent));
   state = validateState(JSON.parse(document.getElementById('state-data').textContent));
   try {
     const raw = localStorage.getItem(CACHE_KEY);
     if (raw) {
       const cache = JSON.parse(raw), cachedState = validateState(cache.state || cache);
-      if (Date.parse(cachedState.updatedAt) > Date.parse(state.updatedAt)) {
-        const cachedRows = cache.cards && Array.isArray(cache.cards) ? validateRows(cache.cards) : rows;
-        state = cachedState; rows = cachedRows; source = '本地缓存'; dirty = true;
-      }
+      const cachedRows = cache.cards && Array.isArray(cache.cards) ? validateRows(cache.cards) : [];
+      const fileIds = new Set(rows.map(row => row.id));
+      const added = cachedRows.filter(row => !fileIds.has(row.id));
+      const nextRows = validateRows([...rows,...added]);
+      const newer = Date.parse(cachedState.updatedAt) > Date.parse(state.updatedAt);
+      rows = nextRows;
+      if (newer) { state = cachedState; source = '本地缓存'; }
+      if (newer || added.length) dirty = true;
     }
   } catch (_) { storageWarning = '本地缓存无法读取，已使用文件中的数据；请及时保存。'; }
   render(); bindEvents(); void loadHandle();

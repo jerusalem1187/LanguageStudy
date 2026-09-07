@@ -16,10 +16,12 @@ const plain = value => JSON.parse(JSON.stringify(value));
 const source = runtime.slice(0,runtime.indexOf('// 启动。')) + runtime.slice(runtime.indexOf('function initialize()'),runtime.indexOf('try { initialize(); }')) + `
 globalThis.api = {localDay,addDays,validateRows,validateState,parseCSV,mergeRows,pruneLog,
 schedule,expandCards,buildQueue,spellingResult,clozeExample,mergeProgress,statistics,
-safeJSON,serializeDocument,saveFile,initialize,LESSONS,reveal,gradeCard,
-setData(r,s){rows=r;state=s;dirty=true;revision=1;session=null;},
+safeJSON,serializeDocument,snapshotDocument,saveFile,initialize,LESSONS,reveal,gradeCard,recognitionOnly,
+renderLessons,bindEvents,
+openLesson(id){lesson=id;tab='lessons';render();},
+setData(r,s){rows=r;state=s;dirty=true;revision=1;session=null;fileSnapshot=snapshotDocument(document);},
 setHandle(h){fileHandle=h;handleReady=true;},
-getData(){return {rows,state,dirty,source,lastSaved,notice,session};},
+getData(){return {rows,state,dirty,source,lastSaved,notice,session,fileSnapshot,overwritePending};},
 change(){state.settings.newPerDay.es++;touch();},
 setHandleStore(fn){handleStore=fn;},
 openReview(lang='all'){language=lang;ensureSession();},
@@ -28,48 +30,112 @@ setSession(s){session=s;language=s.lang;revealed=true;},
 };
 })();`;
 
-// 最小文档模型：测试序列化的数据边界，不替代浏览器 DOM 验证。
-class DocumentModel {
-  constructor(text=html) { this.text = text; this.hidden=false; }
-  cloneNode() { return new DocumentModel(this.text); }
-  get documentElement() { return {outerHTML:this.text.replace(/^<!DOCTYPE html>\s*/i,'')}; }
-  getElementById(id) {
-    const doc = this;
-    if (!['cards-data','state-data','app'].includes(id)) return {innerHTML:'',textContent:'',focus(){}};
-    const pattern = id==='app' ? /(<div id="app">)[\s\S]*?(<\/div>)/ : new RegExp('(<script type="application/json" id="'+id+'">)[\\s\\S]*?(</script>)');
-    return {
-      get textContent(){ return doc.text.match(pattern)?.[0].replace(/^<[^>]+>|<\/script>$/g,'') || ''; },
-      set textContent(value){ doc.text=doc.text.replace(pattern,(_,a,b)=>a+value+b); },
-      replaceChildren(){ doc.text=doc.text.replace(pattern,(_,a,b)=>a+b); },
-      append(){}, addEventListener(){},
-    };
-  }
-  querySelector(selector) {
-    const doc=this, name = selector.match(/name="([^"]+)"/)[1];
-    const pattern = new RegExp('(<meta name="'+name+'" content=")[^"]*(">)');
-    return {get content(){return doc.text.match(pattern)?.[0].match(/content="([^"]*)"/)[1] || '';},set content(value){doc.text=doc.text.replace(pattern,(_,a,b)=>a+value+b);}};
-  }
-  addEventListener() {}
+// 最小通用文档树：保留节点、属性和脚本原文，测试保存边界；不替代浏览器 DOM。
+const attrEscape = value => String(value).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+const decode = value => value.replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');
+const voidTags = new Set(['meta','link','img','input','br','hr']);
+class TextModel {
+  constructor(text) { this.textContent=text; }
+  get outerHTML() { return this.textContent; }
 }
-function createAPI(bootstrap=false) {
+class ElementModel {
+  constructor(tag,attrs={}) { this.tag=tag; this.attrs={...attrs}; this.childNodes=[]; this.listeners={}; }
+  get attributes() { return Object.entries(this.attrs).map(([name,value])=>({name,value})); }
+  get id() { return this.attrs.id || ''; }
+  get content() { return this.attrs.content || ''; }
+  set content(value) { this.setAttribute('content',value); }
+  get dataset() { return Object.fromEntries(Object.entries(this.attrs).filter(([k])=>k.startsWith('data-')).map(([k,v])=>[k.slice(5),v])); }
+  get elements() { return Object.fromEntries(this.querySelectorAll('[name]').map(node=>[node.attrs.name,node])); }
+  get value() { return this._value ?? this.attrs.value ?? ''; }
+  set value(value) { this._value=value; }
+  get textContent() { return this.childNodes.map(node=>node.textContent).join(''); }
+  set textContent(value) { this.replaceChildren(new TextModel(String(value))); }
+  get innerHTML() { return this.childNodes.map(node=>node.outerHTML).join(''); }
+  set innerHTML(value) { this.replaceChildren(...parseNodes(value)); }
+  get outerHTML() {
+    const start='<'+this.tag+Object.entries(this.attrs).map(([k,v])=>' '+k+'="'+attrEscape(v)+'"').join('')+'>';
+    return start+(voidTags.has(this.tag)?'':this.innerHTML+'</'+this.tag+'>');
+  }
+  getAttribute(name) { return this.attrs[name] ?? null; }
+  setAttribute(name,value) { this.attrs[name]=String(value); }
+  removeAttribute(name) { delete this.attrs[name]; }
+  replaceChildren(...nodes) { this.childNodes=[...nodes]; }
+  append(...nodes) { this.childNodes.push(...nodes); }
+  matches(selector) {
+    const tag=selector.match(/^[a-z][\w-]*/i)?.[0],id=selector.match(/#([\w-]+)/)?.[1],cls=selector.match(/\.([\w-]+)/)?.[1];
+    if ((tag && this.tag!==tag) || (id && this.id!==id) || (cls && !(this.attrs.class || '').split(' ').includes(cls))) return false;
+    return [...selector.matchAll(/\[([\w-]+)(?:="([^"]*)")?\]/g)].every(([,key,value])=>Object.hasOwn(this.attrs,key) && (value===undefined || this.attrs[key]===value));
+  }
+  querySelectorAll(selector) {
+    const found=[];
+    for (const node of this.childNodes) if (node instanceof ElementModel) {
+      if (selector.split(',').some(s=>node.matches(s.trim()))) found.push(node);
+      found.push(...node.querySelectorAll(selector));
+    }
+    return found;
+  }
+  querySelector(selector) { return this.querySelectorAll(selector)[0] || null; }
+  addEventListener(type,fn) { (this.listeners[type] ||= []).push(fn); }
+  focus() {}
+}
+function parseNodes(text) {
+  const root=new ElementModel('fragment'), stack=[root];
+  const token=/<!--[\s\S]*?-->|<!DOCTYPE[^>]*>|<\/?[a-z][\w-]*\b[^>]*>/gi;
+  let end=0,match;
+  while ((match=token.exec(text))) {
+    if (match.index>end) stack.at(-1).append(new TextModel(text.slice(end,match.index)));
+    const raw=match[0];end=token.lastIndex;
+    if (raw.startsWith('<!--')) { stack.at(-1).append(new TextModel(raw));continue; }
+    if (/^<!/i.test(raw)) continue;
+    const tag=raw.match(/^<\/?([\w-]+)/)[1].toLowerCase();
+    if (raw.startsWith('</')) { assert.equal(stack.at(-1).tag,tag);stack.pop();continue; }
+    const attrs={};
+    for (const [,name,a,b,c] of raw.slice(tag.length+1,-1).matchAll(/([\w:-]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+)))?/g)) attrs[name]=decode(a ?? b ?? c ?? '');
+    const node=new ElementModel(tag,attrs);stack.at(-1).append(node);
+    if (['script','style'].includes(tag)) {
+      const close=new RegExp('</'+tag+'\\s*>','gi');close.lastIndex=end;
+      const closing=close.exec(text);assert(closing,'unclosed '+tag);
+      node.textContent=text.slice(end,closing.index);end=token.lastIndex=close.lastIndex;
+    } else if (!voidTags.has(tag)) stack.push(node);
+  }
+  if (end<text.length) stack.at(-1).append(new TextModel(text.slice(end)));
+  assert.equal(stack.length,1);
+  return root.childNodes;
+}
+class DocumentModel extends ElementModel {
+  constructor(text=html) { super('document');this.childNodes=parseNodes(text);this.hidden=false; }
+  get documentElement() { return this.querySelector('html'); }
+  get head() { return this.querySelector('head'); }
+  get body() { return this.querySelector('body'); }
+  getElementById(id) { return this.querySelector('#'+id); }
+  createElement(tag) { return new ElementModel(tag); }
+  cloneNode() { return new DocumentModel(this.documentElement.outerHTML); }
+}
+function emptyState() {
+  return {version:1,updatedAt:'2026-09-14T00:00:00.000Z',settings:{newPerDay:{es:15,ru:10}},cards:{},log:[]};
+}
+function fixtureHTML(rows=initialRows,state=emptyState()) {
+  return html.replace(/(<script[^>]*id="cards-data"[^>]*>)[\s\S]*?(<\/script>)/,(_,a,b)=>a+JSON.stringify(rows)+b)
+    .replace(/(<script[^>]*id="state-data"[^>]*>)[\s\S]*?(<\/script>)/,(_,a,b)=>a+JSON.stringify(state)+b);
+}
+function createAPI(bootstrap=false,text=fixtureHTML()) {
   const cache = new Map();
-  const document = new DocumentModel();
-  const context = vm.createContext({document,location:{pathname:'/srs/index.html'},window:{addEventListener(){}},localStorage:{setItem:(k,v)=>cache.set(k,v),getItem:k=>cache.get(k)||null},navigator:{},URL,Blob,FileReader:undefined,setTimeout:() => 0,clearTimeout,console});
+  const document = new DocumentModel(text);
+  const context = vm.createContext({document,DOMParser:class {parseFromString(text){return new DocumentModel(text);}},location:{pathname:'/srs/index.html'},window:{addEventListener(){}},localStorage:{setItem:(k,v)=>cache.set(k,v),getItem:k=>cache.get(k)||null},navigator:{},URL,Blob,FileReader:undefined,setTimeout:() => 0,clearTimeout,console});
   vm.runInContext(source,context);
-  if (!bootstrap) context.api.setData(context.api.validateRows(plain(initialRows)),context.api.validateState(plain(initialState)));
+  if (!bootstrap) context.api.setData(context.api.validateRows(plain(initialRows)),context.api.validateState(emptyState()));
   return {api:context.api,context,cache,document};
 }
 const {api} = createAPI();
-function emptyState() { return api.validateState(plain(initialState),new Date('2026-09-14T12:00:00Z')); }
 function record(day='2026-09-14',grade=4) { return api.schedule(null,grade,day); }
 
 test('来源 CSV 与两个内嵌 JSON 完整一致；只有一个可执行脚本且无外部资源',() => {
   const rows = ['es','ru'].flatMap(lang => plain(api.parseCSV(fs.readFileSync(path.join(__dirname,'cards',lang+'.csv'),'utf8'))));
   assert.deepEqual(rows,initialRows);
-  assert.equal(api.expandCards(rows).length,295);
+  assert.equal(api.expandCards(rows).length,467);
   assert.equal(rows.filter(r=>r.lang==='es').length,113);
   assert.equal(rows.filter(r=>r.tags.split(';').includes('letter')).length,33);
-  assert.equal(rows.filter(r=>r.lang==='ru'&&!r.tags.split(';').includes('letter')).length,18);
+  assert.equal(rows.filter(r=>r.lang==='ru'&&!r.tags.split(';').includes('letter')).length,108);
   assert.match(html,/<div id="app"><\/div>/);
   assert.doesNotMatch(html,/<(?:script|link|img)[^>]+(?:src|href)=/i);
   assert.doesNotMatch(runtime,/\b(?:fetch|XMLHttpRequest|WebSocket|importScripts)\s*\(/);
@@ -79,7 +145,7 @@ test('来源 CSV 与两个内嵌 JSON 完整一致；只有一个可执行脚本
 test('字母集合、国际词重音位置与西语全部人称',() => {
   assert.equal(initialRows.filter(r=>r.tags.includes('letter')).map(r=>r.front.split(' ')[0]).join(''),'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ');
   const stressed = ['телефо́н','университе́т','студе́нт','пробле́ма','интерне́т','компью́тер','му́зыка','теа́тр','спо́рт','ко́фе','па́рк','ба́нк','рестора́н','такси́','метро́','ра́дио','музе́й','оте́ль'];
-  assert.deepEqual(initialRows.filter(r=>r.tags.includes('国际词')).map(r=>r.front),stressed);
+  assert.deepEqual(initialRows.filter(r=>r.lesson==='ru-01'&&r.tags.includes('国际词')).map(r=>r.front),stressed);
   for (const word of stressed) assert.equal((word.match(/[аеёиоуыэюя]\u0301/g)||[]).length,1);
   for (const form of ['soy','eres','es','somos','sois','son','estoy','estás','está','estamos','estáis','están']) assert(initialRows.some(r=>r.front===form));
 });
@@ -143,8 +209,8 @@ test('拼写 NFC、重音、变音符、大小写、空格的三档判定',() =>
     ['por favor','por favor','es',4],['por  favor','por favor','es',0],['','hola','es',0]
   ]) assert.equal(api.spellingResult(input,target,lang).grade,grade,input);
 });
-test('全部词条例句可挖空；边界不会误遮单词内部，俄语重音不泄露答案',() => {
-  for(const row of initialRows.filter(r=>!r.tags.includes('letter'))) assert(!api.clozeExample(row).includes('此例句没有'),row.id+' '+row.front);
+test('全部拼写卡例句可挖空；边界不会误遮单词内部，俄语重音不泄露答案',() => {
+  for(const row of initialRows.filter(r=>!api.recognitionOnly(r))) assert(!api.clozeExample(row).includes('此例句没有'),row.id+' '+row.front);
   assert.equal(api.clozeExample({front:'es',lang:'es',example:'Es estudiante; es bueno.'}),'____ estudiante; ____ bueno.');
   assert.equal(api.clozeExample({front:'en',lang:'es',example:'El estudiante está en casa.'}),'El estudiante está ____ casa.');
   assert.equal(api.clozeExample({front:'телефо́н',lang:'ru',example:'Э́то телефо́н.'}),'Э́то ____.');
@@ -197,8 +263,8 @@ test('完整 HTML 序列化、空 app、JSON 结束标签及混合大小写安�
 });
 test('首次 picker、IndexedDB 记住句柄、复用及请求权限后写入并关闭',async () => {
   const {api:a,context,cache}=createAPI();const calls=[];let output='';
-  const handle={queryPermission:async()=>{calls.push('query');return 'prompt';},requestPermission:async()=>{calls.push('permission');return 'granted';},createWritable:async()=>({write:async text=>{calls.push('write');output=text;},close:async()=>calls.push('close')})};
-  context.window.showSaveFilePicker=async options=>{calls.push('picker');assert.equal(options.suggestedName,'index.html');return handle;};
+  const handle={getFile:async()=>({text:async()=>output || fixtureHTML()}),queryPermission:async()=>{calls.push('query');return 'prompt';},requestPermission:async()=>{calls.push('permission');return 'granted';},createWritable:async()=>({write:async text=>{calls.push('write');output=text;},close:async()=>calls.push('close')})};
+  context.window.showSaveFilePicker=async options=>{calls.push('picker');assert.equal(options.id,'language-srs');assert.equal(options.suggestedName,'index.html');return handle;};
   a.setHandleStore(async(mode,value)=>{calls.push(mode);assert.equal(value,handle);});
   await a.saveFile();assert.deepEqual(calls,['picker','write','close','put']);
   assert.equal(a.getData().dirty,false);assert(cache.size);assert.match(output,/<div id="app"><\/div>/);
@@ -208,9 +274,9 @@ test('首次 picker、IndexedDB 记住句柄、复用及请求权限后写入并
 test('写入失败不清除 dirty；并发评分在保存快照之后仍标记未保存',async () => {
   const {api:a,context}=createAPI();context.window.showSaveFilePicker=async()=>{};
   let aborted=false;
-  a.setHandle({queryPermission:async()=> 'granted',createWritable:async()=>({write:async()=>{throw new Error('disk full');},abort:async()=>{aborted=true;}})});
+  a.setHandle({getFile:async()=>({text:async()=>fixtureHTML()}),queryPermission:async()=> 'granted',createWritable:async()=>({write:async()=>{throw new Error('disk full');},abort:async()=>{aborted=true;}})});
   await a.saveFile();assert.equal(a.getData().dirty,true);assert(aborted);assert.match(a.getData().notice,/disk full/);
-  a.setHandle({queryPermission:async()=> 'granted',createWritable:async()=>({write:async()=>a.change(),close:async()=>{}})});
+  a.setHandle({getFile:async()=>({text:async()=>fixtureHTML()}),queryPermission:async()=> 'granted',createWritable:async()=>({write:async()=>a.change(),close:async()=>{}})});
   await a.saveFile();assert.equal(a.getData().dirty,true);assert.match(a.getData().notice,/新进度/);
 });
 test('取消 picker 与拒绝权限均保留进度，不降级为静默下载',async () => {
@@ -220,16 +286,195 @@ test('取消 picker 与拒绝权限均保留进度，不降级为静默下载',a
   a.setHandle({queryPermission:async()=> 'prompt',requestPermission:async()=> 'denied',createWritable:async()=>assert.fail('must not write')});
   await a.saveFile();assert.equal(a.getData().dirty,true);assert.match(a.getData().notice,/写入权限/);
 });
-test('加载选较新的缓存，包括未保存词条；较旧及损坏缓存回退文件',() => {
+test('加载以文件词条为准：较新缓存保留文件新课与缓存独有词，旧／损坏缓存不覆盖进度',() => {
   for (const kind of ['newer','older','broken']) {
-    const {api:a,cache}=createAPI(true),cached=plain(initialState),rows=plain(initialRows);
+    const {api:a,cache}=createAPI(true),cached=emptyState();
+    // 缓存仅含旧课程，并有相同 id 的旧修订及一次未保存的导入。
+    const rows=plain(initialRows.filter(row=>['es-01','ru-01'].includes(row.lesson)));
+    const extra={...rows[0],id:'es-unsaved',lesson:'es-02'};
+    rows[0].note='缓存中的词条修订';rows.push(extra);
     cached.updatedAt=kind==='newer'?'2026-09-15T00:00:00Z':'2026-09-01T00:00:00Z';
-    cached.cards['es-0001:r']=record();rows[0].note='缓存中的词条修订';
+    cached.cards['es-0001:r']=record();
     cache.set('language-srs:v1:/srs/index.html',kind==='broken'?'bad json':JSON.stringify({state:cached,cards:rows}));
     a.initialize();const result=a.getData();
     assert.equal(result.source,kind==='newer'?'本地缓存':'文件');
-    assert.equal(result.dirty,kind==='newer');
-    assert.equal(result.rows[0].note,kind==='newer'?'缓存中的词条修订':initialRows[0].note);
+    assert.equal(result.dirty,kind!=='broken');
+    assert.equal(result.rows[0].note,initialRows[0].note);
     assert.equal(Object.keys(result.state.cards).length,kind==='newer'?1:0);
+    assert.equal(result.rows.some(row=>row.id==='es-unsaved'),kind!=='broken');
+    assert.deepEqual(plain(result.rows.slice(0,initialRows.length)),initialRows);
+    assert.equal(result.fileSnapshot,a.snapshotDocument(new DocumentModel(fixtureHTML())));
   }
 });
+
+test('真实嵌入进度能通过 validateState；全部进度与日志 id 都对应现有卡片',() => {
+  const before=JSON.stringify(initialState);
+  const valid=api.validateState(plain(initialState),new Date(initialState.updatedAt));
+  const ids=new Set(api.expandCards(initialRows).map(card=>card.id));
+  assert.equal(Object.keys(valid.cards).length,Object.keys(initialState.cards).length);
+  for (const id of [...Object.keys(initialState.cards),...initialState.log.map(item=>item.card)]) assert(ids.has(id),id);
+  assert.equal(JSON.stringify(initialState),before);
+});
+test('课程注册表都有词条、周次、日期、目标、写作任务和 10 题；阅读题属于本课练习',() => {
+  assert.deepEqual(Object.keys(api.LESSONS),['es-01','ru-01','ru-02','ru-03','ru-04']);
+  for (const [id,lesson] of Object.entries(api.LESSONS)) {
+    assert(initialRows.some(row=>row.lesson===id),id);
+    assert.equal(lesson.lang,id.slice(0,2));assert.equal(lesson.week,Number(id.slice(3)));
+    for (const key of ['name','dates','goal','writingTask']) assert.equal(typeof lesson[key],'string');
+    assert.equal(typeof lesson.explanation,'function');assert(lesson.explanation().length>100);
+    assert.equal(lesson.exercises.length,10,id);
+    for (const exercise of lesson.exercises) {
+      assert(exercise.prompt && exercise.answer);
+      if (exercise.options) assert.equal(exercise.options.filter(option=>option===exercise.answer).length,1);
+    }
+    if (lesson.reading) {
+      assert([5,6].includes(lesson.reading.sentences.length));assert.equal(lesson.reading.questions.length,3);
+      for (const sentence of lesson.reading.sentences) assert(sentence.text && sentence.zh);
+      assert.deepEqual(lesson.exercises.slice(-3),lesson.reading.questions);
+    } else assert.equal(lesson.reading,null);
+  }
+  assert.deepEqual(['ru-02','ru-03','ru-04'].map(id=>initialRows.filter(row=>row.lesson===id).length),[14,36,40]);
+  const vocabulary=new Set(initialRows.filter(row=>['ru-01','ru-02','ru-03'].includes(row.lesson)).map(row=>row.front.toLowerCase().replace(/\u0301/g,'')));
+  for (const sentence of api.LESSONS['ru-03'].reading.sentences) {
+    for (const word of sentence.text.toLowerCase().replace(/\u0301/g,'').match(/[а-яё]+/g)) assert(vocabulary.has(word),word);
+  }
+});
+test('各课程分语言展示；阅读中文默认折叠；50 道练习可判对错且不写入进度',() => {
+  const {api:a,document}=createAPI(true);a.initialize();
+  const before=plain(a.getData().state);
+  for (const [id,lesson] of Object.entries(a.LESSONS)) {
+    a.openLesson(id);
+    assert.equal(document.querySelectorAll('[data-lesson]').length,5);
+    const page=document.getElementById('content').innerHTML;
+    assert(page.indexOf('西语课程')<page.indexOf('俄语课程'));
+    assert(page.includes(lesson.goal));assert(page.includes(lesson.writingTask));
+    assert.equal(document.querySelectorAll('[data-exercise]').length,10);
+    if (lesson.reading) {
+      const translations=document.querySelectorAll('details').filter(node=>node.querySelector('summary')?.textContent==='查看本句中文');
+      assert.equal(translations.length,lesson.reading.sentences.length);
+      for (const node of translations) assert.equal(node.getAttribute('open'),null);
+    }
+    for (const form of document.querySelectorAll('[data-exercise]')) {
+      const exercise=lesson.exercises[Number(form.dataset.exercise)];
+      const submit=()=>document.getElementById('app').listeners.submit[0]({target:form,preventDefault(){}});
+      form.elements.answer.value='不正确的答案';submit();
+      assert.match(form.querySelector('.exercise-result').innerHTML,/拼写不一致/);
+      form.elements.answer.value=exercise.answer;submit();
+      assert.match(form.querySelector('.exercise-result').innerHTML,/完全一致/);
+    }
+  }
+  assert.deepEqual(plain(a.getData().state),before);assert.equal(a.getData().dirty,false);
+});
+test('letter / phrase 标签只生成识别卡；其他词条仍有两个方向',() => {
+  for (const row of initialRows) {
+    const expected=row.tags.split(';').some(tag=>['letter','phrase'].includes(tag))?['r']:['r','p'];
+    assert.deepEqual(plain(api.expandCards([row]).map(card=>card.direction)),expected,row.id);
+  }
+  assert.equal(initialRows.filter(row=>row.tags.split(';').includes('phrase')).length,8);
+  // 标签规则也适用于以后导入的西语词，不靠课次或语言写死。
+  for (const tag of ['phrase','letter']) assert.deepEqual(plain(api.expandCards([{...initialRows[0],tags:'extra;'+tag}]).map(card=>card.direction)),['r']);
+});
+test('新俄语 id 连续；多音节词标 U+0301；名词标性，动词标变位，假朋友有说明',() => {
+  const added=initialRows.filter(row=>['ru-02','ru-03','ru-04'].includes(row.lesson));
+  assert.deepEqual(added.map(row=>row.id),Array.from({length:90},(_,i)=>'ru-'+String(52+i).padStart(4,'0')));
+  for (const row of added) {
+    assert.doesNotMatch(row.front,/[A-Za-z\u0341\u00b4]/,row.id);
+    const words=row.front.match(/[А-Яа-яЁё\u0301]+/g) || [];
+    for (const word of words) {
+      if ((word.match(/[аеёиоуыэюя]/gi)||[]).length>1) assert(/[\u0301ёЁ]/.test(word),row.id+' '+word);
+      for (let i=0;i<word.length;i++) if (word[i]==='\u0301') assert(/[аеёиоуыэюя]/i.test(word[i-1]),row.id);
+    }
+    if (row.tags.split(';').includes('名词')) assert.match(row.note,/名词（[阳阴中]）/,row.id);
+    if (row.tags.split(';').includes('不定式')) assert.match(row.note,/[一二]变位/,row.id);
+  }
+  for (const front of ['журна́л','магази́н']) assert.match(added.find(row=>row.front===front).note,/假朋友/);
+  assert.match(added.find(row=>row.front==='жить').note,/第一变位/);
+  assert.match(added.find(row=>row.front==='говори́ть').note,/第二变位/);
+  assert.match(added.find(row=>row.front==='Я живу́ в Пеки́не').note,/第 7 周/);
+});
+test('序列化白名单清除外来 style / script / div / 属性；同一结果重新解析恰有预期三个脚本',() => {
+  const {api:a,document}=createAPI();
+  document.documentElement.setAttribute('data-external','foreign-html');
+  document.documentElement.setAttribute('onload','foreign-load()');
+  document.body.setAttribute('class','foreign-body');
+  document.body.setAttribute('style','--foreign:1');
+  for (const [parent,tag,id,text] of [
+    [document.head,'style','_goober','.foreign { color:red; }'],
+    [document.head,'script','foreign-head','foreignHead()'],
+    [document.body,'script','foreign-script','foreignScript()'],
+    [document.body,'div','foreign-div','foreign content'],
+    [document.getElementById('app'),'div','foreign-app','foreign nested content']
+  ]) { const node=document.createElement(tag);node.setAttribute('id',id);node.textContent=text;parent.append(node); }
+  document.body.append(new TextModel('<!-- foreign comment -->'));
+  const saved=a.serializeDocument(document,initialRows,emptyState(),'2026-09-15T10:00:00Z','file');
+  assert.doesNotMatch(saved,/_goober|foreign|data-external/);
+  const parsed=new DocumentModel(saved);
+  assert.deepEqual(parsed.head.childNodes.map(node=>node.tag),['meta','meta','meta','meta','title','style']);
+  assert.deepEqual(parsed.body.childNodes.map(node=>node.id),['app','cards-data','state-data','srs-app']);
+  assert.deepEqual(parsed.documentElement.attrs,{lang:'zh-CN'});assert.deepEqual(parsed.body.attrs,{});
+  assert.equal(parsed.getElementById('app').innerHTML,'');
+  const scripts=parsed.querySelectorAll('script');assert.equal(scripts.length,3);
+  assert.deepEqual(scripts.map(node=>node.id),['cards-data','state-data','srs-app']);
+  assert.deepEqual(JSON.parse(scripts[0].textContent),initialRows);
+  assert.deepEqual(JSON.parse(scripts[1].textContent),emptyState());
+  assert.equal(scripts[2].textContent,runtime);
+  assert.equal(parsed.getElementById('srs-style').textContent,document.getElementById('srs-style').textContent);
+  const {api:reopened}=createAPI(true,saved);reopened.initialize();
+  assert.deepEqual(plain(reopened.getData().rows),initialRows);
+  assert.equal(reopened.getData().state.updatedAt,emptyState().updatedAt);
+  assert(document.getElementById('_goober'),'克隆清理不能改原文档');
+});
+test('磁盘 updatedAt 或卡片行数改变：首次不写并显示仍要覆盖，第二次才写；保存后更新快照',async () => {
+  for (const kind of ['state','cards']) {
+    const {api:a,context,document}=createAPI(true);a.initialize();a.change();
+    let disk=kind==='state'?fixtureHTML(initialRows,{...emptyState(),updatedAt:'2026-09-16T00:00:00.000Z'}):fixtureHTML(initialRows.slice(0,-1));
+    let reads=0,writes=0,stores=0;
+    const handle={queryPermission:async()=> 'granted',getFile:async()=>{reads++;return {text:async()=>disk};},createWritable:async()=>({write:async text=>{writes++;disk=text;},close:async()=>{}})};
+    context.window.showSaveFilePicker=async()=>handle;
+    a.setHandleStore(async()=>{stores++;});
+    a.openLesson('ru-04');
+    await a.saveFile();assert.equal(writes,0);assert.equal(reads,1);assert.equal(a.getData().dirty,true);
+    assert.equal(a.getData().notice,'文件在本页打开后被外部修改（可能是新课程或另一台设备的进度）。请先重新打开页面；仍要覆盖请再点一次保存');
+    assert(document.querySelectorAll('[data-action="save"]').every(button=>button.textContent==='仍要覆盖'));
+    await a.saveFile();assert.equal(writes,1);assert.equal(reads,2);assert.equal(stores,1);
+    assert.equal(a.getData().dirty,false);assert.equal(a.getData().overwritePending,null);
+    assert.equal(a.getData().fileSnapshot,a.snapshotDocument(new DocumentModel(disk)));
+    assert(document.querySelectorAll('[data-action="save"]').every(button=>button.textContent==='保存'));
+    a.change();await a.saveFile();assert.equal(writes,2);assert.equal(reads,3);
+  }
+});
+test('覆盖确认绑定同一句柄和磁盘快照；两次点击之间文件再次变化会重新提示',async () => {
+  const {api:a,context}=createAPI();let day=16,writes=0;
+  const handle={queryPermission:async()=> 'granted',getFile:async()=>({text:async()=>fixtureHTML(initialRows,{...emptyState(),updatedAt:`2026-09-${day}T00:00:00.000Z`})}),createWritable:async()=>({write:async()=>{writes++;},close:async()=>{}})};
+  context.window.showSaveFilePicker=async()=>{};a.setHandle(handle);
+  await a.saveFile();assert.equal(writes,0);
+  day++;await a.saveFile();assert.equal(writes,0);
+  a.setHandle({...handle});await a.saveFile();assert.equal(writes,0);
+  await a.saveFile();assert.equal(writes,1);
+});
+test('新建空文件可首次保存；getFile 读取失败不能写；另存为不会沿用旧覆盖确认',async () => {
+  const {api:a,context}=createAPI();let writes=0;
+  const writer=async()=>({write:async()=>{writes++;},close:async()=>{}});
+  context.window.showSaveFilePicker=async()=>({getFile:async()=>({text:async()=>''}),createWritable:writer});
+  a.setHandleStore(async()=>{});await a.saveFile();assert.equal(writes,1);
+  a.setHandle({queryPermission:async()=> 'granted',getFile:async()=>{throw new Error('read unavailable');},createWritable:writer});
+  a.change();await a.saveFile();assert.equal(writes,1);assert.match(a.getData().notice,/read unavailable/);assert.equal(a.getData().dirty,true);
+  const other={getFile:async()=>({text:async()=>fixtureHTML(initialRows.slice(0,-1))}),createWritable:writer};
+  context.window.showSaveFilePicker=async()=>other;
+  await a.saveFile({asNew:true});assert.equal(writes,1);assert(a.getData().overwritePending);
+  await a.saveFile({asNew:true});assert.equal(writes,1,'重新选文件必须重新确认覆盖');
+});
+
+// 本次改课时传入开工前的 /tmp 留底；日常复习保存后不再使用旧基线。
+const backupFlag=process.argv.indexOf('--state-backup');
+if (backupFlag!==-1) {
+  assert(process.argv[backupFlag+1],'--state-backup 后需要文件路径');
+  test('state-data 内容与 /tmp 开工留底逐字节一致',() => {
+    const bytes=fs.readFileSync(path.join(__dirname,'index.html'));
+    const opening=Buffer.from('<script type="application/json" id="state-data">');
+    const start=bytes.indexOf(opening)+opening.length;
+    assert(start>=opening.length);
+    const end=bytes.indexOf(Buffer.from('</script>'),start);assert(end>start);
+    assert.deepEqual(bytes.subarray(start,end),fs.readFileSync(process.argv[backupFlag+1]));
+  });
+}
