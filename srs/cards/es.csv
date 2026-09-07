@@ -992,3 +992,323 @@ es-0990,es,es-12,Antes no sabía nada de español,以前我一点西班牙语都
 es-0991,es,es-12,Ahora leo textos cortos y entiendo la idea,现在我读短文章，能看懂大意,Ahora leo textos cortos y entiendo la idea.,现在我读短文章，能看懂大意。,整句；讲现在的能力用现在时；只生成识别卡,句型;phrase
 es-0992,es,es-12,Todos los días repaso mis tarjetas,我每天复习卡片,Todos los días repaso mis tarjetas.,我每天复习卡片。,整句；讲现在的习惯用现在时加时间标记；只生成识别卡,句型;phrase
 es-0993,es,es-12,El próximo mes quiero escribir más,下个月我想多写一些,El próximo mes quiero escribir más.,下个月我想多写一些。,整句；讲打算用 querer + 不定式；只生成识别卡,句型;phrase
+es-0994,es,es-13,el alojamiento,住宿,El alojamiento está cerca de la estación.,住所在车站附近。,名词（阳）；复数按普通名词规则变化。,名词;旅行经历
+es-0995,es,es-13,la agencia,旅行社；代理处,La agencia ha confirmado el viaje.,旅行社已经确认了行程。,名词（阴）；复数按普通名词规则变化。,名词;旅行经历
+es-0996,es,es-13,el itinerario,行程安排,He leído el itinerario.,我已经读过行程安排。,名词（阳）；复数按普通名词规则变化。,名词;旅行经历
+es-0997,es,es-13,la ruta,路线,La ruta pasa por la costa.,路线经过海岸。,名词（阴）；复数按普通名词规则变化。,名词;旅行经历
+es-0998,es,es-13,el trayecto,路程,El trayecto ha sido corto.,路程很短。,名词（阳）；复数按普通名词规则变化。,名词;旅行经历
+es-0999,es,es-13,la estancia,逗留,La estancia en el pueblo ha sido tranquila.,在小镇的逗留很安静。,名词（阴）；复数按普通名词规则变化。,名词;旅行经历
+es-1000,es,es-13,el recorrido,游览路线；行程,El recorrido empieza en la plaza.,游览路线从广场开始。,名词（阳）；复数按普通名词规则变化。,名词;旅行经历
+es-1001,es,es-13,la frontera,边境,Hemos cruzado la frontera.,我们已经越过边境。,名词（阴）；复数按普通名词规则变化。,名词;旅行经历
+es-1002,es,es-13,el visado,签证,He recibido el visado.,我已经收到签证。,名词（阳）；复数按普通名词规则变化。,名词;旅行经历
+es-1003,es,es-13,la aduana,海关,La aduana está en la terminal.,海关在航站楼里。,名词（阴）；复数按普通名词规则变化。,名词;旅行经历
+es-1004,es,es-13,el andén,站台,El andén está lleno de turistas.,站台上满是旅客。,名词（阳）；复数按普通名词规则变化。,名词;旅行经历
+es-1005,es,es-13,la terminal,航站楼,La terminal es moderna.,航站楼很现代。,名词（阴）；复数按普通名词规则变化。,名词;旅行经历
+es-1006,es,es-13,el transbordo,换乘,El transbordo ha sido fácil.,换乘很顺利。,名词（阳）；复数按普通名词规则变化。,名词;旅行经历
+es-1007,es,es-13,el retraso,晚点；延误,El retraso ha sido de una hora.,延误了一个小时。,名词（阳）；复数按普通名词规则变化。,名词;旅行经历
+es-1008,es,es-13,la llegada,到达,La llegada es a las ocho.,到达时间是八点。,名词（阴）；复数按普通名词规则变化。,名词;旅行经历
+es-1009,es,es-13,la facturación,办理托运与乘机手续,La facturación empieza ahora.,现在开始办理乘机手续。,名词（阴）；复数按普通名词规则变化。,名词;旅行经历
+es-1010,es,es-13,el folleto,介绍册,He leído el folleto del museo.,我已经读了博物馆的介绍册。,名词（阳）；复数按普通名词规则变化。,名词;旅行经历
+es-1011,es,es-13,la postal,明信片,He escrito una postal.,我已经写了一张明信片。,名词（阴）；复数按普通名词规则变化。,名词;旅行经历
+es-1012,es,es-13,la guía,指南；导游（女）,La guía de la ciudad está en la mochila.,城市指南在背包里。,名词（阴）；复数按普通名词规则变化。 本卡例句指书面指南；指男性导游时用 el guía。,名词;旅行经历
+es-1013,es,es-13,el mirador,观景台,Hemos visitado el mirador.,我们已经去了观景台。,名词（阳）；复数按普通名词规则变化。,名词;旅行经历
+es-1014,es,es-13,abierto,打开了（分词）,He abierto la maleta.,我已经打开行李箱。,不规则过去分词；对应不定式 abrir；abrir 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he abierto / has abierto / ha abierto / hemos abierto / habéis abierto / han abierto；haber 后的分词不随性数变化。,分词;不规则分词
+es-1015,es,es-13,dicho,说了（分词）,He dicho la respuesta.,我已经说出答案。,不规则过去分词；对应不定式 decir；decir 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he dicho / has dicho / ha dicho / hemos dicho / habéis dicho / han dicho；haber 后的分词不随性数变化。,分词;不规则分词
+es-1016,es,es-13,escrito,写了（分词）,He escrito una postal.,我已经写了一张明信片。,不规则过去分词；对应不定式 escribir；escribir 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he escrito / has escrito / ha escrito / hemos escrito / habéis escrito / han escrito；haber 后的分词不随性数变化。,分词;不规则分词
+es-1017,es,es-13,hecho,做了（分词）,He hecho un viaje.,我已经旅行了一次。,不规则过去分词；对应不定式 hacer；hacer 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he hecho / has hecho / ha hecho / hemos hecho / habéis hecho / han hecho；haber 后的分词不随性数变化。,分词;不规则分词
+es-1018,es,es-13,puesto,放了（分词）,He puesto el pasaporte en la bolsa.,我已经把护照放进包里。,不规则过去分词；对应不定式 poner；poner 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he puesto / has puesto / ha puesto / hemos puesto / habéis puesto / han puesto；haber 后的分词不随性数变化。,分词;不规则分词
+es-1019,es,es-13,visto,看过了（分词）,He visto el mar.,我已经看过海。,不规则过去分词；对应不定式 ver；ver 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he visto / has visto / ha visto / hemos visto / habéis visto / han visto；haber 后的分词不随性数变化。,分词;不规则分词
+es-1020,es,es-13,vuelto,回来了（分词）,He vuelto a casa.,我已经回家。,不规则过去分词；对应不定式 volver；volver 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he vuelto / has vuelto / ha vuelto / hemos vuelto / habéis vuelto / han vuelto；haber 后的分词不随性数变化。,分词;不规则分词
+es-1021,es,es-13,descubierto,发现了（分词）,He descubierto una ruta nueva.,我已经发现了一条新路线。,不规则过去分词；对应不定式 descubrir；descubrir 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he descubierto / has descubierto / ha descubierto / hemos descubierto / habéis descubierto / han descubierto；haber 后的分词不随性数变化。,分词;不规则分词
+es-1022,es,es-13,devuelto,归还了（分词）,He devuelto el libro.,我已经还了书。,不规则过去分词；对应不定式 devolver；devolver 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he devuelto / has devuelto / ha devuelto / hemos devuelto / habéis devuelto / han devuelto；haber 后的分词不随性数变化。,分词;不规则分词
+es-1023,es,es-13,resuelto,解决了（分词）,He resuelto el problema.,我已经解决了问题。,不规则过去分词；对应不定式 resolver；resolver 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he resuelto / has resuelto / ha resuelto / hemos resuelto / habéis resuelto / han resuelto；haber 后的分词不随性数变化。,分词;不规则分词
+es-1024,es,es-13,cubierto,盖上了（分词）,He cubierto la mesa con un papel.,我已经用一张纸盖住桌子。,不规则过去分词；对应不定式 cubrir；cubrir 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he cubierto / has cubierto / ha cubierto / hemos cubierto / habéis cubierto / han cubierto；haber 后的分词不随性数变化。,分词;不规则分词
+es-1025,es,es-13,compuesto,创作了（分词）,He compuesto una canción.,我已经创作了一首歌。,不规则过去分词；对应不定式 componer；componer 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he compuesto / has compuesto / ha compuesto / hemos compuesto / habéis compuesto / han compuesto；haber 后的分词不随性数变化。,分词;不规则分词
+es-1026,es,es-13,deshecho,拆开了（分词）,He deshecho la maleta.,我已经把行李从箱子里取出来。,不规则过去分词；对应不定式 deshacer；deshacer 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he deshecho / has deshecho / ha deshecho / hemos deshecho / habéis deshecho / han deshecho；haber 后的分词不随性数变化。,分词;不规则分词
+es-1027,es,es-13,impreso,打印了（分词）,He impreso el billete.,我已经打印了票。,不规则过去分词；对应不定式 imprimir；imprimir 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he impreso / has impreso / ha impreso / hemos impreso / habéis impreso / han impreso；haber 后的分词不随性数变化。 imprimir 也有规则分词 imprimido，两种形式都可用于完成时。,分词;不规则分词
+es-1028,es,es-13,previsto,预先考虑了（分词）,He previsto un descanso.,我已经预先安排了一次休息。,不规则过去分词；对应不定式 prever；prever 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he previsto / has previsto / ha previsto / hemos previsto / habéis previsto / han previsto；haber 后的分词不随性数变化。,分词;不规则分词
+es-1029,es,es-13,esta semana,这周,Esta semana he viajado en tren.,这周我坐火车旅行过。,时间短语，当前这一周；常配现在完成时。,副词;时间标记
+es-1030,es,es-13,este mes,这个月,Este mes hemos visitado dos museos.,这个月我们已经参观了两座博物馆。,时间短语，当前这个月。,副词;时间标记
+es-1031,es,es-13,este año,今年,Este año he visto el mar.,今年我已经看过海。,时间短语，当前这一年。,副词;时间标记
+es-1032,es,es-13,esta mañana,今天上午,Esta mañana he leído la guía.,今天上午我已经读了指南。,时间短语；是否仍与现在相连取决于说话时的视角。,副词;时间标记
+es-1033,es,es-13,esta tarde,今天下午,Esta tarde he escrito cinco frases.,今天下午我已经写了五句话。,时间短语；这里讲今天下午已经做过的事。,副词;时间标记
+es-1034,es,es-13,esta noche,今晚,Esta noche he cenado en casa.,今晚我已经在家吃过晚饭。,时间短语；本例说话时已经吃过晚饭。,副词;时间标记
+es-1035,es,es-13,alguna vez,曾经；有没有过,¿Has viajado alguna vez en avión?,你有没有坐飞机旅行过？,经历问句中常用，不指定某次过去日期。,副词;时间标记
+es-1036,es,es-13,todavía no,还没有,Todavía no he visto el museo.,我还没有参观那座博物馆。,否定时间短语；no 放在 haber 前。,副词;时间标记
+es-1037,es,es-13,hasta ahora,到现在为止,Hasta ahora hemos tenido buen tiempo.,到现在为止天气一直很好。,时间范围延续到说话时。,副词;时间标记
+es-1038,es,es-13,recientemente,最近,He visitado el pueblo recientemente.,我最近去过那个小镇。,副词，表示距现在不久，也可随语境与简单过去时连用。,副词;时间标记
+es-1039,es,es-13,resolver,解决,Quiero resolver el problema.,我想解决这个问题。,resolver 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he resuelto / has resuelto / ha resuelto / hemos resuelto / habéis resuelto / han resuelto；haber 后的分词不随性数变化。,动词;不定式;现在完成时
+es-1040,es,es-13,cubrir,覆盖；盖上,Voy a cubrir la mesa con un papel.,我要用一张纸盖住桌子。,cubrir 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he cubierto / has cubierto / ha cubierto / hemos cubierto / habéis cubierto / han cubierto；haber 后的分词不随性数变化。,动词;不定式;现在完成时
+es-1041,es,es-13,componer,创作；组成,Quiero componer una canción.,我想创作一首歌。,componer 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he compuesto / has compuesto / ha compuesto / hemos compuesto / habéis compuesto / han compuesto；haber 后的分词不随性数变化。,动词;不定式;现在完成时
+es-1042,es,es-13,deshacer,拆开；取消已做的事,Voy a deshacer la maleta.,我要把行李从箱子里取出来。,deshacer 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he deshecho / has deshecho / ha deshecho / hemos deshecho / habéis deshecho / han deshecho；haber 后的分词不随性数变化。,动词;不定式;现在完成时
+es-1043,es,es-13,imprimir,打印,Quiero imprimir el itinerario.,我想打印行程安排。,imprimir 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he impreso / has impreso / ha impreso / hemos impreso / habéis impreso / han impreso；haber 后的分词不随性数变化。,动词;不定式;现在完成时
+es-1044,es,es-13,prever,预先考虑；预计,Hay que prever un descanso.,得预先安排一次休息。,prever 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he previsto / has previsto / ha previsto / hemos previsto / habéis previsto / han previsto；haber 后的分词不随性数变化。,动词;不定式;现在完成时
+es-1045,es,es-13,explorar,探索；考察,Quiero explorar el valle.,我想探索这个山谷。,explorar 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he explorado / has explorado / ha explorado / hemos explorado / habéis explorado / han explorado；haber 后的分词不随性数变化。,动词;不定式;现在完成时
+es-1046,es,es-13,aterrizar,降落,El avión va a aterrizar pronto.,飞机很快要降落。,aterrizar 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he aterrizado / has aterrizado / ha aterrizado / hemos aterrizado / habéis aterrizado / han aterrizado；haber 后的分词不随性数变化。,动词;不定式;现在完成时
+es-1047,es,es-13,embarcar,登机；登船,Vamos a embarcar a las ocho.,我们八点登机。,embarcar 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he embarcado / has embarcado / ha embarcado / hemos embarcado / habéis embarcado / han embarcado；haber 后的分词不随性数变化。,动词;不定式;现在完成时
+es-1048,es,es-13,facturar,办理托运,Voy a facturar la maleta.,我要托运行李箱。,facturar 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he facturado / has facturado / ha facturado / hemos facturado / habéis facturado / han facturado；haber 后的分词不随性数变化。,动词;不定式;现在完成时
+es-1049,es,es-13,desembarcar,下船；下飞机,Vamos a desembarcar en la isla.,我们将在岛上下船。,desembarcar 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he desembarcado / has desembarcado / ha desembarcado / hemos desembarcado / habéis desembarcado / han desembarcado；haber 后的分词不随性数变化。,动词;不定式;现在完成时
+es-1050,es,es-13,acampar,露营,Quiero acampar en el bosque.,我想在树林里露营。,acampar 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he acampado / has acampado / ha acampado / hemos acampado / habéis acampado / han acampado；haber 后的分词不随性数变化。,动词;不定式;现在完成时
+es-1051,es,es-13,fotografiar,摄影；拍摄,Quiero fotografiar el paisaje.,我想拍摄风景。,fotografiar 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he fotografiado / has fotografiado / ha fotografiado / hemos fotografiado / habéis fotografiado / han fotografiado；haber 后的分词不随性数变化。,动词;不定式;现在完成时
+es-1052,es,es-13,navegar,航行,Quiero navegar por el río.,我想在河上乘船航行。,navegar 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he navegado / has navegado / ha navegado / hemos navegado / habéis navegado / han navegado；haber 后的分词不随性数变化。,动词;不定式;现在完成时
+es-1053,es,es-13,confirmar,确认,Voy a confirmar la reserva.,我要确认预订。,confirmar 的现在完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：he confirmado / has confirmado / ha confirmado / hemos confirmado / habéis confirmado / han confirmado；haber 后的分词不随性数变化。,动词;不定式;现在完成时
+es-1054,es,es-13,inolvidable,难忘的,El viaje ha sido inolvidable.,这次旅行令人难忘。,形容词；性数形式 inolvidable / inolvidable / inolvidables / inolvidables。,形容词
+es-1055,es,es-13,impresionante,令人印象深刻的,La vista es impresionante.,景观令人印象深刻。,形容词；性数形式 impresionante / impresionante / impresionantes / impresionantes。,形容词
+es-1056,es,es-13,agotador,使人疲惫的,El trayecto ha sido agotador.,这段路程让人疲惫。,形容词；性数形式 agotador / agotadora / agotadores / agotadoras。,形容词
+es-1057,es,es-13,turístico,旅游的,El folleto turístico es interesante.,旅游介绍册很有趣。,形容词；性数形式 turístico / turística / turísticos / turísticas。,形容词
+es-1058,es,es-13,soleado,阳光充足的,El día ha sido soleado.,今天阳光充足。,形容词；性数形式 soleado / soleada / soleados / soleadas。,形容词
+es-1059,es,es-13,nublado,多云的,El cielo está nublado.,天空多云。,形容词；性数形式 nublado / nublada / nublados / nubladas。,形容词
+es-1060,es,es-13,húmedo,潮湿的,El bosque es húmedo.,这片树林很潮湿。,形容词；性数形式 húmedo / húmeda / húmedos / húmedas。,形容词
+es-1061,es,es-13,seco,干燥的,El campo está seco.,田野很干燥。,形容词；性数形式 seco / seca / secos / secas。,形容词
+es-1062,es,es-13,internacional,国际的,El aeropuerto es internacional.,这是国际机场。,形容词；性数形式 internacional / internacional / internacionales / internacionales。,形容词
+es-1063,es,es-13,local,本地的,El periódico local tiene una noticia del museo.,本地报纸有一条博物馆的消息。,形容词；性数形式 local / local / locales / locales。,形容词
+es-1064,es,es-13,Hoy he leído el periódico,我今天已经读过报纸,Hoy he leído el periódico.,我今天已经读过报纸。,hoy 与现在完成时，分词 leído 的 í 要标符号；整句，只生成识别卡。,句型;phrase
+es-1065,es,es-13,Esta semana hemos hecho un viaje,我们这周已经旅行了一次,Esta semana hemos hecho un viaje.,我们这周已经旅行了一次。,hacer 的不规则分词是 hecho；整句，只生成识别卡。,句型;phrase
+es-1066,es,es-13,¿Has viajado alguna vez en barco?,你有没有坐船旅行过,¿Has viajado alguna vez en barco?,你有没有坐船旅行过？,经历问句；alguna vez 不指定日期；整句，只生成识别卡。,句型;phrase
+es-1067,es,es-13,Todavía no he terminado el libro,我还没有读完这本书,Todavía no he terminado el libro.,我还没有读完这本书。,否定词 no 放在 haber 前；整句，只生成识别卡。,句型;phrase
+es-1068,es,es-13,Ya he escrito cinco frases,我已经写了五句话,Ya he escrito cinco frases.,我已经写了五句话。,escribir 的不规则分词是 escrito；整句，只生成识别卡。,句型;phrase
+es-1069,es,es-13,la anécdota,小故事；趣事,He contado una anécdota del viaje.,我已经讲了一件旅行趣事。,名词（阴）；复数按普通名词规则变化。,名词;旅行经历;补充
+es-1070,es,es-13,el visitante,参观者（男）,El visitante ha leído el folleto.,参观者已经读了介绍册。,名词（阳）；复数按普通名词规则变化。 女性是 la visitante。,名词;旅行经历;补充
+es-1071,es,es-13,el pasaje,船票；机票,He comprado el pasaje.,我已经买了船票。,名词（阳）；复数按普通名词规则变化。,名词;旅行经历;补充
+es-1072,es,es-13,la costa,海岸,Hemos recorrido la costa.,我们已经沿海岸走了一遍。,名词（阴）；复数按普通名词规则变化。,名词;旅行经历;补充
+es-1073,es,es-13,el valle,山谷,El valle es verde.,山谷是绿色的。,名词（阳）；复数按普通名词规则变化。,名词;旅行经历;补充
+es-1074,es,es-14,la profesión,职业,La profesión de mi hermana es interesante.,我姐姐的职业很有意思。,名词（阴）；复数按普通名词规则变化。,名词;职业计划
+es-1075,es,es-14,el empleo,就业；工作,Buscaré un empleo en la ciudad.,我会在城里找一份工作。,名词（阳）；复数按普通名词规则变化。,名词;职业计划
+es-1076,es,es-14,la empresa,公司,La empresa tendrá una oficina nueva.,公司会有一个新办公室。,名词（阴）；复数按普通名词规则变化。,名词;职业计划
+es-1077,es,es-14,el contrato,合同,Leeré el contrato mañana.,我明天会读合同。,名词（阳）；复数按普通名词规则变化。,名词;职业计划
+es-1078,es,es-14,el sueldo,薪水,El sueldo será de mil euros.,薪水会是一千欧元。,名词（阳）；复数按普通名词规则变化。,名词;职业计划
+es-1079,es,es-14,el salario,工资,El salario será igual para todos.,大家的工资将会相同。,名词（阳）；复数按普通名词规则变化。,名词;职业计划
+es-1080,es,es-14,la entrevista,面试；访谈,La entrevista será el lunes.,面试会在星期一进行。,名词（阴）；复数按普通名词规则变化。,名词;职业计划
+es-1081,es,es-14,el currículum,简历,Enviaré el currículum mañana.,我明天会发送简历。,名词（阳）；复数 los currículums。,名词;职业计划
+es-1082,es,es-14,la formación,培训；教育背景,La formación será importante para el empleo.,培训对就业会很重要。,名词（阴）；复数按普通名词规则变化。,名词;职业计划
+es-1083,es,es-14,la carrera,职业生涯；大学专业,Quiero empezar una carrera en esta empresa.,我想在这家公司开始职业生涯。,名词（阴）；复数按普通名词规则变化。,名词;职业计划
+es-1084,es,es-14,la meta,目标,Mi meta es trabajar en el museo.,我的目标是在博物馆工作。,名词（阴）；复数按普通名词规则变化。,名词;职业计划
+es-1085,es,es-14,el puesto,职位；岗位,El puesto será temporal.,这个职位将是临时的。,名词（阳）；复数按普通名词规则变化。,名词;职业计划
+es-1086,es,es-14,el plazo,期限,El plazo terminará mañana.,期限明天结束。,名词（阳）；复数按普通名词规则变化。,名词;职业计划
+es-1087,es,es-14,la oferta,工作机会；报价,Leeré la oferta de empleo.,我会阅读招聘信息。,名词（阴）；复数按普通名词规则变化。,名词;职业计划
+es-1088,es,es-14,el candidato,候选人；应聘者（男）,El candidato vendrá mañana.,应聘者明天会来。,名词（阳）；复数按普通名词规则变化。 女性形式为 la candidata。,名词;职业计划
+es-1089,es,es-14,el arquitecto,建筑师（男）,El arquitecto diseñará la casa.,建筑师会设计这所房子。,名词（阳）；复数按普通名词规则变化。 女性形式为 la arquitecta。,名词;职业计划
+es-1090,es,es-14,el periodista,记者（男）,El periodista escribirá la noticia.,记者会写这条新闻。,名词（阳）；复数按普通名词规则变化。 女性形式为 la periodista。,名词;职业计划
+es-1091,es,es-14,el traductor,译者（男）,El traductor trabajará en casa.,译者将在家工作。,名词（阳）；复数按普通名词规则变化。 女性形式为 la traductora。,名词;职业计划
+es-1092,es,es-14,el programador,程序员（男）,El programador desarrollará el programa.,程序员会开发这个程序。,名词（阳）；复数按普通名词规则变化。 女性形式为 la programadora。,名词;职业计划
+es-1093,es,es-14,el diseñador,设计师（男）,El diseñador preparará el proyecto.,设计师会准备这个项目。,名词（阳）；复数按普通名词规则变化。 女性形式为 la diseñadora。,名词;职业计划
+es-1094,es,es-14,tendré,我将有,Tendré tiempo mañana.,我明天会有时间。,tener 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：tendré / tendrás / tendrá / tendremos / tendréis / tendrán。,动词;简单将来时;不规则
+es-1095,es,es-14,podré,我将能够,Podré trabajar mañana.,我明天可以工作。,poder 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：podré / podrás / podrá / podremos / podréis / podrán。,动词;简单将来时;不规则
+es-1096,es,es-14,sabré,我将知道,Sabré el resultado el lunes.,我星期一会知道结果。,saber 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：sabré / sabrás / sabrá / sabremos / sabréis / sabrán。,动词;简单将来时;不规则
+es-1097,es,es-14,habrá,将有；将存在,Habrá una reunión mañana.,明天会有一个会议。,haber 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：habré / habrás / habrá / habremos / habréis / habrán。 haber 表示存在时只用第三人称单数 habrá；其余人称形式作为助动词，本周只识别词干，不学习将来完成时。,动词;简单将来时;不规则
+es-1098,es,es-14,pondré,我将放,Pondré el libro aquí.,我会把书放在这里。,poner 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：pondré / pondrás / pondrá / pondremos / pondréis / pondrán。,动词;简单将来时;不规则
+es-1099,es,es-14,saldré,我将出去,Saldré a las ocho.,我会八点出门。,salir 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：saldré / saldrás / saldrá / saldremos / saldréis / saldrán。,动词;简单将来时;不规则
+es-1100,es,es-14,vendré,我将来,Vendré a la entrevista.,我会来参加面试。,venir 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：vendré / vendrás / vendrá / vendremos / vendréis / vendrán。,动词;简单将来时;不规则
+es-1101,es,es-14,diré,我将说,Diré la respuesta mañana.,我明天会说出答案。,decir 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：diré / dirás / dirá / diremos / diréis / dirán。,动词;简单将来时;不规则
+es-1102,es,es-14,haré,我将做,Haré el trabajo el lunes.,我星期一会做这项工作。,hacer 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：haré / harás / hará / haremos / haréis / harán。,动词;简单将来时;不规则
+es-1103,es,es-14,querré,我将想要,Querré descansar después del viaje.,旅行之后我会想休息。,querer 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：querré / querrás / querrá / querremos / querréis / querrán。,动词;简单将来时;不规则
+es-1104,es,es-14,cabré,我将容得下,Cabré en el coche.,车里会有我的位置。,caber 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：cabré / cabrás / cabrá / cabremos / cabréis / cabrán。,动词;简单将来时;不规则
+es-1105,es,es-14,valdré,我将值得；我将有用,El libro valdrá diez euros.,这本书将值十欧元。,valer 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：valdré / valdrás / valdrá / valdremos / valdréis / valdrán。,动词;简单将来时;不规则
+es-1106,es,es-14,la próxima semana,下周,La próxima semana tendré una entrevista.,下周我会有一次面试。,时间短语（阴）；próxima 与 semana 配合。,副词;时间标记
+es-1107,es,es-14,el próximo año,明年,El próximo año trabajaré aquí.,明年我会在这里工作。,时间短语（阳）；próximo 放在 año 前。,副词;时间标记
+es-1108,es,es-14,dentro de un mes,一个月后,Dentro de un mes empezaré el curso.,一个月后我会开始上课。,dentro de + 时间段表示从现在算起多久以后。,副词;时间标记
+es-1109,es,es-14,en 2030,在2030年,En 2030 viviré en otra ciudad.,2030年我会住在另一座城市。,en + 年份，年份前不加冠词。,副词;时间标记
+es-1110,es,es-14,pasado mañana,后天,Pasado mañana enviaré el currículum.,后天我会发送简历。,固定时间短语，表示明天之后的那一天。,副词;时间标记
+es-1111,es,es-14,mañana por la tarde,明天下午,Mañana por la tarde podré estudiar.,明天下午我可以学习。,mañana 是明天，por la tarde 是在下午。,副词;时间标记
+es-1112,es,es-14,a partir de mañana,从明天起,A partir de mañana ahorraré dinero.,从明天起我会存钱。,a partir de + 起点，表示从某时开始。,副词;时间标记
+es-1113,es,es-14,en el futuro,在未来,En el futuro colaboraré con mi hermana.,未来我会和姐姐合作。,时间短语；futuro 在这里是阳性名词。,副词;时间标记
+es-1114,es,es-14,planificar,规划,Voy a planificar el viaje.,我要规划旅行。,planificar 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：planificaré / planificarás / planificará / planificaremos / planificaréis / planificarán。,动词;不定式;简单将来时
+es-1115,es,es-14,organizar,安排；组织,Organizaré una reunión.,我会组织一次会议。,organizar 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：organizaré / organizarás / organizará / organizaremos / organizaréis / organizarán。,动词;不定式;简单将来时
+es-1116,es,es-14,ahorrar,储蓄；节省,Ahorraré dinero cada mes.,我每个月会存钱。,ahorrar 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：ahorraré / ahorrarás / ahorrará / ahorraremos / ahorraréis / ahorrarán。,动词;不定式;简单将来时
+es-1117,es,es-14,solicitar,申请,Solicitaré el puesto.,我会申请这个职位。,solicitar 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：solicitaré / solicitarás / solicitará / solicitaremos / solicitaréis / solicitarán。,动词;不定式;简单将来时
+es-1118,es,es-14,contratar,雇用；签约,La empresa contratará a un traductor.,公司会雇用一位译者。,contratar 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：contrataré / contratarás / contratará / contrataremos / contrataréis / contratarán。,动词;不定式;简单将来时
+es-1119,es,es-14,diseñar,设计,Diseñaré una casa pequeña.,我会设计一所小房子。,diseñar 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：diseñaré / diseñarás / diseñará / diseñaremos / diseñaréis / diseñarán。,动词;不定式;简单将来时
+es-1120,es,es-14,programar,编程；安排,Programaré la actividad para el lunes.,我会把活动安排在星期一。,programar 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：programaré / programarás / programará / programaremos / programaréis / programarán。,动词;不定式;简单将来时
+es-1121,es,es-14,colaborar,合作,Colaboraré con el equipo.,我会与团队合作。,colaborar 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：colaboraré / colaborarás / colaborará / colaboraremos / colaboraréis / colaborarán。,动词;不定式;简单将来时
+es-1122,es,es-14,participar,参加,Participaré en el proyecto.,我会参加这个项目。,participar 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：participaré / participarás / participará / participaremos / participaréis / participarán。,动词;不定式;简单将来时
+es-1123,es,es-14,desarrollar,开发；发展,Desarrollaré el programa.,我会开发这个程序。,desarrollar 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：desarrollaré / desarrollarás / desarrollará / desarrollaremos / desarrollaréis / desarrollarán。,动词;不定式;简单将来时
+es-1124,es,es-14,realizar,完成；开展,Realizaré el trabajo en casa.,我会在家完成工作。,realizar 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：realizaré / realizarás / realizará / realizaremos / realizaréis / realizarán。,动词;不定式;简单将来时
+es-1125,es,es-14,invertir,投入；投资,Invertiré tiempo en mi formación.,我会把时间投入培训。,invertir 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：invertiré / invertirás / invertirá / invertiremos / invertiréis / invertirán。,动词;不定式;简单将来时
+es-1126,es,es-14,obtener,获得,Obtendré el resultado mañana.,我明天会拿到结果。,obtener 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：obtendré / obtendrás / obtendrá / obtendremos / obtendréis / obtendrán。,动词;不定式;简单将来时
+es-1127,es,es-14,ofrecer,提供,Ofreceré mi ayuda.,我会提供帮助。,ofrecer 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：ofreceré / ofrecerás / ofrecerá / ofreceremos / ofreceréis / ofrecerán。,动词;不定式;简单将来时
+es-1128,es,es-14,negociar,协商,Negociaré el contrato.,我会协商合同。,negociar 的简单将来时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：negociaré / negociarás / negociará / negociaremos / negociaréis / negociarán。,动词;不定式;简单将来时
+es-1129,es,es-14,profesional,专业的,El trabajo será profesional.,工作会体现专业水平。,形容词；性数形式 profesional / profesional / profesionales / profesionales。,形容词
+es-1130,es,es-14,laboral,工作的；劳动的,La jornada laboral será corta.,工作日的时长会较短。,形容词；性数形式 laboral / laboral / laborales / laborales。,形容词
+es-1131,es,es-14,responsable,负责的,El candidato es responsable.,应聘者很负责。,形容词；性数形式 responsable / responsable / responsables / responsables。,形容词
+es-1132,es,es-14,puntual,准时的,Seré puntual en la entrevista.,面试时我会准时。,形容词；性数形式 puntual / puntual / puntuales / puntuales。,形容词
+es-1133,es,es-14,flexible,灵活的,El horario será flexible.,时间安排会很灵活。,形容词；性数形式 flexible / flexible / flexibles / flexibles。,形容词
+es-1134,es,es-14,estable,稳定的,El empleo será estable.,工作会很稳定。,形容词；性数形式 estable / estable / estables / estables。,形容词
+es-1135,es,es-14,temporal,临时的,El contrato será temporal.,合同将是临时的。,形容词；性数形式 temporal / temporal / temporales / temporales。,形容词
+es-1136,es,es-14,creativo,有创造力的,El diseñador es creativo.,设计师有创造力。,形容词；性数形式 creativo / creativa / creativos / creativas。,形容词
+es-1137,es,es-14,independiente,独立的,El traductor será independiente.,译者将独立工作。,形容词；性数形式 independiente / independiente / independientes / independientes。,形容词
+es-1138,es,es-14,ambicioso,有抱负的,El proyecto es ambicioso.,这个项目目标远大。,形容词；性数形式 ambicioso / ambiciosa / ambiciosos / ambiciosas。,形容词
+es-1139,es,es-14,El próximo año trabajaré en otra ciudad,明年我会在另一座城市工作,El próximo año trabajaré en otra ciudad.,明年我会在另一座城市工作。,规则将来时把 -é 接在不定式 trabajar 后；整句，只生成识别卡。,句型;phrase
+es-1140,es,es-14,Dentro de un mes tendremos una reunión,一个月后我们会有一次会议,Dentro de un mes tendremos una reunión.,一个月后我们会有一次会议。,tener 的将来时词干是 tendr-；整句，只生成识别卡。,句型;phrase
+es-1141,es,es-14,Mañana podré ayudarte,明天我可以帮助你,Mañana podré ayudarte.,明天我可以帮助你。,poder 的将来时词干是 podr-；te 接在不定式 ayudar 后；整句，只生成识别卡。,句型;phrase
+es-1142,es,es-14,Serán las tres,大概三点了,Serán las tres.,大概三点了。,将来时表示对现在时间的推测；整句，只生成识别卡。,句型;phrase
+es-1143,es,es-14,La próxima semana voy a buscar trabajo,下周我打算找工作,La próxima semana voy a buscar trabajo.,下周我打算找工作。,ir a + 不定式侧重当前已经有的打算；整句，只生成识别卡。,句型;phrase
+es-1144,es,es-14,el taller,工作坊；作坊,El taller de escritura empezará mañana.,写作工作坊明天开始。,名词（阳）；复数按普通名词规则变化。,名词;职业计划;补充
+es-1145,es,es-14,la jornada,工作日时长；一天的活动,La jornada terminará a las cinco.,一天的工作会在五点结束。,名词（阴）；复数按普通名词规则变化。,名词;职业计划;补充
+es-1146,es,es-14,el presupuesto,预算,El presupuesto será de cien euros.,预算会是一百欧元。,名词（阳）；复数按普通名词规则变化。,名词;职业计划;补充
+es-1147,es,es-14,el socio,合伙人（男）,El socio colaborará en el proyecto.,合伙人会参与项目。,名词（阳）；复数按普通名词规则变化。 女性形式为 la socia。,名词;职业计划;补充
+es-1148,es,es-14,el negocio,生意；企业,El negocio abrirá en enero.,这家企业会在一月开业。,名词（阳）；复数按普通名词规则变化。,名词;职业计划;补充
+es-1149,es,es-14,el departamento,部门,El departamento tendrá cinco personas.,部门会有五个人。,名词（阳）；复数按普通名词规则变化。,名词;职业计划;补充
+es-1150,es,es-14,la oportunidad,机会,La oportunidad de aprender es importante.,学习的机会很重要。,名词（阴）；复数按普通名词规则变化。,名词;职业计划;补充
+es-1151,es,es-14,la vacante,空缺职位,La vacante está en la oficina del centro.,空缺职位在市中心的办公室。,名词（阴）；复数按普通名词规则变化。,名词;职业计划;补充
+es-1152,es,es-14,el permiso,许可,Necesitaré el permiso para viajar.,旅行时我会需要许可。,名词（阳）；复数按普通名词规则变化。,名词;职业计划;补充
+es-1153,es,es-14,la firma,签字；签名,La firma está en el contrato.,签名在合同上。,名词（阴）；复数按普通名词规则变化。,名词;职业计划;补充
+es-1154,es,es-15,me gustaría,我想；我希望,Me gustaría tomar un café.,我想喝一杯咖啡。,gustar 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：gustaría / gustarías / gustaría / gustaríamos / gustaríais / gustarían；gustaría 与不定式主语搭配；喜欢的人用 me；复数名词作主语时用 gustarían,礼貌与建议;phrase
+es-1155,es,es-15,podría ayudarme,您能帮我吗,"¿Podría ayudarme, por favor?",您能帮我吗？,poder 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：podría / podrías / podría / podríamos / podríais / podrían；礼貌请求；me 接在不定式 ayudar 后,礼貌与建议;phrase
+es-1156,es,es-15,podrías repetirlo,你能再说一遍吗,"¿Podrías repetirlo, por favor?",你能再说一遍吗？,poder 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：podría / podrías / podría / podríamos / podríais / podrían；对 tú 提出礼貌请求；lo 接在不定式 repetir 后,礼貌与建议;phrase
+es-1157,es,es-15,le agradecería,我会很感谢您,Le agradecería su ayuda.,我会很感谢您的帮助。,agradecer 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：agradecería / agradecerías / agradecería / agradeceríamos / agradeceríais / agradecerían；le 是间接宾语；agradecer 表示感谢,礼貌与建议;phrase
+es-1158,es,es-15,sería mejor,会更好,Sería mejor comparar los precios.,比较一下价格会更好。,ser 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：sería / serías / sería / seríamos / seríais / serían；委婉提出建议,礼貌与建议;phrase
+es-1159,es,es-15,te recomendaría,我会建议你,Te recomendaría este restaurante.,我会向你推荐这家餐馆。,recomendar 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：recomendaría / recomendarías / recomendaría / recomendaríamos / recomendaríais / recomendarían；te 是间接宾语；条件式使建议较委婉,礼貌与建议;phrase
+es-1160,es,es-15,le importaría esperar,您介意等候吗,¿Le importaría esperar un momento?,您介意等一会儿吗？,importar 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：importaría / importarías / importaría / importaríamos / importaríais / importarían；礼貌询问；importar 表示使在意,礼貌与建议;phrase
+es-1161,es,es-15,con mucho gusto,很乐意,Con mucho gusto te ayudo.,我很乐意帮助你。,礼貌应答短语；gusto 是阳性名词，表示乐意,礼貌与建议
+es-1162,es,es-15,por cortesía,出于礼貌,Por cortesía esperamos un momento.,出于礼貌，我们等一会儿。,副词短语；cortesía 是阴性名词,礼貌与建议
+es-1163,es,es-15,si es posible,如果可以,"Si es posible, me gustaría una mesa cerca de la ventana.",如果可以，我想要一张靠窗的桌子。,真实条件句开头；si 不标重音，es 用现在时,礼貌与建议;phrase
+es-1164,es,es-15,aconsejar,建议,Te aconsejaría descansar.,我会建议你休息。,aconsejar 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：aconsejaría / aconsejarías / aconsejaría / aconsejaríamos / aconsejaríais / aconsejarían；不定式后加条件式词尾，词干不变。,动词;不定式;条件式
+es-1165,es,es-15,recomendar,推荐,Te recomendaría la sopa.,我会向你推荐这道汤。,recomendar 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：recomendaría / recomendarías / recomendaría / recomendaríamos / recomendaríais / recomendarían；不定式后加条件式词尾，词干不变。,动词;不定式;条件式
+es-1166,es,es-15,exigir,要求,Exigiría un recibo.,我会要求一张收据。,exigir 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：exigiría / exigirías / exigiría / exigiríamos / exigiríais / exigirían；不定式后加条件式词尾，词干不变。,动词;不定式;条件式
+es-1167,es,es-15,atender,接待；照料,Atendería al cliente con calma.,我会从容接待顾客。,atender 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：atendería / atenderías / atendería / atenderíamos / atenderíais / atenderían；不定式后加条件式词尾，词干不变。,动词;不定式;条件式
+es-1168,es,es-15,reembolsar,退还款项,Reembolsaría el dinero al cliente.,我会把钱退还给顾客。,reembolsar 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：reembolsaría / reembolsarías / reembolsaría / reembolsaríamos / reembolsaríais / reembolsarían；不定式后加条件式词尾，词干不变。,动词;不定式;条件式
+es-1169,es,es-15,rechazar,拒绝,Rechazaría esa oferta.,我会拒绝那个报价。,rechazar 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：rechazaría / rechazarías / rechazaría / rechazaríamos / rechazaríais / rechazarían；不定式后加条件式词尾，词干不变。,动词;不定式;条件式
+es-1170,es,es-15,aceptar,接受,Aceptaría la sugerencia.,我会接受这个建议。,aceptar 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：aceptaría / aceptarías / aceptaría / aceptaríamos / aceptaríais / aceptarían；不定式后加条件式词尾，词干不变。,动词;不定式;条件式
+es-1171,es,es-15,permitir,允许,Permitiría el cambio de talla.,我会允许换尺码。,permitir 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：permitiría / permitirías / permitiría / permitiríamos / permitiríais / permitirían；不定式后加条件式词尾，词干不变。,动词;不定式;条件式
+es-1172,es,es-15,comprobar,核实,Comprobaría la cuenta antes de pagar.,我会在付款前核对账单。,comprobar 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：comprobaría / comprobarías / comprobaría / comprobaríamos / comprobaríais / comprobarían；不定式后加条件式词尾，词干不变。,动词;不定式;条件式
+es-1173,es,es-15,cobrar,收款,Cobraría diez euros por el menú.,这份套餐我会收十欧元。,cobrar 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：cobraría / cobrarías / cobraría / cobraríamos / cobraríais / cobrarían；不定式后加条件式词尾，词干不变。,动词;不定式;条件式
+es-1174,es,es-15,reclamar,要求处理；提出投诉,Reclamaría por el error de la factura.,我会就发票错误提出投诉。,reclamar 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：reclamaría / reclamarías / reclamaría / reclamaríamos / reclamaríais / reclamarían；不定式后加条件式词尾，词干不变。,动词;不定式;条件式
+es-1175,es,es-15,sustituir,替换,Sustituiría el café por té.,我会把咖啡换成茶。,sustituir 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：sustituiría / sustituirías / sustituiría / sustituiríamos / sustituiríais / sustituirían；不定式后加条件式词尾，词干不变。,动词;不定式;条件式
+es-1176,es,es-15,envolver,包好,Envolvería el regalo con papel.,我会用纸把礼物包好。,envolver 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：envolvería / envolverías / envolvería / envolveríamos / envolveríais / envolverían；不定式后加条件式词尾，词干不变。,动词;不定式;条件式
+es-1177,es,es-15,cancelar,取消,Cancelaría el pedido por teléfono.,我会打电话取消订单。,cancelar 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：cancelaría / cancelarías / cancelaría / cancelaríamos / cancelaríais / cancelarían；不定式后加条件式词尾，词干不变。,动词;不定式;条件式
+es-1178,es,es-15,consultar,询问；查阅,Consultaría el catálogo antes de comprar.,我会在购买前查阅目录。,consultar 的条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：consultaría / consultarías / consultaría / consultaríamos / consultaríais / consultarían；不定式后加条件式词尾，词干不变。,动词;不定式;条件式
+es-1179,es,es-15,el menú,套餐；菜单,El menú cuesta diez euros.,套餐要十欧元。,名词（阳）,名词;服务餐馆商店
+es-1180,es,es-15,la cuenta,账单,La cuenta está en la mesa.,账单在桌上。,名词（阴）,名词;服务餐馆商店
+es-1181,es,es-15,el recibo,收据,El recibo está en la bolsa.,收据在包里。,名词（阳）,名词;服务餐馆商店
+es-1182,es,es-15,la factura,发票,La factura tiene un error.,发票有一个错误。,名词（阴）,名词;服务餐馆商店
+es-1183,es,es-15,la propina,小费,La propina es para el camarero.,小费是给服务员的。,名词（阴）,名词;服务餐馆商店
+es-1184,es,es-15,el descuento,折扣,El descuento es pequeño.,折扣不大。,名词（阳）,名词;服务餐馆商店
+es-1185,es,es-15,la promoción,促销,La promoción termina hoy.,促销今天结束。,名词（阴）,名词;服务餐馆商店
+es-1186,es,es-15,el cliente,顾客,El cliente espera en la tienda.,顾客在店里等。,名词（阳）；女性为 la clienta,名词;服务餐馆商店
+es-1187,es,es-15,el pedido,订单；点的餐,El pedido llega hoy.,订单今天到。,名词（阳）,名词;服务餐馆商店
+es-1188,es,es-15,el servicio,服务,El servicio es rápido.,服务很快。,名词（阳）,名词;服务餐馆商店
+es-1189,es,es-15,la talla,尺码,La talla está en la etiqueta.,尺码在标签上。,名词（阴）,名词;服务餐馆商店
+es-1190,es,es-15,el probador,试衣间,El probador está al lado de la caja.,试衣间在收银台旁。,名词（阳）,名词;服务餐馆商店
+es-1191,es,es-15,el mostrador,柜台,El mostrador está limpio.,柜台很干净。,名词（阳）,名词;服务餐馆商店
+es-1192,es,es-15,el catálogo,商品目录,El catálogo tiene fotos.,商品目录有图片。,名词（阳）,名词;服务餐馆商店
+es-1193,es,es-15,la etiqueta,标签,La etiqueta tiene el precio.,标签上有价格。,名词（阴）,名词;服务餐馆商店
+es-1194,es,es-15,la devolución,退货；退款,La devolución es posible.,可以退货。,名词（阴）,名词;服务餐馆商店
+es-1195,es,es-15,la garantía,保修；保证,La garantía es de un año.,保修期是一年。,名词（阴）,名词;服务餐馆商店
+es-1196,es,es-15,la queja,投诉,La queja es del servicio.,投诉涉及服务。,名词（阴）,名词;服务餐馆商店
+es-1197,es,es-15,la sugerencia,建议,La sugerencia es buena.,建议很好。,名词（阴）,名词;服务餐馆商店
+es-1198,es,es-15,la ración,一份食物,La ración de pescado es grande.,这份鱼量很大。,名词（阴）,名词;服务餐馆商店
+es-1199,es,es-15,atento,细心的；周到的,El camarero es atento.,服务员很周到。,形容词；性数形式 atento / atenta / atentos / atentas,形容词
+es-1200,es,es-15,cortés,有礼貌的,El cliente es cortés.,顾客很有礼貌。,形容词；性数形式 cortés / cortés / corteses / corteses,形容词
+es-1201,es,es-15,educado,有教养的,El niño es educado.,孩子很有教养。,形容词；性数形式 educado / educada / educados / educadas,形容词
+es-1202,es,es-15,paciente,有耐心的,El vendedor es paciente.,售货员很有耐心。,形容词；性数形式 paciente / paciente / pacientes / pacientes,形容词
+es-1203,es,es-15,satisfecho,满意的,Estoy satisfecho con el servicio.,我对服务很满意。,形容词；性数形式 satisfecho / satisfecha / satisfechos / satisfechas,形容词
+es-1204,es,es-15,disponible,可用的；有空的,Hay una mesa disponible.,有一张空桌。,形容词；性数形式 disponible / disponible / disponibles / disponibles,形容词
+es-1205,es,es-15,adecuado,合适的,El tamaño es adecuado.,大小很合适。,形容词；性数形式 adecuado / adecuada / adecuados / adecuadas,形容词
+es-1206,es,es-15,sabroso,味道好的,El pescado es sabroso.,鱼的味道很好。,形容词；性数形式 sabroso / sabrosa / sabrosos / sabrosas,形容词
+es-1207,es,es-15,salado,咸的,El queso es salado.,奶酪是咸的。,形容词；性数形式 salado / salada / salados / saladas,形容词
+es-1208,es,es-15,picante,辣的,La sopa es picante.,汤是辣的。,形容词；性数形式 picante / picante / picantes / picantes,形容词
+es-1209,es,es-15,amablemente,和气地,El camarero contesta amablemente.,服务员和气地回答。,副词；形式不随性数变化；以 -mente 结尾。,副词
+es-1210,es,es-15,cortésmente,礼貌地,Pregunto cortésmente por la cuenta.,我礼貌地询问账单。,副词；形式不随性数变化；以 -mente 结尾。,副词
+es-1211,es,es-15,personalmente,亲自；就个人而言,"Personalmente, prefiero el té.",就我个人而言，我更喜欢茶。,副词；形式不随性数变化；以 -mente 结尾。,副词
+es-1212,es,es-15,especialmente,尤其,Me gusta especialmente este postre.,我尤其喜欢这道甜点。,副词；形式不随性数变化；以 -mente 结尾。,副词
+es-1213,es,es-15,realmente,确实；真正地,El servicio es realmente bueno.,服务确实很好。,副词；形式不随性数变化；以 -mente 结尾。,副词
+es-1214,es,es-15,simplemente,只是；简单地,Simplemente quiero una taza de té.,我只是想要一杯茶。,副词；形式不随性数变化；以 -mente 结尾。,副词
+es-1215,es,es-15,probablemente,很可能,Probablemente la tienda está abierta.,商店很可能开着。,副词；形式不随性数变化；以 -mente 结尾。,副词
+es-1216,es,es-15,exactamente,准确地；恰好,La cuenta es de exactamente veinte euros.,账单恰好是二十欧元。,副词；形式不随性数变化；以 -mente 结尾。,副词
+es-1217,es,es-15,aproximadamente,大约,El pedido llegará en aproximadamente diez minutos.,点的餐大约十分钟后送到。,副词；形式不随性数变化；以 -mente 结尾。,副词
+es-1218,es,es-15,preferiblemente,最好；优先地,"Me gustaría una mesa, preferiblemente cerca de la ventana.",我想要一张桌子，最好靠窗。,副词；形式不随性数变化；以 -mente 结尾。,副词
+es-1219,es,es-15,¿Podría traerme la cuenta?,您能把账单拿给我吗？,¿Podría traerme la cuenta?,您能把账单拿给我吗？,整句；poder 条件式表示礼貌；me 接在 traer 后。只生成识别卡。,句型;phrase
+es-1220,es,es-15,Me gustaría probar otro plato,我想尝另一道菜,Me gustaría probar otro plato.,我想尝另一道菜。,整句；gustaría 与不定式 probar 搭配。只生成识别卡。,句型;phrase
+es-1221,es,es-15,Deberías comparar los precios,你应该比较一下价格,Deberías comparar los precios.,你应该比较一下价格。,整句；deber 的条件式表示建议；debería / deberías / debería / deberíamos / deberíais / deberían。只生成识别卡。,句型;phrase
+es-1222,es,es-15,"Si tienes tiempo, iremos a la tienda",如果你有时间，我们就去商店,"Si tienes tiempo, iremos a la tienda.",如果你有时间，我们就去商店。,整句；真实条件：si 后用现在时 tienes；主句用将来时 iremos。只生成识别卡。,句型;phrase
+es-1223,es,es-15,Sería una buena solución,这会是个好办法,Sería una buena solución.,这会是个好办法。,整句；ser 条件式，依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：sería / serías / sería / seríamos / seríais / serían。只生成识别卡。,句型;phrase
+es-1224,es,es-15,el plato,盘子；一道菜,El plato está en la mesa.,盘子在桌上。,名词（阳）,名词;补充;餐桌
+es-1225,es,es-15,el vaso,玻璃杯,El vaso está vacío.,玻璃杯是空的。,名词（阳）,名词;补充;餐桌
+es-1226,es,es-15,la taza,杯子,La taza de café es pequeña.,咖啡杯很小。,名词（阴）,名词;补充;餐桌
+es-1227,es,es-15,la botella,瓶子,La botella está en la mesa.,瓶子在桌上。,名词（阴）,名词;补充;餐桌
+es-1228,es,es-15,la servilleta,餐巾,La servilleta está limpia.,餐巾是干净的。,名词（阴）,名词;补充;餐桌
+es-1229,es,es-15,el tenedor,叉子,El tenedor está al lado del plato.,叉子在盘子旁。,名词（阳）,名词;补充;餐桌
+es-1230,es,es-15,la cuchara,勺子,La cuchara está en la sopa.,勺子在汤里。,名词（阴）,名词;补充;餐桌
+es-1231,es,es-15,el cuchillo,刀,El cuchillo está en la cocina.,刀在厨房里。,名词（阳）,名词;补充;餐桌
+es-1232,es,es-15,el postre,甜点,El postre es de fruta.,甜点是水果做的。,名词（阳）,名词;补充;餐桌
+es-1233,es,es-15,la cortesía,礼貌,La cortesía es importante.,礼貌很重要。,名词（阴）,名词;补充;餐桌
+es-1234,es,es-16,el cruce,交叉口,El cruce está cerca del puente.,交叉口在桥附近。,名词（阳）,名词;指路与说明
+es-1235,es,es-16,la rotonda,环岛,La rotonda está al final de la avenida.,环岛在大道尽头。,名词（阴）,名词;指路与说明
+es-1236,es,es-16,el paso,通道；步骤,El paso está entre dos edificios.,通道在两栋楼之间。,名词（阳）,名词;指路与说明
+es-1237,es,es-16,la dirección,方向；地址,La dirección está en el papel.,地址在纸上。,名词（阴）,名词;指路与说明
+es-1238,es,es-16,el giro,转弯,El giro está después del puente.,转弯处在桥之后。,名词（阳）,名词;指路与说明
+es-1239,es,es-16,la indicación,指引,La indicación es clara.,指引很清楚。,名词（阴）,名词;指路与说明
+es-1240,es,es-16,la instrucción,说明；指令,La instrucción está en el manual.,说明在手册里。,名词（阴）,名词;指路与说明
+es-1241,es,es-16,el cartel,标牌；海报,El cartel está en la entrada.,标牌在入口。,名词（阳）,名词;指路与说明
+es-1242,es,es-16,la flecha,箭头,La flecha muestra la dirección.,箭头指明方向。,名词（阴）,名词;指路与说明
+es-1243,es,es-16,la distancia,距离,La distancia es de cien metros.,距离是一百米。,名词（阴）,名词;指路与说明
+es-1244,es,es-16,el carril,车道,El carril es estrecho.,车道很窄。,名词（阳）,名词;指路与说明
+es-1245,es,es-16,el túnel,隧道,El túnel pasa por la montaña.,隧道穿过山体。,名词（阳）,名词;指路与说明
+es-1246,es,es-16,el acceso,入口；通行,El acceso al jardín está aquí.,花园入口在这里。,名词（阳）,名词;指路与说明
+es-1247,es,es-16,la autopista,高速公路,La autopista llega a la ciudad.,高速公路通到城市。,名词（阴）,名词;指路与说明
+es-1248,es,es-16,el sendero,小路,El sendero pasa por el bosque.,小路经过树林。,名词（阳）,名词;指路与说明
+es-1249,es,es-16,el botón,按钮,El botón está debajo de la pantalla.,按钮在屏幕下方。,名词（阳）,名词;指路与说明
+es-1250,es,es-16,la pantalla,屏幕,La pantalla es grande.,屏幕很大。,名词（阴）,名词;指路与说明
+es-1251,es,es-16,el manual,使用手册,El manual tiene instrucciones.,手册上有说明。,名词（阳）,名词;指路与说明
+es-1252,es,es-16,la receta,菜谱；处方,La receta es fácil.,菜谱很简单。,名词（阴）,名词;指路与说明
+es-1253,es,es-16,el ingrediente,食材；配料,El ingrediente está en la olla.,配料在锅里。,名词（阳）,名词;指路与说明
+es-1254,es,es-16,cortar,切,Corta la cebolla.,把洋葱切开。,cortar 的肯定命令式，依次为 tú / usted / vosotros / ustedes / nosotros：corta / corte / cortad / corten / cortemos；命令式没有 yo 形式。,动词;不定式;肯定命令式
+es-1255,es,es-16,pelar,去皮,Pela la patata.,把土豆去皮。,pelar 的肯定命令式，依次为 tú / usted / vosotros / ustedes / nosotros：pela / pele / pelad / pelen / pelemos；命令式没有 yo 形式。,动词;不定式;肯定命令式
+es-1256,es,es-16,mezclar,混合,Mezcla los ingredientes.,把配料混合起来。,mezclar 的肯定命令式，依次为 tú / usted / vosotros / ustedes / nosotros：mezcla / mezcle / mezclad / mezclen / mezclemos；命令式没有 yo 形式。,动词;不定式;肯定命令式
+es-1257,es,es-16,añadir,添加,Añade la sal.,加入盐。,añadir 的肯定命令式，依次为 tú / usted / vosotros / ustedes / nosotros：añade / añada / añadid / añadan / añadamos；命令式没有 yo 形式。,动词;不定式;肯定命令式
+es-1258,es,es-16,calentar,加热,Calienta la sopa.,把汤加热。,calentar 的肯定命令式，依次为 tú / usted / vosotros / ustedes / nosotros：calienta / caliente / calentad / calienten / calentemos；命令式没有 yo 形式。,动词;不定式;肯定命令式
+es-1259,es,es-16,hervir,煮沸,Hierve la leche.,把牛奶煮沸。,hervir 的肯定命令式，依次为 tú / usted / vosotros / ustedes / nosotros：hierve / hierva / hervid / hiervan / hirvamos；命令式没有 yo 形式。,动词;不定式;肯定命令式
+es-1260,es,es-16,freír,油煎,Fríe la patata.,把土豆用油煎熟。,freír 的肯定命令式，依次为 tú / usted / vosotros / ustedes / nosotros：fríe / fría / freíd / frían / friamos；命令式没有 yo 形式。,动词;不定式;肯定命令式
+es-1261,es,es-16,asar,烤,Asa la carne.,把肉烤熟。,asar 的肯定命令式，依次为 tú / usted / vosotros / ustedes / nosotros：asa / ase / asad / asen / asemos；命令式没有 yo 形式。,动词;不定式;肯定命令式
+es-1262,es,es-16,hornear,用烤箱烤,Hornea el pan.,用烤箱烤面包。,hornear 的肯定命令式，依次为 tú / usted / vosotros / ustedes / nosotros：hornea / hornee / hornead / horneen / horneemos；命令式没有 yo 形式。,动词;不定式;肯定命令式
+es-1263,es,es-16,batir,打散；搅打,Bate los huevos.,把鸡蛋打散。,batir 的肯定命令式，依次为 tú / usted / vosotros / ustedes / nosotros：bate / bata / batid / batan / batamos；命令式没有 yo 形式。,动词;不定式;肯定命令式
+es-1264,es,es-16,remover,搅拌,Remueve la sopa.,搅拌一下汤。,remover 的肯定命令式，依次为 tú / usted / vosotros / ustedes / nosotros：remueve / remueva / removed / remuevan / removamos；命令式没有 yo 形式。,动词;不定式;肯定命令式
+es-1265,es,es-16,escurrir,沥干,Escurre la verdura.,把蔬菜沥干。,escurrir 的肯定命令式，依次为 tú / usted / vosotros / ustedes / nosotros：escurre / escurra / escurrid / escurran / escurramos；命令式没有 yo 形式。,动词;不定式;肯定命令式
+es-1266,es,es-16,rallar,擦碎,Ralla el queso.,把奶酪擦碎。,rallar 的肯定命令式，依次为 tú / usted / vosotros / ustedes / nosotros：ralla / ralle / rallad / rallen / rallemos；命令式没有 yo 形式。,动词;不定式;肯定命令式
+es-1267,es,es-16,pesar,称重,Pesa la harina.,称一下面粉。,pesar 的肯定命令式，依次为 tú / usted / vosotros / ustedes / nosotros：pesa / pese / pesad / pesen / pesemos；命令式没有 yo 形式。,动词;不定式;肯定命令式
+es-1268,es,es-16,verter,倒入,Vierte la leche en el cuenco.,把牛奶倒入碗里。,verter 的肯定命令式，依次为 tú / usted / vosotros / ustedes / nosotros：vierte / vierta / verted / viertan / vertamos；命令式没有 yo 形式。,动词;不定式;肯定命令式
+es-1269,es,es-16,a continuación,接下来,"A continuación, añade la sal.",接下来加入盐。,副词或连接短语；说明动作方式或先后顺序。,副词与连接词
+es-1270,es,es-16,lentamente,慢慢地,Mezcla lentamente la sopa.,慢慢搅拌汤。,副词或连接短语；说明动作方式或先后顺序。,副词与连接词
+es-1271,es,es-16,cuidadosamente,仔细地；小心地,Corta cuidadosamente la cebolla.,小心切洋葱。,副词或连接短语；说明动作方式或先后顺序。,副词与连接词
+es-1272,es,es-16,suavemente,轻轻地,Remueve suavemente la sopa.,轻轻搅拌汤。,副词或连接短语；说明动作方式或先后顺序。,副词与连接词
+es-1273,es,es-16,por separado,分开地,Pesa los ingredientes por separado.,把食材分别称重。,副词或连接短语；说明动作方式或先后顺序。,副词与连接词
+es-1274,es,es-16,por igual,平均地,Añade leche por igual a las dos tazas.,给两个杯子加入等量牛奶。,副词或连接短语；说明动作方式或先后顺序。,副词与连接词
+es-1275,es,es-16,en primer lugar,首先,"En primer lugar, lee la receta.",首先读菜谱。,副词或连接短语；说明动作方式或先后顺序。,副词与连接词
+es-1276,es,es-16,en segundo lugar,其次,"En segundo lugar, pela las patatas.",其次把土豆去皮。,副词或连接短语；说明动作方式或先后顺序。,副词与连接词
+es-1277,es,es-16,paso a paso,一步一步地,Lee las instrucciones paso a paso.,一步一步地读说明。,副词或连接短语；说明动作方式或先后顺序。,副词与连接词
+es-1278,es,es-16,recto,直着；直行,Sigue recto hasta el cruce.,直走到交叉口。,副词或连接短语；说明动作方式或先后顺序。,副词与连接词
+es-1279,es,es-16,caliente,热的,La sopa está caliente.,汤是热的。,形容词；性数形式 caliente / caliente / calientes / calientes,形容词
+es-1280,es,es-16,templado,温热的,La leche está templada.,牛奶是温热的。,形容词；性数形式 templado / templada / templados / templadas,形容词
+es-1281,es,es-16,crudo,生的；未煮熟的,El pescado está crudo.,鱼是生的。,形容词；性数形式 crudo / cruda / crudos / crudas,形容词
+es-1282,es,es-16,cocido,煮熟的,El huevo está cocido.,鸡蛋煮熟了。,形容词；性数形式 cocido / cocida / cocidos / cocidas,形容词
+es-1283,es,es-16,dulce,甜的,El postre es dulce.,甜点是甜的。,形容词；性数形式 dulce / dulce / dulces / dulces,形容词
+es-1284,es,es-16,amargo,苦的,El café es amargo.,咖啡是苦的。,形容词；性数形式 amargo / amarga / amargos / amargas,形容词
+es-1285,es,es-16,fresco,新鲜的,El tomate es fresco.,番茄很新鲜。,形容词；性数形式 fresco / fresca / frescos / frescas,形容词
+es-1286,es,es-16,blando,软的,El pan está blando.,面包是软的。,形容词；性数形式 blando / blanda / blandos / blandas,形容词
+es-1287,es,es-16,fino,细的；薄的,El trozo de queso es fino.,这片奶酪很薄。,形容词；性数形式 fino / fina / finos / finas,形容词
+es-1288,es,es-16,grueso,粗的；厚的,El trozo de pan es grueso.,这片面包很厚。,形容词；性数形式 grueso / gruesa / gruesos / gruesas,形容词
+es-1289,es,es-16,Sigue recto hasta la plaza,直走到广场,Sigue recto hasta la plaza.,直走到广场。,整句；seguir 的 tú 肯定命令式是 sigue。只生成识别卡。,句型;phrase
+es-1290,es,es-16,"Dímelo otra vez, por favor",请再告诉我一遍,"Dímelo otra vez, por favor.",请再告诉我一遍。,整句；di + me + lo 连写为 dímelo；保留原来的重读音节。只生成识别卡。,句型;phrase
+es-1291,es,es-16,Siéntate aquí y espera,坐在这里等一下,Siéntate aquí y espera.,坐在这里等一下。,整句；sienta + te 写成 siéntate；反身代词接在肯定命令式后。只生成识别卡。,句型;phrase
+es-1292,es,es-16,Mezclad los ingredientes con cuidado,你们把配料小心混合起来,Mezclad los ingredientes con cuidado.,你们把配料小心混合起来。,整句；mezclar 的 vosotros 肯定命令式是 mezclad。只生成识别卡。,句型;phrase
+es-1293,es,es-16,Añada sal y remueva la sopa,请您加盐并搅拌汤,Añada sal y remueva la sopa.,请您加盐并搅拌汤。,整句；usted 肯定命令式：añada、remueva。只生成识别卡。,句型;phrase
+es-1294,es,es-16,el aceite,食用油,El aceite está en la botella.,食用油在瓶子里。,名词（阳）,名词;补充;食材厨具计量
+es-1295,es,es-16,la sal,盐,La sal está en la cocina.,盐在厨房里。,名词（阴）,名词;补充;食材厨具计量
+es-1296,es,es-16,el azúcar,糖,El azúcar está al lado de la harina.,糖在面粉旁。,名词（阳）；本课采用阳性用法,名词;补充;食材厨具计量
+es-1297,es,es-16,la harina,面粉,La harina está en el cuenco.,面粉在碗里。,名词（阴）,名词;补充;食材厨具计量
+es-1298,es,es-16,la cebolla,洋葱,La cebolla es grande.,洋葱很大。,名词（阴）,名词;补充;食材厨具计量
+es-1299,es,es-16,el ajo,大蒜,El ajo está en la mesa.,大蒜在桌上。,名词（阳）,名词;补充;食材厨具计量
+es-1300,es,es-16,el tomate,番茄,El tomate es rojo.,番茄是红的。,名词（阳）,名词;补充;食材厨具计量
+es-1301,es,es-16,la patata,土豆,La patata está cocida.,土豆煮熟了。,名词（阴）,名词;补充;食材厨具计量
+es-1302,es,es-16,la zanahoria,胡萝卜,La zanahoria está en la sopa.,胡萝卜在汤里。,名词（阴）,名词;补充;食材厨具计量
+es-1303,es,es-16,la verdura,蔬菜,La verdura es fresca.,蔬菜很新鲜。,名词（阴）,名词;补充;食材厨具计量
+es-1304,es,es-16,la sartén,平底锅,La sartén está caliente.,平底锅很热。,名词（阴）,名词;补充;食材厨具计量
+es-1305,es,es-16,la olla,锅,La olla tiene una tapa.,锅有一个盖子。,名词（阴）,名词;补充;食材厨具计量
+es-1306,es,es-16,el horno,烤箱,El horno está en la cocina.,烤箱在厨房里。,名词（阳）,名词;补充;食材厨具计量
+es-1307,es,es-16,el cuenco,碗,El cuenco está lleno.,碗是满的。,名词（阳）,名词;补充;食材厨具计量
+es-1308,es,es-16,la tapa,盖子,La tapa está encima de la olla.,盖子在锅上。,名词（阴）,名词;补充;食材厨具计量
+es-1309,es,es-16,el trozo,块；片,El trozo de pan es pequeño.,这块面包很小。,名词（阳）,名词;补充;食材厨具计量
+es-1310,es,es-16,la mitad,一半,La mitad del queso está en el plato.,一半奶酪在盘子里。,名词（阴）,名词;补充;食材厨具计量
+es-1311,es,es-16,el litro,升,Hay un litro de leche en la botella.,瓶子里有一升牛奶。,名词（阳）,名词;补充;食材厨具计量
+es-1312,es,es-16,el agua,水,El agua está en la olla.,水在锅里。,名词（阴）；单数重读 a 前用 el：el agua；复数 las aguas；形容词仍用阴性，如 agua fría。,名词;补充;食材厨具计量
+es-1313,es,es-16,la cucharada,一勺的量,La cucharada de aceite está en la sopa.,一勺油已加在汤里。,名词（阴）,名词;补充;食材厨具计量
