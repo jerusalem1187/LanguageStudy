@@ -1,0 +1,114 @@
+id,lang,lesson,front,back,example,example_zh,note,tags
+es-0001,es,es-01,hola,你好,¡Hola!,你好！,感叹词；用于打招呼,问候
+es-0002,es,es-01,buenos días,早上好,¡Buenos días!,早上好！,问候语；días 是 día 的复数,问候
+es-0003,es,es-01,buenas tardes,下午好,¡Buenas tardes!,下午好！,问候语；tarde 为阴性名词,问候
+es-0004,es,es-01,buenas noches,晚上好；晚安,¡Buenas noches!,晚安！,问候语；noche 为阴性名词,问候
+es-0005,es,es-01,adiós,再见,¡Adiós!,再见！,感叹词；注意 ó,问候
+es-0006,es,es-01,gracias,谢谢,¡Gracias!,谢谢！,礼貌用语；与英语 grace 同源,礼貌
+es-0007,es,es-01,por favor,请,"Un libro, por favor.",请给我一本书。,礼貌短语；favor 与英语 favor 同源,礼貌
+es-0008,es,es-01,perdón,对不起；抱歉,¡Perdón!,抱歉！,名词（阳）；用作致歉语；与英语 pardon 同源,礼貌
+es-0009,es,es-01,yo,我,Yo soy estudiante.,我是学生。,人称代词；第一人称单数,代词
+es-0010,es,es-01,tú,你,¿Tú estás aquí?,你在这里吗？,人称代词；第二人称单数；与 tu（你的）区分,代词
+es-0011,es,es-01,él,他,Él es estudiante.,他是学生。,人称代词；第三人称单数阳性；与 el（冠词）区分,代词
+es-0012,es,es-01,ella,她,Ella está en casa.,她在家。,人称代词；第三人称单数阴性,代词
+es-0013,es,es-01,usted,您,Usted es estudiante.,您是学生。,人称代词；礼貌称呼；动词用第三人称单数,代词
+es-0014,es,es-01,nosotros,我们（男性或男女混合）,Nosotros somos estudiantes.,我们是学生。,人称代词；第一人称复数阳性或混合,代词
+es-0015,es,es-01,nosotras,我们（全为女性）,Nosotras estamos aquí.,我们在这里。,人称代词；第一人称复数阴性,代词
+es-0016,es,es-01,vosotros,你们（男性或男女混合）,Vosotros sois estudiantes.,你们是学生。,人称代词；西班牙常用；第二人称复数阳性或混合,代词
+es-0017,es,es-01,vosotras,你们（全为女性）,Vosotras estáis en casa.,你们在家。,人称代词；西班牙常用；第二人称复数阴性,代词
+es-0018,es,es-01,ellos,他们（男性或男女混合）,Ellos son estudiantes.,他们是学生。,人称代词；第三人称复数阳性或混合,代词
+es-0019,es,es-01,ellas,她们,Ellas están aquí.,她们在这里。,人称代词；第三人称复数阴性,代词
+es-0020,es,es-01,ustedes,各位；你们,Ustedes son estudiantes.,各位是学生。,人称代词；动词用第三人称复数；拉美通用的你们,代词
+es-0021,es,es-01,soy,我是（身份等）,Yo soy estudiante.,我是学生。,动词 ser；现在时 yo,ser;现在时
+es-0022,es,es-01,eres,你是（身份等）,Tú eres estudiante.,你是学生。,动词 ser；现在时 tú,ser;现在时
+es-0023,es,es-01,es,他／她／它是；您是,La casa es grande.,这所房子很大。,动词 ser；现在时 él / ella / usted,ser;现在时
+es-0024,es,es-01,somos,我们是,Nosotros somos estudiantes.,我们是学生。,动词 ser；现在时 nosotros / nosotras,ser;现在时
+es-0025,es,es-01,sois,你们是（vosotros）,Vosotras sois estudiantes.,你们是学生。,动词 ser；现在时 vosotros / vosotras,ser;现在时
+es-0026,es,es-01,son,他们／她们是；各位是,Ellos son estudiantes.,他们是学生。,动词 ser；现在时 ellos / ellas / ustedes,ser;现在时
+es-0027,es,es-01,estoy,我在；我处于某种状态,Yo estoy en casa.,我在家。,动词 estar；现在时 yo,estar;现在时
+es-0028,es,es-01,estás,你在；你处于某种状态,Tú estás aquí.,你在这里。,动词 estar；现在时 tú；注意 á,estar;现在时
+es-0029,es,es-01,está,他／她／它在；您在,El libro está en la mesa.,书在桌子上。,动词 estar；现在时 él / ella / usted；注意 á,estar;现在时
+es-0030,es,es-01,estamos,我们在；我们处于某种状态,Nosotras estamos en casa.,我们在家。,动词 estar；现在时 nosotros / nosotras,estar;现在时
+es-0031,es,es-01,estáis,你们在（vosotros）,Vosotros estáis aquí.,你们在这里。,动词 estar；现在时 vosotros / vosotras；注意 á,estar;现在时
+es-0032,es,es-01,están,他们／她们在；各位在,Ellas están en casa.,她们在家。,动词 estar；现在时 ellos / ellas / ustedes；注意 á,estar;现在时
+es-0033,es,es-01,el,定冠词（阳性单数）,El libro es nuevo.,这本书是新的。,定冠词；与 él（他）区分,冠词
+es-0034,es,es-01,la,定冠词（阴性单数）,La casa es grande.,这所房子很大。,定冠词,冠词
+es-0035,es,es-01,los,定冠词（阳性复数）,Los libros están aquí.,这些书在这里。,定冠词；el 的复数,冠词
+es-0036,es,es-01,las,定冠词（阴性复数）,Las mesas son grandes.,这些桌子很大。,定冠词；la 的复数,冠词
+es-0037,es,es-01,un,一个（阳性单数冠词）,Un libro está en la mesa.,桌子上有一本书。,不定冠词；uno 在阳性单数名词前变为 un,冠词
+es-0038,es,es-01,una,一个（阴性单数冠词）,Una persona está aquí.,这里有一个人。,不定冠词,冠词
+es-0039,es,es-01,unos,一些（阳性复数冠词）,Unos libros están en la mesa.,桌子上有一些书。,不定冠词；un 的复数,冠词
+es-0040,es,es-01,unas,一些（阴性复数冠词）,Unas personas están aquí.,这里有一些人。,不定冠词；una 的复数,冠词
+es-0041,es,es-01,la persona,人,La persona está aquí.,这个人在这里。,名词（阴）；无论所指人的性别都用 la；与英语 person 同源,名词;人
+es-0042,es,es-01,el hombre,男人,El hombre está en casa.,这个男人在家。,名词（阳）,名词;人
+es-0043,es,es-01,la mujer,女人,La mujer es estudiante.,这个女人是学生。,名词（阴）,名词;人
+es-0044,es,es-01,el niño,男孩；儿童,El niño está aquí.,这个男孩在这里。,名词（阳）；女孩为 la niña；ñ 是独立字母,名词;人
+es-0045,es,es-01,la familia,家庭,La familia está en casa.,这家人都在家。,名词（阴）；与英语 family 同源,名词;家庭
+es-0046,es,es-01,la madre,母亲,La madre está aquí.,母亲在这里。,名词（阴）；与英语 maternal 中的拉丁词根同源,名词;家庭
+es-0047,es,es-01,el padre,父亲,El padre está en casa.,父亲在家。,名词（阳）；与英语 paternal 中的拉丁词根同源,名词;家庭
+es-0048,es,es-01,el amigo,朋友（男性）,El amigo está aquí.,这位男性朋友在这里。,名词（阳）；女性朋友为 la amiga；与英语 amicable 同源,名词;人
+es-0049,es,es-01,el estudiante,学生（男性）,El estudiante está en casa.,这位男学生在家。,名词（阳）；女性用 la estudiante；与英语 student 同源,名词;人
+es-0050,es,es-01,la casa,房子；家,La casa es grande.,这所房子很大。,名词（阴）；en casa 表示在家,名词;地点
+es-0051,es,es-01,el libro,书,El libro está aquí.,这本书在这里。,名词（阳）；与英语 library 中的拉丁词根同源,名词;物品
+es-0052,es,es-01,la mesa,桌子,La mesa es pequeña.,这张桌子很小。,名词（阴）,名词;物品
+es-0053,es,es-01,el teléfono,电话,El teléfono está en la mesa.,电话在桌子上。,名词（阳）；与英语 telephone 共享希腊词根；注意 é,名词;物品
+es-0054,es,es-01,la ciudad,城市,La ciudad es grande.,这座城市很大。,名词（阴）；与英语 city 同源,名词;地点
+es-0055,es,es-01,la escuela,学校,La escuela está aquí.,学校在这里。,名词（阴）；与英语 school 同源,名词;地点
+es-0056,es,es-01,la universidad,大学,La universidad es grande.,这所大学很大。,名词（阴）；与英语 university 同源,名词;地点
+es-0057,es,es-01,el día,天；白天,El día es largo.,白天很长。,名词（阳）；虽以 a 结尾仍为阳性；í 标示元音分读,名词;时间
+es-0058,es,es-01,la noche,夜晚,La noche es larga.,夜晚很长。,名词（阴）,名词;时间
+es-0059,es,es-01,la hora,小时；时刻,La hora de estudiar es ahora.,现在是学习的时间。,名词（阴）；与英语 hour 同源；h 不发音,名词;时间
+es-0060,es,es-01,el tiempo,时间；天气,El tiempo es importante.,时间很重要。,名词（阳）；与英语 temporal 同源,名词;时间
+es-0061,es,es-01,bueno,好的（阳性单数）,El libro es bueno.,这本书很好。,形容词；阴性 buena；阳性单数名词前常用 buen,形容词
+es-0062,es,es-01,malo,坏的；不好的（阳性单数）,El libro es malo.,这本书不好。,形容词；阴性 mala；阳性单数名词前常用 mal,形容词
+es-0063,es,es-01,grande,大的,La casa es grande.,这所房子很大。,形容词；单数阴阳同形；与英语 grand 同源,形容词
+es-0064,es,es-01,pequeño,小的（阳性单数）,El teléfono es pequeño.,这个电话很小。,形容词；阴性 pequeña；注意 ñ,形容词
+es-0065,es,es-01,nuevo,新的（阳性单数）,El libro es nuevo.,这本书是新的。,形容词；阴性 nueva,形容词
+es-0066,es,es-01,importante,重要的,La familia es importante.,家庭很重要。,形容词；单数阴阳同形；与英语 important 同源,形容词
+es-0067,es,es-01,fácil,容易的,Leer es fácil.,阅读很容易。,形容词；单数阴阳同形；与英语 facile 同源；注意 á,形容词
+es-0068,es,es-01,difícil,困难的,Escribir es difícil.,写作很难。,形容词；单数阴阳同形；与英语 difficult 同源；注意 í,形容词
+es-0069,es,es-01,largo,长的（阳性单数）,El día es largo.,白天很长。,形容词；阴性 larga；不是英语 large 的大的含义,形容词
+es-0070,es,es-01,español,西班牙的；西班牙语,Yo quiero estudiar español.,我想学西班牙语。,形容词（阳；阴性 española）；也作名词（阳）表示西班牙语,形容词;语言
+es-0071,es,es-01,uno,一（独立数词）,Uno y dos son tres.,一加二等于三。,数词；阳性单数名词前用 un；阴性用 una,数字
+es-0072,es,es-01,dos,二,Dos y dos son cuatro.,二加二等于四。,数词；名词用复数,数字
+es-0073,es,es-01,tres,三,Tres y dos son cinco.,三加二等于五。,数词,数字
+es-0074,es,es-01,cuatro,四,Cuatro y dos son seis.,四加二等于六。,数词,数字
+es-0075,es,es-01,cinco,五,Cinco y dos son siete.,五加二等于七。,数词,数字
+es-0076,es,es-01,seis,六,Seis y dos son ocho.,六加二等于八。,数词,数字
+es-0077,es,es-01,siete,七,Siete y dos son nueve.,七加二等于九。,数词,数字
+es-0078,es,es-01,ocho,八,Ocho y dos son diez.,八加二等于十。,数词,数字
+es-0079,es,es-01,nueve,九,Nueve libros están aquí.,这里有九本书。,数词,数字
+es-0080,es,es-01,diez,十,Diez personas están aquí.,这里有十个人。,数词,数字
+es-0081,es,es-01,qué,什么,¿Qué es?,这是什么？,疑问词；直接和间接疑问中保留 é,疑问词
+es-0082,es,es-01,quién,谁（单数）,¿Quién es él?,他是谁？,疑问代词；复数 quiénes,疑问词
+es-0083,es,es-01,dónde,哪里,¿Dónde está el libro?,书在哪里？,疑问副词,疑问词
+es-0084,es,es-01,cuándo,什么时候,¿Cuándo quieres estudiar?,你想什么时候学习？,疑问副词；quieres 是 querer 的 tú 现在时,疑问词
+es-0085,es,es-01,cómo,怎样；如何,¿Cómo estás?,你怎么样？,疑问副词；不是 comer 的 yo 形式 como,疑问词
+es-0086,es,es-01,cuánto,多少（阳性单数）,¿Cuánto tiempo tienes?,你有多少时间？,疑问限定词／代词／副词；tienes 是 tener 的 tú 现在时,疑问词
+es-0087,es,es-01,por qué,为什么,¿Por qué estás aquí?,你为什么在这里？,疑问短语；分开写；不是 porque（因为）,疑问词
+es-0088,es,es-01,cuál,哪一个；哪个,¿Cuál es el libro?,哪一本是那本书？,疑问代词；复数 cuáles,疑问词
+es-0089,es,es-01,ser,是（身份或特征）,Quiero ser estudiante.,我想成为学生。,动词不定式；quiero 是 querer 的 yo 现在时,动词;不定式
+es-0090,es,es-01,estar,在；处于某种状态,Quiero estar en casa.,我想待在家。,动词不定式；表示状态或一般位置,动词;不定式
+es-0091,es,es-01,tener,有,Quiero tener un libro.,我想有一本书。,动词不定式；常用形式 tengo / tienes,动词;不定式
+es-0092,es,es-01,ir,去,Quiero ir a casa.,我想回家。,动词不定式；常用形式 voy / vas,动词;不定式
+es-0093,es,es-01,hablar,说；交谈,Quiero hablar español.,我想说西班牙语。,动词不定式；本课只学习书面词形,动词;不定式
+es-0094,es,es-01,comer,吃,Quiero comer ahora.,我现在想吃东西。,动词不定式,动词;不定式
+es-0095,es,es-01,vivir,住；生活,Quiero vivir aquí.,我想住在这里。,动词不定式；与英语 vivid 中的拉丁词根同源,动词;不定式
+es-0096,es,es-01,leer,读,Quiero leer un libro.,我想读一本书。,动词不定式,动词;不定式
+es-0097,es,es-01,escribir,写,Quiero escribir ahora.,我现在想写东西。,动词不定式；与英语 scribe 同源,动词;不定式
+es-0098,es,es-01,estudiar,学习,Quiero estudiar español.,我想学西班牙语。,动词不定式；与英语 study 同源,动词;不定式
+es-0099,es,es-01,trabajar,工作,Quiero trabajar aquí.,我想在这里工作。,动词不定式；与英语 travail 同源,动词;不定式
+es-0100,es,es-01,querer,想要；爱,Querer es importante.,爱很重要。,动词不定式；常用形式 quiero / quieres；不定式可作主语,动词;不定式
+es-0101,es,es-01,y,和；与,La madre y el padre están aquí.,母亲和父亲在这里。,连词,连词
+es-0102,es,es-01,o,或者,¿Un libro o un teléfono?,一本书还是一个电话？,连词；单独的 o 不加重音符号,连词
+es-0103,es,es-01,pero,但是,"La casa es pequeña, pero es buena.",这所房子虽小但是很好。,连词,连词
+es-0104,es,es-01,de,……的；来自,El libro de la estudiante está aquí.,这位女学生的书在这里。,介词；与 dé（dar 的变位）区分,介词
+es-0105,es,es-01,en,在……里面／上面,El libro está en la mesa.,书在桌子上。,介词；与英语 in 同源,介词
+es-0106,es,es-01,a,向；到,Quiero ir a la escuela.,我想去学校。,介词；a + el 合为 al,介词
+es-0107,es,es-01,con,和……一起；带有,Estoy con la familia.,我和家人在一起。,介词,介词
+es-0108,es,es-01,sin,没有；不带,Estoy sin teléfono.,我现在没有电话。,介词,介词
+es-0109,es,es-01,muy,很,La casa es muy grande.,这所房子很大。,副词；常放在形容词或副词前,副词
+es-0110,es,es-01,también,也,Yo también soy estudiante.,我也是学生。,副词；注意 é,副词
+es-0111,es,es-01,aquí,这里,El libro está aquí.,书在这里。,副词；注意 í,副词
+es-0112,es,es-01,ahora,现在,Quiero leer ahora.,我现在想读书。,副词；h 不发音,副词
+es-0113,es,es-01,hoy,今天,Hoy estoy en casa.,我今天在家。,副词,副词

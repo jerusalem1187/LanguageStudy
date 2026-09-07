@@ -1,0 +1,2415 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="srs-saved-at" content="">
+<meta name="srs-save-kind" content="">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>语言复习 · SRS</title>
+<style>
+:root{color-scheme:light;--ink:#192638;--muted:#526075;--line:#dbe2eb;--blue:#2057aa;--soft:#edf3ff;--paper:#fff;--bg:#f4f6fa;--red:#a23232;--green:#236043;--amber:#825400;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);line-height:1.65}button,input,textarea,select{font:inherit}button,select,input[type=file]{max-width:100%}button{min-height:44px;padding:.55rem 1rem;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:8px;cursor:pointer}button:hover{background:var(--soft);border-color:#9cb4d7}button:disabled{cursor:default;opacity:.55}button.primary{background:var(--blue);color:white;border-color:var(--blue)}:focus-visible{outline:3px solid #d18718;outline-offset:3px}input:not([type=file]),select,textarea{padding:.65rem .75rem;border:1px solid #a7b4c7;border-radius:7px;background:white;color:var(--ink);min-height:44px;font-size:1rem}textarea{display:block;width:100%;min-height:150px;resize:vertical}input[type=file]{display:block;width:100%;padding:.5rem 0}label{display:block;font-weight:600;margin-bottom:.4rem}h1,h2,h3,h4,p{margin:0 0 .8rem}h1{font-size:1.25rem;letter-spacing:.04em}h2{font-size:1.5rem}h3{font-size:1.15rem}h4{font-size:1rem}a{color:var(--blue)}small,.muted{color:var(--muted);font-size:.9rem}.top{position:sticky;top:0;z-index:10;background:white;border-bottom:1px solid var(--line)}.top-inner,.page{width:min(1120px,100%);margin:auto;padding:1rem 1.4rem}.top-row,.row{display:flex;align-items:center;justify-content:space-between;gap:.8rem;flex-wrap:wrap}.top-row h1{margin:0}.save-status{font-size:.9rem;color:var(--muted)}.dirty{color:var(--amber);font-weight:650}.state-source{font-size:.85rem;color:var(--muted);margin-top:.45rem;overflow-wrap:anywhere}.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:.35rem;margin:0 0 1.25rem}.tabs button{border:0;background:transparent;border-radius:0;border-bottom:3px solid transparent}.tabs button[aria-current=page]{color:var(--blue);border-color:var(--blue);font-weight:700}.notice:empty{display:none}.notice{background:#fff5dc;border:1px solid #e7cf9a;border-radius:8px;padding:.7rem 1rem;margin:0 0 1rem;overflow-wrap:anywhere}.panel{background:white;border:1px solid var(--line);border-radius:12px;padding:1.4rem;margin-bottom:1.2rem;min-width:0}.study{max-width:820px;margin:auto}.counts{display:flex;gap:2rem;margin:1rem 0;flex-wrap:wrap}.count strong{font-size:1.75rem;font-variant-numeric:tabular-nums;margin-right:.35rem}.kicker{font-size:.9rem;color:var(--muted);margin-bottom:1rem}.front{font-size:clamp(2rem,6vw,3rem);line-height:1.45;overflow-wrap:anywhere;margin:1rem 0}.ru-text{font-family:Georgia,"Times New Roman",serif}.example{font-size:1.15rem;margin:1rem 0;white-space:pre-wrap;overflow-wrap:anywhere}.back{border-top:1px solid var(--line);padding-top:1.2rem;margin-top:1.2rem}.meaning{font-size:1.4rem;white-space:pre-wrap;overflow-wrap:anywhere}.answer-input{width:100%;margin:.45rem 0 1rem}.grade-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem;margin-top:1.2rem}.grade{padding:.8rem .4rem;min-width:0}.grade strong,.grade span{display:block}.grade small{display:block;font-size:.8rem}.grade[data-grade="0"]{color:var(--red)}.grade[data-grade="3"]{color:var(--amber)}.grade[data-grade="4"]{color:var(--blue)}.grade[data-grade="5"]{color:var(--green)}.grade.suggested{box-shadow:inset 0 0 0 2px currentColor;background:var(--soft)}.feedback{padding:.65rem .85rem;border-radius:7px;background:var(--soft);margin:.8rem 0;white-space:pre-wrap}.feedback.wrong{background:#fff0ec;color:#7d3226}.feedback.symbols{background:#fff5dc;color:var(--amber)}.actions{display:flex;gap:.65rem;align-items:center;flex-wrap:wrap;margin-top:.8rem}.course-picker{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.3rem}.course-picker button{text-align:left;padding:1rem}.course-picker strong,.course-picker span{display:block}.course-picker button[aria-pressed=true]{background:var(--soft);border-color:var(--blue)}.lesson-text{max-width:850px}.lesson-text ul,.help ul{padding-left:1.35rem}.lesson-text li,.help li{margin:.4rem 0}.table-wrap{max-width:100%;overflow:auto;margin:.8rem 0 1.2rem;border:1px solid var(--line);border-radius:7px}table{border-collapse:collapse;width:100%;text-align:left;font-size:.95rem}th,td{padding:.65rem .75rem;border-bottom:1px solid var(--line);vertical-align:top}th{background:#f0f4f9;font-weight:650}tbody tr:last-child td{border-bottom:0}.vocab{min-width:760px}.vocab td:first-child{width:18%;font-size:1.05rem}.vocab td:nth-child(2){width:17%}.vocab td:nth-child(3){width:32%}.vocab small{display:block;margin-top:.2rem;overflow-wrap:anywhere}.alphabet{min-width:540px}.alphabet .letter{font-size:1.5rem;font-family:Georgia,"Times New Roman",serif}.italic{font-style:italic;font-family:Georgia,"Times New Roman",serif;font-size:1.6em}.alphabet .italic{font-size:1.5rem}.exercise-list{display:grid;gap:.9rem}.exercise{padding:1rem;border:1px solid var(--line);border-radius:8px}.exercise input,.exercise select{max-width:100%;width:22rem}.exercise .feedback{margin-bottom:0}.settings-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start}.settings-grid .panel{margin:0}.span-all{grid-column:1/-1}.limit-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.limit-row input{width:100%}.stats-table{min-width:800px}summary{cursor:pointer;min-height:44px;padding:.4rem 0;font-weight:650}.empty{text-align:center;padding:2.5rem 1rem}.kbd{margin-top:1.1rem;font-size:.85rem;color:var(--muted)}.foot{font-size:.85rem;color:var(--muted);margin:1.5rem 0}.inline-code{font-family:ui-monospace,monospace;overflow-wrap:anywhere}.review-card:focus{outline:none}.loading{padding:2rem}button.secondary{color:var(--blue)}
+@media(max-width:640px){.top-inner,.page{padding:.8rem 1rem}.panel{padding:1rem}.settings-grid,.course-picker{grid-template-columns:1fr}.span-all{grid-column:auto}.top-row{gap:.5rem}.grade-grid{grid-template-columns:1fr 1fr}.counts{gap:1.2rem}.tabs{gap:0}.tabs button{padding:.55rem .35rem}.actions button{flex-grow:1}.top .actions{margin:0}.state-source{font-size:.8rem}.limit-row{grid-template-columns:1fr}.front{margin:.8rem 0}.exercise input,.exercise select{width:100%}.save-status{font-size:.8rem}}
+@media(prefers-reduced-motion:no-preference){button{transition:background .12s,border-color .12s}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script type="application/json" id="cards-data">[
+  {
+    "id": "es-0001",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "hola",
+    "back": "你好",
+    "example": "¡Hola!",
+    "example_zh": "你好！",
+    "note": "感叹词；用于打招呼",
+    "tags": "问候"
+  },
+  {
+    "id": "es-0002",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "buenos días",
+    "back": "早上好",
+    "example": "¡Buenos días!",
+    "example_zh": "早上好！",
+    "note": "问候语；días 是 día 的复数",
+    "tags": "问候"
+  },
+  {
+    "id": "es-0003",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "buenas tardes",
+    "back": "下午好",
+    "example": "¡Buenas tardes!",
+    "example_zh": "下午好！",
+    "note": "问候语；tarde 为阴性名词",
+    "tags": "问候"
+  },
+  {
+    "id": "es-0004",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "buenas noches",
+    "back": "晚上好；晚安",
+    "example": "¡Buenas noches!",
+    "example_zh": "晚安！",
+    "note": "问候语；noche 为阴性名词",
+    "tags": "问候"
+  },
+  {
+    "id": "es-0005",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "adiós",
+    "back": "再见",
+    "example": "¡Adiós!",
+    "example_zh": "再见！",
+    "note": "感叹词；注意 ó",
+    "tags": "问候"
+  },
+  {
+    "id": "es-0006",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "gracias",
+    "back": "谢谢",
+    "example": "¡Gracias!",
+    "example_zh": "谢谢！",
+    "note": "礼貌用语；与英语 grace 同源",
+    "tags": "礼貌"
+  },
+  {
+    "id": "es-0007",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "por favor",
+    "back": "请",
+    "example": "Un libro, por favor.",
+    "example_zh": "请给我一本书。",
+    "note": "礼貌短语；favor 与英语 favor 同源",
+    "tags": "礼貌"
+  },
+  {
+    "id": "es-0008",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "perdón",
+    "back": "对不起；抱歉",
+    "example": "¡Perdón!",
+    "example_zh": "抱歉！",
+    "note": "名词（阳）；用作致歉语；与英语 pardon 同源",
+    "tags": "礼貌"
+  },
+  {
+    "id": "es-0009",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "yo",
+    "back": "我",
+    "example": "Yo soy estudiante.",
+    "example_zh": "我是学生。",
+    "note": "人称代词；第一人称单数",
+    "tags": "代词"
+  },
+  {
+    "id": "es-0010",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "tú",
+    "back": "你",
+    "example": "¿Tú estás aquí?",
+    "example_zh": "你在这里吗？",
+    "note": "人称代词；第二人称单数；与 tu（你的）区分",
+    "tags": "代词"
+  },
+  {
+    "id": "es-0011",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "él",
+    "back": "他",
+    "example": "Él es estudiante.",
+    "example_zh": "他是学生。",
+    "note": "人称代词；第三人称单数阳性；与 el（冠词）区分",
+    "tags": "代词"
+  },
+  {
+    "id": "es-0012",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "ella",
+    "back": "她",
+    "example": "Ella está en casa.",
+    "example_zh": "她在家。",
+    "note": "人称代词；第三人称单数阴性",
+    "tags": "代词"
+  },
+  {
+    "id": "es-0013",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "usted",
+    "back": "您",
+    "example": "Usted es estudiante.",
+    "example_zh": "您是学生。",
+    "note": "人称代词；礼貌称呼；动词用第三人称单数",
+    "tags": "代词"
+  },
+  {
+    "id": "es-0014",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "nosotros",
+    "back": "我们（男性或男女混合）",
+    "example": "Nosotros somos estudiantes.",
+    "example_zh": "我们是学生。",
+    "note": "人称代词；第一人称复数阳性或混合",
+    "tags": "代词"
+  },
+  {
+    "id": "es-0015",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "nosotras",
+    "back": "我们（全为女性）",
+    "example": "Nosotras estamos aquí.",
+    "example_zh": "我们在这里。",
+    "note": "人称代词；第一人称复数阴性",
+    "tags": "代词"
+  },
+  {
+    "id": "es-0016",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "vosotros",
+    "back": "你们（男性或男女混合）",
+    "example": "Vosotros sois estudiantes.",
+    "example_zh": "你们是学生。",
+    "note": "人称代词；西班牙常用；第二人称复数阳性或混合",
+    "tags": "代词"
+  },
+  {
+    "id": "es-0017",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "vosotras",
+    "back": "你们（全为女性）",
+    "example": "Vosotras estáis en casa.",
+    "example_zh": "你们在家。",
+    "note": "人称代词；西班牙常用；第二人称复数阴性",
+    "tags": "代词"
+  },
+  {
+    "id": "es-0018",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "ellos",
+    "back": "他们（男性或男女混合）",
+    "example": "Ellos son estudiantes.",
+    "example_zh": "他们是学生。",
+    "note": "人称代词；第三人称复数阳性或混合",
+    "tags": "代词"
+  },
+  {
+    "id": "es-0019",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "ellas",
+    "back": "她们",
+    "example": "Ellas están aquí.",
+    "example_zh": "她们在这里。",
+    "note": "人称代词；第三人称复数阴性",
+    "tags": "代词"
+  },
+  {
+    "id": "es-0020",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "ustedes",
+    "back": "各位；你们",
+    "example": "Ustedes son estudiantes.",
+    "example_zh": "各位是学生。",
+    "note": "人称代词；动词用第三人称复数；拉美通用的你们",
+    "tags": "代词"
+  },
+  {
+    "id": "es-0021",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "soy",
+    "back": "我是（身份等）",
+    "example": "Yo soy estudiante.",
+    "example_zh": "我是学生。",
+    "note": "动词 ser；现在时 yo",
+    "tags": "ser;现在时"
+  },
+  {
+    "id": "es-0022",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "eres",
+    "back": "你是（身份等）",
+    "example": "Tú eres estudiante.",
+    "example_zh": "你是学生。",
+    "note": "动词 ser；现在时 tú",
+    "tags": "ser;现在时"
+  },
+  {
+    "id": "es-0023",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "es",
+    "back": "他／她／它是；您是",
+    "example": "La casa es grande.",
+    "example_zh": "这所房子很大。",
+    "note": "动词 ser；现在时 él / ella / usted",
+    "tags": "ser;现在时"
+  },
+  {
+    "id": "es-0024",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "somos",
+    "back": "我们是",
+    "example": "Nosotros somos estudiantes.",
+    "example_zh": "我们是学生。",
+    "note": "动词 ser；现在时 nosotros / nosotras",
+    "tags": "ser;现在时"
+  },
+  {
+    "id": "es-0025",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "sois",
+    "back": "你们是（vosotros）",
+    "example": "Vosotras sois estudiantes.",
+    "example_zh": "你们是学生。",
+    "note": "动词 ser；现在时 vosotros / vosotras",
+    "tags": "ser;现在时"
+  },
+  {
+    "id": "es-0026",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "son",
+    "back": "他们／她们是；各位是",
+    "example": "Ellos son estudiantes.",
+    "example_zh": "他们是学生。",
+    "note": "动词 ser；现在时 ellos / ellas / ustedes",
+    "tags": "ser;现在时"
+  },
+  {
+    "id": "es-0027",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "estoy",
+    "back": "我在；我处于某种状态",
+    "example": "Yo estoy en casa.",
+    "example_zh": "我在家。",
+    "note": "动词 estar；现在时 yo",
+    "tags": "estar;现在时"
+  },
+  {
+    "id": "es-0028",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "estás",
+    "back": "你在；你处于某种状态",
+    "example": "Tú estás aquí.",
+    "example_zh": "你在这里。",
+    "note": "动词 estar；现在时 tú；注意 á",
+    "tags": "estar;现在时"
+  },
+  {
+    "id": "es-0029",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "está",
+    "back": "他／她／它在；您在",
+    "example": "El libro está en la mesa.",
+    "example_zh": "书在桌子上。",
+    "note": "动词 estar；现在时 él / ella / usted；注意 á",
+    "tags": "estar;现在时"
+  },
+  {
+    "id": "es-0030",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "estamos",
+    "back": "我们在；我们处于某种状态",
+    "example": "Nosotras estamos en casa.",
+    "example_zh": "我们在家。",
+    "note": "动词 estar；现在时 nosotros / nosotras",
+    "tags": "estar;现在时"
+  },
+  {
+    "id": "es-0031",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "estáis",
+    "back": "你们在（vosotros）",
+    "example": "Vosotros estáis aquí.",
+    "example_zh": "你们在这里。",
+    "note": "动词 estar；现在时 vosotros / vosotras；注意 á",
+    "tags": "estar;现在时"
+  },
+  {
+    "id": "es-0032",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "están",
+    "back": "他们／她们在；各位在",
+    "example": "Ellas están en casa.",
+    "example_zh": "她们在家。",
+    "note": "动词 estar；现在时 ellos / ellas / ustedes；注意 á",
+    "tags": "estar;现在时"
+  },
+  {
+    "id": "es-0033",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "el",
+    "back": "定冠词（阳性单数）",
+    "example": "El libro es nuevo.",
+    "example_zh": "这本书是新的。",
+    "note": "定冠词；与 él（他）区分",
+    "tags": "冠词"
+  },
+  {
+    "id": "es-0034",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "la",
+    "back": "定冠词（阴性单数）",
+    "example": "La casa es grande.",
+    "example_zh": "这所房子很大。",
+    "note": "定冠词",
+    "tags": "冠词"
+  },
+  {
+    "id": "es-0035",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "los",
+    "back": "定冠词（阳性复数）",
+    "example": "Los libros están aquí.",
+    "example_zh": "这些书在这里。",
+    "note": "定冠词；el 的复数",
+    "tags": "冠词"
+  },
+  {
+    "id": "es-0036",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "las",
+    "back": "定冠词（阴性复数）",
+    "example": "Las mesas son grandes.",
+    "example_zh": "这些桌子很大。",
+    "note": "定冠词；la 的复数",
+    "tags": "冠词"
+  },
+  {
+    "id": "es-0037",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "un",
+    "back": "一个（阳性单数冠词）",
+    "example": "Un libro está en la mesa.",
+    "example_zh": "桌子上有一本书。",
+    "note": "不定冠词；uno 在阳性单数名词前变为 un",
+    "tags": "冠词"
+  },
+  {
+    "id": "es-0038",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "una",
+    "back": "一个（阴性单数冠词）",
+    "example": "Una persona está aquí.",
+    "example_zh": "这里有一个人。",
+    "note": "不定冠词",
+    "tags": "冠词"
+  },
+  {
+    "id": "es-0039",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "unos",
+    "back": "一些（阳性复数冠词）",
+    "example": "Unos libros están en la mesa.",
+    "example_zh": "桌子上有一些书。",
+    "note": "不定冠词；un 的复数",
+    "tags": "冠词"
+  },
+  {
+    "id": "es-0040",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "unas",
+    "back": "一些（阴性复数冠词）",
+    "example": "Unas personas están aquí.",
+    "example_zh": "这里有一些人。",
+    "note": "不定冠词；una 的复数",
+    "tags": "冠词"
+  },
+  {
+    "id": "es-0041",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "la persona",
+    "back": "人",
+    "example": "La persona está aquí.",
+    "example_zh": "这个人在这里。",
+    "note": "名词（阴）；无论所指人的性别都用 la；与英语 person 同源",
+    "tags": "名词;人"
+  },
+  {
+    "id": "es-0042",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "el hombre",
+    "back": "男人",
+    "example": "El hombre está en casa.",
+    "example_zh": "这个男人在家。",
+    "note": "名词（阳）",
+    "tags": "名词;人"
+  },
+  {
+    "id": "es-0043",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "la mujer",
+    "back": "女人",
+    "example": "La mujer es estudiante.",
+    "example_zh": "这个女人是学生。",
+    "note": "名词（阴）",
+    "tags": "名词;人"
+  },
+  {
+    "id": "es-0044",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "el niño",
+    "back": "男孩；儿童",
+    "example": "El niño está aquí.",
+    "example_zh": "这个男孩在这里。",
+    "note": "名词（阳）；女孩为 la niña；ñ 是独立字母",
+    "tags": "名词;人"
+  },
+  {
+    "id": "es-0045",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "la familia",
+    "back": "家庭",
+    "example": "La familia está en casa.",
+    "example_zh": "这家人都在家。",
+    "note": "名词（阴）；与英语 family 同源",
+    "tags": "名词;家庭"
+  },
+  {
+    "id": "es-0046",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "la madre",
+    "back": "母亲",
+    "example": "La madre está aquí.",
+    "example_zh": "母亲在这里。",
+    "note": "名词（阴）；与英语 maternal 中的拉丁词根同源",
+    "tags": "名词;家庭"
+  },
+  {
+    "id": "es-0047",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "el padre",
+    "back": "父亲",
+    "example": "El padre está en casa.",
+    "example_zh": "父亲在家。",
+    "note": "名词（阳）；与英语 paternal 中的拉丁词根同源",
+    "tags": "名词;家庭"
+  },
+  {
+    "id": "es-0048",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "el amigo",
+    "back": "朋友（男性）",
+    "example": "El amigo está aquí.",
+    "example_zh": "这位男性朋友在这里。",
+    "note": "名词（阳）；女性朋友为 la amiga；与英语 amicable 同源",
+    "tags": "名词;人"
+  },
+  {
+    "id": "es-0049",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "el estudiante",
+    "back": "学生（男性）",
+    "example": "El estudiante está en casa.",
+    "example_zh": "这位男学生在家。",
+    "note": "名词（阳）；女性用 la estudiante；与英语 student 同源",
+    "tags": "名词;人"
+  },
+  {
+    "id": "es-0050",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "la casa",
+    "back": "房子；家",
+    "example": "La casa es grande.",
+    "example_zh": "这所房子很大。",
+    "note": "名词（阴）；en casa 表示在家",
+    "tags": "名词;地点"
+  },
+  {
+    "id": "es-0051",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "el libro",
+    "back": "书",
+    "example": "El libro está aquí.",
+    "example_zh": "这本书在这里。",
+    "note": "名词（阳）；与英语 library 中的拉丁词根同源",
+    "tags": "名词;物品"
+  },
+  {
+    "id": "es-0052",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "la mesa",
+    "back": "桌子",
+    "example": "La mesa es pequeña.",
+    "example_zh": "这张桌子很小。",
+    "note": "名词（阴）",
+    "tags": "名词;物品"
+  },
+  {
+    "id": "es-0053",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "el teléfono",
+    "back": "电话",
+    "example": "El teléfono está en la mesa.",
+    "example_zh": "电话在桌子上。",
+    "note": "名词（阳）；与英语 telephone 共享希腊词根；注意 é",
+    "tags": "名词;物品"
+  },
+  {
+    "id": "es-0054",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "la ciudad",
+    "back": "城市",
+    "example": "La ciudad es grande.",
+    "example_zh": "这座城市很大。",
+    "note": "名词（阴）；与英语 city 同源",
+    "tags": "名词;地点"
+  },
+  {
+    "id": "es-0055",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "la escuela",
+    "back": "学校",
+    "example": "La escuela está aquí.",
+    "example_zh": "学校在这里。",
+    "note": "名词（阴）；与英语 school 同源",
+    "tags": "名词;地点"
+  },
+  {
+    "id": "es-0056",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "la universidad",
+    "back": "大学",
+    "example": "La universidad es grande.",
+    "example_zh": "这所大学很大。",
+    "note": "名词（阴）；与英语 university 同源",
+    "tags": "名词;地点"
+  },
+  {
+    "id": "es-0057",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "el día",
+    "back": "天；白天",
+    "example": "El día es largo.",
+    "example_zh": "白天很长。",
+    "note": "名词（阳）；虽以 a 结尾仍为阳性；í 标示元音分读",
+    "tags": "名词;时间"
+  },
+  {
+    "id": "es-0058",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "la noche",
+    "back": "夜晚",
+    "example": "La noche es larga.",
+    "example_zh": "夜晚很长。",
+    "note": "名词（阴）",
+    "tags": "名词;时间"
+  },
+  {
+    "id": "es-0059",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "la hora",
+    "back": "小时；时刻",
+    "example": "La hora de estudiar es ahora.",
+    "example_zh": "现在是学习的时间。",
+    "note": "名词（阴）；与英语 hour 同源；h 不发音",
+    "tags": "名词;时间"
+  },
+  {
+    "id": "es-0060",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "el tiempo",
+    "back": "时间；天气",
+    "example": "El tiempo es importante.",
+    "example_zh": "时间很重要。",
+    "note": "名词（阳）；与英语 temporal 同源",
+    "tags": "名词;时间"
+  },
+  {
+    "id": "es-0061",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "bueno",
+    "back": "好的（阳性单数）",
+    "example": "El libro es bueno.",
+    "example_zh": "这本书很好。",
+    "note": "形容词；阴性 buena；阳性单数名词前常用 buen",
+    "tags": "形容词"
+  },
+  {
+    "id": "es-0062",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "malo",
+    "back": "坏的；不好的（阳性单数）",
+    "example": "El libro es malo.",
+    "example_zh": "这本书不好。",
+    "note": "形容词；阴性 mala；阳性单数名词前常用 mal",
+    "tags": "形容词"
+  },
+  {
+    "id": "es-0063",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "grande",
+    "back": "大的",
+    "example": "La casa es grande.",
+    "example_zh": "这所房子很大。",
+    "note": "形容词；单数阴阳同形；与英语 grand 同源",
+    "tags": "形容词"
+  },
+  {
+    "id": "es-0064",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "pequeño",
+    "back": "小的（阳性单数）",
+    "example": "El teléfono es pequeño.",
+    "example_zh": "这个电话很小。",
+    "note": "形容词；阴性 pequeña；注意 ñ",
+    "tags": "形容词"
+  },
+  {
+    "id": "es-0065",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "nuevo",
+    "back": "新的（阳性单数）",
+    "example": "El libro es nuevo.",
+    "example_zh": "这本书是新的。",
+    "note": "形容词；阴性 nueva",
+    "tags": "形容词"
+  },
+  {
+    "id": "es-0066",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "importante",
+    "back": "重要的",
+    "example": "La familia es importante.",
+    "example_zh": "家庭很重要。",
+    "note": "形容词；单数阴阳同形；与英语 important 同源",
+    "tags": "形容词"
+  },
+  {
+    "id": "es-0067",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "fácil",
+    "back": "容易的",
+    "example": "Leer es fácil.",
+    "example_zh": "阅读很容易。",
+    "note": "形容词；单数阴阳同形；与英语 facile 同源；注意 á",
+    "tags": "形容词"
+  },
+  {
+    "id": "es-0068",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "difícil",
+    "back": "困难的",
+    "example": "Escribir es difícil.",
+    "example_zh": "写作很难。",
+    "note": "形容词；单数阴阳同形；与英语 difficult 同源；注意 í",
+    "tags": "形容词"
+  },
+  {
+    "id": "es-0069",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "largo",
+    "back": "长的（阳性单数）",
+    "example": "El día es largo.",
+    "example_zh": "白天很长。",
+    "note": "形容词；阴性 larga；不是英语 large 的大的含义",
+    "tags": "形容词"
+  },
+  {
+    "id": "es-0070",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "español",
+    "back": "西班牙的；西班牙语",
+    "example": "Yo quiero estudiar español.",
+    "example_zh": "我想学西班牙语。",
+    "note": "形容词（阳；阴性 española）；也作名词（阳）表示西班牙语",
+    "tags": "形容词;语言"
+  },
+  {
+    "id": "es-0071",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "uno",
+    "back": "一（独立数词）",
+    "example": "Uno y dos son tres.",
+    "example_zh": "一加二等于三。",
+    "note": "数词；阳性单数名词前用 un；阴性用 una",
+    "tags": "数字"
+  },
+  {
+    "id": "es-0072",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "dos",
+    "back": "二",
+    "example": "Dos y dos son cuatro.",
+    "example_zh": "二加二等于四。",
+    "note": "数词；名词用复数",
+    "tags": "数字"
+  },
+  {
+    "id": "es-0073",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "tres",
+    "back": "三",
+    "example": "Tres y dos son cinco.",
+    "example_zh": "三加二等于五。",
+    "note": "数词",
+    "tags": "数字"
+  },
+  {
+    "id": "es-0074",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "cuatro",
+    "back": "四",
+    "example": "Cuatro y dos son seis.",
+    "example_zh": "四加二等于六。",
+    "note": "数词",
+    "tags": "数字"
+  },
+  {
+    "id": "es-0075",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "cinco",
+    "back": "五",
+    "example": "Cinco y dos son siete.",
+    "example_zh": "五加二等于七。",
+    "note": "数词",
+    "tags": "数字"
+  },
+  {
+    "id": "es-0076",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "seis",
+    "back": "六",
+    "example": "Seis y dos son ocho.",
+    "example_zh": "六加二等于八。",
+    "note": "数词",
+    "tags": "数字"
+  },
+  {
+    "id": "es-0077",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "siete",
+    "back": "七",
+    "example": "Siete y dos son nueve.",
+    "example_zh": "七加二等于九。",
+    "note": "数词",
+    "tags": "数字"
+  },
+  {
+    "id": "es-0078",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "ocho",
+    "back": "八",
+    "example": "Ocho y dos son diez.",
+    "example_zh": "八加二等于十。",
+    "note": "数词",
+    "tags": "数字"
+  },
+  {
+    "id": "es-0079",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "nueve",
+    "back": "九",
+    "example": "Nueve libros están aquí.",
+    "example_zh": "这里有九本书。",
+    "note": "数词",
+    "tags": "数字"
+  },
+  {
+    "id": "es-0080",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "diez",
+    "back": "十",
+    "example": "Diez personas están aquí.",
+    "example_zh": "这里有十个人。",
+    "note": "数词",
+    "tags": "数字"
+  },
+  {
+    "id": "es-0081",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "qué",
+    "back": "什么",
+    "example": "¿Qué es?",
+    "example_zh": "这是什么？",
+    "note": "疑问词；直接和间接疑问中保留 é",
+    "tags": "疑问词"
+  },
+  {
+    "id": "es-0082",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "quién",
+    "back": "谁（单数）",
+    "example": "¿Quién es él?",
+    "example_zh": "他是谁？",
+    "note": "疑问代词；复数 quiénes",
+    "tags": "疑问词"
+  },
+  {
+    "id": "es-0083",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "dónde",
+    "back": "哪里",
+    "example": "¿Dónde está el libro?",
+    "example_zh": "书在哪里？",
+    "note": "疑问副词",
+    "tags": "疑问词"
+  },
+  {
+    "id": "es-0084",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "cuándo",
+    "back": "什么时候",
+    "example": "¿Cuándo quieres estudiar?",
+    "example_zh": "你想什么时候学习？",
+    "note": "疑问副词；quieres 是 querer 的 tú 现在时",
+    "tags": "疑问词"
+  },
+  {
+    "id": "es-0085",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "cómo",
+    "back": "怎样；如何",
+    "example": "¿Cómo estás?",
+    "example_zh": "你怎么样？",
+    "note": "疑问副词；不是 comer 的 yo 形式 como",
+    "tags": "疑问词"
+  },
+  {
+    "id": "es-0086",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "cuánto",
+    "back": "多少（阳性单数）",
+    "example": "¿Cuánto tiempo tienes?",
+    "example_zh": "你有多少时间？",
+    "note": "疑问限定词／代词／副词；tienes 是 tener 的 tú 现在时",
+    "tags": "疑问词"
+  },
+  {
+    "id": "es-0087",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "por qué",
+    "back": "为什么",
+    "example": "¿Por qué estás aquí?",
+    "example_zh": "你为什么在这里？",
+    "note": "疑问短语；分开写；不是 porque（因为）",
+    "tags": "疑问词"
+  },
+  {
+    "id": "es-0088",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "cuál",
+    "back": "哪一个；哪个",
+    "example": "¿Cuál es el libro?",
+    "example_zh": "哪一本是那本书？",
+    "note": "疑问代词；复数 cuáles",
+    "tags": "疑问词"
+  },
+  {
+    "id": "es-0089",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "ser",
+    "back": "是（身份或特征）",
+    "example": "Quiero ser estudiante.",
+    "example_zh": "我想成为学生。",
+    "note": "动词不定式；quiero 是 querer 的 yo 现在时",
+    "tags": "动词;不定式"
+  },
+  {
+    "id": "es-0090",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "estar",
+    "back": "在；处于某种状态",
+    "example": "Quiero estar en casa.",
+    "example_zh": "我想待在家。",
+    "note": "动词不定式；表示状态或一般位置",
+    "tags": "动词;不定式"
+  },
+  {
+    "id": "es-0091",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "tener",
+    "back": "有",
+    "example": "Quiero tener un libro.",
+    "example_zh": "我想有一本书。",
+    "note": "动词不定式；常用形式 tengo / tienes",
+    "tags": "动词;不定式"
+  },
+  {
+    "id": "es-0092",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "ir",
+    "back": "去",
+    "example": "Quiero ir a casa.",
+    "example_zh": "我想回家。",
+    "note": "动词不定式；常用形式 voy / vas",
+    "tags": "动词;不定式"
+  },
+  {
+    "id": "es-0093",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "hablar",
+    "back": "说；交谈",
+    "example": "Quiero hablar español.",
+    "example_zh": "我想说西班牙语。",
+    "note": "动词不定式；本课只学习书面词形",
+    "tags": "动词;不定式"
+  },
+  {
+    "id": "es-0094",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "comer",
+    "back": "吃",
+    "example": "Quiero comer ahora.",
+    "example_zh": "我现在想吃东西。",
+    "note": "动词不定式",
+    "tags": "动词;不定式"
+  },
+  {
+    "id": "es-0095",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "vivir",
+    "back": "住；生活",
+    "example": "Quiero vivir aquí.",
+    "example_zh": "我想住在这里。",
+    "note": "动词不定式；与英语 vivid 中的拉丁词根同源",
+    "tags": "动词;不定式"
+  },
+  {
+    "id": "es-0096",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "leer",
+    "back": "读",
+    "example": "Quiero leer un libro.",
+    "example_zh": "我想读一本书。",
+    "note": "动词不定式",
+    "tags": "动词;不定式"
+  },
+  {
+    "id": "es-0097",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "escribir",
+    "back": "写",
+    "example": "Quiero escribir ahora.",
+    "example_zh": "我现在想写东西。",
+    "note": "动词不定式；与英语 scribe 同源",
+    "tags": "动词;不定式"
+  },
+  {
+    "id": "es-0098",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "estudiar",
+    "back": "学习",
+    "example": "Quiero estudiar español.",
+    "example_zh": "我想学西班牙语。",
+    "note": "动词不定式；与英语 study 同源",
+    "tags": "动词;不定式"
+  },
+  {
+    "id": "es-0099",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "trabajar",
+    "back": "工作",
+    "example": "Quiero trabajar aquí.",
+    "example_zh": "我想在这里工作。",
+    "note": "动词不定式；与英语 travail 同源",
+    "tags": "动词;不定式"
+  },
+  {
+    "id": "es-0100",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "querer",
+    "back": "想要；爱",
+    "example": "Querer es importante.",
+    "example_zh": "爱很重要。",
+    "note": "动词不定式；常用形式 quiero / quieres；不定式可作主语",
+    "tags": "动词;不定式"
+  },
+  {
+    "id": "es-0101",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "y",
+    "back": "和；与",
+    "example": "La madre y el padre están aquí.",
+    "example_zh": "母亲和父亲在这里。",
+    "note": "连词",
+    "tags": "连词"
+  },
+  {
+    "id": "es-0102",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "o",
+    "back": "或者",
+    "example": "¿Un libro o un teléfono?",
+    "example_zh": "一本书还是一个电话？",
+    "note": "连词；单独的 o 不加重音符号",
+    "tags": "连词"
+  },
+  {
+    "id": "es-0103",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "pero",
+    "back": "但是",
+    "example": "La casa es pequeña, pero es buena.",
+    "example_zh": "这所房子虽小但是很好。",
+    "note": "连词",
+    "tags": "连词"
+  },
+  {
+    "id": "es-0104",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "de",
+    "back": "……的；来自",
+    "example": "El libro de la estudiante está aquí.",
+    "example_zh": "这位女学生的书在这里。",
+    "note": "介词；与 dé（dar 的变位）区分",
+    "tags": "介词"
+  },
+  {
+    "id": "es-0105",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "en",
+    "back": "在……里面／上面",
+    "example": "El libro está en la mesa.",
+    "example_zh": "书在桌子上。",
+    "note": "介词；与英语 in 同源",
+    "tags": "介词"
+  },
+  {
+    "id": "es-0106",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "a",
+    "back": "向；到",
+    "example": "Quiero ir a la escuela.",
+    "example_zh": "我想去学校。",
+    "note": "介词；a + el 合为 al",
+    "tags": "介词"
+  },
+  {
+    "id": "es-0107",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "con",
+    "back": "和……一起；带有",
+    "example": "Estoy con la familia.",
+    "example_zh": "我和家人在一起。",
+    "note": "介词",
+    "tags": "介词"
+  },
+  {
+    "id": "es-0108",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "sin",
+    "back": "没有；不带",
+    "example": "Estoy sin teléfono.",
+    "example_zh": "我现在没有电话。",
+    "note": "介词",
+    "tags": "介词"
+  },
+  {
+    "id": "es-0109",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "muy",
+    "back": "很",
+    "example": "La casa es muy grande.",
+    "example_zh": "这所房子很大。",
+    "note": "副词；常放在形容词或副词前",
+    "tags": "副词"
+  },
+  {
+    "id": "es-0110",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "también",
+    "back": "也",
+    "example": "Yo también soy estudiante.",
+    "example_zh": "我也是学生。",
+    "note": "副词；注意 é",
+    "tags": "副词"
+  },
+  {
+    "id": "es-0111",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "aquí",
+    "back": "这里",
+    "example": "El libro está aquí.",
+    "example_zh": "书在这里。",
+    "note": "副词；注意 í",
+    "tags": "副词"
+  },
+  {
+    "id": "es-0112",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "ahora",
+    "back": "现在",
+    "example": "Quiero leer ahora.",
+    "example_zh": "我现在想读书。",
+    "note": "副词；h 不发音",
+    "tags": "副词"
+  },
+  {
+    "id": "es-0113",
+    "lang": "es",
+    "lesson": "es-01",
+    "front": "hoy",
+    "back": "今天",
+    "example": "Hoy estoy en casa.",
+    "example_zh": "我今天在家。",
+    "note": "副词",
+    "tags": "副词"
+  },
+  {
+    "id": "ru-0001",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "А а",
+    "back": "a；形音都同",
+    "example": "такси́",
+    "example_zh": "出租车（含 а）",
+    "note": "字母；转写只用于辨认；示例词暂不要求记忆",
+    "tags": "letter;latin-same"
+  },
+  {
+    "id": "ru-0002",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Б б",
+    "back": "b；新形",
+    "example": "ба́нк",
+    "example_zh": "银行（含 б）",
+    "note": "字母",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0003",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "В в",
+    "back": "v；形同音不同",
+    "example": "университе́т",
+    "example_zh": "大学（含 в）",
+    "note": "字母；不是拉丁 B 的 b",
+    "tags": "letter;false-friend"
+  },
+  {
+    "id": "ru-0004",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Г г",
+    "back": "g；新形",
+    "example": "го́род",
+    "example_zh": "城市（含 г）",
+    "note": "字母；注意斜体字形",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0005",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Д д",
+    "back": "d；新形",
+    "example": "студе́нт",
+    "example_zh": "学生（含 д）",
+    "note": "字母；注意斜体字形",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0006",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Е е",
+    "back": "ye / e；形同音不同",
+    "example": "телефо́н",
+    "example_zh": "电话（含 е）",
+    "note": "字母；词首等位置常对应 ye；辅音后常提示软化",
+    "tags": "letter;false-friend"
+  },
+  {
+    "id": "ru-0007",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Ё ё",
+    "back": "yo；新形",
+    "example": "ёлка",
+    "example_zh": "枞树（含 ё）",
+    "note": "字母；普通词中 ё 通常重读；不要漏两点",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0008",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Ж ж",
+    "back": "zh；新形",
+    "example": "журна́л",
+    "example_zh": "杂志（含 ж）",
+    "note": "字母",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0009",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "З з",
+    "back": "z；新形",
+    "example": "му́зыка",
+    "example_zh": "音乐（含 з）",
+    "note": "字母",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0010",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "И и",
+    "back": "i；新形",
+    "example": "интерне́т",
+    "example_zh": "互联网（含 и）",
+    "note": "字母；注意斜体字形",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0011",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Й й",
+    "back": "y（短促的滑音）；新形",
+    "example": "музе́й",
+    "example_zh": "博物馆（含 й）",
+    "note": "字母；顶部短音符不可省略；不是 и",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0012",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "К к",
+    "back": "k；形音都同",
+    "example": "ко́фе",
+    "example_zh": "咖啡（含 к）",
+    "note": "字母",
+    "tags": "letter;latin-same"
+  },
+  {
+    "id": "ru-0013",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Л л",
+    "back": "l；新形",
+    "example": "телефо́н",
+    "example_zh": "电话（含 л）",
+    "note": "字母",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0014",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "М м",
+    "back": "m；形音都同",
+    "example": "метро́",
+    "example_zh": "地铁（含 м）",
+    "note": "字母",
+    "tags": "letter;latin-same"
+  },
+  {
+    "id": "ru-0015",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Н н",
+    "back": "n；形同音不同",
+    "example": "интерне́т",
+    "example_zh": "互联网（含 н）",
+    "note": "字母；不是拉丁 H",
+    "tags": "letter;false-friend"
+  },
+  {
+    "id": "ru-0016",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "О о",
+    "back": "o；形音都同",
+    "example": "спо́рт",
+    "example_zh": "体育运动（含 о）",
+    "note": "字母；这里只记大致对应；非重读读音留待以后",
+    "tags": "letter;latin-same"
+  },
+  {
+    "id": "ru-0017",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "П п",
+    "back": "p；新形",
+    "example": "па́рк",
+    "example_zh": "公园（含 п）",
+    "note": "字母；注意斜体字形",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0018",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Р р",
+    "back": "r；形同音不同",
+    "example": "ра́дио",
+    "example_zh": "广播；收音机（含 р）",
+    "note": "字母；不是拉丁 P 的 p",
+    "tags": "letter;false-friend"
+  },
+  {
+    "id": "ru-0019",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "С с",
+    "back": "s；形同音不同",
+    "example": "студе́нт",
+    "example_zh": "学生（含 с）",
+    "note": "字母；不是拉丁 C 的 k",
+    "tags": "letter;false-friend"
+  },
+  {
+    "id": "ru-0020",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Т т",
+    "back": "t；形音都同",
+    "example": "теа́тр",
+    "example_zh": "剧院（含 т）",
+    "note": "字母；小写斜体常像拉丁 m",
+    "tags": "letter;latin-same"
+  },
+  {
+    "id": "ru-0021",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "У у",
+    "back": "u；形同音不同",
+    "example": "университе́т",
+    "example_zh": "大学（含 у）",
+    "note": "字母；不是拉丁 Y",
+    "tags": "letter;false-friend"
+  },
+  {
+    "id": "ru-0022",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Ф ф",
+    "back": "f；新形",
+    "example": "ко́фе",
+    "example_zh": "咖啡（含 ф）",
+    "note": "字母",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0023",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Х х",
+    "back": "kh（也记作 x）；形同音不同",
+    "example": "хо́бби",
+    "example_zh": "爱好（含 х）",
+    "note": "字母；不是英语 x 的 ks",
+    "tags": "letter;false-friend"
+  },
+  {
+    "id": "ru-0024",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Ц ц",
+    "back": "ts；新形",
+    "example": "це́нтр",
+    "example_zh": "中心（含 ц）",
+    "note": "字母",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0025",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Ч ч",
+    "back": "ch；新形",
+    "example": "ча́й",
+    "example_zh": "茶（含 ч）",
+    "note": "字母",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0026",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Ш ш",
+    "back": "sh；新形",
+    "example": "шко́ла",
+    "example_zh": "学校（含 ш）",
+    "note": "字母",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0027",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Щ щ",
+    "back": "shch（约为较长的软 sh）；新形",
+    "example": "щи́",
+    "example_zh": "俄式菜汤（含 щ）",
+    "note": "字母；shch 是常见转写；不要拆成两个字母",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0028",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Ъ ъ",
+    "back": "不发音（硬音符号）；新形",
+    "example": "объе́кт",
+    "example_zh": "物体；对象（含 ъ）",
+    "note": "字母；作分隔标记",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0029",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Ы ы",
+    "back": "y（近似的转写）；新形",
+    "example": "му́зыка",
+    "example_zh": "音乐（含 ы）",
+    "note": "字母；不是 й；转写 y 不是英语辅音 y 的读法",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0030",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Ь ь",
+    "back": "不发音（软音符号）；新形",
+    "example": "компью́тер",
+    "example_zh": "电脑（含 ь）",
+    "note": "字母；可提示软化或起分隔及语法作用",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0031",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Э э",
+    "back": "e；新形",
+    "example": "э́то",
+    "example_zh": "这；这是（含 э）",
+    "note": "字母",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0032",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Ю ю",
+    "back": "yu；新形",
+    "example": "компью́тер",
+    "example_zh": "电脑（含 ю）",
+    "note": "字母；辅音后常提示软化",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0033",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "Я я",
+    "back": "ya；新形",
+    "example": "я́",
+    "example_zh": "我（含 я）",
+    "note": "字母；辅音后常提示软化",
+    "tags": "letter;new-shape"
+  },
+  {
+    "id": "ru-0034",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "телефо́н",
+    "back": "电话",
+    "example": "Э́то телефо́н.",
+    "example_zh": "这是电话。",
+    "note": "名词（阳）；重音在 о；对应英语 telephone",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0035",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "университе́т",
+    "back": "大学",
+    "example": "Э́то университе́т.",
+    "example_zh": "这是大学。",
+    "note": "名词（阳）；重音在最后的 е；对应英语 university",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0036",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "студе́нт",
+    "back": "学生（男性）",
+    "example": "Э́то студе́нт.",
+    "example_zh": "这是男学生。",
+    "note": "名词（阳）；重音在 е；对应英语 student",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0037",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "пробле́ма",
+    "back": "问题",
+    "example": "Э́то пробле́ма.",
+    "example_zh": "这是一个问题。",
+    "note": "名词（阴）；重音在 е；对应英语 problem",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0038",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "интерне́т",
+    "back": "互联网",
+    "example": "Э́то интерне́т.",
+    "example_zh": "这是互联网。",
+    "note": "名词（阳）；重音在最后的 е；对应英语 internet",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0039",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "компью́тер",
+    "back": "电脑",
+    "example": "Э́то компью́тер.",
+    "example_zh": "这是电脑。",
+    "note": "名词（阳）；重音在 ю；保留 ь；对应英语 computer",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0040",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "му́зыка",
+    "back": "音乐",
+    "example": "Э́то му́зыка.",
+    "example_zh": "这是音乐。",
+    "note": "名词（阴）；重音在 у；对应英语 music",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0041",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "теа́тр",
+    "back": "剧院",
+    "example": "Э́то теа́тр.",
+    "example_zh": "这是剧院。",
+    "note": "名词（阳）；重音在 а；对应英语 theatre",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0042",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "спо́рт",
+    "back": "体育运动",
+    "example": "Э́то спо́рт.",
+    "example_zh": "这是体育运动。",
+    "note": "名词（阳）；单音节也标重音以统一卡片格式；对应英语 sport",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0043",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "ко́фе",
+    "back": "咖啡",
+    "example": "Э́то ко́фе.",
+    "example_zh": "这是咖啡。",
+    "note": "名词（阳）；标准书面语用阳性；不变格；对应英语 coffee",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0044",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "па́рк",
+    "back": "公园",
+    "example": "Э́то па́рк.",
+    "example_zh": "这是公园。",
+    "note": "名词（阳）；单音节；对应英语 park",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0045",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "ба́нк",
+    "back": "银行",
+    "example": "Э́то ба́нк.",
+    "example_zh": "这是银行。",
+    "note": "名词（阳）；单音节；对应英语 bank",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0046",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "рестора́н",
+    "back": "餐馆",
+    "example": "Э́то рестора́н.",
+    "example_zh": "这是餐馆。",
+    "note": "名词（阳）；重音在 а；对应英语 restaurant",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0047",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "такси́",
+    "back": "出租车",
+    "example": "Э́то такси́.",
+    "example_zh": "这是出租车。",
+    "note": "名词（中）；重音在 и；不变格；对应英语 taxi",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0048",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "метро́",
+    "back": "地铁",
+    "example": "Э́то метро́.",
+    "example_zh": "这是地铁。",
+    "note": "名词（中）；重音在 о；不变格；对应英语 metro",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0049",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "ра́дио",
+    "back": "广播；收音机",
+    "example": "Э́то ра́дио.",
+    "example_zh": "这是收音机。",
+    "note": "名词（中）；重音在 а；不变格；对应英语 radio",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0050",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "музе́й",
+    "back": "博物馆",
+    "example": "Э́то музе́й.",
+    "example_zh": "这是博物馆。",
+    "note": "名词（阳）；重音在 е；词尾是 й；对应英语 museum",
+    "tags": "国际词;名词"
+  },
+  {
+    "id": "ru-0051",
+    "lang": "ru",
+    "lesson": "ru-01",
+    "front": "оте́ль",
+    "back": "旅馆",
+    "example": "Э́то оте́ль.",
+    "example_zh": "这是旅馆。",
+    "note": "名词（阳）；重音在 е；词尾 ь 仍是阳性；对应英语 hotel",
+    "tags": "国际词;名词"
+  }
+]</script>
+<script type="application/json" id="state-data">{"version":1,"updatedAt":"2026-09-07T00:00:00.000Z","settings":{"newPerDay":{"es":15,"ru":10}},"cards":{},"log":[]}</script>
+<script>
+(() => {
+'use strict';
+
+// 日期、文本与数据校验。
+const COLUMNS = ['id','lang','lesson','front','back','example','example_zh','note','tags'];
+const LANGS = ['es','ru'];
+const GRADES = [0,3,4,5];
+const GRADE_NAMES = ['Again','Hard','Good','Easy'];
+const CACHE_KEY = 'language-srs:v1:' + location.pathname;
+const cloneValue = value => JSON.parse(JSON.stringify(value));
+const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const localDay = (date = new Date()) => `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
+function addDays(day, count) {
+  const [y,m,d] = day.split('-').map(Number);
+  const date = new Date(y,m-1,d,12);
+  date.setDate(date.getDate()+count);
+  return localDay(date);
+}
+function validDay(value) {
+  return typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value) && value >= '1900-01-01' && value <= '9999-12-31' && addDays(value,0) === value;
+}
+const validISO = value => typeof value === 'string' && /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(?:\.\d+)?(?:Z|[+-]\d\d:\d\d)$/.test(value) && validDay(value.slice(0,10)) && Number.isFinite(Date.parse(value));
+const validId = value => typeof value === 'string' && /^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$/.test(value);
+const own = (obj,key) => Object.prototype.hasOwnProperty.call(obj,key);
+const isLetter = row => row.lang === 'ru' && row.tags.split(';').includes('letter');
+function validateRows(value) {
+  if (!Array.isArray(value) || value.length > 50000) throw new Error('卡片应为数组，最多 50000 条词条。');
+  const seen = new Set();
+  return value.map((row,i) => {
+    if (!row || typeof row !== 'object' || COLUMNS.some(key => typeof row[key] !== 'string')) throw new Error(`第 ${i+1} 条卡片缺少文本字段。`);
+    const result = Object.fromEntries(COLUMNS.map(key => [key,row[key].normalize('NFC').trim()]));
+    if (!validId(result.id) || !LANGS.includes(result.lang) || !new RegExp('^'+result.lang+'-\\d+$').test(result.lesson)) throw new Error(`第 ${i+1} 条的 id、lang 或 lesson 无效。`);
+    if (seen.has(result.id)) throw new Error(`id 重复：${result.id}`);
+    if (['front','back','example','example_zh'].some(key => !result[key])) throw new Error(`${result.id} 的词条、释义和例句不能为空。`);
+    if (COLUMNS.some(key => result[key].length > 20000)) throw new Error(`${result.id} 的字段过长。`);
+    seen.add(result.id);
+    return result;
+  });
+}
+function pruneLog(log, now = new Date()) {
+  const cutoff = addDays(localDay(now),-59);
+  return log.filter(item => localDay(new Date(item.t)) >= cutoff).sort((a,b) => Date.parse(a.t)-Date.parse(b.t));
+}
+function validateState(value, now = new Date()) {
+  if (!value || value.version !== 1 || !validISO(value.updatedAt) || !value.cards || typeof value.cards !== 'object' || Array.isArray(value.cards) || !Array.isArray(value.log)) throw new Error('进度格式无效，须为 version: 1 的状态 JSON。');
+  const settings = value.settings?.newPerDay;
+  if (!settings || LANGS.some(lang => !Number.isInteger(settings[lang]) || settings[lang] < 0 || settings[lang] > 999)) throw new Error('每日新卡数须为 0–999 的整数。');
+  const log = value.log.map(item => {
+    if (!item || !validISO(item.t) || !validCardId(item.card) || !GRADES.includes(item.grade)) throw new Error('复习日志含有无效记录。');
+    return {t:new Date(item.t).toISOString(),card:item.card,grade:item.grade};
+  });
+  const firstLog = new Map();
+  for (const item of log) {
+    const day = localDay(new Date(item.t));
+    if (!firstLog.has(item.card) || day < firstLog.get(item.card)) firstLog.set(item.card,day);
+  }
+  const cards = Object.create(null);
+  for (const [id,record] of Object.entries(value.cards)) {
+    if (!validCardId(id) || !record || !validDay(record.due) || !validDay(record.last) || !Number.isInteger(record.ivl) || record.ivl < 0 || record.ivl > 3000000 || !Number.isFinite(record.ease) || record.ease < 1.3 || !Number.isInteger(record.reps) || record.reps < 0 || !Number.isInteger(record.lapses) || record.lapses < 0) throw new Error(`卡片进度无效：${id}`);
+    const first = record.first ?? firstLog.get(id) ?? record.last;
+    if (!validDay(first) || first > record.last) throw new Error(`首次复习日期无效：${id}`);
+    cards[id] = {due:record.due,ivl:record.ivl,ease:record.ease,reps:record.reps,lapses:record.lapses,last:record.last,first};
+  }
+  return {version:1,updatedAt:new Date(value.updatedAt).toISOString(),settings:{newPerDay:{es:settings.es,ru:settings.ru}},cards,log:pruneLog(log,now)};
+}
+function validCardId(value) {
+  return typeof value === 'string' && /:[rp]$/.test(value) && validId(value.slice(0,-2));
+}
+function parseCSV(text) {
+  text = text.replace(/^\uFEFF/,'');
+  const rows = [];
+  let row = [], field = '', quoted = false, closed = false;
+  for (let i=0;i<text.length;i++) {
+    const c = text[i];
+    if (quoted) {
+      if (c === '"' && text[i+1] === '"') { field += '"'; i++; }
+      else if (c === '"') { quoted = false; closed = true; }
+      else field += c;
+    } else if (c === '"') {
+      if (field || closed) throw new Error('CSV 引号位置无效。');
+      quoted = true;
+    } else if (c === ',') { row.push(field); field = ''; closed = false; }
+    else if (c === '\r' || c === '\n') {
+      if (c === '\r' && text[i+1] === '\n') i++;
+      row.push(field);
+      if (row.some(value => value !== '')) rows.push(row);
+      row = []; field = ''; closed = false;
+    } else {
+      if (closed) throw new Error('CSV 闭引号后只能接逗号或换行。');
+      field += c;
+    }
+  }
+  if (quoted) throw new Error('CSV 有未闭合的引号。');
+  row.push(field);
+  if (row.some(value => value !== '')) rows.push(row);
+  if (!rows.length || rows[0].join(',') !== COLUMNS.join(',')) throw new Error('CSV 表头须为：'+COLUMNS.join(','));
+  if (rows.length === 1) throw new Error('CSV 没有卡片。');
+  return validateRows(rows.slice(1).map((values,i) => {
+    if (values.length !== COLUMNS.length) throw new Error(`CSV 第 ${i+2} 条记录应有 9 列，实际有 ${values.length} 列。`);
+    return Object.fromEntries(COLUMNS.map((key,j) => [key,values[j]]));
+  }));
+}
+function mergeRows(current, incoming) {
+  const map = new Map(current.map(row => [row.id,row]));
+  for (const row of incoming) {
+    if (map.has(row.id) && map.get(row.id).lang !== row.lang) throw new Error(`${row.id} 不能更换语言；请用新的 id。`);
+    map.set(row.id,row);
+  }
+  return validateRows([...map.values()]);
+}
+
+// SM-2、队列与拼写。
+function schedule(previous, grade, day) {
+  if (!GRADES.includes(grade)) throw new Error('无效评分。');
+  const old = previous || {ivl:0,ease:2.5,reps:0,lapses:0,first:day};
+  const ease = Math.max(1.3,Math.round((old.ease + .1 - (5-grade)*(.08+(5-grade)*.02))*100)/100);
+  const reps = grade === 0 ? 0 : old.reps+1;
+  let ivl = grade === 0 ? 0 : reps === 1 ? (grade === 5 ? 4 : 1) : reps === 2 ? 6 : Math.max(1,Math.round(old.ivl*old.ease));
+  ivl = Math.min(ivl,3000000);
+  const due = addDays(day,ivl);
+  if (!validDay(due)) throw new Error('间隔超出可保存的日期范围。');
+  return {due,ivl,ease,reps,lapses:old.lapses+(grade === 0 ? 1 : 0),last:day,first:old.first || old.last || day};
+}
+function expandCards(rows) {
+  return rows.flatMap(row => (isLetter(row) ? ['r'] : ['r','p']).map(direction => ({id:row.id+':'+direction,direction,row})));
+}
+function cardOrder(a,b) {
+  return a.row.lesson.localeCompare(b.row.lesson,undefined,{numeric:true}) || a.row.id.localeCompare(b.row.id,undefined,{numeric:true}) || (a.direction === b.direction ? 0 : a.direction === 'r' ? -1 : 1);
+}
+function buildQueue(rows, state, lang, day) {
+  const all = expandCards(rows).filter(card => lang === 'all' || card.row.lang === lang);
+  const due = all.filter(card => own(state.cards,card.id) && state.cards[card.id].due <= day).sort((a,b) => state.cards[a.id].due.localeCompare(state.cards[b.id].due) || cardOrder(a,b));
+  const fresh = [];
+  for (const language of LANGS) {
+    const introduced = all.filter(card => card.row.lang === language && state.cards[card.id]?.first === day).length;
+    const allowance = Math.max(0,state.settings.newPerDay[language]-introduced);
+    const eligible = all.filter(card => card.row.lang === language && !own(state.cards,card.id) && (card.direction === 'r' || (state.cards[card.row.id+':r']?.first || day) < day)).sort(cardOrder);
+    fresh.push(...eligible.slice(0,allowance));
+  }
+  fresh.sort(cardOrder);
+  return {due,newCards:fresh};
+}
+function spellingResult(input, target, lang) {
+  const normal = text => {
+    const nfc = text.trim().normalize('NFC');
+    return lang === 'ru' ? nfc.replace(/\u0301/g,'') : nfc;
+  };
+  const actual = normal(input), expected = normal(target);
+  if (actual === expected) return {grade:4,kind:'exact',message:'完全一致'};
+  const plain = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+  if (plain(actual) === plain(expected)) return {grade:3,kind:'symbols',message:'拼写对了，符号错了'};
+  return {grade:0,kind:'wrong',message:'拼写不一致'};
+}
+function clozeExample(row) {
+  const regexEscape = value => value.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  let target = row.front.normalize('NFC');
+  if (row.lang === 'ru') target = target.replace(/\u0301/g,'');
+  const pattern = row.lang === 'ru' ? [...target].map(c => regexEscape(c) + (/[аеёиоуыэюя]/i.test(c) ? '\u0301?' : '')).join('') : regexEscape(target);
+  const regex = new RegExp('(^|[^\\p{L}\\p{M}\\p{N}_])('+pattern+')(?=$|[^\\p{L}\\p{M}\\p{N}_])','giu');
+  const example = row.example.normalize('NFC');
+  const masked = example.replace(regex,(_,prefix) => prefix+'____');
+  return masked === example ? '____（此例句没有完整词条，请根据中文填写。）' : masked;
+}
+function mergeProgress(current,incoming,now = new Date()) {
+  const merged = cloneValue(current);
+  const lastTime = (state,id) => state.log.reduce((latest,item) => item.card === id ? Math.max(latest,Date.parse(item.t)) : latest,0);
+  for (const [id,record] of Object.entries(incoming.cards)) {
+    const old = own(merged.cards,id) ? merged.cards[id] : null;
+    const useIncoming = !old || record.last > old.last || (record.last === old.last && lastTime(incoming,id) > lastTime(current,id));
+    const chosen = cloneValue(useIncoming ? record : old);
+    if (old) chosen.first = [old.first || old.last,record.first || record.last].sort()[0];
+    merged.cards[id] = chosen;
+  }
+  const seen = new Set();
+  merged.log = pruneLog([...current.log,...incoming.log].filter(item => {
+    const key = JSON.stringify([item.t,item.card,item.grade]);
+    if (seen.has(key)) return false;
+    seen.add(key); return true;
+  }),now);
+  return merged;
+}
+function statistics(rows,state,day) {
+  return LANGS.map(lang => {
+    const all = expandCards(rows).filter(card => card.row.lang === lang);
+    const ids = new Set(all.map(card => card.id));
+    const reviewed = all.filter(card => own(state.cards,card.id));
+    const log = state.log.filter(item => ids.has(item.card) && localDay(new Date(item.t)) >= addDays(day,-29) && localDay(new Date(item.t)) <= day);
+    return {lang,total:all.length,new:all.length-reviewed.length,learning:reviewed.filter(card => state.cards[card.id].ivl < 21).length,mastered:reviewed.filter(card => state.cards[card.id].ivl >= 21).length,due:reviewed.filter(card => state.cards[card.id].due <= day).length,reviews:log.length,accuracy:log.length ? Math.round(log.filter(item => item.grade !== 0).length/log.length*100)+'%' : '—'};
+  });
+}
+
+// 课程内容。练习不写入复习状态。
+const LESSONS = {
+  'es-01': {name:'西语文字与拼写，第一批词',lang:'es',exercises:[
+    {prompt:'补重音符号：tambien',answer:'también'},
+    {prompt:'补重音符号：telefono',answer:'teléfono'},
+    {prompt:'补重音符号：dificil',answer:'difícil'},
+    {prompt:'看中文写西语：书（连同定冠词）',answer:'el libro'},
+    {prompt:'看中文写西语：谢谢',answer:'gracias'},
+    {prompt:'看中文写西语：三',answer:'tres'},
+    {prompt:'填空：Yo ____ estudiante.（我是学生。）',answer:'soy'},
+    {prompt:'填空：El libro ____ aquí.（书在这里。）',answer:'está'},
+    {prompt:'填空：¿____ está la casa?（房子在哪里？填小写词形。）',answer:'dónde'},
+    {prompt:'填空：Quiero ____ español.（我想学西班牙语。）',answer:'estudiar'}
+  ]},
+  'ru-01': {name:'西里尔字母',lang:'ru',exercises:[
+    {prompt:'看斜体，输入对应的小写印刷体：',italic:'т',answer:'т'},
+    {prompt:'看斜体，输入对应的小写印刷体：',italic:'д',answer:'д'},
+    {prompt:'看斜体，输入对应的小写印刷体：',italic:'и',answer:'и'},
+    {prompt:'看斜体，输入对应的小写印刷体：',italic:'п',answer:'п'},
+    {prompt:'选择大致对应 v 的字母：',answer:'В',options:['Б','В','Р','Н']},
+    {prompt:'选择大致对应 n 的字母：',answer:'Н',options:['П','И','Н','Р']},
+    {prompt:'选择大致对应 r 的字母：',answer:'Р',options:['В','Я','П','Р']},
+    {prompt:'看中文打俄语：电话（可不输入重音）',answer:'телефо́н'},
+    {prompt:'看中文打俄语：音乐（可不输入重音）',answer:'му́зыка'},
+    {prompt:'看中文打俄语：咖啡（可不输入重音）',answer:'ко́фе'}
+  ]}
+};
+function spanishExplanation() {
+  return `<div class="lesson-text">
+  <p>本课只练阅读、辨认词形和键盘输入。词表不要求一天学完；先看规则，再按每日额度复习。</p>
+  <h4>27 个字母</h4><p lang="es">a b c d e f g h i j k l m n ñ o p q r s t u v w x y z</p><p>比英语多一个 ñ；ch 和 ll 是两个字母的组合，不单列为字母。</p>
+  <h4>重音符号是拼写的一部分</h4><ul>
+  <li>通常，元音或单个 n、s 结尾的多音节词默认重读倒数第二音节；其他辅音（包括 y）结尾默认重读末音节。不符合默认位置的要标：está、también；fácil、lápiz。辅音群结尾有补充规则，遇到时另查。</li>
+  <li>倒数第三音节及更前的重读一律标：teléfono、médico、rápido。-mente 副词保留原形容词的符号：rápido → rápidamente。</li>
+  <li>重读的 í、ú 与相邻的 a、e、o 分属两个音节时，要标符号：día、país。día 的 í 不能按通常结尾规则省掉。</li>
+  <li>单音节词通常不标，区分意义时例外：sí（是）/ si（如果）、él（他）/ el（冠词）、tú（你）/ tu（你的）、mí（我，介词后）/ mi（我的）、más（更）/ mas（但是）、sé（我知道）/ se（代词）、dé（dar 的变位）/ de（介词）、té（茶）/ te（代词）。</li>
+  <li>疑问和感叹用法带符号：qué、quién、dónde、cuándo、cómo、cuánto、cuál。间接疑问也保留；作关系词等其他用法时不一定带符号。</li></ul>
+  <h4>容易混写的字母组</h4><p>b / v 一般不靠读音区分；h 通常不发音；ll / y 在多数地区同音；g 在 e / i 前与 j 对应同一类读音。c（e / i 前）、s、z 在拉美及西班牙部分地区可能同音，在西班牙多数地区仍有区别。当前按词形记忆这些组，不做发音练习。也留意 qu / c / k。</p>
+  <h4>标点和大小写</h4><p lang="es">¿Cómo estás? ¡Hola!</p><p>问句和感叹句开头写 ¿、¡，结尾写 ?、!。句首和专名大写；星期、月份、语言名、国籍形容词通常小写：lunes、enero、español。大写字母也保留符号，如 ÉL。</p>
+  <h4>键盘输入</h4><p>macOS 的 ABC / U.S. 布局：Option + E，再按元音，输入 á é í ó ú；Option + N，再按 N，输入 ñ；Option + Shift + / 输入 ¿；Option + 1 输入 ¡。也可添加西班牙语键盘。iPhone 添加西班牙语键盘，长按元音或 n 选择带符号形式；倒置标点可从符号键盘长按对应标点选择。</p>
+  <h4>读词表前</h4><p>名词连同冠词记，拼写题也要输入冠词。形容词词条采用阳性单数或阴阳同形形式；例句里的阴性、复数随名词变化。例句中的 quiero / quieres 来自 querer，tienes 来自 tener，estudiantes、libros、personas 是词表名词的复数。</p>
+  <p>ser 常用于身份和特征，estar 常用于状态和一般位置；这只是起点，不用“永久 / 暂时”概括全部用法。西班牙的 vosotros / vosotras 用第二人称复数；usted 和 ustedes 分别用第三人称单、复数。</p>
+  <div class="table-wrap"><table><caption>ser / estar 现在时（全部人称）</caption><thead><tr><th>主语</th><th>ser</th><th>estar</th></tr></thead><tbody>
+  <tr><td>yo</td><td>soy</td><td>estoy</td></tr><tr><td>tú</td><td>eres</td><td>estás</td></tr><tr><td>él / ella / usted</td><td>es</td><td>está</td></tr><tr><td>nosotros / nosotras</td><td>somos</td><td>estamos</td></tr><tr><td>vosotros / vosotras</td><td>sois</td><td>estáis</td></tr><tr><td>ellos / ellas / ustedes</td><td>son</td><td>están</td></tr></tbody></table></div></div>`;
+}
+function russianExplanation() {
+  const letters = rows.filter(row => row.lesson === 'ru-01' && isLetter(row));
+  return `<div class="lesson-text"><p>先辨认 33 个字母，再看国际词的拼写。拉丁转写只帮助建立大致对应，不做发音练习，也不播放音频。</p>
+  <ul><li><strong>形音都同：</strong>А К М О Т。这里指与拉丁字母的大致形音对应，不表示所有语境下发音完全一样。</li><li><strong>形同音不同：</strong>В Е Н Р С У Х。尤其留意 В → v、Н → n、Р → r、С → s。</li><li><strong>新形：</strong>其余 21 个，包括 Ё、Ь、Ъ。</li></ul>
+  <p>转写约定：ye / yo / yu / ya 用于辨认 е / ё / ю / я；kh 也写作 x。Й 的 y 表示短促滑音，Ы 的 y 只是转写约定，两者不同。这里只列近似提示，实际读音随位置而变。</p>
+  <div class="table-wrap" tabindex="0" aria-label="可横向滚动的俄语字母表"><table class="alphabet"><caption>33 个字母（字母顺序）</caption><thead><tr><th>大写</th><th>小写</th><th>斜体</th><th>大致读音／转写</th><th>分组</th></tr></thead><tbody>${letters.map(row => {
+    const [upper,lower] = row.front.split(/\s+/); const [sound,group] = row.back.split('；');
+    return `<tr><td class="letter" lang="ru">${esc(upper)}</td><td class="letter" lang="ru">${esc(lower || upper)}</td><td class="italic" lang="ru">${esc(lower || upper)}</td><td>${esc(sound)}</td><td>${esc(group || '新形')}</td></tr>`;
+  }).join('')}</tbody></table></div>
+  <h4>印刷体和斜体</h4><p>留意同一字母的斜体：<span lang="ru">т → <i class="italic">т</i>、д → <i class="italic">д</i>、г → <i class="italic">г</i>、и → <i class="italic">и</i>、п → <i class="italic">п</i>、в → <i class="italic">в</i></span>。т 常像拉丁 m，д 常像 g，и 常像 u，п 常像 n；г、в 也可能有较大变化。这里用系统衬线字体的斜体，实际字形依字体而异，不能代表所有手写体。</p>
+  <h4>ь、ъ 与重音标记</h4><p>ь（软音符号）和 ъ（硬音符号）本身不发音，但不能漏写。ь 可以提示软化、分隔或语法信息；ъ 常见于前缀与 е、ё、ю、я 之间，起分隔作用。ё 的两点、й 顶部的短音符都是词形的一部分。</p>
+  <p>词卡在重读元音后加组合重音符，如 телефо́н、му́зыка。普通俄语文本通常省略这个标记；本页拼写比较忽略 U+0301，但仍区分 е / ё、и / й。单音节国际词也统一标重音。字母示例里的 ё 本身提示重读。</p>
+  <h4>键盘输入</h4><p>macOS 添加“俄语”（ЙЦУКЕН）或“俄语－语音”布局；iPhone 在键盘设置中添加俄语。先熟悉 33 个字母的位置。键盘输出的字符不会因为题目使用斜体而改变。</p>
+  <h4>国际词</h4><p>本课准备了 18 个国际词，按词表标注记性别。例句统一用 Э́то…（这是……），不要求先学变格。前几周可先做下方页内练习；若暂不引入俄语 SRS 新卡，可在设置把 ru 每日新卡数设为 0，到期卡仍会出现。</p></div>`;
+}
+
+// 本地缓存与文件保存。
+let rows, state, source = '文件', dirty = false, revision = 0;
+let lastSaved = document.querySelector('meta[name="srs-saved-at"]').content;
+let saveKind = document.querySelector('meta[name="srs-save-kind"]').content;
+let storageWarning = '', notice = '', saving = false, handleReady = false, fileHandle = null;
+let tab = 'review', language = 'all', lesson = 'es-01', session = null;
+let revealed = false, typedAnswer = '', feedback = null;
+const exerciseWork = new Map();
+function persistCache() {
+  try {
+    localStorage.setItem(CACHE_KEY,JSON.stringify({state,cards:rows}));
+    storageWarning = '';
+  } catch (_) {
+    storageWarning = '本地缓存不可用，请及时保存文件或导出进度。';
+    if (dirty) source = '当前页面（本地缓存不可用）';
+  }
+}
+function touch() {
+  state.updatedAt = new Date(Math.max(Date.now(),Date.parse(state.updatedAt)+1)).toISOString();
+  state.log = pruneLog(state.log);
+  dirty = true; revision++; source = '本地缓存'; persistCache(); renderHeader();
+}
+function safeJSON(value) {
+  return JSON.stringify(value,null,2).replace(/<\//g,'<\\/').replace(/<!--/g,'\\u003c!--');
+}
+function serializeDocument(doc, cardSnapshot, stateSnapshot, savedAt, kind) {
+  const copy = doc.cloneNode(true);
+  copy.getElementById('app').replaceChildren();
+  copy.getElementById('cards-data').textContent = safeJSON(cardSnapshot);
+  copy.getElementById('state-data').textContent = safeJSON(stateSnapshot);
+  copy.querySelector('meta[name="srs-saved-at"]').content = savedAt;
+  copy.querySelector('meta[name="srs-save-kind"]').content = kind;
+  return '<!DOCTYPE html>\n'+copy.documentElement.outerHTML;
+}
+function handleStore(mode, value) {
+  return new Promise((resolve,reject) => {
+    if (!window.indexedDB) { reject(new Error('IndexedDB 不可用')); return; }
+    const request = indexedDB.open('language-srs-files-v1',1);
+    request.onupgradeneeded = () => request.result.createObjectStore('handles');
+    request.onerror = () => reject(request.error);
+    request.onblocked = () => reject(new Error('文件句柄数据库被占用'));
+    request.onsuccess = () => {
+      const db = request.result;
+      try {
+        const tx = db.transaction('handles',mode === 'get' ? 'readonly' : 'readwrite');
+        const operation = mode === 'get' ? tx.objectStore('handles').get(CACHE_KEY) : tx.objectStore('handles').put(value,CACHE_KEY);
+        let result = null;
+        operation.onsuccess = () => { result = operation.result; };
+        tx.oncomplete = () => { db.close(); resolve(result); };
+        tx.onerror = tx.onabort = () => { db.close(); reject(tx.error || new Error('句柄未能保存')); };
+      } catch (error) { db.close(); reject(error); }
+    };
+  });
+}
+async function loadHandle() {
+  if ('showSaveFilePicker' in window) {
+    try { fileHandle = await Promise.race([handleStore('get'),new Promise(resolve => setTimeout(() => resolve(null),2000))]); } catch (_) { fileHandle = null; }
+  }
+  handleReady = true; renderHeader();
+}
+function download(content,type,name) {
+  const url = URL.createObjectURL(new Blob([content],{type}));
+  const link = document.createElement('a');
+  link.href = url; link.download = name; link.hidden = true;
+  document.getElementById('app').append(link); link.click(); link.remove();
+  setTimeout(() => URL.revokeObjectURL(url),60000);
+}
+function adoptSaved(cardSnapshot,stateSnapshot,savedAt,kind,savedRevision) {
+  document.getElementById('cards-data').textContent = safeJSON(cardSnapshot);
+  document.getElementById('state-data').textContent = safeJSON(stateSnapshot);
+  document.querySelector('meta[name="srs-saved-at"]').content = savedAt;
+  document.querySelector('meta[name="srs-save-kind"]').content = kind;
+  lastSaved = savedAt; saveKind = kind;
+  if (revision === savedRevision) { rows = cardSnapshot; state = stateSnapshot; dirty = false; source = '文件'; }
+  persistCache(); renderHeader();
+}
+async function saveFile({asNew=false,forceDownload=false} = {}) {
+  if (saving) return;
+  saving = true; renderHeader();
+  let writable = null;
+  try {
+    const usePicker = !forceDownload && 'showSaveFilePicker' in window;
+    let picked = false;
+    if (usePicker) {
+      if (!fileHandle || asNew) {
+        const handle = await window.showSaveFilePicker({suggestedName:'index.html',types:[{description:'SRS 页面（HTML）',accept:{'text/html':['.html']}}]});
+        fileHandle = handle; picked = true;
+      } else if (await fileHandle.queryPermission({mode:'readwrite'}) !== 'granted') {
+        if (await fileHandle.requestPermission({mode:'readwrite'}) !== 'granted') throw new Error('未取得文件写入权限。可在设置中另存为或下载 HTML。');
+      }
+    }
+    const cardSnapshot = cloneValue(rows), stateSnapshot = cloneValue(state);
+    stateSnapshot.log = pruneLog(stateSnapshot.log);
+    const savedAt = new Date().toISOString(), savedRevision = revision;
+    const kind = usePicker ? 'file' : 'download';
+    const html = serializeDocument(document,cardSnapshot,stateSnapshot,savedAt,kind);
+    if (usePicker) {
+      writable = await fileHandle.createWritable();
+      await writable.write(html); await writable.close(); writable = null;
+      adoptSaved(cardSnapshot,stateSnapshot,savedAt,kind,savedRevision);
+      let handleWarning = '';
+      if (picked) {
+        try { await handleStore('put',fileHandle); } catch (_) { handleWarning = ' 浏览器未能记住文件位置，下次打开可能需要重选。'; }
+      }
+      showNotice('已保存到文件。'+(dirty ? ' 保存期间有新进度，请再保存一次。' : '')+handleWarning);
+    } else {
+      download(html,'text/html;charset=utf-8','index.html');
+      adoptSaved(cardSnapshot,stateSnapshot,savedAt,kind,savedRevision);
+      showNotice('已生成 index.html 下载。请确认浏览器已完成下载并保留该文件；原文件不会自动覆盖。');
+    }
+  } catch (error) {
+    if (writable) { try { await writable.abort(); } catch (_) {} }
+    showNotice(error.name === 'AbortError' ? '已取消保存，进度仍保留在当前页面和可用的本地缓存中。' : '保存失败：'+error.message);
+  } finally { saving = false; renderHeader(); }
+}
+
+// 页面渲染。
+function showNotice(message) {
+  notice = message;
+  const box = document.getElementById('notice');
+  if (box) box.textContent = notice;
+}
+function renderHeader() {
+  const node = document.getElementById('header');
+  if (!node) return;
+  const time = lastSaved && validISO(lastSaved) ? new Date(lastSaved).toLocaleString('zh-CN',{hour12:false}) : '尚未手动保存';
+  node.innerHTML = `<div class="top-inner"><div class="top-row"><h1>语言复习 <small>SRS · v1</small></h1><div class="actions"><span class="save-status ${dirty?'dirty':''}">${dirty?'有未保存更改':'无未保存更改'}</span><button class="primary" data-action="save" ${saving || !handleReady?'disabled':''}>${saving?'保存中…':'保存'}</button></div></div><div class="state-source">当前状态来源：${esc(source)} · 最后保存时间：${esc(time)}${saveKind === 'download'?'（下载生成，请确认下载完成）':''}${storageWarning?' · '+esc(storageWarning):''}</div>${dirty && source !== '文件'?'<div class="state-source dirty">有未保存到文件的进度，记得保存</div>':''}</div>`;
+}
+function render() {
+  document.getElementById('app').innerHTML = `<header class="top" id="header"></header><main class="page"><nav class="tabs" aria-label="主导航">${[['review','复习'],['lessons','课程'],['stats','统计'],['settings','设置']].map(([key,label]) => `<button data-tab="${key}" ${tab===key?'aria-current="page"':''}>${label}</button>`).join('')}</nav><div class="notice" id="notice" role="status" aria-live="polite">${esc(notice)}</div><section id="content" aria-label="${{review:'复习',lessons:'课程',stats:'统计',settings:'设置'}[tab]}"></section><p class="foot">当前只学读写。v1 冻结至 2026-12-06 复盘，中间只修 bug。</p></main>`;
+  renderHeader();
+  const content = document.getElementById('content');
+  content.innerHTML = tab === 'review' ? renderReview() : tab === 'lessons' ? renderLessons() : tab === 'stats' ? renderStats() : renderSettings();
+}
+function resetSession() { session = null; revealed = false; typedAnswer = ''; feedback = null; }
+function ensureSession() {
+  const day = localDay();
+  if (!session || session.day !== day || session.lang !== language) {
+    const queue = buildQueue(rows,state,language,day);
+    session = {day,lang:language,queue:[...queue.due,...queue.newCards],again:[],done:0};
+    revealed = false; typedAnswer = ''; feedback = null;
+  }
+}
+function currentCard() { return session?.queue[0] || session?.again[0] || null; }
+function renderReview() {
+  ensureSession();
+  const card = currentCard(), today = buildQueue(rows,state,language,localDay());
+  const controls = `<div class="row"><h2>今日复习</h2><div><label for="language" class="muted">语言</label><select id="language"><option value="all" ${language==='all'?'selected':''}>全部</option><option value="es" ${language==='es'?'selected':''}>es · 西班牙语</option><option value="ru" ${language==='ru'?'selected':''}>ru · 俄语</option></select></div></div><div class="counts"><div class="count"><strong>${today.due.length}</strong>今日到期</div><div class="count"><strong>${today.newCards.length}</strong>今日可学新卡</div></div>`;
+  if (!card) return `<div class="study">${controls}<div class="panel empty"><h3>当前没有待复习卡片</h3><p>本次已评分 ${session.done} 次。新卡受每日额度限制，拼写卡在识别卡首次复习的次日开放。</p><button data-tab="lessons" class="secondary">查看课程与练习</button></div></div>`;
+  const row = card.row, spelling = card.direction === 'p', inAgain = session.queue.length === 0;
+  const status = !state.cards[card.id] ? '新卡' : inAgain || state.cards[card.id].ivl === 0 ? '重学' : '到期';
+  const left = session.queue.length+session.again.length;
+  const front = spelling ? `<h3 class="meaning">${esc(row.back)}</h3><p>${esc(row.example_zh)}</p><p class="example ${row.lang==='ru'?'ru-text':''}" lang="${row.lang}">${esc(clozeExample(row))}</p><label for="spelling">输入词条${row.lang==='ru'?'（可不写重音标记）':'（保留重音符号和冠词）'}</label><input id="spelling" class="answer-input" type="text" lang="${row.lang}" value="${esc(typedAnswer)}" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="done" ${revealed?'readonly':''}>` : `<div class="front ${row.lang==='ru'?'ru-text':''}" lang="${row.lang}">${esc(row.front)}</div><p class="example ${row.lang==='ru'?'ru-text':''}" lang="${row.lang}">${esc(row.example)}</p>`;
+  const back = !revealed ? `<div class="actions"><button class="primary" data-action="reveal">${spelling?'提交拼写':'翻面'}</button>${spelling?'<button data-action="unknown">不知道，显示答案</button>':''}</div>` : `<div class="back">${feedback?`<p class="feedback ${feedback.kind}" role="status">${esc(feedback.message)}。${feedback.grade===4?'建议 Good。':'正确写法：'+esc(row.front)+'；建议 '+(feedback.grade===3?'Hard':'Again')+'。'}</p>`:''}${spelling?`<p class="meaning ${row.lang==='ru'?'ru-text':''}" lang="${row.lang}">${esc(row.front)}</p><p class="example" lang="${row.lang}">${esc(row.example)}</p>`:`<p class="meaning">${esc(row.back)}</p>`}<p>${esc(row.example_zh)}</p><p class="muted">${esc(row.note)}</p><div class="grade-grid">${GRADES.map((grade,i) => {
+    const next = schedule(state.cards[card.id],grade,localDay());
+    return `<button class="grade ${feedback?.grade===grade?'suggested':''}" data-grade="${grade}" ${feedback?.grade===grade?'aria-label="建议评分 '+GRADE_NAMES[i]+'"':''}><strong>${i+1} · ${GRADE_NAMES[i]}</strong><span>${['再学','困难','良好','轻松'][i]}</span><small>${grade===0?'会话末尾再学':next.ivl+' 天'}</small></button>`;
+  }).join('')}</div><p class="muted">建议只是默认高亮，最终评分由你决定。</p></div>`;
+  return `<div class="study">${controls}<article class="panel review-card" id="review-card" tabindex="-1"><p class="kicker">${esc(row.lesson)} · ${spelling?'拼写卡':isLetter(row)?'字母识别卡':'识别卡'} · ${status} · 剩余 ${left} 张（含重学 ${session.again.length} 张）</p>${front}${back}</article><p class="kbd">空格：翻面／提交（输入框外） · Enter：提交拼写 · 1 / 2 / 3 / 4：评分。输入框内可正常输入空格。</p></div>`;
+}
+function renderLessons() {
+  const current = LESSONS[lesson], lessonRows = rows.filter(row => row.lesson === lesson);
+  return `<h2>课程</h2><div class="course-picker">${Object.entries(LESSONS).map(([id,value]) => `<button data-lesson="${id}" aria-pressed="${lesson===id}"><strong>${id} · ${value.name}</strong><span class="muted">${rows.filter(row=>row.lesson===id).length} 条词条／字母 · 10 题练习</span></button>`).join('')}</div>
+  <section class="panel"><h3>一、讲解</h3>${lesson==='es-01'?spanishExplanation():russianExplanation()}</section>
+  <section class="panel"><h3>二、词表</h3><p class="muted">${lessonRows.length} 条；识别与拼写共 ${expandCards(lessonRows).length} 张卡。字母只生成识别卡。窄屏表格可横向滚动。</p><details><summary>展开本课全部词条与例句</summary><div class="table-wrap" tabindex="0" aria-label="可横向滚动的词表"><table class="vocab"><thead><tr><th>词条／字母</th><th>中文</th><th>例句</th><th>说明</th></tr></thead><tbody>${lessonRows.map(row=>`<tr><td lang="${row.lang}" class="${row.lang==='ru'?'ru-text':''}">${esc(row.front)}<small>${esc(row.id)} · ${isLetter(row)?'识别':'识别＋拼写'}</small></td><td>${esc(row.back)}</td><td><span lang="${row.lang}">${esc(row.example)}</span><small>${esc(row.example_zh)}</small></td><td>${esc(row.note)}<small>${esc(row.tags.split(';').join(' · '))}</small></td></tr>`).join('')}</tbody></table></div></details></section>
+  <section class="panel"><h3>三、练习</h3><p class="muted">页内即时判定，不计入 SRS。按词表大小写输入；输入框已关闭自动大写和拼写纠正。</p><div class="exercise-list">${current.exercises.map((exercise,i)=> {
+    const key = lesson+':'+i, work = exerciseWork.get(key), result = work?.result;
+    return `<form class="exercise" data-exercise="${i}"><label for="exercise-${i}">${i+1}. ${esc(exercise.prompt)} ${exercise.italic?`<i class="italic" lang="ru">${esc(exercise.italic)}</i>`:''}</label>${exercise.options?`<select name="answer" id="exercise-${i}" required><option value="">请选择</option>${exercise.options.map(option=>`<option value="${esc(option)}" ${work?.answer===option?'selected':''}>${esc(option)}</option>`).join('')}</select>`:`<input name="answer" id="exercise-${i}" type="text" lang="${current.lang}" value="${esc(work?.answer || '')}" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" enterkeyhint="done">`}<div class="actions"><button type="submit">检查</button></div><div class="exercise-result" aria-live="polite">${result?exerciseFeedback(result,exercise.answer):''}</div></form>`;
+  }).join('')}</div></section>`;
+}
+function exerciseFeedback(result,answer) {
+  return `<p class="feedback ${result.kind}">${esc(result.message)}${result.grade===4?'。':'；正确写法：'+esc(answer)+'。'}</p>`;
+}
+function renderStats() {
+  const stats = statistics(rows,state,localDay());
+  return `<h2>统计</h2><div class="panel"><p>按复习卡计数：同一词条的识别卡、拼写卡分别计数。字母仅一张。</p><div class="table-wrap" tabindex="0" aria-label="可横向滚动的统计表"><table class="stats-table"><thead><tr><th>语言</th><th>总卡数</th><th>新卡</th><th>学习中</th><th>已掌握</th><th>今日到期</th><th>近 30 天复习数</th><th>正确率</th></tr></thead><tbody>${stats.map(s=>`<tr><th>${s.lang==='es'?'es · 西语':'ru · 俄语'}</th><td>${s.total}</td><td>${s.new}</td><td>${s.learning}</td><td>${s.mastered}</td><td>${s.due}</td><td>${s.reviews}</td><td>${s.accuracy}</td></tr>`).join('')}</tbody></table></div><p class="muted">新卡＝尚未评分（含尚未开放的拼写卡）；学习中＝已评分且间隔 &lt;21 天；已掌握＝间隔 ≥21 天。今日到期包含逾期卡和待重学卡。</p><p class="muted">最近 30 天含今天，按本地日历统计每次评分；Again 以外算对。同一张卡重学会产生多次记录。日志只保留今天及之前 59 个本地日期。</p></div>`;
+}
+function renderSettings() {
+  return `<h2>设置</h2><div class="settings-grid">
+  <section class="panel"><h3>每日新卡数</h3><form id="limits"><div class="limit-row"><div><label for="limit-es">es · 西语</label><input id="limit-es" name="es" type="number" min="0" max="999" step="1" required value="${state.settings.newPerDay.es}"></div><div><label for="limit-ru">ru · 俄语</label><input id="limit-ru" name="ru" type="number" min="0" max="999" step="1" required value="${state.settings.newPerDay.ru}"></div></div><div class="actions"><button type="submit">应用设置</button></div></form><p class="muted">0 表示暂停新卡，到期卡照常复习。两个方向分别占一个新卡名额；修改额度不会删除进度。</p></section>
+  <section class="panel"><h3>保存文件</h3><p>评分后会自动缓存。点保存把卡片和进度写入 HTML，保存后再人工提交和推送 Git。</p><div class="actions"><button class="primary" data-action="save">保存</button><button data-action="save-as">另存为</button><button data-action="download-html">下载 HTML</button></div><p class="muted">Chrome / Edge 首次选择文件位置，之后复用。其他浏览器下载一份新文件。GitHub Pages 页面不能直接改仓库。</p></section>
+  <section class="panel span-all"><h3>导入卡片 CSV</h3><p class="muted">按 id 更新内容和增加词条，保留已有复习状态。请保留原 id；字母行的 tags 需包含 letter。</p><label for="csv-file">选择 CSV 文件</label><input id="csv-file" type="file" accept=".csv,text/csv"><label for="csv-text">或粘贴 CSV（含表头）</label><textarea id="csv-text" spellcheck="false" placeholder="id,lang,lesson,front,back,example,example_zh,note,tags"></textarea><div class="actions"><button data-action="import-csv">导入粘贴的卡片</button></div></section>
+  <section class="panel span-all"><h3>导出／导入进度</h3><p>在手机导出，在电脑导入。同一张卡取 last 日期更晚的记录；同日比较该卡最近评分时间，仍相同则保留当前记录。导入保留本机的每日新卡设置。</p><div class="actions"><button data-action="copy-progress">复制进度 JSON</button><button data-action="export-progress">下载进度 JSON</button></div><label for="progress-file">选择进度 JSON 文件</label><input id="progress-file" type="file" accept=".json,application/json"><label for="progress-text">或粘贴进度 JSON</label><textarea id="progress-text" spellcheck="false" placeholder="粘贴完整状态 JSON"></textarea><div class="actions"><button data-action="import-progress">合并粘贴的进度</button></div><p class="muted">进度 JSON 不包含卡片内容。两台设备应使用相同卡片；暂时未知的卡片进度会保留，之后导入对应 CSV 即可继续。</p></section>
+  <section class="panel span-all help"><h3>帮助</h3><ol><li>先在课程页看讲解和词表，再到复习页选语言。</li><li>先尝试回忆，再翻面评分。拼写题可按 Enter 提交，符号提示只给建议。</li><li>Again 会在本次队列末尾再出；刷新后仍以到期卡出现。日期按设备本地时区计算。</li><li>每天结束时点保存。iPhone 上的进度只在当前浏览器缓存；需要合并时导出 JSON，到电脑导入后保存。</li><li>加卡片时编辑 srs/cards/*.csv，在此页导入，再保存。页面不会自行读取 CSV。</li></ol><p>本地缓存按页面路径区分，不是跨设备同步；清理浏览器数据、使用隐私模式或换路径都可能影响缓存。下载后请确认文件确实已保留。</p><p>v1 冻结到 2026-12-06 复盘前，只修 bug，不加功能。完整说明见同目录 README.md。</p></section></div>`;
+}
+
+// 评分、导入与交互。
+function focusReview() {
+  const target = document.getElementById(!revealed && currentCard()?.direction === 'p' ? 'spelling' : 'review-card');
+  target?.focus({preventScroll:true});
+}
+function checkDay() {
+  if (session && session.day !== localDay()) {
+    resetSession(); render(); showNotice('本地日期已变化，今日队列已更新。'); return false;
+  }
+  return true;
+}
+function reveal(unknown=false) {
+  if (!checkDay() || revealed || !currentCard()) return;
+  const card = currentCard();
+  if (card.direction === 'p') {
+    typedAnswer = document.getElementById('spelling')?.value || '';
+    feedback = unknown ? {grade:0,kind:'wrong',message:'尚未记住'} : spellingResult(typedAnswer,card.row.front,card.row.lang);
+  }
+  revealed = true; render(); focusReview();
+}
+function gradeCard(grade) {
+  if (!checkDay() || !revealed || !currentCard()) return;
+  const card = currentCard(), day = localDay();
+  state.cards[card.id] = schedule(state.cards[card.id],grade,day);
+  state.log.push({t:new Date().toISOString(),card:card.id,grade});
+  if (session.queue.length) session.queue.shift(); else session.again.shift();
+  if (grade === 0) session.again.push(card);
+  session.done++; revealed = false; typedAnswer = ''; feedback = null;
+  touch(); render(); focusReview();
+}
+function importCSV(text) {
+  const incoming = parseCSV(text), nextRows = mergeRows(rows,incoming);
+  const added = incoming.filter(row => !rows.some(old => old.id === row.id)).length;
+  rows = nextRows; resetSession(); touch();
+  showNotice(`已导入 ${incoming.length} 条：新增 ${added} 条，更新 ${incoming.length-added} 条。复习状态保留，请保存文件。`);
+}
+function importProgress(text) {
+  const incoming = validateState(JSON.parse(text));
+  state = mergeProgress(state,incoming); resetSession(); touch();
+  showNotice(`已按卡合并 ${Object.keys(incoming.cards).length} 条进度，并合并最近 60 天日志。请保存文件。`);
+}
+async function copyProgress() {
+  state.log = pruneLog(state.log);
+  const text = JSON.stringify(state,null,2);
+  try {
+    if (!navigator.clipboard?.writeText) throw new Error('clipboard unavailable');
+    await navigator.clipboard.writeText(text); showNotice('进度 JSON 已复制。');
+  } catch (_) {
+    const area = document.getElementById('progress-text');
+    if (area) { area.value = text; area.focus(); area.select(); }
+    showNotice(area ? '浏览器未允许自动复制。JSON 已放入文本框并选中，可手动复制，或点下载进度 JSON。' : '浏览器未允许自动复制，请返回设置下载进度 JSON。');
+  }
+}
+async function readTextFile(file) {
+  if (!file) return null;
+  if (file.size > 20*1024*1024) throw new Error('文件超过 20 MB，请检查是否选对文件。');
+  if (file.text) return file.text();
+  return new Promise((resolve,reject) => { const reader = new FileReader(); reader.onload = () => resolve(reader.result); reader.onerror = () => reject(new Error('文件读取失败。')); reader.readAsText(file,'UTF-8'); });
+}
+function handleError(error) { showNotice('未完成：'+(error.message || String(error))); }
+function bindEvents() {
+  document.getElementById('app').addEventListener('click',event => {
+    const button = event.target.closest('button');
+    if (!button || button.disabled) return;
+    try {
+      if (button.dataset.tab) { tab = button.dataset.tab; render(); return; }
+      if (button.dataset.lesson) { lesson = button.dataset.lesson; render(); return; }
+      if (button.dataset.grade !== undefined) { gradeCard(Number(button.dataset.grade)); return; }
+      const action = button.dataset.action;
+      if (action === 'save') void saveFile();
+      else if (action === 'save-as') void saveFile({asNew:true});
+      else if (action === 'download-html') void saveFile({forceDownload:true});
+      else if (action === 'reveal') reveal();
+      else if (action === 'unknown') reveal(true);
+      else if (action === 'import-csv') importCSV(document.getElementById('csv-text').value);
+      else if (action === 'import-progress') importProgress(document.getElementById('progress-text').value);
+      else if (action === 'copy-progress') void copyProgress();
+      else if (action === 'export-progress') { state.log = pruneLog(state.log); download(JSON.stringify(state,null,2),'application/json;charset=utf-8','srs-progress-'+localDay()+'.json'); showNotice('已生成进度 JSON 下载，请确认下载完成。'); }
+    } catch (error) { handleError(error); }
+  });
+  document.getElementById('app').addEventListener('input',event => {
+    if (event.target.id === 'spelling') typedAnswer = event.target.value;
+    const form = event.target.closest('[data-exercise]');
+    if (form) {
+      exerciseWork.set(lesson+':'+form.dataset.exercise,{answer:event.target.value});
+      form.querySelector('.exercise-result').replaceChildren();
+    }
+  });
+  document.getElementById('app').addEventListener('change',async event => {
+    try {
+      if (event.target.id === 'language') { language = event.target.value; resetSession(); render(); return; }
+      if (['csv-file','progress-file'].includes(event.target.id)) {
+        const isCSV = event.target.id === 'csv-file', text = await readTextFile(event.target.files[0]);
+        if (text !== null) { if (isCSV) importCSV(text); else importProgress(text); }
+        event.target.value = '';
+      }
+    } catch (error) { event.target.value = ''; handleError(error); }
+  });
+  document.getElementById('app').addEventListener('submit',event => {
+    event.preventDefault();
+    try {
+      const form = event.target;
+      if (form.id === 'limits') {
+        const es = Number(form.elements.es.value), ru = Number(form.elements.ru.value);
+        if ([es,ru].some(n => !Number.isInteger(n) || n<0 || n>999)) throw new Error('每日新卡数须为 0–999 的整数。');
+        state.settings.newPerDay = {es,ru}; resetSession(); touch(); showNotice('每日新卡数已应用，请保存文件。');
+      } else if (form.dataset.exercise !== undefined) {
+        const i = Number(form.dataset.exercise), exercise = LESSONS[lesson].exercises[i], answer = form.elements.answer.value;
+        const result = spellingResult(answer,exercise.answer,LESSONS[lesson].lang);
+        exerciseWork.set(lesson+':'+i,{answer,result}); form.querySelector('.exercise-result').innerHTML = exerciseFeedback(result,exercise.answer);
+      }
+    } catch (error) { handleError(error); }
+  });
+  document.addEventListener('keydown',event => {
+    if (tab !== 'review' || event.repeat || event.isComposing || event.keyCode === 229 || event.altKey || event.ctrlKey || event.metaKey) return;
+    const editing = event.target.closest('input,textarea,select,[contenteditable="true"]');
+    if (event.key === 'Enter' && event.target.id === 'spelling') { event.preventDefault(); reveal(); return; }
+    if (editing) return;
+    if (/^[1-4]$/.test(event.key) && revealed) { event.preventDefault(); gradeCard(GRADES[Number(event.key)-1]); }
+    else if ((event.code === 'Space' || event.key === ' ') && !event.target.closest('button,summary,a')) { event.preventDefault(); reveal(); }
+  });
+  window.addEventListener('beforeunload',event => { if (dirty) { event.preventDefault(); event.returnValue = ''; } });
+  document.addEventListener('visibilitychange',() => { if (!document.hidden && tab === 'review') checkDay(); });
+  window.addEventListener('storage',event => {
+    if (event.key === CACHE_KEY && event.newValue) showNotice('同一页面路径的其他标签页更新了缓存。为避免覆盖，请只在一个标签页复习；可先导出本页进度，再重新打开并合并。');
+  });
+}
+
+// 启动。
+function initialize() {
+  rows = validateRows(JSON.parse(document.getElementById('cards-data').textContent));
+  state = validateState(JSON.parse(document.getElementById('state-data').textContent));
+  try {
+    const raw = localStorage.getItem(CACHE_KEY);
+    if (raw) {
+      const cache = JSON.parse(raw), cachedState = validateState(cache.state || cache);
+      if (Date.parse(cachedState.updatedAt) > Date.parse(state.updatedAt)) {
+        const cachedRows = cache.cards && Array.isArray(cache.cards) ? validateRows(cache.cards) : rows;
+        state = cachedState; rows = cachedRows; source = '本地缓存'; dirty = true;
+      }
+    }
+  } catch (_) { storageWarning = '本地缓存无法读取，已使用文件中的数据；请及时保存。'; }
+  render(); bindEvents(); void loadHandle();
+}
+try { initialize(); } catch (error) {
+  document.getElementById('app').innerHTML = `<div class="loading"><h1>页面数据无法加载</h1><p>${esc(error.message)}</p><p>请使用完好的 HTML 文件重新打开，保留当前文件供检查。</p></div>`;
+}
+})();
+</script>
+</body>
+</html>
