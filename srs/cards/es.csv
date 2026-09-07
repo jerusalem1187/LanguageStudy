@@ -112,3 +112,243 @@ es-0110,es,es-01,también,也,Yo también soy estudiante.,我也是学生。,副
 es-0111,es,es-01,aquí,这里,El libro está aquí.,书在这里。,副词；注意 í,副词
 es-0112,es,es-01,ahora,现在,Quiero leer ahora.,我现在想读书。,副词；h 不发音,副词
 es-0113,es,es-01,hoy,今天,Hoy estoy en casa.,我今天在家。,副词,副词
+es-0114,es,es-02,el hermano,兄弟,El hermano está en casa.,兄弟在家。,名词（阳）,名词;家庭
+es-0115,es,es-02,la hermana,姐妹,La hermana está en casa.,姐妹在家。,名词（阴）,名词;家庭
+es-0116,es,es-02,el hijo,儿子,El hijo está en casa.,儿子在家。,名词（阳）,名词;家庭
+es-0117,es,es-02,la hija,女儿,La hija está en casa.,女儿在家。,名词（阴）,名词;家庭
+es-0118,es,es-02,el abuelo,祖父；外祖父,El abuelo está en casa.,祖父在家。,名词（阳）,名词;家庭
+es-0119,es,es-02,la abuela,祖母；外祖母,La abuela está en casa.,祖母在家。,名词（阴）,名词;家庭
+es-0120,es,es-02,el tío,叔伯舅；姑父姨父,El tío está en casa.,叔伯舅在家。,名词（阳）,名词;家庭
+es-0121,es,es-02,la tía,姑姨；婶母舅母,La tía está en casa.,姑姨在家。,名词（阴）,名词;家庭
+es-0122,es,es-02,el primo,堂兄弟；表兄弟,El primo está en casa.,堂兄弟在家。,名词（阳）,名词;家庭
+es-0123,es,es-02,la prima,堂姐妹；表姐妹,La prima está en casa.,堂姐妹在家。,名词（阴）,名词;家庭
+es-0124,es,es-02,el profesor,教师（男性）,El profesor trabaja en la escuela.,这位教师在学校工作。,名词（阳）；女性为 la profesora；ser 后只说职业时通常不加冠词,名词;职业
+es-0125,es,es-02,el médico,医生（男性）,El médico trabaja en el hospital.,这位医生在医院工作。,名词（阳）；女性为 la médica；ser 后只说职业时通常不加冠词,名词;职业
+es-0126,es,es-02,el ingeniero,工程师（男性）,El ingeniero trabaja en la oficina.,这位工程师在办公室工作。,名词（阳）；女性为 la ingeniera；ser 后只说职业时通常不加冠词,名词;职业
+es-0127,es,es-02,el abogado,律师（男性）,El abogado trabaja en la oficina.,这位律师在办公室工作。,名词（阳）；女性为 la abogada；ser 后只说职业时通常不加冠词,名词;职业
+es-0128,es,es-02,el enfermero,护士（男性）,El enfermero trabaja en el hospital.,这位护士在医院工作。,名词（阳）；女性为 la enfermera；ser 后只说职业时通常不加冠词,名词;职业
+es-0129,es,es-02,el camarero,服务员（男性）,El camarero trabaja en el restaurante.,这位服务员在餐馆工作。,名词（阳）；女性为 la camarera；ser 后只说职业时通常不加冠词,名词;职业
+es-0130,es,es-02,el cocinero,厨师（男性）,El cocinero trabaja en el restaurante.,这位厨师在餐馆工作。,名词（阳）；女性为 la cocinera；ser 后只说职业时通常不加冠词,名词;职业
+es-0131,es,es-02,el vendedor,售货员（男性）,El vendedor trabaja en la tienda.,这位售货员在商店工作。,名词（阳）；女性为 la vendedora；ser 后只说职业时通常不加冠词,名词;职业
+es-0132,es,es-02,el policía,警察（男性）,El policía trabaja en la estación.,这位警察在车站工作。,名词（阳）；女性为 la policía；ser 后只说职业时通常不加冠词,名词;职业
+es-0133,es,es-02,el artista,艺术家（男性）,El artista trabaja en el museo.,这位艺术家在博物馆工作。,名词（阳）；女性为 la artista；ser 后只说职业时通常不加冠词,名词;职业
+es-0134,es,es-02,el país,国家,El país es grande.,国家很大。,名词（阳）；注意 í，复数 los países,名词;地点
+es-0135,es,es-02,la calle,街道,La calle es grande.,街道很大。,名词（阴）,名词;地点
+es-0136,es,es-02,la tienda,商店,La tienda es grande.,商店很大。,名词（阴）,名词;地点
+es-0137,es,es-02,el mercado,市场,El mercado es grande.,市场很大。,名词（阳）,名词;地点
+es-0138,es,es-02,el restaurante,餐馆,El restaurante es grande.,餐馆很大。,名词（阳）,名词;地点
+es-0139,es,es-02,el hospital,医院,El hospital es grande.,医院很大。,名词（阳）,名词;地点
+es-0140,es,es-02,la oficina,办公室,La oficina es grande.,办公室很大。,名词（阴）,名词;地点
+es-0141,es,es-02,el parque,公园,El parque es grande.,公园很大。,名词（阳）,名词;地点
+es-0142,es,es-02,el banco,银行,El banco es grande.,银行很大。,名词（阳）,名词;地点
+es-0143,es,es-02,la biblioteca,图书馆,La biblioteca es grande.,图书馆很大。,名词（阴）,名词;地点
+es-0144,es,es-02,la estación,车站,La estación es grande.,车站很大。,名词（阴）,名词;地点
+es-0145,es,es-02,la plaza,广场,La plaza es grande.,广场很大。,名词（阴）,名词;地点
+es-0146,es,es-02,el aeropuerto,机场,El aeropuerto es grande.,机场很大。,名词（阳）,名词;地点
+es-0147,es,es-02,el museo,博物馆,El museo es grande.,博物馆很大。,名词（阳）,名词;地点
+es-0148,es,es-02,la farmacia,药店,La farmacia es grande.,药店很大。,名词（阴）,名词;地点
+es-0149,es,es-02,comprar,买,Quiero comprar un libro.,我想买一本书。,-ar 规则动词；现在时 yo compro,动词;不定式;ar规则
+es-0150,es,es-02,necesitar,需要,¿Qué es necesitar?,“需要”是什么意思？,-ar 规则动词；现在时 yo necesito,动词;不定式;ar规则
+es-0151,es,es-02,mirar,看,Quiero mirar la casa.,我想看这所房子。,-ar 规则动词；现在时 yo miro,动词;不定式;ar规则
+es-0152,es,es-02,escuchar,听,Quiero escuchar a la profesora.,我想听这位女教师讲。,-ar 规则动词；现在时 yo escucho,动词;不定式;ar规则
+es-0153,es,es-02,llamar,打电话给；叫,Quiero llamar al médico.,我想给医生打电话。,-ar 规则动词；现在时 yo llamo,动词;不定式;ar规则
+es-0154,es,es-02,tomar,拿；取；喝,Quiero tomar el libro.,我想拿这本书。,-ar 规则动词；现在时 yo tomo,动词;不定式;ar规则
+es-0155,es,es-02,buscar,寻找,Quiero buscar el libro.,我想找这本书。,-ar 规则动词；现在时 yo busco,动词;不定式;ar规则
+es-0156,es,es-02,llegar,到达,Quiero llegar a la escuela.,我想到学校。,-ar 规则动词；现在时 yo llego,动词;不定式;ar规则
+es-0157,es,es-02,entrar,进入,Quiero entrar en la tienda.,我想进商店。,-ar 规则动词；现在时 yo entro,动词;不定式;ar规则
+es-0158,es,es-02,cantar,唱,Quiero cantar en casa.,我想在家唱歌。,-ar 规则动词；现在时 yo canto,动词;不定式;ar规则
+es-0159,es,es-02,bailar,跳舞,Quiero bailar en casa.,我想在家跳舞。,-ar 规则动词；现在时 yo bailo,动词;不定式;ar规则
+es-0160,es,es-02,caminar,步行,Quiero caminar al parque.,我想步行去公园。,-ar 规则动词；现在时 yo camino,动词;不定式;ar规则
+es-0161,es,es-02,preguntar,问,Quiero preguntar al profesor.,我想向教师提问。,-ar 规则动词；现在时 yo pregunto,动词;不定式;ar规则
+es-0162,es,es-02,contestar,回答,Quiero contestar al profesor.,我想回答教师。,-ar 规则动词；现在时 yo contesto,动词;不定式;ar规则
+es-0163,es,es-02,esperar,等待,Quiero esperar en casa.,我想在家等。,-ar 规则动词；现在时 yo espero,动词;不定式;ar规则
+es-0164,es,es-02,ayudar,帮助,Quiero ayudar a la madre.,我想帮助母亲。,-ar 规则动词；现在时 yo ayudo,动词;不定式;ar规则
+es-0165,es,es-02,usar,使用,Quiero usar el teléfono.,我想用这部电话。,-ar 规则动词；现在时 yo uso,动词;不定式;ar规则
+es-0166,es,es-02,pagar,付款,Quiero pagar.,我想付款。,-ar 规则动词；现在时 yo pago,动词;不定式;ar规则
+es-0167,es,es-02,viajar,旅行,Quiero viajar a China.,我想去中国旅行。,-ar 规则动词；现在时 yo viajo,动词;不定式;ar规则
+es-0168,es,es-02,desayunar,吃早饭,Quiero desayunar en casa.,我想在家吃早饭。,-ar 规则动词；现在时 yo desayuno,动词;不定式;ar规则
+es-0169,es,es-02,once,11,Tengo once libros.,我有 11 本书。,数词；后接可数名词复数,数字
+es-0170,es,es-02,doce,12,Tengo doce libros.,我有 12 本书。,数词；后接可数名词复数,数字
+es-0171,es,es-02,trece,13,Tengo trece libros.,我有 13 本书。,数词；后接可数名词复数,数字
+es-0172,es,es-02,catorce,14,Tengo catorce libros.,我有 14 本书。,数词；后接可数名词复数,数字
+es-0173,es,es-02,quince,15,Tengo quince libros.,我有 15 本书。,数词；后接可数名词复数,数字
+es-0174,es,es-02,dieciséis,16,Tengo dieciséis libros.,我有 16 本书。,数词；后接可数名词复数；保留重音符号,数字
+es-0175,es,es-02,diecisiete,17,Tengo diecisiete libros.,我有 17 本书。,数词；后接可数名词复数,数字
+es-0176,es,es-02,dieciocho,18,Tengo dieciocho libros.,我有 18 本书。,数词；后接可数名词复数,数字
+es-0177,es,es-02,diecinueve,19,Tengo diecinueve libros.,我有 19 本书。,数词；后接可数名词复数,数字
+es-0178,es,es-02,veinte,20,Tengo veinte libros.,我有 20 本书。,数词；后接可数名词复数,数字
+es-0179,es,es-02,veintiuno,21,Veintiuno y dos son veintitrés.,二十一加二等于二十三。,独立数词；名词前：veintiún libros / veintiuna casas,数字
+es-0180,es,es-02,veintidós,22,Tengo veintidós libros.,我有 22 本书。,数词；后接可数名词复数；保留重音符号,数字
+es-0181,es,es-02,veintitrés,23,Tengo veintitrés libros.,我有 23 本书。,数词；后接可数名词复数；保留重音符号,数字
+es-0182,es,es-02,veinticuatro,24,Tengo veinticuatro libros.,我有 24 本书。,数词；后接可数名词复数,数字
+es-0183,es,es-02,veinticinco,25,Tengo veinticinco libros.,我有 25 本书。,数词；后接可数名词复数,数字
+es-0184,es,es-02,veintiséis,26,Tengo veintiséis libros.,我有 26 本书。,数词；后接可数名词复数；保留重音符号,数字
+es-0185,es,es-02,veintisiete,27,Tengo veintisiete libros.,我有 27 本书。,数词；后接可数名词复数,数字
+es-0186,es,es-02,veintiocho,28,Tengo veintiocho libros.,我有 28 本书。,数词；后接可数名词复数,数字
+es-0187,es,es-02,veintinueve,29,Tengo veintinueve libros.,我有 29 本书。,数词；后接可数名词复数,数字
+es-0188,es,es-02,treinta,30,Tengo treinta libros.,我有 30 本书。,数词；后接可数名词复数,数字
+es-0189,es,es-02,treinta y uno,31,¿Treinta y uno o treinta?,三十一还是三十？,独立数词；名词前：treinta y un libros / treinta y una casas,数字
+es-0190,es,es-02,el lunes,星期一,El lunes estudio en casa.,我星期一在家学习。,名词（阳）；星期名通常小写；el 表示某个星期几，los 表示每逢；lunes 至 viernes 单复数词形相同,名词;星期
+es-0191,es,es-02,el martes,星期二,El martes estudio en casa.,我星期二在家学习。,名词（阳）；星期名通常小写；el 表示某个星期几，los 表示每逢；lunes 至 viernes 单复数词形相同,名词;星期
+es-0192,es,es-02,el miércoles,星期三,El miércoles estudio en casa.,我星期三在家学习。,名词（阳）；星期名通常小写；el 表示某个星期几，los 表示每逢；lunes 至 viernes 单复数词形相同,名词;星期
+es-0193,es,es-02,el jueves,星期四,El jueves estudio en casa.,我星期四在家学习。,名词（阳）；星期名通常小写；el 表示某个星期几，los 表示每逢；lunes 至 viernes 单复数词形相同,名词;星期
+es-0194,es,es-02,el viernes,星期五,El viernes estudio en casa.,我星期五在家学习。,名词（阳）；星期名通常小写；el 表示某个星期几，los 表示每逢；lunes 至 viernes 单复数词形相同,名词;星期
+es-0195,es,es-02,el sábado,星期六,El sábado estudio en casa.,我星期六在家学习。,名词（阳）；星期名通常小写；el 表示某个星期几，los 表示每逢；lunes 至 viernes 单复数词形相同,名词;星期
+es-0196,es,es-02,el domingo,星期日,El domingo estudio en casa.,我星期日在家学习。,名词（阳）；星期名通常小写；el 表示某个星期几，los 表示每逢；lunes 至 viernes 单复数词形相同,名词;星期
+es-0197,es,es-02,mañana,明天,Mañana voy a la escuela.,我明天去学校。,副词；不带冠词；早上是 la mañana，第 3 周学,副词
+es-0198,es,es-02,ayer,昨天,"Ayer, hoy y mañana.",昨天、今天和明天。,副词；先用时间词组识记，过去时另学,副词
+es-0199,es,es-02,siempre,总是,Siempre estudio en casa.,我总是在家学习。,频率副词；本例放在动词前,副词
+es-0200,es,es-02,nunca,从不,Nunca compro libros.,我从不买书。,否定副词；在动词前时不再加 no,副词
+es-0201,es,es-02,a veces,有时,A veces voy al parque.,我有时去公园。,频率副词短语；分开写,副词
+es-0202,es,es-02,del,de 与 el 的缩合,El libro del estudiante está aquí.,这个学生的书在这里。,de + el → del；de la / de los / de las 不缩合；代词 él 不缩合,缩合
+es-0203,es,es-02,al,a 与 el 的缩合,Voy al parque.,我去公园。,a + el → al；a la / a los / a las 不缩合；代词 él 不缩合,缩合
+es-0204,es,es-02,la mano,手,La mano es pequeña.,这只手很小。,名词（阴）；-o 结尾仍为阴性；复数 las manos,名词;规则例词
+es-0205,es,es-02,el problema,问题,El problema es grande.,这个问题很大。,名词（阳）；-ma 结尾的阳性例词；复数 los problemas,名词;规则例词
+es-0206,es,es-02,el lápiz,铅笔,El lápiz está en la mesa.,铅笔在桌子上。,名词（阳）；-z → -ces：los lápices；保留 á,名词;规则例词
+es-0207,es,es-02,la libertad,自由,La libertad es importante.,自由很重要。,名词（阴）；-tad 结尾通常为阴性,名词;规则例词
+es-0208,es,es-02,la canción,歌曲,La canción es buena.,这首歌很好。,名词（阴）；-ción 结尾通常为阴性；复数 las canciones，不再标 ó,名词;规则例词
+es-0209,es,es-02,el chino,中文,El chino es importante.,中文很重要。,名词（阳）；语言名小写；hablar chino 中通常不加冠词,名词;语言
+es-0210,es,es-02,el inglés,英语,El inglés es importante.,英语很重要。,名词（阳）；语言名小写；hablar inglés 中通常不加冠词；保留 é,名词;语言
+es-0211,es,es-02,vivo,我住；我生活,Vivo en China.,我住在中国。,vivir 的 yo 现在时；本周作为自我介绍固定词形，第 3 周学完整变位,动词;现在时;句型
+es-0212,es,es-02,no,不,No estudio en la oficina.,我不在办公室学习。,否定词；no + 动词,否定
+es-0213,es,es-02,sí,是的,"Sí, soy estudiante.",是的，我是学生。,肯定副词；保留 í，与 si 区分,副词
+es-0214,es,es-03,beber,喝,Quiero beber té.,我想喝茶。,-er 规则动词（现在时）；yo bebo,动词;不定式;er规则
+es-0215,es,es-03,aprender,学习；学会,Quiero aprender español.,我想学西班牙语。,-er 规则动词（现在时）；yo aprendo,动词;不定式;er规则
+es-0216,es,es-03,comprender,理解,Quiero comprender el libro.,我想读懂这本书。,-er 规则动词（现在时）；yo comprendo,动词;不定式;er规则
+es-0217,es,es-03,vender,卖,Quiero vender la mesa.,我想卖这张桌子。,-er 规则动词（现在时）；yo vendo,动词;不定式;er规则
+es-0218,es,es-03,correr,跑,Quiero correr en el parque.,我想在公园跑步。,-er 规则动词（现在时）；yo corro,动词;不定式;er规则
+es-0219,es,es-03,creer,相信；认为,Quiero creer al profesor.,我想相信教师的话。,-er 规则动词（现在时）；yo creo,动词;不定式;er规则
+es-0220,es,es-03,deber,应该；应当,¿Qué es deber?,“应该”是什么意思？,-er 规则动词（现在时）；yo debo；deber + 不定式表示应该，如 Debo estudiar.（我应该学习。）,动词;不定式;er规则
+es-0221,es,es-03,abrir,打开,Quiero abrir la puerta.,我想打开门。,-ir 规则动词（现在时）；yo abro,动词;不定式;ir规则
+es-0222,es,es-03,recibir,收到；接待,Quiero recibir un libro.,我想收到一本书。,-ir 规则动词（现在时）；yo recibo,动词;不定式;ir规则
+es-0223,es,es-03,subir,上去；登上,Quiero subir al dormitorio.,我想上楼去卧室。,-ir 规则动词（现在时）；yo subo,动词;不定式;ir规则
+es-0224,es,es-03,decidir,决定,Quiero decidir ahora.,我想现在决定。,-ir 规则动词（现在时）；yo decido,动词;不定式;ir规则
+es-0225,es,es-03,compartir,分享；共用,Quiero compartir el libro.,我想分享这本书。,-ir 规则动词（现在时）；yo comparto,动词;不定式;ir规则
+es-0226,es,es-03,asistir,出席；参加,Quiero asistir a la clase.,我想去上这节课。,-ir 规则动词（现在时）；yo asisto；假朋友：asistir a 是出席，不是英语 assist 的帮助；帮助是 ayudar,动词;不定式;ir规则
+es-0227,es,es-03,discutir,讨论；争论,Quiero discutir el problema.,我想讨论这个问题。,-ir 规则动词（现在时）；yo discuto,动词;不定式;ir规则
+es-0228,es,es-03,responder,回答,Quiero responder al profesor.,我想回答教师。,-er 规则动词（现在时）；yo respondo,动词;不定式;er规则
+es-0229,es,es-03,el pan,面包,El pan es bueno.,这面包很好。,名词（阳）,名词;食物
+es-0230,es,es-03,la leche,牛奶,La leche es buena.,这牛奶很好。,名词（阴）,名词;食物
+es-0231,es,es-03,el café,咖啡,El café es rico.,这咖啡很好喝。,名词（阳）,名词;食物
+es-0232,es,es-03,el té,茶,El té es rico.,这茶很好喝。,名词（阳）,名词;食物
+es-0233,es,es-03,el arroz,米；米饭,El arroz es barato.,这米很便宜。,名词（阳）,名词;食物
+es-0234,es,es-03,la fruta,水果,La fruta es cara.,这水果很贵。,名词（阴）,名词;食物
+es-0235,es,es-03,la manzana,苹果,La manzana es roja.,这苹果是红色的。,名词（阴）,名词;食物
+es-0236,es,es-03,el huevo,鸡蛋,El huevo es pequeño.,这鸡蛋很小。,名词（阳）,名词;食物
+es-0237,es,es-03,el queso,奶酪,El queso es rico.,这奶酪很好吃。,名词（阳）,名词;食物
+es-0238,es,es-03,la carne,肉,La carne es cara.,这肉很贵。,名词（阴）,名词;食物
+es-0239,es,es-03,el pescado,鱼肉；食用鱼,El pescado es rico.,这鱼肉很好吃。,名词（阳）,名词;食物
+es-0240,es,es-03,la sopa,汤,La sopa es buena.,这汤很好。,名词（阴）；sopa 是汤，不是英语 soap（肥皂）,名词;食物
+es-0241,es,es-03,la habitación,房间,La habitación es grande.,这个房间很大。,名词（阴）,名词;家与家具
+es-0242,es,es-03,la cocina,厨房,La cocina es pequeña.,这个厨房很小。,名词（阴）,名词;家与家具
+es-0243,es,es-03,el baño,浴室；卫生间,El baño es limpio.,这个浴室很干净。,名词（阳）,名词;家与家具
+es-0244,es,es-03,el dormitorio,卧室,El dormitorio es tranquilo.,这个卧室很安静。,名词（阳）,名词;家与家具
+es-0245,es,es-03,la puerta,门,La puerta es blanca.,这个门是白色的。,名词（阴）,名词;家与家具
+es-0246,es,es-03,la ventana,窗户,La ventana es grande.,这个窗户很大。,名词（阴）,名词;家与家具
+es-0247,es,es-03,la silla,椅子,La silla es nueva.,这个椅子是新的。,名词（阴）,名词;家与家具
+es-0248,es,es-03,la cama,床,La cama es pequeña.,这个床很小。,名词（阴）,名词;家与家具
+es-0249,es,es-03,el sofá,沙发,El sofá es caro.,这个沙发很贵。,名词（阳）；复数 los sofás，保留 á,名词;家与家具
+es-0250,es,es-03,el armario,衣柜,El armario es alto.,这个衣柜很高。,名词（阳）,名词;家与家具
+es-0251,es,es-03,feliz,幸福的；开心的,El niño está feliz.,这个男孩很开心。,形容词；阴阳同形；复数 felices,形容词
+es-0252,es,es-03,triste,伤心的,El niño está triste.,这个男孩很伤心。,形容词；阴阳同形；复数 tristes,形容词
+es-0253,es,es-03,cansado,累的,El padre está cansado.,父亲累了。,形容词；性数形式 cansado / cansada / cansados / cansadas,形容词
+es-0254,es,es-03,ocupado,忙的,El médico está ocupado.,医生很忙。,形容词；性数形式 ocupado / ocupada / ocupados / ocupadas,形容词
+es-0255,es,es-03,caro,贵的,El libro es caro.,这本书很贵。,形容词；性数形式 caro / cara / caros / caras,形容词
+es-0256,es,es-03,barato,便宜的,El pan es barato.,面包很便宜。,形容词；性数形式 barato / barata / baratos / baratas,形容词
+es-0257,es,es-03,rico,好吃的；富有的,El queso es rico.,奶酪很好吃。,形容词；性数形式 rico / rica / ricos / ricas,形容词
+es-0258,es,es-03,interesante,有趣的,El libro es interesante.,这本书很有趣。,形容词；阴阳同形；复数 interesantes,形容词
+es-0259,es,es-03,corto,短的,El libro es corto.,这本书篇幅很短。,形容词；性数形式 corto / corta / cortos / cortas,形容词
+es-0260,es,es-03,alto,高的,El armario es alto.,这个衣柜很高。,形容词；性数形式 alto / alta / altos / altas,形容词
+es-0261,es,es-03,bajo,矮的；低的,El armario es bajo.,这个衣柜很矮。,形容词；性数形式 bajo / baja / bajos / bajas,形容词
+es-0262,es,es-03,limpio,干净的,El baño está limpio.,浴室很干净。,形容词；性数形式 limpio / limpia / limpios / limpias,形容词
+es-0263,es,es-03,sucio,脏的,El baño está sucio.,浴室很脏。,形容词；性数形式 sucio / sucia / sucios / sucias,形容词
+es-0264,es,es-03,bonito,漂亮的,El parque es bonito.,这个公园很漂亮。,形容词；性数形式 bonito / bonita / bonitos / bonitas,形容词
+es-0265,es,es-03,tranquilo,安静的；平静的,El dormitorio es tranquilo.,卧室很安静。,形容词；性数形式 tranquilo / tranquila / tranquilos / tranquilas,形容词
+es-0266,es,es-03,el minuto,分钟,El minuto es importante.,这一分钟很重要。,名词（阳）,名词;时间
+es-0267,es,es-03,la semana,星期；周,La semana tiene siete días.,一周有七天。,名词（阴）,名词;时间
+es-0268,es,es-03,el mes,月份；月,El mes de abril tiene treinta días.,四月有三十天。,名词（阳）；复数 los meses,名词;时间
+es-0269,es,es-03,el año,年,El año tiene doce meses.,一年有十二个月。,名词（阳）；保留 ñ,名词;时间
+es-0270,es,es-03,la mañana,早上；上午,La mañana es tranquila.,早上很安静。,名词（阴）；名词带 la；por la mañana 表示在早上，与 mañana（明天）区分,名词;时间
+es-0271,es,es-03,la tarde,下午；傍晚,La tarde es tranquila.,下午很安静。,名词（阴）；por la tarde 表示在下午,名词;时间
+es-0272,es,es-03,el mes de enero,一月,"En el mes de enero, estudio en casa.",一月，我在家学习。,名词（阳）；月份名 enero 小写且通常不加冠词；本卡用带冠词的完整名词短语识记，也可直接说 en enero,名词;月份
+es-0273,es,es-03,el mes de febrero,二月,"En el mes de febrero, aprendo español.",二月，我学西班牙语。,名词（阳）；月份名 febrero 小写且通常不加冠词；本卡用带冠词的完整名词短语识记，也可直接说 en febrero,名词;月份
+es-0274,es,es-03,el mes de marzo,三月,"En el mes de marzo, trabajo en la oficina.",三月，我在办公室工作。,名词（阳）；月份名 marzo 小写且通常不加冠词；本卡用带冠词的完整名词短语识记，也可直接说 en marzo,名词;月份
+es-0275,es,es-03,el mes de abril,四月,"En el mes de abril, viajo a China.",四月，我去中国旅行。,名词（阳）；月份名 abril 小写且通常不加冠词；本卡用带冠词的完整名词短语识记，也可直接说 en abril,名词;月份
+es-0276,es,es-03,el mes de mayo,五月,"En el mes de mayo, estudio en la biblioteca.",五月，我在图书馆学习。,名词（阳）；月份名 mayo 小写且通常不加冠词；本卡用带冠词的完整名词短语识记，也可直接说 en mayo,名词;月份
+es-0277,es,es-03,el mes de junio,六月,"En el mes de junio, camino al parque.",六月，我步行去公园。,名词（阳）；月份名 junio 小写且通常不加冠词；本卡用带冠词的完整名词短语识记，也可直接说 en junio,名词;月份
+es-0278,es,es-03,el mes de julio,七月,"En el mes de julio, viajo con la familia.",七月，我和家人旅行。,名词（阳）；月份名 julio 小写且通常不加冠词；本卡用带冠词的完整名词短语识记，也可直接说 en julio,名词;月份
+es-0279,es,es-03,el mes de agosto,八月,"En el mes de agosto, estoy en casa.",八月，我在家。,名词（阳）；月份名 agosto 小写且通常不加冠词；本卡用带冠词的完整名词短语识记，也可直接说 en agosto,名词;月份
+es-0280,es,es-03,el mes de septiembre,九月,"En el mes de septiembre, asisto a la clase.",九月，我去上这节课。,名词（阳）；月份名 septiembre 小写且通常不加冠词；本卡用带冠词的完整名词短语识记，也可直接说 en septiembre,名词;月份
+es-0281,es,es-03,el mes de octubre,十月,"En el mes de octubre, compro libros.",十月，我买书。,名词（阳）；月份名 octubre 小写且通常不加冠词；本卡用带冠词的完整名词短语识记，也可直接说 en octubre,名词;月份
+es-0282,es,es-03,el mes de noviembre,十一月,"En el mes de noviembre, trabajo en la escuela.",十一月，我在学校工作。,名词（阳）；月份名 noviembre 小写且通常不加冠词；本卡用带冠词的完整名词短语识记，也可直接说 en noviembre,名词;月份
+es-0283,es,es-03,el mes de diciembre,十二月,"En el mes de diciembre, estoy con la familia.",十二月，我和家人在一起。,名词（阳）；月份名 diciembre 小写且通常不加冠词；本卡用带冠词的完整名词短语识记，也可直接说 en diciembre,名词;月份
+es-0284,es,es-03,rojo,红色的,El libro es rojo.,这本书是红色的。,颜色形容词；roja / rojos / rojas,形容词;颜色
+es-0285,es,es-03,azul,蓝色的,El libro es azul.,这本书是蓝色的。,颜色形容词；阴阳同形；复数 azules,形容词;颜色
+es-0286,es,es-03,verde,绿色的,El libro es verde.,这本书是绿色的。,颜色形容词；阴阳同形；复数 verdes,形容词;颜色
+es-0287,es,es-03,blanco,白色的,El libro es blanco.,这本书是白色的。,颜色形容词；blanca / blancos / blancas,形容词;颜色
+es-0288,es,es-03,negro,黑色的,El libro es negro.,这本书是黑色的。,颜色形容词；negra / negros / negras,形容词;颜色
+es-0289,es,es-03,amarillo,黄色的,El libro es amarillo.,这本书是黄色的。,颜色形容词；amarilla / amarillos / amarillas,形容词;颜色
+es-0290,es,es-03,mi,我的,Mi casa es grande.,我的房子很大。,物主形容词；与被拥有的名词配合，不按拥有者性别变化；mi / tu 不加重音,物主形容词
+es-0291,es,es-03,tu,你的,Tu casa es grande.,你的房子很大。,物主形容词；与被拥有的名词配合，不按拥有者性别变化；mi / tu 不加重音,物主形容词
+es-0292,es,es-03,su,他／她／您的；他们／她们／各位的,Su casa es grande.,他／她／您（或他们／她们／各位）的房子很大。,物主形容词；与被拥有的名词配合，不按拥有者性别变化；mi / tu 不加重音,物主形容词
+es-0293,es,es-03,nuestro,我们的（阳性单数）,Nuestro libro es bueno.,我们的书很好。,物主形容词；与被拥有的名词配合，不按拥有者性别变化；mi / tu 不加重音,物主形容词
+es-0294,es,es-03,nuestra,我们的（阴性单数）,Nuestra casa es grande.,我们的房子很大。,物主形容词；与被拥有的名词配合，不按拥有者性别变化；mi / tu 不加重音,物主形容词
+es-0295,es,es-03,vuestro,你们的（阳性单数）,Vuestro libro es bueno.,你们的书很好。,物主形容词；与被拥有的名词配合，不按拥有者性别变化；mi / tu 不加重音,物主形容词
+es-0296,es,es-03,vuestra,你们的（阴性单数）,Vuestra casa es grande.,你们的房子很大。,物主形容词；与被拥有的名词配合，不按拥有者性别变化；mi / tu 不加重音,物主形容词
+es-0297,es,es-03,mis,我的（复数）,Mis libros son buenos.,我的书很好。,物主形容词；与被拥有的名词配合，不按拥有者性别变化；mi / tu 不加重音,物主形容词
+es-0298,es,es-03,tus,你的（复数）,Tus libros son buenos.,你的书很好。,物主形容词；与被拥有的名词配合，不按拥有者性别变化；mi / tu 不加重音,物主形容词
+es-0299,es,es-03,sus,他／她／您的；他们／她们／各位的（复数）,Sus libros son buenos.,他／她／您（或他们／她们／各位）的书很好。,物主形容词；与被拥有的名词配合，不按拥有者性别变化；mi / tu 不加重音,物主形容词
+es-0300,es,es-03,nuestros,我们的（阳性复数）,Nuestros libros son buenos.,我们的书很好。,物主形容词；与被拥有的名词配合，不按拥有者性别变化；mi / tu 不加重音,物主形容词
+es-0301,es,es-03,nuestras,我们的（阴性复数）,Nuestras casas son grandes.,我们的房子很大。,物主形容词；与被拥有的名词配合，不按拥有者性别变化；mi / tu 不加重音,物主形容词
+es-0302,es,es-03,vuestros,你们的（阳性复数）,Vuestros libros son buenos.,你们的书很好。,物主形容词；与被拥有的名词配合，不按拥有者性别变化；mi / tu 不加重音,物主形容词
+es-0303,es,es-03,vuestras,你们的（阴性复数）,Vuestras casas son grandes.,你们的房子很大。,物主形容词；与被拥有的名词配合，不按拥有者性别变化；mi / tu 不加重音,物主形容词
+es-0304,es,es-03,hay,有；存在,Hay una mesa en la cocina.,厨房里有一张桌子。,haber 的无人称现在时；单复数都用 hay，不是 tener 的拥有,动词;存在
+es-0305,es,es-03,y media,……点半,Son las dos y media.,现在两点半。,报时短语；media 是 la hora 的一半，通常用阴性,时间表达
+es-0306,es,es-03,en punto,整点,Es la una en punto.,现在一点整。,报时短语；一点用 Es la una，其他点数用 Son las…,时间表达
+es-0307,es,es-03,cada,每；每个,Cada día estudio español.,我每天学西班牙语。,限定词；本课 cada + 单数名词；cada día = 每天,限定词
+es-0308,es,es-03,después,之后；后来,Después estudio en casa.,之后我在家学习。,时间副词；保留 é,副词
+es-0309,es,es-03,antes,之前；先前,"Antes de la clase, leo en casa.",上课前，我在家阅读。,antes de + 名词表示在……之前；leo 来自 leer,副词
+es-0310,es,es-03,porque,因为,Estudio porque quiero aprender.,我学习，因为我想学会。,连词；连写且不加重音，与 por qué（为什么）区分,连词
+es-0311,es,es-03,la clase,课；课堂,La clase es interesante.,这节课很有趣。,名词（阴）；asistir a la clase 表示出席这节课,名词;学习
+es-0312,es,es-03,el desayuno,早餐,El desayuno es bueno.,早餐很好。,名词（阳）；对应动词 desayunar,名词;日常生活
+es-0313,es,es-03,la cena,晚餐,La cena es buena.,晚餐很好。,名词（阴）,名词;日常生活
+es-0314,es,es-04,hacer,做,Quiero hacer el desayuno.,我想做早餐。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：hago / haces / hace / hacemos / hacéis / hacen；yo 特殊,动词;不定式;不规则
+es-0315,es,es-04,poder,能够；可以,Poder leer es importante.,能够阅读很重要。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：puedo / puedes / puede / podemos / podéis / pueden；o→ue,动词;不定式;不规则
+es-0316,es,es-04,querer,想要；爱,Querer aprender es importante.,想要学习很重要。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：quiero / quieres / quiere / queremos / queréis / quieren；e→ie；复习 es-0100，本课补全现在时,动词;不定式;不规则
+es-0317,es,es-04,decir,说；告诉,Quiero decir hola.,我想说你好。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：digo / dices / dice / decimos / decís / dicen；yo digo；其余有 e→i,动词;不定式;不规则
+es-0318,es,es-04,saber,知道；会,Quiero saber la hora.,我想知道时间。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：sé / sabes / sabe / sabemos / sabéis / saben；yo sé；事实或 saber + 不定式表示会做,动词;不定式;不规则
+es-0319,es,es-04,conocer,认识；熟悉,Quiero conocer la ciudad.,我想熟悉这座城市。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：conozco / conoces / conoce / conocemos / conocéis / conocen；yo conozco；认识人或熟悉地方,动词;不定式;不规则
+es-0320,es,es-04,salir,出去；离开,Quiero salir de casa.,我想出门。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：salgo / sales / sale / salimos / salís / salen；yo 特殊,动词;不定式;不规则
+es-0321,es,es-04,venir,来,Quiero venir a la clase.,我想来上这节课。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：vengo / vienes / viene / venimos / venís / vienen；yo vengo；其余有 e→ie,动词;不定式;不规则
+es-0322,es,es-04,poner,放；摆,Quiero poner el libro en la mesa.,我想把书放在桌子上。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：pongo / pones / pone / ponemos / ponéis / ponen；yo 特殊,动词;不定式;不规则
+es-0323,es,es-04,ver,看见；看,Quiero ver la casa.,我想看看这所房子。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：veo / ves / ve / vemos / veis / ven；yo veo；veis 不加重音,动词;不定式;不规则
+es-0324,es,es-04,dar,给,Quiero dar un libro al niño.,我想给这个男孩一本书。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：doy / das / da / damos / dais / dan；yo doy；dais 不加重音,动词;不定式;不规则
+es-0325,es,es-04,pensar,想；思考,Quiero pensar en el problema.,我想思考这个问题。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：pienso / piensas / piensa / pensamos / pensáis / piensan；e→ie；pensar en 表示思考,动词;不定式;词干变化
+es-0326,es,es-04,entender,理解；懂,Quiero entender el libro.,我想读懂这本书。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：entiendo / entiendes / entiende / entendemos / entendéis / entienden；e→ie,动词;不定式;词干变化
+es-0327,es,es-04,empezar,开始,Quiero empezar a estudiar.,我想开始学习。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：empiezo / empiezas / empieza / empezamos / empezáis / empiezan；e→ie；empezar a + 不定式,动词;不定式;词干变化
+es-0328,es,es-04,cerrar,关闭,Quiero cerrar la puerta.,我想关门。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：cierro / cierras / cierra / cerramos / cerráis / cierran；e→ie,动词;不定式;词干变化
+es-0329,es,es-04,dormir,睡觉,Quiero dormir en casa.,我想在家睡觉。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：duermo / duermes / duerme / dormimos / dormís / duermen；o→ue,动词;不定式;词干变化
+es-0330,es,es-04,volver,返回,Quiero volver a casa.,我想回家。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：vuelvo / vuelves / vuelve / volvemos / volvéis / vuelven；o→ue,动词;不定式;词干变化
+es-0331,es,es-04,almorzar,吃午饭,Quiero almorzar en casa.,我想在家吃午饭。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：almuerzo / almuerzas / almuerza / almorzamos / almorzáis / almuerzan；o→ue,动词;不定式;词干变化
+es-0332,es,es-04,pedir,请求；点餐,Quiero pedir un café.,我想点一杯咖啡。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：pido / pides / pide / pedimos / pedís / piden；e→i；请求东西，不是 preguntar（问问题）,动词;不定式;词干变化
+es-0333,es,es-04,servir,端上；提供,Quiero servir el desayuno.,我想端上早餐。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：sirvo / sirves / sirve / servimos / servís / sirven；e→i,动词;不定式;词干变化
+es-0334,es,es-04,la nación,民族；国家,La nación tiene universidades.,这个国家有大学。,名词（阴）；与英语 nation 对应；同源或国际借词只提供阅读线索，仍按语境判断,名词;同源词
+es-0335,es,es-04,la información,信息,La información es importante.,这些信息很重要。,名词（阴）；与英语 information 对应；同源或国际借词只提供阅读线索，仍按语境判断,名词;同源词
+es-0336,es,es-04,el animal,动物,El animal es pequeño.,这只动物很小。,名词（阳）；与英语 animal 对应；同源或国际借词只提供阅读线索，仍按语境判断,名词;同源词
+es-0337,es,es-04,el hotel,旅馆；酒店,El hotel está en el centro.,酒店在市中心。,名词（阳）；与英语 hotel 对应；同源或国际借词只提供阅读线索，仍按语境判断,名词;同源词
+es-0338,es,es-04,la música,音乐,Quiero estudiar la música de España.,我想研究西班牙的音乐。,名词（阴）；与英语 music 对应；同源或国际借词只提供阅读线索，仍按语境判断,名词;同源词
+es-0339,es,es-04,el documento,文件,El documento está en la mesa.,文件在桌子上。,名词（阳）；与英语 document 对应；同源或国际借词只提供阅读线索，仍按语境判断,名词;同源词
+es-0340,es,es-04,el programa,节目；计划；程序,El programa es interesante.,这个节目很有趣。,名词（阳）；与英语 program 对应；同源或国际借词只提供阅读线索，仍按语境判断,名词;同源词
+es-0341,es,es-04,el sistema,系统,El sistema es importante.,这个系统很重要。,名词（阳）；与英语 system 对应；同源或国际借词只提供阅读线索，仍按语境判断,名词;同源词
+es-0342,es,es-04,el momento,时刻,El momento de estudiar es ahora.,现在是学习的时刻。,名词（阳）；与英语 moment 对应；同源或国际借词只提供阅读线索，仍按语境判断,名词;同源词
+es-0343,es,es-04,el centro,中心；市中心,El centro de la ciudad es bonito.,市中心很漂亮。,名词（阳）；与英语 centre / center 对应；同源或国际借词只提供阅读线索，仍按语境判断,名词;同源词
+es-0344,es,es-04,la historia,历史；故事,La historia es interesante.,这个故事很有趣。,名词（阴）；与英语 history / story 对应；同源或国际借词只提供阅读线索，仍按语境判断,名词;同源词
+es-0345,es,es-04,natural,自然的,La fruta es natural.,水果是天然的。,形容词；阴阳同形；复数 naturales；与英语 natural 对应；同源或国际借词只提供阅读线索，仍按语境判断,形容词;同源词
+es-0346,es,es-04,posible,可能的,Es posible aprender.,学会是可能的。,形容词；阴阳同形；复数 posibles；与英语 possible 对应；同源或国际借词只提供阅读线索，仍按语境判断,形容词;同源词
+es-0347,es,es-04,diferente,不同的,El libro es diferente.,这本书不一样。,形容词；阴阳同形；复数 diferentes；与英语 different 对应；同源或国际借词只提供阅读线索，仍按语境判断,形容词;同源词
+es-0348,es,es-04,especial,特别的,El día es especial.,今天是特别的一天。,形容词；阴阳同形；复数 especiales；与英语 special 对应；同源或国际借词只提供阅读线索，仍按语境判断,形容词;同源词
+es-0349,es,es-04,general,总体的；一般的,La información general está aquí.,总体信息在这里。,形容词；阴阳同形；复数 generales；与英语 general 对应；同源或国际借词只提供阅读线索，仍按语境判断,形容词;同源词
+es-0350,es,es-04,popular,受欢迎的；民众的,El restaurante es popular.,这家餐馆很受欢迎。,形容词；阴阳同形；复数 populares；与英语 popular 对应；同源或国际借词只提供阅读线索，仍按语境判断,形容词;同源词
+es-0351,es,es-04,famoso,著名的,El artista es famoso.,这位艺术家很有名。,形容词；famosa / famosos / famosas；与英语 famous 对应；同源或国际借词只提供阅读线索，仍按语境判断,形容词;同源词
+es-0352,es,es-04,normal,正常的；普通的,Es normal estar cansado.,感到疲倦是正常的。,形容词；阴阳同形；复数 normales；与英语 normal 对应；同源或国际借词只提供阅读线索，仍按语境判断,形容词;同源词
+es-0353,es,es-04,la comunicación,交流；通信,La comunicación es importante.,交流很重要。,名词（阴）；与英语 communication 对应；同源或国际借词只提供阅读线索，仍按语境判断,名词;同源词

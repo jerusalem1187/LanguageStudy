@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 const assert = require('node:assert/strict');
+const {createHash} = require('node:crypto');
 const {test} = require('node:test');
 const html = fs.readFileSync(path.join(__dirname,'index.html'),'utf8');
 const blocks = [...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/gi)];
@@ -131,9 +132,11 @@ function record(day='2026-09-14',grade=4) { return api.schedule(null,grade,day);
 
 test('来源 CSV 与两个内嵌 JSON 完整一致；只有一个可执行脚本且无外部资源',() => {
   const rows = ['es','ru'].flatMap(lang => plain(api.parseCSV(fs.readFileSync(path.join(__dirname,'cards',lang+'.csv'),'utf8'))));
-  assert.deepEqual(rows,initialRows);
-  assert.equal(api.expandCards(rows).length,467);
-  assert.equal(rows.filter(r=>r.lang==='es').length,113);
+  // 内嵌数据按追加顺序保留旧行；来源 CSV 各自按语言排列。
+  for (const lang of ['es','ru']) assert.deepEqual(rows.filter(row=>row.lang===lang),initialRows.filter(row=>row.lang===lang));
+  assert.equal(rows.length,494);
+  assert.equal(api.expandCards(rows).length,947);
+  assert.equal(rows.filter(r=>r.lang==='es').length,353);
   assert.equal(rows.filter(r=>r.tags.split(';').includes('letter')).length,33);
   assert.equal(rows.filter(r=>r.lang==='ru'&&!r.tags.split(';').includes('letter')).length,108);
   assert.match(html,/<div id="app"><\/div>/);
@@ -239,7 +242,7 @@ test('日志 60 个本地日期边界、统计 30 天与正确率、旧版无 fi
   state.log=[{t:at(api.addDays(today,-2)),card:'es-0001:r',grade:0},{t:at(today),card:'es-0001:r',grade:4}];
   const valid=api.validateState(state,now);assert.equal(valid.cards['es-0001:r'].first,api.addDays(today,-2));
   const stats=api.statistics(initialRows,valid,today)[0];
-  assert.deepEqual([stats.total,stats.new,stats.learning,stats.mastered,stats.reviews,stats.accuracy],[226,225,1,0,2,'50%']);
+  assert.deepEqual([stats.total,stats.new,stats.learning,stats.mastered,stats.reviews,stats.accuracy],[706,705,1,0,2,'50%']);
   assert.throws(()=>api.validateState({...state,version:2},now));
   assert.throws(()=>api.validateState({...state,cards:{'es-0001:r':{...record(),due:'2026-02-30'}}},now));
 });
@@ -316,7 +319,7 @@ test('真实嵌入进度能通过 validateState；全部进度与日志 id 都�
   assert.equal(JSON.stringify(initialState),before);
 });
 test('课程注册表都有词条、周次、日期、目标、写作任务和 10 题；阅读题属于本课练习',() => {
-  assert.deepEqual(Object.keys(api.LESSONS),['es-01','ru-01','ru-02','ru-03','ru-04']);
+  assert.deepEqual(Object.keys(api.LESSONS),['es-01','es-02','es-03','es-04','ru-01','ru-02','ru-03','ru-04']);
   for (const [id,lesson] of Object.entries(api.LESSONS)) {
     assert(initialRows.some(row=>row.lesson===id),id);
     assert.equal(lesson.lang,id.slice(0,2));assert.equal(lesson.week,Number(id.slice(3)));
@@ -328,9 +331,14 @@ test('课程注册表都有词条、周次、日期、目标、写作任务和 1
       if (exercise.options) assert.equal(exercise.options.filter(option=>option===exercise.answer).length,1);
     }
     if (lesson.reading) {
-      assert([5,6].includes(lesson.reading.sentences.length));assert.equal(lesson.reading.questions.length,3);
+      if (lesson.lang==='ru') assert([5,6].includes(lesson.reading.sentences.length));
+      assert.equal(lesson.reading.questions.length,id==='es-04'?4:3);
       for (const sentence of lesson.reading.sentences) assert(sentence.text && sentence.zh);
-      assert.deepEqual(lesson.exercises.slice(-3),lesson.reading.questions);
+      for (const question of lesson.reading.questions) {
+        assert(question.options.includes(question.answer),id+' '+question.prompt);
+        assert.equal(question.options.length,new Set(question.options).size);
+      }
+      assert.deepEqual(lesson.exercises.slice(-lesson.reading.questions.length),lesson.reading.questions);
     } else assert.equal(lesson.reading,null);
   }
   assert.deepEqual(['ru-02','ru-03','ru-04'].map(id=>initialRows.filter(row=>row.lesson===id).length),[14,36,40]);
@@ -339,17 +347,104 @@ test('课程注册表都有词条、周次、日期、目标、写作任务和 1
     for (const word of sentence.text.toLowerCase().replace(/\u0301/g,'').match(/[а-яё]+/g)) assert(vocabulary.has(word),word);
   }
 });
-test('各课程分语言展示；阅读中文默认折叠；50 道练习可判对错且不写入进度',() => {
+test('西语第 2–4 周阅读篇幅、双语句子、日期和练习配额符合课程安排',() => {
+  for (const [id,min,max,count,dates,textQuestions] of [
+    ['es-02',80,120,100,'09-21 至 09-27',7],
+    ['es-03',100,150,100,'09-28 至 10-04',6],
+    ['es-04',150,200,40,'10-05 至 10-11',6]
+  ]) {
+    const lesson=api.LESSONS[id];assert(lesson,id);
+    const words=lesson.reading.sentences.flatMap(sentence=>sentence.text.match(/[\p{L}\p{M}]+/gu) || []);
+    assert(words.length>=min && words.length<=max,`${id}: ${words.length} words, expected ${min}–${max}`);
+    assert.equal(lesson.dates,dates);
+    assert.equal(initialRows.filter(row=>row.lesson===id).length,count);
+    assert.equal(lesson.exercises.filter(exercise=>!exercise.options).length,textQuestions);
+    for (const sentence of lesson.reading.sentences) {
+      assert.match(sentence.text,/[.?!]$/);assert.match(sentence.zh,/[\u3400-\u9fff]/);
+      assert.equal(sentence.text,sentence.text.normalize('NFC'));
+      if (sentence.text.includes('?')) assert(sentence.text.startsWith('¿'));
+    }
+    assert(lesson.explanation().includes('《现代西班牙语》第 '+lesson.week+' 课'));
+  }
+  assert.match(api.LESSONS['es-04'].writingTask,/15 分钟.*100 词/);
+  assert.match(api.LESSONS['es-04'].explanation(),/本课短文|下方本课/);
+});
+test('西语新增 id 连续、名词带冠词标性；指定词群、重音和 20 个新同源词齐全',() => {
+  const added=initialRows.filter(row=>['es-02','es-03','es-04'].includes(row.lesson));
+  assert.deepEqual(added.map(row=>row.id),Array.from({length:240},(_,i)=>'es-'+String(114+i).padStart(4,'0')));
+  for (const row of added) {
+    for (const field of ['front','example','note']) assert.equal(row[field],row[field].normalize('NFC'),row.id);
+    if (row.tags.split(';').includes('名词')) {
+      assert.match(row.front,/^(el|la) /,row.id);
+      assert.match(row.note,/名词（[阳阴]）/,row.id);
+      assert(row.note.includes(row.front.startsWith('la ')?'名词（阴）':'名词（阳）'),row.id);
+    }
+  }
+  const rowsFor=id=>initialRows.filter(row=>row.lesson===id);
+  const tagged=(id,tag)=>rowsFor(id).filter(row=>row.tags.split(';').includes(tag));
+  for (const [id,tag,count] of [['es-02','家庭',10],['es-02','职业',10],['es-02','地点',15],['es-02','数字',21],['es-02','星期',7],['es-03','食物',12],['es-03','家与家具',10],['es-03','月份',12],['es-03','颜色',6],['es-03','物主形容词',14]]) assert.equal(tagged(id,tag).length,count,id+' '+tag);
+  const ar='comprar necesitar mirar escuchar llamar tomar buscar llegar entrar cantar bailar caminar preguntar contestar esperar ayudar usar pagar viajar desayunar'.split(' ');
+  const erir='beber aprender comprender vender correr creer deber abrir recibir subir decidir compartir asistir discutir responder'.split(' ');
+  const irregular='hacer poder querer decir saber conocer salir venir poner ver dar pensar entender empezar cerrar dormir volver almorzar pedir servir'.split(' ');
+  for (const [id,expected] of [['es-02',ar],['es-03',erir],['es-04',irregular]]) assert.deepEqual(tagged(id,'不定式').map(row=>row.front),expected);
+  for (const front of ['dieciséis','veintidós','veintitrés','veintiséis','el miércoles','el sábado','la canción','el lápiz','la mano','el problema','mañana','ayer','siempre','nunca','a veces','del','al']) assert(rowsFor('es-02').some(row=>row.front===front),front);
+  for (const front of ['feliz','triste','cansado','ocupado','fácil','difícil','caro','barato','rico','interesante','importante','largo','corto','alto','bajo','la hora','el minuto','la semana','el mes','el año','la mañana']) assert(initialRows.some(row=>row.lang==='es' && row.lesson<='es-03' && row.front===front),front);
+  assert.match(rowsFor('es-03').find(row=>row.front==='asistir').note,/假朋友.*出席.*帮助/);
+  assert.match(rowsFor('es-02').find(row=>row.front==='mañana').back,/明天/);
+  assert.match(rowsFor('es-03').find(row=>row.front==='la mañana').back,/早上/);
+  const cognates=tagged('es-04','同源词'),previous=new Set(initialRows.filter(row=>row.lang==='es' && row.lesson<'es-04').map(row=>row.front));
+  assert.equal(cognates.length,20);assert.equal(new Set(cognates.map(row=>row.front)).size,20);
+  for (const row of cognates) assert(!previous.has(row.front),'同源词不重复旧卡：'+row.front);
+});
+test('西语变位表按人称保留关键不规则词形与重音，全部新讲解 HTML 可解析',() => {
+  const contents=Object.fromEntries(['es-02','es-03','es-04'].map(id=>[id,parseNodes(api.LESSONS[id].explanation())[0]]));
+  const expected={
+    'es-02':[
+      ['yo','-o','hablo','tengo','voy'],['tú','-as','hablas','tienes','vas'],
+      ['él / ella / usted','-a','habla','tiene','va'],['nosotros / nosotras','-amos','hablamos','tenemos','vamos'],
+      ['vosotros / vosotras','-áis','habláis','tenéis','vais'],['ellos / ellas / ustedes','-an','hablan','tienen','van']
+    ],
+    'es-03':[
+      ['yo','-o','como','-o','vivo'],['tú','-es','comes','-es','vives'],['él / ella / usted','-e','come','-e','vive'],
+      ['nosotros / nosotras','-emos','comemos','-imos','vivimos'],['vosotros / vosotras','-éis','coméis','-ís','vivís'],['ellos / ellas / ustedes','-en','comen','-en','viven']
+    ]
+  };
+  for (const id of ['es-02','es-03']) {
+    const table=contents[id].querySelector('table');
+    assert.deepEqual(table.querySelector('tbody').querySelectorAll('tr').map(tr=>tr.querySelectorAll('td').map(td=>td.textContent)),expected[id]);
+  }
+  const irregularTable=contents['es-04'].querySelector('table');
+  const forms=irregularTable.querySelector('tbody').querySelectorAll('tr').map(tr=>tr.querySelectorAll('td').map(td=>td.textContent));
+  assert.equal(forms.length,11);
+  for (const [name,expectedForms] of [
+    ['decir','digo dices dice decimos decís dicen'],['saber','sé sabes sabe sabemos sabéis saben'],
+    ['conocer','conozco conoces conoce conocemos conocéis conocen'],['venir','vengo vienes viene venimos venís vienen'],
+    ['ver','veo ves ve vemos veis ven'],['dar','doy das da damos dais dan']
+  ]) assert.deepEqual(forms.find(row=>row[0].startsWith(name+'（')).slice(1),expectedForms.split(' '));
+  for (const word of ['pienso','pensamos','pensáis','duermo','dormimos','dormís','pido','pedimos','pedís','sirvo','servís']) assert(api.LESSONS['es-04'].explanation().includes(word),word);
+});
+test('任务 B 只在旧 cards-data 与西语 CSV 后追加；既有 254 条内嵌记录原文不变',() => {
+  // 开工快照的原始前缀；JSON 数组最后的换行和 ] 让位于追加分隔符。
+  const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
+  const embedded=Buffer.from(blocks[0][1]);
+  assert.equal(digest(embedded.subarray(0,74583)),'d85330b2f73c2325935fb71203e5fa3d85db2a26cbca33bce016a3cfd5a3a374');
+  assert.equal(embedded.subarray(74583,74585).toString(),',\n');
+  const csv=fs.readFileSync(path.join(__dirname,'cards/es.csv'));
+  assert.equal(digest(csv.subarray(0,14936)),'6a0c281442828abff748ea2f0156d9dfb03d430b857b03196179b46fbe8f7aa3');
+  assert.deepEqual(initialRows.slice(254).map(row=>row.id),Array.from({length:240},(_,i)=>'es-'+String(114+i).padStart(4,'0')));
+});
+test('各课程分语言展示；阅读中文默认折叠；80 道练习按题型反馈且不写入进度',() => {
   const {api:a,document}=createAPI(true);a.initialize();
   const before=plain(a.getData().state);
   for (const [id,lesson] of Object.entries(a.LESSONS)) {
     a.openLesson(id);
-    assert.equal(document.querySelectorAll('[data-lesson]').length,5);
+    assert.equal(document.querySelectorAll('[data-lesson]').length,8);
     const page=document.getElementById('content').innerHTML;
     assert(page.indexOf('西语课程')<page.indexOf('俄语课程'));
     assert(page.includes(lesson.goal));assert(page.includes(lesson.writingTask));
     assert.equal(document.querySelectorAll('[data-exercise]').length,10);
     if (lesson.reading) {
+      assert(page.includes('含下方 '+lesson.reading.questions.length+' 道阅读理解'));
       const translations=document.querySelectorAll('details').filter(node=>node.querySelector('summary')?.textContent==='查看本句中文');
       assert.equal(translations.length,lesson.reading.sentences.length);
       for (const node of translations) assert.equal(node.getAttribute('open'),null);
@@ -357,13 +452,33 @@ test('各课程分语言展示；阅读中文默认折叠；50 道练习可判�
     for (const form of document.querySelectorAll('[data-exercise]')) {
       const exercise=lesson.exercises[Number(form.dataset.exercise)];
       const submit=()=>document.getElementById('app').listeners.submit[0]({target:form,preventDefault(){}});
-      form.elements.answer.value='不正确的答案';submit();
-      assert.match(form.querySelector('.exercise-result').innerHTML,/拼写不一致/);
+      form.elements.answer.value=exercise.options?.find(option=>option!==exercise.answer) || '不正确的答案';submit();
+      const wrong=form.querySelector('.exercise-result');
+      assert.equal(wrong.textContent,exercise.options?'选错了；正确答案：'+exercise.answer:'拼写不一致；正确写法：'+exercise.answer+'。');
+      assert.match(wrong.innerHTML,/class="feedback wrong"/);
       form.elements.answer.value=exercise.answer;submit();
-      assert.match(form.querySelector('.exercise-result').innerHTML,/完全一致/);
+      assert.equal(form.querySelector('.exercise-result').textContent,exercise.options?'正确':'完全一致。');
+    }
+    a.openLesson(id); // 已判题结果重新渲染时也按同一种题型显示。
+    for (const form of document.querySelectorAll('[data-exercise]')) {
+      const exercise=lesson.exercises[Number(form.dataset.exercise)];
+      assert.equal(form.querySelector('.exercise-result').textContent,exercise.options?'正确':'完全一致。');
     }
   }
   assert.deepEqual(plain(a.getData().state),before);assert.equal(a.getData().dirty,false);
+});
+test('选择题错误反馈在切换课程后保留；文本题的符号错误反馈保持原样',() => {
+  const {api:a,document}=createAPI(true);a.initialize();a.openLesson('ru-03');
+  let form=document.querySelector('[data-exercise="7"]');
+  form.elements.answer.value='妈妈';
+  document.getElementById('app').listeners.submit[0]({target:form,preventDefault(){}});
+  a.openLesson('es-04');a.openLesson('ru-03');
+  assert.equal(document.querySelector('[data-exercise="7"]').querySelector('.exercise-result').textContent,'选错了；正确答案：兄弟');
+  a.openLesson('es-04');form=document.querySelector('[data-exercise="1"]');
+  form.elements.answer.value='se';
+  document.getElementById('app').listeners.submit[0]({target:form,preventDefault(){}});
+  assert.equal(form.querySelector('.exercise-result').textContent,'拼写对了，符号错了；正确写法：sé。');
+  assert.match(form.querySelector('.exercise-result').innerHTML,/class="feedback symbols"/);
 });
 test('letter / phrase 标签只生成识别卡；其他词条仍有两个方向',() => {
   for (const row of initialRows) {
@@ -469,12 +584,14 @@ test('新建空文件可首次保存；getFile 读取失败不能写；另存为
 const backupFlag=process.argv.indexOf('--state-backup');
 if (backupFlag!==-1) {
   assert(process.argv[backupFlag+1],'--state-backup 后需要文件路径');
-  test('state-data 内容与 /tmp 开工留底逐字节一致',() => {
+  test('state-data 原始字节与 /tmp 开工留底一致（支持完整 script 块或内部内容）',() => {
     const bytes=fs.readFileSync(path.join(__dirname,'index.html'));
     const opening=Buffer.from('<script type="application/json" id="state-data">');
     const start=bytes.indexOf(opening)+opening.length;
     assert(start>=opening.length);
     const end=bytes.indexOf(Buffer.from('</script>'),start);assert(end>start);
-    assert.deepEqual(bytes.subarray(start,end),fs.readFileSync(process.argv[backupFlag+1]));
+    const backup=fs.readFileSync(process.argv[backupFlag+1]);
+    const fullBlock=backup.subarray(0,opening.length).equals(opening);
+    assert.deepEqual(fullBlock?bytes.subarray(start-opening.length,end+'</script>'.length):bytes.subarray(start,end),backup);
   });
 }
