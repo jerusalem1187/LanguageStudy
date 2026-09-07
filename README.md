@@ -27,7 +27,7 @@
 | [russian/profile.md](russian/profile.md) | 俄语：同上 |
 | [russian/roadmap.md](russian/roadmap.md) | 俄语：同上 |
 | [russian/errors.md](russian/errors.md) | 俄语错题本 |
-| [srs/index.html](srs/index.html) | 自建 SRS 页面：复习、课程、统计、设置。卡片和进度嵌在文件里 |
+| [srs/index.html](srs/index.html) | 自建 SRS 页面：复习、课程（两门语言第 1–12 周共 24 课）、阅读（分级短文，答题得分写进进度）、统计、设置。卡片和进度嵌在文件里 |
 | [srs/cards/](srs/cards/) | 卡片来源 CSV，改完在页面里导入再保存 |
 | [srs/README.md](srs/README.md) | 页面用法：打开、保存、手机进度合并、加卡片 |
 | [log/time.csv](log/time.csv) | 统一时间记录，一行一条 |
@@ -35,7 +35,7 @@
 
 ## 每天怎么用
 
-0. 在 `srs/index.html` 里复习：电脑用 Chrome 打开本地文件，手机打开 https://jerusalem1187.github.io/LanguageStudy/srs/index.html 。每天结束点「保存」，再 `git commit` 和 `git push`。
+0. 在 `srs/index.html` 里复习和阅读：电脑用 Chrome 打开本地文件，手机打开 https://jerusalem1187.github.io/LanguageStudy/srs/index.html 。阅读标签里每周两篇分级短文，答完 4 题记得分。每天结束点「保存」，再 `git commit` 和 `git push`。仓库里的课程或页面更新后，先关掉旧页面再重新打开。
 1. 学完记一行到 `log/time.csv`。
 2. 输出练习里的错误记到对应语言的 `errors.md`。
 3. 周日 15 分钟：跑汇总命令，填周志，按 `weekly-cycle.md` 定下周用基线还是保底。

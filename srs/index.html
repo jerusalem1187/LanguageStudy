@@ -17114,7 +17114,19 @@ function validateState(value, now = new Date()) {
     if (!validDay(first) || first > record.last) throw new Error(`首次复习日期无效：${id}`);
     cards[id] = {due:record.due,ivl:record.ivl,ease:record.ease,reps:record.reps,lapses:record.lapses,last:record.last,first};
   }
-  return {version:1,updatedAt:new Date(value.updatedAt).toISOString(),settings:{newPerDay:{es:settings.es,ru:settings.ru}},cards,log:pruneLog(log,now)};
+  const result = {version:1,updatedAt:new Date(value.updatedAt).toISOString(),settings:{newPerDay:{es:settings.es,ru:settings.ru}},cards,log:pruneLog(log,now)};
+  if (value.readings !== undefined) result.readings = validateReadings(value.readings);
+  return result;
+}
+// 阅读进度是可选字段：旧进度没有这一项，写入后按同样规则校验。
+function validateReadings(value) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error('阅读进度须为对象。');
+  const readings = Object.create(null);
+  for (const [id,record] of Object.entries(value)) {
+    if (!validId(id) || !record || typeof record !== 'object' || !validDay(record.done) || !Number.isInteger(record.total) || record.total < 1 || record.total > 100 || !Number.isInteger(record.score) || record.score < 0 || record.score > record.total) throw new Error(`阅读进度无效：${id}`);
+    readings[id] = {done:record.done,score:record.score,total:record.total};
+  }
+  return readings;
 }
 function validCardId(value) {
   return typeof value === 'string' && /:[rp]$/.test(value) && validId(value.slice(0,-2));
@@ -17230,6 +17242,11 @@ function mergeProgress(current,incoming,now = new Date()) {
     if (seen.has(key)) return false;
     seen.add(key); return true;
   }),now);
+  const readings = {...(merged.readings || {})};
+  for (const [id,record] of Object.entries(incoming.readings || {})) {
+    if (!own(readings,id) || record.done > readings[id].done) readings[id] = {done:record.done,score:record.score,total:record.total};
+  }
+  if (Object.keys(readings).length) merged.readings = readings;
   return merged;
 }
 function statistics(rows,state,day) {
@@ -17645,7 +17662,7 @@ function spanishReflexiveExplanation() {
   <h4>本周写作提纲</h4><p>写 5 句：① 我几点醒、几点起床；② 早上按什么顺序做事，用 luego、después 连起来；③ 我喜欢什么，gusta 和 gustan 各写一句；④ 我不太喜欢什么；⑤ 这个周末我打算做什么，用 ir a + 不定式。写完检查三处：反身代词有没有跟人称对上、gustar 有没有跟后面的单复数对上、重音符号有没有漏。</p></div>`;
 }
 function spanishObjectPronounExplanation() {
-  return `<div class="lesson-text"><p>配合《现代西班牙语》第 6 课。本周三件事：宾语代词、指示词三级、现在进行时。每天 25 分钟仍是 SRS 10 分钟加阅读 15 分钟，每周一次 30 分钟用来看语法点和写 5 句。</p>
+  return `<div class="lesson-text"><p>配合《现代西班牙语》第 5 课。本周三件事：宾语代词、指示词三级、现在进行时。每天 25 分钟仍是 SRS 10 分钟加阅读 15 分钟，每周一次 30 分钟用来看语法点和写 5 句。</p>
   <h4>直接宾语代词与间接宾语代词</h4><p>直接宾语是动作直接作用的对象（买什么、看什么），间接宾语是收受的一方（给谁、对谁说）。两套代词只有第三人称不同。</p>
   <div class="table-wrap" tabindex="0" aria-label="可横向滚动的宾语代词表"><table><caption>两套宾语代词</caption><thead><tr><th>对应人称</th><th>直接宾语</th><th>间接宾语</th></tr></thead><tbody>${ES06_PRONOUNS.map(row=>'<tr>'+row.map(cell=>'<td>'+esc(cell)+'</td>').join('')+'</tr>').join('')}</tbody></table></div>
   <p>第三人称的直接宾语代词要跟着被替换的名词配合性数：el libro → lo，la carta → la，los libros → los，las cartas → las。</p>
@@ -17668,7 +17685,7 @@ function spanishObjectPronounExplanation() {
   <h4>本周写作提纲</h4><p>写 5 句描述眼前的东西和正在做的事：① 用 este / esta 说一样离你近的东西；② 用 ese 或 aquel 说一样离得远的；③ 用直接宾语代词改写一句（先写完整句，再改成代词句）；④ 用 estar + 副动词说你此刻在做什么；⑤ 说同屋或家人此刻在做什么。检查三处：代词的性数、代词的位置、副动词的拼写。</p></div>`;
 }
 function spanishPreteriteExplanation() {
-  return `<div class="lesson-text"><p>配合《现代西班牙语》第 7 课，以及英文语法练习册的 preterite 章节（可挑其中的规则动词练习做 20–30 题）。本周只学简单过去时的规则动词。每天 25 分钟是 SRS 10 分钟加阅读 15 分钟，每周一次 30 分钟看语法点并写 5 句。</p>
+  return `<div class="lesson-text"><p>配合《现代西班牙语》第 6 课，以及英文语法练习册的 preterite 章节（可挑其中的规则动词练习做 20–30 题）。本周只学简单过去时的规则动词。每天 25 分钟是 SRS 10 分钟加阅读 15 分钟，每周一次 30 分钟看语法点并写 5 句。</p>
   <h4>规则动词的简单过去时词尾</h4><p>-er 和 -ir 两类的过去时词尾完全相同，所以实际只有两套要记。</p>
   <div class="table-wrap" tabindex="0" aria-label="可横向滚动的简单过去时变位表"><table><caption>简单过去时：全部人称</caption><thead><tr><th>主语</th><th>词尾（-ar / -er、-ir）</th><th>hablar（说）</th><th>comer（吃）</th><th>vivir（住）</th></tr></thead><tbody>${ES07_PRETERITE.map(row=>'<tr>'+row.map(cell=>'<td>'+esc(cell)+'</td>').join('')+'</tr>').join('')}</tbody></table></div>
   <h4>重音符号是词形的一部分</h4><p>yo 和第三人称单数的词尾重读，必须标符号：hablé、habló、comí、comió、viví、vivió。漏掉符号就变成别的词形：<span lang="es">hablo</span>（我说，现在时）和 <span lang="es">habló</span>（他说了，过去时）只差一个符号，意思完全不同。</p>
@@ -17686,7 +17703,7 @@ function spanishPreteriteExplanation() {
   <h4>本周写作提纲</h4><p>写 5 句昨天做了什么：① 几点起床、几点出门；② 上午做了什么；③ 中午吃了什么；④ 下午或晚上遇到的一件事；⑤ 几点回家、几点睡。每句都放一个时间标记。写完检查三处：yo 和第三人称的重音符号、-car / -gar / -zar 的 yo 形式、nosotros 句是否需要靠时间标记才说得清。</p></div>`;
 }
 function spanishIrregularPreteriteExplanation() {
-  return `<div class="lesson-text"><p>配合《现代西班牙语》第 8 课，以及英文语法练习册 preterite 章节里的不规则动词部分。本周把常用不规则过去时集中记住，11-08 做月度检查点 2。每天 25 分钟是 SRS 10 分钟加阅读 15 分钟，每周一次 30 分钟用来看语法点和写 5 句。</p>
+  return `<div class="lesson-text"><p>配合《现代西班牙语》第 6 课，以及英文语法练习册 preterite 章节里的不规则动词部分。本周把常用不规则过去时集中记住，11-08 做月度检查点 2。每天 25 分钟是 SRS 10 分钟加阅读 15 分钟，每周一次 30 分钟用来看语法点和写 5 句。</p>
   <h4>第一组：强变化词干 + 一套不带重音符号的词尾</h4><p>这一组换掉词干，再统一加 -e、-iste、-o、-imos、-isteis、-ieron。这套词尾和规则动词不同：yo 和第三人称单数都不标重音符号，写 tuve、tuvo，不写 tuvé、tuvó。</p>
   <div class="table-wrap" tabindex="0" aria-label="可横向滚动的不规则简单过去时变位表"><table><caption>不规则简单过去时：全部人称</caption><thead><tr><th>不定式</th><th>词干</th><th>yo</th><th>tú</th><th>él / ella / usted</th><th>nosotros / nosotras</th><th>vosotros / vosotras</th><th>ellos / ellas / ustedes</th></tr></thead><tbody>${ES08_IRREGULAR.map(row=>'<tr>'+row.map(cell=>'<td>'+esc(cell)+'</td>').join('')+'</tr>').join('')}</tbody></table></div>
   <p>两处要单独记：hacer 的第三人称单数写 <span lang="es">hizo</span>，用 z 保持读音；decir 和 traer 的词干以 j 结尾，第三人称复数用 -eron，写 <span lang="es">dijeron</span>、<span lang="es">trajeron</span>，不是 dijieron、trajieron。</p>
@@ -17934,7 +17951,7 @@ const ES12_READING = {
   ]
 };
 function spanishImperfectExplanation() {
-  return `<div class="lesson-text"><p>配合《现代西班牙语》第 9 课。本周学过去未完成时（pretérito imperfecto），用来讲过去的习惯、样子和背景。每天 25 分钟是 SRS 10 分钟加阅读 15 分钟，每周一次 30 分钟用来看语法点和写 5 句。</p>
+  return `<div class="lesson-text"><p>配合《现代西班牙语》第 7 课。本周学过去未完成时（pretérito imperfecto），用来讲过去的习惯、样子和背景。每天 25 分钟是 SRS 10 分钟加阅读 15 分钟，每周一次 30 分钟用来看语法点和写 5 句。</p>
   <h4>词尾：只有两套</h4><p>-er 和 -ir 两类的词尾完全相同，所以整个时态只要记 -aba 和 -ía 两套。</p>
   <div class="table-wrap" tabindex="0" aria-label="可横向滚动的过去未完成时变位表"><table><caption>过去未完成时：全部人称</caption><thead><tr><th>主语</th><th>词尾（-ar / -er、-ir）</th><th>hablar（说）</th><th>comer（吃）</th><th>vivir（住）</th></tr></thead><tbody>${ES09_IMPERFECT.map(row=>'<tr>'+row.map(cell=>'<td>'+esc(cell)+'</td>').join('')+'</tr>').join('')}</tbody></table></div>
   <h4>重音符号的位置</h4><p>-ar 一套只有 nosotros 标符号：<span lang="es">hablábamos</span>。-er / -ir 一套每个人称都在 í 上标符号：<span lang="es">comía、comías、comíamos、comíais、comían</span>。这个符号是词形的一部分，漏写算错。</p>
@@ -17954,7 +17971,7 @@ function spanishImperfectExplanation() {
   <h4>本周写作提纲</h4><p>写 5 句「小时候的事」：① 那时住在哪里，用 vivía；② 家或学校是什么样子，用 era 和 había；③ 每天做什么，配一个时间标记；④ 那时的天气或季节，用 hacía；⑤ 那时几岁或家里人多大，用 tenía。写完检查三处：-er / -ir 每个人称的 í 有没有标、nosotros 的 -ábamos 有没有标、讲习惯的句子有没有误用简单过去时。</p></div>`;
 }
 function spanishPastContrastExplanation() {
-  return `<div class="lesson-text"><p>配合《现代西班牙语》第 10 课。本周把两种过去时放到同一段叙述里：哪句是背景，哪句是事件。每天 25 分钟是 SRS 10 分钟加阅读 15 分钟，每周一次 30 分钟用来看语法点和写 5 句。</p>
+  return `<div class="lesson-text"><p>配合《现代西班牙语》第 7 课。本周把两种过去时放到同一段叙述里：哪句是背景，哪句是事件。每天 25 分钟是 SRS 10 分钟加阅读 15 分钟，每周一次 30 分钟用来看语法点和写 5 句。</p>
   <h4>分工对照</h4><p>一段故事里，过去未完成时搭台，简单过去时推进。</p>
   <div class="table-wrap" tabindex="0" aria-label="可横向滚动的两种过去时对照表"><table><caption>背景与事件的分工</caption><thead><tr><th>要说的内容</th><th>用哪个时态</th><th>例句</th><th>中文</th></tr></thead><tbody>${ES10_CONTRAST.map(row=>'<tr>'+row.map(cell=>'<td>'+esc(cell)+'</td>').join('')+'</tr>').join('')}</tbody></table></div>
   <h4>同一句里的两种时态</h4><p>一句话里常常前半是背景、后半是事件，或者反过来。</p>
@@ -17975,7 +17992,7 @@ function spanishPastContrastExplanation() {
   <h4>本周写作提纲</h4><p>写 5 句混合两种过去时的短叙事：① 那天是什么日子、天气如何（背景）；② 你当时在做什么（背景）；③ 突然发生了什么（事件）；④ 你接着做了什么（事件，配一个连接词）；⑤ 最后结果怎样（事件）。写完检查三处：背景句是不是都用了过去未完成时、事件句是不是都用了简单过去时、五个意义变化动词有没有选错时态。</p></div>`;
 }
 function spanishComparisonExplanation() {
-  return `<div class="lesson-text"><p>配合《现代西班牙语》第 11 课。本周学比较、不定词和方位表达，用来描述和对比眼前的东西。每天 25 分钟是 SRS 10 分钟加阅读 15 分钟，每周一次 30 分钟用来看语法点和写 5 句。</p>
+  return `<div class="lesson-text"><p>配合《现代西班牙语》第 8 课。本周学比较、不定词和方位表达，用来描述和对比眼前的东西。每天 25 分钟是 SRS 10 分钟加阅读 15 分钟，每周一次 30 分钟用来看语法点和写 5 句。</p>
   <h4>比较与最高级</h4>
   <div class="table-wrap" tabindex="0" aria-label="可横向滚动的比较结构表"><table><caption>比较级、同级与最高级</caption><thead><tr><th>结构</th><th>写法</th><th>例句</th><th>中文</th></tr></thead><tbody>${ES11_COMPARISON.map(row=>'<tr>'+row.map(cell=>'<td>'+esc(cell)+'</td>').join('')+'</tr>').join('')}</tbody></table></div>
   <p>最高级里的“在……当中”用 de，不用 en：<span lang="es">Es el edificio más alto de la ciudad.</span>（这是城里最高的楼。）mayor 和 menor 讲年龄时是“年长、年幼”：<span lang="es">mi hermana mayor</span>（我姐姐）、<span lang="es">mi hermano menor</span>（我弟弟）。</p>
@@ -17992,7 +18009,7 @@ function spanishComparisonExplanation() {
   <h4>本周写作提纲</h4><p>写 5 句比较两样东西或描述位置：① 用 más … que 比较两个地方；② 用 tan … como 说两样东西一样；③ 用 mejor 或 peor 说哪个更好；④ 用一个方位短语说某样东西在哪里；⑤ 用 no + nadie 或 no + ningún 写一句否定。写完检查三处：比较句里的 que 有没有漏、algún / ningún 的符号有没有标、否定句里 no 和否定词是不是一起出现。</p></div>`;
 }
 function spanishFinalReviewExplanation() {
-  return `<div class="lesson-text"><p>本周不学新语法，复习第 1–11 周并做探索期复盘。教材方面把《现代西班牙语》学过的几课课文和练习再过一遍，重点是第 7 至 11 课的两种过去时、比较与不定词。12-06 做月度检查点 3，同时是探索期复盘。每天 25 分钟仍是 SRS 10 分钟加阅读 15 分钟，每周一次 30 分钟这次用来做限时写作和填复盘表。</p>
+  return `<div class="lesson-text"><p>本周不学新语法，复习第 1–11 周并做探索期复盘。教材方面复习《现代西班牙语》第 5 至 8 课的课文和练习，重点是两种过去时、比较与不定词。12-06 做月度检查点 3，同时是探索期复盘。每天 25 分钟仍是 SRS 10 分钟加阅读 15 分钟，每周一次 30 分钟这次用来做限时写作和填复盘表。</p>
   <h4>复习清单：七个语法点</h4><p>每点两个例句加一条常见错误。读一遍，把还写不出的那几点标出来，本周的 SRS 和写作就围绕它们。</p>
   <div class="table-wrap" tabindex="0" aria-label="可横向滚动的复习清单表"><table><caption>第 1–11 周语法点复习</caption><thead><tr><th>语法点</th><th>例句一</th><th>例句二</th><th>常见错误</th></tr></thead><tbody>${ES12_REVIEW.map(row=>'<tr>'+row.map(cell=>'<td>'+esc(cell)+'</td>').join('')+'</tr>').join('')}</tbody></table></div>
   <h4>自测流程</h4><ol>
@@ -18224,7 +18241,7 @@ const RU12_READING = {
   ]
 };
 const LESSONS = {
-  'es-01': {name:'西语文字与拼写，第一批词',lang:'es',week:1,dates:'09-14 至 09-20',goal:'辨认字母、重音符号与常见词形，开始第一批词的读写。',writingTask:'抄写 5 句，再用本课词写 5 句。',explanation:spanishExplanation,reading:null,exercises:[
+  'es-01': {name:'西语文字与拼写，第一批词',lang:'es',week:1,dates:'09-14 至 09-20',dailyTime:'每天 30 分钟 + 每周 3 次系统块 40 分钟',goal:'辨认字母、重音符号与常见词形，开始第一批词的读写。',writingTask:'抄写 5 句，再用本课词写 5 句。',explanation:spanishExplanation,reading:null,exercises:[
     {prompt:'补重音符号：tambien',answer:'también'},
     {prompt:'补重音符号：telefono',answer:'teléfono'},
     {prompt:'补重音符号：dificil',answer:'difícil'},
@@ -18236,7 +18253,7 @@ const LESSONS = {
     {prompt:'填空：¿____ está la casa?（房子在哪里？填小写词形。）',answer:'dónde'},
     {prompt:'填空：Quiero ____ español.（我想学西班牙语。）',answer:'estudiar'}
   ]},
-  'es-02': {name:'现在时 -ar 动词，名词与冠词',lang:'es',week:2,dates:'09-21 至 09-27',goal:'掌握 -ar 规则动词、tener、ir 的现在时全部人称，辨别名词性别、冠词与复数，写 5 句自我介绍。',writingTask:'按讲解中的中文提纲写 5 句自我介绍：名字、来自哪里、职业或学生、住哪里、会什么语言。',explanation:spanishARExplanation,reading:ES02_READING,exercises:[
+  'es-02': {name:'现在时 -ar 动词，名词与冠词',lang:'es',week:2,dates:'09-21 至 09-27',dailyTime:'每天 30 分钟 + 每周 3 次系统块 40 分钟',goal:'掌握 -ar 规则动词、tener、ir 的现在时全部人称，辨别名词性别、冠词与复数，写 5 句自我介绍。',writingTask:'按讲解中的中文提纲写 5 句自我介绍：名字、来自哪里、职业或学生、住哪里、会什么语言。',explanation:spanishARExplanation,reading:ES02_READING,exercises:[
     {prompt:'变位：Yo ____ español.（hablar；只填动词。）',answer:'hablo'},
     {prompt:'变位：Vosotras ____ en casa.（estudiar；保留重音符号。）',answer:'estudiáis'},
     {prompt:'变位：Nosotros ____ dos libros.（tener）',answer:'tenemos'},
@@ -18246,7 +18263,7 @@ const LESSONS = {
     {prompt:'复数：el lápiz → ____（连同复数定冠词写完整词组。）',answer:'los lápices'},
     ...ES02_READING.questions
   ]},
-  'es-03': {name:'-er / -ir 动词，性数一致',lang:'es',week:3,dates:'09-28 至 10-04',goal:'掌握 -er / -ir 规则现在时、形容词性数一致与位置、物主形容词、hay 和时间表达，写 5 句日常活动。',writingTask:'按讲解中的中文提纲写 5 句“我每天做什么”，包含时间、活动或频率；检查人称与性数一致。',explanation:spanishERIRExplanation,reading:ES03_READING,exercises:[
+  'es-03': {name:'-er / -ir 动词，性数一致',lang:'es',week:3,dates:'09-28 至 10-04',dailyTime:'每天 30 分钟 + 每周 3 次系统块 40 分钟',goal:'掌握 -er / -ir 规则现在时、形容词性数一致与位置、物主形容词、hay 和时间表达，写 5 句日常活动。',writingTask:'按讲解中的中文提纲写 5 句“我每天做什么”，包含时间、活动或频率；检查人称与性数一致。',explanation:spanishERIRExplanation,reading:ES03_READING,exercises:[
     {prompt:'变位：Nosotros ____ arroz.（comer）',answer:'comemos'},
     {prompt:'变位：Vosotras ____ en China.（vivir；保留重音符号。）',answer:'vivís'},
     {prompt:'变位：Ella ____ español.（aprender）',answer:'aprende'},
@@ -18256,7 +18273,7 @@ const LESSONS = {
     {prompt:'hay 与时间：选择同时正确表达“有一节课；现在两点半”的一项。',options:['Hay una clase; es las dos y media.','Hay una clase; son las dos y media.','Son una clase; hay las dos y media.'],answer:'Hay una clase; son las dos y media.'},
     ...ES03_READING.questions
   ]},
-  'es-04': {name:'复习与常用不规则动词',lang:'es',week:4,dates:'10-05 至 10-11',goal:'掌握常用不规则现在时和三类词干变化，读懂 A0 短文，默写第 1–3 周写过的句子；10-11 做月度检查点 1。',writingTask:'默写第 1–3 周写过的句子；周末按 framework/metrics-and-review.md 做月度检查点 1：用本课短文做阅读复述，15 分钟限时写作 100 词。',explanation:spanishReviewExplanation,reading:ES04_READING,exercises:[
+  'es-04': {name:'复习与常用不规则动词',lang:'es',week:4,dates:'10-05 至 10-11',dailyTime:'每天 30 分钟 + 每周 3 次系统块 40 分钟',goal:'掌握常用不规则现在时和三类词干变化，读懂 A0 短文，默写第 1–3 周写过的句子；10-11 做月度检查点 1。',writingTask:'默写第 1–3 周写过的句子；周末按 framework/metrics-and-review.md 做月度检查点 1：用本课短文做阅读复述，15 分钟限时写作 100 词。',explanation:spanishReviewExplanation,reading:ES04_READING,exercises:[
     {prompt:'不规则变位：Yo ____ el desayuno.（hacer）',answer:'hago'},
     {prompt:'不规则变位：Yo ____ leer en español.（saber；保留重音符号。）',answer:'sé'},
     {prompt:'不规则变位：Yo ____ a la profesora.（conocer）',answer:'conozco'},
@@ -18265,7 +18282,7 @@ const LESSONS = {
     {prompt:'词干变化：Tú ____ un café.（pedir）',answer:'pides'},
     ...ES04_READING.questions
   ]},
-  'es-05': {name:'反身动词、gustar、ir a + 不定式',lang:'es',week:5,dates:'10-12 至 10-18',goal:'掌握反身动词现在时与反身代词位置，用 gustar 和间接宾语代词说喜欢什么，用 ir a + 不定式说打算。配合《现代西班牙语》第 5 课。',writingTask:'写 5 句「我喜欢什么、每天几点起床」：gusta 和 gustan 各一句，起床和作息用反身动词，周末计划用 ir a + 不定式。',explanation:spanishReflexiveExplanation,reading:ES05_READING,exercises:[
+  'es-05': {name:'反身动词、gustar、ir a + 不定式',lang:'es',week:5,dates:'10-12 至 10-18',dailyTime:'每天 25 分钟 + 每周 30 分钟语法与写作',goal:'掌握反身动词现在时与反身代词位置，用 gustar 和间接宾语代词说喜欢什么，用 ir a + 不定式说打算。配合《现代西班牙语》第 5 课。',writingTask:'写 5 句「我喜欢什么、每天几点起床」：gusta 和 gustan 各一句，起床和作息用反身动词，周末计划用 ir a + 不定式。',explanation:spanishReflexiveExplanation,reading:ES05_READING,exercises:[
     {prompt:'反身变位：Yo ____ a las siete.（levantarse；只填代词和动词两个词。）',answer:'me levanto'},
     {prompt:'反身变位：Nosotros ____ tarde.（acostarse；只填代词和动词两个词。）',answer:'nos acostamos'},
     {prompt:'反身变位：Vosotros ____ la cara.（lavarse；保留重音符号。）',answer:'os laváis'},
@@ -18274,7 +18291,7 @@ const LESSONS = {
     {prompt:'ir a：Ella ____ estudiar mañana.（用 ir a 表示打算；只填两个词。）',answer:'va a'},
     ...ES05_READING.questions
   ]},
-  'es-06': {name:'宾语代词、指示词、现在进行时',lang:'es',week:6,dates:'10-19 至 10-25',goal:'掌握直接与间接宾语代词及其位置，区分 este / ese / aquel 三级指示词，用 estar + 副动词说正在做的事。配合《现代西班牙语》第 6 课。',writingTask:'写 5 句描述眼前的东西和正在做的事：近指、远指各一句，用直接宾语代词改写一句，再用 estar + 副动词写自己和家人此刻在做什么。',explanation:spanishObjectPronounExplanation,reading:ES06_READING,exercises:[
+  'es-06': {name:'宾语代词、指示词、现在进行时',lang:'es',week:6,dates:'10-19 至 10-25',dailyTime:'每天 25 分钟 + 每周 30 分钟语法与写作',goal:'掌握直接与间接宾语代词及其位置，区分 este / ese / aquel 三级指示词，用 estar + 副动词说正在做的事。配合《现代西班牙语》第 5 课。',writingTask:'写 5 句描述眼前的东西和正在做的事：近指、远指各一句，用直接宾语代词改写一句，再用 estar + 副动词写自己和家人此刻在做什么。',explanation:spanishObjectPronounExplanation,reading:ES06_READING,exercises:[
     {prompt:'代词替换：用直接宾语代词替换 el libro，写出整句。Compro el libro. →',answer:'Lo compro.'},
     {prompt:'代词替换：用直接宾语代词替换 las gafas，写出整句。Quiero las gafas. →',answer:'Las quiero.'},
     {prompt:'代词替换：把代词接在不定式后连写，写出整句。Quiero ver el mapa. →',answer:'Quiero verlo.'},
@@ -18284,7 +18301,7 @@ const LESSONS = {
     {prompt:'进行时：写出 dormir 的副动词。',answer:'durmiendo'},
     ...ES06_READING.questions
   ]},
-  'es-07': {name:'简单过去时：规则动词',lang:'es',week:7,dates:'10-26 至 11-01',goal:'掌握 -ar / -er / -ir 规则动词简单过去时的全部人称与重音符号，认得 -car / -gar / -zar 的 yo 形式和过去时间标记。配合《现代西班牙语》第 7 课和英文语法练习册的 preterite 章节。',writingTask:'写 5 句昨天做了什么：起床与出门、上午、中午、下午或晚上遇到的一件事、回家与睡觉，每句放一个过去时间标记。',explanation:spanishPreteriteExplanation,reading:ES07_READING,exercises:[
+  'es-07': {name:'简单过去时：规则动词',lang:'es',week:7,dates:'10-26 至 11-01',dailyTime:'每天 25 分钟 + 每周 30 分钟语法与写作',goal:'掌握 -ar / -er / -ir 规则动词简单过去时的全部人称与重音符号，认得 -car / -gar / -zar 的 yo 形式和过去时间标记。配合《现代西班牙语》第 6 课和英文语法练习册的 preterite 章节。',writingTask:'写 5 句昨天做了什么：起床与出门、上午、中午、下午或晚上遇到的一件事、回家与睡觉，每句放一个过去时间标记。',explanation:spanishPreteriteExplanation,reading:ES07_READING,exercises:[
     {prompt:'过去时变位：Yo ____ con mi amigo.（hablar；保留重音符号。）',answer:'hablé'},
     {prompt:'过去时变位：Ella ____ una carta.（escribir；保留重音符号。）',answer:'escribió'},
     {prompt:'过去时变位：Nosotros ____ pescado.（comer）',answer:'comimos'},
@@ -18293,7 +18310,7 @@ const LESSONS = {
     {prompt:'时间标记：选择与简单过去时搭配的一项。',options:['ahora','siempre','anoche'],answer:'anoche'},
     ...ES07_READING.questions
   ]},
-  'es-08': {name:'简单过去时：不规则动词；月度检查点 2',lang:'es',week:8,dates:'11-02 至 11-08',goal:'掌握常用不规则简单过去时和 -ir 动词第三人称的词干变化，区分 ser / ir 同形与 hubo；11-08 做月度检查点 2。配合《现代西班牙语》第 8 课。',writingTask:'写 5 句含不规则过去时的句子（hice 或 fui、estuve、dijo、no pude、hubo 各一句）；11-08 按 framework/metrics-and-review.md 做月度检查点 2：用本课短文做阅读复述，15 分钟限时写作 100 词。',explanation:spanishIrregularPreteriteExplanation,reading:ES08_READING,exercises:[
+  'es-08': {name:'简单过去时：不规则动词；月度检查点 2',lang:'es',week:8,dates:'11-02 至 11-08',dailyTime:'每天 25 分钟 + 每周 30 分钟语法与写作',goal:'掌握常用不规则简单过去时和 -ir 动词第三人称的词干变化，区分 ser / ir 同形与 hubo；11-08 做月度检查点 2。配合《现代西班牙语》第 6 课。',writingTask:'写 5 句含不规则过去时的句子（hice 或 fui、estuve、dijo、no pude、hubo 各一句）；11-08 按 framework/metrics-and-review.md 做月度检查点 2：用本课短文做阅读复述，15 分钟限时写作 100 词。',explanation:spanishIrregularPreteriteExplanation,reading:ES08_READING,exercises:[
     {prompt:'不规则变位：Yo ____ un viaje.（hacer 的过去时。）',answer:'hice'},
     {prompt:'不规则变位：Él ____ el desayuno.（hacer 的过去时第三人称单数；注意写 z。）',answer:'hizo'},
     {prompt:'不规则变位：Nosotros ____ en el hotel.（estar 的过去时。）',answer:'estuvimos'},
@@ -18302,7 +18319,7 @@ const LESSONS = {
     {prompt:'词干变化：选择“他们点了汤”的正确写法。',options:['Ellos pedieron sopa.','Ellos pidieron sopa.','Ellos pedaron sopa.'],answer:'Ellos pidieron sopa.'},
     ...ES08_READING.questions
   ]},
-  'es-09': {name:'过去未完成时',lang:'es',week:9,dates:'11-09 至 11-15',goal:'掌握过去未完成时的全部人称与 ser、ir、ver 三个不规则，用它讲过去的习惯、样子、背景、时间和年龄，认得 había。配合《现代西班牙语》第 9 课。',writingTask:'写 5 句「小时候的事」：住在哪里、家或学校的样子、每天做什么、那时的天气、那时几岁；每句用过去未完成时，至少三句配一个时间标记。',explanation:spanishImperfectExplanation,reading:ES09_READING,exercises:[
+  'es-09': {name:'过去未完成时',lang:'es',week:9,dates:'11-09 至 11-15',dailyTime:'每天 25 分钟 + 每周 30 分钟语法与写作',goal:'掌握过去未完成时的全部人称与 ser、ir、ver 三个不规则，用它讲过去的习惯、样子、背景、时间和年龄，认得 había。配合《现代西班牙语》第 7 课。',writingTask:'写 5 句「小时候的事」：住在哪里、家或学校的样子、每天做什么、那时的天气、那时几岁；每句用过去未完成时，至少三句配一个时间标记。',explanation:spanishImperfectExplanation,reading:ES09_READING,exercises:[
     {prompt:'过去未完成时：Yo ____ en un pueblo.（vivir；保留重音符号。）',answer:'vivía'},
     {prompt:'过去未完成时：Nosotros ____ en el patio.（jugar；保留重音符号。）',answer:'jugábamos'},
     {prompt:'过去未完成时：Ellos ____ fruta cada día.（comer；保留重音符号。）',answer:'comían'},
@@ -18311,7 +18328,7 @@ const LESSONS = {
     {prompt:'存在：____ un árbol en el patio.（hay 的过去未完成时；保留重音符号。）',answer:'había'},
     ...ES09_READING.questions
   ]},
-  'es-10': {name:'两种过去时的分工',lang:'es',week:10,dates:'11-16 至 11-22',goal:'在叙事里区分背景和事件，掌握 mientras 与 cuando 的搭配、五个意义随时态变化的动词和常用叙事连接词。配合《现代西班牙语》第 10 课。',writingTask:'写 5 句混合两种过去时的短叙事：那天的日子与天气、你当时在做什么、突然发生了什么、你接着做了什么、最后结果怎样；至少用两个叙事连接词。',explanation:spanishPastContrastExplanation,reading:ES10_READING,exercises:[
+  'es-10': {name:'两种过去时的分工',lang:'es',week:10,dates:'11-16 至 11-22',dailyTime:'每天 25 分钟 + 每周 30 分钟语法与写作',goal:'在叙事里区分背景和事件，掌握 mientras 与 cuando 的搭配、五个意义随时态变化的动词和常用叙事连接词。配合《现代西班牙语》第 7 课。',writingTask:'写 5 句混合两种过去时的短叙事：那天的日子与天气、你当时在做什么、突然发生了什么、你接着做了什么、最后结果怎样；至少用两个叙事连接词。',explanation:spanishPastContrastExplanation,reading:ES10_READING,exercises:[
     {prompt:'选时态：Cuando ____, mi madre cocinaba.（llegar，yo）',options:['llegaba','llegué'],answer:'llegué'},
     {prompt:'选时态：Mientras yo ____, sonó el teléfono.（leer，yo）',options:['leía','leí'],answer:'leía'},
     {prompt:'选时态：Aquel día ____ sol y fuimos a la playa.（hacer）',options:['hacía','hizo'],answer:'hacía'},
@@ -18320,7 +18337,7 @@ const LESSONS = {
     {prompt:'连接词：Hacía frío, ____ volvimos a casa.（填表示“所以”的两个词，用小写，中间留一个空格。）',answer:'por eso'},
     ...ES10_READING.questions
   ]},
-  'es-11': {name:'比较、不定词与方位',lang:'es',week:11,dates:'11-23 至 11-29',goal:'掌握比较级、同级与最高级和 mejor / peor / mayor / menor，会用不定代词与双重否定，会用方位短语说位置，认得 32–100 和 mil。配合《现代西班牙语》第 11 课。',writingTask:'写 5 句比较两样东西或描述位置：一句 más … que，一句 tan … como，一句 mejor 或 peor，一句方位短语，一句 no + nadie 或 no + ningún 的否定。',explanation:spanishComparisonExplanation,reading:ES11_READING,exercises:[
+  'es-11': {name:'比较、不定词与方位',lang:'es',week:11,dates:'11-23 至 11-29',dailyTime:'每天 25 分钟 + 每周 30 分钟语法与写作',goal:'掌握比较级、同级与最高级和 mejor / peor / mayor / menor，会用不定代词与双重否定，会用方位短语说位置，认得 32–100 和 mil。配合《现代西班牙语》第 8 课。',writingTask:'写 5 句比较两样东西或描述位置：一句 más … que，一句 tan … como，一句 mejor 或 peor，一句方位短语，一句 no + nadie 或 no + ningún 的否定。',explanation:spanishComparisonExplanation,reading:ES11_READING,exercises:[
     {prompt:'比较级：Esta ciudad es ____ grande que mi pueblo.（填“更”。）',answer:'más'},
     {prompt:'同级：Mi calle es ____ ancha como la avenida.（填一个词。）',answer:'tan'},
     {prompt:'不规则比较级：选择“这套房子比那套好”的正确写法。',options:['Este piso es más bueno que aquel.','Este piso es mejor que aquel.','Este piso es más mejor que aquel.'],answer:'Este piso es mejor que aquel.'},
@@ -18329,7 +18346,7 @@ const LESSONS = {
     {prompt:'方位：El banco está ____ la parada.（填“在……旁边”的三个词，用小写，词之间各留一个空格。）',answer:'al lado de'},
     ...ES11_READING.questions
   ]},
-  'es-12': {name:'复习与探索期复盘',lang:'es',week:12,dates:'11-30 至 12-06',goal:'复习第 1–11 周的语法，用本课短文做阅读复述，限时写作 100 词；12-06 做月度检查点 3 和探索期复盘。',writingTask:'限时写作 15 分钟、100 词，题目「我这三个月学了什么」；12-06 按 framework/metrics-and-review.md 做月度检查点 3 与探索期复盘：用本课短文做阅读复述，填复盘表并按决定矩阵决定下一阶段。',explanation:spanishFinalReviewExplanation,reading:ES12_READING,exercises:[
+  'es-12': {name:'复习与探索期复盘',lang:'es',week:12,dates:'11-30 至 12-06',dailyTime:'每天 25 分钟 + 每周 30 分钟语法与写作',goal:'复习第 1–11 周的语法，用本课短文做阅读复述，限时写作 100 词；12-06 做月度检查点 3 和探索期复盘。',writingTask:'限时写作 15 分钟、100 词，题目「我这三个月学了什么」；12-06 按 framework/metrics-and-review.md 做月度检查点 3 与探索期复盘：用本课短文做阅读复述，填复盘表并按决定矩阵决定下一阶段。',explanation:spanishFinalReviewExplanation,reading:ES12_READING,exercises:[
     {prompt:'现在时：Yo ____ dos hermanos.（tener）',answer:'tengo'},
     {prompt:'反身与 gustar：A mí ____ gustan los deportes.（填间接宾语代词。）',answer:'me'},
     {prompt:'简单过去时：Ayer ____ dos horas.（estudiar，yo；保留重音符号。）',answer:'estudié'},
@@ -18338,7 +18355,7 @@ const LESSONS = {
     {prompt:'两种过去时：选择“我在看书的时候，电话响了”的正确写法。',options:['Mientras yo leí, sonaba el teléfono.','Mientras yo leía, sonó el teléfono.','Mientras yo leía, sonaba el teléfono.'],answer:'Mientras yo leía, sonó el teléfono.'},
     ...ES12_READING.questions
   ]},
-  'ru-01': {name:'西里尔字母',lang:'ru',week:1,dates:'09-14 至 09-20',goal:'认全 33 个字母，辨别印刷体和斜体。',writingTask:'每天手写 8–10 个字母；周末不看提示默写 33 个字母。',explanation:russianExplanation,reading:null,exercises:[
+  'ru-01': {name:'西里尔字母',lang:'ru',week:1,dates:'09-14 至 09-20',dailyTime:'每天 10 分钟',goal:'认全 33 个字母，辨别印刷体和斜体。',writingTask:'每天手写 8–10 个字母；周末不看提示默写 33 个字母。',explanation:russianExplanation,reading:null,exercises:[
     {prompt:'看斜体，输入对应的小写印刷体：',italic:'т',answer:'т'},
     {prompt:'看斜体，输入对应的小写印刷体：',italic:'д',answer:'д'},
     {prompt:'看斜体，输入对应的小写印刷体：',italic:'и',answer:'и'},
@@ -18350,7 +18367,7 @@ const LESSONS = {
     {prompt:'看中文打俄语：音乐（可不输入重音）',answer:'му́зыка'},
     {prompt:'看中文打俄语：咖啡（可不输入重音）',answer:'ко́фе'}
   ]},
-  'ru-02': {name:'打字与更多国际词',lang:'ru',week:2,dates:'09-21 至 09-27',goal:'不看键盘打出 33 个字母；认得字母表顺序。',writingTask:'每天打 20 个词，可从 ru-01、ru-02 选词重复练。',explanation:russianTypingExplanation,reading:null,exercises:[
+  'ru-02': {name:'打字与更多国际词',lang:'ru',week:2,dates:'09-21 至 09-27',dailyTime:'每天 10 分钟',goal:'不看键盘打出 33 个字母；认得字母表顺序。',writingTask:'每天打 20 个词，可从 ru-01、ru-02 选词重复练。',explanation:russianTypingExplanation,reading:null,exercises:[
     {prompt:'看中文打俄语：杂志（可不输入重音）',answer:'журна́л'},
     {prompt:'看中文打俄语：商店',answer:'магази́н'},
     {prompt:'看中文打俄语：机场',answer:'аэропо́рт'},
@@ -18362,7 +18379,7 @@ const LESSONS = {
     {prompt:'看斜体，写出整词的小写印刷体：',italic:'дире́ктор',answer:'дире́ктор'},
     {prompt:'看斜体，写出整词的小写印刷体：',italic:'фи́льм',answer:'фи́льм'}
   ]},
-  'ru-03': {name:'拼写规则与第一批常用词',lang:'ru',week:3,dates:'09-28 至 10-04',goal:'能解释 книги、пишу、хорошее 为什么这么写；抄写课文 5 句。',writingTask:'从本课短文选 5 句抄写，检查字母、大小写和标点。',explanation:russianSpellingExplanation,reading:RU03_READING,exercises:[
+  'ru-03': {name:'拼写规则与第一批常用词',lang:'ru',week:3,dates:'09-28 至 10-04',dailyTime:'每天 10 分钟',goal:'能解释 книги、пишу、хорошее 为什么这么写；抄写课文 5 句。',writingTask:'从本课短文选 5 句抄写，检查字母、大小写和标点。',explanation:russianSpellingExplanation,reading:RU03_READING,exercises:[
     {prompt:'拼写规则：книг_（书的复数，кни́га → кни́г_）。只填缺少的一个字母。',answer:'и'},
     {prompt:'拼写规则：пиш_（我写，重音在词尾）。只填缺少的一个字母。',answer:'у'},
     {prompt:'拼写规则：хоро́ш_е（好的，中性；空格不重读）。只填缺少的一个字母。',answer:'е'},
@@ -18372,7 +18389,7 @@ const LESSONS = {
     {prompt:'看中文写俄语：书',answer:'кни́га'},
     ...RU03_READING.questions
   ]},
-  'ru-04': {name:'复习与自我介绍句型',lang:'ru',week:4,dates:'10-05 至 10-11',goal:'默写 ru-01 到 ru-03 的词正确率达到 80%；能写 5 句自我介绍。10-11 为月度检查点 1。',writingTask:'写 5 句自我介绍；周末按下方说明做月度检查点 1 自测（framework/metrics-and-review.md）。',explanation:russianIntroductionExplanation,reading:RU04_READING,exercises:[
+  'ru-04': {name:'复习与自我介绍句型',lang:'ru',week:4,dates:'10-05 至 10-11',dailyTime:'每天 10 分钟',goal:'默写 ru-01 到 ru-03 的词正确率达到 80%；能写 5 句自我介绍。10-11 为月度检查点 1。',writingTask:'写 5 句自我介绍；周末按下方说明做月度检查点 1 自测（framework/metrics-and-review.md）。',explanation:russianIntroductionExplanation,reading:RU04_READING,exercises:[
     {prompt:'看中文写俄语：今天',answer:'сего́дня'},
     {prompt:'看中文写俄语：新的（阳性单数）',answer:'но́вый'},
     {prompt:'看中文写俄语：家庭',answer:'семья́'},
@@ -18382,7 +18399,7 @@ const LESSONS = {
     {prompt:'数字：用俄语写 8',answer:'во́семь'},
     ...RU04_READING.questions
   ]},
-  'ru-05': {name:'名词的性与主格；Это / Кто / Что',lang:'ru',week:5,dates:'10-12 至 10-18',goal:'能看词尾判断名词的性，写出常见主格复数，并用 Э́то、Кто э́то?、Что э́то? 写问答句。配合《东方大学俄语（新版）》第 1 课。',writingTask:'写 5 句「这是什么／这是谁」介绍自己的房间或家人；周末完成一次 60 分钟系统块。',explanation:russianNounGenderExplanation,reading:RU05_READING,exercises:[
+  'ru-05': {name:'名词的性与主格；Это / Кто / Что',lang:'ru',week:5,dates:'10-12 至 10-18',dailyTime:'每天 30 分钟 + 周末系统块 60 分钟',goal:'能看词尾判断名词的性，写出常见主格复数，并用 Э́то、Кто э́то?、Что э́то? 写问答句。配合《东方大学俄语（新版）》第 1 课。',writingTask:'写 5 句「这是什么／这是谁」介绍自己的房间或家人；周末完成一次 60 分钟系统块。',explanation:russianNounGenderExplanation,reading:RU05_READING,exercises:[
     {prompt:'判断性：ла́мпа 是什么性？',options:['阳性','阴性','中性'],answer:'阴性'},
     {prompt:'判断性：слова́рь 是什么性？',options:['阳性','阴性','中性'],answer:'阳性'},
     {prompt:'判断性：кре́сло 是什么性？',options:['阳性','阴性','中性'],answer:'中性'},
@@ -18391,7 +18408,7 @@ const LESSONS = {
     {prompt:'写复数：го́род →',answer:'города́'},
     ...RU05_READING.questions
   ]},
-  'ru-06': {name:'第一变位现在时；у меня́ есть；物主代词',lang:'ru',week:6,dates:'10-19 至 10-25',goal:'能变第一变位规则动词的六个人称，用 у меня́ есть 表达“有”，并让物主代词与名词的性数一致。配合《东方大学俄语（新版）》第 2 课。',writingTask:'写 5 句「我有什么、我在做什么」；周末完成一次 60 分钟系统块。',explanation:russianFirstConjugationExplanation,reading:RU06_READING,exercises:[
+  'ru-06': {name:'第一变位现在时；у меня́ есть；物主代词',lang:'ru',week:6,dates:'10-19 至 10-25',dailyTime:'每天 30 分钟 + 周末系统块 60 分钟',goal:'能变第一变位规则动词的六个人称，用 у меня́ есть 表达“有”，并让物主代词与名词的性数一致。配合《东方大学俄语（新版）》第 2 课。',writingTask:'写 5 句「我有什么、我在做什么」；周末完成一次 60 分钟系统块。',explanation:russianFirstConjugationExplanation,reading:RU06_READING,exercises:[
     {prompt:'变位：Я ____ те́кст。（чита́ть）',answer:'чита́ю'},
     {prompt:'变位：Ты ____ вопро́с。（понима́ть）',answer:'понима́ешь'},
     {prompt:'变位：Мы ____ до́ма。（рабо́тать）',answer:'рабо́таем'},
@@ -18401,7 +18418,7 @@ const LESSONS = {
     {prompt:'物主代词：____ тетра́дь。（我的）',options:['Мой','Моя́','Моё','Мои́'],answer:'Моя́'},
     ...RU06_READING.questions
   ]},
-  'ru-07': {name:'前置格；第二变位现在时',lang:'ru',week:7,dates:'10-26 至 11-01',goal:'能用前置格单数表达在哪里和关于什么，选择 в / на，并变第二变位动词的六个人称。配合《东方大学俄语（新版）》第 3 课。',writingTask:'写 5 句「我住在哪、在哪工作或学习、我在说什么或想什么」；周末完成一次 60 分钟系统块。',explanation:russianPrepositionalExplanation,reading:RU07_READING,exercises:[
+  'ru-07': {name:'前置格；第二变位现在时',lang:'ru',week:7,dates:'10-26 至 11-01',dailyTime:'每天 30 分钟 + 周末系统块 60 分钟',goal:'能用前置格单数表达在哪里和关于什么，选择 в / на，并变第二变位动词的六个人称。配合《东方大学俄语（新版）》第 3 课。',writingTask:'写 5 句「我住在哪、在哪工作或学习、我在说什么或想什么」；周末完成一次 60 分钟系统块。',explanation:russianPrepositionalExplanation,reading:RU07_READING,exercises:[
     {prompt:'写完整形式：в библиоте́ка →',answer:'в библиоте́ке'},
     {prompt:'写完整形式：на у́лица →',answer:'на у́лице'},
     {prompt:'写完整形式：о страна́ →',answer:'о стране́'},
@@ -18411,7 +18428,7 @@ const LESSONS = {
     {prompt:'第二变位：Он ____ в ко́мнате。（си́деть）',answer:'си́дит'},
     ...RU07_READING.questions
   ]},
-  'ru-08': {name:'宾格；复数主格复习；月度检查点 2',lang:'ru',week:8,dates:'11-02 至 11-08',goal:'能写宾格单数直接宾语，区分有生命和无生命，复习复数主格；11-08 做月度检查点 2。配合《东方大学俄语（新版）》第 4 课。',writingTask:'写 5 句「我读什么、看什么、喜欢什么」；11-08 按 framework/metrics-and-review.md 做月度检查点 2 自测。',explanation:russianAccusativeExplanation,reading:RU08_READING,exercises:[
+  'ru-08': {name:'宾格；复数主格复习；月度检查点 2',lang:'ru',week:8,dates:'11-02 至 11-08',dailyTime:'每天 30 分钟 + 周末系统块 60 分钟',goal:'能写宾格单数直接宾语，区分有生命和无生命，复习复数主格；11-08 做月度检查点 2。配合《东方大学俄语（新版）》第 4 课。',writingTask:'写 5 句「我读什么、看什么、喜欢什么」；11-08 按 framework/metrics-and-review.md 做月度检查点 2 自测。',explanation:russianAccusativeExplanation,reading:RU08_READING,exercises:[
     {prompt:'宾格：Я чита́ю ____。（рома́н，无生命）',answer:'рома́н'},
     {prompt:'宾格：Я чита́ю ____。（статья́）',answer:'статью́'},
     {prompt:'宾格：Я встреча́ю ____。（друг，有生命）',answer:'дру́га'},
@@ -18420,7 +18437,7 @@ const LESSONS = {
     {prompt:'代词宾格：Я ви́жу ____。（她）',answer:'её'},
     ...RU08_READING.questions
   ]},
-  'ru-09': {name:'过去时；时间表达',lang:'ru',week:9,dates:'11-09 至 11-15',goal:'能按性和数写出过去时的四个形式，用 был / была́ / бы́ло / бы́ли 说过去的状态，并用常见时间表达讲昨天做了什么。配合《东方大学俄语（新版）》第 5 课。',writingTask:'写 5 句昨天做了什么：起床或早饭、上午、下午、晚上、一件没做成的事，每句配一个时间表达；周末完成一次 60 分钟系统块。',explanation:russianPastTenseExplanation,reading:RU09_READING,exercises:[
+  'ru-09': {name:'过去时；时间表达',lang:'ru',week:9,dates:'11-09 至 11-15',dailyTime:'每天 30 分钟 + 周末系统块 60 分钟',goal:'能按性和数写出过去时的四个形式，用 был / была́ / бы́ло / бы́ли 说过去的状态，并用常见时间表达讲昨天做了什么。配合《东方大学俄语（新版）》第 5 课。',writingTask:'写 5 句昨天做了什么：起床或早饭、上午、下午、晚上、一件没做成的事，每句配一个时间表达；周末完成一次 60 分钟系统块。',explanation:russianPastTenseExplanation,reading:RU09_READING,exercises:[
     {prompt:'过去时：Вчера́ я ____ письмо́。（писа́ть；说话的人是男性）',answer:'писа́л'},
     {prompt:'过去时：Вчера́ сестра́ ____ у́жин。（гото́вить）',answer:'гото́вила'},
     {prompt:'过去时：Мы ____ фи́льм。（смотре́ть）',answer:'смотре́ли'},
@@ -18429,7 +18446,7 @@ const LESSONS = {
     {prompt:'быть 的过去时：Позавчера́ мы ____ на конце́рте。',answer:'бы́ли'},
     ...RU09_READING.questions
   ]},
-  'ru-10': {name:'形容词主格；指示代词',lang:'ru',week:10,dates:'11-16 至 11-22',goal:'能让形容词的性数与名词一致，区分硬变化、软变化和词尾重读的 -о́й，会用 како́й 提问、用 э́тот 和 тот 指示。配合《东方大学俄语（新版）》第 6 课。',writingTask:'写 5 句描述一个东西：颜色、大小、新旧、贵贱各一句，再写一个 како́й 问句；周末完成一次 60 分钟系统块。',explanation:russianAdjectiveExplanation,reading:RU10_READING,exercises:[
+  'ru-10': {name:'形容词主格；指示代词',lang:'ru',week:10,dates:'11-16 至 11-22',dailyTime:'每天 30 分钟 + 周末系统块 60 分钟',goal:'能让形容词的性数与名词一致，区分硬变化、软变化和词尾重读的 -о́й，会用 како́й 提问、用 э́тот 和 тот 指示。配合《东方大学俄语（新版）》第 6 课。',writingTask:'写 5 句描述一个东西：颜色、大小、新旧、贵贱各一句，再写一个 како́й 问句；周末完成一次 60 分钟系统块。',explanation:russianAdjectiveExplanation,reading:RU10_READING,exercises:[
     {prompt:'形容词一致：____ кни́га。（интере́сный）',answer:'интере́сная'},
     {prompt:'形容词一致：____ пальто́。（тёплый；中性单数）',answer:'тёплое'},
     {prompt:'形容词一致：____ ту́фли。（чёрный；复数）',answer:'чёрные'},
@@ -18438,7 +18455,7 @@ const LESSONS = {
     {prompt:'指示词：____ дом высо́кий。（那个；阳性单数）',options:['Тот','Та','То','Те'],answer:'Тот'},
     ...RU10_READING.questions
   ]},
-  'ru-11': {name:'属格入门',lang:'ru',week:11,dates:'11-23 至 11-29',goal:'能写属格单数词尾，用 нет + 属格说没有，用属格表示所属，认得人称代词属格和数词 2–4 接属格单数。配合《东方大学俄语（新版）》第 7 课。',writingTask:'写 5 句「我没有什么、这是谁的」：三句 нет + 属格，两句所属；跟不上就把本周改成复习，只做练习和阅读；周末完成一次 60 分钟系统块。',explanation:russianGenitiveExplanation,reading:RU11_READING,exercises:[
+  'ru-11': {name:'属格入门',lang:'ru',week:11,dates:'11-23 至 11-29',dailyTime:'每天 30 分钟 + 周末系统块 60 分钟',goal:'能写属格单数词尾，用 нет + 属格说没有，用属格表示所属，认得人称代词属格和数词 2–4 接属格单数。配合《东方大学俄语（新版）》第 7 课。',writingTask:'写 5 句「我没有什么、这是谁的」：三句 нет + 属格，两句所属；跟不上就把本周改成复习，只做练习和阅读；周末完成一次 60 分钟系统块。',explanation:russianGenitiveExplanation,reading:RU11_READING,exercises:[
     {prompt:'нет + 属格：У меня́ нет ____。（зонт）',answer:'зонта́'},
     {prompt:'нет + 属格：Сего́дня нет ____。（вода́）',answer:'воды́'},
     {prompt:'нет + 属格：В до́ме нет ____。（молоко́）',answer:'молока́'},
@@ -18447,7 +18464,7 @@ const LESSONS = {
     {prompt:'数词：два ____（день；2–4 后接属格单数）',answer:'дня'},
     ...RU11_READING.questions
   ]},
-  'ru-12': {name:'复习与探索期复盘',lang:'ru',week:12,dates:'11-30 至 12-06',goal:'复习主格、前置格、宾格和属格入门，复习两种变位与过去时，用本课短文做阅读复述，限时写作 50 词；12-06 做月度检查点 3 和探索期复盘。',writingTask:'限时写作 15 分钟、50 词，题目「我的一周」或「我的房间」，再用过去时和形容词改写 5 句自我介绍；12-06 按 framework/metrics-and-review.md 做月度检查点 3 与探索期复盘：用本课短文做阅读复述，填复盘表并按决定矩阵决定下一阶段。',explanation:russianFinalReviewExplanation,reading:RU12_READING,exercises:[
+  'ru-12': {name:'复习与探索期复盘',lang:'ru',week:12,dates:'11-30 至 12-06',dailyTime:'每天 30 分钟 + 周末系统块 60 分钟',goal:'复习主格、前置格、宾格和属格入门，复习两种变位与过去时，用本课短文做阅读复述，限时写作 50 词；12-06 做月度检查点 3 和探索期复盘。',writingTask:'限时写作 15 分钟、50 词，题目「我的一周」或「我的房间」，再用过去时和形容词改写 5 句自我介绍；12-06 按 framework/metrics-and-review.md 做月度检查点 3 与探索期复盘：用本课短文做阅读复述，填复盘表并按决定矩阵决定下一阶段。',explanation:russianFinalReviewExplanation,reading:RU12_READING,exercises:[
     {prompt:'前置格：Я живу́ в ____。（Москва́）',answer:'Москве́'},
     {prompt:'宾格：Я покупа́ю ____。（газе́та）',answer:'газе́ту'},
     {prompt:'属格：У меня́ нет ____。（слова́рь）',answer:'словаря́'},
@@ -18737,6 +18754,1011 @@ function russianFinalReviewExplanation() {
   <h4>下一阶段预告</h4><p>如果俄语继续，建设期的语法主线是：与格（<span lang="ru">кому́?</span>，用于给谁、对谁说、年龄）、工具格（<span lang="ru">кем? чем?</span>，用于用什么工具、和谁一起）、动词体（每个动词的未完成体和完成体配对，讲过程还是讲做完）、运动动词（<span lang="ru">идти́ / ходи́ть</span>、<span lang="ru">е́хать / е́здить</span> 两套，再加前缀）。之后是将来时、复数各格和形容词的全部格。阅读从教材课文扩到 Ilya Frank 双语文本和分级读物，每天阅读时长逐步加到 25 至 30 分钟。</p></div>`;
 }
 
+// 阅读理解线。afterLesson 是允许使用的词汇上限（该课及之前的课），words 是目标语词数。
+const READINGS = {
+  'es-r01': {id:'es-r01',lang:'es',afterLesson:'es-02',week:2,title:'学生胡安',genre:'人物介绍',words:95,sentences:[
+    {text:'Juan es estudiante y es español.',zh:'胡安是学生，是西班牙人。'},
+    {text:'Ahora estudia el chino en la universidad.',zh:'现在他在大学学中文。'},
+    {text:'La universidad es grande y está en la ciudad.',zh:'大学很大，在城里。'},
+    {text:'El lunes y el martes Juan camina a la escuela.',zh:'星期一和星期二胡安走路去学校。'},
+    {text:'El jueves y el viernes trabaja en una tienda pequeña.',zh:'星期四和星期五他在一家小商店工作。'},
+    {text:'Juan habla español y también estudia el inglés.',zh:'胡安说西班牙语，也学英语。'},
+    {text:'En la tienda ayuda a las personas y contesta preguntas.',zh:'在商店里他帮客人，回答问题。'},
+    {text:'El sábado Juan no trabaja.',zh:'星期六胡安不上班。'},
+    {text:'El domingo desayuna con la familia y camina al parque.',zh:'星期天他和家人吃早饭，再走到公园。'},
+    {text:'Ana es la hermana de Juan.',zh:'安娜是胡安的姐妹。'},
+    {text:'Ana no estudia y trabaja en un hospital.',zh:'安娜不上学，她在医院工作。'},
+    {text:'Juan es un amigo muy bueno.',zh:'胡安是一个很好的朋友。'}
+  ],questions:[
+    {prompt:'阅读：胡安星期四和星期五做什么？',options:['在学校上课','在小商店工作','在医院工作'],answer:'在小商店工作'},
+    {prompt:'阅读：胡安平时怎么去学校？',options:['走路','坐车','和安娜一起开车'],answer:'走路'},
+    {prompt:'阅读：安娜在哪里工作？',options:['商店','大学','医院'],answer:'医院'},
+    {prompt:'推断：短文没有直接说安娜是不是学生。根据短文可以推出什么？',options:['安娜不上学，她已经在医院上班','安娜和胡安在同一所大学上学','安娜星期六在商店帮忙'],answer:'安娜不上学，她已经在医院上班'}
+  ],keyWords:[
+    {word:'el estudiante',zh:'学生（男性）'},
+    {word:'la universidad',zh:'大学'},
+    {word:'la tienda',zh:'商店'},
+    {word:'caminar',zh:'步行'},
+    {word:'contestar',zh:'回答'}
+  ],retell:[
+    '胡安是西班牙人，在大学学中文。',
+    '星期一、星期二走路去学校，星期四、星期五在一家小商店上班。',
+    '在商店里帮客人、回答问题；星期六不上班。',
+    '星期天和家人吃早饭，然后走到公园。',
+    '安娜是他的姐妹，不上学，在医院工作。'
+  ]},
+  'es-r02': {id:'es-r02',lang:'es',afterLesson:'es-02',week:2,title:'在图书馆认识同学',genre:'对话',words:90,sentences:[
+    {text:'Ana: Hola, buenos días.',zh:'安娜：你好，早上好。'},
+    {text:'Juan: Buenos días. ¿Tú eres Ana?',zh:'胡安：早上好。你是安娜吗？'},
+    {text:'Ana: Sí, soy Ana y soy estudiante aquí.',zh:'安娜：是的，我是安娜，我是这里的学生。'},
+    {text:'Juan: Yo también estudio aquí.',zh:'胡安：我也在这里学习。'},
+    {text:'Ana: ¿Qué estudias?',zh:'安娜：你学什么？'},
+    {text:'Juan: Estudio español y el chino.',zh:'胡安：我学西班牙语和中文。'},
+    {text:'Ana: ¿Y hablas inglés?',zh:'安娜：那你说英语吗？'},
+    {text:'Juan: Hablo inglés, pero es difícil.',zh:'胡安：我说英语，不过很难。'},
+    {text:'Ana: El español no es fácil, pero es muy importante.',zh:'安娜：西班牙语不容易，但很重要。'},
+    {text:'Juan: Sí. ¿Tú trabajas y estudias?',zh:'胡安：是的。你又工作又学习吗？'},
+    {text:'Ana: Trabajo en una oficina el sábado.',zh:'安娜：我星期六在一间办公室工作。'},
+    {text:'Juan: ¿Y ahora? ¿Buscas un libro?',zh:'胡安：那现在呢？你在找一本书吗？'},
+    {text:'Ana: Sí, busco un libro de español.',zh:'安娜：是的，我在找一本西班牙语的书。'},
+    {text:'Juan: El libro está aquí, en la mesa.',zh:'胡安：书在这里，在桌子上。'},
+    {text:'Ana: Gracias, Juan. Adiós.',zh:'安娜：谢谢你，胡安。再见。'}
+  ],questions:[
+    {prompt:'阅读：胡安在学什么？',options:['西班牙语和中文','中文和英语','只学英语'],answer:'西班牙语和中文'},
+    {prompt:'阅读：安娜星期六做什么？',options:['在办公室工作','在图书馆学习','在商店买书'],answer:'在办公室工作'},
+    {prompt:'阅读：安娜在找什么？',options:['一本西班牙语的书','一张桌子','一位老师'],answer:'一本西班牙语的书'},
+    {prompt:'推断：两人是在什么地方说话？',options:['有书和桌子的地方，也就是图书馆','在办公室','在医院'],answer:'有书和桌子的地方，也就是图书馆'}
+  ],keyWords:[
+    {word:'buscar',zh:'寻找'},
+    {word:'la oficina',zh:'办公室'},
+    {word:'difícil',zh:'困难的'},
+    {word:'importante',zh:'重要的'},
+    {word:'la mesa',zh:'桌子'}
+  ],retell:[
+    '安娜和胡安在有书的地方遇到，互相打招呼。',
+    '胡安学西班牙语和中文，也会说英语，觉得英语难。',
+    '安娜星期六在办公室工作，平时是学生。',
+    '安娜在找一本西班牙语的书，胡安告诉她书在桌子上。'
+  ]},
+  'es-r03': {id:'es-r03',lang:'es',afterLesson:'es-03',week:3,title:'星期二的日记',genre:'日记',words:128,sentences:[
+    {text:'Hoy es martes y estoy muy ocupada.',zh:'今天是星期二，我很忙。'},
+    {text:'A las siete de la mañana abro la ventana de mi habitación.',zh:'早上七点我打开房间的窗户。'},
+    {text:'Después desayuno en la cocina con mi hermana.',zh:'然后我和姐妹在厨房吃早饭。'},
+    {text:'Bebemos leche y comemos pan con queso.',zh:'我们喝牛奶，吃面包夹奶酪。'},
+    {text:'A las ocho y media camino a la universidad.',zh:'八点半我走路去大学。'},
+    {text:'Mi clase de español es a las nueve en punto.',zh:'我的西班牙语课是九点整。'},
+    {text:'La profesora abre el libro y nosotros leemos y escribimos.',zh:'女老师打开书，我们读，也写。'},
+    {text:'La clase es difícil, pero es muy interesante.',zh:'这门课很难，但很有意思。'},
+    {text:'Después de la clase como una manzana en el parque.',zh:'下课后我在公园吃一个苹果。'},
+    {text:'Por la tarde estudio en la biblioteca.',zh:'下午我在图书馆学习。'},
+    {text:'En la biblioteca hay estudiantes tranquilos y libros nuevos.',zh:'图书馆里有安静的学生和新书。'},
+    {text:'A las seis camino a casa.',zh:'六点我走路回家。'},
+    {text:'Mi padre y yo comemos la cena a las ocho.',zh:'我和父亲八点吃晚饭。'},
+    {text:'Después de la cena leo un libro en el sofá.',zh:'晚饭后我在沙发上读一本书。'},
+    {text:'Estoy cansada, pero estoy feliz.',zh:'我很累，但很开心。'}
+  ],questions:[
+    {prompt:'阅读：安娜早饭吃什么、喝什么？',options:['牛奶、面包和奶酪','咖啡和水果','汤和米饭'],answer:'牛奶、面包和奶酪'},
+    {prompt:'阅读：西班牙语课几点开始？',options:['八点半','九点整','十点半'],answer:'九点整'},
+    {prompt:'阅读：下午她在哪里学习？',options:['厨房','公园','图书馆'],answer:'图书馆'},
+    {prompt:'推断：短文最后说她很累但很开心。这是因为什么？',options:['这一天安排得很满，课也上得不错','她这一天什么都没做','她一整天都在睡觉'],answer:'这一天安排得很满，课也上得不错'}
+  ],keyWords:[
+    {word:'la ventana',zh:'窗户'},
+    {word:'beber',zh:'喝'},
+    {word:'la clase',zh:'课；课堂'},
+    {word:'interesante',zh:'有趣的'},
+    {word:'cansado',zh:'累的'}
+  ],retell:[
+    '星期二早上七点起来开窗，和姐妹在厨房吃早饭。',
+    '八点半走路去大学，九点整上西班牙语课。',
+    '课很难但有意思；下课后在公园吃苹果。',
+    '下午在图书馆学习，六点走回家，八点和父亲吃晚饭。',
+    '晚饭后在沙发上看书，虽然累，但心情好。'
+  ]},
+  'es-r04': {id:'es-r04',lang:'es',afterLesson:'es-03',week:3,title:'我的房间',genre:'描写',words:124,sentences:[
+    {text:'Mi habitación no es grande, pero es muy bonita.',zh:'我的房间不大，但很漂亮。'},
+    {text:'La puerta es blanca y la ventana es alta.',zh:'门是白色的，窗户很高。'},
+    {text:'En la habitación hay una mesa y una silla.',zh:'房间里有一张桌子和一把椅子。'},
+    {text:'La mesa es grande y la silla es pequeña.',zh:'桌子很大，椅子很小。'},
+    {text:'En la mesa hay tres libros y un lápiz azul.',zh:'桌上有三本书和一支蓝色铅笔。'},
+    {text:'Mi cama no es grande, pero es buena.',zh:'我的床不大，但很好。'},
+    {text:'El armario es negro y está limpio.',zh:'衣柜是黑色的，很干净。'},
+    {text:'Tengo mis libros en el armario.',zh:'我的书放在衣柜里。'},
+    {text:'También hay un teléfono en la mesa.',zh:'桌上还有一部电话。'},
+    {text:'Mi habitación es tranquila porque la calle es corta.',zh:'我的房间很安静，因为这条街很短。'},
+    {text:'Por la mañana abro la ventana.',zh:'早上我打开窗户。'},
+    {text:'Estudio en la mesa cada día antes de la cena.',zh:'我每天晚饭前在桌前学习。'},
+    {text:'A veces mi hermana entra y estudiamos aquí.',zh:'有时候我姐妹进来，我们一起在这里学习。'},
+    {text:'Ella lee y yo escribo.',zh:'她读，我写。'},
+    {text:'Después comemos fruta en la cocina.',zh:'之后我们在厨房吃水果。'},
+    {text:'Estoy muy feliz en mi habitación.',zh:'在我的房间里我很开心。'}
+  ],questions:[
+    {prompt:'阅读：桌上有什么？',options:['三本书和一支蓝色铅笔','一部电话和一把椅子','衣服和本子'],answer:'三本书和一支蓝色铅笔'},
+    {prompt:'阅读：衣柜是什么颜色的？',options:['白色','黑色','蓝色'],answer:'黑色'},
+    {prompt:'阅读：房间为什么很安静？',options:['因为窗户很高','因为这条街很短','因为房间很小'],answer:'因为这条街很短'},
+    {prompt:'推断：第 14 句的“她”指的是谁？',options:['作者的姐妹','女老师','作者的母亲'],answer:'作者的姐妹'}
+  ],keyWords:[
+    {word:'la habitación',zh:'房间'},
+    {word:'el armario',zh:'衣柜'},
+    {word:'limpio',zh:'干净的'},
+    {word:'la cama',zh:'床'},
+    {word:'tranquilo',zh:'安静的'}
+  ],retell:[
+    '房间不大但漂亮：白门、高窗、一桌一椅。',
+    '桌上有三本书、一支蓝铅笔和一部电话；床不大但好睡。',
+    '黑色的衣柜很干净，里面放着书。',
+    '街短所以房间安静；每天晚饭前在桌前学习。',
+    '有时姐妹进来一起学，之后到厨房吃水果。'
+  ]},
+  'es-r05': {id:'es-r05',lang:'es',afterLesson:'es-04',week:4,title:'写给胡安的邮件',genre:'邮件',words:151,sentences:[
+    {text:'Hola, Juan.',zh:'你好，胡安。'},
+    {text:'¿Cómo estás?',zh:'你好吗？'},
+    {text:'Yo estoy muy feliz aquí.',zh:'我在这里很开心。'},
+    {text:'Ahora vivo en una ciudad nueva y estudio en una universidad grande.',zh:'我现在住在一座新城市，在一所大城市里的大学学习。'},
+    {text:'La ciudad no es famosa, pero es bonita y tranquila.',zh:'这座城市不有名，但漂亮又安静。'},
+    {text:'En el centro hay una plaza y un museo pequeño.',zh:'市中心有一个广场和一座小博物馆。'},
+    {text:'Cada día salgo de casa a las ocho y camino al centro.',zh:'我每天八点出门，走路去市中心。'},
+    {text:'Las clases empiezan a las nueve.',zh:'课九点开始。'},
+    {text:'A la una almuerzo con mis amigos.',zh:'一点我和朋友们吃午饭。'},
+    {text:'Almorzamos sopa, arroz o pescado en un restaurante barato.',zh:'我们在一家便宜的餐馆吃汤、米饭或者鱼。'},
+    {text:'Por la tarde vuelvo a la biblioteca porque quiero leer un libro de historia.',zh:'下午我回图书馆，因为我想读一本历史书。'},
+    {text:'Es un libro interesante y difícil, pero entiendo la historia.',zh:'那是一本有意思又难的书，不过我看得懂内容。'},
+    {text:'A veces no puedo dormir porque pienso en la clase de mañana.',zh:'有时候我睡不着，因为在想第二天的课。'},
+    {text:'El sábado escucho música con mi hermana.',zh:'星期六我和姐妹一起听音乐。'},
+    {text:'También conozco a una amiga nueva.',zh:'我还认识了一位新朋友。'},
+    {text:'Ella habla chino y estudia español.',zh:'她说中文，也学西班牙语。'},
+    {text:'¿Y tú? ¿Qué haces ahora?',zh:'你呢？你现在做什么？'},
+    {text:'¿Cuándo vienes a mi ciudad?',zh:'你什么时候来我这座城市？'},
+    {text:'Aquí puedes ver el museo y la plaza.',zh:'在这里你可以看博物馆和广场。'},
+    {text:'Adiós, Juan. Ana.',zh:'再见，胡安。安娜。'}
+  ],questions:[
+    {prompt:'阅读：安娜每天几点出门？',options:['七点','八点','九点'],answer:'八点'},
+    {prompt:'阅读：她下午为什么回图书馆？',options:['因为想读一本历史书','因为要和朋友吃饭','因为要听音乐'],answer:'因为想读一本历史书'},
+    {prompt:'阅读：她有时候睡不着的原因是什么？',options:['在想第二天的课','餐馆太吵','房间太小'],answer:'在想第二天的课'},
+    {prompt:'推断：从这封邮件可以看出，胡安不在这座城市。理由是什么？',options:['她问胡安什么时候来，还介绍可以看的地方','她说博物馆很小','她说自己有新朋友'],answer:'她问胡安什么时候来，还介绍可以看的地方'}
+  ],keyWords:[
+    {word:'salir',zh:'出去；离开'},
+    {word:'volver',zh:'返回'},
+    {word:'almorzar',zh:'吃午饭'},
+    {word:'el centro',zh:'中心；市中心'},
+    {word:'la historia',zh:'历史；故事'}
+  ],retell:[
+    '安娜给胡安写邮件，说自己在新城市过得开心。',
+    '城市不有名，但漂亮安静，市中心有广场和小博物馆。',
+    '每天八点出门，九点上课，一点和朋友吃便宜的午饭。',
+    '下午回图书馆读历史书；有时想着第二天的课睡不着。',
+    '最后问胡安现在做什么、什么时候来。'
+  ]},
+  'es-r06': {id:'es-r06',lang:'es',afterLesson:'es-04',week:4,title:'大学通知：西班牙语活动',genre:'通知或广告',words:132,sentences:[
+    {text:'Información importante.',zh:'重要信息。'},
+    {text:'La universidad abre un programa nuevo de español.',zh:'大学新开一个西班牙语项目。'},
+    {text:'El programa empieza el lunes tres de marzo.',zh:'项目三月三日星期一开始。'},
+    {text:'Cada semana hay dos clases.',zh:'每周有两节课。'},
+    {text:'La clase de la mañana empieza a las diez en punto.',zh:'上午的课十点整开始。'},
+    {text:'La clase de la tarde empieza a las cinco y media.',zh:'下午的课五点半开始。'},
+    {text:'Las clases son en la biblioteca.',zh:'课在图书馆上。'},
+    {text:'El profesor habla español y también inglés.',zh:'老师说西班牙语，也说英语。'},
+    {text:'En la clase los estudiantes hablan, leen y escriben.',zh:'课上学生说、读、写。'},
+    {text:'También hay música popular.',zh:'课上也有流行音乐。'},
+    {text:'El programa es especial porque los estudiantes son nuevos.',zh:'这个项目很特别，因为学员都是新学员。'},
+    {text:'El programa es barato.',zh:'项目很便宜。'},
+    {text:'Los estudiantes pueden pagar en el banco de la universidad.',zh:'学员可以在大学的银行付款。'},
+    {text:'¿Quieres asistir?',zh:'你想参加吗？'},
+    {text:'Debes llamar a la oficina antes del viernes.',zh:'你要在星期五之前给办公室打电话。'},
+    {text:'Puedes preguntar por el programa de lunes a viernes.',zh:'周一到周五都可以打听这个项目。'},
+    {text:'La oficina abre a las nueve y cierra a las seis.',zh:'办公室九点开门，六点关门。'},
+    {text:'Es una clase fácil y muy interesante.',zh:'这是一门容易又很有意思的课。'},
+    {text:'¡Gracias!',zh:'谢谢！'}
+  ],questions:[
+    {prompt:'阅读：项目什么时候开始？',options:['三月三日星期一','三月五日星期五','五月三日星期一'],answer:'三月三日星期一'},
+    {prompt:'阅读：下午的课几点开始？',options:['十点整','五点半','六点'],answer:'五点半'},
+    {prompt:'阅读：想参加的人要先做什么？',options:['星期五之前给办公室打电话','直接去图书馆','先去银行开户'],answer:'星期五之前给办公室打电话'},
+    {prompt:'推断：这份通知主要写给谁看？',options:['刚开始学西班牙语的学生','已经会说西班牙语的老师','来大学参观的客人'],answer:'刚开始学西班牙语的学生'}
+  ],keyWords:[
+    {word:'el programa',zh:'节目；计划；程序'},
+    {word:'empezar',zh:'开始'},
+    {word:'cerrar',zh:'关闭'},
+    {word:'popular',zh:'受欢迎的；民众的'},
+    {word:'especial',zh:'特别的'}
+  ],retell:[
+    '大学新开一个西班牙语项目，三月三日星期一开始。',
+    '每周两节课：上午十点整，下午五点半，都在图书馆。',
+    '课上说、读、写，还有流行音乐。',
+    '项目便宜，可以在大学的银行付款。',
+    '想参加的人要在星期五之前给办公室打电话，办公室九点到六点。'
+  ]},
+  'es-r07': {id:'es-r07',lang:'es',afterLesson:'es-05',week:5,title:'安娜的一周日程',genre:'菜谱或日程',words:168,sentences:[
+    {text:'Ana escribe su horario de la semana.',zh:'安娜写下她这一周的日程。'},
+    {text:'De lunes a viernes me levanto a las siete.',zh:'周一到周五我七点起床。'},
+    {text:'Me ducho, me peino y desayuno en la cocina.',zh:'我洗澡、梳头，在厨房吃早饭。'},
+    {text:'A las ocho salgo de casa y camino al gimnasio.',zh:'八点我出门，走路去健身房。'},
+    {text:'En el gimnasio hago ejercicio media hora.',zh:'在健身房我运动半小时。'},
+    {text:'Luego voy a la universidad.',zh:'然后我去大学。'},
+    {text:'Las clases empiezan a las diez.',zh:'课十点开始。'},
+    {text:'A la una almuerzo con Juan en el restaurante de la universidad.',zh:'一点我和胡安在大学的餐厅吃午饭。'},
+    {text:'Me gusta la comida de aquí porque es rica y barata.',zh:'我喜欢这里的饭菜，因为好吃又便宜。'},
+    {text:'Por la tarde tengo que estudiar en la biblioteca.',zh:'下午我必须在图书馆学习。'},
+    {text:'Los martes practico deporte.',zh:'每周二我做运动。'},
+    {text:'Con mis amigos jugamos al fútbol en el parque.',zh:'我和朋友们在公园踢足球。'},
+    {text:'Los jueves nado en la piscina.',zh:'每周四我在游泳池游泳。'},
+    {text:'Me encanta nadar porque después estoy tranquila.',zh:'我很喜欢游泳，因为游完人很平静。'},
+    {text:'El viernes por la noche voy al cine con mi hermana.',zh:'星期五晚上我和姐妹去电影院。'},
+    {text:'Vemos una película en español y luego tomamos un té.',zh:'我们看一部西班牙语电影，然后喝杯茶。'},
+    {text:'El sábado limpio la habitación y lavo la ropa.',zh:'星期六我打扫房间、洗衣服。'},
+    {text:'Por la tarde visito a mis abuelos.',zh:'下午我去看祖父母。'},
+    {text:'El domingo descanso: leo una revista y saco fotos en el jardín.',zh:'星期天我休息：读杂志，在花园里拍照。'},
+    {text:'Duermo temprano porque el lunes hay que trabajar.',zh:'我睡得早，因为星期一得干活。'}
+  ],questions:[
+    {prompt:'阅读：安娜八点出门以后先去哪里？',options:['大学','健身房','游泳池'],answer:'健身房'},
+    {prompt:'阅读：她为什么喜欢大学餐厅的饭菜？',options:['因为好吃又便宜','因为离图书馆近','因为可以和祖父母一起吃'],answer:'因为好吃又便宜'},
+    {prompt:'阅读：她每周四做什么运动？',options:['踢足球','游泳','跑步'],answer:'游泳'},
+    {prompt:'推断：从这份日程看，安娜的星期天和平时有什么不同？',options:['安排很轻松，主要在休息','要上课，还要去健身房','要打扫房间、洗衣服'],answer:'安排很轻松，主要在休息'}
+  ],keyWords:[
+    {word:'levantarse',zh:'起床；起来'},
+    {word:'el horario',zh:'时间表；日程'},
+    {word:'el gimnasio',zh:'健身房'},
+    {word:'la piscina',zh:'游泳池'},
+    {word:'descansar',zh:'休息'}
+  ],retell:[
+    '周一到周五七点起床，洗澡梳头，在厨房吃早饭。',
+    '八点出门先去健身房运动半小时，再去大学上十点的课。',
+    '一点和胡安在大学餐厅吃午饭，饭菜好吃又便宜；下午在图书馆学习。',
+    '周二踢足球，周四游泳，周五晚上和姐妹去看电影。',
+    '周六打扫洗衣、看祖父母；周日读杂志、拍照，睡得早。'
+  ]},
+  'es-r08': {id:'es-r08',lang:'es',afterLesson:'es-05',week:5,title:'周末的安排',genre:'对话',words:174,sentences:[
+    {text:'Ana: Hola, Juan. ¿Qué vas a hacer el fin de semana?',zh:'安娜：你好，胡安。这个周末你打算做什么？'},
+    {text:'Juan: El sábado voy a jugar al fútbol con mi equipo.',zh:'胡安：星期六我要和我的队踢足球。'},
+    {text:'Ana: ¿A qué hora es el partido?',zh:'安娜：比赛几点？'},
+    {text:'Juan: A las once de la mañana, en el gimnasio de la universidad.',zh:'胡安：上午十一点，在大学的体育馆。'},
+    {text:'Ana: A mí me gusta el fútbol, pero me encanta la piscina.',zh:'安娜：我喜欢足球，不过我更爱游泳池。'},
+    {text:'Juan: ¿Vas a la piscina el sábado?',zh:'胡安：星期六你去游泳池吗？'},
+    {text:'Ana: Sí, voy a nadar por la tarde.',zh:'安娜：是的，我下午去游泳。'},
+    {text:'Ana: Después tengo que limpiar la casa.',zh:'安娜：之后我必须打扫房子。'},
+    {text:'Juan: ¿Y el domingo?',zh:'胡安：那星期天呢？'},
+    {text:'Ana: El domingo mi familia va a visitar a los abuelos.',zh:'安娜：星期天我家人要去看祖父母。'},
+    {text:'Ana: Vamos a comer en su casa.',zh:'安娜：我们要在他们家吃饭。'},
+    {text:'Ana: Mi abuela cocina comida rica.',zh:'安娜：我祖母做的饭很好吃。'},
+    {text:'Juan: ¡Qué bueno!',zh:'胡安：太好了！'},
+    {text:'Juan: A mí me encanta la comida de la familia.',zh:'胡安：我很喜欢家里做的饭。'},
+    {text:'Ana: ¿Quieres venir con nosotros?',zh:'安娜：你想和我们一起来吗？'},
+    {text:'Juan: Gracias, pero el domingo tengo que estudiar.',zh:'胡安：谢谢，不过星期天我得学习。'},
+    {text:'Juan: El lunes hay una clase difícil.',zh:'胡安：星期一有一节难课。'},
+    {text:'Ana: Sí, la clase es importante.',zh:'安娜：是啊，课很重要。'},
+    {text:'Juan: ¿Te gusta el cine?',zh:'胡安：你喜欢看电影吗？'},
+    {text:'Ana: Sí, me gusta el cine.',zh:'安娜：喜欢，我喜欢电影院。'},
+    {text:'Juan: Vamos a ver una película el viernes.',zh:'胡安：那我们星期五去看一部电影吧。'},
+    {text:'Ana: Sí, voy a llamar a mi hermana también.',zh:'安娜：好，我也叫上我姐妹。'},
+    {text:'Juan: Adiós, Ana.',zh:'胡安：再见，安娜。'}
+  ],questions:[
+    {prompt:'阅读：胡安星期六上午做什么？',options:['去游泳池','踢足球比赛','去看祖父母'],answer:'踢足球比赛'},
+    {prompt:'阅读：安娜星期六下午的安排是什么？',options:['游泳，之后打扫房子','看电影','和家人吃饭'],answer:'游泳，之后打扫房子'},
+    {prompt:'阅读：胡安为什么不去安娜祖父母家？',options:['他星期天得学习，星期一有难课','他不喜欢家里做的饭','他星期天要踢球'],answer:'他星期天得学习，星期一有难课'},
+    {prompt:'推断：两人最后约好了什么？',options:['星期五一起看电影','星期天一起吃饭','星期六一起游泳'],answer:'星期五一起看电影'}
+  ],keyWords:[
+    {word:'el fin de semana',zh:'周末'},
+    {word:'el partido',zh:'比赛（一场）'},
+    {word:'tener que',zh:'必须……'},
+    {word:'visitar',zh:'参观；拜访'},
+    {word:'gustar',zh:'使喜欢（用于表达喜欢）'}
+  ],retell:[
+    '安娜问胡安周末的安排，胡安说星期六上午和队友踢球。',
+    '安娜星期六下午去游泳，之后打扫房子。',
+    '星期天安娜一家去看祖父母，在祖父母家吃饭。',
+    '胡安因为星期一有难课，星期天要学习，去不了。',
+    '两人约好星期五一起看电影，安娜还要叫上姐妹。'
+  ]},
+  'es-r09': {id:'es-r09',lang:'es',afterLesson:'es-06',week:6,title:'找不到的钥匙',genre:'短故事',words:174,sentences:[
+    {text:'Ana está en la puerta de su casa.',zh:'安娜站在自家门口。'},
+    {text:'Busca la llave en la mochila, pero no está.',zh:'她在背包里找钥匙，可是钥匙不在。'},
+    {text:'En la mochila hay un cuaderno, un bolígrafo y un libro.',zh:'背包里有一个本子、一支圆珠笔和一本书。'},
+    {text:'También hay un móvil antiguo y una caja pequeña.',zh:'还有一部旧手机和一个小盒子。'},
+    {text:'La llave no está aquí.',zh:'钥匙不在这里。'},
+    {text:'Ana está triste.',zh:'安娜很难过。'},
+    {text:'Ana piensa en la mañana: la llave está en la mesa de la cocina.',zh:'安娜想着早上的事：钥匙放在厨房的桌子上。'},
+    {text:'Ana llama a su hermana y pregunta: ¿Estás en casa?',zh:'安娜给姐妹打电话，问：你在家吗？'},
+    {text:'La hermana contesta: no, estoy en el metro.',zh:'姐妹回答：不在，我在地铁上。'},
+    {text:'Ana espera en la esquina de la calle.',zh:'安娜在街角等着。'},
+    {text:'Mientras espera, mira el reloj.',zh:'等的时候她看表。'},
+    {text:'Son las siete y media.',zh:'七点半了。'},
+    {text:'Un hombre viene con una bolsa.',zh:'一个男人拿着一个袋子走过来。'},
+    {text:'Es el camarero del restaurante de la esquina.',zh:'他是街角餐馆的服务员。'},
+    {text:'El camarero está enseñando algo a Ana: una llave pequeña.',zh:'服务员正给安娜看一样东西：一把小钥匙。'},
+    {text:'El camarero pregunta: ¿Es esta su llave?',zh:'服务员问：这是您的钥匙吗？'},
+    {text:'Ana está muy feliz y contesta que sí.',zh:'安娜很高兴，回答说是。'},
+    {text:'Ana almuerza en ese restaurante cada día.',zh:'安娜每天都在那家餐馆吃午饭。'},
+    {text:'Hoy olvida la llave en la mesa.',zh:'今天她把钥匙忘在桌上了。'},
+    {text:'Ana da las gracias al camarero y abre la puerta.',zh:'安娜谢过服务员，打开了门。'},
+    {text:'Ahora guarda la llave en una caja pequeña de la mochila.',zh:'现在她把钥匙收在背包里的一个小盒子里。'},
+    {text:'Ahora no olvida la llave.',zh:'这样她就不会再忘钥匙了。'}
+  ],questions:[
+    {prompt:'阅读：安娜的背包里有什么？',options:['本子、圆珠笔和一本书','钥匙和一张地图','面包和水果'],answer:'本子、圆珠笔和一本书'},
+    {prompt:'阅读：姐妹接电话的时候在哪里？',options:['在家','在地铁上','在餐馆'],answer:'在地铁上'},
+    {prompt:'阅读：钥匙最后是怎么回到安娜手里的？',options:['餐馆的服务员送来了','姐妹带回来了','她在背包里又找到了'],answer:'餐馆的服务员送来了'},
+    {prompt:'推断：钥匙为什么会在餐馆里？',options:['她每天在那家餐馆吃午饭，今天把钥匙忘在桌上','服务员从她家拿走了钥匙','她把钥匙送给了服务员'],answer:'她每天在那家餐馆吃午饭，今天把钥匙忘在桌上'}
+  ],keyWords:[
+    {word:'la llave',zh:'钥匙'},
+    {word:'la mochila',zh:'背包'},
+    {word:'olvidar',zh:'忘记'},
+    {word:'guardar',zh:'保存；收好'},
+    {word:'el reloj',zh:'表；钟'}
+  ],retell:[
+    '安娜在家门口找钥匙，背包里只有本子、笔和书。',
+    '她想起早上把钥匙放在厨房桌上，就给姐妹打电话，姐妹在地铁上。',
+    '她在街角等，七点半时街角餐馆的服务员拿着钥匙来了。',
+    '钥匙是她中午在那家餐馆吃饭时忘在桌上的。',
+    '她谢过服务员，以后把钥匙收在背包的小盒子里。'
+  ]},
+  'es-r10': {id:'es-r10',lang:'es',afterLesson:'es-06',week:6,title:'我住的街区',genre:'描写',words:172,sentences:[
+    {text:'Vivo en un barrio moderno de la ciudad.',zh:'我住在城里一个现代的街区。'},
+    {text:'Este barrio no es grande, pero está lleno de tiendas.',zh:'这个街区不大，但商店很多。'},
+    {text:'Esta calle es la avenida del barrio.',zh:'这条街是街区的大道。'},
+    {text:'Aquí hay un mercado, una farmacia y un banco.',zh:'这里有一个市场、一家药店和一家银行。'},
+    {text:'Esa casa blanca es la biblioteca.',zh:'那座白房子是图书馆。'},
+    {text:'Aquella casa antigua es el museo del barrio.',zh:'那边那座老房子是街区的博物馆。'},
+    {text:'El museo abre a las diez y cierra a las ocho.',zh:'博物馆十点开门，八点关门。'},
+    {text:'En la esquina el autobús espera a las personas.',zh:'公交车在街角等人。'},
+    {text:'El autobús es lento, pero es cómodo y barato.',zh:'公交车慢，但舒服又便宜。'},
+    {text:'El metro es rápido y siempre está lleno por la mañana.',zh:'地铁快，早上总是很挤。'},
+    {text:'Mi casa está en esta calle, en una casa pequeña.',zh:'我家就在这条街上，是一座小房子。'},
+    {text:'La casa es antigua y las ventanas son oscuras.',zh:'房子很旧，窗户颜色很深。'},
+    {text:'Mientras escribo, mi hermana está leyendo en el sofá.',zh:'我写字的时候，姐妹正在沙发上看书。'},
+    {text:'Ella está estudiando y yo estoy hablando con un amigo.',zh:'她在学习，我在和一个朋友说话。'},
+    {text:'Aquel parque es tranquilo y verde.',zh:'那边那个公园安静又绿。'},
+    {text:'Los niños están jugando y las familias están paseando.',zh:'孩子们在玩，一家家人在散步。'},
+    {text:'Además, en el parque hay un puente pequeño.',zh:'另外，公园里还有一座小桥。'},
+    {text:'Me gusta este barrio aunque las casas son antiguas.',zh:'虽然房子都很旧，我还是喜欢这个街区。'},
+    {text:'Aquí tengo mis amigos y mi familia.',zh:'我的朋友和家人都在这里。'},
+    {text:'No quiero vivir en una ciudad grande.',zh:'我不想住到大城市去。'}
+  ],questions:[
+    {prompt:'阅读：街区里的博物馆是哪一座房子？',options:['白色的那座','旁边的老房子','作者住的小房子'],answer:'旁边的老房子'},
+    {prompt:'阅读：作者怎么评价公交车？',options:['慢，但舒服又便宜','又快又贵','早上总是很挤'],answer:'慢，但舒服又便宜'},
+    {prompt:'阅读：写这段话的时候，姐妹在做什么？',options:['在沙发上看书','在公园散步','在等公交车'],answer:'在沙发上看书'},
+    {prompt:'推断：作者不想搬到大城市去，主要理由是什么？',options:['朋友和家人都在这个街区','博物馆开门时间长','地铁又快又方便'],answer:'朋友和家人都在这个街区'}
+  ],keyWords:[
+    {word:'el barrio',zh:'街区；城区'},
+    {word:'la avenida',zh:'大道'},
+    {word:'lleno',zh:'满的'},
+    {word:'cómodo',zh:'舒适的'},
+    {word:'aquel',zh:'那个（阳性单数，较远）'}
+  ],retell:[
+    '作者住在一个现代街区，街上商店很多。',
+    '街区里有市场、药店、银行，白房子是图书馆，老房子是博物馆。',
+    '街角有公交车，慢但舒服便宜；地铁快，早上很挤。',
+    '写这段话时姐妹在沙发上看书，公园里孩子在玩、大人在散步。',
+    '虽然房子旧，作者还是喜欢这里，因为朋友和家人都在。'
+  ]},
+  'es-r11': {id:'es-r11',lang:'es',afterLesson:'es-07',week:7,title:'昨天的日记',genre:'日记',words:203,sentences:[
+    {text:'Ayer pasé un día largo.',zh:'昨天我过了很长的一天。'},
+    {text:'Me levanté a las seis y media.',zh:'我六点半起床。'},
+    {text:'No desayuné en casa porque llegué tarde.',zh:'我没在家吃早饭，因为起晚了。'},
+    {text:'Caminé a la estación y esperé el tren.',zh:'我走到车站，等火车。'},
+    {text:'En la estación hablé con un amigo del barrio.',zh:'在车站我和街区的一个朋友聊了几句。'},
+    {text:'El tren llegó a las siete en punto.',zh:'火车七点整到站。'},
+    {text:'En el tren leí mis notas de español.',zh:'在车上我看了西班牙语的笔记。'},
+    {text:'A las ocho entré en la universidad.',zh:'八点我进了大学。'},
+    {text:'La profesora entregó los resultados del examen.',zh:'女老师发下了考试结果。'},
+    {text:'Yo aprobé con una nota buena.',zh:'我通过了，分数不错。'},
+    {text:'Mi amiga Ana también aprobó.',zh:'我的朋友安娜也通过了。'},
+    {text:'Ana no comprendió la nota y preguntó a la profesora.',zh:'安娜没看懂分数，就去问老师。'},
+    {text:'La profesora explicó el error con un ejemplo.',zh:'老师举了一个例子，讲清了错在哪里。'},
+    {text:'Después de la clase almorzamos en el restaurante de la esquina.',zh:'下课后我们在街角的餐馆吃午饭。'},
+    {text:'Pasamos una hora hablando del examen.',zh:'我们花了一个小时聊考试。'},
+    {text:'Por la tarde trabajé en la tienda.',zh:'下午我在商店上班。'},
+    {text:'Vendí dos libros y una mochila.',zh:'我卖出两本书和一个背包。'},
+    {text:'Una mujer preguntó el precio de un reloj.',zh:'一位女士问一块表的价格。'},
+    {text:'No recordé el precio y busqué el papel de la caja.',zh:'我想不起价格，就去找盒子里的那张纸。'},
+    {text:'La mujer esperó y compró el reloj.',zh:'那位女士等了一会儿，买下了表。'},
+    {text:'A las siete apagué el ordenador y cerré la tienda.',zh:'七点我关掉电脑，关了店门。'},
+    {text:'Regresé a casa en autobús.',zh:'我坐公交车回家。'},
+    {text:'Mi hermana preparó una comida rica.',zh:'姐妹做了一顿好吃的饭。'},
+    {text:'Cené con ella y hablamos de la semana pasada.',zh:'我和她一起吃晚饭，聊了上周的事。'},
+    {text:'Ella celebró su cumpleaños el sábado.',zh:'她星期六过了生日。'},
+    {text:'Mandé un mensaje a Juan y me acosté a las once.',zh:'我给胡安发了条消息，十一点睡下。'},
+    {text:'Ayer terminé una semana difícil.',zh:'昨天我结束了很累的一周。'}
+  ],questions:[
+    {prompt:'阅读：作者昨天为什么没在家吃早饭？',options:['因为起晚了','因为家里没有面包','因为火车提前到了'],answer:'因为起晚了'},
+    {prompt:'阅读：老师在课上做了什么？',options:['发下考试结果，并用例子讲清错在哪里','宣布考试推迟','把书发给学生'],answer:'发下考试结果，并用例子讲清错在哪里'},
+    {prompt:'阅读：那位女士在店里买了什么？',options:['一块表','两本书','一个背包'],answer:'一块表'},
+    {prompt:'推断：作者说昨天结束了很累的一周，从短文看主要原因是什么？',options:['既要上课考试，又要上班到七点','火车晚点了很久','姐妹的生日很热闹'],answer:'既要上课考试，又要上班到七点'}
+  ],keyWords:[
+    {word:'aprobar',zh:'通过（考试）'},
+    {word:'entregar',zh:'交；递交'},
+    {word:'el examen',zh:'考试'},
+    {word:'el precio',zh:'价格'},
+    {word:'terminar',zh:'结束；完成'}
+  ],retell:[
+    '昨天六点半起床，因为起晚没吃早饭，走到车站等火车。',
+    '火车七点整到，路上看西班牙语笔记，八点进大学。',
+    '老师发下考试结果，作者通过了；安娜没看懂分数，老师举例讲清。',
+    '下午在商店上班，卖了书和背包，还卖出一块表，七点关店。',
+    '坐公交回家，和姐妹吃晚饭聊上周，给胡安发消息后十一点睡。'
+  ]},
+  'es-r12': {id:'es-r12',lang:'es',afterLesson:'es-07',week:7,title:'上周发生的事',genre:'邮件',words:205,sentences:[
+    {text:'Hola, Juan.',zh:'你好，胡安。'},
+    {text:'Anoche terminé la tarea y ahora escribo este mensaje.',zh:'昨晚我做完作业，现在写这封消息。'},
+    {text:'La semana pasada ocurrió algo interesante en la universidad.',zh:'上周大学里发生了一件有意思的事。'},
+    {text:'El lunes pasado la profesora explicó un proyecto de español.',zh:'上周一女老师讲了一个西班牙语项目。'},
+    {text:'Yo pregunté la fecha y ella contestó: el veinte de mayo.',zh:'我问了日期，她回答：五月二十日。'},
+    {text:'Además, ella dejó dos preguntas difíciles.',zh:'另外，她还留了两个难题。'},
+    {text:'Ana y yo decidimos trabajar cada tarde.',zh:'我和安娜决定每天下午做这件事。'},
+    {text:'El proyecto habla de la vida de los estudiantes.',zh:'这个项目讲的是学生的生活。'},
+    {text:'El martes preparé el proyecto con Ana.',zh:'星期二我和安娜一起准备。'},
+    {text:'Trabajamos tres horas en la biblioteca.',zh:'我们在图书馆做了三个小时。'},
+    {text:'Ana buscó ejemplos y yo escribí las respuestas.',zh:'安娜找例子，我写答案。'},
+    {text:'El miércoles cambiamos el lugar de la reunión.',zh:'星期三我们改了见面的地方。'},
+    {text:'Nos invitaron a una oficina del centro.',zh:'他们请我们去市中心的一间办公室。'},
+    {text:'Crucé la avenida y llegué tarde por el ruido de la calle.',zh:'我穿过大道，因为街上太吵，到得晚了。'},
+    {text:'Ana ya comenzó el trabajo y no perdimos tiempo.',zh:'安娜已经开始干了，我们没浪费时间。'},
+    {text:'Ana enseñó el trabajo a un profesor del museo.',zh:'安娜把稿子拿给博物馆的一位老师看。'},
+    {text:'Él respondió con una idea nueva.',zh:'他给了一个新想法。'},
+    {text:'El jueves entregamos el proyecto a la profesora.',zh:'星期四我们把项目交给了老师。'},
+    {text:'El viernes ella mandó un correo con los resultados.',zh:'星期五她发来一封邮件，带着结果。'},
+    {text:'Nuestro proyecto ganó el premio de la clase.',zh:'我们的项目拿了班里的奖。'},
+    {text:'Ana lloró y yo llamé a mi madre.',zh:'安娜哭了，我给母亲打了电话。'},
+    {text:'El sábado celebramos el resultado con una comida.',zh:'星期六我们吃了一顿饭庆祝这个结果。'},
+    {text:'Cenamos en el restaurante de la esquina y hablamos de la vida.',zh:'我们在街角的餐馆吃晚饭，聊了生活。'},
+    {text:'¿Y tú? ¿Aprobaste el examen del mes pasado?',zh:'你呢？上个月的考试通过了吗？'},
+    {text:'Manda un mensaje con la noticia.',zh:'有消息发个信息给我。'},
+    {text:'Adiós, Juan. Ana.',zh:'再见，胡安。安娜。'}
+  ],questions:[
+    {prompt:'阅读：老师上周一讲的项目要在哪一天交？',options:['五月二十日','三月二十日','五月十二日'],answer:'五月二十日'},
+    {prompt:'阅读：作者星期三为什么迟到？',options:['因为街上太吵','因为改了地方却没通知','因为火车晚点'],answer:'因为街上太吵'},
+    {prompt:'阅读：星期五的邮件带来了什么消息？',options:['项目拿了班里的奖','项目要重做','考试推迟'],answer:'项目拿了班里的奖'},
+    {prompt:'推断：从这封信看，两人的合作怎么样？',options:['分工清楚、按时完成，结果也好','互相推脱，最后没交上','只有安娜一个人在做'],answer:'分工清楚、按时完成，结果也好'}
+  ],keyWords:[
+    {word:'el proyecto',zh:'项目'},
+    {word:'la fecha',zh:'日期'},
+    {word:'cruzar',zh:'穿过'},
+    {word:'el premio',zh:'奖；奖品'},
+    {word:'celebrar',zh:'庆祝'}
+  ],retell:[
+    '安娜写信告诉胡安上周大学里的事。',
+    '上周一老师讲了一个西班牙语项目，交稿日期是五月二十日。',
+    '周二两人在图书馆做了三小时，安娜找例子，作者写答案。',
+    '周三换了见面地点，作者因街上吵而迟到；周四交了项目。',
+    '周五邮件说项目拿了班里的奖，周六一起吃饭庆祝。'
+  ]},
+  'es-r13': {id:'es-r13',lang:'es',afterLesson:'es-08',week:8,title:'岛上的一天',genre:'短故事',words:227,sentences:[
+    {text:'El mes pasado Ana y Juan hicieron un viaje.',zh:'上个月安娜和胡安出了一趟门。'},
+    {text:'Antes del viaje Ana buscó información de la isla.',zh:'出发前安娜查了岛上的资料。'},
+    {text:'Prepararon el equipaje el jueves por la noche.',zh:'他们星期四晚上收拾行李。'},
+    {text:'Ana puso el pasaporte y dos camisas en la maleta.',zh:'安娜把护照和两件衬衫放进箱子。'},
+    {text:'Juan trajo un mapa antiguo de la isla.',zh:'胡安带来一张岛上的旧地图。'},
+    {text:'El viernes fueron al aeropuerto en taxi.',zh:'星期五他们坐出租车去机场。'},
+    {text:'El vuelo salió a las siete de la mañana.',zh:'航班早上七点起飞。'},
+    {text:'Ana durmió en el avión y Juan leyó una revista.',zh:'安娜在飞机上睡觉，胡安看杂志。'},
+    {text:'Llegaron a la isla a las diez.',zh:'他们十点到岛上。'},
+    {text:'Hubo un autobús pequeño en el puerto.',zh:'港口有一辆小公交车。'},
+    {text:'Fueron al hotel y dejaron el equipaje.',zh:'他们去旅馆放下行李。'},
+    {text:'El hotel fue pequeño, pero cómodo y barato.',zh:'旅馆不大，但舒服又便宜。'},
+    {text:'Después bajaron al puerto y alquilaron una bicicleta.',zh:'之后他们下到港口，租了一辆自行车。'},
+    {text:'En el puerto un turista les enseñó el camino del bosque.',zh:'在港口，一位游客给他们指了去森林的路。'},
+    {text:'Anduvieron dos horas por el camino del bosque.',zh:'他们沿着林间的路走了两个小时。'},
+    {text:'Vieron el paisaje, el lago y una torre antigua.',zh:'他们看见风景、湖和一座古塔。'},
+    {text:'De repente comenzó la lluvia y no pudieron subir a la torre.',zh:'突然下起雨来，他们没能登塔。'},
+    {text:'Entraron en una iglesia pequeña.',zh:'他们走进一座小教堂。'},
+    {text:'En la iglesia hubo un concierto de música antigua.',zh:'教堂里有一场古乐音乐会。'},
+    {text:'Se sentaron y escucharon media hora.',zh:'他们坐下听了半小时。'},
+    {text:'Por fin la lluvia terminó.',zh:'雨终于停了。'},
+    {text:'Salieron y vieron el sol y un cielo claro.',zh:'他们出来，看见太阳和明亮的天空。'},
+    {text:'Fueron al restaurante del puerto.',zh:'他们去了港口的餐馆。'},
+    {text:'Ana pidió pescado y Juan pidió sopa.',zh:'安娜点了鱼，胡安点了汤。'},
+    {text:'El camarero sirvió la comida enseguida.',zh:'服务员马上上了菜。'},
+    {text:'Ana dijo: este viaje fue una sorpresa buena.',zh:'安娜说：这趟旅行是个不错的意外。'},
+    {text:'Juan dijo: quiero volver el próximo año.',zh:'胡安说：明年我还想来。'},
+    {text:'Regresaron al hotel y durmieron enseguida.',zh:'他们回旅馆，马上就睡了。'},
+    {text:'Fue un día largo, pero se divirtieron.',zh:'这一天很长，但他们玩得很开心。'}
+  ],questions:[
+    {prompt:'阅读：他们是怎么去机场的？',options:['坐出租车','坐公交车','骑自行车'],answer:'坐出租车'},
+    {prompt:'阅读：下雨的时候他们做了什么？',options:['进小教堂听了半小时音乐会','继续登塔','回旅馆睡觉'],answer:'进小教堂听了半小时音乐会'},
+    {prompt:'阅读：在港口的餐馆里两人各点了什么？',options:['安娜点鱼，胡安点汤','两人都点了汤','安娜点汤，胡安点鱼'],answer:'安娜点鱼，胡安点汤'},
+    {prompt:'推断：安娜说这趟旅行是个不错的意外，最可能指的是什么？',options:['本来被雨打断，却因此听到了教堂里的音乐会','旅馆比想的贵','飞机晚点了'],answer:'本来被雨打断，却因此听到了教堂里的音乐会'}
+  ],keyWords:[
+    {word:'la maleta',zh:'行李箱'},
+    {word:'el vuelo',zh:'航班'},
+    {word:'la isla',zh:'岛'},
+    {word:'de repente',zh:'突然'},
+    {word:'la lluvia',zh:'雨'}
+  ],retell:[
+    '上个月安娜和胡安去岛上旅行，前一晚收拾行李。',
+    '星期五坐出租车去机场，七点的航班，十点到岛上，先去旅馆放行李。',
+    '他们租自行车，沿林间路走两小时，看见湖和古塔。',
+    '突然下雨，没能登塔，就进小教堂听了半小时古乐音乐会。',
+    '雨停后去港口餐馆吃饭，安娜点鱼、胡安点汤，回旅馆就睡了。'
+  ]},
+  'es-r14': {id:'es-r14',lang:'es',afterLesson:'es-08',week:8,title:'祖母的一生',genre:'人物介绍',words:229,sentences:[
+    {text:'Mi abuela nació en un pueblo pequeño.',zh:'我祖母出生在一个小村镇。'},
+    {text:'Nació el catorce de abril.',zh:'她四月十四日出生。'},
+    {text:'El pueblo tuvo un río, un puente y una iglesia.',zh:'村里有一条河、一座桥和一座教堂。'},
+    {text:'En el pueblo no hubo hospital.',zh:'村里没有医院。'},
+    {text:'Mi abuela habló siempre del río y del puente.',zh:'祖母总是讲那条河和那座桥。'},
+    {text:'Ella caminó cada día a la escuela del pueblo.',zh:'她每天走路去村里的学校。'},
+    {text:'Le gustó leer y escribir.',zh:'她喜欢读和写。'},
+    {text:'A los quince años dejó la escuela y trabajó en una tienda.',zh:'十五岁时她离开学校，去一家商店做事。'},
+    {text:'Vendió pan y fruta cada día.',zh:'她每天卖面包和水果。'},
+    {text:'En la tienda conoció a mi abuelo.',zh:'在商店里她认识了我祖父。'},
+    {text:'Él fue camarero en el restaurante de la plaza.',zh:'他当时是广场那家餐馆的服务员。'},
+    {text:'Se casaron en junio.',zh:'他们六月结婚。'},
+    {text:'La boda fue pequeña, pero hubo música y baile.',zh:'婚礼很小，不过有音乐也有舞。'},
+    {text:'Tuvieron tres hijos: mi madre, mi tío y mi tía.',zh:'他们有三个孩子：我母亲、我叔叔和我姑姑。'},
+    {text:'Después la familia dejó el pueblo y vino a la ciudad.',zh:'后来一家人离开村镇，来到城里。'},
+    {text:'Mi abuela trabajó en un hospital y estudió por la noche.',zh:'祖母在医院工作，晚上学习。'},
+    {text:'No pudo terminar la universidad, pero aprendió inglés.',zh:'她没能读完大学，但学会了英语。'},
+    {text:'Ella dijo siempre: el estudio es importante.',zh:'她总说：学习很重要。'},
+    {text:'Mi abuelo murió hace tres años.',zh:'祖父三年前去世了。'},
+    {text:'Hoy mi abuela vive con nosotros.',zh:'现在祖母和我们住在一起。'},
+    {text:'Ella todavía guarda su reloj antiguo.',zh:'她还留着他那块旧表。'},
+    {text:'Todavía cocina cada domingo.',zh:'她每个星期天还下厨。'},
+    {text:'Prepara sopa, arroz y pescado.',zh:'她做汤、米饭和鱼。'},
+    {text:'Le encanta hablar de la vida del pueblo.',zh:'她很喜欢讲村里的生活。'},
+    {text:'Cada mes de junio ella habla de la boda.',zh:'每年六月她都会讲起那场婚礼。'},
+    {text:'Yo escucho sus historias y escribo las fechas.',zh:'我听她讲，把日期记下来。'},
+    {text:'Yo escribí sus historias en un cuaderno.',zh:'我把她讲的事写进了一个本子。'},
+    {text:'El último domingo me dio una foto antigua.',zh:'上个星期天她给了我一张老照片。'},
+    {text:'En la foto ella tuvo quince años.',zh:'照片上她十五岁。'},
+    {text:'Fue una sorpresa buena.',zh:'这是个不错的意外。'},
+    {text:'A mí me encanta mi abuela.',zh:'我很爱我的祖母。'}
+  ],questions:[
+    {prompt:'阅读：祖母是在哪里认识祖父的？',options:['在商店','在教堂','在医院'],answer:'在商店'},
+    {prompt:'阅读：祖母十五岁时做了什么？',options:['离开学校去商店做事','进医院工作','搬到城里'],answer:'离开学校去商店做事'},
+    {prompt:'阅读：她在城里的生活是怎样的？',options:['白天在医院工作，晚上学习','白天读大学，晚上做饭','在餐馆当服务员'],answer:'白天在医院工作，晚上学习'},
+    {prompt:'推断：祖母常说“学习很重要”，从她的经历看，这句话和什么有关？',options:['她自己没能读完大学，但一直坚持自学','她小时候不喜欢上学','她一直是老师'],answer:'她自己没能读完大学，但一直坚持自学'}
+  ],keyWords:[
+    {word:'nacer',zh:'出生'},
+    {word:'casarse',zh:'结婚'},
+    {word:'la boda',zh:'婚礼'},
+    {word:'el pueblo',zh:'村镇；人民'},
+    {word:'todavía',zh:'还；仍然'}
+  ],retell:[
+    '祖母四月十四日出生在一个有河、桥和教堂的小村镇。',
+    '她每天走路去村里的学校，喜欢读写；十五岁离开学校去商店做事。',
+    '在商店认识了当服务员的祖父，六月结婚，婚礼很小但有音乐。',
+    '他们有三个孩子，后来搬到城里；祖母白天在医院工作，晚上学习，学会了英语。',
+    '现在祖母和作者一家住，星期天做饭，爱讲村里的事，还给了作者一张十五岁的老照片。'
+  ]},
+  'es-r15': {id:'es-r15',lang:'es',afterLesson:'es-09',week:9,title:'小时候的夏天',genre:'日记',words:242,sentences:[
+    {text:'Hoy escribo en el cuaderno de la infancia.',zh:'今天我写在童年的本子上。'},
+    {text:'Cuando era niña, vivíamos en el campo.',zh:'我小时候，我们住在乡下。'},
+    {text:'La casa de mis abuelos estaba en una granja pequeña.',zh:'祖父母的房子在一个小农场里。'},
+    {text:'En aquella época no había ordenador en la casa.',zh:'那个时期家里没有电脑。'},
+    {text:'Todos los días yo me levantaba temprano.',zh:'我每天都起得早。'},
+    {text:'Mi abuela ya estaba en la cocina.',zh:'祖母那时已经在厨房了。'},
+    {text:'Hacía frío por la mañana, pero el sol llegaba pronto.',zh:'早上天冷，不过太阳很快就出来。'},
+    {text:'Yo desayunaba pan con leche y salía al patio.',zh:'我吃面包配牛奶当早饭，然后到院子里去。'},
+    {text:'En el patio había un árbol grande y muchas flores.',zh:'院子里有一棵大树和许多花。'},
+    {text:'Mi perro corría por la hierba.',zh:'我的狗在草地上跑。'},
+    {text:'Yo jugaba con mis vecinos todos los días.',zh:'我每天和邻居家的孩子一起玩。'},
+    {text:'Éramos cinco niños y éramos muy traviesos.',zh:'我们一共五个孩子，都很淘气。'},
+    {text:'Yo saltaba, gritaba y subía a los árboles.',zh:'我又跳又喊，还爬树。'},
+    {text:'A veces pescábamos en el río con mi tío.',zh:'有时候我们和叔叔在河里钓鱼。'},
+    {text:'Mi tío era un hombre amable y alegre.',zh:'叔叔是个和气又快活的人。'},
+    {text:'Él contaba cuentos de la granja.',zh:'他讲农场里的故事。'},
+    {text:'Los niños reíamos mucho.',zh:'我们这些孩子笑个不停。'},
+    {text:'Por la tarde recogíamos flores y hierba.',zh:'下午我们采花、拔草。'},
+    {text:'Mi abuela cuidaba dos vacas y diez pájaros.',zh:'祖母照看两头奶牛和十只鸟。'},
+    {text:'Yo cuidaba las flores del patio.',zh:'我照看院子里的花。'},
+    {text:'En verano hacía calor y comíamos fruta del árbol.',zh:'夏天很热，我们吃树上的水果。'},
+    {text:'En invierno había viento y tormentas.',zh:'冬天有风，也有暴风雨。'},
+    {text:'Yo llevaba un paraguas al colegio.',zh:'我带着雨伞去学校。'},
+    {text:'El colegio estaba en el pueblo.',zh:'学校在村子里。'},
+    {text:'Íbamos al colegio con mis vecinos.',zh:'我和邻居家的孩子一起去学校。'},
+    {text:'En el recreo dibujaba pájaros y flores.',zh:'课间我画鸟和花。'},
+    {text:'La profesora decía que yo era curiosa.',zh:'女老师说我很好奇。'},
+    {text:'De vez en cuando mi madre venía del trabajo de la ciudad.',zh:'我母亲偶尔从城里下班回来。'},
+    {text:'Traía juguetes y libros nuevos.',zh:'她带来玩具和新书。'},
+    {text:'Yo soñaba con la ciudad grande.',zh:'我那时向往大城市。'},
+    {text:'Ahora vivo en la ciudad y pienso mucho en el campo.',zh:'现在我住在城里，常常想起乡下。'},
+    {text:'En aquella época la vida era tranquila.',zh:'那个时期生活很平静。'}
+  ],questions:[
+    {prompt:'阅读：小时候作者住在什么地方？',options:['乡下祖父母的小农场','城里的公寓','学校的宿舍'],answer:'乡下祖父母的小农场'},
+    {prompt:'阅读：早上起来以后她先做什么？',options:['吃面包配牛奶，然后去院子','爬树','去河边钓鱼'],answer:'吃面包配牛奶，然后去院子'},
+    {prompt:'阅读：叔叔在文中是什么样的人？',options:['和气又快活，会讲农场的故事','很少说话，总是很忙','住在城里，很少回来'],answer:'和气又快活，会讲农场的故事'},
+    {prompt:'推断：短文开头说“今天我写在童年的本子上”，结尾说现在住在城里。由此可以看出这篇日记是什么时候写的？',options:['长大以后回头写的','小时候当天写的','搬到乡下那天写的'],answer:'长大以后回头写的'}
+  ],keyWords:[
+    {word:'la infancia',zh:'童年'},
+    {word:'el patio',zh:'院子'},
+    {word:'el vecino',zh:'邻居'},
+    {word:'travieso',zh:'淘气的'},
+    {word:'de vez en cuando',zh:'偶尔'}
+  ],retell:[
+    '作者小时候住在乡下祖父母的小农场，家里没有电脑。',
+    '她每天早起，吃面包配牛奶，然后去院子，院子里有大树和花。',
+    '和五个邻居家的孩子一起玩，跳、喊、爬树，有时和叔叔去河里钓鱼。',
+    '夏天热吃树上的水果，冬天有风有暴风雨，带着雨伞去村里的学校。',
+    '母亲偶尔从城里回来带玩具和书；那时她向往城市，现在住在城里却常想乡下。'
+  ]},
+  'es-r16': {id:'es-r16',lang:'es',afterLesson:'es-09',week:9,title:'从前的村子',genre:'描写',words:244,sentences:[
+    {text:'Hace treinta años el pueblo era diferente.',zh:'三十年前这个村子不一样。'},
+    {text:'Había casas pequeñas y calles cortas.',zh:'村里都是小房子和短街道。'},
+    {text:'En el centro estaba la plaza.',zh:'广场在村子中心。'},
+    {text:'En la plaza había una fuente y tres árboles grandes.',zh:'广场上有一个喷泉和三棵大树。'},
+    {text:'Los vecinos hablaban en la plaza cada tarde.',zh:'邻居们每天下午在广场上聊天。'},
+    {text:'La iglesia era antigua y tenía una torre alta.',zh:'教堂很旧，有一座高塔。'},
+    {text:'La escuela estaba en la calle de la iglesia.',zh:'学校在教堂那条街上。'},
+    {text:'Era una escuela pequeña con dos clases.',zh:'那是一所只有两个班的小学校。'},
+    {text:'Había veinte niños en la clase.',zh:'班里有二十个孩子。'},
+    {text:'El profesor era un hombre alto y simpático.',zh:'老师是个又高又讨人喜欢的男人。'},
+    {text:'Los niños salían al patio en el recreo.',zh:'课间孩子们到院子里去。'},
+    {text:'Jugaban en la hierba y recogían flores.',zh:'他们在草地上玩，采花。'},
+    {text:'En primavera había flores blancas en el campo.',zh:'春天田里开着白花。'},
+    {text:'El río pasaba por el pueblo.',zh:'河从村里流过。'},
+    {text:'En verano los niños pescaban en el río.',zh:'夏天孩子们在河里钓鱼。'},
+    {text:'Las vacas de la granja comían la hierba del campo.',zh:'农场的奶牛吃田里的草。'},
+    {text:'Un camino corto llegaba a la granja.',zh:'一条短路通到农场。'},
+    {text:'En otoño los vecinos recogían fruta.',zh:'秋天邻居们采水果。'},
+    {text:'En invierno hacía mucho frío y había nieve.',zh:'冬天很冷，还下雪。'},
+    {text:'Las nubes eran oscuras y venía la tormenta.',zh:'云很黑，暴风雨就来了。'},
+    {text:'Las casas tenían ventanas pequeñas.',zh:'房子的窗户都很小。'},
+    {text:'En las casas había una cocina grande.',zh:'房子里有一间大厨房。'},
+    {text:'Las familias comían en la cocina.',zh:'一家人在厨房里吃饭。'},
+    {text:'Los abuelos contaban cuentos de la vida antigua.',zh:'祖父母讲从前生活的故事。'},
+    {text:'Los niños leían y dibujaban.',zh:'孩子们读书、画画。'},
+    {text:'No había hospital en el pueblo.',zh:'村里没有医院。'},
+    {text:'El médico venía de la ciudad cada semana.',zh:'医生每周从城里来一次。'},
+    {text:'Todavía hoy el pueblo tiene la plaza y la iglesia.',zh:'到今天村里还有广场和教堂。'},
+    {text:'Pero ahora hay coches, tiendas y un banco.',zh:'不过现在有汽车、商店和一家银行了。'},
+    {text:'La granja no está aquí ahora.',zh:'农场已经不在了。'},
+    {text:'El pueblo era tranquilo y alegre.',zh:'那时的村子安静，也让人愉快。'},
+    {text:'En aquella época la vida era lenta y tranquila.',zh:'那个时期生活慢，也平静。'},
+    {text:'Mis abuelos dicen que era una vida buena.',zh:'祖父母说那是一种不错的生活。'}
+  ],questions:[
+    {prompt:'阅读：从前广场上有什么？',options:['一个喷泉和三棵大树','一家银行和几辆汽车','一所医院'],answer:'一个喷泉和三棵大树'},
+    {prompt:'阅读：村里的学校是什么样的？',options:['很小，只有两个班，班里二十个孩子','有一座高塔','在河的对岸'],answer:'很小，只有两个班，班里二十个孩子'},
+    {prompt:'阅读：村里的人生病了怎么办？',options:['等每周从城里来的医生','去村里的医院','自己去城里'],answer:'等每周从城里来的医生'},
+    {prompt:'推断：短文最后两句想说明什么？',options:['村子变了，但祖父母怀念从前的生活','村子一点没变','祖父母不喜欢从前的村子'],answer:'村子变了，但祖父母怀念从前的生活'}
+  ],keyWords:[
+    {word:'la fuente',zh:'喷泉；来源'},
+    {word:'la granja',zh:'农场'},
+    {word:'la hierba',zh:'草'},
+    {word:'la nieve',zh:'雪'},
+    {word:'la tormenta',zh:'暴风雨'}
+  ],retell:[
+    '三十年前的村子只有小房子和短街道，中心是广场。',
+    '广场上有喷泉和三棵大树，邻居每天下午在那里聊天。',
+    '教堂旧，有高塔；学校小，只有两个班，班里二十个孩子。',
+    '河从村里流过，夏天孩子在河里钓鱼；冬天很冷，会下雪。',
+    '村里没有医院，医生每周从城里来；现在有汽车和商店，农场没有了。'
+  ]},
+  'es-r17': {id:'es-r17',lang:'es',afterLesson:'es-10',week:10,title:'公交车上的意外',genre:'短故事',words:267,sentences:[
+    {text:'Aquel día hacía frío y el cielo estaba oscuro.',zh:'那天很冷，天色很暗。'},
+    {text:'Yo salía del trabajo a las siete.',zh:'我七点下班。'},
+    {text:'Estaba cansada y quería llegar a casa pronto.',zh:'我很累，想早点到家。'},
+    {text:'Al principio el viaje iba bien.',zh:'一开始这趟车还算顺利。'},
+    {text:'El autobús estaba lleno de personas.',zh:'公交车上挤满了人。'},
+    {text:'Las personas del autobús estaban nerviosas.',zh:'车上的人都有点紧张。'},
+    {text:'Una mujer con una bolsa grande subió al autobús.',zh:'一位提着大袋子的女士上了车。'},
+    {text:'Llevaba un abrigo azul y un paraguas roto.',zh:'她穿着蓝大衣，拿着一把坏了的伞。'},
+    {text:'En ese momento el autobús paró de pronto.',zh:'就在那时公交车突然停住。'},
+    {text:'La mujer tropezó y la bolsa cayó.',zh:'那位女士绊了一下，袋子掉了。'},
+    {text:'Las manzanas cayeron por el autobús.',zh:'苹果滚了一车。'},
+    {text:'La mujer gritó y se sintió mal.',zh:'她喊了一声，觉得很不舒服。'},
+    {text:'Yo tenía miedo, pero me levanté rápidamente.',zh:'我害怕，但还是很快站了起来。'},
+    {text:'Un hombre abrió la puerta del autobús.',zh:'一个男人打开了车门。'},
+    {text:'Un estudiante llamó por teléfono a la emergencia.',zh:'一个学生打电话叫了急救。'},
+    {text:'Mientras tanto yo recogí las manzanas.',zh:'与此同时我把苹果捡起来。'},
+    {text:'La mujer estaba asustada y no podía hablar.',zh:'那位女士受了惊，说不出话。'},
+    {text:'Yo no la conocía, pero quería ayudar.',zh:'我不认识她，但想帮忙。'},
+    {text:'Le pregunté: ¿Está usted herida?',zh:'我问她：您受伤了吗？'},
+    {text:'Ella dijo que solo tenía miedo.',zh:'她说只是吓着了。'},
+    {text:'Yo pensé en mi abuela en ese momento.',zh:'那一刻我想起了我祖母。'},
+    {text:'Poco después llegó una ambulancia.',zh:'不久之后救护车来了。'},
+    {text:'Una enfermera y un médico bajaron y la ayudaron.',zh:'一位护士和一位医生下车照看她。'},
+    {text:'El médico dijo que la mujer no estaba herida.',zh:'医生说这位女士没有受伤。'},
+    {text:'Por suerte la caída fue ligera.',zh:'幸好摔得不重。'},
+    {text:'La mujer se puso contenta y me dio las gracias.',zh:'她高兴起来，向我道谢。'},
+    {text:'Yo le di el paraguas roto y sus manzanas.',zh:'我把坏伞和苹果还给她。'},
+    {text:'Sin embargo, la bolsa estaba rota.',zh:'不过袋子破了。'},
+    {text:'Un vendedor de la esquina le dio una bolsa nueva.',zh:'街角的一位售货员给了她一个新袋子。'},
+    {text:'Al final el autobús continuó el camino.',zh:'最后公交车继续上路。'},
+    {text:'Yo llegué a casa a las ocho.',zh:'我八点到家。'},
+    {text:'Estaba cansada, pero me sentí bien.',zh:'我很累，心里却很舒服。'},
+    {text:'Al día siguiente vi a la mujer en el mercado.',zh:'第二天我在市场看见了那位女士。'},
+    {text:'Ella estaba bien y llevaba una bolsa nueva.',zh:'她很好，提着一个新袋子。'},
+    {text:'Me saludó con la mano.',zh:'她向我招手打招呼。'},
+    {text:'Aquel día aprendí algo importante.',zh:'那天我学到一件重要的事。'},
+    {text:'En una emergencia todos podemos ayudar.',zh:'遇到紧急情况，我们每个人都能帮上忙。'}
+  ],questions:[
+    {prompt:'阅读：那位女士为什么会摔倒？',options:['公交车突然停住，她绊了一下','她自己跳下车','有人推了她'],answer:'公交车突然停住，她绊了一下'},
+    {prompt:'阅读：救护车来之前，作者做了什么？',options:['站起来帮忙，把苹果捡起来','下车走回家','打电话叫救护车'],answer:'站起来帮忙，把苹果捡起来'},
+    {prompt:'阅读：医生检查后说了什么？',options:['这位女士没有受伤','要马上送医院','袋子必须换新的'],answer:'这位女士没有受伤'},
+    {prompt:'推断：第二天在市场看见那位女士，这一段说明了什么？',options:['她已经恢复了，日子照常过','她还在生病','她搬走了'],answer:'她已经恢复了，日子照常过'}
+  ],keyWords:[
+    {word:'tropezar',zh:'绊倒；绊一下'},
+    {word:'la ambulancia',zh:'救护车'},
+    {word:'tener miedo',zh:'害怕'},
+    {word:'por suerte',zh:'幸好'},
+    {word:'sin embargo',zh:'然而'}
+  ],retell:[
+    '那天很冷，作者七点下班，坐上挤满人的公交车。',
+    '公交车突然停住，一位提大袋子的女士绊倒，苹果撒了一车。',
+    '作者虽然害怕，还是站起来捡苹果；一个学生打电话叫急救。',
+    '救护车很快到，医生说女士没受伤，只是吓着了；街角售货员给了她新袋子。',
+    '第二天作者在市场看见她，她已经好了，还招手打招呼。'
+  ]},
+  'es-r18': {id:'es-r18',lang:'es',afterLesson:'es-10',week:10,title:'那天到底发生了什么',genre:'对话',words:265,sentences:[
+    {text:'Juan: Ana, ¿qué te pasó ayer?',zh:'胡安：安娜，你昨天出什么事了？'},
+    {text:'Ana: No me pasó nada.',zh:'安娜：我没出什么事。'},
+    {text:'Ana: Pero vi un accidente pequeño en el autobús.',zh:'安娜：不过我在公交车上见到一起小事故。'},
+    {text:'Juan: ¿Un accidente? ¿Qué sucedió?',zh:'胡安：事故？怎么回事？'},
+    {text:'Ana: Yo salía del trabajo a las siete.',zh:'安娜：我那时七点下班。'},
+    {text:'Ana: El autobús estaba lleno y hacía frío.',zh:'安娜：车上很挤，天也冷。'},
+    {text:'Ana: De pronto el autobús paró.',zh:'安娜：突然公交车停住了。'},
+    {text:'Ana: Una mujer tropezó y se cayó.',zh:'安娜：一位女士绊倒摔了。'},
+    {text:'Juan: ¿Estaba herida?',zh:'胡安：她受伤了吗？'},
+    {text:'Ana: No. Por suerte solo estaba asustada.',zh:'安娜：没有。幸好只是吓着了。'},
+    {text:'Juan: ¿Y tú? ¿Tenías miedo?',zh:'胡安：那你呢？你害怕吗？'},
+    {text:'Ana: Sí, al principio tenía mucho miedo.',zh:'安娜：害怕，一开始很害怕。'},
+    {text:'Ana: Pero me levanté y recogí sus manzanas.',zh:'安娜：不过我站起来，把她的苹果捡了。'},
+    {text:'Juan: ¿Y las manzanas?',zh:'胡安：那些苹果呢？'},
+    {text:'Ana: Cayeron por el autobús, pero las recogí.',zh:'安娜：撒了一车，不过我都捡起来了。'},
+    {text:'Juan: ¡Qué susto!',zh:'胡安：真够吓人的！'},
+    {text:'Ana: Sí, fue un susto grande.',zh:'安娜：是啊，吓得不轻。'},
+    {text:'Juan: ¿Ayudaron las personas del autobús?',zh:'胡安：车上的人帮忙了吗？'},
+    {text:'Ana: Sí. Un estudiante llamó por teléfono.',zh:'安娜：帮了。一个学生打了电话。'},
+    {text:'Ana: Poco después llegó una ambulancia.',zh:'安娜：不久救护车就来了。'},
+    {text:'Juan: ¡Qué rápido!',zh:'胡安：真快！'},
+    {text:'Ana: Sí, un médico y una enfermera bajaron enseguida.',zh:'安娜：是啊，一位医生和一位护士马上下了车。'},
+    {text:'Ana: El médico dijo que la mujer no estaba herida.',zh:'安娜：医生说那位女士没受伤。'},
+    {text:'Juan: Entonces acabó bien.',zh:'胡安：那就是结果不错。'},
+    {text:'Ana: Sí, pero la bolsa se rompió.',zh:'安娜：是的，不过袋子破了。'},
+    {text:'Ana: Un vendedor de la esquina le dio una bolsa nueva.',zh:'安娜：街角的一位售货员给了她一个新袋子。'},
+    {text:'Juan: Las personas del barrio son amables.',zh:'胡安：这个街区的人很和气。'},
+    {text:'Ana: Yo pensé eso en ese momento.',zh:'安娜：当时我也是这么想的。'},
+    {text:'Juan: ¿Y llegaste tarde a casa?',zh:'胡安：那你回家晚了吗？'},
+    {text:'Ana: Llegué a las ocho, una hora más tarde.',zh:'安娜：八点到的，晚了一个小时。'},
+    {text:'Ana: Estaba cansada, pero me sentí bien.',zh:'安娜：我很累，心里却很舒服。'},
+    {text:'Juan: Hoy la mujer ya está bien, ¿sabes?',zh:'胡安：那位女士今天已经好了，你知道吗？'},
+    {text:'Ana: ¿La conoces?',zh:'安娜：你认识她？'},
+    {text:'Juan: Sí, vive en mi calle.',zh:'胡安：认识，她住在我这条街上。'},
+    {text:'Juan: Esta mañana la vi en el mercado.',zh:'胡安：今天早上我在市场看见她了。'},
+    {text:'Ana: ¡Qué sorpresa! Yo también la vi.',zh:'安娜：真巧！我也看见了。'},
+    {text:'Juan: Ya no tiene miedo del autobús.',zh:'胡安：她已经不怕坐公交车了。'},
+    {text:'Ana: Por eso quiero contar esta historia.',zh:'安娜：所以我想把这件事讲出来。'},
+    {text:'Ana: En una emergencia las personas ayudan.',zh:'安娜：遇到紧急情况，大家会帮忙。'},
+    {text:'Juan: Tienes razón. Vamos a tomar un café.',zh:'胡安：你说得对。我们去喝杯咖啡吧。'}
+  ],questions:[
+    {prompt:'阅读：事故发生时安娜在做什么？',options:['七点下班坐车回家','在市场买东西','在家里休息'],answer:'七点下班坐车回家'},
+    {prompt:'阅读：谁打电话叫来了救护车？',options:['一个学生','那位女士自己','街角的售货员'],answer:'一个学生'},
+    {prompt:'阅读：安娜回到家比平时晚了多久？',options:['一个小时','半个小时','两个小时'],answer:'一个小时'},
+    {prompt:'推断：胡安是怎么知道那位女士今天已经好了的？',options:['她住在胡安那条街上，胡安早上在市场见过她','安娜昨天告诉他的','医生打电话告诉他的'],answer:'她住在胡安那条街上，胡安早上在市场见过她'}
+  ],keyWords:[
+    {word:'el accidente',zh:'事故'},
+    {word:'suceder',zh:'发生'},
+    {word:'asustado',zh:'受惊的'},
+    {word:'de pronto',zh:'突然'},
+    {word:'ya no',zh:'不再'}
+  ],retell:[
+    '胡安问安娜昨天出了什么事，安娜说自己没事，只是见到一起小事故。',
+    '她七点下班回家，车上很挤，公交车突然停住，一位女士绊倒摔了。',
+    '安娜一开始很害怕，还是站起来捡苹果；一个学生打电话，救护车很快到。',
+    '医生说女士没受伤，袋子破了，街角售货员给了她新袋子。',
+    '胡安说那位女士住在他那条街，今天早上还在市场见过，已经不怕坐车了。'
+  ]},
+  'es-r19': {id:'es-r19',lang:'es',afterLesson:'es-11',week:11,title:'市中心公寓出租',genre:'通知或广告',words:282,sentences:[
+    {text:'Se alquila un piso en el centro de la ciudad.',zh:'市中心一套公寓出租。'},
+    {text:'El piso está en la calle del museo, cerca de la plaza.',zh:'房子在博物馆街，靠近广场。'},
+    {text:'El edificio es moderno y tiene ascensor.',zh:'楼是新的，有电梯。'},
+    {text:'El piso está en el segundo piso.',zh:'房子在二层。'},
+    {text:'Tiene tres dormitorios, un salón amplio y una cocina nueva.',zh:'有三间卧室、一个宽敞的客厅和一个新厨房。'},
+    {text:'El salón es más grande que la cocina.',zh:'客厅比厨房大。'},
+    {text:'La habitación mayor tiene un balcón.',zh:'最大的那间房有阳台。'},
+    {text:'Desde el balcón hay una vista buena de la plaza.',zh:'从阳台看广场，视野不错。'},
+    {text:'Entre el salón y la cocina hay un pasillo corto.',zh:'客厅和厨房之间有一条短走廊。'},
+    {text:'El baño está al lado de la cocina.',zh:'卫生间在厨房旁边。'},
+    {text:'Detrás del edificio hay un garaje.',zh:'楼后面有车库。'},
+    {text:'El garaje es seguro y bastante amplio.',zh:'车库安全，也相当宽敞。'},
+    {text:'Delante del edificio hay una parada de autobús.',zh:'楼前面有一个公交车站。'},
+    {text:'La parada del metro está a cien metros.',zh:'地铁站在一百米处。'},
+    {text:'El barrio es céntrico, pero es silencioso.',zh:'街区在市中心，但很安静。'},
+    {text:'Las calles son anchas y la acera está limpia.',zh:'街道很宽，人行道也干净。'},
+    {text:'Cerca del piso hay un mercado, dos tiendas y una farmacia.',zh:'房子附近有一个市场、两家商店和一家药店。'},
+    {text:'El parque más cercano está a diez minutos.',zh:'最近的公园走十分钟就到。'},
+    {text:'La escuela y la biblioteca están cerca.',zh:'学校和图书馆都在附近。'},
+    {text:'El alquiler es de mil cada mes.',zh:'租金每月一千。'},
+    {text:'Este precio es menor que el precio de otros pisos del barrio.',zh:'这个价格比街区里别的房子低。'},
+    {text:'Los pisos de esta calle son más caros.',zh:'这条街上的房子更贵。'},
+    {text:'Sin embargo, este piso no es peor.',zh:'不过这套房子并不差。'},
+    {text:'Es igual de luminoso y tiene mejor vista.',zh:'同样明亮，视野还更好。'},
+    {text:'Dentro del piso hay armarios grandes y una pared clara.',zh:'房子里有大衣柜，墙是浅色的。'},
+    {text:'El techo es alto y las ventanas son amplias.',zh:'天花板高，窗户宽敞。'},
+    {text:'No hay ningún ruido de la avenida.',zh:'听不到大道上的一点声响。'},
+    {text:'El piso está lejos de la estación de tren.',zh:'房子离火车站远。'},
+    {text:'Por eso es tranquilo por la noche.',zh:'所以晚上很安静。'},
+    {text:'¿Quiere ver el piso?',zh:'您想看看房子吗？'},
+    {text:'Puede llamar por teléfono de lunes a viernes.',zh:'周一到周五都可以打电话。'},
+    {text:'Alguien de la oficina va a enseñar el piso.',zh:'办公室会有人带您看房。'},
+    {text:'Nadie vive aquí ahora, así que puede entrar cada día.',zh:'现在没人住，所以每天都能进去看。'},
+    {text:'Es un piso bueno para una familia pequeña.',zh:'这套房子适合小家庭。'}
+  ],questions:[
+    {prompt:'阅读：这套房子在几层？',options:['二层','三层','一层'],answer:'二层'},
+    {prompt:'阅读：车库在哪里？',options:['楼后面','楼前面','阳台下面'],answer:'楼后面'},
+    {prompt:'阅读：租金和街区里别的房子比怎么样？',options:['更低','更高','一样'],answer:'更低'},
+    {prompt:'推断：广告说晚上很安静，理由是什么？',options:['房子离火车站远，也听不到大道的声响','房子在一层','楼里没有电梯'],answer:'房子离火车站远，也听不到大道的声响'}
+  ],keyWords:[
+    {word:'el edificio',zh:'楼房；建筑'},
+    {word:'el alquiler',zh:'租金；租赁'},
+    {word:'al lado de',zh:'在……旁边'},
+    {word:'lejos de',zh:'离……远'},
+    {word:'la vista',zh:'景观；视野'}
+  ],retell:[
+    '市中心博物馆街、靠近广场的一套公寓出租，楼新，有电梯，房子在二层。',
+    '三间房、宽敞客厅、新厨房；最大的房间有阳台，能看到广场。',
+    '卫生间在厨房旁边，楼后有车库，楼前有公交站，地铁站一百米。',
+    '街区在市中心却安静，附近有市场、商店、药店、学校和图书馆。',
+    '租金每月一千，比街区别的房子低；周一到周五打电话就能看房。'
+  ]},
+  'es-r20': {id:'es-r20',lang:'es',afterLesson:'es-11',week:11,title:'两座城市',genre:'描写',words:282,sentences:[
+    {text:'Ana vive en una ciudad grande y Juan vive en una ciudad pequeña.',zh:'安娜住在大城市，胡安住在小城市。'},
+    {text:'Las dos ciudades están en el norte del país.',zh:'两座城市都在国家北部。'},
+    {text:'La ciudad de Ana tiene mil edificios y muchos habitantes.',zh:'安娜那座城有上千栋楼，居民很多。'},
+    {text:'La ciudad de Juan es menor y tiene menos población.',zh:'胡安那座城小一些，人口也少。'},
+    {text:'La población de la ciudad grande es mayor.',zh:'大城市的人口更多。'},
+    {text:'En el centro hay muchos edificios altos.',zh:'市中心有许多高楼。'},
+    {text:'En la ciudad pequeña ninguna casa es alta.',zh:'小城市里没有一栋高楼。'},
+    {text:'En la ciudad grande hay metro, tren y autobús.',zh:'大城市有地铁、火车和公交车。'},
+    {text:'El metro es más rápido que el autobús.',zh:'地铁比公交车快。'},
+    {text:'Sin embargo, es más ruidoso.',zh:'不过也更吵。'},
+    {text:'En la ciudad pequeña no hay metro.',zh:'小城市没有地铁。'},
+    {text:'Las personas caminan o van en bicicleta.',zh:'人们走路或者骑自行车。'},
+    {text:'La calle es estrecha, pero es segura.',zh:'街道窄，但很安全。'},
+    {text:'En la ciudad grande la avenida es ancha y peligrosa.',zh:'大城市的大道又宽又危险。'},
+    {text:'Hay un semáforo en cada esquina.',zh:'每个街角都有红绿灯。'},
+    {text:'El piso de Ana está en un edificio de diez pisos.',zh:'安娜的房子在一栋十层的楼里。'},
+    {text:'Tiene ascensor, garaje y una terraza pequeña.',zh:'楼里有电梯、车库和一个小露台。'},
+    {text:'La casa de Juan tiene un jardín y un patio.',zh:'胡安的房子有花园和院子。'},
+    {text:'Delante de la casa hay dos árboles.',zh:'房子前面有两棵树。'},
+    {text:'Detrás hay un campo verde.',zh:'后面是一片绿色的田。'},
+    {text:'El alquiler de Ana es mayor que el alquiler de Juan.',zh:'安娜的房租比胡安的高。'},
+    {text:'Ana paga cada mes bastante dinero.',zh:'安娜每月要付不少钱。'},
+    {text:'Juan paga menos, pero gana menos también.',zh:'胡安付得少，挣得也少。'},
+    {text:'En la ciudad grande hay más trabajo y más tiendas.',zh:'大城市工作更多，商店也更多。'},
+    {text:'También hay museos, teatros y varios cines.',zh:'还有博物馆、剧院和好几家电影院。'},
+    {text:'En la ciudad pequeña hay un cine y ningún teatro.',zh:'小城市只有一家电影院，没有剧院。'},
+    {text:'Sin embargo, la vida es más tranquila.',zh:'不过那里的生活更平静。'},
+    {text:'Nadie corre por la calle.',zh:'街上没有人急着赶路。'},
+    {text:'Todos conocen a los vecinos.',zh:'大家都认识邻居。'},
+    {text:'Ana dice que su ciudad es mejor para el trabajo.',zh:'安娜说她那座城更适合工作。'},
+    {text:'Juan dice que su pueblo es mejor para la familia.',zh:'胡安说他那里更适合过日子。'},
+    {text:'Las dos ciudades son buenas.',zh:'两座城市各有各的好。'},
+    {text:'Ana visita a Juan cada verano.',zh:'安娜每年夏天去看胡安。'},
+    {text:'Juan viene a la ciudad grande de vez en cuando.',zh:'胡安偶尔来大城市。'},
+    {text:'Los dos amigos hablan mucho de las dos ciudades.',zh:'两个朋友常常聊这两座城市。'}
+  ],questions:[
+    {prompt:'阅读：小城市里人们怎么出行？',options:['走路或骑自行车','坐地铁','坐火车'],answer:'走路或骑自行车'},
+    {prompt:'阅读：谁的房租更高？',options:['安娜','胡安','两人一样'],answer:'安娜'},
+    {prompt:'阅读：小城市有几家剧院？',options:['一家也没有','一家','好几家'],answer:'一家也没有'},
+    {prompt:'推断：两个人各说自己的城市更好，短文的看法是什么？',options:['两座城市各有各的好','大城市明显更好','小城市明显更好'],answer:'两座城市各有各的好'}
+  ],keyWords:[
+    {word:'el habitante',zh:'居民'},
+    {word:'ancho',zh:'宽的'},
+    {word:'seguro',zh:'安全的；确定的'},
+    {word:'mejor',zh:'更好的'},
+    {word:'varios',zh:'好几个'}
+  ],retell:[
+    '安娜住大城市，胡安住小城市，两座城都在国家北部。',
+    '大城市有地铁、火车和公交，地铁快但吵；小城市靠走路和自行车。',
+    '安娜住十层楼的房子，有电梯和车库；胡安的房子有花园和院子。',
+    '安娜房租更高、挣得也多；大城市工作和商店多，还有博物馆和剧院。',
+    '小城市生活更平静，大家都认识邻居；两人都觉得自己的城市各有各的好。'
+  ]},
+  'es-r21': {id:'es-r21',lang:'es',afterLesson:'es-12',week:12,title:'三个月的学习计划',genre:'菜谱或日程',words:307,sentences:[
+    {text:'Este es mi plan de estudio de los próximos tres meses.',zh:'这是我未来三个月的学习计划。'},
+    {text:'Escribo el plan porque quiero avanzar con método.',zh:'我写下计划，因为想按方法推进。'},
+    {text:'El plan tiene tres etapas de un mes.',zh:'计划分成三个一个月的阶段。'},
+    {text:'La primera etapa es de vocabulario y lectura.',zh:'第一阶段练词汇和阅读。'},
+    {text:'La segunda etapa es de escritura.',zh:'第二阶段练写作。'},
+    {text:'La última etapa es de repaso general.',zh:'最后一个阶段做总复习。'},
+    {text:'Al principio no sabía nada de español.',zh:'一开始我一点西班牙语都不会。'},
+    {text:'Ahora leo textos cortos y entiendo la idea general.',zh:'现在我读短文章，能看懂大意。'},
+    {text:'Mi objetivo es escribir cien palabras cada semana.',zh:'我的目标是每周写一百词。'},
+    {text:'También quiero mejorar la lectura y la escritura.',zh:'我也想把阅读和写作提上去。'},
+    {text:'Cada día tengo veinticinco minutos de práctica.',zh:'我每天有二十五分钟练习。'},
+    {text:'Los primeros diez minutos son de vocabulario.',zh:'前十分钟练词汇。'},
+    {text:'Repaso mis tarjetas de vocabulario.',zh:'我复习自己的词汇卡片。'},
+    {text:'Después leo un texto corto quince minutos.',zh:'然后读十五分钟短文章。'},
+    {text:'Anoto las palabras nuevas en un cuaderno.',zh:'我把新词记在本子上。'},
+    {text:'Cada semana tengo media hora de gramática y escritura.',zh:'每周有半小时语法和写作。'},
+    {text:'Primero reviso la gramática de la semana.',zh:'我先检查这一周的语法。'},
+    {text:'Después escribo cinco frases con las palabras nuevas.',zh:'然后用新词写五句话。'},
+    {text:'Al final comparo mis frases con el texto.',zh:'最后把我的句子和课文比一比。'},
+    {text:'Los lunes y los jueves resumo el texto en chino.',zh:'周一和周四我用中文复述课文。'},
+    {text:'El resumen tiene tres o cuatro frases.',zh:'复述只有三四句话。'},
+    {text:'Los sábados repaso el vocabulario de la semana.',zh:'周六我复习这一周的词汇。'},
+    {text:'Memorizo veinte palabras nuevas cada semana.',zh:'我每周背二十个新词。'},
+    {text:'El domingo hago una lectura larga.',zh:'周日我做一次长阅读。'},
+    {text:'Leo un texto largo y anoto mis dudas.',zh:'我读一篇长文章，把疑问记下来。'},
+    {text:'Después escribo un resumen en español.',zh:'之后用西班牙语写一段小结。'},
+    {text:'Cada mes comparo mi progreso con el mes pasado.',zh:'每个月我把进步和上个月比一比。'},
+    {text:'Miro el nivel de la lectura y la nota de la escritura.',zh:'我看阅读的水平和写作的分数。'},
+    {text:'Después tomo una decisión para el mes próximo.',zh:'然后为下个月做一个决定。'},
+    {text:'Este método tiene una ventaja clara.',zh:'这个方法有一个明显的好处。'},
+    {text:'El esfuerzo de cada día es pequeño, pero el cambio es grande.',zh:'每天的付出不大，变化却不小。'},
+    {text:'La costumbre es más importante que el tiempo de un día.',zh:'习惯比某一天花的时间更重要。'},
+    {text:'En mi opinión, la práctica corta de cada día es mejor.',zh:'我认为每天短时间的练习更好。'},
+    {text:'Mi experiencia de estos tres meses es buena.',zh:'这三个月的经历不错。'},
+    {text:'Todavía tengo dudas de gramática.',zh:'语法上我还有疑问。'},
+    {text:'Sin embargo, el progreso es claro.',zh:'不过进步很明显。'},
+    {text:'El próximo curso quiero leer un libro de historia.',zh:'下一阶段我想读一本历史书。'},
+    {text:'También quiero hablar con alguien cada semana.',zh:'我也想每周和人说说话。'},
+    {text:'Este es mi plan de tres meses.',zh:'这就是我三个月的计划。'}
+  ],questions:[
+    {prompt:'阅读：每天二十五分钟是怎么分配的？',options:['前十分钟词汇，后十五分钟读短文章','全部用来写作','前十五分钟语法，后十分钟词汇'],answer:'前十分钟词汇，后十五分钟读短文章'},
+    {prompt:'阅读：周一和周四要做什么？',options:['用中文复述课文','背二十个新词','写一百词'],answer:'用中文复述课文'},
+    {prompt:'阅读：每个月的复盘看哪两项？',options:['阅读的水平和写作的分数','词汇量和上课次数','语法和听力'],answer:'阅读的水平和写作的分数'},
+    {prompt:'推断：作者说“习惯比某一天花的时间更重要”，这句话支持的是哪种做法？',options:['每天练一小段，长期坚持','一天集中练很久，之后停几天','只在考试前突击'],answer:'每天练一小段，长期坚持'}
+  ],keyWords:[
+    {word:'el plan',zh:'计划'},
+    {word:'el objetivo',zh:'目标'},
+    {word:'repasar',zh:'复习'},
+    {word:'el resumen',zh:'摘要；小结'},
+    {word:'la costumbre',zh:'习惯'}
+  ],retell:[
+    '作者写下三个月的学习计划，目标是每周写一百词，提高阅读和写作。',
+    '每天二十五分钟：前十分钟复习词汇卡片，后十五分钟读短文章并记新词。',
+    '每周半小时语法和写作：先检查语法，再用新词写五句，最后和课文对照。',
+    '周一周四用中文复述课文，周六复习一周词汇，周日做长阅读并写小结。',
+    '每月和上月比阅读水平和写作分数，再定下个月的做法；作者认为习惯比一天的时间更重要。'
+  ]},
+  'es-r22': {id:'es-r22',lang:'es',afterLesson:'es-12',week:12,title:'三个月以后的安娜',genre:'人物介绍',words:308,sentences:[
+    {text:'Hace tres meses Ana empezó a estudiar español.',zh:'三个月前安娜开始学西班牙语。'},
+    {text:'Ana tiene veinticinco años y trabaja en una oficina.',zh:'安娜二十五岁，在一间办公室工作。'},
+    {text:'Antes no sabía nada de la lengua.',zh:'以前她对这门语言一无所知。'},
+    {text:'No conocía la gramática y no entendía ninguna frase.',zh:'她不懂语法，一句话也看不明白。'},
+    {text:'En la primera semana aprendió las primeras palabras y las frases fáciles.',zh:'第一周她学了最初的一批词和简单句子。'},
+    {text:'Cada día tenía veinticinco minutos de práctica.',zh:'她每天有二十五分钟练习。'},
+    {text:'Al principio el vocabulario era difícil.',zh:'一开始词汇很难。'},
+    {text:'Ana memorizó veinte palabras cada semana.',zh:'安娜每周背二十个词。'},
+    {text:'Escribía cinco frases los sábados.',zh:'她每周六写五句话。'},
+    {text:'En el segundo mes empezó la lectura de textos cortos.',zh:'第二个月她开始读短文章。'},
+    {text:'Leía un texto cada día y escribía las dudas.',zh:'她每天读一篇，把疑问写下来。'},
+    {text:'Una amiga comparó sus frases con el texto.',zh:'一位朋友帮她把句子和原文作了比较。'},
+    {text:'Poco después Ana vio un cambio.',zh:'不久之后安娜看到了变化。'},
+    {text:'Ya podía entender la idea de una noticia corta.',zh:'她已经能看懂一条短消息的大意。'},
+    {text:'En el mes de mayo escribió cien palabras en quince minutos.',zh:'五月她用十五分钟写了一百词。'},
+    {text:'Fue un esfuerzo grande, pero el resultado fue bueno.',zh:'那次很吃力，结果却不错。'},
+    {text:'Ana estudia en la biblioteca del barrio.',zh:'安娜在街区的图书馆学习。'},
+    {text:'Su hermana también estudia una lengua nueva.',zh:'她姐妹也在学一门新语言。'},
+    {text:'Las dos hablan de su progreso cada mes.',zh:'两人每个月聊一次各自的进步。'},
+    {text:'Ahora Ana lee textos de cien palabras sin problema.',zh:'现在安娜读一百词的文章没有问题。'},
+    {text:'Todavía tiene dudas de gramática.',zh:'语法上她还有疑问。'},
+    {text:'No entiende bien la gramática del pasado.',zh:'过去时的语法她还没完全弄清。'},
+    {text:'Sin embargo, ya conoce la diferencia entre las dos.',zh:'不过两者的区别她已经知道了。'},
+    {text:'Su método es fácil: práctica corta de cada día.',zh:'她的方法很简单：每天短时间练习。'},
+    {text:'Repasa las tarjetas, lee un texto y escribe un resumen.',zh:'复习卡片、读一篇文章、写一段小结。'},
+    {text:'Su ventaja es la costumbre.',zh:'她的长处是习惯。'},
+    {text:'Nunca estudia tres horas un día y nada la semana siguiente.',zh:'她从不一天学三小时，接下来一周什么都不做。'},
+    {text:'En su opinión, el progreso viene del tiempo, no del esfuerzo de un día.',zh:'她认为进步来自时间，而不是某一天的用力。'},
+    {text:'Ana quiere avanzar al nivel siguiente.',zh:'安娜想进到下一个水平。'},
+    {text:'Su próximo objetivo es leer un libro corto.',zh:'她下一个目标是读完一本短书。'},
+    {text:'También quiere hablar español con alguien cada semana.',zh:'她也想每周找人用西班牙语说说话。'},
+    {text:'Ana dice: la lengua es una etapa larga.',zh:'安娜说：学语言是一个长阶段。'},
+    {text:'Cada mes es una etapa pequeña.',zh:'每个月是一个小阶段。'},
+    {text:'Ana dice que la práctica es más importante que el método.',zh:'安娜说练习比方法更重要。'},
+    {text:'Ella escribe su experiencia en un cuaderno.',zh:'她把自己的经历写在本子上。'},
+    {text:'Ella nunca deja el cuaderno en casa.',zh:'她从不把本子落在家里。'},
+    {text:'Así puede comparar el nivel de cada mes.',zh:'这样就能比较每个月的水平。'},
+    {text:'Ana está contenta con estos tres meses.',zh:'这三个月安娜很满意。'}
+  ],questions:[
+    {prompt:'阅读：三个月前安娜的西班牙语水平怎么样？',options:['一无所知，语法和句子都不懂','能读短文章','只是不会写'],answer:'一无所知，语法和句子都不懂'},
+    {prompt:'阅读：第二个月她开始做什么？',options:['读短文章，并把疑问写下来','背二十个词','写一百词'],answer:'读短文章，并把疑问写下来'},
+    {prompt:'阅读：她现在还有什么困难？',options:['两种过去时还没完全弄清','读一百词的文章有问题','不认识数字'],answer:'两种过去时还没完全弄清'},
+    {prompt:'推断：短文说她“从不一天学三小时，接下来一周什么都不做”，这说明她看重什么？',options:['长期稳定的习惯','短时间的突击','考试成绩'],answer:'长期稳定的习惯'}
+  ],keyWords:[
+    {word:'la lengua',zh:'语言；舌头'},
+    {word:'el nivel',zh:'水平；级别'},
+    {word:'la experiencia',zh:'经验；经历'},
+    {word:'la diferencia',zh:'区别'},
+    {word:'avanzar',zh:'前进；进步'}
+  ],retell:[
+    '安娜二十五岁，在办公室工作，三个月前开始学西班牙语，当时一无所知。',
+    '第一周学最初的一批词和简单句子，每天二十五分钟，每周背二十个词、周六写五句。',
+    '第二个月开始每天读短文章、记疑问，朋友帮她把句子和原文比较。',
+    '五月她用十五分钟写了一百词；现在能读一百词的文章，但过去时的语法还没弄清。',
+    '她的方法是每天短时间练习，靠的是习惯；下一个目标是读完一本短书，每周找人对话。'
+  ]},
+};
+const readingList = lang => Object.values(READINGS).filter(item => item.lang === lang);
+
 // 本地缓存与文件保存。
 let rows, state, source = '文件', dirty = false, revision = 0;
 let lastSaved = document.querySelector('meta[name="srs-saved-at"]').content;
@@ -18745,7 +19767,9 @@ let storageWarning = '', notice = '', saving = false, handleReady = false, fileH
 let fileSnapshot = null, overwritePending = null, handleNeedsStore = false;
 let tab = 'review', language = 'all', lesson = 'es-01', session = null;
 let revealed = false, typedAnswer = '', feedback = null;
+let openReading = null, readingShowZh = false;
 const exerciseWork = new Map();
+const readingWork = new Map();
 function persistCache() {
   try {
     localStorage.setItem(CACHE_KEY,JSON.stringify({state,cards:rows}));
@@ -18902,10 +19926,10 @@ function renderHeader() {
   }
 }
 function render() {
-  document.getElementById('app').innerHTML = `<header class="top" id="header"></header><main class="page"><nav class="tabs" aria-label="主导航">${[['review','复习'],['lessons','课程'],['stats','统计'],['settings','设置']].map(([key,label]) => `<button data-tab="${key}" ${tab===key?'aria-current="page"':''}>${label}</button>`).join('')}</nav><div class="notice" id="notice" role="status" aria-live="polite">${esc(notice)}</div><section id="content" aria-label="${{review:'复习',lessons:'课程',stats:'统计',settings:'设置'}[tab]}"></section><p class="foot">当前只学读写。v1 冻结至 2026-12-06 复盘，中间只修 bug。</p></main>`;
+  document.getElementById('app').innerHTML = `<header class="top" id="header"></header><main class="page"><nav class="tabs" aria-label="主导航">${[['review','复习'],['lessons','课程'],['readings','阅读'],['stats','统计'],['settings','设置']].map(([key,label]) => `<button data-tab="${key}" ${tab===key?'aria-current="page"':''}>${label}</button>`).join('')}</nav><div class="notice" id="notice" role="status" aria-live="polite">${esc(notice)}</div><section id="content" aria-label="${{review:'复习',lessons:'课程',readings:'阅读',stats:'统计',settings:'设置'}[tab]}"></section><p class="foot">当前只学读写。v1 冻结至 2026-12-06 复盘，中间只修 bug。</p></main>`;
   renderHeader();
   const content = document.getElementById('content');
-  content.innerHTML = tab === 'review' ? renderReview() : tab === 'lessons' ? renderLessons() : tab === 'stats' ? renderStats() : renderSettings();
+  content.innerHTML = tab === 'review' ? renderReview() : tab === 'lessons' ? renderLessons() : tab === 'readings' ? renderReadings() : tab === 'stats' ? renderStats() : renderSettings();
 }
 function resetSession() { session = null; revealed = false; typedAnswer = ''; feedback = null; }
 function ensureSession() {
@@ -18940,18 +19964,66 @@ function renderLessons() {
   const current = LESSONS[lesson], lessonRows = rows.filter(row => row.lesson === lesson);
   const reading = current.reading, questions = reading?.questions || [];
   return `<h2>课程</h2>${LANGS.map(lang => `<section aria-label="${lang==='es'?'西语':'俄语'}课程"><h3>${lang==='es'?'es · 西语':'ru · 俄语'}</h3><div class="course-picker">${Object.entries(LESSONS).filter(([,value])=>value.lang===lang).map(([id,value]) => `<button data-lesson="${esc(id)}" aria-pressed="${lesson===id}"><strong>${esc(id)} · ${esc(value.name)}</strong><span class="muted">第 ${value.week} 周 · ${esc(value.dates)} · ${rows.filter(row=>row.lesson===id).length} 条词条／字母 · ${value.exercises.length} 题练习</span></button>`).join('')}</div></section>`).join('')}
-  <section class="panel"><h3>${esc(lesson)} · ${esc(current.name)}</h3><p class="kicker">第 ${current.week} 周 · 2026 年 ${esc(current.dates)}${current.lang==='ru'?' · '+(current.week>=5?'每天 30 分钟 + 周末系统块 60 分钟':'每天 10 分钟'):''}</p><p><strong>本课目标：</strong>${esc(current.goal)}</p><p><strong>本周写作任务：</strong>${esc(current.writingTask)}</p><h3>一、讲解</h3>${current.explanation()}</section>
+  <section class="panel"><h3>${esc(lesson)} · ${esc(current.name)}</h3><p class="kicker">第 ${current.week} 周 · 2026 年 ${esc(current.dates)}${current.dailyTime?' · '+esc(current.dailyTime):''}</p><p><strong>本课目标：</strong>${esc(current.goal)}</p><p><strong>本周写作任务：</strong>${esc(current.writingTask)}</p><h3>一、讲解</h3>${current.explanation()}</section>
   <section class="panel"><h3>二、词表</h3><p class="muted">${lessonRows.length} 条；识别与拼写共 ${expandCards(lessonRows).length} 张卡。letter / phrase 词条只生成识别卡。窄屏表格可横向滚动。</p><details><summary>展开本课全部词条与例句</summary><div class="table-wrap" tabindex="0" aria-label="可横向滚动的词表"><table class="vocab"><thead><tr><th>词条／字母</th><th>中文</th><th>例句</th><th>说明</th></tr></thead><tbody>${lessonRows.map(row=>`<tr><td lang="${row.lang}" class="${row.lang==='ru'?'ru-text':''}">${esc(row.front)}<small>${esc(row.id)} · ${recognitionOnly(row)?'识别':'识别＋拼写'}</small></td><td>${esc(row.back)}</td><td><span lang="${row.lang}">${esc(row.example)}</span><small>${esc(row.example_zh)}</small></td><td>${esc(row.note)}<small>${esc(row.tags.split(';').join(' · '))}</small></td></tr>`).join('')}</tbody></table></div></details></section>
   <section class="panel"><h3>三、练习</h3><p class="muted">全课 ${current.exercises.length} 题${reading?'（含下方 '+questions.length+' 道阅读理解）':''}。页内即时判定，不计入 SRS。按词表大小写输入；输入框已关闭自动大写和拼写纠正。</p><div class="exercise-list">${current.exercises.map((exercise,i)=>questions.includes(exercise)?'':renderExercise(exercise,i,current)).join('')}</div></section>
   ${reading?`<section class="panel"><h3>四、阅读 · ${esc(reading.title)}</h3>${reading.sentences.map(sentence=>`<div><p class="example ru-text" lang="${current.lang}">${esc(sentence.text)}</p><details><summary>查看本句中文</summary><p>${esc(sentence.zh)}</p></details></div>`).join('')}<div class="exercise-list">${questions.map(question=>renderExercise(question,current.exercises.indexOf(question),current)).join('')}</div></section>`:''}`;
+}
+function readingRecord(id) {
+  return state.readings && own(state.readings,id) ? state.readings[id] : null;
+}
+function readingStatus(item) {
+  const record = readingRecord(item.id);
+  return record ? `已读 ${record.done} · ${record.score} / ${record.total}` : '未读';
+}
+function renderReadings() {
+  if (openReading && own(READINGS,openReading)) return renderReadingPage(READINGS[openReading]);
+  return `<h2>阅读</h2><div class="panel"><p>每篇只用到所标课次及之前学过的词。先通读一遍，再看题；需要时展开中文。四道题全部检查后记录得分，可以重做，重做按最新一次记。页内阅读不计入 SRS。</p></div>${LANGS.map(lang => {
+    const items = readingList(lang);
+    return `<section aria-label="${lang==='es'?'西语阅读':'俄语阅读'}"><h3>${lang==='es'?'es · 西语':'ru · 俄语'}</h3>${items.length?`<div class="course-picker">${items.map(item => `<button data-reading="${esc(item.id)}"><strong>${esc(item.id)} · ${esc(item.title)}</strong><span class="muted">第 ${item.week} 周 · ${esc(item.genre)} · ${item.words} 词 · 词汇到 ${esc(item.afterLesson)} · ${esc(readingStatus(item))}</span></button>`).join('')}</div>`:'<p class="muted">这门语言暂时没有阅读篇目。</p>'}</section>`;
+  }).join('')}`;
+}
+function renderReadingQuestion(item,question,i) {
+  const work = readingWork.get(item.id+':'+i), result = work?.result;
+  return `<form class="exercise" data-question="${i}"><label for="reading-q-${i}">${i+1}. ${esc(question.prompt)}</label><select name="answer" id="reading-q-${i}" required><option value="">请选择</option>${question.options.map(option=>`<option value="${esc(option)}" ${work?.answer===option?'selected':''}>${esc(option)}</option>`).join('')}</select><div class="actions"><button type="submit">检查</button></div><div class="exercise-result" aria-live="polite">${result?exerciseFeedback(result,question.answer,true):''}</div></form>`;
+}
+function renderReadingPage(item) {
+  const record = readingRecord(item.id);
+  const works = item.questions.map((question,i) => readingWork.get(item.id+':'+i));
+  const checked = works.filter(work => work?.result);
+  const right = checked.filter(work => work.result.grade === 4).length;
+  return `<div class="row"><h2>${esc(item.title)}</h2><button class="secondary" data-action="readings-back">返回阅读列表</button></div>
+  <section class="panel"><p class="kicker">${esc(item.id)} · 第 ${item.week} 周 · ${esc(item.genre)} · ${item.words} 词 · 词汇范围到 ${esc(item.afterLesson)}${record?' · 上次 '+esc(record.done)+'，得分 '+record.score+' / '+record.total:''}</p><div class="actions"><button data-action="reading-zh">${readingShowZh?'隐藏全部中文':'显示全部中文'}</button></div>${item.sentences.map(sentence=>`<div><p class="example${item.lang==='ru'?' ru-text':''}" lang="${item.lang}">${esc(sentence.text)}</p><details ${readingShowZh?'open':''}><summary>查看本句中文</summary><p>${esc(sentence.zh)}</p></details></div>`).join('')}</section>
+  <section class="panel"><h3>本篇重点词</h3><p class="muted">都是本篇词汇范围内学过的词，按词表形式列出。</p><div class="table-wrap" tabindex="0" aria-label="可横向滚动的重点词表"><table class="vocab"><thead><tr><th>词条</th><th>中文</th></tr></thead><tbody>${item.keyWords.map(word=>`<tr><td lang="${item.lang}"${item.lang==='ru'?' class="ru-text"':''}>${esc(word.word)}</td><td>${esc(word.zh)}</td></tr>`).join('')}</tbody></table></div></section>
+  <section class="panel"><h3>阅读题</h3><p class="muted">共 ${item.questions.length} 题，逐题点检查；全部检查后记录得分，请记得保存。</p><div class="exercise-list">${item.questions.map((question,i)=>renderReadingQuestion(item,question,i)).join('')}</div>${checked.length===item.questions.length?`<p class="feedback ${right===item.questions.length?'exact':'wrong'}">本次得分 ${right} / ${item.questions.length}，已记入阅读进度。</p>`:''}</section>
+  <section class="panel"><h3>复述要点</h3><p class="muted">先合上正文用中文复述，再展开对照；月度自测的阅读复述用这一项。</p><details><summary>展开复述要点</summary><div class="lesson-text"><ul>${item.retell.map(point=>`<li>${esc(point)}</li>`).join('')}</ul></div></details></section>`;
+}
+function finishReading(item) {
+  const works = item.questions.map((question,i) => readingWork.get(item.id+':'+i));
+  if (works.some(work => !work?.result)) return false;
+  const score = works.filter(work => work.result.grade === 4).length;
+  if (!state.readings) state.readings = Object.create(null);
+  state.readings[item.id] = {done:localDay(),score,total:item.questions.length};
+  touch();
+  return true;
 }
 function exerciseFeedback(result,answer,isChoice = false) {
   if (isChoice) return `<p class="feedback ${result.grade===4?'exact':'wrong'}">${result.grade===4?'正确':'选错了；正确答案：'+esc(answer)}</p>`;
   return `<p class="feedback ${result.kind}">${esc(result.message)}${result.grade===4?'。':'；正确写法：'+esc(answer)+'。'}</p>`;
 }
 function renderStats() {
-  const stats = statistics(rows,state,localDay());
-  return `<h2>统计</h2><div class="panel"><p>按复习卡计数：同一词条的识别卡、拼写卡分别计数。letter / phrase 词条仅一张。</p><div class="table-wrap" tabindex="0" aria-label="可横向滚动的统计表"><table class="stats-table"><thead><tr><th>语言</th><th>总卡数</th><th>新卡</th><th>学习中</th><th>已掌握</th><th>今日到期</th><th>近 30 天复习数</th><th>正确率</th></tr></thead><tbody>${stats.map(s=>`<tr><th>${s.lang==='es'?'es · 西语':'ru · 俄语'}</th><td>${s.total}</td><td>${s.new}</td><td>${s.learning}</td><td>${s.mastered}</td><td>${s.due}</td><td>${s.reviews}</td><td>${s.accuracy}</td></tr>`).join('')}</tbody></table></div><p class="muted">新卡＝尚未评分（含尚未开放的拼写卡）；学习中＝已评分且间隔 &lt;21 天；已掌握＝间隔 ≥21 天。今日到期包含逾期卡和待重学卡。</p><p class="muted">最近 30 天含今天，按本地日历统计每次评分；Again 以外算对。同一张卡重学会产生多次记录。日志只保留今天及之前 59 个本地日期。</p></div>`;
+  const stats = statistics(rows,state,localDay()), reading = readingStatistics();
+  return `<h2>统计</h2><div class="panel"><p>按复习卡计数：同一词条的识别卡、拼写卡分别计数。letter / phrase 词条仅一张。</p><div class="table-wrap" tabindex="0" aria-label="可横向滚动的统计表"><table class="stats-table"><thead><tr><th>语言</th><th>总卡数</th><th>新卡</th><th>学习中</th><th>已掌握</th><th>今日到期</th><th>近 30 天复习数</th><th>正确率</th></tr></thead><tbody>${stats.map(s=>`<tr><th>${s.lang==='es'?'es · 西语':'ru · 俄语'}</th><td>${s.total}</td><td>${s.new}</td><td>${s.learning}</td><td>${s.mastered}</td><td>${s.due}</td><td>${s.reviews}</td><td>${s.accuracy}</td></tr>`).join('')}</tbody></table></div><p class="muted">新卡＝尚未评分（含尚未开放的拼写卡）；学习中＝已评分且间隔 &lt;21 天；已掌握＝间隔 ≥21 天。今日到期包含逾期卡和待重学卡。</p><p class="muted">最近 30 天含今天，按本地日历统计每次评分；Again 以外算对。同一张卡重学会产生多次记录。日志只保留今天及之前 59 个本地日期。</p></div>
+  <div class="panel"><h3>阅读</h3><div class="table-wrap" tabindex="0" aria-label="可横向滚动的阅读统计表"><table class="stats-table"><thead><tr><th>语言</th><th>已读 / 总篇数</th><th>平均得分</th></tr></thead><tbody>${reading.map(r=>`<tr><th>${r.lang==='es'?'es · 西语':'ru · 俄语'}</th><td>${r.done} / ${r.count}</td><td>${r.done?(r.score/r.done).toFixed(1)+' / '+Math.round(r.total/r.done):'—'}</td></tr>`).join('')}</tbody></table></div><p class="muted">按阅读页最近一次答题记录；重做同一篇按最新一次计。阅读题不写入 SRS 复习状态。</p></div>`;
+}
+function readingStatistics() {
+  return LANGS.map(lang => {
+    const items = readingList(lang);
+    const done = items.map(item => readingRecord(item.id)).filter(Boolean);
+    const score = done.reduce((sum,record) => sum+record.score,0);
+    const total = done.reduce((sum,record) => sum+record.total,0);
+    return {lang,count:items.length,done:done.length,score,total};
+  });
 }
 function renderSettings() {
   return `<h2>设置</h2><div class="settings-grid">
@@ -19029,11 +20101,14 @@ function bindEvents() {
     try {
       if (button.dataset.tab) { tab = button.dataset.tab; render(); return; }
       if (button.dataset.lesson) { lesson = button.dataset.lesson; render(); return; }
+      if (button.dataset.reading) { openReading = button.dataset.reading; readingShowZh = false; tab = 'readings'; render(); return; }
       if (button.dataset.grade !== undefined) { gradeCard(Number(button.dataset.grade)); return; }
       const action = button.dataset.action;
       if (action === 'save') void saveFile();
       else if (action === 'save-as') void saveFile({asNew:true});
       else if (action === 'download-html') void saveFile({forceDownload:true});
+      else if (action === 'readings-back') { openReading = null; render(); }
+      else if (action === 'reading-zh') { readingShowZh = !readingShowZh; render(); }
       else if (action === 'reveal') reveal();
       else if (action === 'unknown') reveal(true);
       else if (action === 'import-csv') importCSV(document.getElementById('csv-text').value);
@@ -19048,6 +20123,11 @@ function bindEvents() {
     if (form) {
       exerciseWork.set(lesson+':'+form.dataset.exercise,{answer:event.target.value});
       form.querySelector('.exercise-result').replaceChildren();
+    }
+    const quiz = event.target.closest('[data-question]');
+    if (quiz && openReading) {
+      readingWork.set(openReading+':'+quiz.dataset.question,{answer:event.target.value});
+      quiz.querySelector('.exercise-result').replaceChildren();
     }
   });
   document.getElementById('app').addEventListener('change',async event => {
@@ -19068,6 +20148,12 @@ function bindEvents() {
         const es = Number(form.elements.es.value), ru = Number(form.elements.ru.value);
         if ([es,ru].some(n => !Number.isInteger(n) || n<0 || n>999)) throw new Error('每日新卡数须为 0–999 的整数。');
         state.settings.newPerDay = {es,ru}; resetSession(); touch(); showNotice('每日新卡数已应用，请保存文件。');
+      } else if (form.dataset.question !== undefined && openReading && own(READINGS,openReading)) {
+        const item = READINGS[openReading], i = Number(form.dataset.question), question = item.questions[i], answer = form.elements.answer.value;
+        const result = spellingResult(answer,question.answer,item.lang);
+        readingWork.set(item.id+':'+i,{answer,result});
+        form.querySelector('.exercise-result').innerHTML = exerciseFeedback(result,question.answer,true);
+        if (finishReading(item)) render();
       } else if (form.dataset.exercise !== undefined) {
         const i = Number(form.dataset.exercise), exercise = LESSONS[lesson].exercises[i], answer = form.elements.answer.value;
         const result = spellingResult(answer,exercise.answer,LESSONS[lesson].lang);
