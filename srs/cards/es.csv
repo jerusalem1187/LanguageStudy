@@ -712,3 +712,283 @@ es-0710,es,es-08,Hice un viaje el mes pasado,我上个月出了一趟门,Hice un
 es-0711,es,es-08,Ella durmió en el tren,她在火车上睡着了,Ella durmió en el tren.,她在火车上睡着了。,整句；dormir 的过去时第三人称 o→u；只生成识别卡,句型;phrase
 es-0712,es,es-08,No pude llegar a tiempo,我没能按时到,No pude llegar a tiempo.,我没能按时到。,整句；poder 的过去时 yo 是 pude；a tiempo 表示按时；只生成识别卡,句型;phrase
 es-0713,es,es-08,Hubo una fiesta en la playa,海滩上有过一场聚会,Hubo una fiesta en la playa.,海滩上有过一场聚会。,整句；hay 的过去时是 hubo，后面接单数或复数都不变；只生成识别卡,句型;phrase
+es-0714,es,es-09,era,我是；他是（ser 的过去未完成时）,De niña era muy tímida.,我小时候很怕生。,ser 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：era / eras / era / éramos / erais / eran；三个不规则之一，nosotros 形式带重音符号,动词;过去未完成时;不规则
+es-0715,es,es-09,iba,我去；他去（ir 的过去未完成时）,Iba al colegio con mi hermano.,我那时和弟弟一起去上学。,ir 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：iba / ibas / iba / íbamos / ibais / iban；三个不规则之一，nosotros 形式带重音符号,动词;过去未完成时;不规则
+es-0716,es,es-09,veía,我看见；他看见（ver 的过去未完成时）,Veía a mis abuelos cada verano.,我那时每年夏天都见到祖父母。,ver 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：veía / veías / veía / veíamos / veíais / veían；三个不规则之一，词干保留 e,动词;过去未完成时;不规则
+es-0717,es,es-09,había,有过；那时有（hay 的过去未完成时）,Había un árbol en el patio.,院子里那时有一棵树。,hay 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había / habías / había / habíamos / habíais / habían；表示存在时只用第三人称单数 había，后面接单数或复数都不变,动词;过去未完成时;不规则
+es-0718,es,es-09,tenía,我有；他有（tener 的过去未完成时）,Mi hermano tenía diez años.,我弟弟那时十岁。,tener 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：tenía / tenías / tenía / teníamos / teníais / tenían；讲过去的年龄用这个形式,动词;过去未完成时
+es-0719,es,es-09,estaba,我在；他在（estar 的过去未完成时）,La casa estaba en el campo.,那所房子在乡下。,estar 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：estaba / estabas / estaba / estábamos / estabais / estaban；讲过去的位置和状态,动词;过去未完成时
+es-0720,es,es-09,vivía,我住（vivir 的过去未完成时）,Antes vivía en un pueblo.,我从前住在一个村镇。,vivir 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：vivía / vivías / vivía / vivíamos / vivíais / vivían；-ir 动词用 -ía 一套词尾,动词;过去未完成时
+es-0721,es,es-09,jugaba,我玩（jugar 的过去未完成时）,Jugaba con mis vecinos todos los días.,我那时每天和邻居玩。,jugar 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：jugaba / jugabas / jugaba / jugábamos / jugabais / jugaban；现在时的 u→ue 在这个时态不出现,动词;过去未完成时
+es-0722,es,es-09,hablaba,我说（hablar 的过去未完成时）,De pequeña hablaba con los vecinos.,我小时候和邻居说话。,hablar 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：hablaba / hablabas / hablaba / hablábamos / hablabais / hablaban；-ar 动词用 -aba 一套词尾,动词;过去未完成时
+es-0723,es,es-09,comía,我吃（comer 的过去未完成时）,Comía fruta después del colegio.,我那时放学后吃水果。,comer 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：comía / comías / comía / comíamos / comíais / comían；-er 动词用 -ía 一套词尾,动词;过去未完成时
+es-0724,es,es-09,hacía,做；天气如何（hacer 的过去未完成时）,En invierno hacía mucho frío.,冬天那时很冷。,hacer 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：hacía / hacías / hacía / hacíamos / hacíais / hacían；讲过去的天气用第三人称单数 hacía,动词;过去未完成时
+es-0725,es,es-09,decía,我说；他说（decir 的过去未完成时）,Mi abuela decía que el campo era bonito.,我祖母那时说乡下很美。,decir 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：decía / decías / decía / decíamos / decíais / decían；这个时态没有词干变化,动词;过去未完成时
+es-0726,es,es-09,salía,我出去（salir 的过去未完成时）,Salía de casa a las ocho.,我那时八点出门。,salir 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：salía / salías / salía / salíamos / salíais / salían；这个时态没有词干变化,动词;过去未完成时
+es-0727,es,es-09,venía,我来（venir 的过去未完成时）,Mi tía venía cada domingo.,我姑姑那时每个星期天都来。,venir 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：venía / venías / venía / veníamos / veníais / venían；现在时的 e→ie 在这个时态不出现,动词;过去未完成时
+es-0728,es,es-09,dormía,我睡（dormir 的过去未完成时）,El gato dormía en la silla.,猫那时睡在椅子上。,dormir 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：dormía / dormías / dormía / dormíamos / dormíais / dormían；现在时的 o→ue 在这个时态不出现,动词;过去未完成时
+es-0729,es,es-09,leía,我读（leer 的过去未完成时）,Mi padre leía el periódico por la tarde.,我父亲那时下午读报纸。,leer 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：leía / leías / leía / leíamos / leíais / leían；í 上的符号每个人称都有,动词;过去未完成时
+es-0730,es,es-09,escribía,我写（escribir 的过去未完成时）,Escribía cartas a mi prima.,我那时给表姐写信。,escribir 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：escribía / escribías / escribía / escribíamos / escribíais / escribían；-ir 动词用 -ía 一套词尾,动词;过去未完成时
+es-0731,es,es-09,la infancia,童年,La infancia en el campo era tranquila.,乡下的童年那时很安静。,名词（阴）；与英语 infancy 同源,名词;童年与乡村
+es-0732,es,es-09,el juguete,玩具,El juguete estaba en la caja.,玩具那时放在盒子里。,名词（阳）；复数 los juguetes,名词;童年与乡村
+es-0733,es,es-09,el vecino,邻居,El vecino tenía muchos animales.,那位邻居那时养了很多动物。,名词（阳）；女邻居是 la vecina,名词;童年与乡村
+es-0734,es,es-09,el recreo,课间休息,En el recreo jugábamos en el patio.,课间休息时我们在院子里玩。,名词（阳）；指学校两节课之间的休息,名词;童年与乡村
+es-0735,es,es-09,el colegio,（中小）学校,El colegio del pueblo era pequeño.,村里的学校那时很小。,名词（阳）；la escuela 也指学校，la universidad 指大学,名词;童年与乡村
+es-0736,es,es-09,el campo,乡下；田野,En el campo había mucha hierba.,田野里那时有很多草。,名词（阳）；与 la ciudad 相对,名词;童年与乡村
+es-0737,es,es-09,el árbol,树,El árbol del patio era muy alto.,院子里的那棵树很高。,名词（阳）；复数 los árboles；重音在倒数第二音节而词以 l 结尾，所以标符号,名词;童年与乡村
+es-0738,es,es-09,la flor,花,La flor del jardín era amarilla.,花园里的那朵花是黄色的。,名词（阴）；复数 las flores,名词;童年与乡村
+es-0739,es,es-09,el verano,夏天,El verano era largo y nadábamos en el río.,夏天那时很长，我们在河里游泳。,名词（阳）；季节名小写，说“在夏天”常用 en verano,名词;童年与乡村
+es-0740,es,es-09,el invierno,冬天,El invierno en el pueblo era largo y frío.,村里的冬天那时又长又冷。,名词（阳）；季节名小写，说“在冬天”常用 en invierno,名词;童年与乡村
+es-0741,es,es-09,la primavera,春天,La primavera traía flores al jardín.,春天那时给花园带来花。,名词（阴）；季节名小写，说“在春天”常用 en primavera,名词;童年与乡村
+es-0742,es,es-09,el otoño,秋天,El otoño era corto en el pueblo.,村里的秋天那时很短。,名词（阳）；季节名小写，说“在秋天”常用 en otoño,名词;童年与乡村
+es-0743,es,es-09,el perro,狗,El perro corría por el jardín.,那条狗那时在花园里跑。,名词（阳）；母狗是 la perra,名词;童年与乡村
+es-0744,es,es-09,el gato,猫,El gato subía al árbol.,那只猫那时会爬到树上。,名词（阳）；母猫是 la gata,名词;童年与乡村
+es-0745,es,es-09,la granja,农场,Mi abuelo trabajaba en la granja todos los días.,我祖父那时每天在农场干活。,名词（阴）,名词;童年与乡村
+es-0746,es,es-09,el pájaro,鸟,El pájaro cantaba por la mañana.,那只鸟那时早上鸣叫。,名词（阳）；重音在倒数第三音节，一律标符号,名词;童年与乡村
+es-0747,es,es-09,la hierba,草,La hierba estaba verde en primavera.,春天草那时是绿的。,名词（阴）；也写作 la yerba，本课用 hierba,名词;童年与乡村
+es-0748,es,es-09,el patio,院子,El patio de la casa era grande.,那所房子的院子很大。,名词（阳）,名词;童年与乡村
+es-0749,es,es-09,la vaca,奶牛,La vaca comía hierba en el campo.,那头奶牛那时在田野里吃草。,名词（阴）；公牛是 el toro,名词;童年与乡村
+es-0750,es,es-09,el cuento,故事,El cuento de mi abuela era muy largo.,我祖母的故事很长。,名词（阳）；对应动词 contar,名词;童年与乡村
+es-0751,es,es-09,el frío,寒冷,En invierno el frío llegaba pronto.,冬天那时寒冷来得早。,名词（阳）；也作形容词 frío / fría；说天冷用 hace frío,名词;天气
+es-0752,es,es-09,el calor,炎热,El calor del verano era muy grande.,夏天的炎热那时很厉害。,名词（阳）；说天热用 hace calor,名词;天气
+es-0753,es,es-09,el viento,风,El viento de la montaña era frío.,山上的风那时很冷。,名词（阳）；说刮风用 hace viento,名词;天气
+es-0754,es,es-09,la nube,云,La nube blanca pasaba por el cielo.,白云那时从天上飘过。,名词（阴）；说多云用 está nublado,名词;天气
+es-0755,es,es-09,la tormenta,暴风雨,La tormenta llegaba por la tarde en verano.,夏天暴风雨那时下午来。,名词（阴）,名词;天气
+es-0756,es,es-09,el paraguas,雨伞,Siempre llevaba el paraguas en otoño.,秋天我那时总是带着伞。,名词（阳）；单复数同形：el paraguas / los paraguas,名词;天气
+es-0757,es,es-09,hace frío,天冷,En invierno hace frío en el pueblo.,冬天村里天很冷。,天气短语；用 hacer 的第三人称单数加名词；讲过去用 hacía frío；只生成识别卡,天气;phrase
+es-0758,es,es-09,hace calor,天热,En agosto hace calor en el campo.,八月乡下天很热。,天气短语；用 hacer 的第三人称单数加名词；讲过去用 hacía calor；只生成识别卡,天气;phrase
+es-0759,es,es-09,ruidoso,吵闹的,El colegio era ruidoso en el recreo.,课间休息时学校很吵。,形容词；性数形式 ruidoso / ruidosa / ruidosos / ruidosas；对应名词 el ruido,形容词;童年与乡村
+es-0760,es,es-09,alegre,快活的,Mi abuela era una mujer alegre.,我祖母那时是个快活的人。,形容词；性数形式 alegre / alegre / alegres / alegres；-e 结尾的形容词单数不分阴阳,形容词;童年与乡村
+es-0761,es,es-09,tímido,怕生的；腼腆的,De niño era muy tímido.,我小时候很怕生。,形容词；性数形式 tímido / tímida / tímidos / tímidas,形容词;童年与乡村
+es-0762,es,es-09,simpático,讨人喜欢的,El vecino era muy simpático.,那位邻居那时很讨人喜欢。,形容词；性数形式 simpático / simpática / simpáticos / simpáticas；不等于英语 sympathetic,形容词;童年与乡村
+es-0763,es,es-09,antipático,不讨喜的,El perro del vecino era antipático.,邻居的狗那时不讨人喜欢。,形容词；性数形式 antipático / antipática / antipáticos / antipáticas；simpático 的反义词,形容词;童年与乡村
+es-0764,es,es-09,amable,和气的,Mi profesor era amable con la clase.,我的老师那时对全班很和气。,形容词；性数形式 amable / amable / amables / amables,形容词;童年与乡村
+es-0765,es,es-09,travieso,淘气的,Mi hermano era muy travieso.,我弟弟那时很淘气。,形容词；性数形式 travieso / traviesa / traviesos / traviesas,形容词;童年与乡村
+es-0766,es,es-09,curioso,好奇的,Yo era curioso y preguntaba mucho.,我那时很好奇，问很多问题。,形容词；性数形式 curioso / curiosa / curiosos / curiosas,形容词;童年与乡村
+es-0767,es,es-09,valiente,勇敢的,Mi primo era valiente y subía al árbol.,我表哥那时很勇敢，会爬树。,形容词；性数形式 valiente / valiente / valientes / valientes,形容词;童年与乡村
+es-0768,es,es-09,perezoso,懒的,Los domingos yo era perezoso.,星期天我那时很懒。,形容词；性数形式 perezoso / perezosa / perezosos / perezosas,形容词;童年与乡村
+es-0769,es,es-09,soñar,做梦；梦想,Me gustaba soñar con la ciudad.,我那时喜欢梦想着城市。,soñar 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：soñaba / soñabas / soñaba / soñábamos / soñabais / soñaban；现在时 o→ue：sueño / sueñas / sueña / soñamos / soñáis / sueñan；soñar con 表示梦见,动词;不定式;童年与乡村
+es-0770,es,es-09,reír,笑,Me gustaba reír con mis amigos.,我那时喜欢和朋友一起笑。,reír 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：reía / reías / reía / reíamos / reíais / reían；现在时 e→i：río / ríes / ríe / reímos / reís / ríen,动词;不定式;童年与乡村
+es-0771,es,es-09,gritar,喊叫,Los niños empezaban a gritar en el recreo.,孩子们那时课间休息开始喊叫。,gritar 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：gritaba / gritabas / gritaba / gritábamos / gritabais / gritaban；-ar 规则,动词;不定式;童年与乡村
+es-0772,es,es-09,saltar,跳,Me gustaba saltar en la hierba.,我那时喜欢在草地上跳。,saltar 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：saltaba / saltabas / saltaba / saltábamos / saltabais / saltaban；-ar 规则,动词;不定式;童年与乡村
+es-0773,es,es-09,pintar,画（上色）；刷,Me gustaba pintar flores en el papel.,我那时喜欢在纸上画花。,pintar 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：pintaba / pintabas / pintaba / pintábamos / pintabais / pintaban；-ar 规则；指上色，dibujar 指画线条,动词;不定式;童年与乡村
+es-0774,es,es-09,dibujar,画（线条）,Mi hermana empezaba a dibujar por la tarde.,我姐姐那时下午开始画画。,dibujar 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：dibujaba / dibujabas / dibujaba / dibujábamos / dibujabais / dibujaban；-ar 规则,动词;不定式;童年与乡村
+es-0775,es,es-09,contar,讲述；数数,Mi abuelo empezaba a contar historias del pueblo.,我祖父那时开始讲村里的故事。,contar 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：contaba / contabas / contaba / contábamos / contabais / contaban；现在时 o→ue：cuento / cuentas / cuenta / contamos / contáis / cuentan,动词;不定式;童年与乡村
+es-0776,es,es-09,cuidar,照顾,Mi hermana iba a cuidar a los gatos.,我姐姐那时去照看猫。,cuidar 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：cuidaba / cuidabas / cuidaba / cuidábamos / cuidabais / cuidaban；-ar 规则；cuidar a + 人,动词;不定式;童年与乡村
+es-0777,es,es-09,recoger,捡起；采,Íbamos a recoger flores al campo.,我们那时去田野里采花。,recoger 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：recogía / recogías / recogía / recogíamos / recogíais / recogían；现在时 yo 形式写 recojo，g 在 o 前改 j,动词;不定式;童年与乡村
+es-0778,es,es-09,crecer,长大；生长,Los árboles empezaban a crecer en primavera.,那些树那时春天开始生长。,crecer 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：crecía / crecías / crecía / crecíamos / crecíais / crecían；现在时 yo 形式写 crezco,动词;不定式;童年与乡村
+es-0779,es,es-09,pescar,钓鱼,Mi padre iba a pescar al río los domingos.,我父亲那时星期天去河里钓鱼。,pescar 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：pescaba / pescabas / pescaba / pescábamos / pescabais / pescaban；-car 动词，简单过去时 yo 形式写 pesqué,动词;不定式;童年与乡村
+es-0780,es,es-09,plantar,种植,Mis abuelos iban a plantar flores cada primavera.,我祖父母那时每年春天去种花。,plantar 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：plantaba / plantabas / plantaba / plantábamos / plantabais / plantaban；-ar 规则,动词;不定式;童年与乡村
+es-0781,es,es-09,todos los días,每天,Todos los días me levantaba a las siete y desayunaba.,我那时每天七点起床，然后吃早饭。,时间短语；讲过去的习惯常配过去未完成时；cada día 意思相同,副词;时间标记
+es-0782,es,es-09,cada verano,每年夏天,Cada verano íbamos a la granja.,我们那时每年夏天去农场。,时间短语；cada 后面接单数名词,副词;时间标记
+es-0783,es,es-09,de niño,小时候（男性说）,De niño vivía en el campo.,我小时候住在乡下。,时间短语；女性说 de niña；后面用过去未完成时,副词;时间标记
+es-0784,es,es-09,de pequeño,小时候,De pequeño tenía un perro.,我小时候养过一条狗。,时间短语；女性说 de pequeña；与 de niño 通用,副词;时间标记
+es-0785,es,es-09,cuando era niño,当我还是孩子的时候,"Cuando era niño, dibujaba mucho.",我小时候画很多画。,整句开头；女性说 cuando era niña；后面接过去未完成时；只生成识别卡,副词;时间标记;phrase
+es-0786,es,es-09,en aquella época,在那个时期,En aquella época no había coches en el pueblo.,那个时期村里没有汽车。,时间短语；la época 是阴性名词，重音在倒数第三音节,副词;时间标记
+es-0787,es,es-09,a menudo,经常,A menudo íbamos al río.,我们那时经常去河边。,频率短语；与 muchas veces 意思相近,副词;时间标记
+es-0788,es,es-09,de vez en cuando,偶尔,De vez en cuando venía mi tío.,我叔叔那时偶尔会来。,频率短语；整块记，不逐词理解,副词;时间标记
+es-0789,es,es-09,"Cuando era niña, vivía en un pueblo",我小时候住在一个村镇,"Cuando era niña, vivía en un pueblo.",我小时候住在一个村镇。,整句；两个动词都用过去未完成时，讲过去的状态；只生成识别卡,句型;phrase
+es-0790,es,es-09,Todos los días jugaba en el patio,我那时每天在院子里玩,Todos los días jugaba en el patio.,我那时每天在院子里玩。,整句；时间标记加过去未完成时，讲过去的习惯；只生成识别卡,句型;phrase
+es-0791,es,es-09,Antes había un árbol grande en el jardín,从前花园里有一棵大树,Antes había un árbol grande en el jardín.,从前花园里有一棵大树。,整句；había 是 hay 的过去未完成时，后面接单数或复数都不变；只生成识别卡,句型;phrase
+es-0792,es,es-09,Hacía mucho frío en invierno,冬天那时很冷,Hacía mucho frío en invierno.,冬天那时很冷。,整句；讲过去的天气用 hacía；只生成识别卡,句型;phrase
+es-0793,es,es-09,Mi hermano tenía diez años,我弟弟那时十岁,Mi hermano tenía diez años.,我弟弟那时十岁。,整句；讲过去的年龄用 tenía；只生成识别卡,句型;phrase
+es-0794,es,es-10,al principio,起初,Al principio no entendía nada.,起初我什么都不明白。,叙事连接词；用来开头，常配过去未完成时,副词;连接词
+es-0795,es,es-10,más tarde,后来,Más tarde llegó mi hermana.,后来我姐姐到了。,叙事连接词；推进情节，常配简单过去时,副词;连接词
+es-0796,es,es-10,poco después,不久之后,Poco después empezó la tormenta.,不久之后暴风雨来了。,叙事连接词；después 前面加 poco 表示间隔很短,副词;连接词
+es-0797,es,es-10,al final,最后,Al final llegamos a casa sin problemas.,最后我们平安到了家。,叙事连接词；收尾用，常配简单过去时,副词;连接词
+es-0798,es,es-10,por último,最后一点；最后,Por último cerramos la puerta.,最后我们关上了门。,叙事连接词；列举时收尾用,副词;连接词
+es-0799,es,es-10,por eso,所以,"Hacía frío, por eso volvimos a casa.",天冷，所以我们回家了。,连接词；前一句是原因，后一句是结果,副词;连接词
+es-0800,es,es-10,así que,于是；因此,"Perdí el autobús, así que llegué tarde.",我错过了公交车，于是迟到了。,连接词；用法与 por eso 相近，语气更口语,副词;连接词
+es-0801,es,es-10,de pronto,突然,De pronto sonó el teléfono.,突然电话响了。,叙事副词；与 de repente 意思相同，两者可换用,副词;连接词
+es-0802,es,es-10,en ese momento,就在那时,En ese momento apareció el perro.,就在那时那条狗出现了。,叙事短语；把背景和事件接在一起,副词;连接词
+es-0803,es,es-10,al día siguiente,第二天,Al día siguiente fuimos al hospital.,第二天我们去了医院。,时间短语；叙事里推进到下一天,副词;连接词
+es-0804,es,es-10,mientras tanto,与此同时,Mientras tanto mi madre preparaba la cena.,与此同时我母亲在做晚饭。,叙事短语；引出同时进行的背景，后面常配过去未完成时,副词;连接词
+es-0805,es,es-10,sin embargo,然而,"Estaba cansado; sin embargo, terminé el trabajo.",我很累；然而我还是把工作做完了。,连接词；表示转折，比 pero 正式,副词;连接词
+es-0806,es,es-10,sabía,我当时知道（saber 的过去未完成时）,Sabía la respuesta antes del examen.,考试前我就知道答案。,saber 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：sabía / sabías / sabía / sabíamos / sabíais / sabían；表示“当时就知道”，简单过去时 supe 表示“那一刻得知”,动词;过去未完成时;意义变化
+es-0807,es,es-10,conocí,我认识了（conocer 的简单过去时）,Conocí a mi vecino en la fiesta.,我在聚会上认识了邻居。,conocer 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：conocí / conociste / conoció / conocimos / conocisteis / conocieron；表示“初次见到、认识了”,动词;过去时;意义变化
+es-0808,es,es-10,conocía,我当时认识（conocer 的过去未完成时）,Ya conocía a esa mujer.,我那时已经认识那位女士了。,conocer 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：conocía / conocías / conocía / conocíamos / conocíais / conocían；表示“当时就认识”，与 conocí 的“初次见到”相对,动词;过去未完成时;意义变化
+es-0809,es,es-10,quería,我当时想（querer 的过去未完成时）,"Quería salir, pero hacía frío.",我当时想出门，可是天很冷。,querer 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：quería / querías / quería / queríamos / queríais / querían；表示“当时想”，简单过去时 quise 表示“一时想做并动了手”,动词;过去未完成时;意义变化
+es-0810,es,es-10,podía,我当时能（poder 的过去未完成时）,No podía dormir con el ruido de la calle.,街上的噪音让我当时睡不着。,poder 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：podía / podías / podía / podíamos / podíais / podían；表示“当时有能力”，简单过去时 pude 表示“那一次做成了”,动词;过去未完成时;意义变化
+es-0811,es,es-10,tenía que,我当时得（tener que 的过去未完成时）,Tenía que estudiar todas las tardes.,我那时每天下午都得学习。,tener que 的过去未完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：tenía que / tenías que / tenía que / teníamos que / teníais que / tenían que；表示“当时有这个义务”，不说明做没做,动词;过去未完成时;意义变化
+es-0812,es,es-10,tuve que,我不得不（tener que 的简单过去时）,Tuve que llamar a la ambulancia.,我不得不打电话叫救护车。,tener que 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：tuve que / tuviste que / tuvo que / tuvimos que / tuvisteis que / tuvieron que；表示“那一次不得不做，并且做了”,动词;过去时;意义变化
+es-0813,es,es-10,el accidente,事故,El accidente ocurrió en la avenida.,事故发生在大街上。,名词（阳）；与英语 accident 同源,名词;事件与叙事
+es-0814,es,es-10,la solución,办法；解决,La solución era muy fácil.,办法当时很简单。,名词（阴）；复数 las soluciones；英语 -tion 对应西语 -ción,名词;事件与叙事
+es-0815,es,es-10,el susto,惊吓,El susto pasó pronto.,那阵惊吓很快就过去了。,名词（阳）；dar un susto 表示吓人一跳,名词;事件与叙事
+es-0816,es,es-10,la ayuda,帮助,La ayuda del vecino fue importante.,邻居的帮助当时很重要。,名词（阴）；对应动词 ayudar,名词;事件与叙事
+es-0817,es,es-10,el hecho,事实；事情,El hecho fue una sorpresa.,这件事是个意外。,名词（阳）；来自 hacer 的过去分词,名词;事件与叙事
+es-0818,es,es-10,la escena,场面,"Mientras caminábamos, la escena de la calle era tranquila.",我们走路的时候，街上的场面很安静。,名词（阴）；与英语 scene 同源,名词;事件与叙事
+es-0819,es,es-10,la caída,摔倒；跌落,"Después de la caída, el niño lloraba.",摔倒之后，那个孩子在哭。,名词（阴）；对应动词 caer；í 上的符号不能省,名词;事件与叙事
+es-0820,es,es-10,el golpe,撞击；一击,El golpe rompió la ventana.,那一下撞碎了窗户。,名词（阳）,名词;事件与叙事
+es-0821,es,es-10,la herida,伤口,La herida era pequeña.,那处伤口很小。,名词（阴）,名词;事件与叙事
+es-0822,es,es-10,la ambulancia,救护车,La ambulancia llegó en diez minutos.,救护车十分钟就到了。,名词（阴）；与英语 ambulance 同源,名词;事件与叙事
+es-0823,es,es-10,la emergencia,紧急情况,La emergencia terminó bien.,那次紧急情况结果不错。,名词（阴）；英语 -ency 对应西语 -encia,名词;事件与叙事
+es-0824,es,es-10,el peligro,危险,El peligro pasó enseguida.,危险马上就过去了。,名词（阳）；对应形容词 peligroso,名词;事件与叙事
+es-0825,es,es-10,la calma,平静,La calma volvió a la casa.,家里恢复了平静。,名词（阴）；con calma 表示不慌不忙,名词;事件与叙事
+es-0826,es,es-10,el silencio,安静；沉默,El silencio de la noche era grande.,夜里的安静当时很深。,名词（阳）；与英语 silence 同源,名词;事件与叙事
+es-0827,es,es-10,la memoria,记忆；记性,La memoria de aquel día es clara.,那一天的记忆很清楚。,名词（阴）；与英语 memory 同源,名词;事件与叙事
+es-0828,es,es-10,el detalle,细节,El detalle más importante fue la hora.,最重要的细节是时间。,名词（阳）,名词;事件与叙事
+es-0829,es,es-10,el instante,瞬间,En el instante del golpe todos gritaron.,撞上的那一瞬间大家都喊了起来。,名词（阳）；比 el momento 更短,名词;事件与叙事
+es-0830,es,es-10,la señal,信号；标志,Los coches pasaban sin ver la señal de la calle.,那些车经过时没看见街上的标志。,名词（阴）；复数 las señales,名词;事件与叙事
+es-0831,es,es-10,aparecer,出现,Un perro acababa de aparecer en el camino.,一条狗刚刚出现在路上。,aparecer 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：aparecí / apareciste / apareció / aparecimos / aparecisteis / aparecieron；现在时 yo 形式写 aparezco,动词;不定式;事件与叙事
+es-0832,es,es-10,suceder,发生,El médico no sabía qué iba a suceder.,医生当时不知道会发生什么。,suceder 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：sucedí / sucediste / sucedió / sucedimos / sucedisteis / sucedieron；实际多用第三人称 sucedió / sucedieron，与 ocurrir 同义,动词;不定式;事件与叙事
+es-0833,es,es-10,caer,掉落,El libro empezó a caer de la mesa.,书开始从桌上掉下去。,caer 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：caí / caíste / cayó / caímos / caísteis / cayeron；现在时 yo 形式写 caigo；第三人称用 y,动词;不定式;事件与叙事
+es-0834,es,es-10,caerse,摔倒,El niño acababa de caerse en el patio.,那个孩子刚在院子里摔倒。,caerse 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me caí / te caíste / se cayó / nos caímos / os caísteis / se cayeron；反身形式强调意外,动词;不定式;事件与叙事
+es-0835,es,es-10,romper,打破；弄坏,No quería romper la ventana.,我当时不想打碎窗户。,romper 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：rompí / rompiste / rompió / rompimos / rompisteis / rompieron；-er 规则,动词;不定式;事件与叙事
+es-0836,es,es-10,sonar,响,El teléfono empezó a sonar otra vez.,电话又响了起来。,sonar 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：soné / sonaste / sonó / sonamos / sonasteis / sonaron；现在时 o→ue：sueno / suenas / suena / sonamos / sonáis / suenan；与 soñar 只差一个字母,动词;不定式;事件与叙事
+es-0837,es,es-10,sentirse,觉得（身体或心情）,Empezaba a sentirse mal en el tren.,他在火车上开始觉得不舒服。,sentirse 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me sentí / te sentiste / se sintió / nos sentimos / os sentisteis / se sintieron；第三人称 e→i,动词;不定式;事件与叙事
+es-0838,es,es-10,asustarse,受惊,Los niños acababan de asustarse con el ruido.,孩子们刚被那声响吓到。,asustarse 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me asusté / te asustaste / se asustó / nos asustamos / os asustasteis / se asustaron；-ar 规则的反身动词,动词;不定式;事件与叙事
+es-0839,es,es-10,tropezar,绊倒；绊一下,Podía tropezar con una caja.,我当时可能会被一个箱子绊一下。,tropezar 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：tropecé / tropezaste / tropezó / tropezamos / tropezasteis / tropezaron；现在时 e→ie；-zar 动词，过去时 yo 形式写 tropecé,动词;不定式;事件与叙事
+es-0840,es,es-10,avisar,通知；提醒,Tenía que avisar a la familia.,我当时得通知家里。,avisar 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：avisé / avisaste / avisó / avisamos / avisasteis / avisaron；-ar 规则,动词;不定式;事件与叙事
+es-0841,es,es-10,salvar,救,El médico pudo salvar al hombre.,医生救了那个人。,salvar 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：salvé / salvaste / salvó / salvamos / salvasteis / salvaron；-ar 规则,动词;不定式;事件与叙事
+es-0842,es,es-10,continuar,继续,Quería continuar el viaje.,我当时想继续这次旅行。,continuar 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：continué / continuaste / continuó / continuamos / continuasteis / continuaron；现在时 yo 形式写 continúo，u 上标符号,动词;不定式;事件与叙事
+es-0843,es,es-10,parar,停下,El coche acababa de parar en la esquina.,那辆车刚在街角停下。,parar 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：paré / paraste / paró / paramos / parasteis / pararon；-ar 规则；pararse 表示自己停住,动词;不定式;事件与叙事
+es-0844,es,es-10,levantar,抬起；举起,No podía levantar la caja.,我当时抬不起那个箱子。,levantar 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：levanté / levantaste / levantó / levantamos / levantasteis / levantaron；-ar 规则；反身的 levantarse 是起床,动词;不定式;事件与叙事
+es-0845,es,es-10,acabar,结束；完成,El trabajo iba a acabar pronto.,工作那时快要结束了。,acabar 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：acabé / acabaste / acabó / acabamos / acabasteis / acabaron；acabar de + 不定式表示刚刚做完,动词;不定式;事件与叙事
+es-0846,es,es-10,quejarse,抱怨,Los vecinos empezaban a quejarse del ruido.,邻居们开始抱怨噪音。,quejarse 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me quejé / te quejaste / se quejó / nos quejamos / os quejasteis / se quejaron；quejarse de + 事,动词;不定式;事件与叙事
+es-0847,es,es-10,tener miedo,害怕,Los niños tenían miedo de la tormenta.,孩子们当时怕暴风雨。,动词短语；tener 加名词 el miedo；讲当时的心情用 tenía miedo；只生成识别卡,动词;事件与叙事;phrase
+es-0848,es,es-10,darse cuenta,意识到；发觉,Me di cuenta del error muy tarde.,我很晚才发觉这个错误。,动词短语；darse cuenta de + 事；简单过去时 me di cuenta，过去未完成时 me daba cuenta；只生成识别卡,动词;事件与叙事;phrase
+es-0849,es,es-10,ya no,不再,Ya no vivía en aquel barrio.,我那时已经不住在那个街区了。,副词短语；表示以前有、现在或那时没有了,副词;叙事
+es-0850,es,es-10,otra vez,再一次,El teléfono sonó otra vez.,电话又响了一次。,副词短语；la vez 是阴性名词，复数 las veces,副词;叙事
+es-0851,es,es-10,de nuevo,重新；又,Empezamos el trabajo de nuevo.,我们重新开始了工作。,副词短语；与 otra vez 意思相同,副词;叙事
+es-0852,es,es-10,apenas,刚刚；几乎不,Apenas podía ver el camino.,我当时几乎看不见路。,副词；放在动词前,副词;叙事
+es-0853,es,es-10,inmediatamente,立刻,Llamamos inmediatamente al hospital.,我们立刻给医院打了电话。,副词；-mente 副词由阴性形容词加 -mente 构成,副词;叙事
+es-0854,es,es-10,rápidamente,很快地,El médico llegó rápidamente.,医生很快就到了。,副词；由 rápida 加 -mente 构成，保留原形容词的重音符号,副词;叙事
+es-0855,es,es-10,tranquilamente,平静地,Después hablamos tranquilamente.,之后我们平静地谈了谈。,副词；由 tranquila 加 -mente 构成,副词;叙事
+es-0856,es,es-10,por suerte,幸好,Por suerte el accidente fue pequeño.,幸好那次事故不大。,副词短语；la suerte 是阴性名词,副词;叙事
+es-0857,es,es-10,por desgracia,不幸的是,Por desgracia perdimos el tren.,不幸的是我们错过了火车。,副词短语；与 por suerte 相对,副词;叙事
+es-0858,es,es-10,justo,正好；恰好,Llegué justo a tiempo.,我正好按时到了。,副词；也作形容词，意思是公正的,副词;叙事
+es-0859,es,es-10,asustado,受惊的,El niño estaba asustado.,那个孩子当时受了惊。,形容词；性数形式 asustado / asustada / asustados / asustadas；与 estar 连用讲状态,形容词;事件与叙事
+es-0860,es,es-10,herido,受伤的,El hombre estaba herido pero tranquilo.,那个人当时受了伤，但很镇定。,形容词；性数形式 herido / herida / heridos / heridas；与 estar 连用讲状态,形容词;事件与叙事
+es-0861,es,es-10,roto,破的；坏的,El reloj estaba roto.,那块表当时是坏的。,形容词；性数形式 roto / rota / rotos / rotas；来自 romper 的不规则过去分词,形容词;事件与叙事
+es-0862,es,es-10,nervioso,紧张的,Estaba nervioso antes del examen.,考试前我很紧张。,形容词；性数形式 nervioso / nerviosa / nerviosos / nerviosas,形容词;事件与叙事
+es-0863,es,es-10,sorprendido,吃惊的,El vecino estaba sorprendido.,那位邻居当时很吃惊。,形容词；性数形式 sorprendido / sorprendida / sorprendidos / sorprendidas；对应名词 la sorpresa,形容词;事件与叙事
+es-0864,es,es-10,preocupado,担心的,Mi padre estaba preocupado.,我父亲当时很担心。,形容词；性数形式 preocupado / preocupada / preocupados / preocupadas,形容词;事件与叙事
+es-0865,es,es-10,contento,高兴的,Yo estaba contento con el resultado.,我当时对结果很满意。,形容词；性数形式 contento / contenta / contentos / contentas,形容词;事件与叙事
+es-0866,es,es-10,dormido,睡着的,El gato estaba dormido en la silla.,猫当时在椅子上睡着。,形容词；性数形式 dormido / dormida / dormidos / dormidas；来自 dormir,形容词;事件与叙事
+es-0867,es,es-10,despierto,醒着的,A las tres yo todavía estaba despierto.,三点时我还醒着。,形容词；性数形式 despierto / despierta / despiertos / despiertas；来自 despertarse,形容词;事件与叙事
+es-0868,es,es-10,extraño,奇怪的；陌生的,El ruido era extraño.,那个声响当时很奇怪。,形容词；性数形式 extraño / extraña / extraños / extrañas,形容词;事件与叙事
+es-0869,es,es-10,"Cuando llegué, mi madre cocinaba",我到的时候，母亲正在做饭,"Cuando llegué, mi madre cocinaba.",我到的时候，母亲正在做饭。,整句；llegué 是事件用简单过去时，cocinaba 是背景用过去未完成时；只生成识别卡,句型;phrase
+es-0870,es,es-10,"Mientras yo leía, sonó el teléfono",我在看书的时候，电话响了,"Mientras yo leía, sonó el teléfono.",我在看书的时候，电话响了。,整句；mientras 后面接过去未完成时，打断它的事件用简单过去时；只生成识别卡,句型;phrase
+es-0871,es,es-10,De repente apareció un perro en el camino,路上突然出现了一条狗,De repente apareció un perro en el camino.,路上突然出现了一条狗。,整句；de repente 引出一次性的事件，用简单过去时；只生成识别卡,句型;phrase
+es-0872,es,es-10,Hacía sol y por eso fuimos a la playa,天晴，所以我们去了海滩,Hacía sol y por eso fuimos a la playa.,天晴，所以我们去了海滩。,整句；天气是背景用过去未完成时，决定和行动用简单过去时；只生成识别卡,句型;phrase
+es-0873,es,es-10,Al final llegamos tarde al colegio,最后我们上学迟到了,Al final llegamos tarde al colegio.,最后我们上学迟到了。,整句；al final 收尾，配简单过去时；只生成识别卡,句型;phrase
+es-0874,es,es-11,más,更；更多,Mi barrio es más tranquilo que el centro.,我住的街区比市中心安静。,比较级用 más + 形容词 + que；也可单独表示“更多”,副词;比较
+es-0875,es,es-11,menos,更少；不那么,Este piso es menos caro que el otro.,这套房子没有另一套贵。,比较级用 menos + 形容词 + que；与 más 相对,副词;比较
+es-0876,es,es-11,tan,同样地（那么）,Mi calle es tan ancha como la avenida.,我这条街和那条大道一样宽。,同级比较用 tan + 形容词或副词 + como；tan 后面不接名词,副词;比较
+es-0877,es,es-11,tanto,那么多,Aquí no hay tanto ruido como en el centro.,这里不像市中心那么吵。,同级比较用 tanto + 名词 + como；性数形式 tanto / tanta / tantos / tantas；单独作副词时不变,副词;比较
+es-0878,es,es-11,mejor,更好的,Este edificio es mejor que aquel.,这栋楼比那栋好。,bueno 的不规则比较级；复数 mejores；不说 más bueno,形容词;比较
+es-0879,es,es-11,peor,更差的,El alquiler del centro es peor.,市中心的租金更不划算。,malo 的不规则比较级；复数 peores；不说 más malo,形容词;比较
+es-0880,es,es-11,mayor,更大的；年长的,Mi hermana mayor vive en la torre nueva.,我姐姐住在那栋新塔楼里。,grande 的不规则比较级；讲年龄时表示年长；复数 mayores,形容词;比较
+es-0881,es,es-11,menor,更小的；年幼的,Mi hermano menor estudia en el colegio.,我弟弟在这所学校上学。,pequeño 的不规则比较级；讲年龄时表示年幼；复数 menores,形容词;比较
+es-0882,es,es-11,mucho,很多；很,En esta calle hay mucho tráfico.,这条街上车很多。,作形容词时性数形式 mucho / mucha / muchos / muchas；作副词时放在动词后且不变；muy 只修饰形容词和副词,副词;比较
+es-0883,es,es-11,poco,少；不多,Hay poco espacio en el garaje.,车库里地方不多。,作形容词时性数形式 poco / poca / pocos / pocas；un poco de + 名词表示一点儿,副词;比较
+es-0884,es,es-11,bastante,相当；不少,El piso es bastante amplio.,这套房子相当宽敞。,程度副词；也作形容词，复数 bastantes,副词;比较
+es-0885,es,es-11,igual,一样的,Mi terraza es igual que la otra.,我的露台和另一个一样。,形容词；复数 iguales；igual que 表示与……一样,形容词;比较
+es-0886,es,es-11,alguien,某人；有人,Alguien llamó a la puerta.,有人敲了门。,不定代词；只指人，形式不变；与 nadie 相对,代词;不定词
+es-0887,es,es-11,nadie,没有人,No hay nadie en la escalera.,楼梯上没有人。,不定代词；动词前有 no 时后面用 nadie，是标准写法；也可说 Nadie está aquí.,代词;不定词
+es-0888,es,es-11,algún,某个（阳性单数名词前）,Algún vecino dejó la llave aquí.,某位邻居把钥匙落在这里了。,不定形容词；alguno 在阳性单数名词前缩为 algún 并标符号,限定词;不定词
+es-0889,es,es-11,alguno,某个；其中之一,Alguno de los pisos estaba libre.,有一套房子当时是空的。,不定代词；性数形式 alguno / alguna / algunos / algunas；名词前的阳性单数用 algún,代词;不定词
+es-0890,es,es-11,alguna,某个（阴性）,Alguna ventana estaba abierta.,有一扇窗户当时开着。,alguno 的阴性形式；复数 algunas,限定词;不定词
+es-0891,es,es-11,ningún,没有一个（阳性单数名词前）,No veo ningún semáforo en esta calle.,这条街上我没看到红绿灯。,否定形容词；ninguno 在阳性单数名词前缩为 ningún 并标符号,限定词;不定词
+es-0892,es,es-11,ninguno,一个也没有,"De los tres pisos, ninguno era barato.",三套房子里没有一套便宜的。,否定代词；性数形式 ninguno / ninguna；一般只用单数；名词前的阳性单数用 ningún,代词;不定词
+es-0893,es,es-11,ninguna,没有一个（阴性）,No hay ninguna parada cerca de aquí.,这附近没有一个车站。,ninguno 的阴性形式；动词前有 no 时后面用 ninguna,限定词;不定词
+es-0894,es,es-11,todo,全部；一切,Todo el edificio es nuevo.,整栋楼都是新的。,不定形容词与代词；性数形式 todo / toda / todos / todas；todo el + 名词表示整个,限定词;不定词
+es-0895,es,es-11,toda,全部的（阴性）,Toda la terraza está limpia.,整个露台都很干净。,todo 的阴性形式；复数 todas,限定词;不定词
+es-0896,es,es-11,otro,另一个,El otro piso tiene balcón.,另一套房子有阳台。,不定形容词；性数形式 otro / otra / otros / otras；前面不加 un 或 una,限定词;不定词
+es-0897,es,es-11,varios,好几个,Varios vecinos usan el ascensor.,好几位邻居用这部电梯。,不定形容词；性数形式 varios / varias；只有复数,限定词;不定词
+es-0898,es,es-11,al lado de,在……旁边,El banco está al lado de la parada.,银行在车站旁边。,方位短语；与 estar 连用；后面接 el 时写 al lado del,介词;方位
+es-0899,es,es-11,delante de,在……前面,Hay un semáforo delante de la casa.,房子前面有一个红绿灯。,方位短语；后面接 el 时写 delante del；反义是 detrás de,介词;方位
+es-0900,es,es-11,detrás de,在……后面,El garaje está detrás de la casa.,车库在房子后面。,方位短语；后面接 el 时写 detrás del,介词;方位
+es-0901,es,es-11,encima de,在……上面,El mapa está encima de la mesa.,地图在桌子上面。,方位短语；指在上方；反义是 debajo de,介词;方位
+es-0902,es,es-11,debajo de,在……下面,El gato duerme debajo de la silla.,猫睡在椅子下面。,方位短语；后面接 el 时写 debajo del,介词;方位
+es-0903,es,es-11,entre,在……之间,La fuente está entre la torre y la iglesia.,喷泉在塔楼和教堂之间。,介词；后面接两项，用 y 连接,介词;方位
+es-0904,es,es-11,cerca de,在……附近,La parada está cerca de la plaza.,车站在广场附近。,方位短语；反义是 lejos de；单用 cerca 表示“在附近”,介词;方位
+es-0905,es,es-11,lejos de,离……远,El aeropuerto está lejos de la ciudad.,机场离城市很远。,方位短语；单用 lejos 表示“在远处”,介词;方位
+es-0906,es,es-11,dentro de,在……里面,Las llaves están dentro de la caja.,钥匙在盒子里面。,方位短语；也可表示“在……之后”，如 dentro de dos días,介词;方位
+es-0907,es,es-11,fuera de,在……外面,Los niños juegan fuera de la casa.,孩子们在房子外面玩。,方位短语；单用 fuera 表示“在外面”,介词;方位
+es-0908,es,es-11,treinta y dos,32,En el edificio viven treinta y dos personas.,这栋楼里住着三十二个人。,数词；31 到 99 写成“十位 + y + 个位”三个词,数字
+es-0909,es,es-11,cuarenta,40,El alquiler subió cuarenta euros.,租金涨了四十欧元。,数词；el euro 是欧元,数字
+es-0910,es,es-11,cincuenta,50,La calle tiene cincuenta metros.,这条街有五十米长。,数词；el metro 在这里指米,数字
+es-0911,es,es-11,sesenta,60,Mi abuelo tiene sesenta años.,我祖父六十岁。,数词；不要和 setenta 混,数字
+es-0912,es,es-11,setenta,70,En la escuela hay setenta niños.,学校里有七十个孩子。,数词；不要和 sesenta 混,数字
+es-0913,es,es-11,ochenta,80,El edificio tiene ochenta ventanas.,这栋楼有八十扇窗户。,数词,数字
+es-0914,es,es-11,noventa,90,El viaje duró noventa minutos.,那趟路程用了九十分钟。,数词；durar 表示持续,数字
+es-0915,es,es-11,cien,100,En la plaza había cien personas.,广场上当时有一百人。,数词；正好 100 且在名词前用 cien,数字
+es-0916,es,es-11,ciento,一百（用于 101 以上）,El libro tiene ciento veinte páginas.,这本书有一百二十页。,数词；101 到 199 用 ciento，如 ciento uno；la página 是页,数字
+es-0917,es,es-11,mil,1000,El alquiler es de mil euros.,租金是一千欧元。,数词；1000 说 mil，不说 un mil,数字
+es-0918,es,es-11,el edificio,楼房；建筑,El edificio tiene diez pisos.,这栋楼有十层。,名词（阳）,名词;城市与住房
+es-0919,es,es-11,el piso,公寓；楼层,El piso de mi tía es muy amplio.,我姑姑的公寓很宽敞。,名词（阳）；在西班牙指公寓，也指楼层,名词;城市与住房
+es-0920,es,es-11,el ascensor,电梯,El ascensor del edificio es nuevo.,这栋楼的电梯是新的。,名词（阳）,名词;城市与住房
+es-0921,es,es-11,la escalera,楼梯,La escalera está detrás del ascensor.,楼梯在电梯后面。,名词（阴）；复数 las escaleras 也指整段楼梯,名词;城市与住房
+es-0922,es,es-11,el balcón,阳台,El balcón da a la calle.,阳台朝着街道。,名词（阳）；复数 los balcones，复数不标符号；dar a 表示朝向,名词;城市与住房
+es-0923,es,es-11,la terraza,露台；露天座,La terraza es más grande que el balcón.,露台比阳台大。,名词（阴）；也指咖啡馆的露天座位,名词;城市与住房
+es-0924,es,es-11,el garaje,车库,El garaje está debajo del edificio.,车库在楼下面。,名词（阳）,名词;城市与住房
+es-0925,es,es-11,el alquiler,租金；租赁,El alquiler costaba menos que en el centro.,那时的租金比市中心便宜。,名词（阳）；对应动词 alquilar,名词;城市与住房
+es-0926,es,es-11,el semáforo,红绿灯,El semáforo está en la esquina.,红绿灯在街角。,名词（阳）；重音在倒数第三音节，一律标符号,名词;城市与住房
+es-0927,es,es-11,la parada,车站；停靠站,La parada del autobús está cerca.,公交车站就在附近。,名词（阴）；对应动词 parar,名词;城市与住房
+es-0928,es,es-11,la acera,人行道,La acera es estrecha en esta calle.,这条街上的人行道很窄。,名词（阴）,名词;城市与住房
+es-0929,es,es-11,el pasillo,走廊,El pasillo es largo y oscuro.,走廊又长又暗。,名词（阳）,名词;城市与住房
+es-0930,es,es-11,el salón,客厅,El salón tiene dos ventanas.,客厅有两扇窗户。,名词（阳）；复数 los salones，复数不标符号,名词;城市与住房
+es-0931,es,es-11,la pared,墙,La pared del salón es blanca.,客厅的墙是白色的。,名词（阴）；复数 las paredes,名词;城市与住房
+es-0932,es,es-11,el techo,天花板；屋顶,El techo del pasillo es bajo.,走廊的天花板很低。,名词（阳）,名词;城市与住房
+es-0933,es,es-11,ancho,宽的,El balcón es ancho y luminoso.,阳台又宽又亮。,形容词；性数形式 ancho / ancha / anchos / anchas；反义是 estrecho,形容词;城市与住房
+es-0934,es,es-11,estrecho,窄的,El pasillo es estrecho.,走廊很窄。,形容词；性数形式 estrecho / estrecha / estrechos / estrechas,形容词;城市与住房
+es-0935,es,es-11,peligroso,危险的,Ese camino es peligroso de noche.,那条路晚上很危险。,形容词；性数形式 peligroso / peligrosa / peligrosos / peligrosas；对应名词 el peligro,形容词;城市与住房
+es-0936,es,es-11,seguro,安全的；确定的,Este barrio es muy seguro.,这个街区很安全。,形容词；性数形式 seguro / segura / seguros / seguras；estar seguro 表示确信,形容词;城市与住房
+es-0937,es,es-11,cercano,近的,El parque cercano tiene una fuente.,附近的公园有一个喷泉。,形容词；性数形式 cercano / cercana / cercanos / cercanas；对应短语 cerca de,形容词;城市与住房
+es-0938,es,es-11,lejano,远的,El barrio lejano es más barato.,远处那个街区更便宜。,形容词；性数形式 lejano / lejana / lejanos / lejanas；对应短语 lejos de,形容词;城市与住房
+es-0939,es,es-11,céntrico,市中心的,El piso céntrico cuesta mil euros.,市中心的公寓要一千欧元。,形容词；性数形式 céntrico / céntrica / céntricos / céntricas；对应名词 el centro,形容词;城市与住房
+es-0940,es,es-11,silencioso,安静的,El pasillo es silencioso por la noche.,走廊夜里很安静。,形容词；性数形式 silencioso / silenciosa / silenciosos / silenciosas；对应名词 el silencio,形容词;城市与住房
+es-0941,es,es-11,luminoso,明亮的,El salón es luminoso por la mañana.,客厅早上很明亮。,形容词；性数形式 luminoso / luminosa / luminosos / luminosas,形容词;城市与住房
+es-0942,es,es-11,amplio,宽敞的,El garaje es amplio.,车库很宽敞。,形容词；性数形式 amplio / amplia / amplios / amplias,形容词;城市与住房
+es-0943,es,es-11,el norte,北,El aeropuerto está en el norte de la ciudad.,机场在城市北部。,名词（阳）；方位名词，说“在北边”用 en el norte,名词;城市与住房
+es-0944,es,es-11,el sur,南,Mi barrio está en el sur.,我住的街区在南边。,名词（阳）；方位名词,名词;城市与住房
+es-0945,es,es-11,la población,人口；居民,La población de esta ciudad es mayor.,这座城市的人口更多。,名词（阴）；复数 las poblaciones,名词;城市与住房
+es-0946,es,es-11,el habitante,居民,El habitante de este edificio paga poco.,这栋楼的住户付得不多。,名词（阳）；复数 los habitantes；女性居民也用 la habitante,名词;城市与住房
+es-0947,es,es-11,la vista,景观；视野,La vista desde el balcón es bonita.,从阳台看出去的景色很好。,名词（阴）；desde 表示从……起,名词;城市与住房
+es-0948,es,es-11,el tamaño,大小；尺寸,El tamaño del salón es igual.,客厅的大小一样。,名词（阳）,名词;城市与住房
+es-0949,es,es-11,Esta ciudad es más grande que mi pueblo,这座城市比我的村镇大,Esta ciudad es más grande que mi pueblo.,这座城市比我的村镇大。,整句；比较级 más + 形容词 + que；只生成识别卡,句型;phrase
+es-0950,es,es-11,Este piso es tan cómodo como el otro,这套房子和另一套一样舒服,Este piso es tan cómodo como el otro.,这套房子和另一套一样舒服。,整句；同级比较 tan + 形容词 + como；只生成识别卡,句型;phrase
+es-0951,es,es-11,No hay nadie en la escalera,楼梯上没有人,No hay nadie en la escalera.,楼梯上没有人。,整句；no 加 nadie 的双重否定是标准写法；只生成识别卡,句型;phrase
+es-0952,es,es-11,El banco está al lado de la parada,银行在车站旁边,El banco está al lado de la parada.,银行在车站旁边。,整句；讲位置用 estar 加方位短语；只生成识别卡,句型;phrase
+es-0953,es,es-11,Mi casa está cerca del parque,我家在公园附近,Mi casa está cerca del parque.,我家在公园附近。,整句；cerca de 后面接 el 时写 del；只生成识别卡,句型;phrase
+es-0954,es,es-12,la experiencia,经验；经历,La experiencia de estos meses fue buena.,这几个月的经历很好。,名词（阴）；与英语 experience 同源，英语 -ence 对应西语 -encia,名词;学习与复盘
+es-0955,es,es-12,la decisión,决定,La decisión de diciembre es si quiero continuar.,十二月的决定是我还想不想继续。,名词（阴）；复数 las decisiones；英语 -sion 对应西语 -sión,名词;学习与复盘
+es-0956,es,es-12,la opinión,看法；意见,La opinión de mi profesor es importante.,我老师的看法很重要。,名词（阴）；复数 las opiniones,名词;学习与复盘
+es-0957,es,es-12,la práctica,练习；实践,La práctica de cada día ayuda mucho.,每天的练习帮助很大。,名词（阴）；对应动词 practicar；重音在倒数第三音节，一律标符号,名词;学习与复盘
+es-0958,es,es-12,el progreso,进步,El progreso de este mes es claro.,这个月的进步很明显。,名词（阳）；与英语 progress 同源,名词;学习与复盘
+es-0959,es,es-12,el objetivo,目标,El objetivo era leer sin diccionario.,目标是不查词典阅读。,名词（阳）；el diccionario 是词典,名词;学习与复盘
+es-0960,es,es-12,la costumbre,习惯,La costumbre de leer por la noche ayuda mucho.,晚上阅读的习惯帮助很大。,名词（阴）；复数 las costumbres,名词;学习与复盘
+es-0961,es,es-12,la diferencia,区别,La diferencia entre los dos tiempos es clara.,两个时态之间的区别很清楚。,名词（阴）；英语 -ence 对应西语 -encia,名词;学习与复盘
+es-0962,es,es-12,el método,方法,El método de las tarjetas funciona bien.,卡片这个方法效果不错。,名词（阳）；重音在倒数第三音节，一律标符号；funcionar 表示起作用,名词;学习与复盘
+es-0963,es,es-12,el nivel,水平；级别,El nivel de mi español subió poco a poco.,我的西班牙语水平慢慢提高了。,名词（阳）；复数 los niveles,名词;学习与复盘
+es-0964,es,es-12,la lengua,语言；舌头,La lengua española es bonita.,西班牙语是一门好听的语言。,名词（阴）；与 el idioma 同义，el idioma 是阳性,名词;学习与复盘
+es-0965,es,es-12,la gramática,语法,La gramática de los pasados es difícil.,两种过去时的语法很难。,名词（阴）；重音在倒数第三音节，一律标符号,名词;学习与复盘
+es-0966,es,es-12,el vocabulario,词汇,El vocabulario creció mucho este mes.,词汇量这个月增加了很多。,名词（阳）；与英语 vocabulary 同源,名词;学习与复盘
+es-0967,es,es-12,la lectura,阅读；读物,La lectura diaria es la parte mejor.,每天的阅读是最好的部分。,名词（阴）；对应动词 leer；diario 表示每天的，la parte 是部分,名词;学习与复盘
+es-0968,es,es-12,la escritura,书写；写作,La escritura es más difícil que la lectura.,写作比阅读难。,名词（阴）；对应动词 escribir,名词;学习与复盘
+es-0969,es,es-12,la frase,句子,La frase más difícil está en el texto.,最难的那个句子在课文里。,名词（阴）；复数 las frases,名词;学习与复盘
+es-0970,es,es-12,el texto,文章；课文,El texto del libro es corto.,书上的这篇课文很短。,名词（阳）；与英语 text 同源,名词;学习与复盘
+es-0971,es,es-12,el esfuerzo,努力,El esfuerzo era pequeño: repasaba las tarjetas cada día.,付出不大：我那时每天复习卡片。,名词（阳）,名词;学习与复盘
+es-0972,es,es-12,la ventaja,好处；优势,La ventaja del español es el vocabulario común.,西班牙语的好处是有很多共同词汇。,名词（阴）；común 表示共同的,名词;学习与复盘
+es-0973,es,es-12,el curso,课程,El curso de gramática empezó en octubre.,这门语法课十月开始。,名词（阳）；与英语 course 同源,名词;学习与复盘
+es-0974,es,es-12,repasar,复习,Tengo que repasar los dos pasados.,我得复习两种过去时。,repasar 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：repasé / repasaste / repasó / repasamos / repasasteis / repasaron；-ar 规则,动词;不定式;学习与复盘
+es-0975,es,es-12,mejorar,改进；提高,Quiero mejorar mi escritura.,我想提高我的写作。,mejorar 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：mejoré / mejoraste / mejoró / mejoramos / mejorasteis / mejoraron；-ar 规则；对应形容词 mejor,动词;不定式;学习与复盘
+es-0976,es,es-12,memorizar,记住；背,Es difícil memorizar tantas palabras.,背这么多词很难。,memorizar 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：memoricé / memorizaste / memorizó / memorizamos / memorizasteis / memorizaron；-zar 动词，简单过去时 yo 形式写 memoricé,动词;不定式;学习与复盘
+es-0977,es,es-12,traducir,翻译,No quiero traducir cada palabra.,我不想逐词翻译。,traducir 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：traduje / tradujiste / tradujo / tradujimos / tradujisteis / tradujeron；现在时 yo 形式写 traduzco；词干 traduj- 以 j 结尾，第三人称复数用 -eron,动词;不定式;学习与复盘
+es-0978,es,es-12,comparar,比较,Es útil comparar los dos tiempos.,比较两个时态很有用。,comparar 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：comparé / comparaste / comparó / comparamos / comparasteis / compararon；-ar 规则；útil 表示有用的,动词;不定式;学习与复盘
+es-0979,es,es-12,corregir,改正；批改,El profesor va a corregir mi texto.,老师会批改我的文章。,corregir 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：corregí / corregiste / corrigió / corregimos / corregisteis / corrigieron；现在时 e→i，yo 形式写 corrijo,动词;不定式;学习与复盘
+es-0980,es,es-12,revisar,检查,Tengo que revisar los acentos.,我得检查重音符号。,revisar 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：revisé / revisaste / revisó / revisamos / revisasteis / revisaron；-ar 规则；el acento 是重音符号,动词;不定式;学习与复盘
+es-0981,es,es-12,anotar,记下,Voy a anotar los errores en el cuaderno.,我要把错误记在本子上。,anotar 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：anoté / anotaste / anotó / anotamos / anotasteis / anotaron；-ar 规则；对应名词 la nota,动词;不定式;学习与复盘
+es-0982,es,es-12,resumir,概括；复述,Puedo resumir el texto en chino.,我能用中文复述这篇课文。,resumir 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：resumí / resumiste / resumió / resumimos / resumisteis / resumieron；-ir 规则,动词;不定式;学习与复盘
+es-0983,es,es-12,avanzar,前进；进步,Quiero avanzar al nivel siguiente.,我想进到下一个级别。,avanzar 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：avancé / avanzaste / avanzó / avanzamos / avanzasteis / avanzaron；-zar 动词，简单过去时 yo 形式写 avancé,动词;不定式;学习与复盘
+es-0984,es,es-12,el resumen,摘要；小结,El resumen del mes está en el cuaderno.,这个月的小结在本子上。,名词（阳）；复数 los resúmenes，复数要标符号,名词;学习与复盘
+es-0985,es,es-12,la duda,疑问,La duda mayor es el uso de los pasados.,最大的疑问是两种过去时的用法。,名词（阴）；sin duda 表示毫无疑问；el uso 是用法,名词;学习与复盘
+es-0986,es,es-12,el cambio,变化；改变,El cambio de estos tres meses es grande.,这三个月的变化很大。,名词（阳）；对应动词 cambiar,名词;学习与复盘
+es-0987,es,es-12,el plan,计划,El plan de diciembre es leer más.,十二月的计划是多读一些。,名词（阳）；复数 los planes,名词;学习与复盘
+es-0988,es,es-12,la etapa,阶段,La etapa siguiente es el nivel A2.,下一个阶段是 A2 级别。,名词（阴）；siguiente 表示下一个的,名词;学习与复盘
+es-0989,es,es-12,Hace tres meses empecé a estudiar español,三个月前我开始学西班牙语,Hace tres meses empecé a estudiar español.,三个月前我开始学西班牙语。,整句；hace + 时间段表示“……之前”，配简单过去时；只生成识别卡,句型;phrase
+es-0990,es,es-12,Antes no sabía nada de español,以前我一点西班牙语都不会,Antes no sabía nada de español.,以前我一点西班牙语都不会。,整句；讲过去的状态用过去未完成时，no 加 nada 是标准的双重否定；只生成识别卡,句型;phrase
+es-0991,es,es-12,Ahora leo textos cortos y entiendo la idea,现在我读短文章，能看懂大意,Ahora leo textos cortos y entiendo la idea.,现在我读短文章，能看懂大意。,整句；讲现在的能力用现在时；只生成识别卡,句型;phrase
+es-0992,es,es-12,Todos los días repaso mis tarjetas,我每天复习卡片,Todos los días repaso mis tarjetas.,我每天复习卡片。,整句；讲现在的习惯用现在时加时间标记；只生成识别卡,句型;phrase
+es-0993,es,es-12,El próximo mes quiero escribir más,下个月我想多写一些,El próximo mes quiero escribir más.,下个月我想多写一些。,整句；讲打算用 querer + 不定式；只生成识别卡,句型;phrase

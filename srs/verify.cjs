@@ -134,9 +134,9 @@ test('来源 CSV 与两个内嵌 JSON 完整一致；只有一个可执行脚本
   const rows = ['es','ru'].flatMap(lang => plain(api.parseCSV(fs.readFileSync(path.join(__dirname,'cards',lang+'.csv'),'utf8'))));
   // 内嵌数据按追加顺序保留旧行；来源 CSV 各自按语言排列。
   for (const lang of ['es','ru']) assert.deepEqual(rows.filter(row=>row.lang===lang),initialRows.filter(row=>row.lang===lang));
-  assert.equal(rows.length,1055);
-  assert.equal(api.expandCards(rows).length,2028);
-  assert.equal(rows.filter(r=>r.lang==='es').length,713);
+  assert.equal(rows.length,1335);
+  assert.equal(api.expandCards(rows).length,2563);
+  assert.equal(rows.filter(r=>r.lang==='es').length,993);
   assert.equal(rows.filter(r=>r.tags.split(';').includes('letter')).length,33);
   assert.equal(rows.filter(r=>r.lang==='ru'&&!r.tags.split(';').includes('letter')).length,309);
   assert.match(html,/<div id="app"><\/div>/);
@@ -260,7 +260,7 @@ test('日志 60 个本地日期边界、统计 30 天与正确率、旧版无 fi
   state.log=[{t:at(api.addDays(today,-2)),card:'es-0001:r',grade:0},{t:at(today),card:'es-0001:r',grade:4}];
   const valid=api.validateState(state,now);assert.equal(valid.cards['es-0001:r'].first,api.addDays(today,-2));
   const stats=api.statistics(initialRows,valid,today)[0];
-  assert.deepEqual([stats.total,stats.new,stats.learning,stats.mastered,stats.reviews,stats.accuracy],[1406,1405,1,0,2,'50%']);
+  assert.deepEqual([stats.total,stats.new,stats.learning,stats.mastered,stats.reviews,stats.accuracy],[1941,1940,1,0,2,'50%']);
   assert.throws(()=>api.validateState({...state,version:2},now));
   assert.throws(()=>api.validateState({...state,cards:{'es-0001:r':{...record(),due:'2026-02-30'}}},now));
 });
@@ -337,7 +337,7 @@ test('真实嵌入进度能通过 validateState；全部进度与日志 id 都�
   assert.equal(JSON.stringify(initialState),before);
 });
 test('课程注册表都有词条、周次、日期、目标、写作任务和 10 题；阅读题属于本课练习',() => {
-  assert.deepEqual(Object.keys(api.LESSONS),['es-01','es-02','es-03','es-04','es-05','es-06','es-07','es-08','ru-01','ru-02','ru-03','ru-04','ru-05','ru-06','ru-07','ru-08']);
+  assert.deepEqual(Object.keys(api.LESSONS),['es-01','es-02','es-03','es-04','es-05','es-06','es-07','es-08','es-09','es-10','es-11','es-12','ru-01','ru-02','ru-03','ru-04','ru-05','ru-06','ru-07','ru-08']);
   for (const [id,lesson] of Object.entries(api.LESSONS)) {
     assert(initialRows.some(row=>row.lesson===id),id);
     assert.equal(lesson.lang,id.slice(0,2));assert.equal(lesson.week,Number(id.slice(3)));
@@ -351,7 +351,7 @@ test('课程注册表都有词条、周次、日期、目标、写作任务和 1
     if (lesson.reading) {
       if (lesson.lang==='ru' && ['ru-03','ru-04'].includes(id)) assert([5,6].includes(lesson.reading.sentences.length));
       if (lesson.lang==='ru' && ['ru-05','ru-06','ru-07','ru-08'].includes(id)) assert(lesson.reading.sentences.length>=8 && lesson.reading.sentences.length<=10);
-      assert.equal(lesson.reading.questions.length,['es-04','es-05','es-07','es-08','ru-05','ru-08'].includes(id)?4:3);
+      assert.equal(lesson.reading.questions.length,['es-04','es-05','es-07','es-08','es-09','es-10','es-11','es-12','ru-05','ru-08'].includes(id)?4:3);
       for (const sentence of lesson.reading.sentences) assert(sentence.text && sentence.zh);
       for (const question of lesson.reading.questions) {
         assert(question.options.includes(question.answer),id+' '+question.prompt);
@@ -595,49 +595,168 @@ test('任务 D：西语新增 id 连续、名词带冠词标性、变位 note �
     ['ver（看见）','vi viste vio vimos visteis vieron']
   ]) assert(es08.some(row=>row[0]===first && row.slice(1).join(' ')===forms),'es-08 '+first);
 });
-test('任务 D：第 5–8 周阅读只用已学词、本课词及其规则变化形式',() => {
-  const words=text=>text.toLowerCase().match(/[\p{L}\p{M}]+/gu) || [];
-  const ENDINGS={
-    ar:['o','as','a','amos','áis','an','é','aste','ó','asteis','aron','ando'],
-    er:['o','es','e','emos','éis','en','í','iste','ió','imos','isteis','ieron','iendo'],
-    ir:['o','es','e','imos','ís','en','í','iste','ió','isteis','ieron','iendo']
-  };
-  // 只额外放行两个人名和形容词在阳性单数名词前的短尾形式；其余全部由词卡推导。
-  const extra=['ana','juan','primer','buen','gran'];
-  const vocabulary=lesson => {
-    const set=new Set(extra);
-    for (const row of initialRows.filter(row=>row.lang==='es' && row.lesson<=lesson)) {
-      for (const word of [...words(row.front),...words(row.example)]) set.add(word);
-      // note 里用 " / " 列出的变位形式就是本课教到的词形。
-      for (const part of row.note.split(/[；;：:]/)) if (part.includes(' / ')) for (const word of words(part)) set.add(word);
-      const verb=row.front.toLowerCase().match(/^([\p{L}\p{M}]+?)(ar|er|ir)(se)?$/u);
-      if (!verb) continue;
-      const [,stem,kind]=verb;
-      for (const ending of ENDINGS[kind]) set.add(stem+ending);
-      if (kind === 'ar') {
-        if (stem.endsWith('c')) set.add(stem.slice(0,-1)+'qué');
-        if (stem.endsWith('g')) set.add(stem+'ué');
-        if (stem.endsWith('z')) set.add(stem.slice(0,-1)+'cé');
-      }
+// 西语阅读的词汇范围：本课及以前的词卡、note 里列出的变位形式、规则动词的推导形式。
+// 任务 D（第 5–8 周）与任务 E1（第 9–12 周）共用同一套规则，不各写一份。
+const esWords=text=>text.toLowerCase().match(/[\p{L}\p{M}]+/gu) || [];
+const ES_ENDINGS={
+  ar:['o','as','a','amos','áis','an','é','aste','ó','asteis','aron','ando'],
+  er:['o','es','e','emos','éis','en','í','iste','ió','imos','isteis','ieron','iendo'],
+  ir:['o','es','e','imos','ís','en','í','iste','ió','isteis','ieron','iendo']
+};
+// 只额外放行两个人名和形容词在阳性单数名词前的短尾形式；其余全部由词卡推导。
+const ES_EXTRA=['ana','juan','primer','buen','gran'];
+const esVocabulary=lesson => {
+  const set=new Set(ES_EXTRA);
+  for (const row of initialRows.filter(row=>row.lang==='es' && row.lesson<=lesson)) {
+    for (const word of [...esWords(row.front),...esWords(row.example)]) set.add(word);
+    // note 里用 " / " 列出的变位形式就是本课教到的词形。
+    for (const part of row.note.split(/[；;：:]/)) if (part.includes(' / ')) for (const word of esWords(part)) set.add(word);
+    const verb=row.front.toLowerCase().match(/^([\p{L}\p{M}]+?)(ar|er|ir)(se)?$/u);
+    if (!verb) continue;
+    const [,stem,kind]=verb;
+    for (const ending of ES_ENDINGS[kind]) set.add(stem+ending);
+    if (kind === 'ar') {
+      if (stem.endsWith('c')) set.add(stem.slice(0,-1)+'qué');
+      if (stem.endsWith('g')) set.add(stem+'ué');
+      if (stem.endsWith('z')) set.add(stem.slice(0,-1)+'cé');
     }
-    return set;
-  };
-  const variants=word=>[word,word.replace(/es$/,''),word.replace(/s$/,''),word.replace(/as$/,'os'),word.replace(/a$/,'o'),word.replace(/os$/,'o')];
-  const known=(lesson,word)=>variants(word).some(form=>vocabulary(lesson).has(form));
-  for (const id of ['es-05','es-06','es-07','es-08']) {
-    const set=vocabulary(id);
+  }
+  return set;
+};
+const esVariants=word=>[word,word.replace(/es$/,''),word.replace(/s$/,''),word.replace(/as$/,'os'),word.replace(/a$/,'o'),word.replace(/os$/,'o')];
+const esKnown=(lesson,word)=>esVariants(word).some(form=>esVocabulary(lesson).has(form));
+const checkReadingVocabulary=ids => {
+  for (const id of ids) {
+    const set=esVocabulary(id);
     for (const sentence of api.LESSONS[id].reading.sentences) {
-      for (const word of words(sentence.text)) {
-        assert(variants(word).some(form=>set.has(form)),id+' 阅读超出词表：'+word+'（'+sentence.text+'）');
+      for (const word of esWords(sentence.text)) {
+        assert(esVariants(word).some(form=>set.has(form)),id+' 阅读超出词表：'+word+'（'+sentence.text+'）');
       }
     }
   }
+};
+test('任务 D：第 5–8 周阅读只用已学词、本课词及其规则变化形式',() => {
+  checkReadingVocabulary(['es-05','es-06','es-07','es-08']);
   // 反向检查：规则本身能判出未学的词和还没到的课次。
-  assert(!known('es-08','nevera'),'未学的词应判出');
-  assert(!known('es-05','durmiendo'),'第 6 周才学的副动词不该通过第 5 周的检查');
-  assert(known('es-05','levanto'),'第 5 周应认得反身动词的 yo 形式');
-  assert(known('es-08','anduvimos'),'不规则过去时应由 note 里的六个人称放行');
-  assert(known('es-07','saqué'),'-car 动词的 yo 过去时应由拼写规则放行');
+  assert(!esKnown('es-08','nevera'),'未学的词应判出');
+  assert(!esKnown('es-05','durmiendo'),'第 6 周才学的副动词不该通过第 5 周的检查');
+  assert(esKnown('es-05','levanto'),'第 5 周应认得反身动词的 yo 形式');
+  assert(esKnown('es-08','anduvimos'),'不规则过去时应由 note 里的六个人称放行');
+  assert(esKnown('es-07','saqué'),'-car 动词的 yo 过去时应由拼写规则放行');
+});
+test('任务 E1：es-09 至 es-12 的日期、卡片数、阅读篇幅与练习配额符合课程安排',() => {
+  const expected={
+    'es-09':{dates:'11-09 至 11-15',cards:80,sentences:26,min:220,max:260,questions:4,text:6,book:9},
+    'es-10':{dates:'11-16 至 11-22',cards:80,sentences:28,min:250,max:300,questions:4,text:1,book:10},
+    'es-11':{dates:'11-23 至 11-29',cards:80,sentences:28,min:260,max:300,questions:4,text:5,book:11},
+    'es-12':{dates:'11-30 至 12-06',cards:40,sentences:32,min:300,max:350,questions:4,text:5,book:null}
+  };
+  for (const [id,want] of Object.entries(expected)) {
+    const lesson=api.LESSONS[id],cards=initialRows.filter(row=>row.lesson===id);
+    assert(lesson,id);assert.equal(lesson.lang,'es');assert.equal(lesson.week,Number(id.slice(3)));
+    assert.equal(lesson.dates,want.dates,id+' 日期');
+    assert.equal(cards.length,want.cards,id+' 卡片数');
+    assert.equal(lesson.reading.sentences.length,want.sentences,id+' 阅读句数');
+    const words=lesson.reading.sentences.flatMap(sentence=>sentence.text.match(/[\p{L}\p{M}]+/gu) || []);
+    assert(words.length>=want.min && words.length<=want.max,`${id}: ${words.length} words, expected ${want.min}–${want.max}`);
+    assert.equal(lesson.reading.questions.length,want.questions,id+' 阅读题数');
+    assert.equal(lesson.exercises.length,10,id+' 练习总数');
+    assert.equal(lesson.exercises.filter(exercise=>!exercise.options).length,want.text,id+' 文本题数');
+    assert.deepEqual(lesson.exercises.slice(-want.questions),lesson.reading.questions,id+' 阅读题排在末尾');
+    for (const sentence of lesson.reading.sentences) {
+      assert.match(sentence.text,/[.?!]$/,id);assert.match(sentence.zh,/[㐀-鿿]/,id);
+      assert.equal(sentence.text,sentence.text.normalize('NFC'),id);
+      if (sentence.text.includes('?')) assert(sentence.text.startsWith('¿'),id+' 问句要以 ¿ 开头');
+    }
+    for (const question of lesson.reading.questions) {
+      assert(question.options.includes(question.answer),id+' '+question.prompt);
+      assert.equal(question.options.length,new Set(question.options).size,id+' '+question.prompt);
+    }
+    const explanation=lesson.explanation();
+    if (want.book) assert(explanation.includes('《现代西班牙语》第 '+want.book+' 课'),id+' 教材指引');
+    assert.match(explanation,/每天 25 分钟/,id+' 每日 25 分钟');
+    assert.match(explanation,/每周.{0,6}30 分钟/,id+' 每周一次 30 分钟');
+    assert(parseNodes(explanation)[0].querySelector('table'),id+' 讲解含表格');
+  }
+  // es-12 是复盘周：讲解要指到框架文件、月度检查点 3 和下一阶段。
+  const review=api.LESSONS['es-12'].explanation();
+  for (const text of ['月度检查点 3','framework/metrics-and-review.md','决定矩阵','本课短文','维持模式','建设期']) assert(review.includes(text),'es-12 讲解缺少：'+text);
+  assert.match(api.LESSONS['es-12'].writingTask,/15 分钟.*100 词/);
+  const table=id=>parseNodes(api.LESSONS[id].explanation())[0].querySelectorAll('table')
+    .flatMap(node=>node.querySelector('tbody').querySelectorAll('tr').map(tr=>tr.querySelectorAll('td').map(td=>td.textContent)));
+  const es09=table('es-09');
+  for (const [person,forms] of [['yo','hablaba comía vivía'],['nosotros / nosotras','hablábamos comíamos vivíamos'],['ellos / ellas / ustedes','hablaban comían vivían']])
+    assert(es09.some(row=>row[0]===person && row.slice(2).join(' ')===forms),'es-09 '+person);
+  for (const [first,forms] of [
+    ['ser（是）','era eras era éramos erais eran'],
+    ['ir（去）','iba ibas iba íbamos ibais iban'],
+    ['ver（看见）','veía veías veía veíamos veíais veían']
+  ]) assert(es09.some(row=>row[0]===first && row.slice(1).join(' ')===forms),'es-09 '+first);
+  const es10=table('es-10');
+  assert(es10.some(row=>row[0].startsWith('saber') && row[1].startsWith('sabía') && row[2].startsWith('supe')),'es-10 意义变化动词表');
+  assert(es10.filter(row=>row[1]==='过去未完成时').length>=4,'es-10 对照表的背景类用法');
+  assert(es10.filter(row=>row[1]==='简单过去时').length>=3,'es-10 对照表的事件类用法');
+  const es11=table('es-11');
+  assert(es11.some(row=>row.join(' ').includes('tan + 形容词或副词 + como')),'es-11 同级比较');
+  assert(es11.some(row=>row[1]==='在……旁边' && row[0]==='al lado de'),'es-11 方位短语表');
+  assert(es11.some(row=>row[1].includes('alguien') && row[2].includes('nadie')),'es-11 不定词表');
+  assert(table('es-12').length>=7,'es-12 复习清单按语法点各占一行');
+  for (const [id,text] of [['es-09','había'],['es-10','mientras'],['es-11','cien'],['es-12','futuro']])
+    assert(api.LESSONS[id].explanation().includes(text),id+' 讲解缺少：'+text);
+});
+test('任务 E1：西语第 9–12 周 id 连续、名词带冠词标性、变位 note 列六个人称，整句只出识别卡',() => {
+  const lessons=['es-09','es-10','es-11','es-12'];
+  const added=initialRows.filter(row=>lessons.includes(row.lesson));
+  assert.deepEqual(added.map(row=>row.id),Array.from({length:280},(_,i)=>'es-'+String(714+i).padStart(4,'0')));
+  // CSV 与内嵌 JSON 的新增段落逐字段一致。
+  const csvRows=api.parseCSV(fs.readFileSync(path.join(__dirname,'cards','es.csv'),'utf8'));
+  assert.deepEqual(plain(csvRows.filter(row=>lessons.includes(row.lesson))),plain(added));
+  const older=new Set(initialRows.filter(row=>row.lang==='es' && !lessons.includes(row.lesson)).map(row=>row.front));
+  const gender={el:'名词（阳）',la:'名词（阴）',los:'名词（阳，复数）',las:'名词（阴，复数）'};
+  const seen=new Set();
+  for (const row of added) {
+    assert.equal(row.lang,'es',row.id);
+    for (const field of ['front','back','example','example_zh','note']) {
+      assert(row[field],row.id+' '+field+' 不能为空');
+      assert.equal(row[field],row[field].normalize('NFC'),row.id+' '+field+' 须为 NFC');
+    }
+    assert(!older.has(row.front),'新词不与旧卡重复：'+row.front);
+    assert(!seen.has(row.front),'新词内部不重复：'+row.front);
+    seen.add(row.front);
+    assert.match(row.example,/[.?!]$/,row.id+' 例句结尾');
+    if (row.example.includes('?')) assert(row.example.startsWith('¿'),row.id+' 问句要以 ¿ 开头');
+    const tags=row.tags.split(';');
+    if (tags.includes('名词')) {
+      const article=row.front.match(/^(el|la|los|las) /);
+      assert(article,row.id+' 名词 front 缺冠词');
+      assert(row.note.startsWith(gender[article[1]]),row.id+' note 应以 '+gender[article[1]]+' 开头');
+    }
+    if (['不定式','不规则','过去未完成时','过去时'].some(tag=>tags.includes(tag))) {
+      assert(row.note.split(' / ').length>=6,row.id+' 变位 note 未列出六个人称');
+    }
+    assert.deepEqual(api.expandCards([row]).map(card=>card.direction),tags.includes('phrase')?['r']:['r','p'],row.id);
+  }
+  // 每课 5 条整句，只出识别卡；hace frío 这类多词短语另外标 phrase。
+  for (const id of lessons) assert.equal(initialRows.filter(row=>row.lesson===id && row.tags==='句型;phrase').length,5,id+' 整句卡');
+  for (const front of ['hace frío','hace calor','cuando era niño','tener miedo','darse cuenta'])
+    assert(added.find(row=>row.front===front).tags.split(';').includes('phrase'),front+' 应标 phrase');
+  // 各课都覆盖到任务要求的词类。
+  const has=(lesson,front)=>added.some(row=>row.lesson===lesson && row.front===front);
+  for (const front of ['era','iba','veía','había','el árbol','el verano','hace frío','soñar','a menudo']) assert(has('es-09',front),'es-09 缺 '+front);
+  for (const front of ['sabía','conocí','conocía','podía','tenía que','tuve que','de pronto','por eso','aparecer']) assert(has('es-10',front),'es-10 缺 '+front);
+  for (const front of ['más','tan','mejor','mayor','alguien','nadie','ningún','al lado de','cien','mil','el edificio']) assert(has('es-11',front),'es-11 缺 '+front);
+  for (const front of ['la experiencia','el progreso','repasar','traducir','corregir']) assert(has('es-12',front),'es-12 缺 '+front);
+  assert.equal(added.filter(row=>row.lesson==='es-11' && row.tags.split(';').includes('数字')).length,10,'es-11 数字 10 条');
+});
+test('任务 E1：第 9–12 周阅读只用已学词、本课词及其规则变化形式',() => {
+  checkReadingVocabulary(['es-09','es-10','es-11','es-12']);
+  // 反向检查：规则本身能判出未学的词和还没到的课次。
+  assert(!esKnown('es-12','nevera'),'未学的词应判出');
+  assert(!esKnown('es-09','ascensor'),'第 11 周才学的词不该通过第 9 周的检查');
+  assert(esKnown('es-09','jugábamos'),'过去未完成时应由 note 里的六个人称放行');
+  assert(esKnown('es-10','sabía'),'意义变化动词的过去未完成时应通过第 10 周的检查');
+  assert(esKnown('es-11','nadie'),'第 11 周应认得不定代词');
+  assert(!esKnown('es-10','nadie'),'第 11 周才学的不定代词不该通过第 10 周的检查');
 });
 test('任务 C 只追加 cards-data 与 ru.csv；已有记录原文不变',() => {
   // 开工快照的原始前缀；JSON 数组最后的换行和 ] 让位于追加分隔符。
@@ -652,14 +771,16 @@ test('任务 C 只追加 cards-data 与 ru.csv；已有记录原文不变',() =>
   assert.deepEqual(initialRows.slice(254,494).map(row=>row.id),Array.from({length:240},(_,i)=>'es-'+String(114+i).padStart(4,'0')));
   assert.deepEqual(initialRows.slice(494,695).map(row=>row.id),Array.from({length:201},(_,i)=>'ru-'+String(142+i).padStart(4,'0')));
   // 任务 D 的西语第 5–8 周整段接在 ru 行之后，同样只追加。
-  assert.deepEqual(initialRows.slice(695).map(row=>row.id),Array.from({length:360},(_,i)=>'es-'+String(354+i).padStart(4,'0')));
+  assert.deepEqual(initialRows.slice(695,1055).map(row=>row.id),Array.from({length:360},(_,i)=>'es-'+String(354+i).padStart(4,'0')));
+  // 任务 E1 的西语第 9–12 周同样只追加在最后。
+  assert.deepEqual(initialRows.slice(1055).map(row=>row.id),Array.from({length:280},(_,i)=>'es-'+String(714+i).padStart(4,'0')));
 });
-test('各课程分语言展示；阅读中文默认折叠；160 道练习按题型反馈且不写入进度',() => {
+test('各课程分语言展示；阅读中文默认折叠；200 道练习按题型反馈且不写入进度',() => {
   const {api:a,document}=createAPI(true);a.initialize();
   const before=plain(a.getData().state);
   for (const [id,lesson] of Object.entries(a.LESSONS)) {
     a.openLesson(id);
-    assert.equal(document.querySelectorAll('[data-lesson]').length,16);
+    assert.equal(document.querySelectorAll('[data-lesson]').length,20);
     const page=document.getElementById('content').innerHTML;
     assert(page.indexOf('西语课程')<page.indexOf('俄语课程'));
     assert(page.includes(lesson.goal));assert(page.includes(lesson.writingTask));
@@ -706,7 +827,7 @@ test('letter / phrase 标签只生成识别卡；其他词条仍有两个方向'
     const expected=row.tags.split(';').some(tag=>['letter','phrase'].includes(tag))?['r']:['r','p'];
     assert.deepEqual(plain(api.expandCards([row]).map(card=>card.direction)),expected,row.id);
   }
-  assert.equal(initialRows.filter(row=>row.tags.split(';').includes('phrase')).length,49);
+  assert.equal(initialRows.filter(row=>row.tags.split(';').includes('phrase')).length,74);
   // 标签规则也适用于以后导入的西语词，不靠课次或语言写死。
   for (const tag of ['phrase','letter']) assert.deepEqual(plain(api.expandCards([{...initialRows[0],tags:'extra;'+tag}]).map(card=>card.direction)),['r']);
 });
