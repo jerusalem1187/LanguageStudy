@@ -352,3 +352,363 @@ es-0350,es,es-04,popular,受欢迎的；民众的,El restaurante es popular.,这
 es-0351,es,es-04,famoso,著名的,El artista es famoso.,这位艺术家很有名。,形容词；famosa / famosos / famosas；与英语 famous 对应；同源或国际借词只提供阅读线索，仍按语境判断,形容词;同源词
 es-0352,es,es-04,normal,正常的；普通的,Es normal estar cansado.,感到疲倦是正常的。,形容词；阴阳同形；复数 normales；与英语 normal 对应；同源或国际借词只提供阅读线索，仍按语境判断,形容词;同源词
 es-0353,es,es-04,la comunicación,交流；通信,La comunicación es importante.,交流很重要。,名词（阴）；与英语 communication 对应；同源或国际借词只提供阅读线索，仍按语境判断,名词;同源词
+es-0354,es,es-05,levantarse,起床；起来,Levantarse temprano no es fácil.,早起不容易。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me levanto / te levantas / se levanta / nos levantamos / os levantáis / se levantan；反身代词放在变位动词前，也可接在不定式后连写成 levantarme,动词;不定式;反身
+es-0355,es,es-05,ducharse,洗淋浴,Ducharse por la mañana es normal.,早上洗澡很平常。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me ducho / te duchas / se ducha / nos duchamos / os ducháis / se duchan；-ar 规则，只是多了反身代词,动词;不定式;反身
+es-0356,es,es-05,vestirse,穿衣服,Vestirse antes del desayuno es normal.,早餐前穿衣服很平常。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me visto / te vistes / se viste / nos vestimos / os vestís / se visten；e→i，nosotros 和 vosotros 不变词干,动词;不定式;反身
+es-0357,es,es-05,acostarse,上床睡觉,Acostarse temprano es bueno.,早睡是好事。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me acuesto / te acuestas / se acuesta / nos acostamos / os acostáis / se acuestan；o→ue,动词;不定式;反身
+es-0358,es,es-05,llamarse,名叫,Llamarse Ana o Juan es normal.,叫安娜或胡安都很平常。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me llamo / te llamas / se llama / nos llamamos / os llamáis / se llaman；问名字用 ¿Cómo te llamas?，与及物动词 llamar（叫、打电话）区分,动词;不定式;反身
+es-0359,es,es-05,lavarse,洗（自己身体的某处）,Lavarse las manos es importante.,洗手很重要。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me lavo / te lavas / se lava / nos lavamos / os laváis / se lavan；反身时身体部位用定冠词，不用物主形容词,动词;不定式;反身
+es-0360,es,es-05,despertarse,醒来,Despertarse a las siete es temprano.,七点醒来算早。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me despierto / te despiertas / se despierta / nos despertamos / os despertáis / se despiertan；e→ie；醒来是 despertarse，起身离开床是 levantarse,动词;不定式;反身
+es-0361,es,es-05,sentarse,坐下,Sentarse en la silla y leer es bueno.,坐在椅子上读书很好。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me siento / te sientas / se sienta / nos sentamos / os sentáis / se sientan；e→ie,动词;不定式;反身
+es-0362,es,es-05,quedarse,留下；待着,Quedarse en casa el domingo es tranquilo.,星期日待在家里很安静。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me quedo / te quedas / se queda / nos quedamos / os quedáis / se quedan；-ar 规则,动词;不定式;反身
+es-0363,es,es-05,peinarse,梳头,Peinarse el pelo cada día es normal.,每天梳头很平常。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me peino / te peinas / se peina / nos peinamos / os peináis / se peinan；-ar 规则,动词;不定式;反身
+es-0364,es,es-05,me,我（间接宾语）,Me gusta el cine.,我喜欢电影院。,间接宾语代词；表示“对我、给我”；与 gustar 连用时指喜欢的人，放在变位动词前,代词;间接宾语
+es-0365,es,es-05,te,你（间接宾语）,Te gusta el fútbol.,你喜欢足球。,间接宾语代词；对应 tú；与物主形容词 tu 区分,代词;间接宾语
+es-0366,es,es-05,le,他／她／您（间接宾语）,Le gusta la playa.,他喜欢海滩。,间接宾语代词；第三人称单数男女同形；要点明是谁时写 a Juan le gusta,代词;间接宾语
+es-0367,es,es-05,nos,我们（间接宾语）,Nos gusta el teatro.,我们喜欢剧院。,间接宾语代词；对应 nosotros / nosotras,代词;间接宾语
+es-0368,es,es-05,os,你们（间接宾语）,Os gusta el baile.,你们喜欢跳舞。,间接宾语代词；对应 vosotros / vosotras，主要用于西班牙,代词;间接宾语
+es-0369,es,es-05,les,他们／她们／您们（间接宾语）,Les gustan los deportes.,他们喜欢体育运动。,间接宾语代词；第三人称复数；主语是复数时动词用 gustan,代词;间接宾语
+es-0370,es,es-05,a mí,对我来说（强调）,A mí me gusta el cine.,我（本人）喜欢电影院。,介词 a + 重读代词；强调或对比时加上，但 me 仍要保留；mí 带重音符号，与物主形容词 mi 区分,代词;强调
+es-0371,es,es-05,a ti,对你来说（强调）,A ti te gusta el deporte.,你（本人）喜欢体育。,介词 a + 重读代词；ti 不带重音符号；te 仍要保留,代词;强调
+es-0372,es,es-05,ir a,打算……（ir a + 不定式）,Voy a ir a la playa.,我打算去海滩。,句型；ir a + 不定式表示打算或即将做；依次为 voy a / vas a / va a / vamos a / vais a / van a + 不定式,句型
+es-0373,es,es-05,tener que,必须……,Tener que estudiar no es malo.,必须学习并不是坏事。,句型；tener que + 不定式表示个人的必须；依次为 tengo que / tienes que / tiene que / tenemos que / tenéis que / tienen que,句型
+es-0374,es,es-05,hay que,得……；应该……,Hay que estudiar cada día.,每天都得学习。,句型；hay que + 不定式表示泛指的应该，不指明是谁；只有这一个形式，不随人称变化,句型
+es-0375,es,es-05,el deporte,体育；运动,Me gusta el deporte.,我喜欢体育。,名词（阳）；practicar deporte 表示做运动,名词;爱好与活动
+es-0376,es,es-05,el fútbol,足球,El fútbol es un deporte popular.,足球是受欢迎的运动。,名词（阳）；jugar al fútbol 表示踢足球，a + el 缩合成 al,名词;爱好与活动
+es-0377,es,es-05,la película,电影（影片）,La película es larga.,这部电影很长。,名词（阴）；重音符号在 í；影片是 la película，电影院是 el cine,名词;爱好与活动
+es-0378,es,es-05,el cine,电影院,El cine está en el centro.,电影院在市中心。,名词（阳）；也指电影这门艺术,名词;爱好与活动
+es-0379,es,es-05,la playa,海滩,La playa es tranquila.,这片海滩很安静。,名词（阴）,名词;爱好与活动
+es-0380,es,es-05,la montaña,山,La montaña es alta.,这座山很高。,名词（阴）；ñ 是单独的字母,名词;爱好与活动
+es-0381,es,es-05,el viaje,旅行,El viaje es largo.,这次旅行很长。,名词（阳）；词尾 -e，对应动词 viajar,名词;爱好与活动
+es-0382,es,es-05,la fiesta,聚会；节日,La fiesta es el sábado.,聚会在星期六。,名词（阴）,名词;爱好与活动
+es-0383,es,es-05,el juego,游戏,El juego es fácil.,这个游戏很简单。,名词（阳）；对应动词 jugar,名词;爱好与活动
+es-0384,es,es-05,la bicicleta,自行车,La bicicleta es nueva.,这辆自行车是新的。,名词（阴）；骑车去某地说 en bicicleta，不加冠词,名词;爱好与活动
+es-0385,es,es-05,el baile,舞蹈；舞会,El baile empieza a las nueve.,舞会九点开始。,名词（阳）；对应动词 bailar,名词;爱好与活动
+es-0386,es,es-05,la foto,照片,La foto es bonita.,这张照片很好看。,名词（阴）；是 la fotografía 的缩略形式，词尾虽是 -o 但为阴性；复数 las fotos,名词;爱好与活动
+es-0387,es,es-05,el concierto,音乐会,El concierto empieza tarde.,音乐会开始得晚。,名词（阳）,名词;爱好与活动
+es-0388,es,es-05,el teatro,剧院；戏剧,El teatro está en la plaza.,剧院在广场上。,名词（阳）,名词;爱好与活动
+es-0389,es,es-05,la piscina,游泳池,La piscina está limpia.,游泳池很干净。,名词（阴）,名词;爱好与活动
+es-0390,es,es-05,el partido,比赛（一场）,El partido de fútbol es hoy.,足球比赛在今天。,名词（阳）；也指政党,名词;爱好与活动
+es-0391,es,es-05,el gimnasio,健身房,El gimnasio abre temprano.,健身房开得早。,名词（阳）,名词;爱好与活动
+es-0392,es,es-05,la revista,杂志,La revista es interesante.,这本杂志很有趣。,名词（阴）,名词;爱好与活动
+es-0393,es,es-05,el periódico,报纸,El periódico llega cada día.,报纸每天都送到。,名词（阳）；重音符号在 ó,名词;爱好与活动
+es-0394,es,es-05,el jardín,花园,El jardín es pequeño.,这座花园很小。,名词（阳）；复数 los jardines，复数不再需要重音符号,名词;爱好与活动
+es-0395,es,es-05,el fin de semana,周末,El fin de semana descanso en casa.,周末我在家休息。,名词（阳）；三个词分开写；复数 los fines de semana,名词;日常生活
+es-0396,es,es-05,la comida,饭；食物,La comida está en la mesa.,饭在桌上。,名词（阴）；对应动词 comer；在西班牙也常指午饭,名词;日常生活
+es-0397,es,es-05,el ejercicio,练习；运动,El ejercicio es fácil.,这道练习很简单。,名词（阳）；hacer ejercicio 表示锻炼,名词;日常生活
+es-0398,es,es-05,el equipo,队；设备,El equipo es bueno.,这支队伍不错。,名词（阳）,名词;日常生活
+es-0399,es,es-05,la actividad,活动,La actividad empieza a las diez.,活动十点开始。,名词（阴）；-dad 词尾的名词都是阴性；复数 las actividades,名词;日常生活
+es-0400,es,es-05,el horario,时间表；日程,El horario de la clase es nuevo.,这门课的时间表是新的。,名词（阳）,名词;日常生活
+es-0401,es,es-05,el rato,一会儿；一段时间,El rato en el jardín es tranquilo.,在花园里的这段时间很安静。,名词（阳）；un rato 表示一会儿,名词;日常生活
+es-0402,es,es-05,la afición,爱好,La afición de mi hermano es el fútbol.,我兄弟的爱好是足球。,名词（阴）；复数 las aficiones，复数不带重音符号,名词;日常生活
+es-0403,es,es-05,el descanso,休息,El descanso es importante.,休息很重要。,名词（阳）；对应动词 descansar,名词;日常生活
+es-0404,es,es-05,el paseo,散步,El paseo es largo.,这次散步很长。,名词（阳）；对应动词 pasear；dar un paseo 表示去散步,名词;日常生活
+es-0405,es,es-05,la salud,健康,La salud es importante.,健康很重要。,名词（阴）；-d 结尾，重音在末音节但不标符号,名词;日常生活
+es-0406,es,es-05,la cara,脸,Me lavo la cara.,我洗脸。,名词（阴）；反身动词后用定冠词，不说 mi cara,名词;身体与衣物
+es-0407,es,es-05,el pelo,头发,Tengo el pelo largo.,我头发长。,名词（阳）；通常用单数表示整头头发,名词;身体与衣物
+es-0408,es,es-05,los dientes,牙齿,Me lavo los dientes.,我刷牙。,名词（阳，复数）；单数 el diente；刷牙说 lavarse los dientes,名词;身体与衣物
+es-0409,es,es-05,la ropa,衣服,La ropa está limpia.,衣服是干净的。,名词（阴）；集合名词，通常只用单数,名词;身体与衣物
+es-0410,es,es-05,la camisa,衬衫,La camisa es blanca.,这件衬衫是白的。,名词（阴）,名词;身体与衣物
+es-0411,es,es-05,los zapatos,鞋,Los zapatos son nuevos.,这双鞋是新的。,名词（阳，复数）；单数 el zapato，一只鞋,名词;身体与衣物
+es-0412,es,es-05,el pantalón,裤子,El pantalón es negro.,这条裤子是黑的。,名词（阳）；复数 los pantalones，一条裤子也常说复数,名词;身体与衣物
+es-0413,es,es-05,el vestido,连衣裙,El vestido es bonito.,这条连衣裙很好看。,名词（阳）,名词;身体与衣物
+es-0414,es,es-05,el ojo,眼睛,El ojo es pequeño.,眼睛很小。,名词（阳）；复数 los ojos,名词;身体与衣物
+es-0415,es,es-05,la boca,嘴,La boca es pequeña.,嘴很小。,名词（阴）,名词;身体与衣物
+es-0416,es,es-05,la falda,裙子,La falda es azul.,这条裙子是蓝的。,名词（阴）,名词;身体与衣物
+es-0417,es,es-05,el abrigo,大衣,El abrigo es caro.,这件大衣很贵。,名词（阳）；llevar el abrigo 表示穿着大衣,名词;身体与衣物
+es-0418,es,es-05,gustar,使喜欢（用于表达喜欢）,El verbo gustar tiene un orden especial.,动词 gustar 的语序很特别。,依次为 me gusta / te gusta / le gusta / nos gusta / os gusta / les gusta；主语是被喜欢的东西，喜欢的人用间接宾语代词；主语为复数时动词写 gustan,动词;不定式
+es-0419,es,es-05,encantar,使非常喜欢,El verbo encantar es como gustar.,动词 encantar 的用法和 gustar 一样。,依次为 me encanta / te encanta / le encanta / nos encanta / os encanta / les encanta；复数主语用 encantan；语气比 gustar 强，不再加 muy,动词;不定式
+es-0420,es,es-05,preferir,更喜欢；宁愿,Preferir el té es normal.,更喜欢茶很平常。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：prefiero / prefieres / prefiere / preferimos / preferís / prefieren；e→ie,动词;不定式
+es-0421,es,es-05,jugar,玩；打（球）,Quiero jugar al fútbol.,我想踢足球。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：juego / juegas / juega / jugamos / jugáis / juegan；u→ue，是唯一一个这类动词；jugar a + 运动项目,动词;不定式
+es-0422,es,es-05,practicar,练习；从事（运动）,Quiero practicar el español.,我想练习西班牙语。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：practico / practicas / practica / practicamos / practicáis / practican；-ar 规则；过去时 yo 写作 practiqué,动词;不定式
+es-0423,es,es-05,nadar,游泳,Quiero nadar en la piscina.,我想在游泳池游泳。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：nado / nadas / nada / nadamos / nadáis / nadan；-ar 规则,动词;不定式
+es-0424,es,es-05,cocinar,做饭,Quiero cocinar la cena.,我想做晚饭。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：cocino / cocinas / cocina / cocinamos / cocináis / cocinan；-ar 规则；对应名词 el cocinero,动词;不定式
+es-0425,es,es-05,limpiar,打扫；清洁,Hay que limpiar la casa.,得打扫房子。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：limpio / limpias / limpia / limpiamos / limpiáis / limpian；-ar 规则；与形容词 limpio（干净的）同形,动词;不定式
+es-0426,es,es-05,descansar,休息,Quiero descansar un rato.,我想休息一会儿。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：descanso / descansas / descansa / descansamos / descansáis / descansan；-ar 规则,动词;不定式
+es-0427,es,es-05,visitar,参观；拜访,Quiero visitar el museo.,我想参观博物馆。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：visito / visitas / visita / visitamos / visitáis / visitan；-ar 规则；拜访人时用 visitar a,动词;不定式
+es-0428,es,es-05,llevar,带；穿（衣服）,Quiero llevar el abrigo.,我想穿这件大衣。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：llevo / llevas / lleva / llevamos / lleváis / llevan；-ar 规则；既表示携带，也表示身上穿戴,动词;不定式
+es-0429,es,es-05,sacar,取出；拍（照）,Quiero sacar una foto.,我想拍一张照片。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：saco / sacas / saca / sacamos / sacáis / sacan；-ar 规则；过去时 yo 写作 saqué,动词;不定式
+es-0430,es,es-05,montar,骑；组装,Quiero montar en bicicleta.,我想骑自行车。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：monto / montas / monta / montamos / montáis / montan；-ar 规则；montar en bicicleta 表示骑车,动词;不定式
+es-0431,es,es-05,tocar,触摸；演奏,Tocar la puerta antes de entrar es normal.,进门前敲门是常见做法。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：toco / tocas / toca / tocamos / tocáis / tocan；-ar 规则；过去时 yo 写作 toqué；既表示触摸，也表示演奏乐器,动词;不定式
+es-0432,es,es-05,pasear,散步,Pasear cada día es bueno.,每天散步是好事。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：paseo / paseas / pasea / paseamos / paseáis / pasean；-ar 规则；对应名词 el paseo,动词;不定式
+es-0433,es,es-05,temprano,早地,Me levanto temprano.,我起得早。,副词；与 tarde 相对；也可作形容词,副词
+es-0434,es,es-05,tarde,晚地,Llego tarde a la clase.,我上课迟到。,副词；与名词 la tarde（下午）同形，靠位置和冠词区分,副词
+es-0435,es,es-05,luego,然后；随后,Luego voy al cine.,然后我去电影院。,副词；表示时间上的接着；在部分地区也表示“待会儿”,副词
+es-0436,es,es-05,pronto,很快；早,Voy a llegar pronto.,我很快就到。,副词；hasta pronto 表示回头见,副词
+es-0437,es,es-05,casi,几乎,Casi siempre desayuno en casa.,我几乎总在家吃早饭。,副词；放在被修饰的词前,副词
+es-0438,es,es-05,demasiado,太；过于,El libro es demasiado largo.,这本书太长了。,副词；修饰形容词时不变化；作形容词修饰名词时要配合性数,副词
+es-0439,es,es-05,Me gusta el cine,我喜欢电影院,Me gusta el cine.,我喜欢电影院。,整句；gustar 的主语是 el cine，喜欢的人用 me；只生成识别卡,句型;phrase
+es-0440,es,es-05,Me gustan los deportes,我喜欢体育运动,Me gustan los deportes.,我喜欢体育运动。,整句；主语是复数 los deportes，动词写 gustan；只生成识别卡,句型;phrase
+es-0441,es,es-05,Me levanto a las siete,我七点起床,Me levanto a las siete.,我七点起床。,整句；反身代词 me 放在变位动词前；只生成识别卡,句型;phrase
+es-0442,es,es-05,Voy a estudiar español,我打算学西班牙语,Voy a estudiar español.,我打算学西班牙语。,整句；ir a + 不定式表示打算；只生成识别卡,句型;phrase
+es-0443,es,es-05,Tengo que trabajar hoy,我今天必须工作,Tengo que trabajar hoy.,我今天必须工作。,整句；tener que + 不定式表示必须；只生成识别卡,句型;phrase
+es-0444,es,es-06,el precio,价格,El precio es alto.,价格很高。,名词（阳）,名词;购物与物品
+es-0445,es,es-06,el dinero,钱,El dinero está en la bolsa.,钱在包里。,名词（阳）；不可数，通常用单数,名词;购物与物品
+es-0446,es,es-06,la tarjeta,卡；银行卡,Pago con la tarjeta.,我用卡付款。,名词（阴）；la tarjeta de crédito 指信用卡,名词;购物与物品
+es-0447,es,es-06,el regalo,礼物,El regalo es bonito.,这份礼物很好看。,名词（阳）；对应动词 regalar,名词;购物与物品
+es-0448,es,es-06,la bolsa,包；袋子,La bolsa está llena.,这个包是满的。,名词（阴）,名词;购物与物品
+es-0449,es,es-06,el reloj,表；钟,El reloj es caro.,这块表很贵。,名词（阳）；词尾 j 不发音明显，复数 los relojes,名词;购物与物品
+es-0450,es,es-06,las gafas,眼镜,Las gafas son nuevas.,这副眼镜是新的。,名词（阴，复数）；一副眼镜也用复数；拉美常说 los lentes,名词;购物与物品
+es-0451,es,es-06,el móvil,手机,El móvil está en la mesa.,手机在桌上。,名词（阳）；西班牙用 el móvil，拉美常用 el celular；复数 los móviles,名词;购物与物品
+es-0452,es,es-06,el ordenador,电脑,El ordenador es rápido.,这台电脑很快。,名词（阳）；西班牙用 el ordenador，拉美常用 la computadora,名词;购物与物品
+es-0453,es,es-06,la llave,钥匙,La llave está aquí.,钥匙在这里。,名词（阴）；复数 las llaves,名词;购物与物品
+es-0454,es,es-06,el mapa,地图,El mapa es antiguo.,这张地图很旧。,名词（阳）；词尾 -a 但为阳性，与 el problema 同类,名词;购物与物品
+es-0455,es,es-06,el billete,票；纸币,El billete de tren es barato.,火车票很便宜。,名词（阳）；西班牙用 el billete，拉美常用 el boleto,名词;购物与物品
+es-0456,es,es-06,el paquete,包裹,El paquete llega mañana.,包裹明天到。,名词（阳）,名词;购物与物品
+es-0457,es,es-06,la caja,盒子；收银台,La caja está vacía.,盒子是空的。,名词（阴）；商店里的收银处也叫 la caja,名词;购物与物品
+es-0458,es,es-06,el bolígrafo,圆珠笔,El bolígrafo es negro.,这支圆珠笔是黑的。,名词（阳）；重音符号在 í；口语常缩短成 el boli,名词;购物与物品
+es-0459,es,es-06,el cuaderno,本子；笔记本,El cuaderno es nuevo.,这个本子是新的。,名词（阳）,名词;购物与物品
+es-0460,es,es-06,la carta,信,La carta llega hoy.,信今天到。,名词（阴）；餐厅的菜单也叫 la carta,名词;购物与物品
+es-0461,es,es-06,el papel,纸,El papel está limpio.,纸是干净的。,名词（阳）；复数 los papeles；也指角色,名词;购物与物品
+es-0462,es,es-06,la mochila,背包,La mochila es cómoda.,这个背包很舒服。,名词（阴）,名词;购物与物品
+es-0463,es,es-06,el espejo,镜子,El espejo está sucio.,镜子很脏。,名词（阳）,名词;购物与物品
+es-0464,es,es-06,el autobús,公共汽车,El autobús llega tarde.,公共汽车到得晚。,名词（阳）；复数 los autobuses，复数不带重音符号,名词;城市与交通
+es-0465,es,es-06,el tren,火车,El tren es rápido.,火车很快。,名词（阳）；坐火车说 en tren,名词;城市与交通
+es-0466,es,es-06,el metro,地铁,El metro está lleno.,地铁很挤。,名词（阳）；也是长度单位“米”,名词;城市与交通
+es-0467,es,es-06,el avión,飞机,El avión es grande.,这架飞机很大。,名词（阳）；复数 los aviones，复数不带重音符号,名词;城市与交通
+es-0468,es,es-06,el barrio,街区；城区,El barrio es tranquilo.,这个街区很安静。,名词（阳）,名词;城市与交通
+es-0469,es,es-06,el coche,汽车,El coche es nuevo.,这辆车是新的。,名词（阳）；西班牙用 el coche，拉美常用 el carro 或 el auto,名词;城市与交通
+es-0470,es,es-06,el taxi,出租车,El taxi es caro.,出租车很贵。,名词（阳）；复数 los taxis,名词;城市与交通
+es-0471,es,es-06,la esquina,街角,Espero el autobús en la esquina.,我在街角等公共汽车。,名词（阴）；指街道的外拐角，房间内角叫 el rincón,名词;城市与交通
+es-0472,es,es-06,el puente,桥,El puente es antiguo.,这座桥很旧。,名词（阳）,名词;城市与交通
+es-0473,es,es-06,la avenida,大道,La avenida es larga.,这条大道很长。,名词（阴）；比 la calle 宽,名词;城市与交通
+es-0474,es,es-06,costar,价值；花费,¿Cuánto puede costar el reloj?,这块表可能值多少钱？,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：cuesto / cuestas / cuesta / costamos / costáis / cuestan；o→ue；实际多用第三人称 cuesta / cuestan,动词;不定式
+es-0475,es,es-06,traer,带来,Quiero traer el regalo.,我想把礼物带来。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：traigo / traes / trae / traemos / traéis / traen；yo 写作 traigo；来这里带来用 traer，去别处带走用 llevar,动词;不定式
+es-0476,es,es-06,enviar,寄；发送,Quiero enviar la carta.,我想寄这封信。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：envío / envías / envía / enviamos / enviáis / envían；重音落在 í 的人称要标符号,动词;不定式
+es-0477,es,es-06,elegir,选择,Hay que elegir un regalo.,得选一份礼物。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：elijo / eliges / elige / elegimos / elegís / eligen；e→i，yo 写作 elijo，g 在 o 前改成 j,动词;不定式
+es-0478,es,es-06,probar,试；尝,Quiero probar las gafas.,我想试试这副眼镜。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：pruebo / pruebas / prueba / probamos / probáis / prueban；o→ue；试衣服也可用 probarse,动词;不定式
+es-0479,es,es-06,devolver,归还,Quiero devolver el reloj.,我想把表退掉。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：devuelvo / devuelves / devuelve / devolvemos / devolvéis / devuelven；o→ue,动词;不定式
+es-0480,es,es-06,gastar,花费；用掉,No quiero gastar el dinero.,我不想把钱花掉。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：gasto / gastas / gasta / gastamos / gastáis / gastan；-ar 规则；花钱用 gastar，东西值多少用 costar,动词;不定式
+es-0481,es,es-06,regalar,赠送,Quiero regalar una bolsa.,我想送一个包。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：regalo / regalas / regala / regalamos / regaláis / regalan；-ar 规则,动词;不定式
+es-0482,es,es-06,enseñar,教；出示,Quiero enseñar el mapa.,我想把地图给人看。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：enseño / enseñas / enseña / enseñamos / enseñáis / enseñan；-ar 规则；既是教，也是给人看,动词;不定式
+es-0483,es,es-06,explicar,解释,Quiero explicar el problema.,我想解释这个问题。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：explico / explicas / explica / explicamos / explicáis / explican；-ar 规则；过去时 yo 写作 expliqué,动词;不定式
+es-0484,es,es-06,olvidar,忘记,No quiero olvidar la llave.,我不想忘带钥匙。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：olvido / olvidas / olvida / olvidamos / olvidáis / olvidan；-ar 规则；也常说 olvidarse de,动词;不定式
+es-0485,es,es-06,recordar,记得；想起,Quiero recordar el precio.,我想记住价格。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：recuerdo / recuerdas / recuerda / recordamos / recordáis / recuerdan；o→ue；与 olvidar 相对,动词;不定式
+es-0486,es,es-06,encontrar,找到；遇到,Quiero encontrar la llave.,我想找到钥匙。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：encuentro / encuentras / encuentra / encontramos / encontráis / encuentran；o→ue；找的过程用 buscar，找到用 encontrar,动词;不定式
+es-0487,es,es-06,mostrar,展示,Quiero mostrar la foto.,我想展示这张照片。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：muestro / muestras / muestra / mostramos / mostráis / muestran；o→ue,动词;不定式
+es-0488,es,es-06,guardar,保存；收好,Quiero guardar el billete.,我想把票收好。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：guardo / guardas / guarda / guardamos / guardáis / guardan；-ar 规则,动词;不定式
+es-0489,es,es-06,feo,丑的,El espejo es feo.,这面镜子很丑。,形容词；fea / feos / feas,形容词
+es-0490,es,es-06,moderno,现代的,El ordenador es moderno.,这台电脑很现代。,形容词；moderna / modernos / modernas,形容词
+es-0491,es,es-06,antiguo,古老的；旧的,El puente es antiguo.,这座桥很旧。,形容词；antigua / antiguos / antiguas,形容词
+es-0492,es,es-06,cómodo,舒适的,El coche es cómodo.,这辆车很舒服。,形容词；cómoda / cómodos / cómodas；重音符号在所有词形都保留,形容词
+es-0493,es,es-06,rápido,快的,El tren es rápido.,火车很快。,形容词；rápida / rápidos / rápidas；副词 rápidamente 保留符号,形容词
+es-0494,es,es-06,lento,慢的,El autobús es lento.,公共汽车很慢。,形容词；lenta / lentos / lentas,形容词
+es-0495,es,es-06,lleno,满的,El metro está lleno.,地铁很挤。,形容词；llena / llenos / llenas；表示状态，常与 estar 连用,形容词
+es-0496,es,es-06,vacío,空的,El taxi está vacío.,出租车是空的。,形容词；vacía / vacíos / vacías；í 要标符号,形容词
+es-0497,es,es-06,ligero,轻的,El papel es ligero.,纸很轻。,形容词；ligera / ligeros / ligeras,形容词
+es-0498,es,es-06,pesado,重的；累人的,El ordenador es pesado.,这台电脑很重。,形容词；pesada / pesados / pesadas；也形容让人厌烦的事,形容词
+es-0499,es,es-06,oscuro,暗的；深色的,El barrio está oscuro.,这个街区很暗。,形容词；oscura / oscuros / oscuras,形容词
+es-0500,es,es-06,claro,明亮的；浅色的,El papel es claro.,这张纸颜色浅。,形容词；clara / claros / claras；也表示清楚的,形容词
+es-0501,es,es-06,este,这个（阳性单数）,Este libro es nuevo.,这本书是新的。,指示词；近指，靠近说话人；阴性 esta，复数 estos / estas,指示词
+es-0502,es,es-06,esta,这个（阴性单数）,Esta casa es grande.,这座房子很大。,指示词；近指；与动词形式 está（estar）区分，esta 不带重音符号,指示词
+es-0503,es,es-06,estos,这些（阳性复数）,Estos zapatos son cómodos.,这双鞋很舒服。,指示词；近指复数,指示词
+es-0504,es,es-06,estas,这些（阴性复数）,Estas gafas son nuevas.,这副眼镜是新的。,指示词；近指复数,指示词
+es-0505,es,es-06,ese,那个（阳性单数）,Ese reloj es caro.,那块表很贵。,指示词；中指，靠近听话人；阴性 esa，复数 esos / esas,指示词
+es-0506,es,es-06,esa,那个（阴性单数）,Esa bolsa es fea.,那个包很丑。,指示词；中指,指示词
+es-0507,es,es-06,esos,那些（阳性复数）,Esos billetes son baratos.,那些票很便宜。,指示词；中指复数,指示词
+es-0508,es,es-06,esas,那些（阴性复数）,Esas llaves están aquí.,那些钥匙在这里。,指示词；中指复数,指示词
+es-0509,es,es-06,aquel,那个（阳性单数，较远）,Aquel puente es antiguo.,那座桥很旧。,指示词；远指，离双方都远；阴性 aquella，复数 aquellos / aquellas,指示词
+es-0510,es,es-06,aquella,那个（阴性单数，较远）,Aquella avenida es larga.,那条大道很长。,指示词；远指,指示词
+es-0511,es,es-06,aquellos,那些（阳性复数，较远）,Aquellos coches son lentos.,那些车很慢。,指示词；远指复数,指示词
+es-0512,es,es-06,aquellas,那些（阴性复数，较远）,Aquellas montañas son altas.,那些山很高。,指示词；远指复数,指示词
+es-0513,es,es-06,esto,这（中性）,Esto es un regalo.,这是一份礼物。,中性指示词；指还没说出名字的东西或整件事；不随性数变化，也不带重音符号,指示词
+es-0514,es,es-06,eso,那（中性）,Eso es un problema.,那是个问题。,中性指示词；不随性数变化,指示词
+es-0515,es,es-06,aquello,那（中性，较远）,Aquello es una estación.,那是一座车站。,中性指示词；远指；不随性数变化,指示词
+es-0516,es,es-06,hablando,正在说（副动词）,Estoy hablando con mi amigo.,我正在和朋友说话。,副动词；-ar 动词去掉词尾加 -ando；与 estar 合用表示正在进行,动词;副动词
+es-0517,es,es-06,comiendo,正在吃（副动词）,Estoy comiendo pan.,我正在吃面包。,副动词；-er 和 -ir 动词去掉词尾加 -iendo,动词;副动词
+es-0518,es,es-06,leyendo,正在读（副动词）,Estoy leyendo el periódico.,我正在读报纸。,副动词；leer 的词干以元音结尾，-iendo 写成 -yendo；oír 同类，写 oyendo，第 7 周学,动词;副动词
+es-0519,es,es-06,durmiendo,正在睡（副动词）,Mi hermana está durmiendo.,我姐妹正在睡觉。,副动词；dormir 的词干 o→u；-ir 词干变化动词在副动词里也变,动词;副动词
+es-0520,es,es-06,pidiendo,正在请求（副动词）,Está pidiendo un café.,他正在点一杯咖啡。,副动词；pedir 的词干 e→i；servir 同类，写 sirviendo,动词;副动词
+es-0521,es,es-06,tampoco,也不,Yo tampoco tengo tiempo.,我也没有时间。,副词；用于否定，与肯定句的 también 相对,副词
+es-0522,es,es-06,que,（引导从句）……的事,Creo que es importante.,我认为这很重要。,连词；不带重音符号，与疑问词 qué 区分,连词
+es-0523,es,es-06,además,而且；此外,El regalo es barato y además es bonito.,这份礼物便宜，而且好看。,副词；重音符号在 á；además de + 名词表示除……之外,副词
+es-0524,es,es-06,mientras,当……的时候,Leo mientras como.,我一边吃一边读。,连词；引出同时发生的事,连词
+es-0525,es,es-06,aunque,虽然；即使,Compro el reloj aunque es caro.,虽然贵，我还是买这块表。,连词；表示让步,连词
+es-0526,es,es-06,solo,只；仅仅,Solo tengo un billete.,我只有一张票。,副词；与形容词 solo（独自的）同形，现行规范两者都不加重音符号,副词
+es-0527,es,es-06,algo,某物；一些,Quiero comprar algo.,我想买点东西。,不定代词；与 nada 相对,不定代词
+es-0528,es,es-06,nada,什么也没有,No compro nada hoy.,我今天什么也不买。,不定代词；动词前有 no 时后面用 nada，是标准写法,不定代词
+es-0529,es,es-06,Lo compro en la tienda,我在店里买它,Lo compro en la tienda.,我在店里买它。,整句；lo 代替一个阳性单数名词，放在变位动词前；只生成识别卡,句型;phrase
+es-0530,es,es-06,Quiero verlo mañana,我想明天看看它,Quiero verlo mañana.,我想明天看看它。,整句；代词接在不定式后连写；也可写成 Lo quiero ver；只生成识别卡,句型;phrase
+es-0531,es,es-06,Estoy leyendo un libro,我正在读一本书,Estoy leyendo un libro.,我正在读一本书。,整句；estar + 副动词表示正在进行；只生成识别卡,句型;phrase
+es-0532,es,es-06,Este reloj es caro,这块表很贵,Este reloj es caro.,这块表很贵。,整句；este 与阳性单数名词配合；只生成识别卡,句型;phrase
+es-0533,es,es-06,Se lo doy a mi hermano,我把它给我兄弟,Se lo doy a mi hermano.,我把它给我兄弟。,整句；间接宾语 le 遇到 lo 时改写成 se；只生成识别卡,句型;phrase
+es-0534,es,es-07,anoche,昨晚,Anoche cené con mi familia.,昨晚我和家人吃了晚饭。,时间副词；指昨天夜里，与简单过去时连用,副词;时间标记
+es-0535,es,es-07,anteayer,前天,Anteayer llegué tarde.,前天我到晚了。,时间副词；也写作 antes de ayer,副词;时间标记
+es-0536,es,es-07,la semana pasada,上周,La semana pasada visité el museo.,上周我参观了博物馆。,时间短语（阴）；pasada 放在名词后并配合性数,副词;时间标记
+es-0537,es,es-07,el mes pasado,上个月,El mes pasado cambié de casa.,上个月我搬了家。,时间短语（阳）；pasado 配合阳性名词,副词;时间标记
+es-0538,es,es-07,el año pasado,去年,El año pasado gané un premio.,去年我得了一个奖。,时间短语（阳）；与简单过去时连用,副词;时间标记
+es-0539,es,es-07,hace dos días,两天前,Hace dos días recibí una carta.,两天前我收到一封信。,时间短语；hace + 时间段表示“……之前”；hace 在这里不变化,副词;时间标记
+es-0540,es,es-07,el lunes pasado,上周一,El lunes pasado preparé la cena.,上周一我做了晚饭。,时间短语（阳）；星期几都可以照此说，如 el sábado pasado,副词;时间标记
+es-0541,es,es-07,el fin de semana pasado,上个周末,El fin de semana pasado descansé en casa.,上个周末我在家休息。,时间短语（阳）；pasado 修饰 fin,副词;时间标记
+es-0542,es,es-07,hace un año,一年前,Hace un año llegué a esta ciudad.,一年前我来到这座城市。,时间短语；hace + 时间段；与 el año pasado 意思相近但算法不同,副词;时间标记
+es-0543,es,es-07,aquel día,那一天,Aquel día terminé el trabajo.,那一天我做完了工作。,时间短语（阳）；aquel 指较远的过去,副词;时间标记
+es-0544,es,es-07,terminar,结束；完成,Quiero terminar el trabajo.,我想做完这份工作。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：terminé / terminaste / terminó / terminamos / terminasteis / terminaron；-ar 规则,动词;不定式;过去时规则
+es-0545,es,es-07,ganar,赢；赚,Quiero ganar el partido.,我想赢下这场比赛。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：gané / ganaste / ganó / ganamos / ganasteis / ganaron；-ar 规则,动词;不定式;过去时规则
+es-0546,es,es-07,perder,丢失；输,No quiero perder la llave.,我不想丢钥匙。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：perdí / perdiste / perdió / perdimos / perdisteis / perdieron；-er 规则；现在时是 e→ie（pierdo），过去时词干不变,动词;不定式;过去时规则
+es-0547,es,es-07,bajar,下来；降低,Voy a bajar del autobús.,我要下车。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：bajé / bajaste / bajó / bajamos / bajasteis / bajaron；-ar 规则；与 subir 相对,动词;不定式;过去时规则
+es-0548,es,es-07,pasar,度过；经过；发生,Quiero pasar el fin de semana en casa.,我想在家过周末。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：pasé / pasaste / pasó / pasamos / pasasteis / pasaron；-ar 规则；¿Qué pasa? 表示怎么了,动词;不定式;过去时规则
+es-0549,es,es-07,dejar,留下；放下,Quiero dejar el cuaderno aquí.,我想把本子放在这里。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：dejé / dejaste / dejó / dejamos / dejasteis / dejaron；-ar 规则；dejar de + 不定式表示停止做,动词;不定式;过去时规则
+es-0550,es,es-07,cenar,吃晚饭,Quiero cenar temprano.,我想早点吃晚饭。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：cené / cenaste / cenó / cenamos / cenasteis / cenaron；-ar 规则；对应名词 la cena,动词;不定式;过去时规则
+es-0551,es,es-07,nacer,出生,Nacer en esta ciudad es normal.,在这座城市出生很平常。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：nací / naciste / nació / nacimos / nacisteis / nacieron；-er 规则；现在时 yo 写作 nazco,动词;不定式;过去时规则
+es-0552,es,es-07,casarse,结婚,Casarse no es fácil.,结婚不是件容易的事。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me casé / te casaste / se casó / nos casamos / os casasteis / se casaron；反身动词，代词按人称；casarse con 表示和某人结婚,动词;不定式;过去时规则
+es-0553,es,es-07,invitar,邀请,Quiero invitar a mis amigos.,我想邀请我的朋友们。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：invité / invitaste / invitó / invitamos / invitasteis / invitaron；-ar 规则；邀请人时用 invitar a,动词;不定式;过去时规则
+es-0554,es,es-07,celebrar,庆祝,Quiero celebrar el cumpleaños.,我想庆祝生日。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：celebré / celebraste / celebró / celebramos / celebrasteis / celebraron；-ar 规则,动词;不定式;过去时规则
+es-0555,es,es-07,cambiar,改变；换,Quiero cambiar el horario.,我想改一下时间表。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：cambié / cambiaste / cambió / cambiamos / cambiasteis / cambiaron；-ar 规则,动词;不定式;过去时规则
+es-0556,es,es-07,preparar,准备,Quiero preparar la cena.,我想准备晚饭。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：preparé / preparaste / preparó / preparamos / preparasteis / prepararon；-ar 规则,动词;不定式;过去时规则
+es-0557,es,es-07,llorar,哭,Llorar no es malo.,哭并不是坏事。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：lloré / lloraste / lloró / lloramos / llorasteis / lloraron；-ar 规则,动词;不定式;过去时规则
+es-0558,es,es-07,comenzar,开始,Quiero comenzar el libro.,我想开始读这本书。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：comencé / comenzaste / comenzó / comenzamos / comenzasteis / comenzaron；-zar 的 yo 形式写作 comencé；与 empezar 同义,动词;不定式;过去时规则
+es-0559,es,es-07,regresar,返回,Quiero regresar a casa.,我想回家。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：regresé / regresaste / regresó / regresamos / regresasteis / regresaron；-ar 规则；与 volver 同义,动词;不定式;过去时规则
+es-0560,es,es-07,entregar,交；递交,Quiero entregar el papel.,我想把这张纸交上去。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：entregué / entregaste / entregó / entregamos / entregasteis / entregaron；-gar 的 yo 形式写作 entregué,动词;不定式;过去时规则
+es-0561,es,es-07,cruzar,穿过,Hay que cruzar el puente.,得过这座桥。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：crucé / cruzaste / cruzó / cruzamos / cruzasteis / cruzaron；-zar 的 yo 形式写作 crucé,动词;不定式;过去时规则
+es-0562,es,es-07,saludar,打招呼；问候,Quiero saludar a mi amigo.,我想跟我的朋友打招呼。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：saludé / saludaste / saludó / saludamos / saludasteis / saludaron；-ar 规则,动词;不定式;过去时规则
+es-0563,es,es-07,mandar,寄；派,Quiero mandar el paquete.,我想寄这个包裹。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：mandé / mandaste / mandó / mandamos / mandasteis / mandaron；-ar 规则；与 enviar 同义,动词;不定式;过去时规则
+es-0564,es,es-07,aprobar,通过（考试）,Quiero aprobar el examen.,我想通过考试。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：aprobé / aprobaste / aprobó / aprobamos / aprobasteis / aprobaron；现在时是 o→ue（apruebo），过去时词干不变,动词;不定式;过去时规则
+es-0565,es,es-07,suspender,不及格；中止,No quiero suspender el examen.,我不想考试不及格。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：suspendí / suspendiste / suspendió / suspendimos / suspendisteis / suspendieron；-er 规则,动词;不定式;过去时规则
+es-0566,es,es-07,apagar,关掉,Hay que apagar el ordenador.,得把电脑关掉。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：apagué / apagaste / apagó / apagamos / apagasteis / apagaron；-gar 的 yo 形式写作 apagué,动词;不定式;过去时规则
+es-0567,es,es-07,encender,打开（电器、灯）,Voy a encender el móvil.,我要开手机。,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：encendí / encendiste / encendió / encendimos / encendisteis / encendieron；现在时是 e→ie（enciendo），过去时词干不变,动词;不定式;过去时规则
+es-0568,es,es-07,ocurrir,发生,¿Qué puede ocurrir hoy?,今天可能发生什么？,简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：ocurrí / ocurriste / ocurrió / ocurrimos / ocurristeis / ocurrieron；实际多用第三人称 ocurrió / ocurrieron,动词;不定式;过去时规则
+es-0569,es,es-07,la vida,生活；生命,La vida es corta.,人生很短。,名词（阴）；复数 las vidas,名词;事件
+es-0570,es,es-07,el cumpleaños,生日,El cumpleaños de mi hermana es hoy.,我姐妹的生日是今天。,名词（阳）；单复数同形，都写 cumpleaños,名词;事件
+es-0571,es,es-07,la boda,婚礼,La boda es el sábado.,婚礼在星期六。,名词（阴）；对应动词 casarse,名词;事件
+es-0572,es,es-07,el examen,考试,El examen es difícil.,这场考试很难。,名词（阳）；复数 los exámenes，复数要加重音符号,名词;事件
+es-0573,es,es-07,la nota,分数；便条,La nota es alta.,这个分数很高。,名词（阴）；sacar una nota 表示得到分数,名词;事件
+es-0574,es,es-07,la noticia,消息,La noticia es buena.,这个消息不错。,名词（阴）；复数 las noticias 也指新闻,名词;事件
+es-0575,es,es-07,el trabajo,工作,El trabajo es largo.,这份工作很长。,名词（阳）；对应动词 trabajar,名词;事件
+es-0576,es,es-07,la reunión,会议,La reunión empieza a las diez.,会议十点开始。,名词（阴）；复数 las reuniones，复数不带重音符号,名词;事件
+es-0577,es,es-07,el almuerzo,午饭,El almuerzo es a la una.,午饭在一点。,名词（阳）；对应动词 almorzar,名词;事件
+es-0578,es,es-07,la respuesta,回答,La respuesta es fácil.,这个回答很简单。,名词（阴）；对应动词 responder,名词;事件
+es-0579,es,es-07,la pregunta,问题（提问）,La pregunta es difícil.,这个问题很难。,名词（阴）；对应动词 preguntar；hacer una pregunta 表示提问,名词;事件
+es-0580,es,es-07,el resultado,结果,El resultado es bueno.,结果不错。,名词（阳）,名词;事件
+es-0581,es,es-07,la razón,理由；道理,La razón es clara.,理由很清楚。,名词（阴）；复数 las razones；tener razón 表示说得对,名词;事件
+es-0582,es,es-07,el error,错误,El error es pequeño.,这个错误不大。,名词（阳）,名词;事件
+es-0583,es,es-07,el correo,邮件；邮局,El correo llega tarde.,邮件到得晚。,名词（阳）；el correo electrónico 指电子邮件,名词;事件
+es-0584,es,es-07,la fecha,日期,La fecha es el lunes.,日期是星期一。,名词（阴）,名词;事件
+es-0585,es,es-07,el lugar,地方,El lugar es tranquilo.,这个地方很安静。,名词（阳）；复数 los lugares,名词;事件
+es-0586,es,es-07,la idea,想法,La idea es buena.,这个想法不错。,名词（阴）；词首重音在 i，但不标符号,名词;事件
+es-0587,es,es-07,el ejemplo,例子,El ejemplo es claro.,这个例子很清楚。,名词（阳）；por ejemplo 表示例如,名词;事件
+es-0588,es,es-07,la palabra,词；话,La palabra es larga.,这个词很长。,名词（阴）,名词;事件
+es-0589,es,es-07,busqué,我找了（buscar 的过去时）,Ayer busqué el cuaderno.,昨天我找了本子。,buscar 的简单过去时 yo；-car 的 c 在 -é 前写作 qu，读音不变；其余人称 buscaste / buscó / buscamos / buscasteis / buscaron,动词;过去时;正字法
+es-0590,es,es-07,llegué,我到了（llegar 的过去时）,Ayer llegué tarde.,昨天我到晚了。,llegar 的简单过去时 yo；-gar 的 g 在 -é 前加 u；其余人称 llegaste / llegó / llegamos / llegasteis / llegaron,动词;过去时;正字法
+es-0591,es,es-07,empecé,我开始了（empezar 的过去时）,Ayer empecé el libro.,昨天我开始读这本书。,empezar 的简单过去时 yo；-zar 的 z 在 -é 前写作 c；其余人称 empezaste / empezó / empezamos / empezasteis / empezaron,动词;过去时;正字法
+es-0592,es,es-07,toqué,我摸了；我演奏了（tocar 的过去时）,Ayer toqué la puerta.,昨天我敲了门。,tocar 的简单过去时 yo；同 -car 规则；其余人称 tocaste / tocó / tocamos / tocasteis / tocaron,动词;过去时;正字法
+es-0593,es,es-07,pagué,我付了（pagar 的过去时）,Ayer pagué el billete.,昨天我付了票钱。,pagar 的简单过去时 yo；同 -gar 规则；其余人称 pagaste / pagó / pagamos / pagasteis / pagaron,动词;过去时;正字法
+es-0594,es,es-07,crucé,我穿过了（cruzar 的过去时）,Ayer crucé el puente.,昨天我过了桥。,cruzar 的简单过去时 yo；同 -zar 规则；其余人称 cruzaste / cruzó / cruzamos / cruzasteis / cruzaron,动词;过去时;正字法
+es-0595,es,es-07,leyó,他读了（leer 的过去时）,Mi hermano leyó el periódico.,我兄弟读了报纸。,leer 的简单过去时第三人称单数；词干以元音结尾时 -ió 写成 -yó；其余人称 leí / leíste / leímos / leísteis,动词;过去时;第三人称
+es-0596,es,es-07,leyeron,他们读了（leer 的过去时）,Ellos leyeron la revista.,他们读了那本杂志。,leer 的简单过去时第三人称复数；-ieron 写成 -yeron,动词;过去时;第三人称
+es-0597,es,es-07,creyó,他相信了（creer 的过去时）,Mi amigo creyó la noticia.,我朋友相信了这个消息。,creer 的简单过去时第三人称单数；与 leer 同一条规则,动词;过去时;第三人称
+es-0598,es,es-07,creyeron,他们相信了（creer 的过去时）,Ellos creyeron la noticia.,他们相信了这个消息。,creer 的简单过去时第三人称复数；-ieron 写成 -yeron,动词;过去时;第三人称
+es-0599,es,es-07,oyó,他听见了（oír 的过去时）,Mi madre oyó la música.,我母亲听见了音乐。,oír 的简单过去时第三人称单数；同一条 -yó 规则,动词;过去时;第三人称
+es-0600,es,es-07,oyeron,他们听见了（oír 的过去时）,Ellos oyeron el ruido.,他们听见了那个声响。,oír 的简单过去时第三人称复数；-ieron 写成 -yeron,动词;过去时;第三人称
+es-0601,es,es-07,oír,听见,Quiero oír la música.,我想听音乐。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：oigo / oyes / oye / oímos / oís / oyen；过去时 oí / oíste / oyó / oímos / oísteis / oyeron；听见用 oír，主动去听用 escuchar,动词;不定式
+es-0602,es,es-07,hablé,我说了（hablar 的过去时）,Ayer hablé con mi amigo.,昨天我和朋友谈过。,-ar 规则过去时 yo；重音在词尾，要标 é；hablé / hablaste / habló / hablamos / hablasteis / hablaron,动词;过去时;规则例词
+es-0603,es,es-07,habló,他说了（hablar 的过去时）,Mi hermana habló con el profesor.,我姐妹和老师谈过。,-ar 规则过去时第三人称单数；ó 要标符号，与现在时 habla 区分,动词;过去时;规则例词
+es-0604,es,es-07,comí,我吃了（comer 的过去时）,Ayer comí pescado.,昨天我吃了鱼。,-er 规则过去时 yo；í 要标符号；comí / comiste / comió / comimos / comisteis / comieron,动词;过去时;规则例词
+es-0605,es,es-07,comió,他吃了（comer 的过去时）,Mi hermano comió pan.,我兄弟吃了面包。,-er 规则过去时第三人称单数；ió 要标符号,动词;过去时;规则例词
+es-0606,es,es-07,vivió,他住过（vivir 的过去时）,Mi abuela vivió en esta ciudad.,我祖母在这座城市住过。,-ir 规则过去时第三人称单数；-er 和 -ir 的过去时词尾完全相同,动词;过去时;规则例词
+es-0607,es,es-07,la sorpresa,惊喜,La sorpresa es grande.,这个惊喜很大。,名词（阴）,名词;日常生活
+es-0608,es,es-07,la suerte,运气,La suerte es buena hoy.,今天运气不错。,名词（阴）；tener suerte 表示走运,名词;日常生活
+es-0609,es,es-07,el premio,奖；奖品,El premio es un viaje.,奖品是一次旅行。,名词（阳）,名词;日常生活
+es-0610,es,es-07,el ruido,声响；噪音,El ruido del metro es alto.,地铁的声音很大。,名词（阳）,名词;日常生活
+es-0611,es,es-07,la conversación,对话,La conversación es larga.,这场对话很长。,名词（阴）；复数 las conversaciones，复数不带重音符号,名词;日常生活
+es-0612,es,es-07,la visita,拜访；参观,La visita es corta.,这次拜访很短。,名词（阴）；对应动词 visitar,名词;日常生活
+es-0613,es,es-07,la salida,出口；出发,La salida está aquí.,出口在这里。,名词（阴）；对应动词 salir；与 la entrada 相对,名词;日常生活
+es-0614,es,es-07,el final,结尾；结局,El final es feliz.,结局是圆满的。,名词（阳）；与形容词 final 同形,名词;日常生活
+es-0615,es,es-07,la tarea,任务；作业,La tarea es fácil.,这项作业很简单。,名词（阴）；los deberes 也指作业,名词;日常生活
+es-0616,es,es-07,el proyecto,项目,El proyecto es nuevo.,这个项目是新的。,名词（阳）,名词;日常生活
+es-0617,es,es-07,el mensaje,消息；短信,El mensaje es corto.,这条消息很短。,名词（阳）；词尾 -e,名词;日常生活
+es-0618,es,es-07,la llamada,电话（一通）,La llamada es larga.,这通电话很长。,名词（阴）；对应动词 llamar,名词;日常生活
+es-0619,es,es-07,Ayer estudié dos horas,我昨天学了两小时,Ayer estudié dos horas.,我昨天学了两小时。,整句；-ar 规则过去时 yo 形式，重音在 é；只生成识别卡,句型;phrase
+es-0620,es,es-07,Anoche cené con mi familia,昨晚我和家人吃了晚饭,Anoche cené con mi familia.,昨晚我和家人吃了晚饭。,整句；anoche 是过去时间标记；只生成识别卡,句型;phrase
+es-0621,es,es-07,La semana pasada visité el museo,上周我参观了博物馆,La semana pasada visité el museo.,上周我参观了博物馆。,整句；la semana pasada 指明过去时间；只生成识别卡,句型;phrase
+es-0622,es,es-07,Ella escribió una carta,她写了一封信,Ella escribió una carta.,她写了一封信。,整句；-ir 规则过去时第三人称，ió 要标符号；只生成识别卡,句型;phrase
+es-0623,es,es-07,Llegué tarde a la clase,我上课迟到了,Llegué tarde a la clase.,我上课迟到了。,整句；-gar 动词的 yo 形式写作 llegué；只生成识别卡,句型;phrase
+es-0624,es,es-08,tuve,我有了（tener 的过去时）,Ayer tuve una reunión.,昨天我有一场会议。,tener 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：tuve / tuviste / tuvo / tuvimos / tuvisteis / tuvieron；词干 tuv-，词尾不带重音符号,动词;过去时;不规则
+es-0625,es,es-08,estuve,我在（estar 的过去时）,Ayer estuve en el museo.,昨天我在博物馆。,estar 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：estuve / estuviste / estuvo / estuvimos / estuvisteis / estuvieron；词干 estuv-,动词;过去时;不规则
+es-0626,es,es-08,pude,我能够了（poder 的过去时）,Ayer pude descansar.,昨天我得以休息。,poder 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：pude / pudiste / pudo / pudimos / pudisteis / pudieron；词干 pud-,动词;过去时;不规则
+es-0627,es,es-08,puse,我放了（poner 的过去时）,Ayer puse el pasaporte en la maleta.,昨天我把护照放进了行李箱。,poner 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：puse / pusiste / puso / pusimos / pusisteis / pusieron；词干 pus-,动词;过去时;不规则
+es-0628,es,es-08,supe,我得知了（saber 的过去时）,Ayer supe la noticia.,昨天我得知了这个消息。,saber 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：supe / supiste / supo / supimos / supisteis / supieron；词干 sup-；过去时常表示“得知”这一刻,动词;过去时;不规则
+es-0629,es,es-08,hice,我做了（hacer 的过去时）,Ayer hice un viaje.,昨天我出了一趟门。,hacer 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：hice / hiciste / hizo / hicimos / hicisteis / hicieron；第三人称单数写 hizo，用 z 保持读音,动词;过去时;不规则
+es-0630,es,es-08,quise,我想要（querer 的过去时）,Ayer quise salir.,昨天我想出门。,querer 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：quise / quisiste / quiso / quisimos / quisisteis / quisieron；词干 quis-,动词;过去时;不规则
+es-0631,es,es-08,vine,我来了（venir 的过去时）,Ayer vine en tren.,昨天我坐火车来的。,venir 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：vine / viniste / vino / vinimos / vinisteis / vinieron；词干 vin-；第三人称 vino 与名词“葡萄酒”同形,动词;过去时;不规则
+es-0632,es,es-08,anduve,我走了（andar 的过去时）,Ayer anduve por el bosque.,昨天我在树林里走了走。,andar 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：anduve / anduviste / anduvo / anduvimos / anduvisteis / anduvieron；词干 anduv-，现在时却是规则的,动词;过去时;不规则
+es-0633,es,es-08,dije,我说了（decir 的过去时）,Ayer dije la respuesta.,昨天我说出了答案。,decir 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：dije / dijiste / dijo / dijimos / dijisteis / dijeron；词干 dij- 以 j 结尾，第三人称复数用 -eron，不是 -ieron,动词;过去时;不规则
+es-0634,es,es-08,traje,我带来了（traer 的过去时）,Ayer traje las entradas.,昨天我把门票带来了。,traer 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：traje / trajiste / trajo / trajimos / trajisteis / trajeron；词干 traj- 以 j 结尾，第三人称复数用 -eron,动词;过去时;不规则
+es-0635,es,es-08,fui,我是；我去了（ser / ir 的过去时）,Ayer fui a la playa.,昨天我去了海滩。,ser 和 ir 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：fui / fuiste / fue / fuimos / fuisteis / fueron；两个动词过去时完全同形，不带重音符号，靠上下文分辨,动词;过去时;不规则
+es-0636,es,es-08,di,我给了（dar 的过去时）,Ayer di un regalo a mi hermana.,昨天我给了姐妹一份礼物。,dar 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：di / diste / dio / dimos / disteis / dieron；-ar 动词却用 -er / -ir 的词尾；单音节形式不带重音符号,动词;过去时;不规则
+es-0637,es,es-08,vi,我看见了（ver 的过去时）,Ayer vi una película.,昨天我看了一部电影。,ver 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：vi / viste / vio / vimos / visteis / vieron；单音节形式不带重音符号,动词;过去时;不规则
+es-0638,es,es-08,hubo,（过去）有（hay 的过去时）,Ayer hubo una fiesta.,昨天有一场聚会。,haber 的简单过去时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：hube / hubiste / hubo / hubimos / hubisteis / hubieron；表示存在时只用第三人称单数 hubo，后面接单数或复数都不变，与 tener 的 tuvo 区分,动词;过去时;不规则
+es-0639,es,es-08,pidió,他请求了（pedir 的过去时）,Mi hermano pidió un café.,我兄弟点了一杯咖啡。,pedir 的过去时第三人称单数；-ir 词干变化动词只在第三人称把 e 变成 i；六个人称：pedí / pediste / pidió / pedimos / pedisteis / pidieron,动词;过去时;词干变化
+es-0640,es,es-08,pidieron,他们请求了（pedir 的过去时）,Ellos pidieron sopa.,他们点了汤。,pedir 的过去时第三人称复数；同样是 e→i；六个人称：pedí / pediste / pidió / pedimos / pedisteis / pidieron,动词;过去时;词干变化
+es-0641,es,es-08,durmió,他睡了（dormir 的过去时）,Mi hermana durmió en el tren.,我姐妹在火车上睡了。,dormir 的过去时第三人称单数；o→u 只在第三人称；六个人称：dormí / dormiste / durmió / dormimos / dormisteis / durmieron,动词;过去时;词干变化
+es-0642,es,es-08,durmieron,他们睡了（dormir 的过去时）,Los niños durmieron en casa.,孩子们在家里睡的。,dormir 的过去时第三人称复数；同样是 o→u；六个人称：dormí / dormiste / durmió / dormimos / dormisteis / durmieron,动词;过去时;词干变化
+es-0643,es,es-08,prefirió,他更想要（preferir 的过去时）,Mi hermana prefirió el té.,我姐妹更想喝茶。,preferir 的过去时第三人称单数；e→i；六个人称：preferí / preferiste / prefirió / preferimos / preferisteis / prefirieron,动词;过去时;词干变化
+es-0644,es,es-08,sirvió,他端上了（servir 的过去时）,El camarero sirvió la comida.,服务员上了菜。,servir 的过去时第三人称单数；e→i；六个人称：serví / serviste / sirvió / servimos / servisteis / sirvieron,动词;过去时;词干变化
+es-0645,es,es-08,sintió,他感到了（sentir 的过去时）,Mi padre sintió la sorpresa.,我父亲感到了意外。,sentir 的过去时第三人称单数；e→i；六个人称：sentí / sentiste / sintió / sentimos / sentisteis / sintieron,动词;过去时;词干变化
+es-0646,es,es-08,murió,他去世了（morir 的过去时）,Mi abuelo murió el año pasado.,我祖父去年去世了。,morir 的过去时第三人称单数；o→u；六个人称：morí / moriste / murió / morimos / moristeis / murieron,动词;过去时;词干变化
+es-0647,es,es-08,sentir,感觉,Quiero sentir el sol.,我想晒晒太阳。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：siento / sientes / siente / sentimos / sentís / sienten；现在时 e→ie，过去时第三人称 sintió / sintieron；sentirse 表示感觉自己怎么样,动词;不定式;词干变化
+es-0648,es,es-08,morir,去世,Morir es el final de la vida.,去世是生命的终点。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：muero / mueres / muere / morimos / morís / mueren；现在时 o→ue，过去时第三人称 murió / murieron；人、动物、植物都可以用,动词;不定式;词干变化
+es-0649,es,es-08,seguir,继续；跟随,Quiero seguir el camino.,我想沿这条路走。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：sigo / sigues / sigue / seguimos / seguís / siguen；e→i，yo 写作 sigo；过去时第三人称 siguió / siguieron,动词;不定式;词干变化
+es-0650,es,es-08,repetir,重复,Hay que repetir la palabra.,得把这个词重复一遍。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：repito / repites / repite / repetimos / repetís / repiten；e→i；过去时第三人称 repitió / repitieron,动词;不定式;词干变化
+es-0651,es,es-08,conseguir,取得；设法做到,Quiero conseguir la entrada.,我想弄到那张门票。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：consigo / consigues / consigue / conseguimos / conseguís / consiguen；e→i，yo 写作 consigo；过去时第三人称 consiguió / consiguieron,动词;不定式;词干变化
+es-0652,es,es-08,divertirse,玩得开心,Divertirse en la fiesta es fácil.,在聚会上玩得开心并不难。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me divierto / te diviertes / se divierte / nos divertimos / os divertís / se divierten；e→ie；过去时第三人称 se divirtió / se divirtieron,动词;不定式;词干变化
+es-0653,es,es-08,la maleta,行李箱,La maleta está llena.,行李箱是满的。,名词（阴）；hacer la maleta 表示收拾行李,名词;旅行
+es-0654,es,es-08,el pasaporte,护照,El pasaporte está en la bolsa.,护照在包里。,名词（阳）,名词;旅行
+es-0655,es,es-08,el vuelo,航班,El vuelo es largo.,这趟航班很长。,名词（阳）；对应动词 volar,名词;旅行
+es-0656,es,es-08,la iglesia,教堂,La iglesia es antigua.,这座教堂很旧。,名词（阴）,名词;旅行
+es-0657,es,es-08,el castillo,城堡,El castillo es grande.,这座城堡很大。,名词（阳）,名词;旅行
+es-0658,es,es-08,el camino,路；道路,El camino es largo.,这条路很长。,名词（阳）；指路线，铺装街道用 la calle,名词;旅行
+es-0659,es,es-08,el recuerdo,回忆；纪念品,El recuerdo es bonito.,这个回忆很美好。,名词（阳）；对应动词 recordar,名词;旅行
+es-0660,es,es-08,la entrada,门票；入口,La entrada es cara.,门票很贵。,名词（阴）；对应动词 entrar；与 la salida 相对,名词;旅行
+es-0661,es,es-08,la excursión,远足；短途旅行,La excursión es el domingo.,远足在星期日。,名词（阴）；复数 las excursiones，复数不带重音符号,名词;旅行
+es-0662,es,es-08,el paisaje,风景,El paisaje es bonito.,风景很好看。,名词（阳）；词尾 -e,名词;旅行
+es-0663,es,es-08,el turista,游客,El turista saca fotos.,游客在拍照。,名词（阳）；词尾 -a 但指男性时为阳性，指女性写 la turista,名词;旅行
+es-0664,es,es-08,el mar,海,El mar está tranquilo.,海面很平静。,名词（阳）；复数 los mares,名词;旅行
+es-0665,es,es-08,el río,河,El río es largo.,这条河很长。,名词（阳）；í 要标符号,名词;旅行
+es-0666,es,es-08,el pueblo,村镇；人民,El pueblo es pequeño.,这个镇子很小。,名词（阳）；比 la ciudad 小,名词;旅行
+es-0667,es,es-08,el bosque,森林,El bosque es oscuro.,这片树林很暗。,名词（阳）；词尾 -e,名词;旅行
+es-0668,es,es-08,la isla,岛,La isla es pequeña.,这座岛很小。,名词（阴）,名词;旅行
+es-0669,es,es-08,el puerto,港口,El puerto está lleno.,港口很满。,名词（阳）,名词;旅行
+es-0670,es,es-08,el equipaje,行李,El equipaje es pesado.,行李很重。,名词（阳）；集合名词，通常用单数；与 el equipo（队）区分,名词;旅行
+es-0671,es,es-08,la reserva,预订,La reserva es del lunes.,这份预订是星期一的。,名词（阴）；对应动词 reservar,名词;旅行
+es-0672,es,es-08,el barco,船,El barco es lento.,这条船很慢。,名词（阳）,名词;旅行
+es-0673,es,es-08,el asiento,座位,El asiento es cómodo.,这个座位很舒服。,名词（阳）,名词;事件
+es-0674,es,es-08,la aventura,冒险；奇遇,La aventura es larga.,这场经历很长。,名词（阴）,名词;事件
+es-0675,es,es-08,el destino,目的地,El destino es la isla.,目的地是那座岛。,名词（阳）；也指命运,名词;事件
+es-0676,es,es-08,la torre,塔,La torre es alta.,这座塔很高。,名词（阴）,名词;事件
+es-0677,es,es-08,la catedral,大教堂,La catedral es antigua.,这座大教堂很旧。,名词（阴）；-l 结尾但为阴性；复数 las catedrales,名词;事件
+es-0678,es,es-08,el monumento,纪念碑；古迹,El monumento es famoso.,这座古迹很有名。,名词（阳）,名词;事件
+es-0679,es,es-08,la fuente,喷泉；来源,La fuente está en la plaza.,喷泉在广场上。,名词（阴）；词尾 -e,名词;事件
+es-0680,es,es-08,el lago,湖,El lago es tranquilo.,这个湖很平静。,名词（阳）,名词;事件
+es-0681,es,es-08,la nieve,雪,La nieve es blanca.,雪是白的。,名词（阴）；对应动词 nevar,名词;事件
+es-0682,es,es-08,la lluvia,雨,No me gusta la lluvia.,我不喜欢下雨。,名词（阴）；对应动词 llover,名词;事件
+es-0683,es,es-08,el sol,太阳,El sol es amarillo.,太阳是黄色的。,名词（阳）；hace sol 表示天晴,名词;事件
+es-0684,es,es-08,el cielo,天空,El cielo es azul.,天空是蓝的。,名词（阳）,名词;事件
+es-0685,es,es-08,pasado,过去的；上一个,El mes pasado hice un viaje.,上个月我出了一趟门。,形容词；pasada / pasados / pasadas；放在名词后，构成 la semana pasada、el año pasado,形容词
+es-0686,es,es-08,último,最后的,El último día es el domingo.,最后一天是星期日。,形容词；última / últimos / últimas；放在名词前,形容词
+es-0687,es,es-08,primero,第一的,El lunes es el primero de la semana.,星期一是一周的第一天。,形容词；primera / primeros / primeras；放在阳性单数名词前时缩短成 primer，如 el primer día,形容词
+es-0688,es,es-08,próximo,下一个的,El próximo año voy a viajar.,明年我打算去旅行。,形容词；próxima / próximos / próximas；放在名词前,形容词
+es-0689,es,es-08,segundo,第二的,El segundo día fuimos a la isla.,第二天我们去了那座岛。,形容词；segunda / segundos / segundas；序数词，与数词 dos 不同,形容词
+es-0690,es,es-08,entonces,那时；那么,Entonces empezó la lluvia.,那时下起了雨。,副词；叙述过去时用来接上一句,副词
+es-0691,es,es-08,de repente,突然,De repente vino la lluvia.,突然下起了雨。,副词短语；两个词分开写,副词
+es-0692,es,es-08,por fin,终于,Por fin llegamos al hotel.,我们终于到了旅馆。,副词短语；两个词分开写；与 finalmente 意思相近,副词
+es-0693,es,es-08,todavía,还；仍然,Todavía recuerdo aquel viaje.,我仍然记得那次旅行。,副词；重音符号在 í；todavía no 表示还没有,副词
+es-0694,es,es-08,ya,已经；现在,Ya terminé el trabajo.,我已经做完工作了。,副词；ya no 表示不再,副词
+es-0695,es,es-08,enseguida,马上,El camarero llegó enseguida.,服务员马上就来了。,副词；连写；也写作 en seguida,副词
+es-0696,es,es-08,finalmente,最后；终于,Finalmente volvimos a casa.,最后我们回了家。,副词；由阴性形容词 final 加 -mente 构成,副词
+es-0697,es,es-08,volar,飞,Quiero volar a la isla.,我想飞去那座岛。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：vuelo / vuelas / vuela / volamos / voláis / vuelan；o→ue；过去时规则：volé / volaste / voló…,动词;不定式
+es-0698,es,es-08,reservar,预订,Quiero reservar el hotel.,我想订这家旅馆。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：reservo / reservas / reserva / reservamos / reserváis / reservan；-ar 规则,动词;不定式
+es-0699,es,es-08,alquilar,租,Quiero alquilar un coche.,我想租一辆车。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：alquilo / alquilas / alquila / alquilamos / alquiláis / alquilan；-ar 规则,动词;不定式
+es-0700,es,es-08,perderse,迷路,Perderse en el bosque es fácil.,在树林里很容易迷路。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me pierdo / te pierdes / se pierde / nos perdemos / os perdéis / se pierden；e→ie；过去时规则：me perdí / se perdió…,动词;不定式
+es-0701,es,es-08,quedar,约定；剩下,Quiero quedar con mi amigo.,我想和朋友约见面。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：quedo / quedas / queda / quedamos / quedáis / quedan；-ar 规则；与反身的 quedarse（留下）区分,动词;不定式
+es-0702,es,es-08,disfrutar,享受,Quiero disfrutar el viaje.,我想好好享受这次旅行。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：disfruto / disfrutas / disfruta / disfrutamos / disfrutáis / disfrutan；-ar 规则；也说 disfrutar de,动词;不定式
+es-0703,es,es-08,descubrir,发现,Quiero descubrir un camino nuevo.,我想发现一条新路。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：descubro / descubres / descubre / descubrimos / descubrís / descubren；-ir 规则,动词;不定式
+es-0704,es,es-08,acompañar,陪伴,Quiero acompañar a mi hermana.,我想陪我姐妹一起去。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：acompaño / acompañas / acompaña / acompañamos / acompañáis / acompañan；-ar 规则,动词;不定式
+es-0705,es,es-08,despedirse,告别,Despedirse es difícil.,告别很难。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me despido / te despides / se despide / nos despedimos / os despedís / se despiden；e→i；过去时第三人称 se despidió / se despidieron,动词;不定式
+es-0706,es,es-08,alojarse,住宿,Alojarse en un hotel es cómodo.,住旅馆很方便。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me alojo / te alojas / se aloja / nos alojamos / os alojáis / se alojan；-ar 规则的反身动词,动词;不定式
+es-0707,es,es-08,recorrer,走遍；游历,Quiero recorrer el pueblo.,我想把这个镇子走一遍。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：recorro / recorres / recorre / recorremos / recorréis / recorren；-er 规则,动词;不定式
+es-0708,es,es-08,andar,走；行走,Quiero andar por el bosque.,我想在树林里走走。,现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：ando / andas / anda / andamos / andáis / andan；现在时规则，过去时词干却是 anduv-,动词;不定式
+es-0709,es,es-08,Ayer fui al museo,我昨天去了博物馆,Ayer fui al museo.,我昨天去了博物馆。,整句；fui 是 ir 的过去时，与 ser 同形；只生成识别卡,句型;phrase
+es-0710,es,es-08,Hice un viaje el mes pasado,我上个月出了一趟门,Hice un viaje el mes pasado.,我上个月出了一趟门。,整句；hacer 的过去时 yo 是 hice；只生成识别卡,句型;phrase
+es-0711,es,es-08,Ella durmió en el tren,她在火车上睡着了,Ella durmió en el tren.,她在火车上睡着了。,整句；dormir 的过去时第三人称 o→u；只生成识别卡,句型;phrase
+es-0712,es,es-08,No pude llegar a tiempo,我没能按时到,No pude llegar a tiempo.,我没能按时到。,整句；poder 的过去时 yo 是 pude；a tiempo 表示按时；只生成识别卡,句型;phrase
+es-0713,es,es-08,Hubo una fiesta en la playa,海滩上有过一场聚会,Hubo una fiesta en la playa.,海滩上有过一场聚会。,整句；hay 的过去时是 hubo，后面接单数或复数都不变；只生成识别卡,句型;phrase
