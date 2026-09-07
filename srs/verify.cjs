@@ -1086,12 +1086,12 @@ test('新建空文件可首次保存；getFile 读取失败不能写；另存为
 const READING_BANDS={2:[80,100],3:[100,130],4:[130,160],5:[150,180],6:[170,200],7:[200,230],8:[220,260],9:[240,280],10:[260,300],11:[280,320],12:[300,350]};
 const READING_GENRES=['对话','日记','邮件','短故事','描写','通知或广告','菜谱或日程','人物介绍'];
 test('任务 F1：READINGS 结构完整、篇幅在区间内、答案在选项里、重点词是已学词',() => {
-  const ids=Object.keys(api.READINGS);
-  assert.deepEqual(ids,Array.from({length:22},(_,i)=>'es-r'+String(i+1).padStart(2,'0')));
+  const esReadings=Object.entries(api.READINGS).filter(([,item])=>item.lang==='es');
+  assert.deepEqual(esReadings.map(([id])=>id),Array.from({length:22},(_,i)=>'es-r'+String(i+1).padStart(2,'0')));
   const fronts=new Map();
   for (const row of initialRows.filter(row=>row.lang==='es')) if (!fronts.has(row.front)) fronts.set(row.front,row.lesson);
   const genres=new Set();
-  for (const [id,item] of Object.entries(api.READINGS)) {
+  for (const [id,item] of esReadings) {
     assert.equal(item.id,id,id+' 的 id 应与键一致');
     assert.equal(item.lang,'es',id);
     const lesson=api.LESSONS[item.afterLesson];
@@ -1132,10 +1132,10 @@ test('任务 F1：READINGS 结构完整、篇幅在区间内、答案在选项�
   }
   assert.deepEqual([...genres].sort(),[...READING_GENRES].sort());
   // 每周两篇，从第 2 周到第 12 周。
-  for (let week=2;week<=12;week++) assert.equal(Object.values(api.READINGS).filter(item=>item.week===week).length,2,'第 '+week+' 周篇数');
+  for (let week=2;week<=12;week++) assert.equal(Object.values(api.READINGS).filter(item=>item.lang==='es' && item.week===week).length,2,'第 '+week+' 周篇数');
 });
 test('任务 F1：22 篇阅读只用 afterLesson 及之前的词卡与其规则变化形式',() => {
-  for (const item of Object.values(api.READINGS)) checkSentenceVocabulary(item.afterLesson,item.sentences,item.id);
+  for (const item of Object.values(api.READINGS)) if (item.lang==='es') checkSentenceVocabulary(item.afterLesson,item.sentences,item.id);
   // 反向检查：范围规则仍能判出未学的词和还没到的课次。
   assert(!esKnown('es-02','porque'),'第 3 周才学的 porque 不该通过第 2 周的检查');
   assert(!esKnown('es-04','que'),'第 5 周才学的 que 不该通过第 4 周的检查');
@@ -1172,7 +1172,7 @@ test('任务 F1：阅读标签的列表与阅读页；答完四题写入进度�
   assert.deepEqual(document.querySelectorAll('[data-tab]').map(node=>node.dataset.tab),['review','lessons','readings','stats','settings']);
   a.showReadings();
   const list=document.querySelectorAll('[data-reading]');
-  assert.equal(list.length,22);
+  assert.equal(list.length,38);
   assert.deepEqual(list.map(node=>node.dataset.reading),Object.keys(a.READINGS));
   assert(document.getElementById('content').innerHTML.includes('未读'),'未读状态');
   const item=a.READINGS['es-r01'];
@@ -1210,7 +1210,7 @@ test('任务 F1：阅读标签的列表与阅读页；答完四题写入进度�
   assert.deepEqual(plain(a.getData().state.readings),{'es-r01':{done:today,score:4,total:4}});
   const back=document.querySelectorAll('[data-action]').find(node=>node.dataset.action==='readings-back');
   document.getElementById('app').listeners.click[0]({target:{closest:()=>back}});
-  assert.equal(document.querySelectorAll('[data-reading]').length,22,'返回按钮回到阅读列表');
+  assert.equal(document.querySelectorAll('[data-reading]').length,38,'返回按钮回到阅读列表');
   assert(document.getElementById('content').innerHTML.includes('已读 '+today+' · 4 / 4'),'列表显示已读与得分');
   // 序列化仍清空 app，readings 随状态写入并能再次读回。
   const saved=a.serializeDocument(document,initialRows,a.getData().state,'2026-09-15T10:00:00Z','file');
@@ -1233,13 +1233,126 @@ test('任务 F1：统计页的阅读一行；课程标题行的每日时长两�
   document.getElementById('app').listeners.click[0]({target:{closest:()=>statsTab}});
   const rows=document.querySelectorAll('.stats-table').at(-1).querySelector('tbody').querySelectorAll('tr')
     .map(tr=>[tr.querySelector('th').textContent,...tr.querySelectorAll('td').map(td=>td.textContent)]);
-  assert.deepEqual(rows,[['es · 西语','1 / 22','4.0 / 4'],['ru · 俄语','0 / 0','—']]);
+  assert.deepEqual(rows,[['es · 西语','1 / 22','4.0 / 4'],['ru · 俄语','0 / 16','—']]);
   const expected={es:['每天 30 分钟 + 每周 3 次系统块 40 分钟','每天 25 分钟 + 每周 30 分钟语法与写作'],ru:['每天 10 分钟','每天 30 分钟 + 周末系统块 60 分钟']};
   for (const [id,lesson] of Object.entries(a.LESSONS)) {
     const want=expected[lesson.lang][lesson.week>=5?1:0];
     assert.equal(lesson.dailyTime,want,id+' dailyTime');
     a.openLesson(id);
     assert(document.querySelector('.kicker').textContent.includes(want),id+' 标题行时长');
+  }
+});
+
+// 任务 F2：俄语阅读篇目。词汇范围沿用上面俄语课文用的同一套推导式检查，对全部 16 篇执行。
+const RU_READING_SENTENCES={5:[6,8],6:[8,10],7:[8,10],8:[10,12],9:[10,12],10:[12,14],11:[12,14],12:[14,16]};
+const RU_READING_GENRES=['对话','日记','短信或便条','人物介绍','房间或城市描写','一天的安排','通知'];
+test('任务 F2：俄语篇目接在西语之后按 id 顺序追加，西语篇目不动',() => {
+  assert.deepEqual(Object.keys(api.READINGS),[
+    ...Array.from({length:22},(_,i)=>'es-r'+String(i+1).padStart(2,'0')),
+    ...Array.from({length:16},(_,i)=>'ru-r'+String(i+1).padStart(2,'0'))
+  ]);
+  assert.equal(Object.values(api.READINGS).filter(item=>item.lang==='ru').length,16);
+});
+test('任务 F2：16 篇俄语阅读结构完整、句数在区间内、答案在选项里、重点词是已学词',() => {
+  const fronts=new Map();
+  for (const row of initialRows.filter(row=>row.lang==='ru')) if (!fronts.has(row.front)) fronts.set(row.front,row.lesson);
+  const genres=new Set();
+  for (const [id,item] of Object.entries(api.READINGS).filter(([,item])=>item.lang==='ru')) {
+    assert.equal(item.id,id,id+' 的 id 应与键一致');
+    const lesson=api.LESSONS[item.afterLesson];
+    assert(lesson && lesson.lang==='ru',id+' 的 afterLesson 必须是已有俄语课');
+    assert.equal(item.week,lesson.week,id+' 的周次应与 afterLesson 一致');
+    assert(item.title && item.title.trim() && /[㐀-鿿]/.test(item.title),id+' 标题');
+    assert(RU_READING_GENRES.includes(item.genre),id+' 体裁：'+item.genre);
+    genres.add(item.genre);
+    const words=item.sentences.flatMap(sentence=>sentence.text.match(/[\p{L}\p{M}]+/gu) || []);
+    assert.equal(item.words,words.length,id+' words 字段应等于实际词数');
+    const band=RU_READING_SENTENCES[item.week];
+    assert(item.sentences.length>=band[0] && item.sentences.length<=band[1],
+      `${id}: ${item.sentences.length} 句，应为 ${band[0]}–${band[1]} 句`);
+    for (const sentence of item.sentences) {
+      assert.match(sentence.text,/[.?!]$/,id+'：'+sentence.text);
+      assert.equal(sentence.text,sentence.text.normalize('NFC'),id+' 句子须为 NFC');
+      assert.doesNotMatch(sentence.text,/[A-Za-z]/,id+' 句子不含拉丁字母');
+      assert.match(sentence.zh,/[㐀-鿿]/,id+'：'+sentence.text);
+      // 多音节词标 U+0301，重音记号只能跟在元音后面。
+      for (const word of sentence.text.match(/[А-Яа-яЁё́]+/g) || []) {
+        if ((word.match(/[аеёиоуыэюя]/gi)||[]).length>1) assert(/[́ёЁ]/.test(word),id+' 多音节词要标重音：'+word);
+        for (let i=0;i<word.length;i++) if (word[i]==='́') assert(/[аеёиоуыэюя]/i.test(word[i-1]),id+' 重音标记要跟在元音后：'+word);
+      }
+    }
+    assert.equal(item.questions.length,4,id+' 阅读题数');
+    for (const question of item.questions) {
+      assert(question.prompt && question.prompt.trim(),id);
+      assert(question.options.length>=3,id+' '+question.prompt);
+      assert(question.options.includes(question.answer),id+' '+question.prompt);
+      assert.equal(question.options.length,new Set(question.options).size,id+' '+question.prompt);
+    }
+    // 每篇至少一道推断或指代题，不能全是找信息。
+    assert(item.questions.some(question=>/推断|指的是/.test(question.prompt)),id+' 缺少推断或指代题');
+    assert.equal(item.keyWords.length,5,id+' 重点词数');
+    for (const word of item.keyWords) {
+      const from=fronts.get(word.word);
+      assert(from,id+' 重点词不是俄语词卡：'+word.word);
+      assert(from<=item.afterLesson,id+' 重点词超出课次：'+word.word+'（'+from+'）');
+      assert(word.zh && /[㐀-鿿]/.test(word.zh),id+' 重点词缺中文：'+word.word);
+    }
+    assert(item.retell.length>=3 && item.retell.length<=5,id+' 复述要点 '+item.retell.length+' 条');
+    for (const point of item.retell) assert.match(point,/[㐀-鿿]/,id+' 复述要点须为中文');
+  }
+  assert.deepEqual([...genres].sort(),[...RU_READING_GENRES].sort());
+  // 每周两篇，从第 5 周到第 12 周。
+  for (let week=5;week<=12;week++) assert.equal(Object.values(api.READINGS).filter(item=>item.lang==='ru' && item.week===week).length,2,'第 '+week+' 周篇数');
+});
+test('任务 F2：16 篇俄语阅读只用 afterLesson 及之前的词卡与其规则变化形式',() => {
+  for (const item of Object.values(api.READINGS)) {
+    if (item.lang!=='ru') continue;
+    const set=ruVocabulary(item.afterLesson);
+    for (const sentence of item.sentences)
+      for (const word of ruWords(sentence.text))
+        assert(set.has(word),item.id+' 阅读超出词表：'+word+'（'+sentence.text+'）');
+  }
+  // 反向检查：范围规则仍能判出未学的词和还没到的课次。
+  assert(!ruKnown('ru-05','библиоте́ка'),'第 7 周才学的词不该通过第 5 周的检查');
+  assert(!ruKnown('ru-08','вы́ставка'),'第 9 周才学的词不该通过第 8 周的检查');
+  assert(!ruKnown('ru-10','кошелёк'),'第 11 周才学的词不该通过第 10 周的检查');
+});
+test('任务 F2：阅读列表按语言分两段；俄语阅读页逐句中文、重点词表与四道题都在',() => {
+  const {api:a,document}=createAPI(true);a.initialize();
+  a.showReadings();
+  const list=document.querySelectorAll('[data-reading]').map(node=>node.dataset.reading);
+  assert.equal(list.filter(id=>id.startsWith('es-r')).length,22);
+  assert.deepEqual(list.slice(22),Object.values(a.READINGS).filter(item=>item.lang==='ru').map(item=>item.id));
+  const item=a.READINGS['ru-r16'];
+  a.openReadingItem('ru-r16');
+  const html=document.getElementById('content').innerHTML;
+  assert(html.includes(item.title),'阅读页标题');
+  assert(html.includes('词汇范围到 ru-12'),'阅读页词汇范围');
+  assert.equal(document.querySelectorAll('details').filter(node=>node.querySelector('summary')?.textContent==='查看本句中文').length,item.sentences.length);
+  assert.equal(document.querySelectorAll('[data-question]').length,4);
+  assert.equal(document.querySelectorAll('.vocab').at(-1).querySelector('tbody').querySelectorAll('tr').length,5);
+  for (let i=0;i<4;i++) {
+    document.querySelector('[data-question="'+i+'"]').elements.answer.value=item.questions[i].answer;
+    document.getElementById('app').listeners.submit[0]({target:document.querySelector('[data-question="'+i+'"]'),preventDefault(){}});
+  }
+  assert.deepEqual(plain(a.getData().state.readings),{'ru-r16':{done:a.localDay(),score:4,total:4}});
+});
+test('任务 F2：ru-05 至 ru-08 的 note 复数重音已更正，CSV 与内嵌数据一致',() => {
+  const csvRows=api.parseCSV(fs.readFileSync(path.join(__dirname,'cards','ru.csv'),'utf8'));
+  const lessons=['ru-05','ru-06','ru-07','ru-08'];
+  assert.deepEqual(plain(csvRows.filter(row=>lessons.includes(row.lesson))),plain(initialRows.filter(row=>lessons.includes(row.lesson))));
+  const byId=new Map(initialRows.map(row=>[row.id,row]));
+  for (const [id,plural] of [
+    ['ru-0147','словари́'],['ru-0152','шкафы́'],['ru-0157','зеркала́'],['ru-0176','коты́'],['ru-0233','уро́ки'],
+    ['ru-0258','полы́'],['ru-0262','этажи́'],['ru-0265','корпуса́'],['ru-0268','места́'],['ru-0324','поезда́']
+  ]) assert.equal(byId.get(id).note.split('复数主格：')[1],plural,id+' 复数主格');
+  // 这四课的 note 里，复数与变位形式的重音记号都跟在元音后面，且多音节形式都标了重音。
+  for (const row of initialRows.filter(row=>lessons.includes(row.lesson))) {
+    const forms=row.note.split(/[：；]/).slice(1).join(' ');
+    for (const word of forms.match(/[А-Яа-яЁё́]+/g) || []) {
+      if ((word.match(/[аеёиоуыэюя]/gi)||[]).length>1) assert(/[́ёЁ]/.test(word),row.id+' note 多音节形式要标重音：'+word);
+      for (let i=0;i<word.length;i++) if (word[i]==='́') assert(/[аеёиоуыэюя]/i.test(word[i-1]),row.id+' note 重音记号要跟在元音后：'+word);
+    }
   }
 });
 
