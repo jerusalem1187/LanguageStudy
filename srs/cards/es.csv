@@ -1312,3 +1312,323 @@ es-1310,es,es-16,la mitad,一半,La mitad del queso está en el plato.,一半奶
 es-1311,es,es-16,el litro,升,Hay un litro de leche en la botella.,瓶子里有一升牛奶。,名词（阳）,名词;补充;食材厨具计量
 es-1312,es,es-16,el agua,水,El agua está en la olla.,水在锅里。,名词（阴）；单数重读 a 前用 el：el agua；复数 las aguas；形容词仍用阴性，如 agua fría。,名词;补充;食材厨具计量
 es-1313,es,es-16,la cucharada,一勺的量,La cucharada de aceite está en la sopa.,一勺油已加在汤里。,名词（阴）,名词;补充;食材厨具计量
+es-1314,es,es-17,redactar,撰写,Quiero que redactes el informe.,我希望你撰写这份报告。,redactar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：redacte / redactes / redacte / redactemos / redactéis / redacten,动词;不定式;虚拟式现在时
+es-1315,es,es-17,adjuntar,附上,Es importante que adjuntes el archivo.,附上文件很重要。,adjuntar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：adjunte / adjuntes / adjunte / adjuntemos / adjuntéis / adjunten,动词;不定式;虚拟式现在时
+es-1316,es,es-17,archivar,归档,Quiero que archives el documento.,我希望你把这份文件归档。,archivar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：archive / archives / archive / archivemos / archivéis / archiven,动词;不定式;虚拟式现在时
+es-1317,es,es-17,rellenar,填写,Es necesario que rellenes el formulario.,你需要填写表格。,rellenar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：rellene / rellenes / rellene / rellenemos / rellenéis / rellenen,动词;不定式;虚拟式现在时
+es-1318,es,es-17,subrayar,在……下画线,Quiero que subrayes esta frase.,我希望你在这个句子下画线。,subrayar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：subraye / subrayes / subraye / subrayemos / subrayéis / subrayen,动词;不定式;虚拟式现在时
+es-1319,es,es-17,evaluar,评价；评估,Es necesario que el profesor evalúe el trabajo.,教师需要评估这份作业。,evaluar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：evalúe / evalúes / evalúe / evaluemos / evaluéis / evalúen；除 nosotros、vosotros 外，ú 标重音,动词;不定式;虚拟式现在时
+es-1320,es,es-17,coordinar,协调,Quiero que coordines el proyecto.,我希望你协调这个项目。,coordinar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：coordine / coordines / coordine / coordinemos / coordinéis / coordinen,动词;不定式;虚拟式现在时
+es-1321,es,es-17,supervisar,监督；检查,Es importante que el tutor supervise la tarea.,导师检查任务很重要。,supervisar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：supervise / supervises / supervise / supervisemos / superviséis / supervisen,动词;不定式;虚拟式现在时
+es-1322,es,es-17,autorizar,准许；授权,Es necesario que la escuela autorice la visita.,学校需要批准这次参观。,autorizar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：autorice / autorices / autorice / autoricemos / autoricéis / autoricen；z 在 e 前写作 c,动词;不定式;虚拟式现在时
+es-1323,es,es-17,encargar,交办；委托,Quiero que encargues el informe a Ana.,我希望你把报告交给安娜来写。,encargar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：encargue / encargues / encargue / encarguemos / encarguéis / encarguen；g 在 e 前写作 gu；encargar algo a alguien,动词;不定式;虚拟式现在时
+es-1324,es,es-17,asesorar,提供专业建议,Quiero que el tutor me asesore.,我希望导师给我建议。,asesorar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：asesore / asesores / asesore / asesoremos / asesoréis / asesoren,动词;不定式;虚拟式现在时
+es-1325,es,es-17,inscribirse,报名；登记,Quiero que te inscribas en el curso.,我希望你报名参加课程。,inscribirse 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me inscriba / te inscribas / se inscriba / nos inscribamos / os inscribáis / se inscriban；inscribirse en + 课程或活动；反身代词在虚拟式前,动词;不定式;虚拟式现在时
+es-1326,es,es-17,matricularse,注册入学,Quiero que te matricules en la universidad.,我希望你在大学注册入学。,matricularse 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me matricule / te matricules / se matricule / nos matriculemos / os matriculéis / se matriculen；matricularse en + 学校或课程,动词;不定式;虚拟式现在时
+es-1327,es,es-17,concentrarse,集中注意力,Es importante que te concentres en la lectura.,你专心阅读很重要。,concentrarse 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me concentre / te concentres / se concentre / nos concentremos / os concentréis / se concentren；concentrarse en + 名词或不定式,动词;不定式;虚拟式现在时
+es-1328,es,es-17,esforzarse,努力,Quiero que te esfuerces para aprender.,我希望你努力学习。,esforzarse 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me esfuerce / te esfuerces / se esfuerce / nos esforcemos / os esforcéis / se esfuercen；o→ue，但 nosotros、vosotros 保留 o；z 在 e 前写 c,动词;不定式;虚拟式现在时
+es-1329,es,es-17,proponer,提出；提议,Quiero que propongas una solución.,我希望你提出一个解决办法。,proponer 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：proponga / propongas / proponga / propongamos / propongáis / propongan；沿用 poner 的不规则词干 pong-,动词;不定式;虚拟式现在时
+es-1330,es,es-17,disponer,拥有可用资源；安排,Es importante que dispongas de tiempo.,你有可用的时间很重要。,disponer 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：disponga / dispongas / disponga / dispongamos / dispongáis / dispongan；disponer de + 可用资源；沿用 poner 的不规则词干,动词;不定式;虚拟式现在时
+es-1331,es,es-17,contribuir,贡献；促成,Quiero que contribuyas al proyecto.,我希望你为项目作贡献。,contribuir 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：contribuya / contribuyas / contribuya / contribuyamos / contribuyáis / contribuyan；contribuir a；-uir 在这些形式中有 y,动词;不定式;虚拟式现在时
+es-1332,es,es-17,influir,影响,No quiero que el ruido influya en tu trabajo.,我不希望噪音影响你的工作。,influir 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：influya / influyas / influya / influyamos / influyáis / influyan；influir en；-uir 在这些形式中有 y,动词;不定式;虚拟式现在时
+es-1333,es,es-17,obedecer,遵守；听从,Es necesario que obedezcas las reglas.,你需要遵守规则。,obedecer 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：obedezca / obedezcas / obedezca / obedezcamos / obedezcáis / obedezcan；词干为 obedezc-,动词;不定式;虚拟式现在时
+es-1334,es,es-17,querer que,希望另一个人……,Quiero que vengas mañana.,我希望你明天来。,主句 querer 变位；从句用虚拟式；同一主语通常用 querer + 不定式；只生成识别卡。,触发结构;phrase
+es-1335,es,es-17,es necesario que,有必要……,Es necesario que haya tiempo para leer.,有必要留出阅读的时间。,非人称评价后用 que + 虚拟式；一般要求也可用 es necesario + 不定式；只生成识别卡。,触发结构;phrase
+es-1336,es,es-17,para que,为了让……,Te doy el libro para que lo leas.,我把书给你，好让你读。,目的从句用虚拟式；同一主语通常用 para + 不定式；只生成识别卡。,触发结构;phrase
+es-1337,es,es-17,es importante que,……很重要,Es importante que estés aquí.,你在这里很重要。,非人称评价后用 que + 虚拟式；只生成识别卡。,触发结构;phrase
+es-1338,es,es-17,pedir que,请求某人……,Te pido que escribas la fecha.,我请你写下日期。,请求另一人的行动；pedir 变位，从句用虚拟式；只生成识别卡。,触发结构;phrase
+es-1339,es,es-17,permitir que,允许某人……,La profesora permite que usemos el libro.,老师允许我们使用书本。,允许另一人的行动；从句用虚拟式；只生成识别卡。,触发结构;phrase
+es-1340,es,es-17,recomendar que,建议某人……,Te recomiendo que leas este texto.,我建议你读这篇课文。,建议另一人的行动；从句用虚拟式；只生成识别卡。,触发结构;phrase
+es-1341,es,es-17,exigir que,要求某人……,El tutor exige que entreguemos el informe.,导师要求我们交报告。,要求另一人的行动；从句用虚拟式；只生成识别卡。,触发结构;phrase
+es-1342,es,es-17,preferir que,更希望某人……,Prefiero que trabajes aquí.,我更希望你在这里工作。,主语不同用 que + 虚拟式；同一主语通常用不定式；只生成识别卡。,触发结构;phrase
+es-1343,es,es-17,hace falta que,需要……,Hace falta que todos participen.,需要大家都参加。,非人称需要表达后用虚拟式；只生成识别卡。,触发结构;phrase
+es-1344,es,es-17,la asignatura,科目,La asignatura es interesante.,这门科目很有意思。,名词（阴）,名词;学习与工作
+es-1345,es,es-17,el tema,主题,El tema del texto es el trabajo.,课文的主题是工作。,名词（阳）,名词;学习与工作
+es-1346,es,es-17,el capítulo,章,El capítulo tiene diez páginas.,这一章有十页。,名词（阳）,名词;学习与工作
+es-1347,es,es-17,el párrafo,段落,El párrafo es corto.,这个段落很短。,名词（阳）,名词;学习与工作
+es-1348,es,es-17,la página,页,Lee esta página.,读这一页。,名词（阴）,名词;学习与工作
+es-1349,es,es-17,el índice,目录；索引,El índice está al principio del libro.,目录在书的开头。,名词（阳）,名词;学习与工作
+es-1350,es,es-17,la redacción,作文；写作,La redacción tiene cinco frases.,这篇作文有五句话。,名词（阴）,名词;学习与工作
+es-1351,es,es-17,el informe,报告,El informe está en la carpeta.,报告在文件夹里。,名词（阳）,名词;学习与工作
+es-1352,es,es-17,el archivo,文件；档案,El archivo está en el ordenador.,文件在电脑里。,名词（阳）,名词;学习与工作
+es-1353,es,es-17,el formulario,表格,El formulario es corto.,这张表格很短。,名词（阳）,名词;学习与工作
+es-1354,es,es-17,la inscripción,报名；登记,La inscripción es importante para el curso.,报名对参加课程很重要。,名词（阴）,名词;学习与工作
+es-1355,es,es-17,la matrícula,入学注册,La matrícula es para este año.,这是本年度的入学注册。,名词（阴）,名词;学习与工作
+es-1356,es,es-17,la beca,奖学金；助学金,La beca es una ayuda para estudiar.,这笔助学金帮助人学习。,名词（阴）,名词;学习与工作
+es-1357,es,es-17,el diploma,毕业文凭,El diploma está en la oficina.,毕业文凭在办公室。,名词（阳）,名词;学习与工作
+es-1358,es,es-17,el certificado,证明；证书,El certificado está en el archivo.,证明在档案里。,名词（阳）,名词;学习与工作
+es-1359,es,es-17,la evaluación,评价；考评,La evaluación del proyecto es importante.,项目考评很重要。,名词（阴）,名词;学习与工作
+es-1360,es,es-17,el aprendizaje,学习；学习过程,El aprendizaje necesita tiempo.,学习需要时间。,名词（阳）,名词;学习与工作
+es-1361,es,es-17,la enseñanza,教学,La enseñanza es el trabajo del profesor.,教学是教师的工作。,名词（阴）,名词;学习与工作
+es-1362,es,es-17,el tutor,导师；辅导教师,El tutor ayuda a los estudiantes.,导师帮助学生。,名词（阳）；女性为 la tutora,名词;学习与工作
+es-1363,es,es-17,la tutoría,辅导课；指导会面,La tutoría empieza a las diez.,辅导课十点开始。,名词（阴）,名词;学习与工作
+es-1364,es,es-17,obligatorio,必修的；必须的,Este curso es obligatorio.,这门课是必修课。,形容词；性数形式 obligatorio / obligatoria / obligatorios / obligatorias,形容词
+es-1365,es,es-17,necesario,必要的,El descanso es necesario.,休息是必要的。,形容词；性数形式 necesario / necesaria / necesarios / necesarias,形容词
+es-1366,es,es-17,optativo,选修的；可选的,La asignatura es optativa.,这门科目是选修的。,形容词；性数形式 optativo / optativa / optativos / optativas,形容词
+es-1367,es,es-17,académico,学业的；学术的,El trabajo académico necesita tiempo.,学业工作需要时间。,形容词；性数形式 académico / académica / académicos / académicas,形容词
+es-1368,es,es-17,práctico,实用的；实践的,El ejercicio es práctico.,这个练习很实用。,形容词；性数形式 práctico / práctica / prácticos / prácticas,形容词
+es-1369,es,es-17,teórico,理论的,El curso es teórico.,这门课侧重理论。,形容词；性数形式 teórico / teórica / teóricos / teóricas,形容词
+es-1370,es,es-17,exigente,要求高的,El tutor es exigente.,导师要求很高。,形容词；性数形式 exigente / exigente / exigentes / exigentes,形容词
+es-1371,es,es-17,eficaz,有效的,Este método es eficaz.,这个方法有效。,形容词；性数形式 eficaz / eficaz / eficaces / eficaces,形容词
+es-1372,es,es-17,organizado,有条理的,El estudiante es organizado.,这位学生做事有条理。,形容词；性数形式 organizado / organizada / organizados / organizadas,形容词
+es-1373,es,es-17,aplicado,用功的,La estudiante es aplicada.,这位女学生很用功。,形容词；性数形式 aplicado / aplicada / aplicados / aplicadas,形容词
+es-1374,es,es-17,Quiero que tengas tiempo para estudiar,我希望你有时间学习,Quiero que tengas tiempo para estudiar.,我希望你有时间学习。,不同主语的愿望；tener → tengas；只生成识别卡。,句型;phrase
+es-1375,es,es-17,Es necesario que haya una solución,需要有一个解决办法,Es necesario que haya una solución.,需要有一个解决办法。,存在义 haber 只用第三人称单数 haya；只生成识别卡。,句型;phrase
+es-1376,es,es-17,No salgas sin tu cuaderno,别不带笔记本就出门,No salgas sin tu cuaderno.,别不带笔记本就出门。,tú 否定命令式用 no + salgas；只生成识别卡。,句型;phrase
+es-1377,es,es-17,Te doy el informe para que lo revises,我给你报告，好让你检查,Te doy el informe para que lo revises.,我给你报告，好让你检查。,目的从句用 para que + 虚拟式；代词在动词前；只生成识别卡。,句型;phrase
+es-1378,es,es-17,Es importante que el tutor sea paciente,导师有耐心很重要,Es importante que el tutor sea paciente.,导师有耐心很重要。,非人称评价；ser → sea；只生成识别卡。,句型;phrase
+es-1379,es,es-17,la pizarra,黑板；白板,La pizarra está delante de la clase.,黑板在教室前面。,名词（阴）,名词;补充;学习与工作
+es-1380,es,es-17,la tiza,粉笔,La tiza es blanca.,粉笔是白色的。,名词（阴）,名词;补充;学习与工作
+es-1381,es,es-17,el rotulador,记号笔,El rotulador está en la mesa.,记号笔在桌上。,名词（阳）,名词;补充;学习与工作
+es-1382,es,es-17,la carpeta,文件夹,La carpeta tiene varios documentos.,文件夹里有几份文件。,名词（阴）,名词;补充;学习与工作
+es-1383,es,es-17,la fotocopia,复印件,La fotocopia del texto está aquí.,课文的复印件在这里。,名词（阴）,名词;补充;学习与工作
+es-1384,es,es-17,el apunte,笔记,El apunte tiene un ejemplo.,这条笔记里有一个例子。,名词（阳）,名词;补充;学习与工作
+es-1385,es,es-17,el esquema,提纲；简图,El esquema del capítulo es claro.,这一章的提纲很清楚。,名词（阳）,名词;补充;学习与工作
+es-1386,es,es-17,la definición,定义,La definición de la palabra es corta.,这个词的定义很简短。,名词（阴）,名词;补充;学习与工作
+es-1387,es,es-17,el concepto,概念,El concepto es fácil de entender.,这个概念容易理解。,名词（阳）,名词;补充;学习与工作
+es-1388,es,es-17,la regla,规则；尺子,La regla de la clase es importante.,课堂规则很重要。,名词（阴）,名词;补充;学习与工作
+es-1389,es,es-17,la corrección,修改；订正,La corrección del texto necesita tiempo.,订正课文需要时间。,名词（阴）,名词;补充;学习与工作
+es-1390,es,es-17,el apartado,章节中的小节,El apartado tiene dos párrafos.,这个小节有两段。,名词（阳）,名词;补充;学习与工作
+es-1391,es,es-17,la asistencia,出席,La asistencia al curso es obligatoria.,这门课必须出席。,名词（阴）,名词;补充;学习与工作
+es-1392,es,es-17,la revisión,复查；修订,La revisión del informe es para mañana.,报告复查安排在明天。,名词（阴）,名词;补充;学习与工作
+es-1393,es,es-17,la entrega,提交；交付,La entrega del trabajo es el viernes.,作业周五提交。,名词（阴）,名词;补充;学习与工作
+es-1394,es,es-18,dudar,怀疑,No quiero que dudes de tu trabajo.,我不希望你怀疑自己的工作。,dudar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：dude / dudes / dude / dudemos / dudéis / duden；dudar de + 名词；dudar que + 虚拟式,动词;不定式;虚拟式现在时
+es-1395,es,es-18,opinar,发表意见；认为,Quiero que todos opinen.,我希望大家都发表意见。,opinar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：opine / opines / opine / opinemos / opinéis / opinen,动词;不定式;虚拟式现在时
+es-1396,es,es-18,confiar,信任；信赖,Espero que confíes en el equipo.,我希望你信任团队。,confiar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：confíe / confíes / confíe / confiemos / confiéis / confíen；confiar en；除 nosotros、vosotros 外，í 标重音,动词;不定式;虚拟式现在时
+es-1397,es,es-18,alegrarse,感到高兴,Espero que te alegres de la noticia.,我希望这个消息能让你高兴。,alegrarse 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me alegre / te alegres / se alegre / nos alegremos / os alegréis / se alegren；alegrarse de + 名词；alegrarse de que + 虚拟式,动词;不定式;虚拟式现在时
+es-1398,es,es-18,lamentar,遗憾；惋惜,No quiero que lamentes tu decisión.,我不希望你为自己的决定感到遗憾。,lamentar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：lamente / lamentes / lamente / lamentemos / lamentéis / lamenten,动词;不定式;虚拟式现在时
+es-1399,es,es-18,desear,希望；祝愿,Espero que desees participar.,我希望你愿意参加。,desear 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：desee / desees / desee / deseemos / deseéis / deseen,动词;不定式;虚拟式现在时
+es-1400,es,es-18,temer,担心；害怕,No quiero que temas el cambio.,我不希望你担心变化。,temer 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：tema / temas / tema / temamos / temáis / teman,动词;不定式;虚拟式现在时
+es-1401,es,es-18,sorprender,使惊讶,Es posible que la noticia te sorprenda.,这个消息可能让你惊讶。,sorprender 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：sorprenda / sorprendas / sorprenda / sorprendamos / sorprendáis / sorprendan,动词;不定式;虚拟式现在时
+es-1402,es,es-18,preocupar,使担心,No quiero que el problema te preocupe.,我不希望这个问题让你担心。,preocupar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：preocupe / preocupes / preocupe / preocupemos / preocupéis / preocupen,动词;不定式;虚拟式现在时
+es-1403,es,es-18,apoyar,支持,Espero que apoyes a la asociación.,我希望你支持这个协会。,apoyar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：apoye / apoyes / apoye / apoyemos / apoyéis / apoyen,动词;不定式;虚拟式现在时
+es-1404,es,es-18,proteger,保护,Es importante que protejamos la naturaleza.,保护大自然很重要。,proteger 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：proteja / protejas / proteja / protejamos / protejáis / protejan；g 在 a 前改为 j,动词;不定式;虚拟式现在时
+es-1405,es,es-18,reciclar,回收利用,Espero que reciclemos el papel.,我希望我们回收利用纸张。,reciclar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：recicle / recicles / recicle / reciclemos / recicléis / reciclen,动词;不定式;虚拟式现在时
+es-1406,es,es-18,reducir,减少,Es necesario que reduzcamos la contaminación.,我们需要减少污染。,reducir 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：reduzca / reduzcas / reduzca / reduzcamos / reduzcáis / reduzcan；词干为 reduzc-,动词;不定式;虚拟式现在时
+es-1407,es,es-18,contaminar,污染,No quiero que contaminemos el río.,我不希望我们污染这条河。,contaminar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：contamine / contamines / contamine / contaminemos / contaminéis / contaminen,动词;不定式;虚拟式现在时
+es-1408,es,es-18,respetar,尊重；遵守,Espero que respetes las reglas.,我希望你遵守规则。,respetar 的虚拟式现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：respete / respetes / respete / respetemos / respetéis / respeten,动词;不定式;虚拟式现在时
+es-1409,es,es-18,no creo que,我不认为……,No creo que el curso sea difícil.,我不认为这门课很难。,否定判断后通常用虚拟式；只生成识别卡。,情感与观点;phrase
+es-1410,es,es-18,no pienso que,我不觉得……,No pienso que la solución sea cara.,我不觉得这个办法成本很高。,否定判断后通常用虚拟式；只生成识别卡。,情感与观点;phrase
+es-1411,es,es-18,es posible que,有可能……,Es posible que Ana llegue mañana.,安娜明天可能来。,可能性评价后用虚拟式；只生成识别卡。,情感与观点;phrase
+es-1412,es,es-18,es probable que,很可能……,Es probable que Ana venga mañana.,安娜明天很可能来。,可能性评价后用虚拟式；只生成识别卡。,情感与观点;phrase
+es-1413,es,es-18,quizás,也许,Quizás el equipo llegue pronto.,也许团队很快就到。,可接陈述式或虚拟式；本课虚拟式练较不确定的判断；只生成识别卡。,情感与观点;phrase
+es-1414,es,es-18,ojalá,但愿,Ojalá tengamos buen tiempo.,但愿天气好。,愿望表达；本课用现在时虚拟式；只生成识别卡。,情感与观点;phrase
+es-1415,es,es-18,me alegro de que,我很高兴……,Me alegro de que estés aquí.,我很高兴你在这里。,情感评价后用虚拟式，即使事情是真实的；只生成识别卡。,情感与观点;phrase
+es-1416,es,es-18,siento que,我很遗憾……,Siento que no puedas venir.,你不能来，我很遗憾。,表示遗憾时用虚拟式；表示感觉、判断时可用陈述式；只生成识别卡。,情感与观点;phrase
+es-1417,es,es-18,espero que,我希望……,Espero que el proyecto tenga un buen resultado.,我希望这个项目有好结果。,对另一主语表达希望，从句用虚拟式；只生成识别卡。,情感与观点;phrase
+es-1418,es,es-18,me preocupa que,让我担心的是……,Me preocupa que el río esté sucio.,河水不干净让我担心。,情感评价后用虚拟式；只生成识别卡。,情感与观点;phrase
+es-1419,es,es-18,me sorprende que,让我惊讶的是……,Me sorprende que el servicio sea gratuito.,这项服务免费，让我惊讶。,情感评价后用虚拟式；只生成识别卡。,情感与观点;phrase
+es-1420,es,es-18,es una pena que,……很可惜,Es una pena que no tengas tiempo.,你没有时间，真可惜。,评价后用虚拟式；只生成识别卡。,情感与观点;phrase
+es-1421,es,es-18,tengo miedo de que,我担心……,Tengo miedo de que lleguemos tarde.,我担心我们迟到。,对一个可能的事件表示担心，用虚拟式；只生成识别卡。,情感与观点;phrase
+es-1422,es,es-18,dudo que,我怀疑……,Dudo que el equipo pueda venir.,我怀疑团队是否能来。,肯定形式的怀疑动词后用虚拟式；只生成识别卡。,情感与观点;phrase
+es-1423,es,es-18,deseo que,我希望……；祝愿……,Deseo que todos estén bien.,我祝愿大家都好。,对另一主语表达愿望，用虚拟式；只生成识别卡。,情感与观点;phrase
+es-1424,es,es-18,la sociedad,社会,La sociedad necesita ayuda.,社会需要帮助。,名词（阴）,名词;社会与环境
+es-1425,es,es-18,el medio ambiente,环境,Es importante cuidar el medio ambiente.,保护环境很重要。,名词（阳）,名词;社会与环境
+es-1426,es,es-18,la naturaleza,大自然,La naturaleza es importante para todos.,大自然对所有人都很重要。,名词（阴）,名词;社会与环境
+es-1427,es,es-18,la contaminación,污染,La contaminación del río nos preocupa.,河流污染让我们担心。,名词（阴）,名词;社会与环境
+es-1428,es,es-18,el reciclaje,回收利用,El reciclaje ayuda al medio ambiente.,回收利用对环境有益。,名词（阳）,名词;社会与环境
+es-1429,es,es-18,el plástico,塑料,La botella es de plástico.,这个瓶子是塑料的。,名词（阳）,名词;社会与环境
+es-1430,es,es-18,el vidrio,玻璃,El vaso es de vidrio.,杯子是玻璃的。,名词（阳）,名词;社会与环境
+es-1431,es,es-18,el cartón,硬纸板,La caja es de cartón.,这个箱子是硬纸板做的。,名词（阳）,名词;社会与环境
+es-1432,es,es-18,el contenedor,容器；分类收集箱,El contenedor está cerca de la casa.,分类收集箱在房子附近。,名词（阳）,名词;社会与环境
+es-1433,es,es-18,la energía,能源；能量,Es importante ahorrar energía.,节约能源很重要。,名词（阴）,名词;社会与环境
+es-1434,es,es-18,la electricidad,电,La casa tiene electricidad.,这所房子通电。,名词（阴）,名词;社会与环境
+es-1435,es,es-18,el recurso,资源,El agua es un recurso importante.,水是一种重要资源。,名词（阳）,名词;社会与环境
+es-1436,es,es-18,la sequía,干旱,La sequía es un problema para el campo.,干旱对农村来说是个问题。,名词（阴）,名词;社会与环境
+es-1437,es,es-18,la especie,物种；种类,Esta especie de árbol necesita agua.,这种树需要水。,名词（阴）,名词;社会与环境
+es-1438,es,es-18,la protección,保护,La protección del bosque es importante.,保护森林很重要。,名词（阴）,名词;社会与环境
+es-1439,es,es-18,la comunidad,社区；群体,La comunidad tiene una biblioteca.,社区有一座图书馆。,名词（阴）,名词;社会与环境
+es-1440,es,es-18,la asociación,协会,La asociación organiza una reunión.,协会组织一场会议。,名词（阴）,名词;社会与环境
+es-1441,es,es-18,el voluntario,志愿者,El voluntario ayuda en el parque.,这位志愿者在公园帮忙。,名词（阳）；女性为 la voluntaria,名词;社会与环境
+es-1442,es,es-18,la igualdad,平等,La igualdad es importante para la sociedad.,平等对社会很重要。,名词（阴）,名词;社会与环境
+es-1443,es,es-18,la convivencia,共同生活；相处,La convivencia necesita tiempo.,共同生活需要时间。,名词（阴）,名词;社会与环境
+es-1444,es,es-18,cuando,当……时,"Cuando vengas, hablaremos del proyecto.",你来时，我们再谈这个项目。,将来尚未发生的时间从句用虚拟式；习惯或过去事实用陈述式,连接词
+es-1445,es,es-18,en cuanto,一……就……,"En cuanto llegue Ana, empezaremos.",安娜一到，我们就开始。,将来时间从句用虚拟式,连接词
+es-1446,es,es-18,tan pronto como,一……就……,"Tan pronto como termine el curso, buscaré trabajo.",课程一结束，我就找工作。,将来时间从句用虚拟式,连接词
+es-1447,es,es-18,siempre que,只要；每当,"Siempre que tengas tiempo, puedes ayudarnos.",只要你有时间，就可以帮助我们。,表示条件「只要」用虚拟式；表示习惯「每当」可用陈述式,连接词
+es-1448,es,es-18,a menos que,除非,Iremos al parque a menos que estés cansado.,除非你累了，否则我们会去公园。,条件从句用虚拟式,连接词
+es-1449,es,es-18,con tal de que,只要；条件是,Te ayudaré con tal de que participes.,只要你参加，我就帮你。,条件从句用虚拟式,连接词
+es-1450,es,es-18,por una parte,一方面,"Por una parte, el parque está cerca.",一方面，公园离得近。,用于列出考虑的一个方面,连接词
+es-1451,es,es-18,por otra parte,另一方面,"Por otra parte, el parque es pequeño.",另一方面，公园较小。,用于补充另一面,连接词
+es-1452,es,es-18,en cambio,相较之下；而,"La plaza es grande; el parque, en cambio, es pequeño.",广场很大；相较之下，公园很小。,表示对比,连接词
+es-1453,es,es-18,por lo tanto,因此,"El parque está cerca; por lo tanto, iremos caminando.",公园很近；因此，我们步行去。,表示结果,连接词
+es-1454,es,es-18,No creo que la solución sea difícil,我不认为解决办法很难,No creo que la solución sea difícil.,我不认为解决办法很难。,否定 creer 后的从句用虚拟式；只生成识别卡。,句型;phrase
+es-1455,es,es-18,Ojalá todos podamos participar,但愿我们都能参加,Ojalá todos podamos participar.,但愿我们都能参加。,ojalá 表愿望；poder → podamos；只生成识别卡。,句型;phrase
+es-1456,es,es-18,Me alegro de que cuides el medio ambiente,我很高兴你保护环境,Me alegro de que cuides el medio ambiente.,我很高兴你保护环境。,情感评价后用虚拟式；只生成识别卡。,句型;phrase
+es-1457,es,es-18,"Cuando termine la reunión, iremos al parque",会议结束后，我们会去公园,"Cuando termine la reunión, iremos al parque.",会议结束后，我们会去公园。,将来时间从句用虚拟式；主句用将来时；只生成识别卡。,句型;phrase
+es-1458,es,es-18,Espero que tengamos una comunidad más justa,我希望我们的社区更加公正,Espero que tengamos una comunidad más justa.,我希望我们的社区更加公正。,希望表达后用虚拟式；只生成识别卡。,句型;phrase
+es-1459,es,es-18,sostenible,可持续的,Este proyecto es sostenible.,这个项目是可持续的。,形容词；性数形式 sostenible / sostenible / sostenibles / sostenibles,形容词;补充
+es-1460,es,es-18,ecológico,生态的；环保的,El proyecto ecológico es importante.,环保项目很重要。,形容词；性数形式 ecológico / ecológica / ecológicos / ecológicas,形容词;补充
+es-1461,es,es-18,social,社会的,La igualdad es un objetivo social.,平等是一个社会目标。,形容词；性数形式 social / social / sociales / sociales,形容词;补充
+es-1462,es,es-18,colectivo,集体的,El proyecto necesita esfuerzo colectivo.,这个项目需要集体努力。,形容词；性数形式 colectivo / colectiva / colectivos / colectivas,形容词;补充
+es-1463,es,es-18,solidario,乐于互助的,El voluntario es solidario.,这位志愿者乐于互助。,形容词；性数形式 solidario / solidaria / solidarios / solidarias,形容词;补充
+es-1464,es,es-18,equitativo,公平的,El plan es equitativo para todos.,这个计划对所有人都公平。,形容词；性数形式 equitativo / equitativa / equitativos / equitativas,形容词;补充
+es-1465,es,es-18,injusto,不公正的,La decisión es injusta.,这个决定不公正。,形容词；性数形式 injusto / injusta / injustos / injustas,形容词;补充
+es-1466,es,es-18,optimista,乐观的,La profesora es optimista.,这位女教师很乐观。,形容词；性数形式 optimista / optimista / optimistas / optimistas,形容词;补充
+es-1467,es,es-18,pesimista,悲观的,El vecino es pesimista.,这位邻居很悲观。,形容词；性数形式 pesimista / pesimista / pesimistas / pesimistas,形容词;补充
+es-1468,es,es-18,probable,很可能的,El cambio es probable.,很可能会发生变化。,形容词；性数形式 probable / probable / probables / probables,形容词;补充
+es-1469,es,es-18,improbable,不大可能的,La visita es improbable.,这次来访不大可能发生。,形容词；性数形式 improbable / improbable / improbables / improbables,形容词;补充
+es-1470,es,es-18,gratuito,免费的,El curso es gratuito.,课程免费。,形容词；性数形式 gratuito / gratuita / gratuitos / gratuitas,形容词;补充
+es-1471,es,es-18,público,公共的,El parque es público.,公园是公共的。,形容词；性数形式 público / pública / públicos / públicas,形容词;补充
+es-1472,es,es-18,privado,私人的,El jardín es privado.,花园是私人的。,形容词；性数形式 privado / privada / privados / privadas,形容词;补充
+es-1473,es,es-18,consciente,有意识的；了解的,Soy consciente del problema.,我了解这个问题。,形容词；性数形式 consciente / consciente / conscientes / conscientes,形容词;补充
+es-1474,es,es-19,por casualidad,偶然地,Encontré el libro por casualidad.,我偶然找到了这本书。,固定搭配，说明事情偶然发生；只生成识别卡。,固定搭配;phrase
+es-1475,es,es-19,por lo menos,至少,Necesito por lo menos dos horas.,我至少需要两小时。,固定搭配，表示最低数量；只生成识别卡。,固定搭配;phrase
+es-1476,es,es-19,por ahora,目前；暂时,"Por ahora, vamos en tren.",目前，我们乘火车去。,固定搭配，表示当前阶段；只生成识别卡。,固定搭配;phrase
+es-1477,es,es-19,por supuesto,当然,"Por supuesto, puedes usar mi tarjeta.",你当然可以用我的卡。,固定搭配，表示肯定；只生成识别卡。,固定搭配;phrase
+es-1478,es,es-19,por ejemplo,例如,"Puedes comprar fruta, por ejemplo, manzanas.",你可以买水果，例如苹果。,固定搭配，引出例子；只生成识别卡。,固定搭配;phrase
+es-1479,es,es-19,por adelantado,提前地；预先,Pagamos el viaje por adelantado.,我们预先支付旅行费用。,常与 pagar、reservar 搭配；只生成识别卡。,固定搭配;phrase
+es-1480,es,es-19,por completo,完全地,Leí el documento por completo.,我把文件完整读了一遍。,固定搭配，表示全部完成；只生成识别卡。,固定搭配;phrase
+es-1481,es,es-19,por escrito,以书面形式,Quiero recibir la respuesta por escrito.,我想收到书面答复。,说明表达方式；只生成识别卡。,固定搭配;phrase
+es-1482,es,es-19,por teléfono,通过电话,Confirmo la reserva por teléfono.,我通过电话确认预订。,por 表示通信方式；只生成识别卡。,固定搭配;phrase
+es-1483,es,es-19,por correo,通过邮件或邮寄,Envío la factura por correo.,我通过邮件发送发票。,por 表示传送方式；只生成识别卡。,固定搭配;phrase
+es-1484,es,es-19,por la mañana,在上午,La tienda abre por la mañana.,商店上午营业。,表示大致的时段；只生成识别卡。,固定搭配;phrase
+es-1485,es,es-19,por la tarde,在下午,Paseamos por la tarde.,我们下午散步。,表示大致的时段；只生成识别卡。,固定搭配;phrase
+es-1486,es,es-19,por la noche,在晚上,El autobús pasa por la noche.,公交车晚上经过。,表示大致的时段；只生成识别卡。,固定搭配;phrase
+es-1487,es,es-19,por persona,每人,El precio es de diez euros por persona.,价格是每人十欧元。,por 表示分配的单位；只生成识别卡。,固定搭配;phrase
+es-1488,es,es-19,para siempre,永远地,Quiero guardar esta foto para siempre.,我想永远保存这张照片。,固定搭配，表示一直延续；只生成识别卡。,固定搭配;phrase
+es-1489,es,es-19,para empezar,首先；作为开始,"Para empezar, lee el precio.",首先，读一下价格。,para 后接不定式；只生成识别卡。,固定搭配;phrase
+es-1490,es,es-19,para terminar,最后；作为结束,"Para terminar, comprueba la cuenta.",最后，检查账单。,para 后接不定式；只生成识别卡。,固定搭配;phrase
+es-1491,es,es-19,para mí,对我而言；给我,"Para mí, este libro es interesante.",对我而言，这本书很有趣。,para 表示看法或接受对象；mí 保留重音；只生成识别卡。,固定搭配;phrase
+es-1492,es,es-19,para ti,对你而言；给你,Este regalo es para ti.,这个礼物是给你的。,para 后的 ti 不加重音；只生成识别卡。,固定搭配;phrase
+es-1493,es,es-19,para entonces,到那时,El pedido estará preparado para entonces.,到那时，订单会准备好。,para 表示完成期限；只生成识别卡。,固定搭配;phrase
+es-1494,es,es-19,depender,取决于,El precio puede depender del día.,价格可能取决于日期。,depender 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：dependo / dependes / depende / dependemos / dependéis / dependen；搭配 depender de + 名词；de + el → del,动词;不定式;现在时;介词搭配
+es-1495,es,es-19,interesarse,对……感兴趣,Quiero interesarme más por la ciudad.,我想多关注这座城市。,interesarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me intereso / te interesas / se interesa / nos interesamos / os interesáis / se interesan；搭配 interesarse por + 名词,动词;不定式;现在时;介词搭配
+es-1496,es,es-19,preocuparse,为……担心,No quiero preocuparme por el viaje.,我不想为旅行担心。,preocuparse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me preocupo / te preocupas / se preocupa / nos preocupamos / os preocupáis / se preocupan；搭配 preocuparse por + 名词,动词;不定式;现在时;介词搭配
+es-1497,es,es-19,renunciar,放弃,No quiero renunciar al viaje.,我不想放弃这次旅行。,renunciar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：renuncio / renuncias / renuncia / renunciamos / renunciáis / renuncian；搭配 renunciar a + 名词或不定式,动词;不定式;现在时;介词搭配
+es-1498,es,es-19,dedicarse,从事；投入于,Quiero dedicarme a enseñar español.,我想从事西语教学。,dedicarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me dedico / te dedicas / se dedica / nos dedicamos / os dedicáis / se dedican；搭配 dedicarse a + 名词或不定式,动词;不定式;现在时;介词搭配
+es-1499,es,es-19,acostumbrarse,习惯于,Es fácil acostumbrarse a este horario.,习惯这个时间表很容易。,acostumbrarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me acostumbro / te acostumbras / se acostumbra / nos acostumbramos / os acostumbráis / se acostumbran；搭配 acostumbrarse a + 名词或不定式,动词;不定式;现在时;介词搭配
+es-1500,es,es-19,insistir,坚持；反复要求,No quiero insistir en esta idea.,我不想坚持这个想法。,insistir 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：insisto / insistes / insiste / insistimos / insistís / insisten；搭配 insistir en + 名词或不定式,动词;不定式;现在时;介词搭配
+es-1501,es,es-19,ocuparse,负责；处理,Voy a ocuparme de la compra.,我会负责购物。,ocuparse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me ocupo / te ocupas / se ocupa / nos ocupamos / os ocupáis / se ocupan；搭配 ocuparse de + 名词或不定式,动词;不定式;现在时;介词搭配
+es-1502,es,es-19,optar,选择,Podemos optar por el tren.,我们可以选择火车。,optar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：opto / optas / opta / optamos / optáis / optan；搭配 optar por + 名词或不定式,动词;不定式;现在时;介词搭配
+es-1503,es,es-19,beneficiarse,获益,Los estudiantes pueden beneficiarse del descuento.,学生可以享受折扣。,beneficiarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me beneficio / te beneficias / se beneficia / nos beneficiamos / os beneficiáis / se benefician；搭配 beneficiarse de + 名词,动词;不定式;现在时;介词搭配
+es-1504,es,es-19,aspirar,希望达到；向往,Quiero aspirar a un empleo mejor.,我希望获得更好的工作。,aspirar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：aspiro / aspiras / aspira / aspiramos / aspiráis / aspiran；本课学 aspirar a + 名词或不定式；另有吸入的意思,动词;不定式;现在时;介词搭配
+es-1505,es,es-19,enterarse,得知,Voy a enterarme del precio.,我要了解一下价格。,enterarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me entero / te enteras / se entera / nos enteramos / os enteráis / se enteran；搭配 enterarse de + 名词；从句前是 de que,动词;不定式;现在时;介词搭配
+es-1506,es,es-19,coincidir,一致；恰好相遇,Tu opinión puede coincidir con mi opinión.,你的看法可能和我的一致。,coincidir 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：coincido / coincides / coincide / coincidimos / coincidís / coinciden；搭配 coincidir con + 人或看法,动词;不定式;现在时;介词搭配
+es-1507,es,es-19,reaccionar,作出反应,El conductor debe reaccionar a la señal.,司机应当对信号作出反应。,reaccionar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：reacciono / reaccionas / reacciona / reaccionamos / reaccionáis / reaccionan；搭配 reaccionar a + 名词,动词;不定式;现在时;介词搭配
+es-1508,es,es-19,prescindir,不用；免去,Podemos prescindir del coche.,我们可以不用汽车。,prescindir 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：prescindo / prescindes / prescinde / prescindimos / prescindís / prescinden；搭配 prescindir de + 名词,动词;不定式;现在时;介词搭配
+es-1509,es,es-19,el transporte,交通；运输,El transporte público es cómodo.,公共交通很方便。,名词（阳）,名词;交通与购物
+es-1510,es,es-19,el tráfico,交通流量,El tráfico es lento hoy.,今天车流行进缓慢。,名词（阳）,名词;交通与购物
+es-1511,es,es-19,el peatón,行人,El peatón espera en la acera.,行人在路边人行道上等待。,名词（阳）；复数 los peatones；女性为 la peatona,名词;交通与购物
+es-1512,es,es-19,el conductor,司机,El conductor conoce la ruta.,司机熟悉路线。,名词（阳）；女性为 la conductora,名词;交通与购物
+es-1513,es,es-19,el pasajero,乘客,El pasajero tiene un billete.,乘客有一张票。,名词（阳）；女性为 la pasajera,名词;交通与购物
+es-1514,es,es-19,el vehículo,车辆,El vehículo está en el garaje.,车辆在车库里。,名词（阳）,名词;交通与购物
+es-1515,es,es-19,la moto,摩托车,La moto es roja.,摩托车是红色的。,名词（阴）,名词;交通与购物
+es-1516,es,es-19,el tranvía,有轨电车,El tranvía pasa por el centro.,有轨电车经过市中心。,名词（阳）,名词;交通与购物
+es-1517,es,es-19,el aparcamiento,停车场；停车,El aparcamiento está cerca de la tienda.,停车场在商店附近。,名词（阳）,名词;交通与购物
+es-1518,es,es-19,el atasco,交通拥堵,Hay un atasco en la avenida.,大道上有交通拥堵。,名词（阳）,名词;交通与购物
+es-1519,es,es-19,el cinturón,皮带；安全带,El cinturón está en el asiento.,安全带在座位上。,名词（阳）；复数 los cinturones,名词;交通与购物
+es-1520,es,es-19,la gasolina,汽油,La gasolina es cara.,汽油很贵。,名词（阴）,名词;交通与购物
+es-1521,es,es-19,la tarifa,价目；费率,La tarifa es de cinco euros.,费用是五欧元。,名词（阴）,名词;交通与购物
+es-1522,es,es-19,el abono,通票；月票,El abono cuesta veinte euros.,通票二十欧元。,名词（阳）,名词;交通与购物
+es-1523,es,es-19,el efectivo,现金,El efectivo está en el monedero.,现金在零钱包里。,名词（阳）；本课常作不可数名词；pagar en efectivo 表示用现金支付,名词;交通与购物
+es-1524,es,es-19,el monedero,零钱包,El monedero está en la bolsa.,零钱包在包里。,名词（阳）,名词;交通与购物
+es-1525,es,es-19,el escaparate,橱窗,El escaparate tiene zapatos y bolsas.,橱窗里有鞋和包。,名词（阳）,名词;交通与购物
+es-1526,es,es-19,el carrito,小推车,El carrito está lleno de comida.,小推车里装满了食物。,名词（阳）,名词;交通与购物
+es-1527,es,es-19,la rebaja,降价；折价,La rebaja termina el lunes.,降价活动到星期一结束。,名词（阴）；复数 las rebajas 常表示促销期,名词;交通与购物
+es-1528,es,es-19,la compra,购买；买来的物品,La compra está en la cocina.,买来的东西在厨房里。,名词（阴）,名词;交通与购物
+es-1529,es,es-19,económico,经济实惠的,El transporte es económico.,交通费用很实惠。,形容词；性数形式 económico / económica / económicos / económicas,形容词
+es-1530,es,es-19,asequible,价格可承受的,El precio es asequible.,价格可以接受。,形容词；性数形式 asequible / asequible / asequibles / asequibles,形容词
+es-1531,es,es-19,urbano,城市的,El transporte urbano es rápido.,城市交通很快。,形容词；性数形式 urbano / urbana / urbanos / urbanas,形容词
+es-1532,es,es-19,rural,乡村的,El hotel rural está cerca del río.,乡村旅馆靠近河流。,形容词；性数形式 rural / rural / rurales / rurales,形容词
+es-1533,es,es-19,interurbano,城际的,El autobús interurbano pasa por este pueblo.,城际公交车经过这个村镇。,形容词；性数形式 interurbano / interurbana / interurbanos / interurbanas,形容词
+es-1534,es,es-19,comercial,商业的,El centro comercial tiene muchas tiendas.,购物中心有很多商店。,形容词；性数形式 comercial / comercial / comerciales / comerciales,形容词
+es-1535,es,es-19,directo,直达的；直接的,El tren es directo.,这班火车直达。,形容词；性数形式 directo / directa / directos / directas,形容词
+es-1536,es,es-19,indirecto,间接的,La pregunta es indirecta.,这个问题是间接提出的。,形容词；性数形式 indirecto / indirecta / indirectos / indirectas,形容词
+es-1537,es,es-19,accesible,便于进入的；可到达的,La estación es accesible.,车站便于进出。,形容词；性数形式 accesible / accesible / accesibles / accesibles,形容词
+es-1538,es,es-19,opcional,可选择的,La visita al museo es opcional.,可以自行选择是否参观博物馆。,形容词；性数形式 opcional / opcional / opcionales / opcionales,形容词
+es-1539,es,es-19,Este regalo es para mi hermana,这个礼物是给我姐姐的,Este regalo es para mi hermana.,这个礼物是给我姐姐的。,整句；para 指接受对象；只生成识别卡。,句型;phrase
+es-1540,es,es-19,Pagué veinte euros por el abono,我花了二十欧元买通票,Pagué veinte euros por el abono.,我花了二十欧元买通票。,整句；por 表示交换的东西；只生成识别卡。,句型;phrase
+es-1541,es,es-19,Pasamos por la plaza para comprar pan,我们经过广场去买面包,Pasamos por la plaza para comprar pan.,我们经过广场去买面包。,整句；por 表经过，para + 不定式表目的；只生成识别卡。,句型;phrase
+es-1542,es,es-19,Necesito el pedido para el lunes,我需要订单在星期一之前准备好,Necesito el pedido para el lunes.,我需要订单在星期一之前准备好。,整句；para 表期限；只生成识别卡。,句型;phrase
+es-1543,es,es-19,Gracias por ayudarme con la compra,谢谢你帮我购物,Gracias por ayudarme con la compra.,谢谢你帮我购物。,整句；por + 不定式表感谢的原因；只生成识别卡。,句型;phrase
+es-1544,es,es-19,el importe,金额,El importe está en la factura.,金额写在发票上。,名词（阳）,名词;补充;交通与购物
+es-1545,es,es-19,el pago,支付,Hago el pago con tarjeta.,我用卡付款。,名词（阳）,名词;补充;交通与购物
+es-1546,es,es-19,la moneda,硬币；货币,La moneda está en el monedero.,硬币在零钱包里。,名词（阴）,名词;补充;交通与购物
+es-1547,es,es-19,la caja registradora,收银机,La caja registradora está en el mostrador.,收银机在柜台上。,名词（阴）,名词;补充;交通与购物
+es-1548,es,es-19,el cupón,优惠券,El cupón ofrece un descuento.,优惠券可以提供折扣。,名词（阳）；复数 los cupones,名词;补充;交通与购物
+es-1549,es,es-19,el envío,寄送,El envío es gratuito.,寄送免费。,名词（阳）,名词;补充;交通与购物
+es-1550,es,es-19,el reparto,配送,El reparto empieza por la mañana.,配送从上午开始。,名词（阳）,名词;补充;交通与购物
+es-1551,es,es-19,el comprobante,证明单据,El comprobante del envío está aquí.,寄送凭据在这里。,名词（阳）,名词;补充;交通与购物
+es-1552,es,es-19,el tique,小票,El tique está en la bolsa.,小票在包里。,名词（阳）,名词;补充;交通与购物
+es-1553,es,es-19,el justificante,凭证,El justificante del pago está aquí.,支付凭证在这里。,名词（阳）,名词;补充;交通与购物
+es-1554,es,es-20,olvidarse,忘记,No quiero olvidarme de la llave.,我不想忘带钥匙。,olvidarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me olvido / te olvidas / se olvida / nos olvidamos / os olvidáis / se olvidan；olvidarse de + 名词；意外结构为 se me olvidó la llave，和本卡的人称用法区分,动词;不定式;现在时;se用法
+es-1555,es,es-20,romperse,破裂；损坏,El vaso puede romperse.,玻璃杯可能会碎。,romperse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me rompo / te rompes / se rompe / nos rompemos / os rompéis / se rompen；物品作主语时用 se rompe / se rompen；过去时第三人称 se rompió / se rompieron,动词;不定式;现在时;se用法
+es-1556,es,es-20,acabarse,用尽；结束,El jabón va a acabarse.,肥皂快用完了。,acabarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me acabo / te acabas / se acaba / nos acabamos / os acabáis / se acaban；物品作主语时用 se acaba；me acabo el pan 表示我把面包吃完；意外用法 se me acabó el jabón,动词;不定式;现在时;se用法
+es-1557,es,es-20,estropearse,出故障；变坏,La lavadora puede estropearse.,洗衣机可能出故障。,estropearse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me estropeo / te estropeas / se estropea / nos estropeamos / os estropeáis / se estropean；物品作主语时常用第三人称；过去时 se estropeó / se estropearon,动词;不定式;现在时;se用法
+es-1558,es,es-20,mancharse,沾上污渍,La camisa puede mancharse.,衬衫可能沾上污渍。,mancharse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me mancho / te manchas / se mancha / nos manchamos / os mancháis / se manchan；可指人把自己弄脏或物品变脏,动词;不定式;现在时;se用法
+es-1559,es,es-20,mojarse,弄湿；被淋湿,La toalla puede mojarse.,毛巾可能弄湿。,mojarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me mojo / te mojas / se moja / nos mojamos / os mojáis / se mojan；代词随主语变化,动词;不定式;现在时;se用法
+es-1560,es,es-20,secarse,擦干自己；变干,Voy a secarme las manos.,我要擦干双手。,secarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me seco / te secas / se seca / nos secamos / os secáis / se secan；本课现在时规则变化；不定式后代词连写,动词;不定式;现在时;se用法
+es-1561,es,es-20,derramarse,洒出；溢出,El agua puede derramarse.,水可能洒出来。,derramarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me derramo / te derramas / se derrama / nos derramamos / os derramáis / se derraman；液体作主语时通常只用第三人称；其余人称列出以认识形式,动词;不定式;现在时;se用法
+es-1562,es,es-20,abrirse,打开；开启,La ventana puede abrirse.,窗户可以打开。,abrirse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me abro / te abres / se abre / nos abrimos / os abrís / se abren；物品作主语时指它打开；人称用法也可表示敞开心意,动词;不定式;现在时;se用法
+es-1563,es,es-20,cerrarse,关上,La puerta puede cerrarse.,门可以关上。,cerrarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me cierro / te cierras / se cierra / nos cerramos / os cerráis / se cierran；e → ie，nosotros 和 vosotros 不变,动词;不定式;现在时;se用法
+es-1564,es,es-20,quemarse,烫伤；受热损坏,No quiero quemarme con el agua caliente.,我不想被热水烫伤。,quemarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me quemo / te quemas / se quema / nos quemamos / os quemáis / se queman；可与 con + 热物搭配,动词;不定式;现在时;se用法
+es-1565,es,es-20,ensuciarse,弄脏,El trapo puede ensuciarse.,抹布可能弄脏。,ensuciarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me ensucio / te ensucias / se ensucia / nos ensuciamos / os ensuciáis / se ensucian；代词随主语变化,动词;不定式;现在时;se用法
+es-1566,es,es-20,agotarse,用尽；感到疲惫,El detergente puede agotarse.,洗衣液可能用完。,agotarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me agoto / te agotas / se agota / nos agotamos / os agotáis / se agotan；物品用尽常用第三人称；人作主语可指变得疲惫,动词;不定式;现在时;se用法
+es-1567,es,es-20,desordenarse,变乱,La habitación puede desordenarse.,房间可能变乱。,desordenarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me desordeno / te desordenas / se desordena / nos desordenamos / os desordenáis / se desordenan；物品作主语时通常用第三人称,动词;不定式;现在时;se用法
+es-1568,es,es-20,escaparse,溜走；意外滑落,Se me escapa el jabón.,肥皂从我手中滑走。,escaparse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me escapo / te escapas / se escapa / nos escapamos / os escapáis / se escapan；escaparse de + 地点；se me escapa 表示某物意外滑离我手中等,动词;不定式;现在时;se用法
+es-1569,es,es-20,encontrarse,见面；处于某种状态,Los vecinos van a encontrarse en el patio.,邻居们会在院子里见面。,encontrarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me encuentro / te encuentras / se encuentra / nos encontramos / os encontráis / se encuentran；o → ue，nosotros 和 vosotros 不变；可表相互见面,动词;不定式;现在时;se用法
+es-1570,es,es-20,saludarse,相互问候,Los vecinos van a saludarse.,邻居们会相互问候。,saludarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me saludo / te saludas / se saluda / nos saludamos / os saludáis / se saludan；相互意义用复数；单数形式可作反身动作,动词;不定式;现在时;se用法
+es-1571,es,es-20,abrazarse,拥抱彼此,Los hermanos quieren abrazarse.,兄弟俩想相互拥抱。,abrazarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me abrazo / te abrazas / se abraza / nos abrazamos / os abrazáis / se abrazan；相互意义用复数；单数可指抱住自己,动词;不定式;现在时;se用法
+es-1572,es,es-20,afeitarse,刮胡子,Mi padre va a afeitarse.,我父亲准备刮胡子。,afeitarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me afeito / te afeitas / se afeita / nos afeitamos / os afeitáis / se afeitan；真正的反身动作：主语也接受动作,动词;不定式;现在时;se用法
+es-1573,es,es-20,ponerse,穿上；变得,Voy a ponerme la camisa limpia.,我要穿上干净衬衫。,ponerse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me pongo / te pones / se pone / nos ponemos / os ponéis / se ponen；yo me pongo 不规则；其余人称列在前表,动词;不定式;现在时;se用法
+es-1574,es,es-20,el suelo,地面；地板,El suelo está limpio.,地板很干净。,名词（阳）,名词;家务与物品
+es-1575,es,es-20,la alfombra,地毯,La alfombra está en el salón.,地毯在客厅里。,名词（阴）,名词;家务与物品
+es-1576,es,es-20,la cortina,窗帘,La cortina es blanca.,窗帘是白色的。,名词（阴）,名词;家务与物品
+es-1577,es,es-20,la lámpara,灯,La lámpara está en la mesa.,灯在桌子上。,名词（阴）,名词;家务与物品
+es-1578,es,es-20,la bombilla,灯泡,La bombilla está en la lámpara.,灯泡在灯里。,名词（阴）,名词;家务与物品
+es-1579,es,es-20,el enchufe,插座；插头,El enchufe está en la pared.,插座在墙上。,名词（阳）,名词;家务与物品
+es-1580,es,es-20,el cable,电线；连接线,El cable está detrás de la mesa.,电线在桌子后面。,名词（阳）,名词;家务与物品
+es-1581,es,es-20,el cajón,抽屉,El cajón está abierto.,抽屉开着。,名词（阳）；复数 los cajones,名词;家务与物品
+es-1582,es,es-20,la estantería,架子；书架,La estantería tiene muchos libros.,书架上有很多书。,名词（阴）,名词;家务与物品
+es-1583,es,es-20,la nevera,冰箱,La nevera está en la cocina.,冰箱在厨房里。,名词（阴）,名词;家务与物品
+es-1584,es,es-20,la lavadora,洗衣机,La lavadora está llena de ropa.,洗衣机里装满了衣服。,名词（阴）,名词;家务与物品
+es-1585,es,es-20,el lavavajillas,洗碗机,El lavavajillas está al lado de la nevera.,洗碗机在冰箱旁。,名词（阳）；单复数同形：el lavavajillas / los lavavajillas,名词;家务与物品
+es-1586,es,es-20,el fregadero,厨房洗涤槽,El fregadero está limpio.,厨房洗涤槽很干净。,名词（阳）,名词;家务与物品
+es-1587,es,es-20,la escoba,扫帚,La escoba está detrás de la puerta.,扫帚在门后。,名词（阴）,名词;家务与物品
+es-1588,es,es-20,la fregona,拖把,La fregona está en el cubo.,拖把在桶里。,名词（阴）,名词;家务与物品
+es-1589,es,es-20,el cubo,桶,El cubo tiene agua.,桶里有水。,名词（阳）,名词;家务与物品
+es-1590,es,es-20,el trapo,抹布,El trapo está mojado.,抹布湿了。,名词（阳）,名词;家务与物品
+es-1591,es,es-20,el jabón,肥皂,El jabón está en el baño.,肥皂在浴室里。,名词（阳）；复数 los jabones,名词;家务与物品
+es-1592,es,es-20,el detergente,洗涤剂,El detergente está cerca de la lavadora.,洗涤剂在洗衣机旁。,名词（阳）,名词;家务与物品
+es-1593,es,es-20,la esponja,海绵,La esponja está en el fregadero.,海绵在厨房洗涤槽里。,名词（阴）,名词;家务与物品
+es-1594,es,es-20,accidentalmente,偶然地；意外地,El vaso se rompió accidentalmente.,玻璃杯意外碎了。,副词；形式不随性数变化；说明动作方式、频率或程度。,副词
+es-1595,es,es-20,involuntariamente,无意地,Mojé el papel involuntariamente.,我无意中把纸弄湿了。,副词；形式不随性数变化；说明动作方式、频率或程度。,副词
+es-1596,es,es-20,mutuamente,相互地,Los vecinos se ayudan mutuamente.,邻居们互相帮助。,副词；形式不随性数变化；说明动作方式、频率或程度。,副词
+es-1597,es,es-20,diariamente,每天,Limpio la cocina diariamente.,我每天打扫厨房。,副词；形式不随性数变化；说明动作方式、频率或程度。,副词
+es-1598,es,es-20,habitualmente,通常；习惯上,Habitualmente guardo las llaves aquí.,我通常把钥匙放在这里。,副词；形式不随性数变化；说明动作方式、频率或程度。,副词
+es-1599,es,es-20,automáticamente,自动地,La puerta se cierra automáticamente.,门自动关上。,副词；形式不随性数变化；说明动作方式、频率或程度。,副词
+es-1600,es,es-20,manualmente,手动地,La ventana se abre manualmente.,窗户要手动打开。,副词；形式不随性数变化；说明动作方式、频率或程度。,副词
+es-1601,es,es-20,totalmente,完全地,El cajón está totalmente vacío.,抽屉完全空着。,副词；形式不随性数变化；说明动作方式、频率或程度。,副词
+es-1602,es,es-20,parcialmente,部分地,La caja está parcialmente abierta.,箱子只打开了一部分。,副词；形式不随性数变化；说明动作方式、频率或程度。,副词
+es-1603,es,es-20,fácilmente,容易地,El vaso puede romperse fácilmente.,玻璃杯很容易碎。,副词；形式不随性数变化；说明动作方式、频率或程度。,副词
+es-1604,es,es-20,Se me olvidó la llave,我忘带钥匙了,Se me olvidó la llave.,我忘带钥匙了。,整句；se + me + 动词，la llave 作主语；只生成识别卡。,句型;phrase
+es-1605,es,es-20,Se me cayeron los platos,我不小心把盘子掉在地上了,Se me cayeron los platos.,我不小心把盘子掉在地上了。,整句；复数主语 los platos 与 cayeron 一致；me 表受影响的人；只生成识别卡。,句型;phrase
+es-1606,es,es-20,Se venden muebles usados,出售旧家具,Se venden muebles usados.,出售旧家具。,整句；被动 se，复数主语 muebles 配 venden；只生成识别卡。,句型;phrase
+es-1607,es,es-20,Los vecinos se saludan cada mañana,邻居们每天早上相互问候,Los vecinos se saludan cada mañana.,邻居们每天早上相互问候。,整句；复数主语，se 表相互动作；只生成识别卡。,句型;phrase
+es-1608,es,es-20,La receta se la doy a mi madre,我把菜谱给我母亲,La receta se la doy a mi madre.,我把菜谱给我母亲。,整句；le 在 la 前变 se，la 指 la receta；只生成识别卡。,句型;phrase
+es-1609,es,es-20,Se alquilan habitaciones,有房间出租,Se alquilan habitaciones.,有房间出租。,公告；被动 se，habitaciones 是复数主语；只生成识别卡。,公告短语;phrase
+es-1610,es,es-20,Se admiten tarjetas,接受银行卡,Se admiten tarjetas.,接受银行卡。,公告；被动 se，复数动词 admiten；只生成识别卡。,公告短语;phrase
+es-1611,es,es-20,Se ruega silencio,请保持安静,Se ruega silencio.,请保持安静。,公告惯用表达；rogar 表请求；只生成识别卡。,公告短语;phrase
+es-1612,es,es-20,Se necesita ayuda,需要帮助,Se necesita ayuda.,需要帮助。,公告；单数主语 ayuda 与 necesita 一致；只生成识别卡。,公告短语;phrase
+es-1613,es,es-20,Se prohíbe fumar,禁止吸烟,Se prohíbe fumar.,禁止吸烟。,公告惯用表达；prohíbe 保留 í；只生成识别卡。,公告短语;phrase
+es-1614,es,es-20,el mueble,家具；一件家具,El mueble está en el salón.,家具在客厅里。,名词（阳）,名词;补充;家务与物品
+es-1615,es,es-20,el cojín,靠垫,El cojín está en el sofá.,靠垫在沙发上。,名词（阳）；复数 los cojines,名词;补充;家务与物品
+es-1616,es,es-20,la manta,毯子,La manta está en la cama.,毯子在床上。,名词（阴）,名词;补充;家务与物品
+es-1617,es,es-20,la almohada,枕头,La almohada es blanda.,枕头很软。,名词（阴）,名词;补充;家务与物品
+es-1618,es,es-20,la sábana,床单,La sábana está limpia.,床单是干净的。,名词（阴）,名词;补充;家务与物品
+es-1619,es,es-20,la toalla,毛巾,La toalla está en el baño.,毛巾在浴室里。,名词（阴）,名词;补充;家务与物品
+es-1620,es,es-20,el cepillo,刷子,El cepillo está cerca del jabón.,刷子在肥皂旁。,名词（阳）,名词;补充;家务与物品
+es-1621,es,es-20,la percha,衣架,La percha está en el armario.,衣架在衣柜里。,名词（阴）,名词;补充;家务与物品
+es-1622,es,es-20,el recogedor,簸箕,El recogedor está al lado de la escoba.,簸箕在扫帚旁。,名词（阳）,名词;补充;家务与物品
+es-1623,es,es-20,la plancha,熨斗,La plancha está caliente.,熨斗很热。,名词（阴）,名词;补充;家务与物品
+es-1624,es,es-20,doméstico,家庭的；家用的,El trabajo doméstico necesita tiempo.,家务需要时间。,形容词；性数形式 doméstico / doméstica / domésticos / domésticas,形容词;补充
+es-1625,es,es-20,frágil,易碎的,Este vaso es frágil.,这个玻璃杯易碎。,形容词；性数形式 frágil / frágil / frágiles / frágiles,形容词;补充
+es-1626,es,es-20,usado,使用过的；旧的,El mueble usado es barato.,旧家具很便宜。,形容词；性数形式 usado / usada / usados / usadas,形容词;补充
+es-1627,es,es-20,ordenado,整齐的；有条理的,El armario está ordenado.,衣柜整理得很整齐。,形容词；性数形式 ordenado / ordenada / ordenados / ordenadas,形容词;补充
+es-1628,es,es-20,desordenado,凌乱的,El cajón está desordenado.,抽屉里很乱。,形容词；性数形式 desordenado / desordenada / desordenados / desordenadas,形容词;补充
+es-1629,es,es-20,admitir,接纳；接受,La tienda admite tarjetas.,这家商店接受银行卡。,admitir 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：admito / admites / admite / admitimos / admitís / admiten；admitir + 名词；公告常用 se admiten tarjetas,动词;不定式;现在时;补充;家务与公告
+es-1630,es,es-20,rogar,请求,Rogamos silencio.,我们请求保持安静。,rogar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：ruego / ruegas / ruega / rogamos / rogáis / ruegan；o → ue，nosotros 和 vosotros 不变,动词;不定式;现在时;补充;家务与公告
+es-1631,es,es-20,prohibir,禁止,Se prohíbe fumar aquí.,这里禁止吸烟。,prohibir 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：prohíbo / prohíbes / prohíbe / prohibimos / prohibís / prohíben；单数及第三人称复数保留 í；prohibir + 不定式,动词;不定式;现在时;补充;家务与公告
+es-1632,es,es-20,fumar,吸烟,No quiero fumar.,我不想吸烟。,fumar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：fumo / fumas / fuma / fumamos / fumáis / fuman；现在时规则变化,动词;不定式;现在时;补充;家务与公告
+es-1633,es,es-20,tender,晾；铺开,Voy a tender la ropa.,我要晾衣服。,tender 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：tiendo / tiendes / tiende / tendemos / tendéis / tienden；e → ie，nosotros 和 vosotros 不变；tender la ropa 是晾衣服,动词;不定式;现在时;补充;家务与公告
