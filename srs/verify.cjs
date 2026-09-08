@@ -1141,7 +1141,7 @@ test('任务 E2：俄语第 9–12 周 id 连续、重音、名词标性、动�
     assert(!seen.has(ruDeaccent(row.front)),'新词内部不重复：'+row.front);
     seen.add(ruDeaccent(row.front));
     assert.doesNotMatch(row.front,/[A-Za-ź´]/,row.id+' front 只用西里尔字母和 U+0301');
-    for (const word of row.front.match(/[А-Яа-яЁё́]+/g) || []) {
+    for (const word of row.front.match(/[А-Яа-яЁё\u0301]+/g) || []) {
       if ((word.match(/[аеёиоуыэюя]/gi)||[]).length>1) assert(/[́ёЁ]/.test(word),row.id+' 多音节词要标重音：'+word);
       for (let i=0;i<word.length;i++) if (word[i]==='́') assert(/[аеёиоуыэюя]/i.test(word[i-1]),row.id+' 重音标记要跟在元音后');
     }
@@ -1567,7 +1567,7 @@ test('任务 F2：16 篇俄语阅读结构完整、句数在区间内、答案�
       assert.doesNotMatch(sentence.text,/[A-Za-z]/,id+' 句子不含拉丁字母');
       assert.match(sentence.zh,/[㐀-鿿]/,id+'：'+sentence.text);
       // 多音节词标 U+0301，重音记号只能跟在元音后面。
-      for (const word of sentence.text.match(/[А-Яа-яЁё́]+/g) || []) {
+      for (const word of sentence.text.match(/[А-Яа-яЁё\u0301]+/g) || []) {
         if ((word.match(/[аеёиоуыэюя]/gi)||[]).length>1) assert(/[́ёЁ]/.test(word),id+' 多音节词要标重音：'+word);
         for (let i=0;i<word.length;i++) if (word[i]==='́') assert(/[аеёиоуыэюя]/i.test(word[i-1]),id+' 重音标记要跟在元音后：'+word);
       }
@@ -1640,7 +1640,7 @@ test('任务 F2：ru-05 至 ru-08 的 note 复数重音已更正，CSV 与内嵌
   // 这四课的 note 里，复数与变位形式的重音记号都跟在元音后面，且多音节形式都标了重音。
   for (const row of initialRows.filter(row=>lessons.includes(row.lesson))) {
     const forms=row.note.split(/[：；]/).slice(1).join(' ');
-    for (const word of forms.match(/[А-Яа-яЁё́]+/g) || []) {
+    for (const word of forms.match(/[А-Яа-яЁё\u0301]+/g) || []) {
       if ((word.match(/[аеёиоуыэюя]/gi)||[]).length>1) assert(/[́ёЁ]/.test(word),row.id+' note 多音节形式要标重音：'+word);
       for (let i=0;i<word.length;i++) if (word[i]==='́') assert(/[аеёиоуыэюя]/i.test(word[i-1]),row.id+' note 重音记号要跟在元音后：'+word);
     }
@@ -1651,7 +1651,7 @@ test('任务 F2：ru-05 至 ru-08 的 note 复数重音已更正，CSV 与内嵌
 const R1_STANDARD_STRESS={
   друзей:'друзе́й',братьев:'бра́тьев',детей:'дете́й',много:'мно́го',мало:'ма́ло',
   сколько:'ско́лько',несколько:'не́сколько',после:'по́сле',около:'о́коло',кроме:'кро́ме',
-  первое:'пе́рвое',второе:'второ́е',третье:'тре́тье',четвёртое:'четвё́ртое',пятое:'пя́тое',
+  первое:'пе́рвое',второе:'второ́е',третье:'тре́тье',четвёртое:'четвёртое',пятое:'пя́тое',
   шестое:'шесто́е',седьмое:'седьмо́е',восьмое:'восьмо́е',девятое:'девя́тое',десятое:'деся́тое',
   тебе:'тебе́',ему:'ему́',нравится:'нра́вится',нравятся:'нра́вятся',надо:'на́до',нужно:'ну́жно',
   можно:'мо́жно',нельзя:'нельзя́',телефону:'телефо́ну',вторникам:'вто́рникам',
