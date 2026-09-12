@@ -1632,3 +1632,243 @@ es-1630,es,es-20,rogar,请求,Rogamos silencio.,我们请求保持安静。,roga
 es-1631,es,es-20,prohibir,禁止,Se prohíbe fumar aquí.,这里禁止吸烟。,prohibir 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：prohíbo / prohíbes / prohíbe / prohibimos / prohibís / prohíben；单数及第三人称复数保留 í；prohibir + 不定式,动词;不定式;现在时;补充;家务与公告
 es-1632,es,es-20,fumar,吸烟,No quiero fumar.,我不想吸烟。,fumar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：fumo / fumas / fuma / fumamos / fumáis / fuman；现在时规则变化,动词;不定式;现在时;补充;家务与公告
 es-1633,es,es-20,tender,晾；铺开,Voy a tender la ropa.,我要晾衣服。,tender 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：tiendo / tiendes / tiende / tendemos / tendéis / tienden；e → ie，nosotros 和 vosotros 不变；tender la ropa 是晾衣服,动词;不定式;现在时;补充;家务与公告
+es-1634,es,es-21,es decir,也就是说,"El servicio es gratuito, es decir, no hay que pagar.",这项服务免费，也就是说不用付钱。,用换一种说法解释前面的意思；两词分写。,连接词;phrase
+es-1635,es,es-21,por consiguiente,因此；所以,"La biblioteca está llena; por consiguiente, esperamos fuera.",图书馆满了，因此我们在外面等。,引出前面事实带来的结果。,连接词;phrase
+es-1636,es,es-21,no obstante,不过；然而,"El piso es pequeño; no obstante, es muy luminoso.",公寓很小，不过很明亮。,引出与前面预期不同的事实；可放在分号后。,连接词;phrase
+es-1637,es,es-21,aun así,即便如此,"Hace frío; aun así, vamos al centro.",天气冷，即便如此我们还是去中心。,aun 在这个表达中不带重音符号，意为即便如此；不是 aún（仍然）。,连接词;phrase
+es-1638,es,es-21,en realidad,实际上,"Muchos creen que es caro; en realidad, el precio es bajo.",很多人认为它很贵，实际上价格很低。,用实际情况补充或修正前面的印象。,连接词;phrase
+es-1639,es,es-21,de hecho,事实上,"El barrio es tranquilo; de hecho, casi no hay tráfico.",街区很安静，事实上几乎没有车辆通行。,补充支持前文判断的事实。,连接词;phrase
+es-1640,es,es-21,en resumen,总的来说；概括起来,"En resumen, necesitamos más tiempo para leer.",概括起来，我们需要更多阅读时间。,概括前面几项信息。,连接词;phrase
+es-1641,es,es-21,en conclusión,总之；作为结论,"En conclusión, el plan es útil para el barrio.",总之，这个计划对街区有用。,用于提出段落或文章的结论。,连接词;phrase
+es-1642,es,es-21,en otras palabras,换句话说,"Es peatonal; en otras palabras, los coches no pueden entrar.",这里是步行区，换句话说汽车不能进入。,改用其他词解释相同意思。,连接词;phrase
+es-1643,es,es-21,por el contrario,相反,"No es una calle ruidosa; por el contrario, es muy tranquila.",这不是一条喧闹的街，相反，它非常安静。,强调与前项相反的情况。,连接词;phrase
+es-1644,es,es-21,en particular,尤其；具体而言,"Me gusta la prensa, en particular el periódico local.",我喜欢报刊，尤其是本地报纸。,从较大的范围指出具体项目。,连接词;phrase
+es-1645,es,es-21,incluso,甚至；包括,"Todos pueden participar, incluso los niños.",所有人都可以参加，包括孩子。,补充一个较出乎预料的成员或情况。,连接词;phrase
+es-1646,es,es-21,asimismo,同样；此外,"Hay libros nuevos; asimismo, hay más mesas.",有新书，此外还有更多桌子。,用于书面语的补充连接；作为一个词书写。,连接词;phrase
+es-1647,es,es-21,puesto que,因为；既然,"Puesto que tienes tiempo, puedes leer el artículo.",既然你有时间，就可以读这篇文章。,引出理由，常说明双方已知的情况。,连接词;phrase
+es-1648,es,es-21,ya que,因为；既然,"Vamos andando, ya que la biblioteca está cerca.",我们步行去，因为图书馆就在附近。,连接原因和行动；不是表示已经的 ya 单独用法。,连接词;phrase
+es-1649,es,es-21,informar,告知；报道,Informamos a los vecinos del cambio.,我们把变化告诉邻居们。,informar 的现在时；人称依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：informo / informas / informa / informamos / informáis / informan；informar a alguien de algo：把某事告诉某人。,动词;不定式;城市与新闻
+es-1650,es,es-21,publicar,出版；发布,El periódico publica una noticia local.,报纸刊登一则本地新闻。,publicar 的现在时；人称依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：publico / publicas / publica / publicamos / publicáis / publican；用于文章、新闻或信息的发布。,动词;不定式;城市与新闻
+es-1651,es,es-21,anunciar,宣布；预告,El ayuntamiento anuncia una reunión.,市政府宣布要举行一次会议。,anunciar 的现在时；人称依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：anuncio / anuncias / anuncia / anunciamos / anunciáis / anuncian；后接宣布的事情。,动词;不定式;城市与新闻
+es-1652,es,es-21,entrevistar,采访；面试,La periodista entrevista a la alcaldesa.,记者采访女市长。,entrevistar 的现在时；人称依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：entrevisto / entrevistas / entrevista / entrevistamos / entrevistáis / entrevistan；人的直接宾语前用 a。,动词;不定式;城市与新闻
+es-1653,es,es-21,comunicar,传达；告知,Comunicamos el horario a los lectores.,我们把时间表告诉读者。,comunicar 的现在时；人称依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：comunico / comunicas / comunica / comunicamos / comunicáis / comunican；comunicar algo a alguien：把某事告知某人。,动词;不定式;城市与新闻
+es-1654,es,es-21,transmitir,传递；传达,El artículo transmite una idea clara.,文章传达了一个清楚的想法。,transmitir 的现在时；人称依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：transmito / transmites / transmite / transmitimos / transmitís / transmiten；用于信息或想法的传递。,动词;不定式;城市与新闻
+es-1655,es,es-21,describir,描写；描述,Describo la zona donde vivo.,我描述自己居住的区域。,describir 的现在时；人称依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：describo / describes / describe / describimos / describís / describen；后接被描写的人、事物或地方。,动词;不定式;城市与新闻
+es-1656,es,es-21,destacar,突出；强调,La noticia destaca una mejora importante.,这则新闻强调了一项重要改善。,destacar 的现在时；人称依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：destaco / destacas / destaca / destacamos / destacáis / destacan；本课学习及物用法：强调某项信息。,动词;不定式;城市与新闻
+es-1657,es,es-21,señalar,指出；指示,El lector señala un error en el artículo.,读者指出文章里的一个错误。,señalar 的现在时；人称依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：señalo / señalas / señala / señalamos / señaláis / señalan；ñ 是独立字母；可接具体问题。,动词;不定式;城市与新闻
+es-1658,es,es-21,mencionar,提及,El informe menciona la nueva biblioteca.,报告提到了新图书馆。,mencionar 的现在时；人称依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：menciono / mencionas / menciona / mencionamos / mencionáis / mencionan；提及一个人或一件事。,动词;不定式;城市与新闻
+es-1659,es,es-21,relacionar,联系起来,Relacionamos la noticia con nuestra vida.,我们把新闻与自己的生活联系起来。,relacionar 的现在时；人称依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：relaciono / relacionas / relaciona / relacionamos / relacionáis / relacionan；relacionar algo con algo：把两件事联系起来。,动词;不定式;城市与新闻
+es-1660,es,es-21,conectar,连接,El puente conecta dos zonas de la ciudad.,这座桥连接城市的两个区域。,conectar 的现在时；人称依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：conecto / conectas / conecta / conectamos / conectáis / conectan；可说连接地点或信息。,动词;不定式;城市与新闻
+es-1661,es,es-21,argumentar,提出理由；论证,Argumentamos que el servicio es necesario.,我们提出理由，说明这项服务是必要的。,argumentar 的现在时；人称依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：argumento / argumentas / argumenta / argumentamos / argumentáis / argumentan；argumentar que 后接有理由支持的判断。,动词;不定式;城市与新闻
+es-1662,es,es-21,concluir,得出结论；结束,Concluimos que necesitamos más información.,我们得出结论：需要更多信息。,concluir 的现在时；人称依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：concluyo / concluyes / concluye / concluimos / concluís / concluyen；本课学习 concluir que：得出某个结论；-uir 的部分现在时形式加 y。,动词;不定式;城市与新闻
+es-1663,es,es-21,demostrar,证明；表明,La encuesta demuestra que el servicio es útil.,调查表明这项服务很有用。,demostrar 的现在时；人称依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：demuestro / demuestras / demuestra / demostramos / demostráis / demuestran；重读词干 o 变 ue；nosotros、vosotros 保留 o。,动词;不定式;城市与新闻
+es-1664,es,es-21,el ayuntamiento,市政府；市政厅,El ayuntamiento está al lado de la plaza.,市政厅在广场旁边。,名词（阳）；也指市政机关。,名词;城市与新闻
+es-1665,es,es-21,el alcalde,市长（男性）,El alcalde habla con los vecinos.,男市长与居民交谈。,名词（阳）；女性为 la alcaldesa。,名词;城市与新闻
+es-1666,es,es-21,la alcaldesa,市长（女性）,La alcaldesa visita la biblioteca.,女市长参观图书馆。,名词（阴）；与 el alcalde 对应。,名词;城市与新闻
+es-1667,es,es-21,el distrito,城区；行政区,El distrito tiene dos bibliotecas.,这个城区有两座图书馆。,名词（阳）；指城市内的行政区。,名词;城市与新闻
+es-1668,es,es-21,la zona,区域,Esta zona es tranquila.,这个区域很安静。,名词（阴）；用于城市的某个区域。,名词;城市与新闻
+es-1669,es,es-21,el vecindario,街坊；全体邻居,El vecindario participa en la reunión.,街坊们参加会议。,名词（阳）；集合名词；作单数主语时动词用单数。,名词;城市与新闻
+es-1670,es,es-21,el reportaje,报道；专题报道,Leo un reportaje que describe la ciudad.,我读一篇关于城市的报道。,名词（阳）；通常比一则简短新闻更详细。,名词;城市与新闻
+es-1671,es,es-21,el artículo,文章,El artículo describe el nuevo servicio.,文章介绍了这项新服务。,名词（阳）；这里指报刊文章。,名词;城市与新闻
+es-1672,es,es-21,la prensa,报刊；新闻媒体,La prensa local informa del cambio.,本地媒体报道了这个变化。,名词（阴）；集合用法，通常用单数。,名词;城市与新闻
+es-1673,es,es-21,el lector,读者（男性）,El lector escribe una pregunta.,男读者写了一个问题。,名词（阳）；女性为 la lectora。,名词;城市与新闻
+es-1674,es,es-21,la lectora,读者（女性）,La lectora compara dos artículos.,女读者比较两篇文章。,名词（阴）；与 el lector 对应。,名词;城市与新闻
+es-1675,es,es-21,la edición,版；版本,La nueva edición tiene más páginas.,新版的页数更多。,名词（阴）；指报刊或书籍的一版；注意 ó。,名词;城市与新闻
+es-1676,es,es-21,la encuesta,调查；问卷,La encuesta tiene cinco preguntas.,问卷有五个问题。,名词（阴）；用于了解多个人的意见。,名词;城市与新闻
+es-1677,es,es-21,la portada,首页；书刊正面页,La foto de la plaza está en la portada.,广场的照片在首页上。,名词（阴）；指报刊首页或书刊的正面页。,名词;城市与新闻
+es-1678,es,es-21,el suceso,发生的事情；事件,El periódico describe un suceso del barrio.,报纸描述街区里发生的一件事。,名词（阳）；不是表示成功的英语 success。,名词;城市与新闻
+es-1679,es,es-21,la obra,工程；作品,La obra del puente termina este mes.,桥梁工程本月结束。,名词（阴）；这里指工程；也可指作品。,名词;城市与新闻
+es-1680,es,es-21,la construcción,建设；建造,La construcción de la escuela empieza mañana.,学校的建设明天开始。,名词（阴）；与 construir 同词根；注意 ó。,名词;城市与新闻
+es-1681,es,es-21,la vivienda,住宅,Buscamos una vivienda cerca del trabajo.,我们找一套离工作地点近的住宅。,名词（阴）；用于居住的房屋。,名词;城市与新闻
+es-1682,es,es-21,la iluminación,照明,La iluminación de la calle es buena.,街道照明很好。,名词（阴）；注意 ó。,名词;城市与新闻
+es-1683,es,es-21,la mejora,改善；改进,La mejora del transporte es importante.,交通的改善很重要。,名词（阴）；对应已学动词 mejorar。,名词;城市与新闻
+es-1684,es,es-21,actual,当前的,El horario actual es cómodo.,现行时间表很方便。,形容词；两性同形，依次列单数 / 复数：actual / actuales；按所修饰名词的性数使用。,形容词;城市与新闻
+es-1685,es,es-21,reciente,最近的；新近的,La noticia es reciente.,这则新闻是最近的。,形容词；两性同形，依次列单数 / 复数：reciente / recientes；按所修饰名词的性数使用。,形容词;城市与新闻
+es-1686,es,es-21,municipal,市政的；市立的,La biblioteca municipal está cerca.,市立图书馆就在附近。,形容词；两性同形，依次列单数 / 复数：municipal / municipales；按所修饰名词的性数使用。,形容词;城市与新闻
+es-1687,es,es-21,regional,地区的,Leo un periódico regional.,我读一份地区报纸。,形容词；两性同形，依次列单数 / 复数：regional / regionales；按所修饰名词的性数使用。,形容词;城市与新闻
+es-1688,es,es-21,nacional,全国的；国家的,El periódico nacional tiene muchas páginas.,这份全国性报纸页数很多。,形容词；两性同形，依次列单数 / 复数：nacional / nacionales；按所修饰名词的性数使用。,形容词;城市与新闻
+es-1689,es,es-21,vecinal,邻里间的；社区的,La reunión vecinal empieza a las seis.,居民会议六点开始。,形容词；两性同形，依次列单数 / 复数：vecinal / vecinales；按所修饰名词的性数使用。,形容词;城市与新闻
+es-1690,es,es-21,peatonal,供行人通行的；步行的,La calle peatonal es ancha.,步行街很宽。,形容词；两性同形，依次列单数 / 复数：peatonal / peatonales；按所修饰名词的性数使用。,形容词;城市与新闻
+es-1691,es,es-21,informativo,提供信息的,El cartel informativo está en la puerta.,信息告示在门上。,形容词；性数形式：informativo / informativa / informativos / informativas；按所修饰名词的性数使用。,形容词;城市与新闻
+es-1692,es,es-21,breve,简短的,El artículo es breve.,这篇文章很简短。,形容词；两性同形，依次列单数 / 复数：breve / breves；按所修饰名词的性数使用。,形容词;城市与新闻
+es-1693,es,es-21,concreto,具体的,Necesitamos un ejemplo concreto.,我们需要一个具体例子。,形容词；性数形式：concreto / concreta / concretos / concretas；按所修饰名词的性数使用。,形容词;城市与新闻
+es-1694,es,es-21,completo,完整的,El informe completo está aquí.,完整报告在这里。,形容词；性数形式：completo / completa / completos / completas；按所修饰名词的性数使用。,形容词;城市与新闻
+es-1695,es,es-21,diverso,多种多样的,El barrio tiene tiendas diversas.,街区有各种商店。,形容词；性数形式：diverso / diversa / diversos / diversas；按所修饰名词的性数使用。,形容词;城市与新闻
+es-1696,es,es-21,útil,有用的,La información es útil para los vecinos.,这些信息对邻居们有用。,形容词；两性同形，依次列单数 / 复数：útil / útiles；注意 ú。,形容词;城市与新闻
+es-1697,es,es-21,relevante,相关而重要的,Ese detalle es relevante para la noticia.,那个细节对新闻很重要。,形容词；两性同形，依次列单数 / 复数：relevante / relevantes；按所修饰名词的性数使用。,形容词;城市与新闻
+es-1698,es,es-21,habitual,习惯性的；平常的,Hoy hago mi recorrido habitual.,今天我走平常的路线。,形容词；两性同形，依次列单数 / 复数：habitual / habituales；按所修饰名词的性数使用。,形容词;城市与新闻
+es-1699,es,es-21,La biblioteca que está en la plaza es municipal,广场上的图书馆是市立的。,La biblioteca que está en la plaza es municipal.,广场上的图书馆是市立的。,完整句；识别关系从句或连接词的作用。,句型;phrase
+es-1700,es,es-21,"Ana, con quien trabajo, escribe para la prensa local",与我共事的安娜为本地媒体写作。,"Ana, con quien trabajo, escribe para la prensa local.",与我共事的安娜为本地媒体写作。,完整句；识别关系从句或连接词的作用。,句型;phrase
+es-1701,es,es-21,Este es el barrio donde vive mi familia,这是我家人居住的街区。,Este es el barrio donde vive mi familia.,这是我家人居住的街区。,完整句；识别关系从句或连接词的作用。,句型;phrase
+es-1702,es,es-21,Lo que necesitamos es una solución concreta,我们需要的是一个具体办法。,Lo que necesitamos es una solución concreta.,我们需要的是一个具体办法。,完整句；识别关系从句或连接词的作用。,句型;phrase
+es-1703,es,es-21,"Aunque la obra es necesaria, el vecindario pide más información",虽然工程有必要，但街坊们要求更多信息。,"Aunque la obra es necesaria, el vecindario pide más información.",虽然工程有必要，但街坊们要求更多信息。,完整句；识别关系从句或连接词的作用。,句型;phrase
+es-1704,es,es-21,quien,……的人（关系代词）,"Juan, con quien estudio, vive aquí.",与我一起学习的胡安住在这里。,关系代词；只指人，常跟在介词后；形式：quien / quienes；与疑问词 quién 区分。,关系词;补充;phrase
+es-1705,es,es-21,donde,……的地方（关系副词）,Esta es la plaza donde nos encontramos.,这是我们见面的广场。,关系副词；前面的名词表示地点；与疑问词 dónde 区分。,关系词;补充;phrase
+es-1706,es,es-21,el que,……的那个；……的人或事物,"De los dos artículos, leo el que es más breve.",这两篇文章中，我读较短的那篇。,冠词与所指名词一致；形式：el que / la que / los que / las que。,关系词;补充;phrase
+es-1707,es,es-21,lo que,……的事情；……的内容,Entiendo lo que dices.,我明白你说的内容。,中性关系结构；不对应一个有性别的具体名词。,关系词;补充;phrase
+es-1708,es,es-21,cuyo,其……的；……的（所属关系）,La lectora cuyo hijo estudia aquí es mi vecina.,儿子在这里读书的那位女读者是我的邻居。,关系限定词；只要求认得，随后面的所属物变化，不随拥有人变化；性数形式：cuyo / cuya / cuyos / cuyas。,关系词;补充;phrase
+es-1709,es,es-21,el argumento,理由；论据,El artículo ofrece un argumento claro.,文章提出了一个清楚的理由。,名词（阳）；用于文章组织或信息说明。,名词;补充;语篇
+es-1710,es,es-21,la conclusión,结论,La conclusión del informe es breve.,报告的结论很简短。,名词（阴）；用于文章组织或信息说明。,名词;补充;语篇
+es-1711,es,es-21,la relación,关系；联系,Hay una relación entre el tráfico y el ruido.,交通与噪声之间存在联系。,名词（阴）；用于文章组织或信息说明。,名词;补充;语篇
+es-1712,es,es-21,el contraste,对比；差别,El contraste entre las dos zonas es claro.,两个区域之间的差别很明显。,名词（阳）；用于文章组织或信息说明。,名词;补充;语篇
+es-1713,es,es-21,la introducción,引言；开头的介绍,La introducción explica el tema del artículo.,引言说明文章的主题。,名词（阴）；用于文章组织或信息说明。,名词;补充;语篇
+es-1714,es,es-22,está abierto,开着；正在营业,El centro está abierto.,中心开着。,estar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：estoy / estás / está / estamos / estáis / están；abierto / abierta / abiertos / abiertas 与主语性数一致；这里描述状态；只生成识别卡。,动词短语;phrase
+es-1715,es,es-22,están cerradas,关着（阴性复数）,Las ventanas están cerradas.,窗户关着。,estar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：estoy / estás / está / estamos / estáis / están；cerrado / cerrada / cerrados / cerradas；cerradas 与 ventanas 一致；只生成识别卡。,动词短语;phrase
+es-1716,es,es-22,está preparado,准备好了（阳性单数）,El desayuno está preparado.,早餐准备好了。,estar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：estoy / estás / está / estamos / estáis / están；preparado / preparada / preparados / preparadas；表示完成准备后的状态；只生成识别卡。,动词短语;phrase
+es-1717,es,es-22,está escrito,写好了；写在……上,El horario está escrito en el cuaderno.,日程写在本子上。,estar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：estoy / estás / está / estamos / estáis / están；escrito / escrita / escritos / escritas；与 haber + escrito 的完成时区分；只生成识别卡。,动词短语;phrase
+es-1718,es,es-22,llevo dos meses caminando,我已经坚持步行两个月,Llevo dos meses caminando cada mañana.,我已经坚持每天上午步行两个月。,llevar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：llevo / llevas / lleva / llevamos / lleváis / llevan；llevar + 时间段 + 副动词，表示活动持续到现在；不是这两个月每一刻都在步行；只生成识别卡。,动词短语;phrase
+es-1719,es,es-22,lleva un rato descansando,他／她已经休息一会儿,Ana lleva un rato descansando.,安娜已经休息一会儿。,llevar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：llevo / llevas / lleva / llevamos / lleváis / llevan；llevar + 时间段 + 副动词，强调已经持续多久；只生成识别卡。,动词短语;phrase
+es-1720,es,es-22,sigo haciendo ejercicio,我仍然在坚持锻炼,Sigo haciendo ejercicio en casa.,我仍然在家坚持锻炼。,seguir 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：sigo / sigues / sigue / seguimos / seguís / siguen；seguir + 副动词表示继续；hacer 的副动词是 haciendo；只生成识别卡。,动词短语;phrase
+es-1721,es,es-22,seguimos aprendiendo,我们继续学习,Seguimos aprendiendo español.,我们继续学西班牙语。,seguir 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：sigo / sigues / sigue / seguimos / seguís / siguen；aprender 的副动词 aprendiendo 不随主语变化；只生成识别卡。,动词短语;phrase
+es-1722,es,es-22,acabo de desayunar,我刚吃完早饭,Acabo de desayunar en casa.,我刚在家吃完早饭。,acabar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：acabo / acabas / acaba / acabamos / acabáis / acaban；acabar de + 不定式表示刚刚做过；只生成识别卡。,动词短语;phrase
+es-1723,es,es-22,acaba de llegar,他／她刚到,El médico acaba de llegar.,医生刚到。,acabar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：acabo / acabas / acaba / acabamos / acabáis / acaban；表示相对现在刚完成的动作；只生成识别卡。,动词短语;phrase
+es-1724,es,es-22,vuelvo a caminar,我重新开始步行；我又步行了,Vuelvo a caminar por el parque.,我重新开始在公园步行。,volver 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：vuelvo / vuelves / vuelve / volvemos / volvéis / vuelven；volver a + 不定式表示再次做；只生成识别卡。,动词短语;phrase
+es-1725,es,es-22,empiezo a descansar,我开始休息,Empiezo a descansar después del trabajo.,工作后我开始休息。,empezar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：empiezo / empiezas / empieza / empezamos / empezáis / empiezan；empezar a + 不定式表示开始做；只生成识别卡。,动词短语;phrase
+es-1726,es,es-22,dejo de fumar,我不再吸烟,Dejo de fumar a partir de hoy.,我从今天起不再吸烟。,dejar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：dejo / dejas / deja / dejamos / dejáis / dejan；dejar de + 不定式表示停止做；只生成识别卡。,动词短语;phrase
+es-1727,es,es-22,tengo que descansar,我必须休息,Tengo que descansar esta tarde.,我今天下午必须休息。,tener 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：tengo / tienes / tiene / tenemos / tenéis / tienen；tener que + 不定式表达具体主语的义务；只生成识别卡。,动词短语;phrase
+es-1728,es,es-22,hay que descansar,应该休息；需要休息,Hay que descansar después del trabajo.,工作后需要休息。,非人称 hay que + 不定式表达一般需要，没有六个人称变化；不写 hay que yo，也不因后面的名词是复数而改变 hay；只生成识别卡。,动词短语;phrase
+es-1729,es,es-22,aburrido,令人无聊的；感到无聊的,El libro es aburrido y Juan está aburrido.,这本书令人无聊，胡安感到无聊。,形容词；性数形式 aburrido / aburrida / aburridos / aburridas；ser aburrido 评价某人或事令人无聊；estar aburrido 表示某人当下觉得无聊。,形容词;ser与estar
+es-1730,es,es-22,listo,聪明的；准备好的,Juan es listo y ya está listo para salir.,胡安很聪明，而且已经准备好出门了。,形容词；性数形式 listo / lista / listos / listas；ser listo 表示聪明；estar listo para + 不定式表示准备好做某事。,形容词;ser与estar
+es-1731,es,es-22,cerrado,不愿交流的；关着的,Juan es cerrado y habla poco; el centro está cerrado.,胡安不太愿意交流，话很少；中心关着。,形容词；性数形式 cerrado / cerrada / cerrados / cerradas；ser cerrado 可描述人不愿交流；estar cerrado 描述关闭状态；cerrado 也是 cerrar 的分词。,形容词;ser与estar
+es-1732,es,es-22,maduro,成熟的；熟了的,Ana es madura y la fruta está madura.,安娜心智成熟，水果已经熟了。,形容词；性数形式 maduro / madura / maduros / maduras；ser maduro 常评价人的心智成熟；estar maduro 常说水果已到成熟状态。,形容词;ser与estar
+es-1733,es,es-22,orgulloso,傲气的；为……自豪的,El hombre es orgulloso; hoy está orgulloso de su hija.,这个人平时傲气；今天他为女儿感到自豪。,形容词；性数形式 orgulloso / orgullosa / orgullosos / orgullosas；ser orgulloso 常评价性格傲气；estar orgulloso de 表示为某人或某事自豪。,形容词;ser与estar
+es-1734,es,es-22,interesado,只顾自身利益的；感兴趣的,Juan está interesado en el curso.,胡安对这门课感兴趣。,形容词；性数形式 interesado / interesada / interesados / interesadas；ser interesado 可评价人只顾自身利益；estar interesado en 表示对某事感兴趣；两种意思不要互换。,形容词;ser与estar
+es-1735,es,es-22,delicado,易损的；身体不太好的,El vaso es delicado y mi abuelo está delicado.,杯子易损，我祖父身体不太好。,形容词；性数形式 delicado / delicada / delicados / delicadas；ser delicado 可说明物品需要小心对待；estar delicado 可表示当前身体欠佳。,形容词;ser与estar
+es-1736,es,es-22,grave,严重的；病情严重的,El problema es grave y el hombre está grave.,问题很严重，那个人病情也很严重。,形容词；性数形式 grave / grave / graves / graves；ser grave 评价问题或情况的严重性质；estar grave 通常描述人的病情状态。,形容词;ser与estar
+es-1737,es,es-22,viejo,老的；显旧的,El edificio es viejo y este abrigo está viejo.,这栋楼年代久，这件大衣显得旧了。,形容词；性数形式 viejo / vieja / viejos / viejas；ser viejo 说年龄或年代；estar viejo 强调看起来老了或物品磨旧后的状况；这里是观察角度的差别。,形容词;ser与estar
+es-1738,es,es-22,sensible,敏感的；当下情绪敏感的,Ana es sensible y hoy está especialmente sensible.,安娜性格敏感，今天情绪尤其敏感。,形容词；性数形式 sensible / sensible / sensibles / sensibles；ser sensible 描述人的敏感特质；estar sensible 描述当前较容易受到情绪影响；这里不是完全不同的词义。,形容词;ser与estar
+es-1739,es,es-22,respirar,呼吸,Respiro despacio.,我慢慢呼吸。,respirar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：respiro / respiras / respira / respiramos / respiráis / respiran；规则 -ar 动词。,动词;不定式;现在时;身体与健康
+es-1740,es,es-22,toser,咳嗽,Juan empieza a toser.,胡安开始咳嗽。,toser 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：toso / toses / tose / tosemos / toséis / tosen；规则 -er 动词；名词是 la tos。,动词;不定式;现在时;身体与健康
+es-1741,es,es-22,estornudar,打喷嚏,Ana acaba de estornudar.,安娜刚打了喷嚏。,estornudar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：estornudo / estornudas / estornuda / estornudamos / estornudáis / estornudan；规则 -ar 动词。,动词;不定式;现在时;身体与健康
+es-1742,es,es-22,doler,疼痛,Me duele la cabeza.,我头痛。,doler 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：duelo / dueles / duele / dolemos / doléis / duelen；o → ue；身体部位作主语时常用 duele / duelen：me duele el pie / me duelen los pies；其余形式用于完整认识变位。,动词;不定式;现在时;身体与健康
+es-1743,es,es-22,sudar,出汗,Sudo cuando corro.,我跑步时出汗。,sudar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：sudo / sudas / suda / sudamos / sudáis / sudan；规则 -ar 动词。,动词;不定式;现在时;身体与健康
+es-1744,es,es-22,temblar,发抖,Mis manos empiezan a temblar.,我的双手开始发抖。,temblar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：tiemblo / tiemblas / tiembla / temblamos / tembláis / tiemblan；e → ie；nosotros、vosotros 保留 e。,动词;不定式;现在时;身体与健康
+es-1745,es,es-22,curar,医治；处理伤口,El médico va a curar la herida.,医生将处理伤口。,curar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：curo / curas / cura / curamos / curáis / curan；规则 -ar 动词；curar una herida 指处理、治疗伤口。,动词;不定式;现在时;身体与健康
+es-1746,es,es-22,recuperarse,恢复,Quiero recuperarme en casa.,我想在家恢复。,recuperarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me recupero / te recuperas / se recupera / nos recuperamos / os recuperáis / se recuperan；代词式动词；recuperarse de + 名词表示从某种情况中恢复。,动词;不定式;现在时;身体与健康
+es-1747,es,es-22,relajarse,放松,Quiero relajarme después del trabajo.,我想在工作后放松。,relajarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me relajo / te relajas / se relaja / nos relajamos / os relajáis / se relajan；代词在变位动词前或接在不定式后。,动词;不定式;现在时;身体与健康
+es-1748,es,es-22,estirar,伸展,Estiro los brazos.,我伸展双臂。,estirar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：estiro / estiras / estira / estiramos / estiráis / estiran；规则 -ar 动词。,动词;不定式;现在时;身体与健康
+es-1749,es,es-22,doblar,弯曲；折叠,Puedo doblar la rodilla.,我可以弯曲膝盖。,doblar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：doblo / doblas / dobla / doblamos / dobláis / doblan；规则 -ar 动词；也可说 doblar la ropa 折叠衣服。,动词;不定式;现在时;身体与健康
+es-1750,es,es-22,masajear,按摩,Juan va a masajearme el hombro.,胡安准备给我按摩肩膀。,masajear 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：masajeo / masajeas / masajea / masajeamos / masajeáis / masajean；规则 -ear 动词；不定式接 me 指接受动作的人。,动词;不定式;现在时;身体与健康
+es-1751,es,es-22,tragar,吞咽,Me duele al tragar.,我吞咽时疼痛。,tragar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：trago / tragas / traga / tragamos / tragáis / tragan；规则 -ar 现在时；al + 不定式表示做某事时。,动词;不定式;现在时;身体与健康
+es-1752,es,es-22,masticar,咀嚼,Mastico el pan despacio.,我慢慢咀嚼面包。,masticar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：mastico / masticas / mastica / masticamos / masticáis / mastican；规则 -ar 现在时。,动词;不定式;现在时;身体与健康
+es-1753,es,es-22,hidratarse,补充水分,Voy a hidratarme después del paseo.,我准备在散步后补充水分。,hidratarse 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：me hidrato / te hidratas / se hidrata / nos hidratamos / os hidratáis / se hidratan；代词式动词；本课在喝水的日常语境中使用。,动词;不定式;现在时;身体与健康
+es-1754,es,es-22,la cabeza,头,Me duele la cabeza.,我头痛。,名词（阴）。,名词;身体与健康
+es-1755,es,es-22,el cuello,脖子,Me lavo el cuello.,我洗脖子。,名词（阳）。,名词;身体与健康
+es-1756,es,es-22,el hombro,肩膀,Me duele el hombro.,我肩膀痛。,名词（阳）。,名词;身体与健康
+es-1757,es,es-22,el brazo,手臂,Estiro el brazo.,我伸展手臂。,名词（阳）。,名词;身体与健康
+es-1758,es,es-22,el codo,肘部,Doblo el codo despacio.,我慢慢弯曲肘部。,名词（阳）。,名词;身体与健康
+es-1759,es,es-22,la muñeca,手腕,Me duele la muñeca.,我手腕痛。,名词（阴）；本课指手腕，另有玩偶义。,名词;身体与健康
+es-1760,es,es-22,la espalda,背部,Me duele la espalda después del trabajo.,工作后我背痛。,名词（阴）。,名词;身体与健康
+es-1761,es,es-22,el pecho,胸部,El médico me mira el pecho.,医生查看我的胸部。,名词（阳）。,名词;身体与健康
+es-1762,es,es-22,el estómago,胃,Me duele el estómago.,我胃痛。,名词（阳）。,名词;身体与健康
+es-1763,es,es-22,la pierna,腿,Estiro la pierna.,我伸展腿。,名词（阴）。,名词;身体与健康
+es-1764,es,es-22,la rodilla,膝盖,Doblo la rodilla despacio.,我慢慢弯曲膝盖。,名词（阴）。,名词;身体与健康
+es-1765,es,es-22,el tobillo,脚踝,El médico me mira el tobillo.,医生查看我的脚踝。,名词（阳）。,名词;身体与健康
+es-1766,es,es-22,el pie,脚,Me duele el pie.,我脚痛。,名词（阳）；复数 los pies。,名词;身体与健康
+es-1767,es,es-22,el dedo,手指；脚趾,Me lavo el dedo.,我洗手指。,名词（阳）。,名词;身体与健康
+es-1768,es,es-22,la piel,皮肤,La piel está limpia.,皮肤很干净。,名词（阴）。,名词;身体与健康
+es-1769,es,es-22,el dolor,疼痛,El dolor empieza por la mañana.,疼痛在早上开始。,名词（阳）。,名词;身体与健康
+es-1770,es,es-22,la fiebre,发烧,Juan tiene fiebre.,胡安发烧了。,名词（阴）；tener fiebre 表示发烧。,名词;身体与健康
+es-1771,es,es-22,la tos,咳嗽,La tos no me deja dormir.,咳嗽让我无法入睡。,名词（阴）。,名词;身体与健康
+es-1772,es,es-22,el síntoma,症状,El médico pregunta por el síntoma.,医生询问症状。,名词（阳）；词尾 -a，但为阳性；复数 los síntomas。,名词;身体与健康
+es-1773,es,es-22,el tratamiento,治疗,El médico explica el tratamiento.,医生解释治疗安排。,名词（阳）。,名词;身体与健康
+es-1774,es,es-22,despacio,慢慢地,Camino despacio.,我慢慢走。,副词；形式不随性数变化。,副词;方式与频率
+es-1775,es,es-22,profundamente,深深地,Respiro profundamente.,我深呼吸。,副词；形式不随性数变化。,副词;方式与频率
+es-1776,es,es-22,regularmente,有规律地,Hago ejercicio regularmente.,我有规律地锻炼。,副词；形式不随性数变化。,副词;方式与频率
+es-1777,es,es-22,gradualmente,逐渐地,Me recupero gradualmente.,我逐渐恢复。,副词；形式不随性数变化。,副词;方式与频率
+es-1778,es,es-22,cómodamente,舒适地,Descanso cómodamente en el sofá.,我舒适地躺在沙发上休息。,副词；形式不随性数变化。保留原形容词的重音符号。,副词;方式与频率
+es-1779,es,es-22,físicamente,在身体方面,Físicamente me encuentro mejor.,在身体方面，我感觉好些了。,副词；形式不随性数变化。保留原形容词的重音符号。,副词;方式与频率
+es-1780,es,es-22,mentalmente,在精神方面,Mentalmente me encuentro bien.,在精神方面，我感觉不错。,副词；形式不随性数变化。,副词;方式与频率
+es-1781,es,es-22,moderadamente,适度地,Hago ejercicio moderadamente.,我适度锻炼。,副词；形式不随性数变化。,副词;方式与频率
+es-1782,es,es-22,semanalmente,每周,Reviso mi horario semanalmente.,我每周检查日程。,副词；形式不随性数变化。,副词;方式与频率
+es-1783,es,es-22,pausadamente,不慌不忙地,El médico explica el tratamiento pausadamente.,医生不慌不忙地解释治疗安排。,副词；形式不随性数变化。,副词;方式与频率
+es-1784,es,es-22,Las puertas están abiertas,门都开着,Las puertas están abiertas.,门都开着。,整句；estar + 分词表示状态；abiertas 与 puertas 性数一致；只生成识别卡。,句型;phrase
+es-1785,es,es-22,Llevo tres semanas estudiando en casa,我已经在家学习三周,Llevo tres semanas estudiando en casa.,我已经在家学习三周。,整句；llevar + 时间段 + 副动词；学习活动延续到现在；只生成识别卡。,句型;phrase
+es-1786,es,es-22,Sigo caminando aunque estoy cansado,虽然我累了，但我仍在走,Sigo caminando aunque estoy cansado.,虽然我累了，但我仍在走。,整句；seguir + 副动词表示继续；aunque 引出已知情况；只生成识别卡。,句型;phrase
+es-1787,es,es-22,Acabo de llegar y tengo que descansar,我刚到，必须休息,Acabo de llegar y tengo que descansar.,我刚到，必须休息。,整句；acabar de 表刚完成，tener que 表个人需要；只生成识别卡。,句型;phrase
+es-1788,es,es-22,Vuelvo a leer porque no estoy listo,我再读一遍，因为我还没准备好,Vuelvo a leer porque no estoy listo.,我再读一遍，因为我还没准备好。,整句；volver a 表再次做；estar listo 表准备好；只生成识别卡。,句型;phrase
+es-1789,es,es-22,la rutina,日常固定安排,Mi rutina empieza con el desayuno.,我的日常安排从早餐开始。,名词（阴）；身体健康主题补充词。,名词;补充;身体与健康
+es-1790,es,es-22,el hábito,习惯,Leer cada día es un buen hábito.,每天阅读是个好习惯。,名词（阳）；身体健康主题补充词。,名词;补充;身体与健康
+es-1791,es,es-22,el bienestar,身心舒适；健康幸福,El descanso es importante para el bienestar.,休息对身心舒适很重要。,名词（阳）；身体健康主题补充词。,名词;补充;身体与健康
+es-1792,es,es-22,la postura,姿势,El profesor mira mi postura.,老师查看我的姿势。,名词（阴）；身体健康主题补充词。,名词;补充;身体与健康
+es-1793,es,es-22,el músculo,肌肉,Este músculo me duele.,这块肌肉疼。,名词（阳）；身体健康主题补充词。,名词;补充;身体与健康
+es-1794,es,es-23,narrar,叙述,Ana ya había narrado el encuentro.,安娜此前已经叙述过这次相遇。,narrar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había narrado / habías narrado / había narrado / habíamos narrado / habíais narrado / habían narrado；分词 narrado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1795,es,es-23,relatar,讲述经过,Juan había relatado el viaje antes de la cena.,晚饭前，胡安已经讲过旅行经过。,relatar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había relatado / habías relatado / había relatado / habíamos relatado / habíais relatado / habían relatado；分词 relatado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1796,es,es-23,presenciar,亲眼看到；在场见证,Yo había presenciado la llegada del tren.,我此前亲眼看到了火车进站。,presenciar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había presenciado / habías presenciado / había presenciado / habíamos presenciado / habíais presenciado / habían presenciado；分词 presenciado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1797,es,es-23,observar,观察,Habíamos observado el cielo antes de salir.,我们出发前已经观察过天空。,observar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había observado / habías observado / había observado / habíamos observado / habíais observado / habían observado；分词 observado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1798,es,es-23,notar,注意到；察觉,Ana había notado un error en la fecha.,安娜此前已经注意到日期有误。,notar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había notado / habías notado / había notado / habíamos notado / habíais notado / habían notado；分词 notado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1799,es,es-23,reconocer,认出；承认,Había reconocido a mi profesor en la foto.,我此前已经认出了照片上的老师。,reconocer 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había reconocido / habías reconocido / había reconocido / habíamos reconocido / habíais reconocido / habían reconocido；分词 reconocido 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1800,es,es-23,reconstruir,重建；还原经过,Habíamos reconstruido el orden de los hechos.,我们此前已经还原了事情的顺序。,reconstruir 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había reconstruido / habías reconstruido / había reconstruido / habíamos reconstruido / habíais reconstruido / habían reconstruido；分词 reconstruido 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1801,es,es-23,investigar,调查；研究,El periodista había investigado la causa del retraso.,记者此前已经调查了延误原因。,investigar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había investigado / habías investigado / había investigado / habíamos investigado / habíais investigado / habían investigado；分词 investigado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1802,es,es-23,examinar,仔细检查,Había examinado el documento antes de la reunión.,我开会前已经仔细检查过文件。,examinar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había examinado / habías examinado / había examinado / habíamos examinado / habíais examinado / habían examinado；分词 examinado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1803,es,es-23,identificar,辨认；确定身份,Habíamos identificado al protagonista del relato.,我们此前已经确定了叙述中的主人公。,identificar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había identificado / habías identificado / había identificado / habíamos identificado / habíais identificado / habían identificado；分词 identificado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1804,es,es-23,verificar,核实,Habían verificado la fecha del encuentro.,他们此前已经核实了见面的日期。,verificar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había verificado / habías verificado / había verificado / habíamos verificado / habíais verificado / habían verificado；分词 verificado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1805,es,es-23,localizar,找到所在位置,Había localizado el libro en la biblioteca.,我此前已经在图书馆找到了这本书。,localizar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había localizado / habías localizado / había localizado / habíamos localizado / habíais localizado / habían localizado；分词 localizado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1806,es,es-23,recuperar,找回；恢复,Ana había recuperado su cuaderno.,安娜此前已经找回了笔记本。,recuperar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había recuperado / habías recuperado / había recuperado / habíamos recuperado / habíais recuperado / habían recuperado；分词 recuperado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1807,es,es-23,rescatar,救出；找回有价值的东西,Los vecinos habían rescatado al gato.,邻居们此前已经救出了那只猫。,rescatar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había rescatado / habías rescatado / había rescatado / habíamos rescatado / habíais rescatado / habían rescatado；分词 rescatado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1808,es,es-23,desaparecer,消失,El ruido había desaparecido cuando salimos.,我们离开时，噪音已经消失了。,desaparecer 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había desaparecido / habías desaparecido / había desaparecido / habíamos desaparecido / habíais desaparecido / habían desaparecido；分词 desaparecido 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1809,es,es-23,interrumpir,中断；打断,El ruido había interrumpido la conversación.,噪音此前打断了谈话。,interrumpir 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había interrumpido / habías interrumpido / había interrumpido / habíamos interrumpido / habíais interrumpido / habían interrumpido；分词 interrumpido 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1810,es,es-23,reanudar,恢复进行,Habíamos reanudado la lectura después del descanso.,休息后，我们已恢复阅读。,reanudar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había reanudado / habías reanudado / había reanudado / habíamos reanudado / habíais reanudado / habían reanudado；分词 reanudado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1811,es,es-23,aplazar,推迟到以后,Habían aplazado la reunión hasta el lunes.,他们此前已把会议推迟到星期一。,aplazar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había aplazado / habías aplazado / había aplazado / habíamos aplazado / habíais aplazado / habían aplazado；分词 aplazado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1812,es,es-23,retrasar,使延迟,La lluvia había retrasado la salida.,雨此前延迟了出发时间。,retrasar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había retrasado / habías retrasado / había retrasado / habíamos retrasado / habíais retrasado / habían retrasado；分词 retrasado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1813,es,es-23,conservar,保留；保存,Mi abuela había conservado todas las cartas.,我祖母此前已经保存下了所有信件。,conservar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había conservado / habías conservado / había conservado / habíamos conservado / habíais conservado / habían conservado；分词 conservado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;叙事动词
+es-1814,es,es-23,el relato,叙述；故事,El relato del viaje tenía muchos detalles.,这篇旅行叙述有许多细节。,名词（阳）。,名词;事件与人物
+es-1815,es,es-23,el narrador,叙述者（男）,El narrador había conocido a los personajes.,叙述者此前已经认识这些人物。,名词（阳）；女性为 la narradora。,名词;事件与人物
+es-1816,es,es-23,la narradora,叙述者（女）,La narradora explicó el motivo del encuentro.,女叙述者解释了见面的缘由。,名词（阴）；男性为 el narrador。,名词;事件与人物
+es-1817,es,es-23,el personaje,故事人物,El personaje del cuento vivía en un pueblo.,故事中的人物住在一个村镇。,名词（阳）；所指人物为女性时，语法性仍为阳性。,名词;事件与人物
+es-1818,es,es-23,el protagonista,主人公（男）,El protagonista había perdido su cuaderno.,男主人公此前丢了笔记本。,名词（阳）；女性为 la protagonista。,名词;事件与人物
+es-1819,es,es-23,la protagonista,主人公（女）,La protagonista buscó una solución.,女主人公寻找了一个办法。,名词（阴）；男性为 el protagonista。,名词;事件与人物
+es-1820,es,es-23,el testigo,见证者（男）,El testigo había visto el coche.,见证者此前看到过那辆车。,名词（阳）；女性为 la testigo。,名词;事件与人物
+es-1821,es,es-23,la testigo,见证者（女）,La testigo relató el encuentro.,女见证者讲述了相遇的经过。,名词（阴）；男性为 el testigo。,名词;事件与人物
+es-1822,es,es-23,el acontecimiento,事件,El acontecimiento fue importante para muchas familias.,这次事件对许多家庭很重要。,名词（阳）。,名词;事件与人物
+es-1823,es,es-23,el encuentro,相遇；见面,El encuentro fue en la biblioteca.,见面地点在图书馆。,名词（阳）。,名词;事件与人物
+es-1824,es,es-23,la despedida,告别,La despedida fue corta.,告别很短暂。,名词（阴）。,名词;事件与人物
+es-1825,es,es-23,el inicio,开始；开端,El inicio del relato era interesante.,故事的开头很有趣。,名词（阳）。,名词;事件与人物
+es-1826,es,es-23,el desenlace,结局,El desenlace del cuento fue feliz.,故事的结局很圆满。,名词（阳）。,名词;事件与人物
+es-1827,es,es-23,el motivo,缘由；动机,El motivo de la visita era una reunión.,来访是为了参加一次聚会。,名词（阳）。,名词;事件与人物
+es-1828,es,es-23,la causa,原因,La causa del retraso fue la lluvia.,延误的原因是下雨。,名词（阴）。,名词;事件与人物
+es-1829,es,es-23,la consecuencia,后果；结果,La consecuencia del error fue un retraso.,错误的结果是延误。,名词（阴）。,名词;事件与人物
+es-1830,es,es-23,la versión,版本；说法,La versión de Ana tenía más detalles.,安娜的说法有更多细节。,名词（阴）；复数 las versiones。,名词;事件与人物
+es-1831,es,es-23,la pista,线索,La pista estaba en la fecha de la carta.,线索在信件的日期里。,名词（阴）。,名词;事件与人物
+es-1832,es,es-23,el hallazgo,发现；找到的东西,El hallazgo del cuaderno fue una sorpresa.,找到笔记本是件意外的事。,名词（阳）。,名词;事件与人物
+es-1833,es,es-23,la coincidencia,巧合,El encuentro fue una coincidencia.,这次相遇是一个巧合。,名词（阴）。,名词;事件与人物
+es-1834,es,es-23,el día anterior,前一天,El día anterior habíamos visitado el museo.,前一天，我们已经参观过博物馆。,时间名词短语（阳）；以叙事中的某一天为参照，指它之前的一天。,时间与顺序
+es-1835,es,es-23,la noche anterior,前一晚,La noche anterior Ana había escrito el relato.,前一晚，安娜已经写了这篇叙述。,时间名词短语（阴）；不是固定指昨晚。,时间与顺序
+es-1836,es,es-23,dos días antes,两天前（相对叙事时间）,Había recibido el mensaje dos días antes.,我在那之前两天已经收到消息。,时间间隔相对叙事中的过去时间；不一定是相对今天。,时间与顺序
+es-1837,es,es-23,una hora antes,一小时前（相对叙事时间）,Juan había llegado una hora antes.,胡安在那之前一小时已经到了。,相对文中参照时刻提前一小时。,时间与顺序
+es-1838,es,es-23,hasta aquel momento,直到那个时刻,Hasta aquel momento no había visto la foto.,直到那个时刻，我还没有看过照片。,hasta 标明截止点；本例配过去完成时。,时间与顺序
+es-1839,es,es-23,desde aquel día,从那天起,Desde aquel día conservamos las cartas.,从那天起，我们一直保存着这些信。,desde 标明起点；后续时态按叙事视角选择。,时间与顺序
+es-1840,es,es-23,por aquel entonces,在那个时候,Por aquel entonces vivíamos en el campo.,那时候我们住在乡下。,过去背景表达，常配过去未完成时。,时间与顺序
+es-1841,es,es-23,a los pocos días,过了几天,A los pocos días recuperé el libro.,过了几天，我找回了书。,以刚说过的事件为起点，表示几天后。,时间与顺序
+es-1842,es,es-23,después de que,在……之后,"Después de que llegó Ana, empezamos la reunión.",安娜到来后，我们开始开会。,后接有主语和变位动词的从句；本课叙述已发生的过去事实，用陈述式。,时间与顺序
+es-1843,es,es-23,antes de eso,在那之前,Antes de eso habíamos leído la carta.,在那之前，我们已经读过信。,eso 指前文的一件事；区分 before 对应的 antes 与 after 对应的 después。,时间与顺序
+es-1844,es,es-23,afirmar,肯定地说；断言,Ana había afirmado que conocía el lugar.,安娜此前说过她熟悉这个地方。,afirmar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había afirmado / habías afirmado / había afirmado / habíamos afirmado / habíais afirmado / habían afirmado；分词 afirmado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;间接引语动词
+es-1845,es,es-23,asegurar,保证；肯定地说,Juan había asegurado que tenía el documento.,胡安此前保证过文件在他那里。,asegurar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había asegurado / habías asegurado / había asegurado / habíamos asegurado / habíais asegurado / habían asegurado；分词 asegurado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;间接引语动词
+es-1846,es,es-23,declarar,声明；陈述,El testigo había declarado que estaba en casa.,见证者此前说过他当时在家。,declarar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había declarado / habías declarado / había declarado / habíamos declarado / habíais declarado / habían declarado；分词 declarado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;间接引语动词
+es-1847,es,es-23,aclarar,澄清；说明白,La narradora había aclarado la causa del retraso.,女叙述者此前已经澄清了延误原因。,aclarar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había aclarado / habías aclarado / había aclarado / habíamos aclarado / habíais aclarado / habían aclarado；分词 aclarado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;间接引语动词
+es-1848,es,es-23,comentar,谈及；评论,Habíamos comentado que el relato era interesante.,我们此前谈到过这篇叙述很有趣。,comentar 的过去完成时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：había comentado / habías comentado / había comentado / habíamos comentado / habíais comentado / habían comentado；分词 comentado 在 haber 后不随主语性数变化。,动词;不定式;过去完成时;间接引语动词
+es-1849,es,es-23,"Cuando llegué, Ana ya había salido",我到的时候，安娜已经离开了,"Cuando llegué, Ana ya había salido.",我到的时候，安娜已经离开了。,整句；llegué 是后发生的过去事件，había salido 是在此之前已完成的动作。只生成识别卡。,句型;phrase
+es-1850,es,es-23,Juan dijo que estaba cansado,胡安说他当时累了,Juan dijo que estaba cansado.,胡安说他当时累了。,整句；原话 Estoy cansado 转述为 dijo que estaba cansado；人称与时态按过去视角调整。只生成识别卡。,句型;phrase
+es-1851,es,es-23,Me preguntó si tenía tiempo,他问我当时有没有时间,Me preguntó si tenía tiempo.,他问我当时有没有时间。,整句；是非疑问间接转述用 si，不标重音，不保留原问句的问号。只生成识别卡。,句型;phrase
+es-1852,es,es-23,Todavía no habíamos terminado cuando llegó Ana,安娜到来时，我们还没有完成,Todavía no habíamos terminado cuando llegó Ana.,安娜到来时，我们还没有完成。,整句；todavía no 表示截至过去参照时刻仍未完成；nosotros 用 habíamos。只生成识别卡。,句型;phrase
+es-1853,es,es-23,"Después de que llegó Juan, empezamos la reunión",胡安到来之后，我们开始开会,"Después de que llegó Juan, empezamos la reunión.",胡安到来之后，我们开始开会。,整句；después de que 引出已发生的过去事实，本句两个动作依次发生，均用简单过去时。只生成识别卡。,句型;phrase
+es-1854,es,es-23,la biografía,传记,La biografía del profesor tenía diez capítulos.,老师的传记有十章。,名词（阴）。,名词;补充;事件与人物
+es-1855,es,es-23,el episodio,一段经历；一集,El episodio del viaje fue memorable.,这段旅行经历令人难忘。,名词（阳）。,名词;补充;事件与人物
+es-1856,es,es-23,la secuencia,先后次序,La secuencia de los hechos estaba clara.,事情的先后次序很清楚。,名词（阴）。,名词;补充;事件与人物
+es-1857,es,es-23,el orden,顺序；秩序,El orden de las páginas era diferente.,这些书页的顺序不同。,名词（阳）。,名词;补充;事件与人物
+es-1858,es,es-23,la cronología,事件的时间顺序,La cronología del relato empieza en enero.,叙述中的事件从一月开始。,名词（阴）。,名词;补充;事件与人物
+es-1859,es,es-23,el pasado,过去,El pasado de la familia está en las cartas.,这家人的过去记录在信件中。,名词（阳）。,名词;补充;事件与人物
+es-1860,es,es-23,el aniversario,周年纪念日,El aniversario de la escuela fue el lunes.,学校的周年纪念日在星期一。,名词（阳）。,名词;补充;事件与人物
+es-1861,es,es-23,la ceremonia,仪式,La ceremonia empezó a las doce.,仪式十二点开始。,名词（阴）。,名词;补充;事件与人物
+es-1862,es,es-23,el invitado,受邀者；客人（男）,El invitado había llegado temprano.,男客人此前很早就到了。,名词（阳）。,名词;补充;事件与人物
+es-1863,es,es-23,la invitada,受邀者；客人（女）,La invitada había traído un regalo.,女客人此前带来了一份礼物。,名词（阴）。,名词;补充;事件与人物
+es-1864,es,es-23,anterior,此前的；前一个的,La fecha anterior era del lunes.,此前的日期是星期一。,形容词；性数形式 anterior / anterior / anteriores / anteriores。,形容词;补充
+es-1865,es,es-23,posterior,之后的；后一个的,La visita posterior fue más larga.,之后的那次参观更长。,形容词；性数形式 posterior / posterior / posteriores / posteriores。,形容词;补充
+es-1866,es,es-23,inesperado,意料之外的,El encuentro fue inesperado.,这次相遇出乎意料。,形容词；性数形式 inesperado / inesperada / inesperados / inesperadas。,形容词;补充
+es-1867,es,es-23,verdadero,真实的,El relato era verdadero.,这篇叙述是真实的。,形容词；性数形式 verdadero / verdadera / verdaderos / verdaderas。,形容词;补充
+es-1868,es,es-23,falso,虚假的；不真实的,El relato del personaje era falso.,这个人物的叙述是虚假的。,形容词；性数形式 falso / falsa / falsos / falsas。,形容词;补充
+es-1869,es,es-23,idéntico,完全相同的,Los dos cuadernos eran idénticos.,这两个笔记本完全一样。,形容词；性数形式 idéntico / idéntica / idénticos / idénticas。,形容词;补充
+es-1870,es,es-23,memorable,值得记住的；难忘的,La ceremonia fue memorable.,这场仪式令人难忘。,形容词；性数形式 memorable / memorable / memorables / memorables。,形容词;补充
+es-1871,es,es-23,cronológico,按时间顺序的,Escribimos los hechos en orden cronológico.,我们按时间顺序写下了事情。,形容词；性数形式 cronológico / cronológica / cronológicos / cronológicas。,形容词;补充
+es-1872,es,es-23,previamente,事先；预先,Habíamos verificado previamente la fecha.,我们已经提前核实过日期。,副词；表示在参照事件之前；形式不随性数变化。,副词;补充
+es-1873,es,es-23,posteriormente,后来；随后,Posteriormente recuperamos el cuaderno.,后来我们找回了笔记本。,副词；引出参照事件之后的动作；形式不随性数变化。,副词;补充
