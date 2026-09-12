@@ -27,7 +27,7 @@
 | [russian/profile.md](russian/profile.md) | 俄语：同上 |
 | [russian/roadmap.md](russian/roadmap.md) | 俄语：同上 |
 | [russian/errors.md](russian/errors.md) | 俄语错题本 |
-| [srs/index.html](srs/index.html) | 自建 SRS 页面：复习、课程（两门语言第 1–12 周共 24 课）、阅读（分级短文，答题得分写进进度）、统计、设置。卡片和进度嵌在文件里 |
+| [srs/index.html](srs/index.html) | 自建 SRS 页面：复习、课程（西语 25 课到 A2，俄语 34 课到 A2）、阅读（分级短文，西语 48 篇、俄语 60 篇，答题得分写进进度）、统计、设置。卡片和进度嵌在文件里 |
 | [srs/cards/](srs/cards/) | 卡片来源 CSV，改完在页面里导入再保存 |
 | [srs/README.md](srs/README.md) | 页面用法：打开、保存、手机进度合并、加卡片 |
 | [log/time.csv](log/time.csv) | 统一时间记录，一行一条 |
