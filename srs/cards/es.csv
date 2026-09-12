@@ -1872,3 +1872,123 @@ es-1870,es,es-23,memorable,值得记住的；难忘的,La ceremonia fue memorabl
 es-1871,es,es-23,cronológico,按时间顺序的,Escribimos los hechos en orden cronológico.,我们按时间顺序写下了事情。,形容词；性数形式 cronológico / cronológica / cronológicos / cronológicas。,形容词;补充
 es-1872,es,es-23,previamente,事先；预先,Habíamos verificado previamente la fecha.,我们已经提前核实过日期。,副词；表示在参照事件之前；形式不随性数变化。,副词;补充
 es-1873,es,es-23,posteriormente,后来；随后,Posteriormente recuperamos el cuaderno.,后来我们找回了笔记本。,副词；引出参照事件之后的动作；形式不随性数变化。,副词;补充
+es-1874,es,es-24,rubio,金发的,Mi hermana tiene el pelo rubio.,我姐姐是金发。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：rubio / rubia / rubios / rubias。,形容词;外貌与性格
+es-1875,es,es-24,moreno,深色头发的；肤色较深的,Mi hermano es moreno.,我哥哥是深色头发。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：moreno / morena / morenos / morenas。可描述深色头发，也可描述较深或晒黑的肤色，按语境判断。,形容词;外貌与性格
+es-1876,es,es-24,pelirrojo,红发的,El niño pelirrojo lee un cuento.,那个红发男孩在读故事。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：pelirrojo / pelirroja / pelirrojos / pelirrojas。,形容词;外貌与性格
+es-1877,es,es-24,calvo,没有头发的,Mi abuelo es calvo.,我祖父没有头发。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：calvo / calva / calvos / calvas。,形容词;外貌与性格
+es-1878,es,es-24,liso,直的；平滑的,Ella tiene el pelo liso.,她的头发是直的。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：liso / lisa / lisos / lisas。,形容词;外貌与性格
+es-1879,es,es-24,rizado,卷曲的,El pelo de Ana es rizado.,安娜的头发是卷的。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：rizado / rizada / rizados / rizadas。,形容词;外貌与性格
+es-1880,es,es-24,ondulado,呈波浪形的,Mi madre tiene el pelo ondulado.,我母亲的头发呈波浪形。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：ondulado / ondulada / ondulados / onduladas。,形容词;外貌与性格
+es-1881,es,es-24,delgado,瘦的；薄的,Mi primo es alto y delgado.,我表哥又高又瘦。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：delgado / delgada / delgados / delgadas。,形容词;外貌与性格
+es-1882,es,es-24,gordo,胖的；厚的,El gato de mi vecino es gordo.,邻居的猫很胖。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：gordo / gorda / gordos / gordas。描述体形时注意场合；谈论他人外貌前先考虑是否合适。,形容词;外貌与性格
+es-1883,es,es-24,fuerte,强壮的；强烈的,Mi hermana es fuerte y hace deporte.,我姐姐很强壮，而且运动。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：fuerte / fuerte / fuertes / fuertes。,形容词;外貌与性格
+es-1884,es,es-24,débil,虚弱的；弱的,Hoy me siento débil y necesito descansar.,今天我觉得虚弱，需要休息。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：débil / débil / débiles / débiles。,形容词;外貌与性格
+es-1885,es,es-24,guapo,好看的,Mi amigo está guapo con esa camisa.,我朋友穿那件衬衫很好看。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：guapo / guapa / guapos / guapas。,形容词;外貌与性格
+es-1886,es,es-24,joven,年轻的,La profesora es joven y paciente.,老师很年轻，也有耐心。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：joven / joven / jóvenes / jóvenes。,形容词;外貌与性格
+es-1887,es,es-24,serio,认真的；严肃的,Mi padre es serio cuando trabaja.,我父亲工作时很认真。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：serio / seria / serios / serias。,形容词;外貌与性格
+es-1888,es,es-24,sincero,真诚的；坦率的,Quiero una respuesta sincera.,我想要一个真诚的回答。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：sincero / sincera / sinceros / sinceras。,形容词;外貌与性格
+es-1889,es,es-24,generoso,慷慨的,Mi amiga es generosa y comparte sus libros.,我朋友很慷慨，愿意分享她的书。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：generoso / generosa / generosos / generosas。,形容词;外貌与性格
+es-1890,es,es-24,egoísta,自私的,No es egoísta y piensa en otras personas.,他不自私，会考虑其他人。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：egoísta / egoísta / egoístas / egoístas。,形容词;外貌与性格
+es-1891,es,es-24,modesto,谦虚的；朴素的,El artista es modesto aunque es famoso.,这位艺术家虽然出名，却很谦虚。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：modesto / modesta / modestos / modestas。,形容词;外貌与性格
+es-1892,es,es-24,honesto,诚实的,Mi compañero es honesto y responsable.,我的同伴诚实而且负责。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：honesto / honesta / honestos / honestas。,形容词;外貌与性格
+es-1893,es,es-24,sociable,合群的；乐于交往的,Mi hermana es sociable y tiene muchos amigos.,我姐姐乐于交往，有很多朋友。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：sociable / sociable / sociables / sociables。,形容词;外貌与性格
+es-1894,es,es-24,extrovertido,外向的,El nuevo profesor es extrovertido.,新老师很外向。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：extrovertido / extrovertida / extrovertidos / extrovertidas。,形容词;外貌与性格
+es-1895,es,es-24,introvertido,内向的,Soy introvertido y prefiero estudiar con pocos amigos.,我比较内向，更喜欢和少数朋友一起学习。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：introvertido / introvertida / introvertidos / introvertidas。,形容词;外貌与性格
+es-1896,es,es-24,prudente,谨慎的,Una persona prudente lee las instrucciones.,谨慎的人会读说明。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：prudente / prudente / prudentes / prudentes。,形容词;外貌与性格
+es-1897,es,es-24,impaciente,没有耐心的,Estoy impaciente porque el tren llega tarde.,我因为火车晚点而有些着急。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：impaciente / impaciente / impacientes / impacientes。,形容词;外貌与性格
+es-1898,es,es-24,tolerante,宽容的,El tutor es tolerante y escucha otras opiniones.,导师很宽容，会听取其他意见。,形容词；阳性单数 / 阴性单数 / 阳性复数 / 阴性复数：tolerante / tolerante / tolerantes / tolerantes。,形容词;外貌与性格
+es-1899,es,es-24,ambos,两者；两个都,Ambos amigos son sinceros.,两位朋友都很真诚。,数量词；阳性 ambos，阴性 ambas；只用于复数，指已明确的两者。,数量与程度
+es-1900,es,es-24,cualquiera,任何一个；随便哪一个,Cualquiera puede participar en la actividad.,任何人都可以参加活动。,不定代词；单数 cualquiera；在单数名词前用 cualquier，如 cualquier persona。,数量与程度
+es-1901,es,es-24,suficiente,足够的,Tenemos suficiente tiempo para leer el correo.,我们有足够的时间读邮件。,数量与程度形容词；单数 suficiente，复数 suficientes，不随性变化。,数量与程度
+es-1902,es,es-24,escaso,少量的；不足的,Este mes tenemos escaso tiempo para viajar.,这个月我们很少有时间旅行。,数量形容词；escaso / escasa / escasos / escasas，与名词一致。,数量与程度
+es-1903,es,es-24,abundante,大量的；充足的,La biblioteca ofrece abundante información.,图书馆提供大量信息。,数量形容词；abundante / abundantes，不随性变化。,数量与程度
+es-1904,es,es-24,numeroso,众多的；人数多的,El equipo es numeroso.,这个团队人数很多。,数量形容词；numeroso / numerosa / numerosos / numerosas。,数量与程度
+es-1905,es,es-24,muchísimo,非常多；极多的,Tenemos muchísimas preguntas del curso.,我们有非常多关于课程的问题。,mucho 的绝对最高级；muchísimo / muchísima / muchísimos / muchísimas；修饰动词时固定用 muchísimo。,数量与程度
+es-1906,es,es-24,poquísimo,非常少；极少的,Hoy tengo poquísimo tiempo.,今天我的时间非常少。,poco 的绝对最高级；poquísimo / poquísima / poquísimos / poquísimas；c 在 í 前变为 qu。,数量与程度
+es-1907,es,es-24,sumamente,极其；非常,La respuesta es sumamente clara.,这个回答非常清楚。,程度副词，不变形；常放在形容词前。,数量与程度
+es-1908,es,es-24,excesivamente,过分地；过于,El texto es excesivamente largo.,这篇文章过长。,程度副词，不变形；表示超出合适程度。,数量与程度
+es-1909,es,es-24,creo que,我认为,Creo que Ana es una persona sincera.,我认为安娜是个真诚的人。,肯定观点通常接陈述式；creo 来自 creer 的 yo 现在时。,观点表达;phrase
+es-1910,es,es-24,en mi opinión,在我看来,"En mi opinión, el equipo trabaja bien.",在我看来，这个团队工作得很好。,用于引出个人看法；只练识别。,观点表达;phrase
+es-1911,es,es-24,me parece que,我觉得,Me parece que la idea es buena.,我觉得这个想法很好。,肯定判断通常接陈述式；parece 是 parecer 的第三人称单数现在时。,观点表达;phrase
+es-1912,es,es-24,estoy de acuerdo,我同意,Estoy de acuerdo con tu opinión.,我同意你的看法。,estar de acuerdo con 后接人或观点；estoy 是 estar 的 yo 现在时。,观点表达;phrase
+es-1913,es,es-24,no estoy de acuerdo,我不同意,No estoy de acuerdo con esa idea.,我不同意那个想法。,表达不同意见时可补充具体理由；只练识别。,观点表达;phrase
+es-1914,es,es-24,pienso que,我认为；我想,Pienso que debemos escuchar a todos.,我认为我们应该听取所有人的意见。,肯定观点通常接陈述式；pienso 来自 pensar 的 yo 现在时。,观点表达;phrase
+es-1915,es,es-24,desde mi punto de vista,从我的角度看,"Desde mi punto de vista, el plan es posible.",从我的角度看，这个计划可行。,引出个人观点的固定表达；只练识别。,观点表达;phrase
+es-1916,es,es-24,a mi parecer,依我看,"A mi parecer, necesitamos más tiempo.",依我看，我们需要更多时间。,表达个人判断；注意这里的 mi 没有重音符号。,观点表达;phrase
+es-1917,es,es-24,considero que,我认为,Considero que el respeto es importante.,我认为尊重很重要。,considero 来自 considerar 的 yo 现在时；肯定观点通常接陈述式。,观点表达;phrase
+es-1918,es,es-24,estoy seguro de que,我确信,Estoy seguro de que podemos terminar hoy.,我确信我们今天能完成。,这里表示确信；说话者为女性时用 estoy segura de que。,观点表达;phrase
+es-1919,es,es-24,el aspecto,外表；方面,El aspecto de la casa es bonito.,这所房子的外观很好看。,名词（阳）；用于外貌、性格或邮件交流。,名词
+es-1920,es,es-24,la apariencia,外貌；表象,La apariencia no explica el carácter de una persona.,外貌不能说明一个人的性格。,名词（阴）；用于外貌、性格或邮件交流。,名词
+es-1921,es,es-24,la estatura,身高,Mi hermano es de estatura media.,我哥哥中等身高。,名词（阴）；用于外貌、性格或邮件交流。,名词
+es-1922,es,es-24,la barba,胡须,Mi padre tiene la barba corta.,我父亲留着短胡须。,名词（阴）；用于外貌、性格或邮件交流。,名词
+es-1923,es,es-24,el bigote,上唇胡须,Mi abuelo tiene un bigote blanco.,我祖父留着白色的上唇胡须。,名词（阳）；用于外貌、性格或邮件交流。,名词
+es-1924,es,es-24,la sonrisa,微笑,Su sonrisa muestra que está contenta.,她的微笑表明她很开心。,名词（阴）；用于外貌、性格或邮件交流。,名词
+es-1925,es,es-24,el carácter,性格,Mi hermana tiene un carácter tranquilo.,我姐姐性格沉静。,名词（阳）；复数：los caracteres；单数重音在 rá，复数不带重音符号。,名词
+es-1926,es,es-24,la personalidad,个性；人格,Su personalidad es diferente de la de mi hermana.,他的个性与我姐姐的不同。,名词（阴）；用于外貌、性格或邮件交流。,名词
+es-1927,es,es-24,la cualidad,优点；特性,La sinceridad es una cualidad importante.,真诚是一个重要的优点。,名词（阴）；用于外貌、性格或邮件交流。,名词
+es-1928,es,es-24,el defecto,缺点；瑕疵,Un defecto del informe es su tamaño.,这份报告的一个缺点是篇幅。,名词（阳）；用于外貌、性格或邮件交流。,名词
+es-1929,es,es-24,la confianza,信任；信心,Tengo confianza en mi profesora.,我信任我的老师。,名词（阴）；用于外貌、性格或邮件交流。,名词
+es-1930,es,es-24,la sinceridad,真诚；坦率,Admiro la sinceridad de mi amigo.,我欣赏朋友的真诚。,名词（阴）；用于外貌、性格或邮件交流。,名词
+es-1931,es,es-24,el respeto,尊重,El respeto es necesario para trabajar en equipo.,一起工作需要相互尊重。,名词（阳）；用于外貌、性格或邮件交流。,名词
+es-1932,es,es-24,el destinatario,男性收件人；接收者,El destinatario del correo es mi profesor.,邮件的收件人是我的老师。,名词（阳）；用于外貌、性格或邮件交流。,名词
+es-1933,es,es-24,la destinataria,女性收件人；接收者,La destinataria de la carta es Ana.,信的收件人是安娜。,名词（阴）；用于外貌、性格或邮件交流。,名词
+es-1934,es,es-24,valorar,重视；评价,Valoramos el esfuerzo de cada estudiante.,我们重视每个学生的努力。,valorar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：valoro / valoras / valora / valoramos / valoráis / valoran。,动词;不定式;现在时
+es-1935,es,es-24,admirar,钦佩；欣赏,Admiro a mi profesora porque es generosa.,我钦佩老师，因为她很慷慨。,admirar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：admiro / admiras / admira / admiramos / admiráis / admiran。,动词;不定式;现在时
+es-1936,es,es-24,juzgar,判断；评价,No debemos juzgar a una persona por su apariencia.,我们不应该根据外貌评价一个人。,juzgar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：juzgo / juzgas / juzga / juzgamos / juzgáis / juzgan。,动词;不定式;现在时
+es-1937,es,es-24,criticar,批评,"Critico la idea, pero respeto a la persona.",我批评这个想法，但尊重这个人。,criticar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：critico / criticas / critica / criticamos / criticáis / critican。,动词;不定式;现在时
+es-1938,es,es-24,elogiar,称赞,La profesora elogia nuestro trabajo.,老师称赞我们的作业。,elogiar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：elogio / elogias / elogia / elogiamos / elogiáis / elogian。,动词;不定式;现在时
+es-1939,es,es-24,expresar,表达,Expreso mi opinión con respeto.,我以尊重他人的方式表达意见。,expresar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：expreso / expresas / expresa / expresamos / expresáis / expresan。,动词;不定式;现在时
+es-1940,es,es-24,detallar,详细说明,Detallamos el plan en el correo.,我们在邮件中详细说明计划。,detallar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：detallo / detallas / detalla / detallamos / detalláis / detallan。,动词;不定式;现在时
+es-1941,es,es-24,retratar,描绘；拍摄肖像,El artista retrata a una mujer joven.,这位艺术家描绘一位年轻女子。,retratar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：retrato / retratas / retrata / retratamos / retratáis / retratan。,动词;不定式;现在时
+es-1942,es,es-24,sonreír,微笑,Ana sonríe cuando ve a sus amigos.,安娜见到朋友时会微笑。,sonreír 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：sonrío / sonríes / sonríe / sonreímos / sonreís / sonríen。,动词;不定式;现在时
+es-1943,es,es-24,aparentar,显得；表现出,Mi abuelo aparenta menos años de los que tiene.,我祖父看起来比实际年龄年轻。,aparentar 的现在时依次为 yo / tú / él-ella-usted / nosotros-as / vosotros-as / ellos-ellas-ustedes：aparento / aparentas / aparenta / aparentamos / aparentáis / aparentan。,动词;不定式;现在时
+es-1944,es,es-24,Mi hermana tiene el pelo rizado y es generosa.,我姐姐头发卷曲，而且很慷慨。,Mi hermana tiene el pelo rizado y es generosa.,我姐姐头发卷曲，而且很慷慨。,整句；识别外貌、数量、程度与邮件表达。,句型;phrase
+es-1945,es,es-24,Ambos profesores son amabilísimos.,两位老师都非常和蔼。,Ambos profesores son amabilísimos.,两位老师都非常和蔼。,整句；识别外貌、数量、程度与邮件表达。,句型;phrase
+es-1946,es,es-24,"En mi opinión, cada persona tiene cualidades diferentes.",在我看来，每个人都有不同的优点。,"En mi opinión, cada persona tiene cualidades diferentes.",在我看来，每个人都有不同的优点。,整句；识别外貌、数量、程度与邮件表达。,句型;phrase
+es-1947,es,es-24,"No estoy de acuerdo, pero quiero escuchar tu opinión.",我不同意，但我想听听你的看法。,"No estoy de acuerdo, pero quiero escuchar tu opinión.",我不同意，但我想听听你的看法。,整句；识别外貌、数量、程度与邮件表达。,句型;phrase
+es-1948,es,es-24,Te escribo para describir a mi nuevo compañero.,我写信是为了描述我的新同伴。,Te escribo para describir a mi nuevo compañero.,我写信是为了描述我的新同伴。,整句；识别外貌、数量、程度与邮件表达。,句型;phrase
+es-1949,es,es-24,sinceramente,真诚地；坦率地,Te digo sinceramente lo que pienso.,我坦率地告诉你我的想法。,sincero 的阴性形式 sincera 加 -mente。,副词;补充
+es-1950,es,es-24,claramente,清楚地,El profesor explica claramente la tarea.,老师把任务解释得很清楚。,claro 的阴性形式 clara 加 -mente。,副词;补充
+es-1951,es,es-24,seriamente,认真地；严肃地,Tenemos que pensar seriamente en esta decisión.,我们必须认真考虑这个决定。,serio 的阴性形式 seria 加 -mente。,副词;补充
+es-1952,es,es-24,alegremente,愉快地,Los niños hablan alegremente en el patio.,孩子们在院子里愉快地交谈。,alegre 直接加 -mente，形式不随主语变化。,副词;补充
+es-1953,es,es-24,cordialmente,亲切地；谨致问候,El profesor nos saluda cordialmente.,老师亲切地向我们问好。,副词；也可单独用作邮件结尾的问候语。,副词;补充
+es-1954,es,es-25,la estrategia,策略；学习安排,Mi estrategia es leer antes de escribir.,我的策略是先读再写。,名词（阴）；用于说明如何达到学习目标。,同源学习;名词
+es-1955,es,es-25,la autoevaluación,自我评价,La autoevaluación me ayuda a conocer mi nivel.,自我评价帮助我了解自己的水平。,名词（阴）；学习词；根据自己的表现作评价。,同源学习;名词
+es-1956,es,es-25,la motivación,动机；学习动力,Mi motivación es poder leer libros en español.,我的学习动力是能读西语书。,名词（阴）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1957,es,es-25,la disciplina,自律；纪律,La disciplina me ayuda a estudiar cada día.,自律帮助我每天学习。,名词（阴）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1958,es,es-25,la concentración,专注,Necesito silencio para mejorar mi concentración.,我需要安静来提高专注程度。,名词（阴）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1959,es,es-25,la organización,组织；安排,La organización del curso es clara.,课程安排很清楚。,名词（阴）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1960,es,es-25,la planificación,规划；安排,La planificación de la semana tiene una lectura.,本周安排包含一次阅读。,名词（阴）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1961,es,es-25,la constancia,坚持；持之以恒,La constancia es importante para aprender.,坚持对学习很重要。,名词（阴）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1962,es,es-25,la autonomía,自主能力,Quiero tener más autonomía para estudiar.,我希望学习时更能自主安排。,名词（阴）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1963,es,es-25,la creatividad,创造力,Este ejercicio permite desarrollar la creatividad.,这个练习能发展创造力。,名词（阴）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1964,es,es-25,la lógica,逻辑,La lógica del relato es fácil de seguir.,这个故事的逻辑很容易理解。,名词（阴）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1965,es,es-25,la síntesis,综合概述；归纳,Escribo una síntesis del artículo.,我写这篇文章的概述。,名词（阴）；单复数同形：la síntesis / las síntesis。,同源学习;名词
+es-1966,es,es-25,el análisis,分析,El análisis del texto muestra una idea importante.,对文章的分析显示出一个重要观点。,名词（阳）；单复数同形：el análisis / los análisis。,同源学习;名词
+es-1967,es,es-25,la interpretación,理解；解释,Mi interpretación del final es diferente.,我对结尾的理解不同。,名词（阴）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1968,es,es-25,la traducción,翻译；译文,Comparo mi traducción con el texto en español.,我把自己的译文与西语原文比较。,名词（阴）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1969,es,es-25,la expresión,表达；表达方式,Busco una expresión más clara.,我寻找一种更清楚的表达方式。,名词（阴）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1970,es,es-25,la precisión,准确性,Reviso las fechas para mejorar la precisión del relato.,我核对日期，以提高叙事的准确性。,名词（阴）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1971,es,es-25,la coherencia,连贯性,La coherencia permite comprender mejor el texto.,连贯性能让文章更容易理解。,名词（阴）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1972,es,es-25,la estructura,结构,La estructura del correo tiene una introducción y un final.,邮件结构包括开头和结尾。,名词（阴）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1973,es,es-25,el borrador,草稿,Primero escribo un borrador y después lo reviso.,我先写草稿，然后修改。,名词（阳）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1974,es,es-25,la puntuación,标点使用；得分,Reviso la puntuación de cada frase.,我检查每句话的标点。,名词（阴）；本课主要指书写中的标点使用，也可指得分。,同源学习;名词
+es-1975,es,es-25,la ortografía,正字法；拼写,El diccionario me ayuda a comprobar la ortografía.,词典帮助我核对拼写。,名词（阴）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1976,es,es-25,la acentuación,重音规则；重音符号的使用,En la revisión compruebo la acentuación de las palabras.,修改时，我核对单词的重音符号。,名词（阴）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1977,es,es-25,el sinónimo,近义词；同义词,Busco un sinónimo para no repetir la misma palabra.,我找近义词，以免重复同一个词。,名词（阳）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1978,es,es-25,el antónimo,反义词,Grande es un antónimo de pequeño.,大是小的反义词。,名词（阳）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1979,es,es-25,el diccionario,词典,"Después de escribir, consulto el diccionario.",写完后，我查词典。,名词（阳）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1980,es,es-25,la bibliografía,参考书目,La bibliografía tiene los libros que hemos usado.,参考书目包括我们用过的书。,名词（阴）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1981,es,es-25,el portafolio,作品集；学习档案,Guardo mis textos en un portafolio.,我把文章收进学习档案。,名词（阳）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1982,es,es-25,el repaso,复习,El repaso de hoy tiene ejemplos del pasado.,今天的复习有过去时的例子。,名词（阳）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1983,es,es-25,el balance,总结；总体评估,Al final del curso hago un balance de mi progreso.,课程结束时，我总结自己的进展。,名词（阳）；同源词或学习相关词；复习课不引入新语法。,同源学习;名词
+es-1984,es,es-25,"Antes del viaje, ya había preparado mi itinerario.",旅行之前，我已经准备好了行程。,"Antes del viaje, ya había preparado mi itinerario.",旅行之前，我已经准备好了行程。,整句；综合复习已学时态、连接方式及学习表达。,句型;phrase
+es-1985,es,es-25,"Si tengo tiempo, revisaré el borrador esta tarde.",如果有时间，我今天下午会修改草稿。,"Si tengo tiempo, revisaré el borrador esta tarde.",如果有时间，我今天下午会修改草稿。,整句；综合复习已学时态、连接方式及学习表达。,句型;phrase
+es-1986,es,es-25,"He mejorado, pero todavía necesito practicar la escritura.",我已有进步，但仍需要练习写作。,"He mejorado, pero todavía necesito practicar la escritura.",我已有进步，但仍需要练习写作。,整句；综合复习已学时态、连接方式及学习表达。,句型;phrase
+es-1987,es,es-25,Quiero que mi próximo texto sea más claro.,我希望自己的下一篇文章更清楚。,Quiero que mi próximo texto sea más claro.,我希望自己的下一篇文章更清楚。,整句；综合复习已学时态、连接方式及学习表达。,句型;phrase
+es-1988,es,es-25,"Después de la autoevaluación, organizaré mi repaso.",自我评价之后，我会安排复习。,"Después de la autoevaluación, organizaré mi repaso.",自我评价之后，我会安排复习。,整句；综合复习已学时态、连接方式及学习表达。,句型;phrase
+es-1989,es,es-25,de todos modos,无论如何；尽管如此,"No tengo mucho tiempo; de todos modos, voy a leer.",我时间不多；尽管如此，我还是要读一读。,表示前述情况不改变后面的决定。,连接词
+es-1990,es,es-25,en definitiva,总的来说；归根结底,"En definitiva, el viaje fue una buena experiencia.",总的来说，这次旅行是一次很好的经历。,用于给出最后的整体看法。,连接词
+es-1991,es,es-25,al mismo tiempo,同时,Leo el texto y al mismo tiempo anoto las ideas.,我一边读文章，一边记下要点。,连接同时进行的动作或同时存在的情况。,连接词
+es-1992,es,es-25,de igual manera,同样地；以相同方式,Leo el primer texto y reviso el segundo de igual manera.,我读第一篇文章，并以相同方式检查第二篇。,说明做法或情况相同。,连接词
+es-1993,es,es-25,por un lado,一方面,"Por un lado, quiero viajar; por otra parte, necesito ahorrar.",一方面，我想旅行；另一方面，我需要存钱。,用于引出考虑的一个方面，可与已学 por otra parte 对应。,连接词
