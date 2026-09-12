@@ -144,6 +144,9 @@ const r1Expanded=r1Rows.reduce((total,row)=>total+(row.tags.split(';').includes(
 const R2_LESSONS=['ru-17','ru-18','ru-19','ru-20'];
 const r2Rows=initialRows.filter(row=>R2_LESSONS.includes(row.lesson));
 const r2Expanded=r2Rows.reduce((total,row)=>total+(row.tags.split(';').includes('phrase')?1:2),0);
+const R3_LESSONS=['ru-21','ru-22','ru-23','ru-24'];
+const r3Rows=initialRows.filter(row=>R3_LESSONS.includes(row.lesson));
+const r3Expanded=r3Rows.reduce((total,row)=>total+(row.tags.split(';').includes('phrase')?1:2),0);
 // 原有 2895 张卡保持固定基数；新卡按标签计算预期方向，另有逐卡检查。
 const s1Expanded=s1Rows.reduce((total,row)=>total+(row.tags.split(';').includes('phrase')?1:2),0);
 function record(day='2026-09-14',grade=4) { return api.schedule(null,grade,day); }
@@ -152,11 +155,11 @@ test('来源 CSV 与两个内嵌 JSON 完整一致；只有一个可执行脚本
   const rows = ['es','ru'].flatMap(lang => plain(api.parseCSV(fs.readFileSync(path.join(__dirname,'cards',lang+'.csv'),'utf8'))));
   // 内嵌数据按追加顺序保留旧行；来源 CSV 各自按语言排列。
   for (const lang of ['es','ru']) assert.deepEqual(rows.filter(row=>row.lang===lang),initialRows.filter(row=>row.lang===lang));
-  assert.equal(rows.length,2808);
-  assert.equal(api.expandCards(rows).length,2895+s1Expanded+r1Expanded+s2Expanded+r2Expanded+s3Expanded);
+  assert.equal(rows.length,3009);
+  assert.equal(api.expandCards(rows).length,2895+s1Expanded+r1Expanded+s2Expanded+r2Expanded+s3Expanded+r3Expanded);
   assert.equal(rows.filter(r=>r.lang==='es').length,1873);
   assert.equal(rows.filter(r=>r.tags.split(';').includes('letter')).length,33);
-  assert.equal(rows.filter(r=>r.lang==='ru'&&!r.tags.split(';').includes('letter')).length,902);
+  assert.equal(rows.filter(r=>r.lang==='ru'&&!r.tags.split(';').includes('letter')).length,1103);
   assert.match(html,/<div id="app"><\/div>/);
   assert.doesNotMatch(html,/<(?:script|link|img)[^>]+(?:src|href)=/i);
   assert.doesNotMatch(runtime,/\b(?:fetch|XMLHttpRequest|WebSocket|importScripts)\s*\(/);
@@ -250,7 +253,7 @@ test('拼写 NFC、重音、变音符、大小写、空格的三档判定',() =>
   ]) assert.equal(api.spellingResult(input,target,lang).grade,grade,input);
 });
 test('旧课拼写卡例句可挖空；边界不会误遮单词内部，俄语重音不泄露答案',() => {
-  for(const row of initialRows.filter(r=>!S1_LESSONS.includes(r.lesson) && !S2_LESSONS.includes(r.lesson) && !S3_LESSONS.includes(r.lesson) && !R1_LESSONS.includes(r.lesson) && !R2_LESSONS.includes(r.lesson) && !api.recognitionOnly(r))) assert(!api.clozeExample(row).includes('此例句没有'),row.id+' '+row.front);
+  for(const row of initialRows.filter(r=>!S1_LESSONS.includes(r.lesson) && !S2_LESSONS.includes(r.lesson) && !S3_LESSONS.includes(r.lesson) && !R1_LESSONS.includes(r.lesson) && !R2_LESSONS.includes(r.lesson) && !R3_LESSONS.includes(r.lesson) && !api.recognitionOnly(r))) assert(!api.clozeExample(row).includes('此例句没有'),row.id+' '+row.front);
   assert.equal(api.clozeExample({front:'es',lang:'es',example:'Es estudiante; es bueno.'}),'____ estudiante; ____ bueno.');
   assert.equal(api.clozeExample({front:'en',lang:'es',example:'El estudiante está en casa.'}),'El estudiante está ____ casa.');
   assert.equal(api.clozeExample({front:'телефо́н',lang:'ru',example:'Э́то телефо́н.'}),'Э́то ____.');
@@ -356,7 +359,7 @@ test('真实嵌入进度能通过 validateState；全部进度与日志 id 都�
   assert.equal(JSON.stringify(initialState),before);
 });
 test('课程注册表都有词条、周次、日期、目标、写作任务和 10 题；阅读题属于本课练习',() => {
-  assert.deepEqual(Object.keys(api.LESSONS),['es-01','es-02','es-03','es-04','es-05','es-06','es-07','es-08','es-09','es-10','es-11','es-12','es-13','es-14','es-15','es-16','es-17','es-18','es-19','es-20','es-21','es-22','es-23','ru-01','ru-02','ru-03','ru-04','ru-05','ru-06','ru-07','ru-08','ru-09','ru-10','ru-11','ru-12','ru-13','ru-14','ru-15','ru-16','ru-17','ru-18','ru-19','ru-20']);
+  assert.deepEqual(Object.keys(api.LESSONS),['es-01','es-02','es-03','es-04','es-05','es-06','es-07','es-08','es-09','es-10','es-11','es-12','es-13','es-14','es-15','es-16','es-17','es-18','es-19','es-20','es-21','es-22','es-23','ru-01','ru-02','ru-03','ru-04','ru-05','ru-06','ru-07','ru-08','ru-09','ru-10','ru-11','ru-12','ru-13','ru-14','ru-15','ru-16','ru-17','ru-18','ru-19','ru-20','ru-21','ru-22','ru-23','ru-24']);
   for (const [id,lesson] of Object.entries(api.LESSONS)) {
     assert(initialRows.some(row=>row.lesson===id),id);
     assert.equal(lesson.lang,id.slice(0,2));assert.equal(lesson.week,Number(id.slice(3)));
@@ -370,7 +373,7 @@ test('课程注册表都有词条、周次、日期、目标、写作任务和 1
     if (lesson.reading) {
       if (lesson.lang==='ru' && ['ru-03','ru-04'].includes(id)) assert([5,6].includes(lesson.reading.sentences.length));
       if (lesson.lang==='ru' && ['ru-05','ru-06','ru-07','ru-08'].includes(id)) assert(lesson.reading.sentences.length>=8 && lesson.reading.sentences.length<=10);
-      assert.equal(lesson.reading.questions.length,['es-04','es-05','es-07','es-08','es-09','es-10','es-11','es-12','es-13','es-14','es-15','es-16','es-17','es-18','es-19','es-20','es-21','es-22','es-23','ru-05','ru-08','ru-09','ru-10','ru-11','ru-12','ru-13','ru-14','ru-15','ru-16','ru-17','ru-18','ru-19','ru-20'].includes(id)?4:3);
+      assert.equal(lesson.reading.questions.length,['es-04','es-05','es-07','es-08','es-09','es-10','es-11','es-12','es-13','es-14','es-15','es-16','es-17','es-18','es-19','es-20','es-21','es-22','es-23','ru-05','ru-08','ru-09','ru-10','ru-11','ru-12','ru-13','ru-14','ru-15','ru-16','ru-17','ru-18','ru-19','ru-20','ru-21','ru-22','ru-23','ru-24'].includes(id)?4:3);
       for (const sentence of lesson.reading.sentences) assert(sentence.text && sentence.zh);
       for (const question of lesson.reading.questions) {
         assert(question.options.includes(question.answer),id+' '+question.prompt);
@@ -1182,7 +1185,7 @@ test('任务 S2：新课短文和新卡例句只用已学词，虚拟式按既�
   finally { row.example=previous; }
 });
 // 俄语阅读的词汇范围：本课及以前词卡的 front 和 note 里列出的形式；旧课保留例句依据。
-// R1 / R2 新例句不作为自身的放行来源，避免未学词通过例句进入词汇范围。
+// R1 / R2 / R3 新例句不作为自身的放行来源，避免未学词通过例句进入词汇范围。
 // 再按本阶段教过的规则推导：名词按格词尾，动词按 -л 过去时，形容词按性数和 -о 副词。
 const ruWords=text=>text.normalize('NFD').replace(/́/g,'').normalize('NFC').toLowerCase().match(/[а-яё]+/g) || [];
 const ruDeaccent=value=>value.normalize('NFD').replace(/́/g,'').normalize('NFC').toLocaleLowerCase();
@@ -1310,13 +1313,83 @@ const ruR2Forms=(word,row,lesson) => {
   }
   return out;
 };
+// R3 的推导仍从已学词卡出发；例句和阅读正文不参与建立允许词表。
+const RU_R3_PRONOUNS={
+  мой:['моего','моему','моим','моём','моя','моей','мою','моё','мои','моих','моими'],
+  твой:['твоего','твоему','твоим','твоём','твоя','твоей','твою','твоё','твои','твоих','твоими'],
+  наш:['нашего','нашему','нашим','нашем','наша','нашей','нашу','наше','наши','наших','нашими'],
+  ваш:['вашего','вашему','вашим','вашем','ваша','вашей','вашу','ваше','ваши','ваших','вашими'],
+  этот:['этого','этому','этим','этом','эта','этой','эту','это','эти','этих','этими'],
+  тот:['того','тому','тем','том','та','той','ту','то','те','тех','теми']
+};
+const RU_R3_NOUNS={сын:{plural:'сыновья',genitive:'сыновей'},дочь:{plural:'дочери',genitive:'дочерей'}};
+const RU_R3_ASPECT={читать:'прочитать',писать:'написать',делать:'сделать',покупать:'купить',говорить:'сказать',смотреть:'посмотреть',учить:'выучить',решать:'решить'};
+const ruR3Forms=(word,row,lesson) => {
+  const tags=row.tags.split(';'),out=[],pronoun=tags.some(tag=>['代词','指示词','疑问词','物主词'].includes(tag));
+  if (lesson>='ru-21' && word==='что') out.push('чего','чему','чем','чём');
+  if (lesson>='ru-21' && tags.includes('名词') && word==='подарок') out.push('подарка','подарку','подарком','подарке');
+  if (lesson>='ru-21' && pronoun) {
+    const forms=RU_R3_PRONOUNS[word] || [];
+    // 末尾三项是复数；本周只推导单数，下两周逐步开放复数。
+    out.push(...forms.slice(0,8));
+    if (lesson>='ru-22') out.push(...forms.slice(8,10));
+    if (lesson>='ru-23') out.push(...forms.slice(10));
+  }
+  if (lesson>='ru-21' && (tags.includes('形容词') || pronoun) && /(?:ый|ий|ой)$/.test(word) && !['мой','твой'].includes(word)) {
+    const stem=word.slice(0,-2),soft=/ий$/.test(word) && !/[гкхжшчщ]ий$/.test(word);
+    const eEnding=soft || /[жшчщ]ий$/.test(word),iEnding=soft || /[гкхжшчщ](?:ий|ой)$/.test(word);
+    out.push(stem+(eEnding?'ему':'ому'),stem+(iEnding?'им':'ым'),stem+(eEnding?'ей':'ой'));
+    if (pronoun) out.push(...(eEnding?['его','ем']:['ого','ом']).map(end=>stem+end),stem+(soft?'яя':'ая'),stem+(soft?'ее':'ое'),stem+(soft?'юю':'ую'));
+    if (lesson>='ru-22') out.push(stem+(iEnding?'ие':'ые'),stem+(iEnding?'их':'ых'));
+    if (lesson>='ru-23') out.push(stem+(iEnding?'ими':'ыми'));
+  }
+  if (lesson>='ru-22' && tags.includes('名词') && !row.note.includes('不变格')) {
+    const paradigm=RU_R3_NOUNS[word] || RU_NOUN_PARADIGMS[word];
+    const listed=ruWords(row.note.match(/(?:复数主格|主格复数)[： ]+([^；]+)/)?.[1] || '');
+    let plurals=paradigm?[paradigm.plural]:listed;
+    if (!plurals.length && !/名词（复数/.test(row.note)) {
+      if (/а$/.test(word)) plurals=[word.slice(0,-1)+(/[гкхжшчщ]а$/.test(word)?'и':'ы')];
+      else if (/я$/.test(word)) plurals=[word.slice(0,-1)+'и'];
+      else if (/о$/.test(word)) plurals=[word.slice(0,-1)+'а'];
+      else if (/е$/.test(word)) plurals=[word.slice(0,-1)+'я'];
+      else if (/ь$/.test(word)) plurals=[word.slice(0,-1)+'и'];
+      else if (/й$/.test(word)) plurals=[word.slice(0,-1)+'и'];
+      else if (!/[аеёиоуыэюя]$/.test(word)) plurals=[word+(/[гкхжшчщ]$/.test(word)?'и':'ы')];
+    }
+    if (paradigm) out.push(paradigm.genitive);
+    for (const plural of plurals) {
+      out.push(plural);
+      if (!/[ыаяи]$/.test(plural)) continue;
+      const stem=plural.slice(0,-1),soft=/я$/.test(plural) || /и$/.test(plural) && !/[гкхжшчщ]и$/.test(plural);
+      out.push(stem+(soft?'ях':'ах'));
+      if (lesson>='ru-23') out.push(stem+(soft?'ям':'ам'),RU_INSTRUMENTAL_PLURAL[word] || stem+(soft?'ями':'ами'));
+    }
+  }
+  if (lesson>='ru-24' && tags.includes('不定式')) {
+    const pair=RU_R3_ASPECT[word];
+    if (pair) out.push(pair,...ruForms(pair,['不定式']));
+    for (const form of ruWords(row.note.match(/体配对：([^；]+)/)?.[1] || ''))
+      if (/(?:ть|ться)$/.test(form)) out.push(...ruForms(form,['不定式']));
+  }
+  if (lesson>='ru-21' && tags.includes('不定式') && !row.note.includes('六个人称') && !['мочь','хотеть','бежать'].includes(word)) {
+    // 早期卡只列 я / ты 时，以卡片注明的变位类别推导第三人称复数。
+    const second=ruWords(row.note.match(/ты ([А-Яа-яЁё\u0301]+)/)?.[1] || '')[0];
+    if (second && /第一变位/.test(row.note) && /[её]шь$/.test(second)) {
+      const stem=second.slice(0,-3);out.push(stem+(/[аеёиоуыэюя]$/.test(stem)?'ют':'ут'));
+    }
+    if (second && /第二变位/.test(row.note) && /ишь$/.test(second)) {
+      const stem=second.slice(0,-3);out.push(stem+(/[жшчщ]$/.test(stem)?'ат':'ят'));
+    }
+  }
+  return out;
+};
 const ruVocabulary=lesson => {
   const set=new Set();
   for (const row of initialRows.filter(row=>row.lang==='ru' && row.lesson<=lesson && !row.tags.split(';').includes('letter'))) {
     for (const word of [...ruWords(row.front),...ruWords(row.note),...(row.lesson<'ru-13'?ruWords(row.example):[])]) set.add(word);
     const tags=row.tags.split(';');
     for (const word of ruWords(row.front))
-      for (const form of [...ruForms(word,tags),...ruConstructionForms(word,row,lesson),...ruR2Forms(word,row,lesson)]) set.add(form);
+      for (const form of [...ruForms(word,tags),...ruConstructionForms(word,row,lesson),...ruR2Forms(word,row,lesson),...ruR3Forms(word,row,lesson)]) set.add(form);
     // 早期动词卡只列 я / ты；从卡上已给的 ты 形式推导同词干的 он、мы、вы。
     if (tags.includes('不定式')) {
       const second=ruWords(row.note.match(/ты ([А-Яа-яЁё\u0301]+)/)?.[1] || '')[0];
@@ -1462,12 +1535,12 @@ test('任务 C 只追加 cards-data 与 ru.csv；已有记录顺序不变',() =>
   // 任务 E1 的西语第 9–12 周同样只追加在最后。
   assert.deepEqual(initialRows.slice(initialRows.findIndex(row=>row.id==='es-0714'),initialRows.findIndex(row=>row.id==='ru-0343')).map(row=>row.id),Array.from({length:280},(_,i)=>'es-'+String(714+i).padStart(4,'0')));
 });
-test('各课程分语言展示；阅读中文默认折叠；430 道练习按题型反馈且不写入进度',() => {
+test('各课程分语言展示；阅读中文默认折叠；470 道练习按题型反馈且不写入进度',() => {
   const {api:a,document}=createAPI(true);a.initialize();
   const before=plain(a.getData().state);
   for (const [id,lesson] of Object.entries(a.LESSONS)) {
     a.openLesson(id);
-    assert.equal(document.querySelectorAll('[data-lesson]').length,43);
+    assert.equal(document.querySelectorAll('[data-lesson]').length,47);
     const page=document.getElementById('content').innerHTML;
     assert(page.indexOf('西语课程')<page.indexOf('俄语课程'));
     assert(page.includes(lesson.goal));assert(page.includes(lesson.writingTask));
@@ -1514,7 +1587,7 @@ test('letter / phrase 标签只生成识别卡；其他词条仍有两个方向'
     const expected=row.tags.split(';').some(tag=>['letter','phrase'].includes(tag))?['r']:['r','p'];
     assert.deepEqual(plain(api.expandCards([row]).map(card=>card.direction)),expected,row.id);
   }
-  assert.equal(initialRows.filter(row=>row.tags.split(';').includes('phrase')).length,200+s3Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r1Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r2Rows.filter(row=>row.tags.split(';').includes('phrase')).length);
+  assert.equal(initialRows.filter(row=>row.tags.split(';').includes('phrase')).length,200+s3Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r1Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r2Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r3Rows.filter(row=>row.tags.split(';').includes('phrase')).length);
   // 标签规则也适用于以后导入的西语词，不靠课次或语言写死。
   for (const tag of ['phrase','letter']) assert.deepEqual(plain(api.expandCards([{...initialRows[0],tags:'extra;'+tag}]).map(card=>card.direction)),['r']);
 });
@@ -1741,7 +1814,7 @@ test('任务 F1：阅读标签的列表与阅读页；答完四题写入进度�
   assert.deepEqual(document.querySelectorAll('[data-tab]').map(node=>node.dataset.tab),['review','lessons','readings','stats','settings']);
   a.showReadings();
   const list=document.querySelectorAll('[data-reading]');
-  assert.equal(list.length,76);
+  assert.equal(list.length,84);
   assert.deepEqual(list.map(node=>node.dataset.reading),['es','ru'].flatMap(lang=>Object.values(a.READINGS).filter(item=>item.lang===lang).map(item=>item.id)));
   assert(document.getElementById('content').innerHTML.includes('未读'),'未读状态');
   const item=a.READINGS['es-r01'];
@@ -1779,7 +1852,7 @@ test('任务 F1：阅读标签的列表与阅读页；答完四题写入进度�
   assert.deepEqual(plain(a.getData().state.readings),{'es-r01':{done:today,score:4,total:4}});
   const back=document.querySelectorAll('[data-action]').find(node=>node.dataset.action==='readings-back');
   document.getElementById('app').listeners.click[0]({target:{closest:()=>back}});
-  assert.equal(document.querySelectorAll('[data-reading]').length,76,'返回按钮回到阅读列表');
+  assert.equal(document.querySelectorAll('[data-reading]').length,84,'返回按钮回到阅读列表');
   assert(document.getElementById('content').innerHTML.includes('已读 '+today+' · 4 / 4'),'列表显示已读与得分');
   // 序列化仍清空 app，readings 随状态写入并能再次读回。
   const saved=a.serializeDocument(document,initialRows,a.getData().state,'2026-09-15T10:00:00Z','file');
@@ -1802,7 +1875,7 @@ test('任务 F1：统计页的阅读一行；课程标题行的每日时长两�
   document.getElementById('app').listeners.click[0]({target:{closest:()=>statsTab}});
   const rows=document.querySelectorAll('.stats-table').at(-1).querySelector('tbody').querySelectorAll('tr')
     .map(tr=>[tr.querySelector('th').textContent,...tr.querySelectorAll('td').map(td=>td.textContent)]);
-  assert.deepEqual(rows,[['es · 西语','1 / 44','4.0 / 4'],['ru · 俄语','0 / 32','—']]);
+  assert.deepEqual(rows,[['es · 西语','1 / 44','4.0 / 4'],['ru · 俄语','0 / 40','—']]);
   const expected={es:['每天 30 分钟 + 每周 3 次系统块 40 分钟','每天 25 分钟 + 每周 30 分钟语法与写作'],ru:['每天 10 分钟','每天 30 分钟 + 周末系统块 60 分钟']};
   for (const [id,lesson] of Object.entries(a.LESSONS)) {
     const want=expected[lesson.lang][lesson.week>=5?1:0];
@@ -1812,7 +1885,7 @@ test('任务 F1：统计页的阅读一行；课程标题行的每日时长两�
   }
 });
 
-// 任务 F2：俄语阅读篇目。词汇范围沿用上面俄语课文用的同一套推导式检查，对全部 32 篇执行。
+// 任务 F2：俄语阅读篇目。词汇范围沿用上面俄语课文用的同一套推导式检查，对全部 40 篇执行。
 const RU_READING_SENTENCES={5:[6,8],6:[8,10],7:[8,10],8:[10,12],9:[10,12],10:[12,14],11:[12,14],12:[14,16]};
 const RU_READING_GENRES=['对话','日记','短信或便条','人物介绍','房间或城市描写','一天的安排','通知'];
 test('任务 F2 / S2 / R2 / S3：既有阅读保留 id 顺序，新篇目在末尾追加',() => {
@@ -1821,9 +1894,10 @@ test('任务 F2 / S2 / R2 / S3：既有阅读保留 id 顺序，新篇目在末�
     ...Array.from({length:24},(_,i)=>'ru-r'+String(i+1).padStart(2,'0')),
     ...Array.from({length:8},(_,i)=>'es-r'+String(i+31).padStart(2,'0')),
     ...Array.from({length:8},(_,i)=>'ru-r'+String(i+25).padStart(2,'0')),
-    ...Array.from({length:6},(_,i)=>'es-r'+String(i+39).padStart(2,'0'))
+    ...Array.from({length:6},(_,i)=>'es-r'+String(i+39).padStart(2,'0')),
+    ...Array.from({length:8},(_,i)=>'ru-r'+String(i+33).padStart(2,'0'))
   ]);
-  assert.equal(Object.values(api.READINGS).filter(item=>item.lang==='ru').length,32);
+  assert.equal(Object.values(api.READINGS).filter(item=>item.lang==='ru').length,40);
 });
 test('任务 F2：16 篇俄语阅读结构完整、句数在区间内、答案在选项里、重点词是已学词',() => {
   const fronts=new Map();
@@ -1876,7 +1950,7 @@ test('任务 F2：16 篇俄语阅读结构完整、句数在区间内、答案�
   // 每周两篇，从第 5 周到第 12 周。
   for (let week=5;week<=12;week++) assert.equal(Object.values(api.READINGS).filter(item=>item.lang==='ru' && item.week===week).length,2,'第 '+week+' 周篇数');
 });
-test('任务 F2 / R1 / R2：32 篇俄语阅读只用 afterLesson 及之前的词卡与其规则变化形式',() => {
+test('任务 F2 / R1 / R2：40 篇俄语阅读只用 afterLesson 及之前的词卡与其规则变化形式',() => {
   for (const item of Object.values(api.READINGS)) {
     if (item.lang!=='ru') continue;
     const set=ruVocabulary(item.afterLesson);
@@ -2006,7 +2080,7 @@ test('任务 R1：新增 213 个 id 连续，CSV 同步，cards-data 按 id 在�
   assert.deepEqual(r1Rows.map(row=>row.id),ids);
   const csv=plain(api.parseCSV(fs.readFileSync(path.join(__dirname,'cards','ru.csv'),'utf8')));
   assert.deepEqual(csv.filter(row=>R1_LESSONS.includes(row.lesson)),r1Rows);
-  assert.deepEqual(csv.map(row=>row.id),Array.from({length:935},(_,i)=>'ru-'+String(i+1).padStart(4,'0')));
+  assert.deepEqual(csv.map(row=>row.id),Array.from({length:1136},(_,i)=>'ru-'+String(i+1).padStart(4,'0')));
   const previous=initialRows.findIndex(row=>row.id==='es-1313');assert(previous>=0);
   assert.deepEqual(initialRows.slice(previous+1,initialRows.findIndex(row=>row.id==='ru-0735')+1).map(row=>row.id),ids,'新词按原有 id 次序追加');
   const seen=new Set(initialRows.filter(row=>row.lang==='ru' && row.lesson<'ru-13').map(row=>ruDeaccent(row.front)));
@@ -2211,7 +2285,7 @@ test('任务 R2：新增 200 个 id 连续、CSV 与内嵌同步、原有 id 后
   assert.deepEqual(r2Rows.map(row=>row.id),expected);
   const csv=plain(api.parseCSV(fs.readFileSync(path.join(__dirname,'cards','ru.csv'),'utf8')));
   assert.deepEqual(csv.filter(row=>R2_LESSONS.includes(row.lesson)),r2Rows);
-  assert.deepEqual(csv.map(row=>row.id),Array.from({length:935},(_,i)=>'ru-'+String(i+1).padStart(4,'0')));
+  assert.deepEqual(csv.map(row=>row.id),Array.from({length:1136},(_,i)=>'ru-'+String(i+1).padStart(4,'0')));
   const previous=initialRows.findIndex(row=>row.id==='es-1633');assert(previous>=0);
   assert.deepEqual(initialRows.slice(previous+1,initialRows.findIndex(row=>row.id==='ru-0935')+1).map(row=>row.id),expected,'新卡接在原有最后一个 id 之后');
   const seen=new Set(initialRows.filter(row=>row.lang==='ru' && row.lesson<'ru-17').map(row=>ruDeaccent(row.front)));
@@ -2451,7 +2525,7 @@ test('任务 S3：240 个连续 id、CSV 与内嵌同步、按旧末行 id 追�
   assert.deepEqual(csv.filter(row=>S3_LESSONS.includes(row.lesson)),s3Rows);
   assert.deepEqual(csv.map(row=>row.id),Array.from({length:1873},(_,i)=>'es-'+String(i+1).padStart(4,'0')));
   const previous=initialRows.findIndex(row=>row.id==='ru-0935');assert(previous>=0);
-  assert.deepEqual(initialRows.slice(previous+1).map(row=>row.id),expected,'cards-data 按 id 在旧末行之后追加');
+  assert.deepEqual(initialRows.slice(previous+1,initialRows.findIndex(row=>row.id==='es-1873')+1).map(row=>row.id),expected,'cards-data 按 id 在旧末行之后追加');
   const seen=new Set(initialRows.filter(row=>row.lang==='es' && row.lesson<'es-21').map(row=>row.front.normalize('NFC').toLowerCase()));
   for (const row of s3Rows) {
     const key=row.front.normalize('NFC').toLowerCase();assert(!seen.has(key),row.id+' front 重复：'+row.front);seen.add(key);
@@ -2562,11 +2636,206 @@ test('任务 S3：新内容 UI 措辞、时长和逐句中文，只浏览不改�
   assert.deepEqual(plain(a.getData().state),before,'只浏览新内容不写进度');
 });
 
+// 任务 R3：第 21–24 周。追加边界只检查 id 顺序，不固定旧内容字节或哈希。
+const R3_STANDARD_STRESS={
+  моего:'моего́',моему:'моему́',моим:'мои́м',моей:'мое́й',мою:'мою́',мои:'мои́',моих:'мои́х',моими:'мои́ми',
+  твоего:'твоего́',твоему:'твоему́',твоим:'твои́м',твоей:'твое́й',твою:'твою́',твои:'твои́',твоих:'твои́х',твоими:'твои́ми',
+  этого:'э́того',этому:'э́тому',этим:'э́тим',этом:'э́том',этих:'э́тих',этими:'э́тими',
+  который:'кото́рый',которого:'кото́рого',которому:'кото́рому',которым:'кото́рым',которыми:'кото́рыми',
+  люди:'лю́ди',людей:'люде́й',людям:'лю́дям',людьми:'людьми́',дети:'де́ти',детям:'де́тям',детьми:'детьми́',
+  друзья:'друзья́',друзьям:'друзья́м',друзьями:'друзья́ми',братья:'бра́тья',братьям:'бра́тьям',братьями:'бра́тьями',
+  сыновья:'сыновья́',сыновей:'сынове́й',сыновьям:'сыновья́м',сыновьями:'сыновья́ми',
+  дочери:'до́чери',дочерей:'дочере́й',дочерям:'дочеря́м',дочерях:'дочеря́х',дочерьми:'дочерьми́',дочерями:'дочеря́ми',
+  домах:'дома́х',гостей:'госте́й',гостям:'гостя́м',гостями:'гостя́ми',гостях:'гостя́х',
+  прочитал:'прочита́л',написал:'написа́л',сделал:'сде́лал',купил:'купи́л',сказал:'сказа́л',посмотрел:'посмотре́л',выучил:'вы́учил',решил:'реши́л'
+};
+function checkR3Russian(text,label) {
+  checkR2Russian(text,label);
+  for (const word of text.match(/[А-Яа-яЁё\u0301]+/g) || []) {
+    const standard=R3_STANDARD_STRESS[ruDeaccent(word)];
+    if (standard) assert.equal(word.toLowerCase(),standard,label+' 标准重音：'+word);
+  }
+}
+function checkR3Text(value,label) {
+  if (typeof value==='string') {
+    checkR3Russian(value,label);
+    assert.doesNotMatch(value.replace(/一封信/g,''),/[死杀封炸战坑砍]/,label+' 措辞');
+  } else if (Array.isArray(value)) value.forEach((item,i)=>checkR3Text(item,label+' '+i));
+  else if (value && typeof value==='object') for (const [key,item] of Object.entries(value)) checkR3Text(item,label+' '+key);
+}
+test('任务 R3：四课日期、201 条卡片、双语课文及 6 加 4 题',() => {
+  const dates=['2027 年 02-01 至 02-07','2027 年 02-08 至 02-14','2027 年 02-15 至 02-21','2027 年 02-22 至 02-28'];
+  for (const [i,id] of R3_LESSONS.entries()) {
+    const lesson=api.LESSONS[id];assert(lesson,id+' 存在');
+    assert.equal(lesson.lang,'ru');assert.equal(lesson.week,21+i);assert.equal(lesson.dates,dates[i]);
+    assert.equal(r3Rows.filter(row=>row.lesson===id).length,i===0?51:50,id+' 卡片数');
+    for (const field of ['name','goal','writingTask']) assert(lesson[field]?.trim(),id+' '+field);
+    assert.equal(lesson.dailyTime,'每天 30 分钟 + 周末系统块 60 分钟');
+    assert.match(lesson.writingTask,id==='ru-23'?/100\s*词/:/5\s*句/);
+    assert.equal(typeof lesson.explanation,'function');
+    const explanation=lesson.explanation(),text=parseNodes(explanation).map(node=>node.textContent).join('').trim();
+    assert(text.startsWith('时间分配以复盘结果为准'),id+' 开头');
+    assert(explanation.includes('配合教材第二册的对应内容，课次以实际教材为准'),id+' 教材');
+    checkR3Text({...lesson,explanation:decode(explanation.replace(/<[^>]*>/g,' '))},id);
+    assert(lesson.reading.title?.trim());
+    assert(lesson.reading.sentences.length>=14 && lesson.reading.sentences.length<=20,id+' 14–20 句');
+    for (const sentence of lesson.reading.sentences) {
+      assert.match(sentence.text,/[.?!][»”"]?$/);assert.match(sentence.zh,/[㐀-鿿]/);
+      assert.doesNotMatch(sentence.text,/[A-Za-z]/);
+    }
+    assert.equal(lesson.reading.questions.length,4);assert(lesson.reading.questions.every(q=>Array.isArray(q.options)));
+    assert.equal(lesson.exercises.length,10);assert.deepEqual(lesson.exercises.slice(6),lesson.reading.questions);
+    assert(lesson.reading.questions.every((question,i)=>lesson.exercises[i+6]===question),id+' 阅读题共用对象，避免 UI 重复显示');
+    assert(lesson.exercises.slice(0,6).filter(q=>!q.options).length>=4);
+    checkR2Questions(lesson.exercises,id);
+  }
+});
+test('任务 R3：指定代词、单复数六格总表和八组动词体讲解完整',() => {
+  const required={
+    'ru-21':['与格','工具格','мой','твой','наш','ваш','э́тот','тот','кото́рый','како́й','тако́й','моему́','мои́м','кото́рому','кото́рым'],
+    'ru-22':['主格','宾格','属格','前置格','-ах','-ях','но́вые','си́ние','有生命复数宾格等于复数属格'],
+    'ru-23':['-ам','-ям','-ами','-ями','单复数六格总表','代词复数全表','лю́ди','де́ти','друзья́','бра́тья','сыновья́','дочь','дочеря́м','дочерьми́'],
+    'ru-24':['过程','重复','结果','前缀','后缀','未完成体不等于','过去时不按六个人称','чита́ть / прочита́ть','писа́ть / написа́ть','де́лать / сде́лать','покупа́ть / купи́ть','говори́ть / сказа́ть','смотре́ть / посмотре́ть','учи́ть / вы́учить','реша́ть / реши́ть']
+  };
+  for (const [id,parts] of Object.entries(required)) {
+    const lesson=api.LESSONS[id];assert(lesson,id+' 存在');const text=parseNodes(lesson.explanation()).map(node=>node.textContent).join('');
+    for (const part of parts) assert(text.includes(part),id+' 讲解要点：'+part);
+  }
+});
+test('任务 R3：id ru-0936 至 ru-1136 连续、CSV 同步且在既有 id 之后追加',() => {
+  const ids=Array.from({length:201},(_,i)=>'ru-'+String(936+i).padStart(4,'0'));
+  assert.deepEqual(r3Rows.map(row=>row.id),ids);
+  const csv=plain(api.parseCSV(fs.readFileSync(path.join(__dirname,'cards','ru.csv'),'utf8')));
+  assert.deepEqual(csv.filter(row=>R3_LESSONS.includes(row.lesson)),r3Rows);
+  assert.deepEqual(csv.map(row=>row.id),Array.from({length:1136},(_,i)=>'ru-'+String(i+1).padStart(4,'0')));
+  const previous=initialRows.findIndex(row=>row.id==='es-1873');assert(previous>=0);
+  assert.deepEqual(initialRows.slice(previous+1).map(row=>row.id),ids);
+  const seen=new Set(initialRows.filter(row=>row.lang==='ru' && row.lesson<'ru-21').map(row=>ruDeaccent(row.front)));
+  for (const row of r3Rows) {
+    const key=ruDeaccent(row.front);assert(!seen.has(key),row.id+' 重复 front');seen.add(key);
+  }
+});
+test('任务 R3：类别配额、名词标性及目标格、动词六人称与体配对、短语仅识别',() => {
+  const quotas={
+    'ru-21':{代词表:6,形容词:15,名词:15,不定式:10,句型:5},
+    'ru-22':{名词:20,形容词:10,不定式:10,句型:5,量词:5},
+    'ru-23':{名词:20,形容词:10,不定式:10,句型:5,表达:5},
+    'ru-24':{不定式:25,名词:15,副词:5,句型:5}
+  };
+  for (const [id,quota] of Object.entries(quotas)) for (const [tag,count] of Object.entries(quota))
+    assert.equal(r3Rows.filter(row=>row.lesson===id && row.tags.split(';').includes(tag)).length,count,id+' '+tag);
+  const persons=[/^я /,/^ты /,/^он\/она́ /,/^мы /,/^вы /,/^они́ /];
+  const finite=new Set();
+  for (const row of initialRows.filter(row=>row.lang==='ru')) {
+    for (const part of row.note.match(/六个人称(?:（[^）]+）)?：(.+?)(?=；过去时|；未完成体过去时|$)/)?.[1]?.split('；') || [])
+      ruWords(part).slice(part.startsWith('он/')?2:1).forEach(word=>finite.add(word));
+    for (const match of row.note.matchAll(/(?:过去时|过去时四形式)：([^；]+)/g)) ruWords(match[1]).forEach(word=>finite.add(word));
+  }
+  for (const row of r3Rows) {
+    checkR3Text(row,row.id);const tags=row.tags.split(';');
+    if (tags.includes('代词表')) for (const name of ['主格','属格','与格','宾格','工具格','前置格']) {
+      const forms=row.note.match(new RegExp(name+'单数：([^；]+)'))?.[1];
+      assert(forms && forms.split(' / ').length===3,row.id+' '+name+' 三性单数');
+    }
+    if (tags.includes('形容词')) {
+      const names=row.lesson==='ru-21'?['与格单数','工具格单数']:row.lesson==='ru-22'?['主格复数','宾格复数','属格复数','前置格复数']:['主格复数','宾格复数','属格复数','前置格复数','与格复数','工具格复数'];
+      for (const name of names) assert(ruWords(row.note.match(new RegExp(name+'(?:（[^）]*）)?：([^；]+)'))?.[1] || '').length,row.id+' '+name+' 实际词形');
+    }
+    if (row.note.startsWith('名词')) assert.match(row.note,/^名词（[阳阴中]/,row.id+' 名词性别含名词性量词');
+    for (const field of ['front','back','example','example_zh','note','tags']) assert(row[field]?.trim(),row.id+' '+field);
+    assert.match(row.example,/[.?!][»”"]?$/);assert.match(row.example_zh,/[㐀-鿿]/);assert.doesNotMatch(row.front,/[A-Za-z]/);
+    if (tags.includes('名词')) {
+      assert.match(row.note,/^名词（[阳阴中]/,row.id+' 标性');
+      const targets=row.lesson==='ru-21'?['与格单数','工具格单数']:row.lesson==='ru-22'?['主格复数','宾格复数','属格复数','前置格复数']:row.lesson==='ru-23'?['与格复数','工具格复数']:[];
+      for (const target of targets) {
+        const reversed=target.endsWith('复数')?'复数'+target.slice(0,-2):target;
+        assert(ruWords(row.note.match(new RegExp('(?:'+target+'|'+reversed+')(?:（[^）]*）)?：([^；]+)'))?.[1] || '').length,row.id+' '+target);
+      }
+    }
+    if (tags.includes('不定式')) {
+      const forms=row.note.match(/六个人称(?:（[^）]+）)?：(.+?)(?=；过去时|；未完成体过去时|$)/)?.[1]?.split('；');
+      assert(forms,row.id+' 六人称');assert.equal(forms.length,6,row.id+' 六人称');
+      forms.forEach((form,i)=>{assert.match(form,persons[i]);assert(ruWords(form).length>(i===2?2:1));});
+      assert(ruWords(row.note.match(/体配对：([^；]+)/)?.[1] || '').length>=2,row.id+' 体配对');
+      const past=[...row.note.matchAll(/(?:过去时|过去时四形式)：([^；]+)/g)].map(match=>match[1].split(' / '));
+      assert(past.length>=1,row.id+' 过去时');past.forEach(forms=>assert.equal(forms.length,4,row.id+' 四式'));
+      if (row.lesson==='ru-24') {
+        assert.match(row.note,/未完成体/);assert(past.length>=2,row.id+' 两种体的过去时');
+        assert(/(?:ть|ться)$/.test(ruDeaccent(row.front)),row.id+' 不定式 front');
+      }
+    }
+    const words=ruWords(row.front);
+    if (tags.some(tag=>['句型','代词表'].includes(tag)) || row.lesson==='ru-23' && tags.includes('表达') || /[.?!][»”"]?$/.test(row.front) || words.length>1 && words.some(word=>finite.has(word)))
+      assert(tags.includes('phrase'),row.id+' phrase');
+    if (tags.includes('phrase')) assert.deepEqual(plain(api.expandCards([row]).map(card=>card.direction)),['r']);
+  }
+});
+test('任务 R3：八篇阅读周次、体裁、18–22 句及 140–200 词、理解题和重点词',() => {
+  const genres=['对话','日记','邮件','短故事','描写','通知或广告','菜谱或日程','人物介绍','简单新闻'];
+  const fronts=new Map(initialRows.filter(row=>row.lang==='ru').map(row=>[ruDeaccent(row.front),row.lesson]));
+  const added=[];
+  for (let i=0;i<8;i++) {
+    const id='ru-r'+(33+i),item=api.READINGS[id],week=21+Math.floor(i/2);assert(item,id+' 存在');added.push(item);
+    assert.equal(item.id,id);assert.equal(item.lang,'ru');assert.equal(item.week,week);assert.equal(item.afterLesson,'ru-'+week);
+    assert.match(item.title,/[㐀-鿿]/);assert(genres.includes(item.genre));checkR3Text(item,id);
+    assert(item.sentences.length>=18 && item.sentences.length<=22,id+' 18–22 句');
+    const words=item.sentences.flatMap(s=>s.text.match(/[\p{L}\p{M}]+/gu) || []).length;
+    assert.equal(item.words,words,id+' 实际词数');assert(words>=140 && words<=200,id+' 140–200 词：'+words);
+    for (const sentence of item.sentences) { assert.match(sentence.text,/[.?!][»”"]?$/);assert.match(sentence.zh,/[㐀-鿿]/);assert.doesNotMatch(sentence.text,/[A-Za-z]/); }
+    assert.equal(item.questions.length,4);assert(item.questions.every(q=>Array.isArray(q.options)));checkR2Questions(item.questions,id);
+    assert(item.questions.some(q=>/推断|指代|指的是/.test(q.prompt)),id+' 推断或指代题');
+    assert.equal(item.keyWords.length,5);assert.equal(new Set(item.keyWords.map(word=>ruDeaccent(word.word))).size,5);
+    for (const word of item.keyWords) { const from=fronts.get(ruDeaccent(word.word));assert(from && from<=item.afterLesson,id+' 重点词：'+word.word);assert.match(word.zh,/[㐀-鿿]/); }
+    assert(item.retell.length>=3 && item.retell.length<=5);item.retell.forEach(point=>assert.match(point,/[㐀-鿿]/));
+  }
+  for (let i=0;i<8;i+=2) assert.notEqual(added[i].genre,added[i+1].genre,'同周体裁不同');
+  for (let week=21;week<=24;week++) assert.equal(Object.values(api.READINGS).filter(item=>item.lang==='ru' && item.week===week).length,2);
+});
+test('任务 R3：新卡例句、四课课文和八篇阅读沿用推导式词汇范围检查',() => {
+  for (const id of R3_LESSONS) {
+    const lesson=api.LESSONS[id];assert(lesson,id+' 存在');
+    const sentences=[...r3Rows.filter(row=>row.lesson===id).map(row=>({text:row.example,id:row.id})),...lesson.reading.sentences];
+    assert.deepEqual(ruVocabularyMisses(id,sentences),[],id+' 例句与课文未学词');
+  }
+  for (let i=33;i<=40;i++) { const item=api.READINGS['ru-r'+i];assert(item);assert.deepEqual(ruVocabularyMisses(item.afterLesson,item.sentences),[],item.id+' 未学词'); }
+});
+test('任务 R3：新词形由已学词推导，未学词及自引例句不能通过',() => {
+  const row=front=>initialRows.find(row=>row.lang==='ru' && ruDeaccent(row.front)===front) || initialRows.find(row=>row.lang==='ru' && row.tags.split(';').some(tag=>['代词','指示词','疑问词','物主词'].includes(tag)) && ruWords(row.front).includes(front));
+  for (const [base,form,week] of [['новый','новому',21],['новый','новыми',23],['мой','моему',21],['книга','книгах',22],['сын','сыновьями',23],['читать','прочитала',24]]) {
+    const source=row(base);assert(source,base+' 已有词卡');
+    assert(ruR3Forms(base,source,'ru-'+week).includes(form),base+' 推导 '+form);
+    assert(!ruR3Forms(base,source,'ru-'+(week-1)).includes(form),form+' 课次限制');
+  }
+  const first=r3Rows.find(row=>row.lesson==='ru-22' && row.tags.split(';').includes('名词'));assert(first);
+  assert(!ruKnown('ru-21',first.front),'后续课程新词不得提前通过');assert(!ruKnown('ru-24','гиппопота́м'),'未学词');
+  for (const [base,invalid] of [['мочь','можут'],['хотеть','хочут']]) assert(!ruR3Forms(base,row(base),'ru-24').includes(invalid),'不规则动词不能套常规推导：'+invalid);
+  const previous=first.example;
+  try { first.example='Гиппопота́м.';assert(!ruKnown('ru-24','гиппопота́м'),'新例句不能扩充自身词汇范围'); }
+  finally { first.example=previous; }
+});
+test('任务 R3：新课程和阅读 UI 可显示，浏览不改变进度',() => {
+  const {api:a,document}=createAPI(true);a.initialize();const before=plain(a.getData().state);
+  for (const id of R3_LESSONS) {
+    a.openLesson(id);const page=document.getElementById('content').textContent;
+    assert(page.includes(a.LESSONS[id].name));assert(page.includes(a.LESSONS[id].dailyTime));
+    assert.equal(document.querySelectorAll('[data-exercise]').length,10);
+    assert.doesNotMatch(page.replace(/一封信/g,''),/[死杀封炸战坑砍]/);
+  }
+  for (let i=33;i<=40;i++) {
+    const id='ru-r'+i;a.openReadingItem(id);assert(document.getElementById('content').textContent.includes(a.READINGS[id].title));
+    assert.equal(document.querySelectorAll('details').filter(node=>node.querySelector('summary')?.textContent==='查看本句中文').length,a.READINGS[id].sentences.length);
+  }
+  assert.deepEqual(plain(a.getData().state),before);
+});
+
 // 可选的离线编辑诊断：仍使用正式检查的推导器，按位置一次报告全部缺词。
 const vocabularyFlag=process.argv.indexOf('--vocab-report');
 if (vocabularyFlag!==-1) {
   assert(process.argv[vocabularyFlag+1],'--vocab-report 后需要 JSON 文件路径');
   const segments=[
+    ...r3Rows.map(row=>({id:row.id,lesson:row.lesson,sentences:[{text:row.example}]})),
+    ...R3_LESSONS.filter(id=>api.LESSONS[id]).map(id=>({id,lesson:id,sentences:api.LESSONS[id].reading.sentences})),
+    ...Object.values(api.READINGS).filter(item=>/^ru-r(?:3[3-9]|40)$/.test(item.id)).map(item=>({id:item.id,lesson:item.afterLesson,sentences:item.sentences})),
     ...s3Rows.map(row=>({id:row.id,lesson:row.lesson,sentences:[{text:row.example}]})),
     ...S3_LESSONS.filter(id=>api.LESSONS[id]).map(id=>({id,lesson:id,sentences:api.LESSONS[id].reading.sentences})),
     ...Object.values(api.READINGS).filter(item=>/^es-r(?:39|4[0-4])$/.test(item.id)).map(item=>({id:item.id,lesson:item.afterLesson,sentences:item.sentences})),
