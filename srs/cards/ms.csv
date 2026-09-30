@@ -1,1 +1,321 @@
 id,lang,lesson,front,back,example,example_zh,note,tags
+ms-0001,ms,ms-01,saya,我,Saya pelajar.,我是学生。,第一人称单数,代词
+ms-0002,ms,ms-01,awak,你,Awak guru.,你是老师。,常用于熟悉的人；正式称呼可用 anda,代词
+ms-0003,ms,ms-01,anda,您；你,Anda pelajar.,您是学生。,较正式的第二人称,代词
+ms-0004,ms,ms-01,dia,他；她,Dia guru.,他是老师。,不分性别,代词
+ms-0005,ms,ms-01,beliau,他；她（敬称）,Beliau guru saya.,他是我的老师。,用于值得尊敬的人,代词
+ms-0006,ms,ms-01,kami,我们（不含听话人）,Kami pelajar.,我们是学生。,不含听话人,代词
+ms-0007,ms,ms-01,kita,我们（含听话人）,Kita keluarga.,我们是一家人。,包含听话人,代词
+ms-0008,ms,ms-01,mereka,他们；她们,Mereka kawan saya.,他们是我的朋友。,第三人称复数,代词
+ms-0009,ms,ms-01,ini,这；这个,Buku ini buku saya.,这本书是我的书。,指示词；作定语时放名词后,代词
+ms-0010,ms,ms-01,itu,那；那个,Rumah itu rumah saya.,那所房子是我的家。,指示词；作定语时放名词后,代词
+ms-0011,ms,ms-01,Ini rumah.,这是房子。,Ini rumah.,这是房子。,无系词句；整句识别,代词;phrase
+ms-0012,ms,ms-01,Itu sekolah.,那是学校。,Itu sekolah.,那是学校。,无系词句；整句识别,代词;phrase
+ms-0013,ms,ms-01,selamat pagi,早上好,"Selamat pagi, Ali!",早上好，阿里！,礼貌用语；作为完整交际话语识别,问候;phrase
+ms-0014,ms,ms-01,selamat tengah hari,中午好,"Selamat tengah hari, Siti!",中午好，西蒂！,礼貌用语；作为完整交际话语识别,问候;phrase
+ms-0015,ms,ms-01,selamat petang,下午好,"Selamat petang, Ali!",下午好，阿里！,礼貌用语；作为完整交际话语识别,问候;phrase
+ms-0016,ms,ms-01,selamat malam,晚上好,"Selamat malam, Siti!",晚上好，西蒂！,礼貌用语；作为完整交际话语识别,问候;phrase
+ms-0017,ms,ms-01,Apa khabar?,你好吗？,Apa khabar?,你好吗？,礼貌用语；作为完整交际话语识别,问候;phrase
+ms-0018,ms,ms-01,khabar baik,很好（回答问候）,"Khabar baik, terima kasih.",很好，谢谢。,礼貌用语；作为完整交际话语识别,问候;phrase
+ms-0019,ms,ms-01,terima kasih,谢谢,"Terima kasih, Ali!",谢谢你，阿里！,礼貌用语；作为完整交际话语识别,问候;phrase
+ms-0020,ms,ms-01,sama-sama,不客气,"Sama-sama, Siti!",不客气，西蒂！,礼貌用语；作为完整交际话语识别,问候;phrase
+ms-0021,ms,ms-01,maaf,对不起,"Maaf, Ali!",对不起，阿里！,礼貌用语；作为完整交际话语识别,问候;phrase
+ms-0022,ms,ms-01,selamat tinggal,再见（对留下的人说）,"Selamat tinggal, Siti!",再见，西蒂！,礼貌用语；作为完整交际话语识别,问候;phrase
+ms-0023,ms,ms-01,selamat jalan,再见（对离开的人说）,"Selamat jalan, Ali!",再见，阿里！,礼貌用语；作为完整交际话语识别,问候;phrase
+ms-0024,ms,ms-01,ya,是；对,"Ya, ini buku saya.",是的，这是我的书。,礼貌用语；作为完整交际话语识别,语气词;问候
+ms-0025,ms,ms-01,tidak,不；不是,"Tidak, itu buku Ali.",不，那是阿里的书。,可单独作否定回答；否定谓语的区别见 ms-02,语气词;问候
+ms-0026,ms,ms-01,satu,一,Ini satu buku.,这是一本书。,基数词；置于名词前，本周先认数字,数词
+ms-0027,ms,ms-01,dua,二,Ini dua buku.,这是二本书。,基数词；置于名词前，本周先认数字,数词
+ms-0028,ms,ms-01,tiga,三,Ini tiga buku.,这是三本书。,基数词；置于名词前，本周先认数字,数词
+ms-0029,ms,ms-01,empat,四,Ini empat buku.,这是四本书。,基数词；置于名词前，本周先认数字,数词
+ms-0030,ms,ms-01,lima,五,Ini lima buku.,这是五本书。,基数词；置于名词前，本周先认数字,数词
+ms-0031,ms,ms-01,enam,六,Ini enam buku.,这是六本书。,基数词；置于名词前，本周先认数字,数词
+ms-0032,ms,ms-01,tujuh,七,Ini tujuh buku.,这是七本书。,基数词；置于名词前，本周先认数字,数词
+ms-0033,ms,ms-01,lapan,八,Ini lapan buku.,这是八本书。,基数词；置于名词前，本周先认数字,数词
+ms-0034,ms,ms-01,sembilan,九,Ini sembilan buku.,这是九本书。,基数词；置于名词前，本周先认数字,数词
+ms-0035,ms,ms-01,sepuluh,十,Ini sepuluh buku.,这是十本书。,基数词；置于名词前，本周先认数字,数词
+ms-0036,ms,ms-01,buku,书,Ini buku saya.,这是我的书。,量词 buah,名词;教室
+ms-0037,ms,ms-01,meja,桌子,Ini meja saya.,这是我的桌子。,量词 buah,名词;教室
+ms-0038,ms,ms-01,kerusi,椅子,Ini kerusi saya.,这是我的椅子。,量词 buah,名词;教室
+ms-0039,ms,ms-01,pen,笔,Ini pen saya.,这是我的笔。,量词 batang,名词;教室
+ms-0040,ms,ms-01,pensel,铅笔,Ini pensel saya.,这是我的铅笔。,量词 batang,名词;教室
+ms-0041,ms,ms-01,kertas,纸,Ini kertas saya.,这是我的纸。,量词 helai,名词;教室
+ms-0042,ms,ms-01,beg,包,Ini beg saya.,这是我的包。,量词 buah,名词;教室
+ms-0043,ms,ms-01,bilik,房间,Ini bilik saya.,这是我的房间。,量词 buah,名词;教室
+ms-0044,ms,ms-01,pintu,门,Ini pintu saya.,这是我的门。,量词 buah,名词;教室
+ms-0045,ms,ms-01,tingkap,窗户,Ini tingkap saya.,这是我的窗户。,量词 buah,名词;教室
+ms-0046,ms,ms-01,rumah,房子；家,Ini rumah saya.,这是我的房子。,量词 buah,名词;教室
+ms-0047,ms,ms-01,sekolah,学校,Ini sekolah saya.,这是我的学校。,量词 buah,名词;教室
+ms-0048,ms,ms-01,kelas,班级,Ini kelas saya.,这是我的班级。,量词 buah,名词;教室
+ms-0049,ms,ms-01,guru,老师,Ini guru saya.,这是我的老师。,量词 orang,名词;教室
+ms-0050,ms,ms-01,pelajar,学生,Ini pelajar saya.,这是我的学生。,量词 orang,名词;教室
+ms-0051,ms,ms-01,orang,人,Dia orang Malaysia.,他是马来西亚人。,量词 orang；ms-03 也用作人的量词,名词;家庭
+ms-0052,ms,ms-01,lelaki,男子,Lelaki itu bapa saya.,那个男子是我的父亲。,量词 orang,名词;家庭
+ms-0053,ms,ms-01,perempuan,女子,Perempuan itu ibu saya.,那个女子是我的母亲。,量词 orang,名词;家庭
+ms-0054,ms,ms-01,kawan,朋友,Ali kawan saya.,阿里是我的朋友。,量词 orang,名词;家庭
+ms-0055,ms,ms-01,keluarga,家庭；家人,Ini keluarga saya.,这是我的家人。,量词 buah；指家庭时使用，家人按 orang 计数,名词;家庭
+ms-0056,ms,ms-01,ibu,母亲,Ibu saya guru.,我的母亲是老师。,量词 orang,名词;家庭
+ms-0057,ms,ms-01,bapa,父亲,Bapa saya guru.,我的父亲是老师。,量词 orang,名词;家庭
+ms-0058,ms,ms-01,abang,哥哥,Abang saya pelajar.,我的哥哥是学生。,量词 orang,名词;家庭
+ms-0059,ms,ms-01,kakak,姐姐,Kakak saya pelajar.,我的姐姐是学生。,量词 orang,名词;家庭
+ms-0060,ms,ms-01,adik,弟弟；妹妹,Adik saya pelajar.,我的弟弟是学生。,量词 orang,名词;家庭
+ms-0061,ms,ms-01,komputer,电脑,Itu komputer Ali.,那是阿里的电脑。,量词 buah,名词;城市;英语借词
+ms-0062,ms,ms-01,telefon,电话；手机,Itu telefon Ali.,那是阿里的电话。,量词 buah,名词;城市;英语借词
+ms-0063,ms,ms-01,bas,公共汽车,Itu bas.,那是公共汽车。,量词 buah,名词;城市;英语借词
+ms-0064,ms,ms-01,teksi,出租车,Itu teksi.,那是出租车。,量词 buah,名词;城市;英语借词
+ms-0065,ms,ms-01,hospital,医院,Itu hospital.,那是医院。,量词 buah,名词;城市;英语借词
+ms-0066,ms,ms-01,restoran,餐馆,Itu restoran.,那是餐馆。,量词 buah,名词;城市;英语借词
+ms-0067,ms,ms-01,hotel,酒店,Itu hotel.,那是酒店。,量词 buah,名词;城市;英语借词
+ms-0068,ms,ms-01,bank,银行,Itu bank.,那是银行。,量词 buah,名词;城市;英语借词
+ms-0069,ms,ms-01,kamera,相机,Itu kamera Ali.,那是阿里的相机。,量词 buah,名词;城市;英语借词
+ms-0070,ms,ms-01,tiket,票,Itu tiket Ali.,那是阿里的票。,量词 keping,名词;城市;英语借词
+ms-0071,ms,ms-01,gereja,教堂,Ini gereja.,这是教堂。,量词 buah,名词;身边事物;葡语借词
+ms-0072,ms,ms-01,bendera,旗帜,Ini bendera.,这是旗帜。,量词 helai,名词;身边事物;葡语借词
+ms-0073,ms,ms-01,keju,奶酪,Ini keju.,这是奶酪。,量词 keping,名词;身边事物;葡语借词
+ms-0074,ms,ms-01,teh,茶,Ini teh.,这是茶。,量词 cawan,名词;身边事物;闽南语借词
+ms-0075,ms,ms-01,mi,面条,Ini mi.,这是面条。,量词 mangkuk,名词;身边事物;闽南语借词
+ms-0076,ms,ms-01,kuih,糕点,Ini kuih.,这是糕点。,量词 biji,名词;身边事物;闽南语借词
+ms-0077,ms,ms-01,Saya pelajar.,我是学生。,Saya pelajar.,我是学生。,整句识别；名字 Ali 可换成自己的名字,代词;phrase
+ms-0078,ms,ms-01,Ini buku saya.,这是我的书。,Ini buku saya.,这是我的书。,整句识别；名字 Ali 可换成自己的名字,代词;phrase
+ms-0079,ms,ms-01,Nama saya Ali.,我的名字是阿里。,Nama saya Ali.,我的名字是阿里。,整句识别；名字 Ali 可换成自己的名字,名词;phrase
+ms-0080,ms,ms-01,Terima kasih banyak.,非常感谢。,Terima kasih banyak.,非常感谢。,整句识别；名字 Ali 可换成自己的名字,问候;phrase
+ms-0081,ms,ms-02,baca,读,Saya baca buku.,我读书。,及物；常见宾语 buku,动词;学习与工作
+ms-0082,ms,ms-02,makan,吃,Saya makan mi.,我吃面条。,及物；常见宾语 mi、kuih,动词;学习与工作
+ms-0083,ms,ms-02,minum,喝,Saya minum teh.,我喝茶。,及物；常见宾语 teh,动词;学习与工作
+ms-0084,ms,ms-02,tulis,写,Saya tulis nama saya.,我写我的名字。,及物；常见宾语 nama、e-mel,动词;学习与工作
+ms-0085,ms,ms-02,pergi,去,Saya pergi ke sekolah.,我去学校。,不及物；目的地用 ke,动词;学习与工作
+ms-0086,ms,ms-02,ada,有；在,Saya ada komputer.,我有电脑。,表示拥有或存在；后接 buku、komputer 等事物,动词;学习与工作
+ms-0087,ms,ms-02,suka,喜欢,Saya suka bahasa Melayu.,我喜欢马来语。,及物；常见宾语 bahasa Melayu、mi,动词;学习与工作
+ms-0088,ms,ms-02,tinggal,住,Saya tinggal di Melaka.,我住在马六甲。,不及物；住处用 di,动词;学习与工作
+ms-0089,ms,ms-02,belajar,学习,Saya belajar bahasa Melayu.,我学习马来语。,bel- + ajar；词根 ajar；本周只作整词记，第 5 周再学前缀规则；常见学习内容（宾语）bahasa Melayu,动词;学习与工作
+ms-0090,ms,ms-02,bekerja,工作,Ibu saya bekerja di bank.,我的母亲在银行工作。,be- + kerja；词根 kerja；本周只作整词记，第 5 周再学前缀规则,动词;学习与工作
+ms-0091,ms,ms-02,faham,懂；理解,Saya faham bahasa Melayu.,我懂马来语。,及物；常见宾语 bahasa Melayu,动词;学习与工作
+ms-0092,ms,ms-02,tahu,知道,Saya tahu nama guru itu.,我知道那位老师的名字。,及物；常见宾语 nama,动词;学习与工作
+ms-0093,ms,ms-02,apa,什么,Awak baca apa?,你读什么？,句末疑问词,疑问词
+ms-0094,ms,ms-02,siapa,谁,Dia siapa?,他是谁？,询问人,疑问词
+ms-0095,ms,ms-02,di mana,在哪里,Awak tinggal di mana?,你住在哪里？,di 表地点；作为固定词组记,疑问词
+ms-0096,ms,ms-02,ke mana,去哪里,Awak pergi ke mana?,你去哪里？,ke 表方向；作为固定词组记,疑问词
+ms-0097,ms,ms-02,dari mana,从哪里来,Awak dari mana?,你来自哪里？,dari 表来源；作为固定词组记,疑问词
+ms-0098,ms,ms-02,bila,什么时候,Bila awak pergi ke Melaka?,你什么时候去马六甲？,询问时间,疑问词
+ms-0099,ms,ms-02,mengapa,为什么,Mengapa awak suka buku itu?,你为什么喜欢那本书？,询问原因；同义 kenapa,疑问词
+ms-0100,ms,ms-02,bagaimana,怎么样,Bagaimana khabar keluarga awak?,你的家人近况怎么样？,询问情况,疑问词
+ms-0101,ms,ms-02,berapa,多少,Berapa orang pelajar ada di kelas?,班里有多少学生？,询问数量,疑问词
+ms-0102,ms,ms-02,besar,大的,Rumah saya besar.,我的房子很大。,形容词，后置；作谓语时可不用系词,形容词
+ms-0103,ms,ms-02,kecil,小的,Bilik saya kecil.,我的房间很小。,形容词，后置；作谓语时可不用系词,形容词
+ms-0104,ms,ms-02,baru,新的,Ini buku baru saya.,这是我的新书。,形容词，后置；作谓语时可不用系词；ms-04 再识别副词义「刚」,形容词
+ms-0105,ms,ms-02,lama,旧的,Itu komputer lama saya.,那是我的旧电脑。,形容词，后置；作谓语时可不用系词,形容词
+ms-0106,ms,ms-02,baik,好的,Guru saya baik.,我的老师很好。,形容词，后置；作谓语时可不用系词,形容词
+ms-0107,ms,ms-02,cantik,漂亮的,Bendera itu cantik.,那面旗帜很漂亮。,形容词，后置；作谓语时可不用系词,形容词
+ms-0108,ms,ms-02,panjang,长的,Pensel ini panjang.,这支铅笔很长。,形容词，后置；作谓语时可不用系词,形容词
+ms-0109,ms,ms-02,pendek,短的,Pensel itu pendek.,那支铅笔很短。,形容词，后置；作谓语时可不用系词,形容词
+ms-0110,ms,ms-02,tinggi,高的,Abang saya tinggi.,我的哥哥个子高。,形容词，后置；作谓语时可不用系词,形容词
+ms-0111,ms,ms-02,rendah,矮的；低的,Meja itu rendah.,那张桌子很矮。,形容词，后置；作谓语时可不用系词,形容词
+ms-0112,ms,ms-02,murah,便宜的,Tiket bas ini murah.,这张公共汽车票很便宜。,形容词，后置；作谓语时可不用系词,形容词
+ms-0113,ms,ms-02,mahal,贵的,Kamera itu mahal.,那台相机很贵。,形容词，后置；作谓语时可不用系词,形容词
+ms-0114,ms,ms-02,panas,热的,Teh ini panas.,这杯茶很热。,形容词，后置；作谓语时可不用系词,形容词
+ms-0115,ms,ms-02,sejuk,凉的,Teh itu sejuk.,那杯茶凉了。,形容词，后置；作谓语时可不用系词,形容词
+ms-0116,ms,ms-02,sedap,好吃的,Mi ini sedap.,这些面条很好吃。,形容词，后置；作谓语时可不用系词,形容词
+ms-0117,ms,ms-02,Malaysia,马来西亚,Saya dari Malaysia.,我来自马来西亚。,国家专名，首字母大写；地名一般不用量词,名词;国家与语言
+ms-0118,ms,ms-02,China,中国,Kawan saya dari China.,我的朋友来自中国。,国家专名，首字母大写；地名一般不用量词,名词;国家与语言
+ms-0119,ms,ms-02,England,英格兰,Dia dari England.,他来自英格兰。,国家或地区专名；此处专指英格兰；地名一般不用量词,名词;国家与语言
+ms-0120,ms,ms-02,bahasa Melayu,马来语,Saya suka bahasa Melayu.,我喜欢马来语。,语言名称；bahasa 小写、Melayu 大写；一般不用量词；专名或语言名称不用事物量词,名词;国家与语言
+ms-0121,ms,ms-02,bahasa Cina,汉语,Dia faham bahasa Cina.,他懂汉语。,语言名称；一般不用量词；专名或语言名称不用事物量词,名词;国家与语言
+ms-0122,ms,ms-02,bahasa Inggeris,英语,Beliau faham bahasa Inggeris.,他懂英语。,语言名称；一般不用量词；专名或语言名称不用事物量词,名词;国家与语言
+ms-0123,ms,ms-02,orang Cina,华人；中国人,Mei Ling orang Cina.,美玲是华人。,量词 orang；本句指族群,名词;国家与语言
+ms-0124,ms,ms-02,orang Malaysia,马来西亚人,Ali orang Malaysia.,阿里是马来西亚人。,量词 orang,名词;国家与语言
+ms-0125,ms,ms-02,doktor,医生,Ali doktor.,阿里是医生。,量词 orang；本周作为职业名称整词记,名词;学习与工作
+ms-0126,ms,ms-02,jururawat,护士,Ali jururawat.,阿里是护士。,量词 orang；本周作为职业名称整词记,名词;学习与工作
+ms-0127,ms,ms-02,polis,警察,Ali polis.,阿里是警察。,量词 orang；本周作为职业名称整词记,名词;学习与工作
+ms-0128,ms,ms-02,jurutera,工程师,Ali jurutera.,阿里是工程师。,量词 orang；本周作为职业名称整词记,名词;学习与工作
+ms-0129,ms,ms-02,peguam,律师,Ali peguam.,阿里是律师。,量词 orang；本周作为职业名称整词记,名词;学习与工作
+ms-0130,ms,ms-02,petani,农民,Ali petani.,阿里是农民。,量词 orang；本周作为职业名称整词记,名词;学习与工作
+ms-0131,ms,ms-02,kerani,文员,Ali kerani.,阿里是文员。,量词 orang；本周作为职业名称整词记,名词;学习与工作
+ms-0132,ms,ms-02,pemandu,司机,Ali pemandu.,阿里是司机。,量词 orang；本周作为职业名称整词记,名词;学习与工作
+ms-0133,ms,ms-02,dan,和,Saya suka teh dan kuih.,我喜欢茶和糕点。,并列连接词,连词
+ms-0134,ms,ms-02,atau,或者,Awak suka teh atau mi?,你喜欢茶还是面条？,连接可选择的成分,连词
+ms-0135,ms,ms-02,tetapi,但是,Bilik ini kecil tetapi cantik.,这个房间小但是漂亮。,表示转折,连词
+ms-0136,ms,ms-02,sangat,很,Buku ini sangat baik.,这本书很好。,放在形容词前,副词
+ms-0137,ms,ms-02,sekali,很；极了,Mi ini sedap sekali.,这些面条非常好吃。,表示程度时放形容词后,副词
+ms-0138,ms,ms-02,juga,也,Saya juga pelajar.,我也是学生。,表示相同情况,副词
+ms-0139,ms,ms-02,radio,收音机,Ini radio baru.,这是新的收音机。,量词 buah,名词;英语借词
+ms-0140,ms,ms-02,televisyen,电视机,Ini televisyen baru.,这是新的电视机。,量词 buah,名词;英语借词
+ms-0141,ms,ms-02,internet,互联网,Ada internet di hotel ini.,这家酒店有互联网。,一般不用量词；不可数的网络名称,名词;英语借词
+ms-0142,ms,ms-02,e-mel,电子邮件,Ini e-mel baru.,这是新的电子邮件。,量词 buah,名词;英语借词
+ms-0143,ms,ms-02,universiti,大学,Ini universiti baru.,这是新的大学。,量词 buah,名词;英语借词
+ms-0144,ms,ms-02,kolej,学院,Ini kolej baru.,这是新的学院。,量词 buah,名词;英语借词
+ms-0145,ms,ms-02,klinik,诊所,Ini klinik baru.,这是新的诊所。,量词 buah,名词;英语借词
+ms-0146,ms,ms-02,muzium,博物馆,Ini muzium baru.,这是新的博物馆。,量词 buah,名词;英语借词
+ms-0147,ms,ms-02,Siapakah guru anda?,谁是您的老师？,Siapakah guru anda?,谁是您的老师？,整句识别；疑问前置时可加 -kah；不据此推导其他词缀,代词;phrase
+ms-0148,ms,ms-02,Adakah awak pelajar?,你是学生吗？,Adakah awak pelajar?,你是学生吗？,整句识别；疑问前置时可加 -kah；不据此推导其他词缀,代词;phrase
+ms-0149,ms,ms-02,Saya dari Malaysia.,我来自马来西亚。,Saya dari Malaysia.,我来自马来西亚。,整句识别；疑问前置时可加 -kah；不据此推导其他词缀,代词;phrase
+ms-0150,ms,ms-02,Saya boleh baca bahasa Melayu.,我会读马来语。,Saya boleh baca bahasa Melayu.,我会读马来语。,整句识别；疑问前置时可加 -kah；不据此推导其他词缀,代词;phrase
+ms-0151,ms,ms-02,Saya bukan doktor.,我不是医生。,Saya bukan doktor.,我不是医生。,整句识别；疑问前置时可加 -kah；不据此推导其他词缀,代词;phrase
+ms-0152,ms,ms-02,ialah,是（名词谓语前）,Ali ialah pelajar.,阿里是学生。,正式书面语的判断词；后接名词短语,助动词;补充
+ms-0153,ms,ms-02,adalah,是（形容词或介词短语前）,Buku ini adalah sangat baik.,这本书很好。,正式书面语的判断词；本句可省，不接动词,助动词;补充
+ms-0154,ms,ms-02,bukan,不是,Dia bukan guru saya.,他不是我的老师。,否定名词或代词,副词;补充
+ms-0155,ms,ms-02,adakah,是否；是不是,Adakah itu rumah awak?,那是你的房子吗？,ada + -kah，作为整词记；引导是非问,疑问词;补充
+ms-0156,ms,ms-02,boleh,能；可以,Saya boleh tulis e-mel.,我会写电子邮件。,后接动词,助动词;补充
+ms-0157,ms,ms-02,pejabat,办公室,Ibu saya ada di pejabat.,我的母亲在办公室。,量词 buah,名词;补充
+ms-0158,ms,ms-02,kerana,因为,Saya suka mi ini kerana sedap.,我喜欢这些面条，因为它们好吃。,连接原因,连词;补充
+ms-0159,ms,ms-02,kenapa,为什么,Kenapa awak tidak minum teh?,你为什么不喝茶？,同义词 mengapa,疑问词;补充
+ms-0160,ms,ms-02,dengan,和；与,Saya pergi ke sekolah dengan Ali.,我和阿里去学校。,引出同行的人,介词;补充
+ms-0161,ms,ms-03,ekor,只；头（动物量词）,Saya ada dua ekor kucing.,我有两只猫。,用于动物,量词
+ms-0162,ms,ms-03,buah,个；本；辆（一般事物量词）,Saya ada tiga buah buku.,我有三本书。,用于 buku、rumah 等,量词
+ms-0163,ms,ms-03,batang,支；根,Saya ada dua batang pen.,我有两支笔。,用于 pen、pensel 等细长物,量词
+ms-0164,ms,ms-03,helai,张；件（薄片量词）,Ada dua helai kertas di atas meja.,桌子上有两张纸。,用于 kertas、bendera 等,量词
+ms-0165,ms,ms-03,biji,粒；个,Ada tiga biji telur di dalam mangkuk.,碗里有三个鸡蛋。,用于 telur、epal 等,量词
+ms-0166,ms,ms-03,keping,张；片,Saya ada dua keping tiket.,我有两张票。,用于 tiket 等薄片,量词
+ms-0167,ms,ms-03,pasang,双；对,Saya ada dua pasang kasut.,我有两双鞋。,用于成对的物品,量词
+ms-0168,ms,ms-03,cawan,杯（茶杯的容量）,Saya minum satu cawan teh.,我喝一杯茶。,也作名词「茶杯」，量词 buah；此处计容量,量词
+ms-0169,ms,ms-03,gelas,杯（玻璃杯的容量）,Saya minum satu gelas air.,我喝一杯水。,也作名词「玻璃杯」，量词 buah；此处计容量,量词
+ms-0170,ms,ms-03,mangkuk,碗（容量）,Saya makan satu mangkuk mi.,我吃一碗面条。,也作名词「碗」，量词 buah；补充替换已学 orang,量词;补充
+ms-0171,ms,ms-03,sebelas,十一,Ada sebelas buah buku di sekolah.,学校里有十一本书。,基数词；数字 11,数词
+ms-0172,ms,ms-03,dua belas,十二,Ada dua belas buah buku di sekolah.,学校里有十二本书。,基数词；数字 12,数词
+ms-0173,ms,ms-03,tiga belas,十三,Ada tiga belas buah buku di sekolah.,学校里有十三本书。,基数词；数字 13,数词
+ms-0174,ms,ms-03,empat belas,十四,Ada empat belas buah buku di sekolah.,学校里有十四本书。,基数词；数字 14,数词
+ms-0175,ms,ms-03,lima belas,十五,Ada lima belas buah buku di sekolah.,学校里有十五本书。,基数词；数字 15,数词
+ms-0176,ms,ms-03,dua puluh,二十,Ada dua puluh buah buku di sekolah.,学校里有二十本书。,基数词；数字 20,数词
+ms-0177,ms,ms-03,tiga puluh,三十,Ada tiga puluh buah buku di sekolah.,学校里有三十本书。,基数词；数字 30,数词
+ms-0178,ms,ms-03,seratus,一百,Ada seratus buah buku di sekolah.,学校里有一百本书。,基数词；数字 100,数词
+ms-0179,ms,ms-03,dua ratus,二百,Ada dua ratus buah buku di sekolah.,学校里有二百本书。,基数词；数字 200,数词
+ms-0180,ms,ms-03,seribu,一千,Ada seribu buah buku di sekolah.,学校里有一千本书。,基数词；数字 1000,数词
+ms-0181,ms,ms-03,pertama,第一,Ini buku pertama saya.,这是我的第一本书。,序数词，放在名词后,数词
+ms-0182,ms,ms-03,kedua,第二,Ini bilik kedua.,这是第二个房间。,序数词，放在名词后,数词
+ms-0183,ms,ms-03,ketiga,第三,Ali pelajar ketiga.,阿里是第三个学生。,序数词，放在名词后,数词
+ms-0184,ms,ms-03,seorang,一个人（连量词）,Ada seorang guru di kelas.,班里有一位老师。,se- 表一；本课只记此整词，不开放 se- 的通用推导,数词
+ms-0185,ms,ms-03,sebuah,一个；一本（连量词）,Saya ada sebuah buku.,我有一本书。,se- 表一；本课只记此整词，不开放 se- 的通用推导,数词
+ms-0186,ms,ms-03,tauhu,豆腐,Ada tauhu di rumah saya.,我家里有豆腐。,量词 keping,名词;家居与食物;闽南语借词
+ms-0187,ms,ms-03,tauge,豆芽,Ada tauge di rumah saya.,我家里有豆芽。,一般不用量词；按份数可用 pinggan,名词;家居与食物;闽南语借词
+ms-0188,ms,ms-03,bihun,米粉,Ada bihun di rumah saya.,我家里有米粉。,量词 mangkuk,名词;家居与食物;闽南语借词
+ms-0189,ms,ms-03,kicap,酱油,Ada kicap di rumah saya.,我家里有酱油。,量词 sudu,名词;家居与食物;闽南语借词
+ms-0190,ms,ms-03,teko,茶壶,Ada teko di rumah saya.,我家里有茶壶。,量词 buah,名词;家居与食物;闽南语借词
+ms-0191,ms,ms-03,nasi,米饭,Ada nasi di rumah saya.,我家里有米饭。,量词 pinggan,名词;家居与食物
+ms-0192,ms,ms-03,air,水,Ada air di rumah saya.,我家里有水。,量词 gelas,名词;家居与食物
+ms-0193,ms,ms-03,roti,面包,Ada roti di rumah saya.,我家里有面包。,量词 keping,名词;家居与食物
+ms-0194,ms,ms-03,telur,鸡蛋,Ada telur di rumah saya.,我家里有鸡蛋。,量词 biji,名词;家居与食物
+ms-0195,ms,ms-03,susu,奶,Ada susu di rumah saya.,我家里有奶。,量词 gelas,名词;家居与食物
+ms-0196,ms,ms-03,kopi,咖啡,Ada kopi di rumah saya.,我家里有咖啡。,量词 cawan,名词;家居与食物
+ms-0197,ms,ms-03,gula,糖,Ada gula di rumah saya.,我家里有糖。,量词 sudu,名词;家居与食物
+ms-0198,ms,ms-03,garam,盐,Ada garam di rumah saya.,我家里有盐。,量词 sudu,名词;家居与食物
+ms-0199,ms,ms-03,sayur,蔬菜,Ada sayur di rumah saya.,我家里有蔬菜。,一般不用量词；按份数可用 pinggan,名词;家居与食物
+ms-0200,ms,ms-03,pisang,香蕉,Ada pisang di rumah saya.,我家里有香蕉。,量词 biji,名词;家居与食物
+ms-0201,ms,ms-03,epal,苹果,Ada epal di rumah saya.,我家里有苹果。,量词 biji,名词;家居与食物
+ms-0202,ms,ms-03,pinggan,盘子,Ada pinggan di rumah saya.,我家里有盘子。,量词 buah,名词;家居与食物
+ms-0203,ms,ms-03,sudu,勺子,Ada sudu di rumah saya.,我家里有勺子。,量词 batang,名词;家居与食物
+ms-0204,ms,ms-03,garpu,叉子,Ada garpu di rumah saya.,我家里有叉子。,量词 batang,名词;家居与食物
+ms-0205,ms,ms-03,katil,床,Ada katil di rumah saya.,我家里有床。,量词 buah,名词;家居与食物
+ms-0206,ms,ms-03,almari,柜子,Ada almari di rumah saya.,我家里有柜子。,量词 buah,名词;家居与食物
+ms-0207,ms,ms-03,lampu,灯,Ada lampu di rumah saya.,我家里有灯。,量词 buah,名词;家居与食物
+ms-0208,ms,ms-03,jam,钟表,Ada jam di rumah saya.,我家里有钟表。,量词 buah,名词;家居与食物
+ms-0209,ms,ms-03,kasut,鞋,Ada kasut di rumah saya.,我家里有鞋。,量词 pasang,名词;家居与食物
+ms-0210,ms,ms-03,bantal,枕头,Ada bantal di rumah saya.,我家里有枕头。,量词 biji,名词;家居与食物
+ms-0211,ms,ms-03,kucing,猫,Ada dua ekor kucing di belakang rumah.,房子后面有两只猫。,量词 ekor,名词;动物
+ms-0212,ms,ms-03,anjing,狗,Ada dua ekor anjing di belakang rumah.,房子后面有两只狗。,量词 ekor,名词;动物
+ms-0213,ms,ms-03,ayam,鸡,Ada dua ekor ayam di belakang rumah.,房子后面有两只鸡。,量词 ekor,名词;动物
+ms-0214,ms,ms-03,ikan,鱼,Ada dua ekor ikan di belakang rumah.,房子后面有两条鱼。,量词 ekor,名词;动物
+ms-0215,ms,ms-03,burung,鸟,Ada dua ekor burung di belakang rumah.,房子后面有两只鸟。,量词 ekor,名词;动物
+ms-0216,ms,ms-03,lembu,牛,Ada dua ekor lembu di belakang rumah.,房子后面有两头牛。,量词 ekor,名词;动物
+ms-0217,ms,ms-03,semua,所有,Semua buku ini baru.,这些书都是新的。,表示全部,数词
+ms-0218,ms,ms-03,banyak,许多,Saya ada banyak buku.,我有许多书。,表示数量多；本周不用重叠,数词
+ms-0219,ms,ms-03,beberapa,几个；一些,Ada beberapa orang pelajar di kelas.,班里有几个学生。,后可接量词，不用重叠,数词
+ms-0220,ms,ms-03,sedikit,少量,Ada sedikit gula di dalam teh ini.,这杯茶里有少量糖。,表示数量少,数词
+ms-0221,ms,ms-03,para,诸位；众（用于人）,Para pelajar ada di sekolah.,学生们在学校。,表示一群人，后面不用重叠,数词
+ms-0222,ms,ms-03,cukup,足够,Buku ini cukup untuk semua pelajar.,这些书够所有学生用。,形容词，后置；本句作谓语,形容词;补充
+ms-0223,ms,ms-03,lebih,更；较,Rumah Ali lebih besar.,阿里的房子更大。,程度副词，放形容词前,副词;补充
+ms-0224,ms,ms-03,kurang,不太；较少,Teh ini kurang panas.,这杯茶不太热。,程度副词，放形容词前,副词;补充
+ms-0225,ms,ms-03,atas,上面,Buku ada di atas meja.,书在桌子上。,方位名词，一般不用量词；di atas 作为地点词组记,名词;方位
+ms-0226,ms,ms-03,bawah,下面,Kucing ada di bawah kerusi.,猫在椅子下面。,方位名词，一般不用量词；di bawah 作为地点词组记,名词;方位
+ms-0227,ms,ms-03,dalam,里面,Pen ada di dalam beg.,笔在包里。,方位名词，一般不用量词；di dalam 作为地点词组记,名词;方位
+ms-0228,ms,ms-03,depan,前面,Ali ada di depan sekolah.,阿里在学校前面。,方位名词，一般不用量词；di depan 作为地点词组记,名词;方位
+ms-0229,ms,ms-03,belakang,后面,Bilik saya di belakang kelas.,我的房间在教室后面。,方位名词，一般不用量词；di belakang 作为地点词组记,名词;方位
+ms-0230,ms,ms-03,sebelah,旁边,Rumah Ali di sebelah rumah saya.,阿里的房子在我家旁边。,方位名词，一般不用量词；di sebelah 作为地点词组记,名词;方位
+ms-0231,ms,ms-03,Tiada buku di sini.,这里没有书。,Tiada buku di sini.,这里没有书。,整句识别；tiada = tidak ada；untuk 表「给、供」；seekor 作整词记,代词;phrase
+ms-0232,ms,ms-03,Saya ada dua buah buku.,我有两本书。,Saya ada dua buah buku.,我有两本书。,整句识别；tiada = tidak ada；untuk 表「给、供」；seekor 作整词记,代词;phrase
+ms-0233,ms,ms-03,Buku-buku ini untuk pelajar.,这些书是给学生的。,Buku-buku ini untuk pelajar.,这些书是给学生的。,整句识别；tiada = tidak ada；untuk 表「给、供」；seekor 作整词记,代词;phrase
+ms-0234,ms,ms-03,Ini buku yang saya suka.,这是我喜欢的书。,Ini buku yang saya suka.,这是我喜欢的书。,整句识别；tiada = tidak ada；untuk 表「给、供」；seekor 作整词记,代词;phrase
+ms-0235,ms,ms-03,Ada seekor kucing di rumah.,家里有一只猫。,Ada seekor kucing di rumah.,家里有一只猫。,整句识别；tiada = tidak ada；untuk 表「给、供」；seekor 作整词记,代词;phrase
+ms-0236,ms,ms-03,lantai,地板,Lantai bilik saya baru.,我房间的地板是新的。,一般不用量词；按一面墙或一片地板描述,名词;家居;补充
+ms-0237,ms,ms-03,dinding,墙壁,Dinding rumah saya tinggi.,我家的墙壁很高。,一般不用量词；按一面墙或一片地板描述,名词;家居;补充
+ms-0238,ms,ms-03,tandas,厕所,Tandas ada di sebelah bilik ini.,厕所在这个房间旁边。,量词 buah,名词;家居;补充
+ms-0239,ms,ms-03,dapur,厨房,Ada sebuah dapur di rumah saya.,我家里有一间厨房。,量词 buah,名词;家居;补充
+ms-0240,ms,ms-03,bunga,花,Ada bunga di atas meja.,桌子上有花。,量词 kuntum,名词;家居;补充
+ms-0241,ms,ms-04,sudah,已经,Saya sudah makan nasi.,我已经吃过米饭了。,时间或体貌标记，放在动词前；动词不因时间而变形,助动词;时间
+ms-0242,ms,ms-04,telah,已经（较正式）,Ali telah tulis e-mel.,阿里已经写了电子邮件。,时间或体貌标记，放在动词前；动词不因时间而变形,助动词;时间
+ms-0243,ms,ms-04,belum,还没有,Saya belum makan.,我还没吃饭。,时间或体貌标记，放在动词前；动词不因时间而变形,助动词;时间
+ms-0244,ms,ms-04,akan,将要,Esok saya akan pergi ke Melaka.,明天我将去马六甲。,时间或体貌标记，放在动词前；动词不因时间而变形,助动词;时间
+ms-0245,ms,ms-04,sedang,正在,Ibu sedang baca buku.,母亲正在读书。,时间或体貌标记，放在动词前；动词不因时间而变形,助动词;时间
+ms-0246,ms,ms-04,masih,仍然；还,Adik masih tidur.,弟弟还在睡觉。,时间或体貌标记，放在动词前；动词不因时间而变形,助动词;时间
+ms-0247,ms,ms-04,pernah,曾经,Saya pernah pergi ke Pulau Pinang.,我曾经去过槟城。,时间或体貌标记，放在动词前；动词不因时间而变形,助动词;时间
+ms-0248,ms,ms-04,baru sahaja,刚刚,Ali baru sahaja datang.,阿里刚刚到。,时间或体貌标记，放在动词前；动词不因时间而变形；baru 的副词义，本课用固定搭配补足，不重复建 baru 卡,助动词;时间;补充
+ms-0249,ms,ms-04,sekarang,现在,Sekarang saya ada di rumah.,现在我在家。,时间名词，一般不用量词，计时可直接接数字,名词;时间
+ms-0250,ms,ms-04,hari ini,今天,Hari ini saya akan baca buku.,今天我将读书。,时间名词，一般不用量词，计时可直接接数字,名词;时间
+ms-0251,ms,ms-04,semalam,昨天,Semalam saya pergi ke bank.,昨天我去了银行。,印尼语作 kemarin；本课马来语 semalam 指昨天；时间名词，一般不用量词，计时可直接接数字,名词;时间
+ms-0252,ms,ms-04,kelmarin,前天,Kelmarin Ali datang ke rumah saya.,前天阿里来了我家。,时间名词，一般不用量词，计时可直接接数字,名词;时间
+ms-0253,ms,ms-04,esok,明天,Esok saya akan beli roti.,明天我将买面包。,时间名词，一般不用量词，计时可直接接数字,名词;时间
+ms-0254,ms,ms-04,lusa,后天,Lusa kami akan pergi ke Melaka.,后天我们将去马六甲。,时间名词，一般不用量词，计时可直接接数字,名词;时间
+ms-0255,ms,ms-04,pagi,早晨,Saya bangun pada pukul enam pagi.,我早晨六点起床。,时间名词，一般不用量词，计时可直接接数字,名词;时间
+ms-0256,ms,ms-04,tengah hari,中午,Saya makan pada pukul dua belas tengah hari.,我中午十二点吃饭。,时间名词，一般不用量词，计时可直接接数字,名词;时间
+ms-0257,ms,ms-04,petang,下午；傍晚,Saya balik pada pukul lima petang.,我下午五点回家。,时间名词，一般不用量词，计时可直接接数字,名词;时间
+ms-0258,ms,ms-04,malam,晚上,Saya tidur pada pukul sepuluh malam.,我晚上十点睡觉。,时间名词，一般不用量词，计时可直接接数字,名词;时间
+ms-0259,ms,ms-04,minggu ini,这周,Minggu ini saya masih di Kuala Lumpur.,这周我仍在吉隆坡。,时间名词，一般不用量词，计时可直接接数字,名词;时间
+ms-0260,ms,ms-04,minggu depan,下周,Minggu depan saya akan pergi ke Johor Bahru.,下周我将去新山。,时间名词，一般不用量词，计时可直接接数字,名词;时间
+ms-0261,ms,ms-04,minggu lepas,上周,Minggu lepas saya beli buku ini.,上周我买了这本书。,时间名词，一般不用量词，计时可直接接数字,名词;时间
+ms-0262,ms,ms-04,bulan,月,Bulan ini saya akan pergi ke China.,这个月我将去中国。,时间名词，一般不用量词，计时可直接接数字,名词;时间
+ms-0263,ms,ms-04,tahun,年,Tahun ini adik saya belajar di sekolah.,今年我的弟弟在学校学习。,时间名词，一般不用量词，计时可直接接数字,名词;时间
+ms-0264,ms,ms-04,Isnin,星期一,"Pada hari Isnin, saya baca buku.",星期一，我读书。,星期名称首字母大写；一般不用量词，计次数可用 hari,名词;时间
+ms-0265,ms,ms-04,Selasa,星期二,"Pada hari Selasa, saya baca buku.",星期二，我读书。,星期名称首字母大写；一般不用量词，计次数可用 hari,名词;时间
+ms-0266,ms,ms-04,Rabu,星期三,"Pada hari Rabu, saya baca buku.",星期三，我读书。,星期名称首字母大写；一般不用量词，计次数可用 hari,名词;时间
+ms-0267,ms,ms-04,Khamis,星期四,"Pada hari Khamis, saya baca buku.",星期四，我读书。,星期名称首字母大写；一般不用量词，计次数可用 hari,名词;时间
+ms-0268,ms,ms-04,Jumaat,星期五,"Pada hari Jumaat, saya baca buku.",星期五，我读书。,星期名称首字母大写；一般不用量词，计次数可用 hari,名词;时间
+ms-0269,ms,ms-04,Sabtu,星期六,"Pada hari Sabtu, saya baca buku.",星期六，我读书。,星期名称首字母大写；一般不用量词，计次数可用 hari,名词;时间
+ms-0270,ms,ms-04,Ahad,星期日,"Pada hari Ahad, saya baca buku.",星期日，我读书。,星期名称首字母大写；一般不用量词，计次数可用 hari,名词;时间
+ms-0271,ms,ms-04,Januari,一月,"Pada bulan Januari, saya ada di Malaysia.",一月，我在马来西亚。,月份名称首字母大写；一般不用量词，前可加 bulan,名词;时间
+ms-0272,ms,ms-04,Februari,二月,"Pada bulan Februari, saya ada di Malaysia.",二月，我在马来西亚。,月份名称首字母大写；一般不用量词，前可加 bulan,名词;时间
+ms-0273,ms,ms-04,Mac,三月,"Pada bulan Mac, saya ada di Malaysia.",三月，我在马来西亚。,月份名称首字母大写；一般不用量词，前可加 bulan,名词;时间
+ms-0274,ms,ms-04,April,四月,"Pada bulan April, saya ada di Malaysia.",四月，我在马来西亚。,月份名称首字母大写；一般不用量词，前可加 bulan,名词;时间
+ms-0275,ms,ms-04,Mei,五月,"Pada bulan Mei, saya ada di Malaysia.",五月，我在马来西亚。,月份名称首字母大写；一般不用量词，前可加 bulan,名词;时间
+ms-0276,ms,ms-04,Jun,六月,"Pada bulan Jun, saya ada di Malaysia.",六月，我在马来西亚。,月份名称首字母大写；一般不用量词，前可加 bulan,名词;时间
+ms-0277,ms,ms-04,Julai,七月,"Pada bulan Julai, saya ada di Malaysia.",七月，我在马来西亚。,月份名称首字母大写；一般不用量词，前可加 bulan,名词;时间
+ms-0278,ms,ms-04,Ogos,八月,"Pada bulan Ogos, saya ada di Malaysia.",八月，我在马来西亚。,月份名称首字母大写；一般不用量词，前可加 bulan,名词;时间
+ms-0279,ms,ms-04,September,九月,"Pada bulan September, saya ada di Malaysia.",九月，我在马来西亚。,月份名称首字母大写；一般不用量词，前可加 bulan,名词;时间
+ms-0280,ms,ms-04,Oktober,十月,"Pada bulan Oktober, saya ada di Malaysia.",十月，我在马来西亚。,月份名称首字母大写；一般不用量词，前可加 bulan,名词;时间
+ms-0281,ms,ms-04,November,十一月,"Pada bulan November, saya ada di Malaysia.",十一月，我在马来西亚。,月份名称首字母大写；一般不用量词，前可加 bulan,名词;时间
+ms-0282,ms,ms-04,Disember,十二月,"Pada bulan Disember, saya ada di Malaysia.",十二月，我在马来西亚。,月份名称首字母大写；一般不用量词，前可加 bulan,名词;时间
+ms-0283,ms,ms-04,bangun,起床,Saya bangun pada pukul enam.,我六点起床。,不及物,动词;日常生活
+ms-0284,ms,ms-04,tidur,睡觉,Adik sedang tidur.,弟弟正在睡觉。,不及物,动词;日常生活
+ms-0285,ms,ms-04,mandi,洗澡,Saya mandi pada waktu pagi.,我早晨洗澡。,不及物,动词;日常生活
+ms-0286,ms,ms-04,balik,回去；回家,Saya akan balik ke rumah.,我将回家。,不及物；目的地用 ke,动词;日常生活
+ms-0287,ms,ms-04,datang,来,Ali akan datang esok.,阿里明天会来。,不及物；到达地点用 ke,动词;日常生活
+ms-0288,ms,ms-04,tunggu,等,Saya tunggu bas.,我等公共汽车。,及物；常见宾语 bas、kawan,动词;日常生活
+ms-0289,ms,ms-04,beli,买,Saya beli roti.,我买面包。,及物；常见宾语 roti、buku,动词;日常生活
+ms-0290,ms,ms-04,jual,卖,Mereka jual kuih.,他们卖糕点。,及物；常见宾语 kuih、buku,动词;日常生活
+ms-0291,ms,ms-04,buat,做,Saya buat nota.,我做笔记。,及物；常见宾语 nota,动词;日常生活
+ms-0292,ms,ms-04,cari,找,Saya cari buku saya.,我找我的书。,及物；常见宾语 buku、pen,动词;日常生活
+ms-0293,ms,ms-04,tengok,看,Saya tengok filem di rumah.,我在家看电影。,及物；常见宾语 filem；本周作整词记,动词;日常生活
+ms-0294,ms,ms-04,lari,跑,Saya lari pada waktu pagi.,我早晨跑步。,不及物,动词;日常生活;补充
+ms-0295,ms,ms-04,rehat,休息,Saya rehat di rumah.,我在家休息。,不及物,动词;日常生活;补充
+ms-0296,ms,ms-04,masak,煮；做饭,Ibu masak nasi.,母亲煮米饭。,及物；常见宾语 nasi、mi,动词;日常生活;补充
+ms-0297,ms,ms-04,cuci,洗,Saya cuci pinggan.,我洗盘子。,及物；常见宾语 pinggan、cawan,动词;日常生活;补充
+ms-0298,ms,ms-04,aktiviti,活动,Aktiviti ini pada hari Sabtu.,这个活动在星期六。,一般不用量词；数量可直接放名词前,名词;英语借词
+ms-0299,ms,ms-04,program,项目；活动安排,Program sekolah ini pada bulan Oktober.,学校的这个活动安排在十月。,一般不用量词；数量可直接放名词前,名词;英语借词
+ms-0300,ms,ms-04,projek,项目,Projek ini belum siap.,这个项目尚未完成。,一般不用量词；数量可直接放名词前,名词;英语借词
+ms-0301,ms,ms-04,idea,想法,Idea Ali sangat baik.,阿里的想法很好。,一般不用量词；数量可直接放名词前,名词;英语借词
+ms-0302,ms,ms-04,nota,笔记,Saya tulis nota di kelas.,我在课堂上记笔记。,一般不用量词；数量可直接放名词前,名词;英语借词
+ms-0303,ms,ms-04,fail,文件夹,Fail itu di atas meja.,那个文件夹在桌子上。,量词 buah,名词;英语借词
+ms-0304,ms,ms-04,video,视频,Video ini sangat pendek.,这个视频很短。,量词 buah,名词;英语借词
+ms-0305,ms,ms-04,muzik,音乐,Saya suka muzik ini.,我喜欢这段音乐。,一般不用量词；数量可直接放名词前,名词;英语借词
+ms-0306,ms,ms-04,foto,照片,Foto keluarga saya di dalam bilik.,我的全家福在房间里。,量词 keping,名词;英语借词
+ms-0307,ms,ms-04,filem,电影,Filem ini panjang sekali.,这部电影很长。,量词 buah,名词;英语借词
+ms-0308,ms,ms-04,Saya belum siap.,我还没准备好。,Saya belum siap.,我还没准备好。,整句识别；时间词与体貌标记配合使用,代词;phrase
+ms-0309,ms,ms-04,Sekarang waktu rehat.,现在是休息时间。,Sekarang waktu rehat.,现在是休息时间。,整句识别；时间词与体貌标记配合使用,代词;phrase
+ms-0310,ms,ms-04,Esok saya akan pergi ke sekolah.,明天我将去学校。,Esok saya akan pergi ke sekolah.,明天我将去学校。,整句识别；时间词与体貌标记配合使用,代词;phrase
+ms-0311,ms,ms-04,Semalam saya sudah baca buku itu.,昨天我已经读了那本书。,Semalam saya sudah baca buku itu.,昨天我已经读了那本书。,整句识别；时间词与体貌标记配合使用,代词;phrase
+ms-0312,ms,ms-04,Hari ini saya sedang tulis nota.,今天我正在写笔记。,Hari ini saya sedang tulis nota.,今天我正在写笔记。,整句识别；时间词与体貌标记配合使用,代词;phrase
+ms-0313,ms,ms-04,pukul,点钟（报时用）,Saya datang pada pukul lapan.,我八点来。,报时标记，放在数字前；一般不用量词，不表示计时长度,名词;时间;补充
+ms-0314,ms,ms-04,setengah,半,Saya balik pada pukul lima setengah.,我五点半回家。,数词，表示一半,数词;时间;补充
+ms-0315,ms,ms-04,suku,四分之一；一刻钟,Saya datang pada pukul tiga suku.,我三点一刻来。,数词；报时为过十五分钟,数词;时间;补充
+ms-0316,ms,ms-04,minit,分钟,Saya rehat lima belas minit.,我休息十五分钟。,计时单位，一般不用量词,名词;时间;补充
+ms-0317,ms,ms-04,pada,在（某个时间）,Saya pergi pada hari Isnin.,我星期一去。,介词，引时间；地点用 di,介词;时间;补充
+ms-0318,ms,ms-04,tarikh,日期,Tarikh program ini 5 Oktober 2026.,这个活动的日期是 2026 年 10 月 5 日。,一般不用量词；写作 tarikh + 日期,名词;时间;补充
+ms-0319,ms,ms-04,hari,天；日,Saya ada di sini tiga hari.,我在这里待三天。,计时单位，一般不用量词,名词;时间;补充
+ms-0320,ms,ms-04,minggu,周；星期,Saya ada di Melaka dua minggu.,我在马六甲待两周。,计时单位，一般不用量词,名词;时间;补充
