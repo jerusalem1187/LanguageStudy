@@ -319,3 +319,323 @@ ms-0317,ms,ms-04,pada,在（某个时间）,Saya pergi pada hari Isnin.,我星�
 ms-0318,ms,ms-04,tarikh,日期,Tarikh program ini 5 Oktober 2026.,这个活动的日期是 2026 年 10 月 5 日。,一般不用量词；写作 tarikh + 日期,名词;时间;补充
 ms-0319,ms,ms-04,hari,天；日,Saya ada di sini tiga hari.,我在这里待三天。,计时单位，一般不用量词,名词;时间;补充
 ms-0320,ms,ms-04,minggu,周；星期,Saya ada di Melaka dua minggu.,我在马六甲待两周。,计时单位，一般不用量词,名词;时间;补充
+ms-0321,ms,ms-05,berjalan,走路,Saya berjalan ke sekolah setiap hari.,我每天走路去学校。,ber- + jalan → berjalan；词根 jalan；ber- 常规形式；不及物,动词;日常活动
+ms-0322,ms,ms-05,berlari,跑步,Ali berlari di padang pada waktu pagi.,阿里早晨在运动场跑步。,ber- + lari → berlari；词根 lari；ber- 常规形式；不及物,动词;日常活动
+ms-0323,ms,ms-05,bermain,玩；参加运动,Adik bermain bola dengan kawan.,弟弟和朋友玩球。,ber- + main → bermain；词根 main；ber- 常规形式；不及物,动词;日常活动
+ms-0324,ms,ms-05,bercakap,说话,Kami bercakap dalam bahasa Melayu.,我们用马来语说话。,ber- + cakap → bercakap；词根 cakap；ber- 常规形式；不及物,动词;日常活动
+ms-0325,ms,ms-05,berbual,聊天,Ibu berbual dengan kakak di rumah.,母亲和姐姐在家聊天。,ber- + bual → berbual；词根 bual；ber- 常规形式；不及物,动词;日常活动
+ms-0326,ms,ms-05,berkata,说,"Ali berkata, ""Saya sudah siap.""",阿里说：“我已经准备好了。”,ber- + kata → berkata；词根 kata；ber- 常规形式；不及物,动词;日常活动
+ms-0327,ms,ms-05,berdiri,站立,Guru berdiri di depan kelas.,老师站在班级前面。,ber- + diri → berdiri；词根 diri；ber- 常规形式；不及物,动词;日常活动
+ms-0328,ms,ms-05,berhenti,停下,Bas itu berhenti di depan sekolah.,那辆巴士在学校前停下。,ber- + henti → berhenti；词根 henti；ber- 常规形式；不及物,动词;日常活动
+ms-0329,ms,ms-05,bertemu,见面,Saya bertemu dengan Siti pada hari Ahad.,我星期日和西蒂见面。,ber- + temu → bertemu；词根 temu；ber- 常规形式；不及物,动词;日常活动
+ms-0330,ms,ms-05,berenang,游泳,Kami berenang di kolam pada petang Sabtu.,我们星期六下午在泳池游泳。,ber- + renang → berenang；词根 renang；be- 变体；不及物,动词;日常活动
+ms-0331,ms,ms-05,berbaju,穿着上衣,Ali berbaju biru hari ini.,阿里今天穿着蓝色上衣。,ber- + baju → berbaju；词根 baju；ber- 常规形式；不及物,动词;日常活动
+ms-0332,ms,ms-05,berkereta,有汽车；乘汽车,Kami berkereta ke Melaka pada hari Ahad.,我们星期日乘汽车去马六甲。,ber- + kereta → berkereta；词根 kereta；ber- 常规形式；不及物,动词;日常活动
+ms-0333,ms,ms-05,berehat,休息,Bapa berehat di rumah pada waktu malam.,父亲晚上在家休息。,ber- + rehat → berehat；词根 rehat；be- 变体；不及物,动词;日常活动
+ms-0334,ms,ms-05,berbasikal,骑自行车,Saya berbasikal dengan abang setiap petang.,我每天下午和哥哥骑自行车。,ber- + basikal → berbasikal；词根 basikal；ber- 常规形式；不及物,动词;日常活动
+ms-0335,ms,ms-05,bersukan,从事体育运动,Kami bersukan di sekolah pada hari Jumaat.,我们星期五在学校运动。,ber- + sukan → bersukan；词根 sukan；ber- 常规形式；不及物,动词;日常活动
+ms-0336,ms,ms-05,bersenam,做体操；锻炼,Ibu bersenam selama dua puluh minit.,母亲锻炼二十分钟。,ber- + senam → bersenam；词根 senam；ber- 常规形式；不及物,动词;日常活动
+ms-0337,ms,ms-05,berlatih,练习,Mereka berlatih badminton pada waktu petang.,他们下午练习羽毛球。,ber- + latih → berlatih；词根 latih；ber- 常规形式；不及物,动词;日常活动
+ms-0338,ms,ms-05,berkebun,做园艺；种菜,Bapa berkebun di belakang rumah.,父亲在屋后种菜。,ber- + kebun → berkebun；词根 kebun；ber- 常规形式；不及物,动词;日常活动
+ms-0339,ms,ms-05,berdoa,祈祷,Keluarga itu berdoa di rumah.,那家人在家祈祷。,ber- + doa → berdoa；词根 doa；ber- 常规形式；不及物,动词;日常活动
+ms-0340,ms,ms-05,berjumpa,见到；碰面,Saya berjumpa dengan guru selepas kelas.,我课后与老师见面。,ber- + jumpa → berjumpa；词根 jumpa；ber- 常规形式；不及物,动词;日常活动
+ms-0341,ms,ms-05,bertanya,询问,Pelajar bertanya kepada guru tentang buku itu.,学生向老师询问那本书。,ber- + tanya → bertanya；词根 tanya；ber- 常规形式；不及物,动词;日常活动
+ms-0342,ms,ms-05,bercuti,休假,Kami bercuti di Pulau Pinang minggu ini.,我们这周在槟城度假。,ber- + cuti → bercuti；词根 cuti；ber- 常规形式；不及物,动词;日常活动
+ms-0343,ms,ms-05,berkumpul,集合；聚集,Para pelajar berkumpul di padang sekolah.,学生们在学校运动场集合。,ber- + kumpul → berkumpul；词根 kumpul；ber- 常规形式；不及物,动词;日常活动
+ms-0344,ms,ms-05,berpayung,撑伞,Siti berpayung kerana hujan.,西蒂因为下雨而撑伞。,ber- + payung → berpayung；词根 payung；ber- 常规形式；不及物,动词;日常活动
+ms-0345,ms,ms-05,berkasut,穿着鞋,Abang berkasut hitam ke sekolah.,哥哥穿着黑鞋去学校。,ber- + kasut → berkasut；词根 kasut；ber- 常规形式；不及物,动词;日常活动
+ms-0346,ms,ms-05,selalu,经常,Saya selalu berjalan ke sekolah.,我经常走路去学校。,频率副词，放在动作前,副词;时间
+ms-0347,ms,ms-05,sentiasa,始终；总是,Ibu sentiasa bangun pada pukul enam.,母亲总是六点起床。,表示持续或一贯,副词;时间
+ms-0348,ms,ms-05,biasanya,通常,Kami biasanya bersukan pada hari Sabtu.,我们通常星期六运动。,表示一般习惯,副词;时间
+ms-0349,ms,ms-05,kadang-kadang,有时,Saya kadang-kadang berkereta ke pejabat.,我有时乘汽车去办公室。,频率副词，连字符不可省,副词;时间
+ms-0350,ms,ms-05,jarang,很少,Bapa jarang bercuti pada bulan Disember.,父亲很少在十二月休假。,频率低，不等于从不,副词;时间
+ms-0351,ms,ms-05,tidak pernah,从未,Saya tidak pernah berenang di kolam itu.,我从未在那个泳池游泳。,否定词与体貌标记组合,副词;时间
+ms-0352,ms,ms-05,setiap hari,每天,Ali belajar bahasa Melayu setiap hari.,阿里每天学马来语。,固定时间短语，setiap 后用单数名词,副词;时间
+ms-0353,ms,ms-05,sering,时常,Kami sering berbual pada waktu rehat.,我们时常在休息时间聊天。,频率副词,副词;时间
+ms-0354,ms,ms-05,sukan,体育运动,Saya suka sukan di sekolah.,我喜欢学校的体育运动。,量词 种类用 jenis,名词;活动与运动
+ms-0355,ms,ms-05,bola,球,Adik ada dua biji bola.,弟弟有两个球。,量词 biji,名词;活动与运动
+ms-0356,ms,ms-05,bola sepak,足球运动,Abang bermain bola sepak pada hari Ahad.,哥哥星期日踢足球。,量词 比赛场次用 perlawanan,名词;活动与运动
+ms-0357,ms,ms-05,badminton,羽毛球运动,Kami bermain badminton setiap petang.,我们每天下午打羽毛球。,量词 比赛场次用 perlawanan,名词;活动与运动;英语借词
+ms-0358,ms,ms-05,tenis,网球运动,Siti bermain tenis dengan Ali.,西蒂和阿里打网球。,量词 比赛场次用 perlawanan,名词;活动与运动;英语借词
+ms-0359,ms,ms-05,pingpong,乒乓球运动,Kami bermain pingpong di sekolah.,我们在学校打乒乓球。,量词 比赛场次用 perlawanan,名词;活动与运动;英语借词
+ms-0360,ms,ms-05,hoki,曲棍球运动,Kakak bermain hoki pada hari Sabtu.,姐姐星期六打曲棍球。,量词 比赛场次用 perlawanan,名词;活动与运动;英语借词
+ms-0361,ms,ms-05,golf,高尔夫球运动,Bapa jarang bermain golf.,父亲很少打高尔夫球。,量词 比赛场次用 perlawanan,名词;活动与运动;英语借词
+ms-0362,ms,ms-05,yoga,瑜伽,Ibu belajar yoga di rumah.,母亲在家学瑜伽。,量词 通常不用量词,名词;活动与运动;梵语借词
+ms-0363,ms,ms-05,senaman,锻炼；体操,Senaman ini baik untuk saya.,这种锻炼对我有益。,量词 套用 set,名词;活动与运动
+ms-0364,ms,ms-05,latihan,练习；训练,Latihan badminton kami pada pukul lima.,我们的羽毛球训练在五点。,通常不用专用量词，可写 satu latihan（一项练习）,名词;活动与运动
+ms-0365,ms,ms-05,padang,运动场；草地,Padang sekolah itu besar.,那所学校的运动场很大。,量词 buah,名词;活动与运动
+ms-0366,ms,ms-05,kolam,池；泳池,Kami berenang di kolam besar itu.,我们在那个大泳池游泳。,量词 buah,名词;活动与运动
+ms-0367,ms,ms-05,kelab,俱乐部,Kelab sukan itu ada dua puluh orang pelajar.,那个体育俱乐部有二十名学生。,量词 buah,名词;活动与运动;英语借词
+ms-0368,ms,ms-05,hobi,爱好,Hobi saya ialah berkebun.,我的爱好是园艺。,量词 通常不用量词,名词;活动与运动;英语借词
+ms-0369,ms,ms-05,tangan,手,Tangan saya kecil.,我的手很小。,量词 只用 belah，双手用 pasang,名词;身体与衣物
+ms-0370,ms,ms-05,kaki,脚；腿,Kaki Ali panjang.,阿里的腿很长。,量词 只用 belah，双脚用 pasang,名词;身体与衣物
+ms-0371,ms,ms-05,kepala,头,Kepala kucing itu kecil.,那只猫的头很小。,一般不另用量词，按所属的人或动物计数,名词;身体与衣物
+ms-0372,ms,ms-05,mata,眼睛,Mata adik besar.,弟弟的眼睛很大。,量词 只用 belah，双眼用 pasang,名词;身体与衣物
+ms-0373,ms,ms-05,baju,上衣,Saya ada tiga helai baju biru.,我有三件蓝色上衣。,量词 helai,名词;身体与衣物
+ms-0374,ms,ms-05,seluar,裤子,Seluar abang panjang.,哥哥的裤子很长。,量词 helai,名词;身体与衣物
+ms-0375,ms,ms-05,kemeja,衬衫,Kemeja bapa baru.,父亲的衬衫是新的。,量词 helai,名词;身体与衣物;葡语借词
+ms-0376,ms,ms-05,stoking,袜子,Saya ada dua pasang stoking.,我有两双袜子。,量词 pasang,名词;身体与衣物;英语借词
+ms-0377,ms,ms-05,topi,帽子,Topi Siti biru.,西蒂的帽子是蓝色的。,量词 顶用 buah,名词;身体与衣物
+ms-0378,ms,ms-05,tudung,头巾,Tudung Aminah cantik.,阿米娜的头巾很漂亮。,量词 helai,名词;身体与衣物
+ms-0379,ms,ms-05,Saya berjalan setiap pagi.,我每天早晨走路。,Saya berjalan setiap pagi.,我每天早晨走路。,ber- + jalan；不及物；时间短语在句尾,动词;日常活动;phrase
+ms-0380,ms,ms-05,Kami biasanya bersenam bersama.,我们通常一起锻炼。,Kami biasanya bersenam bersama.,我们通常一起锻炼。,ber- + senam；不及物；频率词在动作前,动词;日常活动;phrase
+ms-0381,ms,ms-05,Saya tidak pernah bermain golf.,我从未打过高尔夫球。,Saya tidak pernah bermain golf.,我从未打过高尔夫球。,ber- + main；不及物；golf 是活动补语,动词;日常活动;phrase
+ms-0382,ms,ms-05,Ali sedang berehat di rumah.,阿里正在家休息。,Ali sedang berehat di rumah.,阿里正在家休息。,ber- + rehat；be- 变体；不及物,动词;日常活动;phrase
+ms-0383,ms,ms-05,Kita bertemu selepas kelas.,我们课后见面。,Kita bertemu selepas kelas.,我们课后见面。,ber- + temu；不及物,动词;日常活动;phrase
+ms-0384,ms,ms-05,kereta,汽车,Kereta bapa besar.,父亲的汽车很大。,量词 buah,名词;日常活动;补充
+ms-0385,ms,ms-05,basikal,自行车,Basikal saya baru.,我的自行车是新的。,量词 buah,名词;日常活动;补充
+ms-0386,ms,ms-05,payung,伞,Payung ini untuk Siti.,这把伞给西蒂。,量词 把用 kaki,名词;日常活动;补充
+ms-0387,ms,ms-05,hujan,雨,Hari ini hujan.,今天下雨。,通常不用量词；hujan 也可直接表示下雨,名词;日常活动;补充
+ms-0388,ms,ms-05,gim,健身房,Gim itu di sebelah sekolah.,那间健身房在学校旁边。,量词 buah,名词;日常活动;英语借词;补充
+ms-0389,ms,ms-05,selepas,在……之后,Saya berehat selepas senaman.,我锻炼后休息。,后接时间或活动，表示先后,介词;日常活动;补充
+ms-0390,ms,ms-05,sebelum,在……之前,Kami mandi sebelum makan.,我们吃饭前洗澡。,后接时间或活动,介词;日常活动;补充
+ms-0391,ms,ms-05,selama,持续……时间,Ali berenang selama setengah jam.,阿里游泳半小时。,后接时长,介词;日常活动;补充
+ms-0392,ms,ms-05,kepada,向；对某人,Siti bertanya kepada guru.,西蒂向老师提问。,引出动作所指向的人,介词;日常活动;补充
+ms-0393,ms,ms-05,tentang,关于,Kami berbual tentang sukan.,我们谈论体育。,引出话题,介词;日常活动;补充
+ms-0394,ms,ms-05,bersama,一起,Kami berjalan bersama ke sekolah.,我们一起走路去学校。,ber- + sama；词根 sama；本课作副词,副词;日常活动;补充
+ms-0395,ms,ms-05,letih,疲倦的,Saya letih selepas bersukan.,我运动后很累。,形容词，后置,形容词;日常活动;补充
+ms-0396,ms,ms-05,sihat,健康的,Keluarga kami sihat.,我们一家人都健康。,形容词，后置,形容词;日常活动;阿拉伯语借词;补充
+ms-0397,ms,ms-05,biru,蓝色的,Baju biru itu baju saya.,那件蓝色上衣是我的上衣。,形容词，后置,形容词;日常活动;补充
+ms-0398,ms,ms-05,hitam,黑色的,Kasut hitam itu baru.,那双黑鞋是新的。,形容词，后置,形容词;日常活动;补充
+ms-0399,ms,ms-05,merah,红色的,Bola merah itu untuk adik.,那个红球给弟弟。,形容词，后置,形容词;日常活动;补充
+ms-0400,ms,ms-05,putih,白色的,Kemeja putih itu baru.,那件白衬衫是新的。,形容词，后置,形容词;日常活动;补充
+ms-0401,ms,ms-06,melihat,看见,Saya melihat Siti di sekolah.,我在学校看见西蒂。,meN- + lihat → melihat，me-；l 保留；词根 lihat；及物；常见宾语 buku、kawan,动词;学习与工作
+ms-0402,ms,ms-06,memasak,烹煮,Ibu memasak nasi di dapur.,母亲在厨房煮饭。,meN- + masak → memasak，me-；m 保留；词根 masak；及物；常见宾语 nasi、sayur,动词;学习与工作
+ms-0403,ms,ms-06,menanti,等候,Kami menanti bas di depan sekolah.,我们在学校前等巴士。,meN- + nanti → menanti，me-；n 保留；词根 nanti；及物；常见宾语 bas、kawan,动词;学习与工作
+ms-0404,ms,ms-06,merasa,品尝,Bapa merasa kopi itu.,父亲尝了尝那杯咖啡。,meN- + rasa → merasa，me-；r 保留；词根 rasa；及物；常见宾语 sup、kopi,动词;学习与工作
+ms-0405,ms,ms-06,menyanyi,唱歌,Adik menyanyi di dalam bilik.,弟弟在房间里唱歌。,meN- + nyanyi → menyanyi，me-；ny 保留，不是 s 脱落；词根 nyanyi；不及物，不直接带宾语,动词;学习与工作
+ms-0406,ms,ms-06,membaca,阅读,Siti membaca surat Ali.,西蒂读阿里的信。,meN- + baca → membaca，mem-；b 保留；词根 baca；及物；常见宾语 buku、surat,动词;学习与工作
+ms-0407,ms,ms-06,membeli,购买,Kami membeli beras di kedai.,我们在商店买米。,meN- + beli → membeli，mem-；b 保留；词根 beli；及物；常见宾语 beras、baju,动词;学习与工作
+ms-0408,ms,ms-06,memakai,穿戴；使用,Ali memakai baju putih ke sekolah.,阿里穿白色上衣去学校。,meN- + pakai → memakai，mem-；p 脱落；词根 pakai；及物；常见宾语 baju、kasut,动词;学习与工作
+ms-0409,ms,ms-06,memukul,敲打；击打,Siti memukul bola itu.,西蒂击打那个球。,meN- + pukul → memukul，mem-；p 脱落；词根 pukul；及物；常见宾语 bola、gendang,动词;学习与工作
+ms-0410,ms,ms-06,memproses,处理,Kerani memproses borang itu.,办事员处理那张表格。,meN- + proses → memproses，mem-；pr 辅音簇保留；词根 proses；及物；常见宾语 borang、data,动词;学习与工作
+ms-0411,ms,ms-06,membawa,携带,Saya membawa beg ke sekolah.,我带着书包去学校。,meN- + bawa → membawa，mem-；b 保留；词根 bawa；及物；常见宾语 beg、buku,动词;学习与工作
+ms-0412,ms,ms-06,mencari,寻找,Ali mencari pen di dalam beg.,阿里在包里找笔。,meN- + cari → mencari，men-；c 保留；词根 cari；及物；常见宾语 buku、pen,动词;学习与工作
+ms-0413,ms,ms-06,mendengar,听；听见,Kami mendengar berita di radio.,我们听广播里的新闻。,meN- + dengar → mendengar，men-；d 保留；词根 dengar；及物；常见宾语 muzik、berita,动词;学习与工作
+ms-0414,ms,ms-06,menjual,售卖,Kedai itu menjual sayur dan roti.,那家店卖蔬菜和面包。,meN- + jual → menjual，men-；j 保留；词根 jual；及物；常见宾语 sayur、roti,动词;学习与工作
+ms-0415,ms,ms-06,menulis,书写,Saya menulis surat kepada Siti.,我给西蒂写信。,meN- + tulis → menulis，men-；t 脱落；词根 tulis；及物；常见宾语 surat、nota,动词;学习与工作
+ms-0416,ms,ms-06,menunggu,等候,Mei Ling menunggu Raju di sekolah.,美玲在学校等拉朱。,meN- + tunggu → menunggu，men-；t 脱落；词根 tunggu；及物；常见宾语 bas、kawan,动词;学习与工作
+ms-0417,ms,ms-06,mentadbir,管理,Beliau mentadbir sekolah itu.,他管理那所学校。,meN- + tadbir → mentadbir，men-；借词 t 保留，不是词首辅音簇；词根 tadbir；及物；常见宾语 sekolah、pejabat,动词;学习与工作
+ms-0418,ms,ms-06,mencuci,洗,Adik mencuci tangan dengan sabun.,弟弟用肥皂洗手。,meN- + cuci → mencuci，men-；c 保留；词根 cuci；及物；常见宾语 tangan、baju,动词;学习与工作
+ms-0419,ms,ms-06,menjawab,回答,Guru menjawab soalan saya.,老师回答我的问题。,meN- + jawab → menjawab，men-；j 保留；词根 jawab；及物；常见宾语 soalan、surat,动词;学习与工作
+ms-0420,ms,ms-06,mengambil,拿取,Saya mengambil buku di atas meja.,我拿桌上的书。,meN- + ambil → mengambil，meng-；元音 a 保留；词根 ambil；及物；常见宾语 buku、air,动词;学习与工作
+ms-0421,ms,ms-06,mengajar,教,Siti mengajar bahasa Melayu di sekolah.,西蒂在学校教马来语。,meN- + ajar → mengajar，meng-；元音 a 保留；词根 ajar；及物；常见宾语 bahasa、pelajar,动词;学习与工作
+ms-0422,ms,ms-06,menghantar,送；寄送,Ali menghantar surat kepada Mei Ling.,阿里给美玲寄信。,meN- + hantar → menghantar，meng-；h 保留；词根 hantar；及物；常见宾语 surat、anak,动词;学习与工作
+ms-0423,ms,ms-06,mengira,计算；数,Kerani mengira wang di pejabat.,办事员在办公室数钱。,meN- + kira → mengira，meng-；k 脱落；词根 kira；及物；常见宾语 wang、buku,动词;学习与工作
+ms-0424,ms,ms-06,mengirim,寄送,Saya mengirim e-mel kepada guru.,我给老师发电子邮件。,meN- + kirim → mengirim，meng-；k 脱落；词根 kirim；及物；常见宾语 surat、e-mel,动词;学习与工作
+ms-0425,ms,ms-06,mengkaji,研究,Mereka mengkaji bahasa Melayu di universiti.,他们在大学研究马来语。,meN- + kaji → mengkaji，meng-；k 保留，词汇例外；词根 kaji；及物；常见宾语 bahasa、resipi,动词;学习与工作
+ms-0426,ms,ms-06,menggali,挖掘,Bapa menggali lubang di belakang rumah.,父亲在屋后挖洞。,meN- + gali → menggali，meng-；g 保留；词根 gali；及物；常见宾语 lubang、tanah,动词;学习与工作
+ms-0427,ms,ms-06,mengukur,测量,Kakak mengukur kain itu.,姐姐测量那块布。,meN- + ukur → mengukur，meng-；元音 u 保留；词根 ukur；及物；常见宾语 meja、kain,动词;学习与工作
+ms-0428,ms,ms-06,menyapu,扫,Ali menyapu lantai rumah.,阿里扫家里的地板。,meN- + sapu → menyapu，meny-；s 脱落；词根 sapu；及物；常见宾语 lantai、bilik,动词;学习与工作
+ms-0429,ms,ms-06,menyewa,租用,Kami menyewa basikal di Melaka.,我们在马六甲租自行车。,meN- + sewa → menyewa，meny-；s 脱落；词根 sewa；及物；常见宾语 rumah、basikal,动词;学习与工作
+ms-0430,ms,ms-06,menyimpan,保存；收好,Ibu menyimpan wang di bank.,母亲把钱存进银行。,meN- + simpan → menyimpan，meny-；s 脱落；词根 simpan；及物；常见宾语 wang、buku,动词;学习与工作
+ms-0431,ms,ms-06,menyusun,排列；整理,Saya menyusun buku di atas meja.,我整理桌上的书。,meN- + susun → menyusun，meny-；s 脱落；词根 susun；及物；常见宾语 buku、kerusi,动词;学习与工作
+ms-0432,ms,ms-06,mengecat,涂漆,Bapa mengecat pintu dengan berus.,父亲用刷子给门涂漆。,meN- + cat → mengecat，menge-；单音节词根完整保留；词根 cat；及物；常见宾语 dinding、pintu,动词;学习与工作
+ms-0433,ms,ms-06,mengepam,打气；抽水,Ali mengepam tayar basikal.,阿里给自行车轮胎打气。,meN- + pam → mengepam，menge-；单音节词根完整保留；词根 pam；及物；常见宾语 tayar、air,动词;学习与工作
+ms-0434,ms,ms-06,mengelap,擦拭,Siti mengelap meja dengan kain.,西蒂用布擦桌子。,meN- + lap → mengelap，menge-；单音节词根完整保留；词根 lap；及物；常见宾语 meja、tingkap,动词;学习与工作
+ms-0435,ms,ms-06,mengepos,邮寄,Kakak mengepos surat pada hari Isnin.,姐姐星期一寄信。,meN- + pos → mengepos，menge-；单音节词根完整保留；词根 pos；及物；常见宾语 surat、borang,动词;学习与工作
+ms-0436,ms,ms-06,surat,信,Surat ini daripada Ali.,这封信来自阿里。,量词 封用 pucuk,名词;学习与工作
+ms-0437,ms,ms-06,sampul,信封,Saya menyimpan surat di dalam sampul.,我把信收在信封里。,量词 个用 keping,名词;学习与工作
+ms-0438,ms,ms-06,borang,表格,Siti membaca borang itu.,西蒂读那张表格。,量词 张用 helai,名词;学习与工作
+ms-0439,ms,ms-06,berus,刷子,Bapa membawa berus ke rumah.,父亲把刷子带回家。,量词 把用 batang,名词;学习与工作
+ms-0440,ms,ms-06,cat,油漆,Cat ini merah.,这种油漆是红色的。,量词 罐用 tin,名词;学习与工作;闽南语借词
+ms-0441,ms,ms-06,pam,泵；打气筒,Pam basikal itu kecil.,那个自行车打气筒很小。,量词 buah,名词;学习与工作;英语借词
+ms-0442,ms,ms-06,tayar,轮胎,Tayar kereta itu baru.,那辆汽车的轮胎是新的。,量词 个用 biji,名词;学习与工作;英语借词
+ms-0443,ms,ms-06,baldi,桶,Saya membawa baldi ke dapur.,我把桶拿到厨房。,量词 buah,名词;学习与工作;葡语借词
+ms-0444,ms,ms-06,kain,布,Ibu membeli kain biru.,母亲买蓝布。,量词 片用 helai,名词;学习与工作
+ms-0445,ms,ms-06,sabun,肥皂,Sabun ini untuk mencuci tangan.,这块肥皂用来洗手。,量词 块用 buku,名词;学习与工作
+ms-0446,ms,ms-06,ubat,药,Ibu membeli ubat di klinik.,母亲在诊所买药。,量词 片用 biji，液体用 botol,名词;学习与工作
+ms-0447,ms,ms-06,wang,钱,Wang saya ada di dalam beg.,我的钱在包里。,量词 金额用 ringgit,名词;学习与工作
+ms-0448,ms,ms-06,cerita,故事,Cerita Ali sangat panjang.,阿里的故事很长。,量词 篇用 buah,名词;学习与工作
+ms-0449,ms,ms-06,berita,新闻；消息,Berita itu tentang sekolah kami.,那条新闻是关于我们学校的。,量词 条用 buah,名词;学习与工作
+ms-0450,ms,ms-06,lagu,歌曲,Lagu ini dalam bahasa Melayu.,这首歌是马来语歌。,量词 首用 buah,名词;学习与工作
+ms-0451,ms,ms-06,resipi,食谱,Saya membaca resipi ibu.,我读母亲的食谱。,通常不用专用量词，可写 satu resipi（一份食谱）,名词;学习与工作;英语借词
+ms-0452,ms,ms-06,beras,生米,Beras ini untuk keluarga kami.,这些米给我们一家人。,量词 袋用 kampit,名词;学习与工作
+ms-0453,ms,ms-06,bawang,洋葱；葱蒜类,Ibu membeli bawang di kedai.,母亲在商店买洋葱。,量词 个用 biji,名词;学习与工作
+ms-0454,ms,ms-06,minyak,油,Minyak ini untuk memasak.,这种油用来烹饪。,量词 瓶用 botol,名词;学习与工作
+ms-0455,ms,ms-06,periuk,锅,Periuk itu ada di dapur.,那口锅在厨房。,量词 口用 buah,名词;学习与工作
+ms-0456,ms,ms-06,sambil,一边……一边……,Siti memasak sambil mendengar radio.,西蒂一边做饭一边听广播。,连接同时发生的动作,连词;时间
+ms-0457,ms,ms-06,lalu,然后；于是,Ali mengambil pen lalu menulis surat.,阿里拿起笔，然后写信。,连接先后动作,连词;时间
+ms-0458,ms,ms-06,kemudian,然后,"Saya mencuci tangan, kemudian makan nasi.",我洗手，然后吃饭。,连接叙述的先后,副词;时间
+ms-0459,ms,ms-06,akhirnya,最后；终于,Akhirnya kami bertemu di sekolah.,最后我们在学校见面了。,表示过程的末尾,副词;时间
+ms-0460,ms,ms-06,segera,立刻,Saya segera menjawab e-mel guru.,我立即回复老师的电子邮件。,副词，表示不拖延,副词;时间
+ms-0461,ms,ms-06,Saya sedang membaca surat.,我正在读信。,Saya sedang membaca surat.,我正在读信。,meN- + baca → membaca，b 保留；宾语 surat,动词;学习与工作;phrase
+ms-0462,ms,ms-06,Ibu memasak sambil menyanyi.,母亲一边做饭一边唱歌。,Ibu memasak sambil menyanyi.,母亲一边做饭一边唱歌。,me- + masak；me- + nyanyi；此处不带宾语,动词;学习与工作;phrase
+ms-0463,ms,ms-06,Ali menulis dengan pen.,阿里用笔写字。,Ali menulis dengan pen.,阿里用笔写字。,meN- + tulis → menulis，t 脱落；宾语可为 surat，本句省略,动词;学习与工作;phrase
+ms-0464,ms,ms-06,Kami menyusun buku bersama.,我们一起整理书。,Kami menyusun buku bersama.,我们一起整理书。,meN- + susun → menyusun，s 脱落；宾语 buku,动词;学习与工作;phrase
+ms-0465,ms,ms-06,Siti mengelap meja itu.,西蒂擦那张桌子。,Siti mengelap meja itu.,西蒂擦那张桌子。,meN- + lap → mengelap，单音节；宾语 meja,动词;学习与工作;phrase
+ms-0466,ms,ms-06,kedai,商店,Kedai itu menjual beras dan sayur.,那家店卖米和蔬菜。,量词 家用 buah,名词;日常用品;补充
+ms-0467,ms,ms-06,soalan,问题,Soalan guru itu tentang resipi.,老师的那个问题是关于食谱的。,通常不用专用量词，可写 satu soalan（一题）,名词;日常用品;补充
+ms-0468,ms,ms-06,lubang,洞,Lubang itu kecil.,那个洞很小。,量词 个用 buah,名词;日常用品;补充
+ms-0469,ms,ms-06,cili,辣椒,Ibu mencuci cili di dapur.,母亲在厨房洗辣椒。,量词 个用 biji,名词;日常用品;补充
+ms-0470,ms,ms-06,daging,肉,Saya memasak daging dengan bawang.,我用洋葱煮肉。,量词 块用 ketul,名词;日常用品;补充
+ms-0471,ms,ms-06,timun,黄瓜,Kakak membeli timun di kedai.,姐姐在商店买黄瓜。,量词 条用 batang,名词;日常用品;补充
+ms-0472,ms,ms-06,lobak,萝卜,Saya mencuci lobak sebelum memasak.,我做饭前洗萝卜。,量词 根用 batang,名词;日常用品;补充
+ms-0473,ms,ms-06,limau,柑橘；青柠,Air limau itu sejuk.,那杯青柠汁是凉的。,量词 个用 biji,名词;日常用品;补充
+ms-0474,ms,ms-06,madu,蜂蜜,Madu itu di dalam gelas.,蜂蜜在玻璃杯里。,量词 瓶用 botol,名词;日常用品;补充
+ms-0475,ms,ms-06,botol,瓶子,Botol itu untuk susu.,那个瓶子用来装牛奶。,量词 buah,名词;日常用品;补充
+ms-0476,ms,ms-06,daripada,来自某人；由某种材料；比,Surat ini daripada guru saya.,这封信来自我的老师。,人、来源、材料和比较；地点来源用 dari,介词;学习与工作;补充
+ms-0477,ms,ms-06,bersih,干净的,Meja itu sudah bersih.,那张桌子已经干净了。,形容词，后置,形容词;日常用品;补充
+ms-0478,ms,ms-06,kotor,脏的,Kain kotor itu di dalam baldi.,那块脏布在桶里。,形容词，后置,形容词;日常用品;补充
+ms-0479,ms,ms-06,kering,干的,Baju itu sudah kering.,那件上衣已经干了。,形容词，后置,形容词;日常用品;补充
+ms-0480,ms,ms-06,basah,湿的,Kain itu masih basah.,那块布还湿着。,形容词，后置,形容词;日常用品;补充
+ms-0481,ms,ms-07,di,在,Saya bekerja di Kuala Lumpur.,我在吉隆坡工作。,后接地点，分写；本课不教被动前缀 di-,介词;城市
+ms-0482,ms,ms-07,ke,到；向,Kami pergi ke stesen dengan bas.,我们坐巴士去车站。,后接方向或地点，分写,介词;城市
+ms-0483,ms,ms-07,dari,从,Ali datang dari Johor Bahru.,阿里从新山来。,地点、方向或时间的起点,介词;城市
+ms-0484,ms,ms-07,untuk,为了；给,Buku ini untuk adik saya.,这本书给我的弟弟。,表示用途或受益者,介词;城市
+ms-0485,ms,ms-07,bagi,为；对于,Latihan ini baik bagi pelajar.,这个练习对学生有益。,表示对象或受益者,介词;城市
+ms-0486,ms,ms-07,mengenai,关于,Kami berbual mengenai bandar Melaka.,我们谈论马六甲城。,用法近于 tentang；本课作为介词整词学习,介词;城市
+ms-0487,ms,ms-07,oleh,由,Saya membaca cerita oleh Siti.,我读西蒂写的故事。,可在名词后标作者；被动句施事用法留待 ms-11,介词;城市
+ms-0488,ms,ms-07,sejak,自从,Saya tinggal di sini sejak tahun 2020.,我自2020年起住在这里。,引出持续情况的起点,介词;城市
+ms-0489,ms,ms-07,hingga,直到,Ali bekerja dari pagi hingga petang.,阿里从早到下午工作。,引出时间或空间终点,介词;城市
+ms-0490,ms,ms-07,sehingga,直到,Kami menunggu sehingga pukul lima.,我们一直等到五点。,引出终点或限度,介词;城市
+ms-0491,ms,ms-07,sampai,直到；到,Saya berjalan dari rumah sampai sekolah.,我从家一直走到学校。,本课作介词，引出终点,介词;城市
+ms-0492,ms,ms-07,antara,在……之间,Kami berehat antara pukul dua dengan pukul tiga.,我们在两点到三点之间休息。,常用 antara A dengan B,介词;城市
+ms-0493,ms,ms-07,tanpa,没有；不带,Dia pergi ke sekolah tanpa beg.,他没带书包就去学校。,后接缺少的事物或动作,介词;城市
+ms-0494,ms,ms-07,seperti,像,Rumah ini seperti rumah saya.,这座房子像我的家。,引出相似的事物,介词;城市
+ms-0495,ms,ms-07,terhadap,对；对于,Sikapnya terhadap pelajar sangat baik.,他对学生的态度很好。,常配态度、看法等名词,介词;城市;补充
+ms-0496,ms,ms-07,menerusi,经由；通过,Kami membaca berita menerusi e-mel.,我们通过电子邮件读消息。,本课作介词整词学习，不开放 -i 派生,介词;城市;补充
+ms-0497,ms,ms-07,di atas,在……上面,Buku saya di atas meja.,我的书在桌上。,di 分写，atas 表上方,介词;方位
+ms-0498,ms,ms-07,di bawah,在……下面,Kucing itu di bawah kerusi.,那只猫在椅子下面。,di 分写，bawah 表下方,介词;方位
+ms-0499,ms,ms-07,di dalam,在……里面,Wang saya di dalam beg.,我的钱在包里。,具体空间内部,介词;方位
+ms-0500,ms,ms-07,di luar,在……外面,Ali menunggu di luar sekolah.,阿里在学校外等候。,luar 表外部,介词;方位
+ms-0501,ms,ms-07,di depan,在……前面,Bas berhenti di depan stesen.,巴士在车站前停下。,depan 表前方,介词;方位
+ms-0502,ms,ms-07,di belakang,在……后面,Taman itu di belakang rumah.,公园在屋后。,belakang 表后方,介词;方位
+ms-0503,ms,ms-07,di sebelah,在……旁边,Klinik di sebelah bank.,诊所在银行旁边。,sebelah 表旁边,介词;方位
+ms-0504,ms,ms-07,di tepi,在……边上,Mereka berdiri di tepi jalan.,他们站在路边。,tepi 表边缘,介词;方位
+ms-0505,ms,ms-07,di tengah,在……中间,Meja itu di tengah bilik.,那张桌子在房间中间。,tengah 表中央,介词;方位
+ms-0506,ms,ms-07,di antara,在……之间,Masjid itu di antara dua buah bangunan.,清真寺在两栋建筑之间。,具体空间位置；后接两个对象或复数,介词;方位
+ms-0507,ms,ms-07,hadapan,前方,Ali berdiri di hadapan sekolah.,阿里站在学校前面。,量词 通常不用量词,名词;方位
+ms-0508,ms,ms-07,hujung,尽头；末端,Pejabat pos itu di hujung jalan.,邮局在路的尽头。,量词 通常不用量词,名词;方位
+ms-0509,ms,ms-07,stesen,车站,Stesen itu berhampiran rumah saya.,车站在我家附近。,量词 buah,名词;城市;英语借词
+ms-0510,ms,ms-07,pejabat pos,邮局,Kami mengepos surat di pejabat pos.,我们在邮局寄信。,量词 buah,名词;城市
+ms-0511,ms,ms-07,pasar,市场,Ibu membeli sayur di pasar.,母亲在市场买菜。,量词 buah,名词;城市
+ms-0512,ms,ms-07,masjid,清真寺,Masjid itu di tengah bandar.,那座清真寺在市中心。,量词 buah,名词;城市;阿拉伯语借词
+ms-0513,ms,ms-07,taman,公园,Kami bersenam di taman setiap pagi.,我们每天早晨在公园锻炼。,量词 座用 buah,名词;城市
+ms-0514,ms,ms-07,jalan,道路,Jalan ini ke stesen.,这条路通往车站。,量词 条用 batang,名词;城市
+ms-0515,ms,ms-07,jambatan,桥,Jambatan itu panjang.,那座桥很长。,量词 座用 buah,名词;城市
+ms-0516,ms,ms-07,lapangan terbang,机场,Bas ini ke lapangan terbang.,这辆巴士开往机场。,量词 座用 buah,名词;城市
+ms-0517,ms,ms-07,perpustakaan,图书馆,Siti membaca di perpustakaan.,西蒂在图书馆读书。,量词 座用 buah,名词;城市
+ms-0518,ms,ms-07,balai polis,警察局,Balai polis itu di sebelah bank.,警察局在银行旁边。,量词 座用 buah,名词;城市
+ms-0519,ms,ms-07,bandar,城市,Bandar Melaka ada banyak kedai.,马六甲城有许多商店。,量词 座用 buah,名词;城市
+ms-0520,ms,ms-07,kampung,村庄,Kampung saya berhampiran Johor Bahru.,我的村庄在新山附近。,量词 座用 buah,名词;城市
+ms-0521,ms,ms-07,bangunan,建筑物,Bangunan itu tinggi dan putih.,那栋建筑很高，是白色的。,量词 栋用 buah,名词;城市
+ms-0522,ms,ms-07,kedai buku,书店,Saya membeli buku di kedai buku itu.,我在那家书店买书。,量词 家用 buah,名词;城市
+ms-0523,ms,ms-07,kedai makan,小餐馆,Kami makan di kedai makan berhampiran stesen.,我们在车站附近的小餐馆吃饭。,量词 家用 buah,名词;城市
+ms-0524,ms,ms-07,pasar raya,超市,Pasar raya itu menjual susu dan roti.,那家超市卖牛奶和面包。,量词 家用 buah,名词;城市
+ms-0525,ms,ms-07,pusat bandar,市中心,Pejabat saya di pusat bandar.,我的办公室在市中心。,量词 个用 buah,名词;城市
+ms-0526,ms,ms-07,hentian bas,巴士停靠站,Ali menunggu di hentian bas.,阿里在巴士站等候。,量词 个用 buah,名词;城市
+ms-0527,ms,ms-07,pelabuhan,港口,Pelabuhan itu di Pulau Pinang.,那个港口在槟城。,量词 座用 buah,名词;城市
+ms-0528,ms,ms-07,stadium,体育场,Kami bermain bola sepak di stadium.,我们在体育场踢足球。,量词 座用 buah,名词;城市;英语借词
+ms-0529,ms,ms-07,kereta api,火车,Saya ke Kuala Lumpur dengan kereta api.,我乘火车去吉隆坡。,量词 列用 buah,名词;交通
+ms-0530,ms,ms-07,motosikal,摩托车,Motosikal itu di depan rumah.,那辆摩托车在屋前。,量词 辆用 buah,名词;交通;英语借词
+ms-0531,ms,ms-07,kapal terbang,飞机,Kapal terbang itu besar.,那架飞机很大。,量词 架用 buah,名词;交通
+ms-0532,ms,ms-07,feri,渡轮,Kami ke Pulau Pinang dengan feri.,我们坐渡轮去槟城。,量词 艘用 buah,名词;交通;英语借词
+ms-0533,ms,ms-07,lori,货车,Lori itu membawa beras ke kedai.,那辆货车把米运到商店。,量词 辆用 buah,名词;交通;英语借词
+ms-0534,ms,ms-07,van,厢式车,Van sekolah itu sudah sampai.,学校的厢式车已经到了。,量词 辆用 buah,名词;交通;英语借词
+ms-0535,ms,ms-07,beca,三轮车,Saya melihat beca di Melaka.,我在马六甲看见三轮车。,量词 辆用 buah,名词;交通;闽南语借词
+ms-0536,ms,ms-07,bot,小船,Bot itu di sebelah jambatan.,那条小船在桥旁边。,量词 艘用 buah,名词;交通;英语借词
+ms-0537,ms,ms-07,Jalan terus.,一直走。,Jalan terus.,一直走。,祈使表达；jalan 作不及物动词，terus 表继续,动词;问路;phrase
+ms-0538,ms,ms-07,Belok kiri.,向左转。,Belok kiri.,向左转。,不及物指路动词 belok；左为 kiri,动词;问路;phrase
+ms-0539,ms,ms-07,Belok kanan.,向右转。,Belok kanan.,向右转。,不及物指路动词 belok；右为 kanan,动词;问路;phrase
+ms-0540,ms,ms-07,Bagaimana hendak ke stesen?,怎样去车站？,Bagaimana hendak ke stesen?,怎样去车站？,完整问路句，hendak 表意图,动词;问路;phrase
+ms-0541,ms,ms-07,Di mana perpustakaan?,图书馆在哪里？,Di mana perpustakaan?,图书馆在哪里？,地点疑问句，di mana 分写,动词;问路;phrase
+ms-0542,ms,ms-07,Ikut jalan ini.,沿这条路走。,Ikut jalan ini.,沿这条路走。,及物祈使动词 ikut；常见宾语 jalan,动词;问路;phrase
+ms-0543,ms,ms-07,Berhenti di sini.,在这里停下。,Berhenti di sini.,在这里停下。,ber- + henti；不及物；祈使也保留 ber-,动词;问路;phrase
+ms-0544,ms,ms-07,Berjalan ke sana.,走到那里去。,Berjalan ke sana.,走到那里去。,ber- + jalan；不及物,动词;问路;phrase
+ms-0545,ms,ms-07,kiri,左边,Bank itu di sebelah kiri.,银行在左边。,量词 通常不用量词,名词;城市;补充
+ms-0546,ms,ms-07,kanan,右边,Stesen itu di sebelah kanan.,车站在右边。,量词 通常不用量词,名词;城市;补充
+ms-0547,ms,ms-07,utara,北方,Sekolah itu di utara bandar.,学校在城市北部。,量词 通常不用量词,名词;城市;补充
+ms-0548,ms,ms-07,selatan,南方,Kampung itu di selatan Melaka.,那个村庄在马六甲南边。,量词 通常不用量词,名词;城市;补充
+ms-0549,ms,ms-07,timur,东方,Masjid itu di timur kampung.,清真寺在村庄东边。,量词 通常不用量词,名词;城市;补充
+ms-0550,ms,ms-07,barat,西方,Pelabuhan itu di barat bandar.,港口在城市西边。,量词 通常不用量词,名词;城市;补充
+ms-0551,ms,ms-07,simpang,路口；岔路,Ali menunggu di simpang itu.,阿里在那个路口等候。,量词 个用 buah,名词;城市;补充
+ms-0552,ms,ms-07,lampu isyarat,交通信号灯,Bas berhenti di lampu isyarat.,巴士在信号灯前停下。,量词 组用 set,名词;城市;补充
+ms-0553,ms,ms-07,peta,地图,Saya melihat peta bandar Melaka.,我查看马六甲城的地图。,量词 张用 helai,名词;城市;补充
+ms-0554,ms,ms-07,laluan,路线；通道,Laluan ini untuk basikal.,这条通道供自行车使用。,通常不用专用量词，可写 satu laluan（一条通道）,名词;城市;补充
+ms-0555,ms,ms-07,sikap,态度,Sikap Ali terhadap kawan sangat baik.,阿里对朋友的态度很好。,量词 通常不用量词,名词;城市;补充
+ms-0556,ms,ms-07,dekat,近的,Rumah saya dekat dengan sekolah.,我家离学校近。,形容词，后置；dekat dengan,形容词;城市;补充
+ms-0557,ms,ms-07,jauh,远的,Stesen itu jauh dari kampung.,车站离村庄远。,形容词，后置；jauh dari,形容词;城市;补充
+ms-0558,ms,ms-07,berhampiran,靠近,Rumah saya berhampiran stesen.,我家靠近车站。,ber- + hampir + -an；词根 hampir；本课按整词学，不开放 -an；不及物,动词;城市;补充
+ms-0559,ms,ms-07,masuk,进入,Ali masuk ke dalam kedai.,阿里走进商店。,不及物；地点由 ke 引出,动词;城市;补充
+ms-0560,ms,ms-07,keluar,出去；出来,Siti keluar dari perpustakaan.,西蒂从图书馆出来。,不及物；地点由 dari 引出,动词;城市;补充
+ms-0561,ms,ms-08,dapat,能够；得以,Esok saya akan dapat bertemu dengan guru.,明天我将能见到老师。,表示有条件实现，放在动词前,助动词;情态
+ms-0562,ms,ms-08,mesti,必须；一定要,Kita mesti mencuci tangan sebelum makan.,我们吃饭前必须洗手。,义务或要求，后接动词,助动词;情态
+ms-0563,ms,ms-08,harus,应该；应当,Kita harus membantu keluarga.,我们应该帮助家人。,本课表示应当，后接动词,助动词;情态
+ms-0564,ms,ms-08,perlu,需要,Saya perlu membeli roti.,我需要买面包。,必要性，后接动词或名词,助动词;情态
+ms-0565,ms,ms-08,mahu,想要,Saya mahu minum air limau.,我想喝青柠汁。,意愿；标准书面形式,助动词;情态
+ms-0566,ms,ms-08,hendak,想要；打算,Kami hendak makan di restoran.,我们打算在餐馆吃饭。,意愿或打算；标准书面形式,助动词;情态
+ms-0567,ms,ms-08,ingin,希望；想要,Saya ingin belajar memasak rendang.,我想学做仁当。,较正式的意愿表达,助动词;情态
+ms-0568,ms,ms-08,pandai,擅长；会,Siti pandai memasak nasi lemak.,西蒂擅长做椰浆饭。,本课作情态性谓语，后接动词；也可作形容词,助动词;情态
+ms-0569,ms,ms-08,sanggup,愿意；肯,Ali sanggup membantu saya.,阿里愿意帮助我。,表示愿意承担某事,助动词;情态
+ms-0570,ms,ms-08,mampu,有能力,Kami mampu membayar bil ini.,我们有能力支付这张账单。,能力或财力，后接动词,助动词;情态
+ms-0571,ms,ms-08,patut,应该,Kita patut menunggu di luar.,我们应该在外面等候。,表示合适的做法,助动词;情态;补充
+ms-0572,ms,ms-08,enggan,不愿意,Adik enggan minum susu itu.,弟弟不愿喝那杯牛奶。,否定意愿，不另加 tidak,助动词;情态;补充
+ms-0573,ms,ms-08,tolong,请帮忙,Tolong buka pintu itu.,请帮忙打开那扇门。,请求时后接动词原形；作及物动词「帮助」时常见宾语 saya,动词;请求与礼貌
+ms-0574,ms,ms-08,minta,要；请求,Saya minta segelas air.,我要一杯水。,及物；常见宾语 air、bantuan；本课作礼貌请求,动词;请求与礼貌
+ms-0575,ms,ms-08,tolong bantu saya,请帮帮我,"Ali, tolong bantu saya.",阿里，请帮帮我。,请求表达；及物动词 bantu 的宾语 saya,动词;请求与礼貌;phrase
+ms-0576,ms,ms-08,minta air,要水,Saya minta air panas.,我要热水。,及物动词 minta；常见宾语 air,动词;请求与礼貌;phrase
+ms-0577,ms,ms-08,maafkan saya,请原谅我,"Siti, maafkan saya.",西蒂，请原谅我。,固定礼貌表达；maaf + -kan；宾语 saya；本课按整词学，-kan 在 ms-09 系统学,动词;请求与礼貌;phrase
+ms-0578,ms,ms-08,sila,请,Sila duduk di sini.,请坐这里。,邀请或礼貌指示，后接动词,语气词;请求与礼貌
+ms-0579,ms,ms-08,jangan,不要；禁止,Jangan masuk ke dapur.,不要进入厨房。,禁止词，放在动词前,语气词;请求与礼貌
+ms-0580,ms,ms-08,silalah,请吧,Silalah duduk di sini.,请坐这里吧。,sila + -lah，连写；本课按整词记,语气词;请求与礼貌
+ms-0581,ms,ms-08,sila tunggu sebentar,请稍等,"Ali, sila tunggu sebentar.",阿里，请稍等。,sila + 动词 tunggu；完整请求表达,语气词;请求与礼貌;phrase
+ms-0582,ms,ms-08,jangan masuk,请勿进入,"Adik, jangan masuk.",弟弟，不要进去。,jangan + 动词 masuk；禁止表达,语气词;请求与礼貌;phrase
+ms-0583,ms,ms-08,makanan,食物,Makanan di restoran ini sedap.,这家餐馆的食物很好吃。,通常不用专用量词；按份可用 pinggan 或 bungkus,名词;食物与需求
+ms-0584,ms,ms-08,minuman,饮料,Minuman ini untuk Ali.,这杯饮料给阿里。,量词 杯用 gelas,名词;食物与需求
+ms-0585,ms,ms-08,sarapan,早餐,Sarapan saya roti dan telur.,我的早餐是面包和鸡蛋。,量词 set（套餐）,名词;食物与需求
+ms-0586,ms,ms-08,santan,椰浆,Ibu memasak nasi dengan santan.,母亲用椰浆煮饭。,量词 杯用 cawan,名词;食物与需求
+ms-0587,ms,ms-08,tepung,面粉,Tepung itu untuk membuat roti canai.,那些面粉用来做印度煎饼。,量词 袋用 kampit,名词;食物与需求
+ms-0588,ms,ms-08,mentega,黄油,Saya mahu roti dengan mentega.,我想要涂黄油的面包。,量词 块用 buku,名词;食物与需求;葡语借词
+ms-0589,ms,ms-08,roti canai,印度煎饼,Saya memesan dua keping roti canai.,我点两张印度煎饼。,量词 张用 keping,名词;食物与需求
+ms-0590,ms,ms-08,nasi lemak,椰浆饭,Siti membeli nasi lemak untuk sarapan.,西蒂买椰浆饭当早餐。,量词 份用 bungkus 或 pinggan,名词;食物与需求
+ms-0591,ms,ms-08,satay,沙爹串,Kami makan satay di Melaka.,我们在马六甲吃沙爹。,量词 串用 cucuk,名词;食物与需求
+ms-0592,ms,ms-08,rendang,仁当炖肉,Rendang ini sangat sedap.,这份仁当很好吃。,量词 份用 pinggan,名词;食物与需求
+ms-0593,ms,ms-08,kari,咖喱,Ibu memasak kari ayam.,母亲煮咖喱鸡。,量词 碗用 mangkuk,名词;食物与需求
+ms-0594,ms,ms-08,sup,汤,Saya minta semangkuk sup panas.,我要一碗热汤。,量词 碗用 mangkuk,名词;食物与需求;英语借词
+ms-0595,ms,ms-08,jus,果汁,Jus epal ini untuk adik.,这杯苹果汁给弟弟。,量词 杯用 gelas,名词;食物与需求;英语借词
+ms-0596,ms,ms-08,ais,冰,Saya mahu teh tanpa ais.,我要不加冰的茶。,量词 块用 ketul,名词;食物与需求;英语借词
+ms-0597,ms,ms-08,menu,菜单,Menu itu di atas meja.,菜单在桌上。,量词 naskhah（纸本）；也可直接写 satu menu,名词;食物与需求;英语借词
+ms-0598,ms,ms-08,harga,价格,Harga roti ini tiga ringgit.,这种面包的价格是三令吉。,量词 通常不用量词，金额用 ringgit,名词;食物与需求
+ms-0599,ms,ms-08,bil,账单,Saya membayar bil di restoran.,我在餐馆付账。,量词 张用 helai,名词;食物与需求;英语借词
+ms-0600,ms,ms-08,pesanan,订单；点单,Pesanan kami dua pinggan nasi lemak.,我们点的是两盘椰浆饭。,通常不用专用量词，可写 satu pesanan（一份订单）,名词;食物与需求
+ms-0601,ms,ms-08,bantuan,帮助,Kami perlu bantuan guru.,我们需要老师的帮助。,量词 通常不用量词,名词;食物与需求
+ms-0602,ms,ms-08,kebenaran,许可,Saya meminta kebenaran untuk keluar.,我请求外出的许可。,量词 通常不用量词,名词;食物与需求
+ms-0603,ms,ms-08,meminta,请求,Ali meminta bantuan guru.,阿里请求老师帮助。,meN- + minta → meminta，me-；m 保留；词根 minta；及物；常见宾语 bantuan、kebenaran,动词;学习与工作
+ms-0604,ms,ms-08,membantu,帮助,Saya membantu ibu di dapur.,我在厨房帮母亲。,meN- + bantu → membantu，mem-；b 保留；词根 bantu；及物；常见宾语 ibu、kawan,动词;学习与工作
+ms-0605,ms,ms-08,membayar,支付,Bapa membayar bil dengan wang itu.,父亲用那些钱付账。,meN- + bayar → membayar，mem-；b 保留；词根 bayar；及物；常见宾语 bil、harga,动词;学习与工作
+ms-0606,ms,ms-08,memesan,点餐；订购,Kami memesan makanan di restoran.,我们在餐馆点餐。,meN- + pesan → memesan，mem-；p 脱落；词根 pesan；及物；常见宾语 nasi、minuman,动词;学习与工作
+ms-0607,ms,ms-08,menerima,收到；接受,Siti menerima surat daripada Ali.,西蒂收到阿里的信。,meN- + terima → menerima，men-；t 脱落；词根 terima；及物；常见宾语 surat、bantuan,动词;学习与工作
+ms-0608,ms,ms-08,membuka,打开,Ali membuka tingkap bilik.,阿里打开房间的窗户。,meN- + buka → membuka，mem-；b 保留；词根 buka；及物；常见宾语 pintu、tingkap,动词;学习与工作
+ms-0609,ms,ms-08,menutup,关上,Ibu menutup pintu dapur.,母亲关上厨房的门。,meN- + tutup → menutup，men-；t 脱落；词根 tutup；及物；常见宾语 pintu、kedai,动词;学习与工作
+ms-0610,ms,ms-08,meminjam,借入,Saya meminjam buku daripada Siti.,我向西蒂借书。,meN- + pinjam → meminjam，mem-；p 脱落；词根 pinjam；及物；常见宾语 buku、pen,动词;学习与工作
+ms-0611,ms,ms-08,menggoreng,油炸；炒,Bapa menggoreng ikan di dapur.,父亲在厨房煎鱼。,meN- + goreng → menggoreng，meng-；g 保留；词根 goreng；及物；常见宾语 ikan、telur,动词;学习与工作
+ms-0612,ms,ms-08,merebus,用水煮,Saya merebus telur untuk sarapan.,我煮鸡蛋当早餐。,meN- + rebus → merebus，me-；r 保留；词根 rebus；及物；常见宾语 telur、mi,动词;学习与工作
+ms-0613,ms,ms-08,memotong,切；剪,Ibu memotong sayur dengan pisau.,母亲用刀切菜。,meN- + potong → memotong，mem-；p 脱落；词根 potong；及物；常见宾语 sayur、kain,动词;学习与工作
+ms-0614,ms,ms-08,mencampur,混合,Siti mencampur tepung dengan air.,西蒂把面粉和水混合。,meN- + campur → mencampur，men-；c 保留；词根 campur；及物；常见宾语 tepung、air,动词;学习与工作
+ms-0615,ms,ms-08,menambah,添加,Saya menambah garam ke dalam sup.,我往汤里加盐。,meN- + tambah → menambah，men-；t 脱落；词根 tambah；及物；常见宾语 air、garam,动词;学习与工作
+ms-0616,ms,ms-08,memilih,挑选,Raju memilih makanan pada menu.,拉朱从菜单上挑选食物。,meN- + pilih → memilih，mem-；p 脱落；词根 pilih；及物；常见宾语 makanan、buku,动词;学习与工作
+ms-0617,ms,ms-08,mencuba,尝试,Kami mencuba resipi baru itu.,我们尝试那个新食谱。,meN- + cuba → mencuba，men-；c 保留；词根 cuba；及物；常见宾语 resipi、makanan,动词;学习与工作
+ms-0618,ms,ms-08,memegang,拿着；握着,Adik memegang gelas dengan dua tangan.,弟弟用两只手握着玻璃杯。,meN- + pegang → memegang，mem-；p 脱落；词根 pegang；及物；常见宾语 gelas、beg,动词;学习与工作
+ms-0619,ms,ms-08,menjemput,邀请,Siti menjemput kami ke rumahnya.,西蒂邀请我们去她家。,meN- + jemput → menjemput，men-；j 保留；词根 jemput；及物；常见宾语 kawan、guru,动词;学习与工作
+ms-0620,ms,ms-08,menghidang,端上；摆出食物,Ibu menghidang nasi dan kari.,母亲端上米饭和咖喱。,meN- + hidang → menghidang，meng-；h 保留；词根 hidang；及物；常见宾语 nasi、makanan,动词;学习与工作
+ms-0621,ms,ms-08,menolak,拒绝,Ali tidak menolak bantuan kami.,阿里没有拒绝我们的帮助。,meN- + tolak → menolak，men-；t 脱落；词根 tolak；及物；常见宾语 bantuan、pesanan,动词;学习与工作
+ms-0622,ms,ms-08,mengangkat,举起；搬起,Kami mengangkat meja bersama.,我们一起搬桌子。,meN- + angkat → mengangkat，meng-；元音 a 保留；词根 angkat；及物；常见宾语 meja、beg,动词;学习与工作
+ms-0623,ms,ms-08,Tolong tutup pintu.,请帮忙关门。,Tolong tutup pintu.,请帮忙关门。,及物请求动词 tutup；宾语 pintu；祈使中用词根,动词;请求与计划;phrase
+ms-0624,ms,ms-08,Silalah duduk.,请坐吧。,Silalah duduk.,请坐吧。,sila + -lah；duduk 不及物,动词;请求与计划;phrase
+ms-0625,ms,ms-08,Saya belum boleh keluar.,我还不能出去。,Saya belum boleh keluar.,我还不能出去。,belum 在 boleh 前；keluar 不及物,动词;请求与计划;phrase
+ms-0626,ms,ms-08,Kita mesti datang awal.,我们必须早到。,Kita mesti datang awal.,我们必须早到。,mesti 在动作前；datang 不及物,动词;请求与计划;phrase
+ms-0627,ms,ms-08,Saya ingin memesan minuman.,我想点饮料。,Saya ingin memesan minuman.,我想点饮料。,meN- + pesan → memesan，p 脱落；宾语 minuman,动词;请求与计划;phrase
+ms-0628,ms,ms-08,ringgit,令吉,Bil ini dua puluh ringgit.,这张账单是二十令吉。,量词 货币单位，本身作量词,名词;日常需求;补充
+ms-0629,ms,ms-08,sen,仙；分币,Harga kuih ini lima puluh sen.,这块糕点的价格是五十仙。,量词 货币单位，本身作量词,名词;日常需求;英语借词;补充
+ms-0630,ms,ms-08,pisau,刀,Pisau itu di atas meja dapur.,刀在厨房桌上。,量词 把用 bilah,名词;日常需求;补充
+ms-0631,ms,ms-08,tisu,纸巾,Saya perlu tisu untuk tangan.,我需要纸巾擦手。,量词 张用 helai,名词;日常需求;英语借词;补充
+ms-0632,ms,ms-08,duduk,坐,Sila duduk di sebelah saya.,请坐在我旁边。,不及物；地点由 di 引出,动词;日常需求;补充
+ms-0633,ms,ms-08,buka,打开,Tolong buka tingkap itu.,请帮忙打开那扇窗。,及物；常见宾语 pintu、tingkap；祈使可用词根,动词;日常需求;补充
+ms-0634,ms,ms-08,tutup,关上,Sila tutup pintu itu.,请关上那扇门。,及物；常见宾语 pintu、kedai；祈使用词根,动词;日常需求;补充
+ms-0635,ms,ms-08,sebentar,一会儿,Sila tunggu sebentar di sini.,请在这里稍等。,表示短时间,副词;时间;补充
+ms-0636,ms,ms-08,awal,早,Saya datang awal hari ini.,我今天来得早。,本课作时间副词,副词;时间;补充
+ms-0637,ms,ms-08,segelas,一杯,Saya minta segelas air panas.,我要一杯热水。,se- + gelas，本课按完整数量表达记，不开放 se- 推导,量词;食物;补充
+ms-0638,ms,ms-08,semangkuk,一碗,Ibu menghidang semangkuk sup.,母亲端上一碗汤。,se- + mangkuk，本课按完整数量表达记，不开放 se- 推导,量词;食物;补充
+ms-0639,ms,ms-08,lapar,饿的,Saya lapar dan mahu makan.,我饿了，想吃饭。,形容词，后置,形容词;食物;补充
+ms-0640,ms,ms-08,dahaga,渴的,Ali dahaga dan perlu air.,阿里渴了，需要水。,形容词，后置,形容词;食物;补充
