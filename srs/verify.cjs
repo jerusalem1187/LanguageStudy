@@ -177,8 +177,8 @@ test('来源 CSV 与两个内嵌 JSON 完整一致；只有一个可执行脚本
   });
   // 内嵌数据按追加顺序保留旧行；来源 CSV 各自按语言排列。
   for (const lang of api.LANGS) assert.deepEqual(rows.filter(row=>row.lang===lang),initialRows.filter(row=>row.lang===lang));
-  assert.equal(rows.length,3616+initialRows.filter(row=>row.lang==='uz').length);
-  assert.equal(api.expandCards(rows).length,2895+s1Expanded+r1Expanded+s2Expanded+r2Expanded+s3Expanded+r3Expanded+s4Expanded+r4Expanded+r5Expanded+r6Expanded+api.expandCards(rows.filter(row=>row.lang==='uz')).length);
+  assert.equal(rows.length,3616+initialRows.filter(row=>['uz','kk'].includes(row.lang)).length);
+  assert.equal(api.expandCards(rows).length,2895+s1Expanded+r1Expanded+s2Expanded+r2Expanded+s3Expanded+r3Expanded+s4Expanded+r4Expanded+r5Expanded+r6Expanded+api.expandCards(rows.filter(row=>['uz','kk'].includes(row.lang))).length);
   assert.equal(rows.filter(r=>r.lang==='es').length,1993);
   assert.equal(rows.filter(r=>r.lang==='ru'&&r.tags.split(';').includes('letter')).length,33);
   assert.equal(rows.filter(r=>r.lang==='ru'&&!r.tags.split(';').includes('letter')).length,1590);
@@ -275,7 +275,7 @@ test('拼写 NFC、重音、变音符、大小写、空格的三档判定',() =>
   ]) assert.equal(api.spellingResult(input,target,lang).grade,grade,input);
 });
 test('旧课拼写卡例句可挖空；边界不会误遮单词内部，俄语重音不泄露答案',() => {
-  for(const row of initialRows.filter(r=>r.lang!=='uz' && !S1_LESSONS.includes(r.lesson) && !S2_LESSONS.includes(r.lesson) && !S3_LESSONS.includes(r.lesson) && !S4_LESSONS.includes(r.lesson) && !R1_LESSONS.includes(r.lesson) && !R2_LESSONS.includes(r.lesson) && !R3_LESSONS.includes(r.lesson) && !R4_LESSONS.includes(r.lesson) && !R5_LESSONS.includes(r.lesson) && !R6_LESSONS.includes(r.lesson) && !api.recognitionOnly(r))) assert(!api.clozeExample(row).includes('此例句没有'),row.id+' '+row.front);
+  for(const row of initialRows.filter(r=>!['uz','kk'].includes(r.lang) && !S1_LESSONS.includes(r.lesson) && !S2_LESSONS.includes(r.lesson) && !S3_LESSONS.includes(r.lesson) && !S4_LESSONS.includes(r.lesson) && !R1_LESSONS.includes(r.lesson) && !R2_LESSONS.includes(r.lesson) && !R3_LESSONS.includes(r.lesson) && !R4_LESSONS.includes(r.lesson) && !R5_LESSONS.includes(r.lesson) && !R6_LESSONS.includes(r.lesson) && !api.recognitionOnly(r))) assert(!api.clozeExample(row).includes('此例句没有'),row.id+' '+row.front);
   assert.equal(api.clozeExample({front:'es',lang:'es',example:'Es estudiante; es bueno.'}),'____ estudiante; ____ bueno.');
   assert.equal(api.clozeExample({front:'en',lang:'es',example:'El estudiante está en casa.'}),'El estudiante está ____ casa.');
   assert.equal(api.clozeExample({front:'телефо́н',lang:'ru',example:'Э́то телефо́н.'}),'Э́то ____.');
@@ -381,7 +381,7 @@ test('真实嵌入进度能通过 validateState；全部进度与日志 id 都�
   assert.equal(JSON.stringify(initialState),before);
 });
 test('课程注册表都有词条、周次、日期、目标、写作任务和 10 题；阅读题属于本课练习',() => {
-  assert.deepEqual(Object.keys(api.LESSONS),['es-01','es-02','es-03','es-04','es-05','es-06','es-07','es-08','es-09','es-10','es-11','es-12','es-13','es-14','es-15','es-16','es-17','es-18','es-19','es-20','es-21','es-22','es-23','es-24','es-25','ru-01','ru-02','ru-03','ru-04','ru-05','ru-06','ru-07','ru-08','ru-09','ru-10','ru-11','ru-12','ru-13','ru-14','ru-15','ru-16','ru-17','ru-18','ru-19','ru-20','ru-21','ru-22','ru-23','ru-24','ru-25','ru-26','ru-27','ru-28','ru-29','ru-30','ru-31','ru-32','ru-33','ru-34','uz-01','uz-02','uz-03','uz-04','uz-05','uz-06','uz-07','uz-08','uz-09','uz-10']);
+  assert.deepEqual(Object.keys(api.LESSONS),['es-01','es-02','es-03','es-04','es-05','es-06','es-07','es-08','es-09','es-10','es-11','es-12','es-13','es-14','es-15','es-16','es-17','es-18','es-19','es-20','es-21','es-22','es-23','es-24','es-25','ru-01','ru-02','ru-03','ru-04','ru-05','ru-06','ru-07','ru-08','ru-09','ru-10','ru-11','ru-12','ru-13','ru-14','ru-15','ru-16','ru-17','ru-18','ru-19','ru-20','ru-21','ru-22','ru-23','ru-24','ru-25','ru-26','ru-27','ru-28','ru-29','ru-30','ru-31','ru-32','ru-33','ru-34','uz-01','uz-02','uz-03','uz-04','uz-05','uz-06','uz-07','uz-08','uz-09','uz-10','kk-01','kk-02','kk-03','kk-04','kk-05']);
   for (const [id,lesson] of Object.entries(api.LESSONS)) {
     assert(initialRows.some(row=>row.lesson===id),id);
     assert.equal(lesson.lang,id.slice(0,2));assert.equal(lesson.week,Number(id.slice(3)));
@@ -1684,12 +1684,12 @@ test('任务 C 只追加 cards-data 与 ru.csv；已有记录顺序不变',() =>
   // 任务 E1 的西语第 9–12 周同样只追加在最后。
   assert.deepEqual(initialRows.slice(initialRows.findIndex(row=>row.id==='es-0714'),initialRows.findIndex(row=>row.id==='ru-0343')).map(row=>row.id),Array.from({length:280},(_,i)=>'es-'+String(714+i).padStart(4,'0')));
 });
-test('各课程分语言展示；阅读中文默认折叠；690 道练习按题型反馈且不写入进度',() => {
+test('各课程分语言展示；阅读中文默认折叠；740 道练习按题型反馈且不写入进度',() => {
   const {api:a,document}=createAPI(true);a.initialize();
   const before=plain(a.getData().state);
   for (const [id,lesson] of Object.entries(a.LESSONS)) {
     a.openLesson(id);
-    assert.equal(document.querySelectorAll('[data-lesson]').length,69);
+    assert.equal(document.querySelectorAll('[data-lesson]').length,74);
     const page=document.getElementById('content').innerHTML;
     assert(page.indexOf('西语课程')<page.indexOf('俄语课程'));
     assert(page.includes(lesson.goal));assert(page.includes(lesson.writingTask));
@@ -1736,7 +1736,7 @@ test('letter / phrase 标签只生成识别卡；其他词条仍有两个方向'
     const expected=row.tags.split(';').some(tag=>['letter','phrase'].includes(tag))?['r']:['r','p'];
     assert.deepEqual(plain(api.expandCards([row]).map(card=>card.direction)),expected,row.id);
   }
-  assert.equal(initialRows.filter(row=>row.tags.split(';').includes('phrase')).length,200+s3Rows.filter(row=>row.tags.split(';').includes('phrase')).length+s4Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r1Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r2Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r3Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r4Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r5Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r6Rows.filter(row=>row.tags.split(';').includes('phrase')).length+initialRows.filter(row=>row.lang==='uz'&&row.tags.split(';').includes('phrase')).length);
+  assert.equal(initialRows.filter(row=>row.tags.split(';').includes('phrase')).length,200+s3Rows.filter(row=>row.tags.split(';').includes('phrase')).length+s4Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r1Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r2Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r3Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r4Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r5Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r6Rows.filter(row=>row.tags.split(';').includes('phrase')).length+initialRows.filter(row=>['uz','kk'].includes(row.lang)&&row.tags.split(';').includes('phrase')).length);
   // 标签规则也适用于以后导入的西语词，不靠课次或语言写死。
   for (const tag of ['phrase','letter']) assert.deepEqual(plain(api.expandCards([{...initialRows[0],tags:'extra;'+tag}]).map(card=>card.direction)),['r']);
 });
@@ -3766,7 +3766,7 @@ test('任务 M0：第三种语言注册与旧进度兼容',() => {
   const page=document.getElementById('content').innerHTML;
   assert(page.indexOf('西语课程')<page.indexOf('俄语课程'));
   assert(page.indexOf('俄语课程')<page.indexOf('马来语课程'));
-  assert.equal(document.querySelectorAll('[data-lesson]').length,69);
+  assert.equal(document.querySelectorAll('[data-lesson]').length,74);
   assert.equal(document.querySelector('section[aria-label="马来语课程"]').querySelector('.course-picker').innerHTML,'');
   assert.equal(Object.values(a.LESSONS).filter(item=>item.lang==='ms').length,0);
   clickTab('readings');
@@ -3860,8 +3860,8 @@ test('U1：旧行位于乌兹别克语行之前；新 CSV 与内嵌行一致且 
     const raw=fs.readFileSync(path.join(__dirname,'cards',lang+'.csv'),'utf8');
     return n+(raw.trim()==='id,lang,lesson,front,back,example,example_zh,note,tags'?0:api.parseCSV(raw).length);
   },0);
-  assert.deepEqual(initialRows.slice(0,oldCount),initialRows.filter(row=>row.lang!=='uz'));
-  assert.deepEqual(initialRows.slice(oldCount),uzRows);
+  assert.deepEqual(initialRows.slice(0,oldCount),initialRows.filter(row=>!['uz','kk'].includes(row.lang)));
+  assert.deepEqual(initialRows.slice(oldCount,oldCount+uzRows.length),uzRows);
   assert.deepEqual(plain(api.parseCSV(fs.readFileSync(path.join(__dirname,'cards','uz.csv'),'utf8'))),uzRows);
   assert.deepEqual(uzRows.map(row=>row.id),Array.from({length:uzRows.length},(_,i)=>'uz-'+String(i+1).padStart(4,'0')));
   assert.equal(new Set(uzRows.map(row=>row.front.toLocaleLowerCase().replace(/[’']/g,'ʻ'))).size,uzRows.length);
@@ -3939,10 +3939,10 @@ const uzRound2Ids=Array.from({length:5},(_,i)=>'uz-'+String(i+6).padStart(2,'0')
 const uzRound2Rows=uzRows.filter(row=>uzRound2Ids.includes(row.lesson));
 test('U2：五课在旧行后追加，id 连续，CSV 同步且 front 唯一',()=>{
   const priorUzCount=uzRows.filter(row=>Number(row.lesson.slice(3))<6).length;
-  const priorCount=initialRows.length-uzRound2Rows.length;
+  const priorCount=initialRows.findIndex(row=>row.lesson==='uz-06');
   const csvRows=plain(api.parseCSV(fs.readFileSync(path.join(__dirname,'cards','uz.csv'),'utf8')));
-  assert.deepEqual(initialRows.slice(0,priorCount),initialRows.filter(row=>!uzRound2Ids.includes(row.lesson)));
-  assert.deepEqual(initialRows.slice(priorCount),uzRound2Rows);
+  assert.deepEqual(initialRows.slice(0,priorCount),initialRows.filter(row=>row.lang!=='kk'&&!uzRound2Ids.includes(row.lesson)));
+  assert.deepEqual(initialRows.slice(priorCount,priorCount+uzRound2Rows.length),uzRound2Rows);
   assert.deepEqual(csvRows.slice(0,priorUzCount),uzRows.slice(0,priorUzCount),'旧 uz 行按原顺序逐条一致');
   assert.deepEqual(csvRows.slice(priorUzCount),uzRound2Rows);
   assert.deepEqual(uzRows.map(row=>row.id),Array.from({length:uzRows.length},(_,i)=>'uz-'+String(i+1).padStart(4,'0')));
@@ -4000,6 +4000,127 @@ test('U2：非短语例句去掉词头后，同课框架最多重复三次',()=>
       const frame=row.example.toLocaleLowerCase().split(stem).join('□').replace(/\s+/g,' ').trim();
       const ids=frames.get(frame)||[];ids.push(row.id);frames.set(frame,ids);
       assert(ids.length<=3,id+' 例句框架：'+frame+'（'+ids.join('、')+'）');
+    }
+  }
+});
+
+const kkLessonIds=Array.from({length:5},(_,i)=>'kk-'+String(i+1).padStart(2,'0'));
+const kkRows=initialRows.filter(row=>row.lang==='kk');
+const kkNames=new Set(['асан','айгүл','ерлан','дана','алматы','астана','шымкент','бейжің','қытай']);
+const kkTokens=text=>String(text).toLocaleLowerCase().match(/[\p{L}]+(?:-[\p{L}]+)?/gu)||[];
+// Each stage only removes endings introduced by that lesson or earlier lessons.
+const kkSuffixes={
+  1:[],
+  2:'мын мін бын бін пын пін сың сің сыз сіз мыз міз быз біз пыз піз сыңдар сіңдер сыздар сіздер'.split(' '),
+  3:'лар лер дар дер тар тер ым ім м ың ің ң ыңыз іңіз ңыз ңіз ы і сы сі ымыз іміз мыз міз ларың лерің дарың дерің тарың терің лары лері дары дері тары тері да де та те'.split(' '),
+  4:'да де та те нда нде ға ге қа ке на не а е дан ден тан тен нан нен'.split(' '),
+  5:'амын емін ймын ймін ады еді йды йді асын есін аймын еймін айды ейді маймын меймін баймын беймін паймын пеймін майды мейді байды бейді пайды пейді ма ме ба бе па пе'.split(' ')
+};
+function kkKnownWords(week) {
+  const known=new Set(kkNames);
+  for(const row of kkRows.filter(row=>Number(row.lesson.slice(3))<=week&&!row.tags.split(';').includes('letter')))
+    for(const field of ['front','note']) for(const word of kkTokens(row[field])) known.add(word);
+  if(week>=1) known.add('бұл'); // first-lesson international word examples anticipate lesson 2.
+  if(week>=2) for(const word of 'ма ме ба бе па пе'.split(' ')) known.add(word);
+  if(week>=3) for(const word of 'менің сенің сіздің оның біздің үйде үстелде отбасымда бөлмеде'.split(' ')) known.add(word);
+  const suffixes=Array.from({length:week},(_,i)=>kkSuffixes[i+1]).flat().sort((a,b)=>b.length-a.length);
+  function allowed(word,depth=0) {
+    if(known.has(word)) return true;
+    if(depth>=3) return false;
+    return suffixes.some(ending=>word.endsWith(ending)&&word.length>ending.length+1&&allowed(word.slice(0,-ending.length),depth+1));
+  }
+  return allowed;
+}
+test('K1：旧行保持前缀，五课 CSV 与内嵌 JSON 同步且 id 连续',()=>{
+  const oldCsvRows=['es','ru','ms','uz'].map(lang=>{
+    const raw=fs.readFileSync(path.join(__dirname,'cards',lang+'.csv'),'utf8');
+    return raw.trim()==='id,lang,lesson,front,back,example,example_zh,note,tags'?[]:plain(api.parseCSV(raw));
+  });
+  const oldCount=oldCsvRows.reduce((n,part)=>n+part.length,0);
+  assert.equal(initialRows.length,oldCount+kkRows.length);
+  assert.deepEqual(initialRows.slice(0,oldCount),initialRows.filter(row=>row.lang!=='kk'));
+  for(const [i,lang] of ['es','ru','ms','uz'].entries())
+    assert.deepEqual(initialRows.slice(0,oldCount).filter(row=>row.lang===lang),oldCsvRows[i],lang+' 旧 CSV 行');
+  assert.deepEqual(initialRows.slice(oldCount),kkRows);
+  assert.deepEqual(plain(api.parseCSV(fs.readFileSync(path.join(__dirname,'cards/kk.csv'),'utf8'))),kkRows);
+  assert.deepEqual(kkRows.map(row=>row.id),Array.from({length:kkRows.length},(_,i)=>'kk-'+String(i+1).padStart(4,'0')));
+  assert.equal(new Set(kkRows.map(row=>row.front.toLocaleLowerCase().replace(/[’']/g,"'"))).size,kkRows.length);
+  for(const row of kkRows) {
+    assert(row.front&&row.back&&row.example&&row.example_zh,row.id);
+    assert.doesNotMatch(row.front+' '+row.example,/\u0301/,row.id+' 正字法不加重音');
+    assert.doesNotMatch((row.back+' '+row.example_zh+' '+row.note).replace(/一封信/g,''),/死|杀|绞|封|炸|翻车|战|马甲|病灶|尸|打回|实弹|作战|收割|坑|砍/,row.id);
+    assert.deepEqual(plain(api.expandCards([row]).map(card=>card.direction)),row.tags.split(';').some(tag=>['letter','phrase'].includes(tag))?['r']:['r','p'],row.id);
+  }
+});
+test('K1：字母、国际词与每课规模正确；讲解、阅读及练习齐全',()=>{
+  assert.deepEqual(kkLessonIds.map(id=>kkRows.filter(row=>row.lesson===id).length),[57,40,40,40,40]);
+  assert.deepEqual(kkLessonIds.map(id=>api.expandCards(kkRows.filter(row=>row.lesson===id)).length),[72,75,75,75,75]);
+  assert.deepEqual(kkRows.filter(row=>row.lesson==='kk-01'&&row.tags.split(';').includes('letter')).map(row=>row.front.split(' ')[0]),
+    'А Ә Б В Г Ғ Д Е Ё Ж З И Й К Қ Л М Н Ң О Ө П Р С Т У Ұ Ү Ф Х Һ Ц Ч Ш Щ Ъ Ы І Ь Э Ю Я'.split(' '));
+  assert.equal(kkRows.filter(row=>row.lesson==='kk-01'&&row.tags.split(';').includes('international')).length,15);
+  for(const row of kkRows.filter(row=>row.tags.split(';').includes('letter'))) {
+    assert.match(row.back,/读音提示/);assert.match(row.back,/俄语/);
+    assert(row.example.toLocaleLowerCase().includes(row.front.split(' ')[1]),row.id+' 字母例词');
+  }
+  assert(kkRows.some(row=>row.front==='І і'&&row.front.includes('\u0456')));
+  assert(kkRows.some(row=>row.front==='Һ һ'&&row.front.includes('\u04bb')));
+  for(const row of kkRows.filter(row=>row.lesson==='kk-01'&&row.tags.split(';').includes('international')))
+    assert.equal(row.example,'Бұл '+row.front+'.',row.id+' 国际词短句');
+  assert.equal(kkRows.filter(row=>row.lesson==='kk-01'&&row.tags.split(';').includes('letter')&&/[ӘҒҚҢӨҰҮҺІ]/.test(row.front)).length,9);
+  assert(api.LESSONS['kk-01'].exercises.filter(q=>/字母|特有|U\+0456|һ/.test(q.prompt)).length>=3);
+  for(const [i,id] of kkLessonIds.entries()) {
+    const item=api.LESSONS[id],entries=kkRows.filter(row=>row.lesson===id);
+    assert(item,id);assert.equal(item.lang,'kk');assert.equal(item.week,i+1);assert.equal(item.dates,'');assert(!('dailyTime' in item));
+    const prose=item.explanation(),han=(prose.match(/[\u4e00-\u9fff]/g)||[]).length;
+    assert.match(prose,/^<div class="lesson-text">/);assert.match(prose,/<h4>常见错误<\/h4>/);assert.match(prose,/<h4>写作任务<\/h4>/);
+    assert(han>=400&&han<=900,id+' 讲解汉字数 '+han);
+    assert.doesNotMatch(prose+' '+item.goal+item.writingTask,/死|杀|绞|封|炸|翻车|战|马甲|病灶|尸|打回|实弹|作战|收割|坑|砍/,id);
+    for(const row of entries.filter(row=>row.tags==='noun'&&i===2)) assert.match(row.note,/复数.*第三人称领属/,row.id);
+    for(const row of entries.filter(row=>row.tags==='verb'&&i===4)) assert.match(row.note,/第一人称.*第三人称/,row.id);
+    assert.equal(item.exercises.length,10,id);
+    if(i===0) assert.equal(item.reading,null);
+    else assert.equal(entries.filter(row=>row.tags.split(';').includes('phrase')).length,5,id);
+    const questions=item.reading?.questions||[];
+    if(i>=2) {
+      assert(item.reading.sentences.length>=6&&item.reading.sentences.length<=10,id);
+      assert(questions.length>=3&&questions.length<=4,id);
+      assert.deepEqual(item.exercises.slice(-questions.length),questions,id);
+      for(const sentence of item.reading.sentences)assert(sentence.text&&sentence.zh,id);
+    } else assert.equal(item.reading,null,id);
+    for(const q of item.exercises) {
+      assert(q.prompt&&q.answer,id);
+      if(q.options) assert(q.options.length===3&&q.options.filter(option=>option===q.answer).length===1,id+' '+q.prompt);
+      else assert(kkRows.some(row=>row.front===q.answer),id+' 文本答案 '+q.answer);
+    }
+    if(i>=1) {
+      const grammar=item.exercises.slice(0,item.exercises.length-questions.length).filter(q=>q.prompt.includes('____')||Array.isArray(q.options));
+      assert(grammar.length>=4,id+' 语法题数 '+grammar.length);
+    }
+  }
+});
+test('K1：全部例句和课文限定在当课及之前的词与词尾',()=>{
+  for(let week=1;week<=5;week++) {
+    const id='kk-'+String(week).padStart(2,'0'),allowed=kkKnownWords(week);
+    const segments=kkRows.filter(row=>row.lesson===id).map(row=>({label:row.id,text:row.example,tags:row.tags}));
+    segments.push(...(api.LESSONS[id].reading?.sentences||[]).map((s,i)=>({label:id+' 课文 '+(i+1),text:s.text,tags:''})));
+    for(const {label,text,tags} of segments) {
+      const words=kkTokens(text);
+      const letter=week===1&&tags.split(';').includes('letter');
+      const international=week===1&&tags.split(';').includes('international');
+      assert(words.length>=(letter?1:international?2:4)&&words.length<=(letter?1:international?3:10),label+' 词数 '+words.length);
+      if(letter) continue; // 字母卡的例词用于认字，不作为第一课已学词。
+      for(const word of words)assert(allowed(word),label+' 未学词形 '+word+'：'+text);
+    }
+  }
+});
+test('K1：非短语例句框架每课最多重复三次',()=>{
+  for(const id of kkLessonIds.slice(1)) {
+    const frames=new Map();
+    for(const row of kkRows.filter(row=>row.lesson===id&&!row.tags.split(';').includes('phrase'))) {
+      const stem=row.tags.split(';').includes('verb')?row.front.replace(/у$/,''):row.front;
+      const frame=row.example.toLocaleLowerCase().split(stem.toLocaleLowerCase()).join('□').replace(/\s+/g,' ').trim();
+      const ids=frames.get(frame)||[];ids.push(row.id);frames.set(frame,ids);
+      assert(ids.length<=3,id+' 重复框架 '+frame+'（'+ids.join('、')+'）');
     }
   }
 });
