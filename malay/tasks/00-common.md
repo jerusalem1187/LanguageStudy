@@ -84,7 +84,7 @@
    - 重叠复数 X-X（ms-03 起）
    - 后附 -nya、-ku、-mu（ms-02 起）
    - ber-（ms-05 起，含 be-、bel- 变体）
-   - meN-（ms-06 起，五种变形与 p / t / k / s 脱落）
+   - meN-（ms-06 起，六种形式与 p / t / k / s 脱落；mengkaji、mempunyai 一类不脱落的例外只按整词放行）
    - -kan（ms-09 起）、-i（ms-10 起）、di-（ms-11 起）、ter-（ms-12 起）
    - peN-（ms-13 起）、-an、peN-an、per-an（ms-14 起）、ke-an（ms-15 起）、se-（ms-16 起）
    - 组合形式按上述各自开放时间叠加（meN-…-kan 从 ms-09 起）
