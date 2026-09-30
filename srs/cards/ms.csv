@@ -919,3 +919,323 @@ ms-0917,ms,ms-12,warna,颜色,Warna buku Ali sama dengan warna buku Siti.,阿里
 ms-0918,ms,ms-12,sama,相同,Dua buku ini sama warnanya.,这两本书的颜色相同。,形容词，后置,形容词;复习与学习;补充
 ms-0919,ms,ms-12,semasa,在……期间,Jangan berbual semasa guru menerangkan ayat.,老师说明句子时不要聊天。,引出同时发生的动作,连词;复习与学习;补充
 ms-0920,ms,ms-12,mengubah,改变,Imbuhan boleh mengubah makna kata dasar.,词缀可以改变词根的意义。,meN- + ubah → mengubah，meng-，词根首字母保留；词根 ubah；及物动词，常见宾语 makna,动词;复习与学习;补充
+ms-0921,ms,ms-13,penulis,作者,Penulis itu menulis buku tentang Melaka.,那位作者写有关马六甲的书。,peN- + tulis → penulis，t 脱落；词根 tulis；对应动词 menulis；量词 orang,名词;peN- 名词
+ms-0922,ms,ms-13,pengajar,授课者,Pengajar itu mengajar bahasa Melayu.,那位授课者教马来语。,peN- + ajar → pengajar；词根 ajar；对应动词 mengajar；量词 orang,名词;peN- 名词
+ms-0923,ms,ms-13,penyanyi,歌手,Penyanyi itu menyanyi di dewan.,那位歌手在礼堂唱歌。,pe- + nyanyi → penyanyi，ny 保留；词根 nyanyi；对应动词 menyanyi；量词 orang,名词;peN- 名词
+ms-0924,ms,ms-13,pengecat,油漆工,Pengecat itu mengecat dinding sekolah.,那位油漆工粉刷学校的墙壁。,peN- + cat → pengecat，单音节用 penge-；词根 cat；对应动词 mengecat；量词 orang,名词;peN- 名词
+ms-0925,ms,ms-13,pemain,运动员；玩家,Pemain bola itu sedang berehat.,那位球员正在休息。,pe- + main；词根 main；对应动词 bermain；量词 orang,名词;peN- 名词
+ms-0926,ms,ms-13,pembuka,开启工具,Saya menggunakan pembuka botol ini.,我使用这个开瓶器。,peN- + buka → pembuka；词根 buka；对应动词 membuka；量词 buah,名词;peN- 名词
+ms-0927,ms,ms-13,pemalas,懒人,Pemalas itu enggan bekerja.,那个懒人不愿工作。,pe- + malas；词根 malas；习惯或性格名词，无对应及物动词；可联系 bermalas-malas（懒散）；量词 orang,名词;peN- 名词
+ms-0928,ms,ms-13,pekerja,员工,Pekerja itu datang awal ke kilang.,那位员工早早来到工厂。,pe- + kerja；词根 kerja；对应动词 bekerja，非 pengkerja；量词 orang,名词;peN- 名词
+ms-0929,ms,ms-13,peniaga,商人,Peniaga itu menjual makanan di pasar.,那位商人在市场卖食物。,pe- + niaga；词根 niaga；对应动词 berniaga；量词 orang,名词;peN- 名词
+ms-0930,ms,ms-13,pelari,跑步者,Pelari itu berlatih di padang.,那位跑步者在运动场训练。,pe- + lari；词根 lari；对应动词 berlari；量词 orang,名词;peN- 名词
+ms-0931,ms,ms-13,pembeli,买家,Pembeli itu memilih sebuah kereta.,那位买家挑选一辆汽车。,peN- + beli → pembeli；词根 beli；对应动词 membeli；量词 orang,名词;peN- 名词
+ms-0932,ms,ms-13,penjual,卖家,Penjual itu menerima wang daripada saya.,那位卖家收下我的钱。,peN- + jual → penjual；词根 jual；对应动词 menjual；量词 orang,名词;peN- 名词
+ms-0933,ms,ms-13,pendengar,听众,Pendengar itu suka lagu ini.,那位听众喜欢这首歌。,peN- + dengar → pendengar；词根 dengar；对应动词 mendengar；量词 orang,名词;peN- 名词
+ms-0934,ms,ms-13,penonton,观众,Penonton itu menonton filem di rumah.,那位观众在家看电影。,peN- + tonton → penonton，t 脱落；词根 tonton；对应动词 menonton；量词 orang,名词;peN- 名词
+ms-0935,ms,ms-13,pelukis,画家,Pelukis itu melukis bunga merah.,那位画家画红花。,pe- + lukis → pelukis；词根 lukis；对应动词 melukis；量词 orang,名词;peN- 名词
+ms-0936,ms,ms-13,penari,舞者,Penari itu menari di dewan sekolah.,那位舞者在学校礼堂跳舞。,peN- + tari → penari，t 脱落；词根 tari；对应动词 menari；量词 orang,名词;peN- 名词
+ms-0937,ms,ms-13,pencuci,清洁剂,Pencuci ini untuk lantai dapur.,这种清洁剂用来清洁厨房地板。,peN- + cuci → pencuci；词根 cuci；对应动词 mencuci；量词 botol,名词;peN- 名词
+ms-0938,ms,ms-13,penyapu,扫帚,Penyapu itu di belakang pintu.,那把扫帚在门后。,peN- + sapu → penyapu，s 脱落；词根 sapu；对应动词 menyapu；量词 batang,名词;peN- 名词
+ms-0939,ms,ms-13,penyimpan,保管者,Penyimpan kunci itu ialah Ali.,钥匙的保管者是阿里。,peN- + simpan → penyimpan，s 脱落；词根 simpan；对应动词 menyimpan；量词 orang,名词;peN- 名词
+ms-0940,ms,ms-13,pengirim,寄件人,Pengirim surat itu tinggal di Johor Bahru.,那封信的寄件人住在新山。,peN- + kirim → pengirim，k 脱落；词根 kirim；对应动词 mengirim；量词 orang,名词;peN- 名词
+ms-0941,ms,ms-13,penghantar,送件人,Penghantar itu membawa makanan ke pejabat.,那位送件人把食物送到办公室。,peN- + hantar → penghantar；词根 hantar；对应动词 menghantar；量词 orang,名词;peN- 名词
+ms-0942,ms,ms-13,pengukur,测量工具,Pengukur ini digunakan oleh jurutera.,这个测量工具由工程师使用。,peN- + ukur → pengukur；词根 ukur；对应动词 mengukur；量词 buah,名词;peN- 名词
+ms-0943,ms,ms-13,penggali,挖掘者,Penggali itu menggali lubang di kebun.,那位挖掘者在园子里挖洞。,peN- + gali → penggali；词根 gali；对应动词 menggali；量词 orang,名词;peN- 名词
+ms-0944,ms,ms-13,pemotong,切割工具,Pemotong ini digunakan untuk kayu.,这个切割工具用来切木头。,peN- + potong → pemotong，p 脱落；词根 potong；对应动词 memotong；量词 buah,名词;peN- 名词
+ms-0945,ms,ms-13,peminjam,借用者,Peminjam itu memulangkan buku kepada pustakawan.,那位借书者把书还给图书管理员。,peN- + pinjam → peminjam，p 脱落；词根 pinjam；对应动词 meminjam；量词 orang,名词;peN- 名词
+ms-0946,ms,ms-13,pemilik,拥有者,Pemilik kedai itu tinggal di Melaka.,那家商店的主人住在马六甲。,pe- + milik → pemilik；词根 milik；对应动词 memiliki；量词 orang,名词;peN- 名词
+ms-0947,ms,ms-13,penjaga,看守者,Penjaga itu membuka pintu sekolah.,那位看守者打开学校的门。,peN- + jaga → penjaga；词根 jaga；对应动词 menjaga；量词 orang,名词;peN- 名词
+ms-0948,ms,ms-13,pemeriksa,检查员,Pemeriksa itu memeriksa alat di kilang.,那位检查员检查工厂的工具。,peN- + periksa → pemeriksa，p 脱落；词根 periksa；对应动词 memeriksa；量词 orang,名词;peN- 名词
+ms-0949,ms,ms-13,pembantu,助手,Pembantu itu menyusun fail di pejabat.,那位助手在办公室整理文件。,peN- + bantu → pembantu；词根 bantu；对应动词 membantu；量词 orang,名词;peN- 名词
+ms-0950,ms,ms-13,penyelidik,研究人员,Penyelidik itu bekerja di makmal universiti.,那位研究人员在大学实验室工作。,peN- + selidik → penyelidik，s 脱落；词根 selidik；对应动词 menyelidiki；量词 orang,名词;peN- 名词
+ms-0951,ms,ms-13,arkitek,建筑师,Arkitek itu menjelaskan rancangan bangunan baru.,那位建筑师说明新建筑的计划。,量词 orang,名词;职业与工作场所
+ms-0952,ms,ms-13,akauntan,会计师,Akauntan itu memeriksa laporan syarikat.,那位会计师检查公司的报告。,量词 orang；英语借词,名词;职业与工作场所;英语借词
+ms-0953,ms,ms-13,doktor gigi,牙医,Doktor gigi itu bekerja di klinik.,那位牙医在诊所工作。,量词 orang；名词修饰语 gigi 后置,名词;职业与工作场所
+ms-0954,ms,ms-13,jurugambar,摄影师,Jurugambar itu membawa kamera ke majlis.,那位摄影师带相机去活动现场。,量词 orang；juru- + gambar,名词;职业与工作场所
+ms-0955,ms,ms-13,jurubahasa,口译员,Jurubahasa itu membantu tetamu dari China.,那位口译员帮助来自中国的客人。,量词 orang；juru- + bahasa,名词;职业与工作场所
+ms-0956,ms,ms-13,juruterbang,飞行员,Juruterbang itu pergi ke lapangan terbang.,那位飞行员去机场。,量词 orang；juru- + terbang,名词;职业与工作场所
+ms-0957,ms,ms-13,juruteknik,技术员,Juruteknik itu membaiki komputer saya.,那位技术员修理我的电脑。,量词 orang；juru- + teknik,名词;职业与工作场所
+ms-0958,ms,ms-13,jurujual,销售员,Jurujual itu menunjukkan sebuah kamera kepada saya.,那位销售员向我展示一台相机。,量词 orang；juru- + jual,名词;职业与工作场所
+ms-0959,ms,ms-13,jurumasak,厨师,Jurumasak itu menyediakan nasi lemak.,那位厨师准备椰浆饭。,量词 orang；juru- + masak,名词;职业与工作场所
+ms-0960,ms,ms-13,juruhebah,播音员,Juruhebah itu membaca berita di studio.,那位播音员在演播室播报新闻。,量词 orang；juru- + hebah,名词;职业与工作场所
+ms-0961,ms,ms-13,mekanik,机械修理工,Mekanik itu memeriksa kereta di bengkel.,那位机械修理工在车间检查汽车。,量词 orang；英语借词,名词;职业与工作场所;英语借词
+ms-0962,ms,ms-13,nelayan,渔民,Nelayan itu menjual ikan di pasar.,那位渔民在市场卖鱼。,量词 orang,名词;职业与工作场所
+ms-0963,ms,ms-13,pustakawan,图书管理员,Pustakawan itu membantu pelajar mencari buku.,那位图书管理员帮助学生找书。,量词 orang；pustaka + -wan,名词;职业与工作场所
+ms-0964,ms,ms-13,setiausaha,秘书,Setiausaha itu menyediakan surat untuk ketua.,那位秘书为负责人准备信件。,量词 orang；合写,名词;职业与工作场所
+ms-0965,ms,ms-13,tukang kayu,木匠,Tukang kayu itu membuat sebuah meja.,那位木匠做一张桌子。,量词 orang,名词;职业与工作场所
+ms-0966,ms,ms-13,tukang jahit,裁缝,Tukang jahit itu menjahit kemeja saya.,那位裁缝缝制我的衬衫。,量词 orang,名词;职业与工作场所
+ms-0967,ms,ms-13,tukang gunting rambut,理发师,Tukang gunting rambut itu bekerja di kedai ini.,那位理发师在这家店工作。,量词 orang；职业名词短语,名词;职业与工作场所
+ms-0968,ms,ms-13,kilang,工厂,Kilang itu berhampiran dengan stesen.,那家工厂在车站附近。,量词 buah,名词;职业与工作场所
+ms-0969,ms,ms-13,bengkel,车间；修理厂,Bengkel itu dibuka pada pukul lapan.,那间修理厂八点开门。,量词 buah,名词;职业与工作场所
+ms-0970,ms,ms-13,studio,工作室；演播室,Studio itu ada sebuah meja besar.,那间工作室有一张大桌子。,量词 buah；英语借词,名词;职业与工作场所;英语借词
+ms-0971,ms,ms-13,makmal,实验室,Makmal itu bersih dan selamat.,那间实验室干净安全。,量词 buah,名词;职业与工作场所
+ms-0972,ms,ms-13,mahkamah,法院,Peguam itu bekerja di mahkamah hari ini.,那位律师今天在法院工作。,量词 buah；阿拉伯语借词,名词;职业与工作场所;阿拉伯语借词
+ms-0973,ms,ms-13,ladang getah,橡胶园,Petani itu bekerja di ladang getah.,那位农民在橡胶园工作。,量词 buah；名词修饰语 getah 后置,名词;职业与工作场所
+ms-0974,ms,ms-13,balai bomba,消防站,Balai bomba itu di sebelah klinik.,那个消防站在诊所旁。,量词 buah,名词;职业与工作场所
+ms-0975,ms,ms-13,syarikat,公司,Syarikat itu menyediakan alat untuk hospital.,那家公司为医院提供设备。,量词 buah；阿拉伯语借词,名词;职业与工作场所;阿拉伯语借词
+ms-0976,ms,ms-13,melukis,画,Siti melukis sebuah rumah.,西蒂画一所房子。,meN- + lukis → melukis，me-，l 保留；词根 lukis；及物；常见宾语 rumah、bunga,动词;职业动词
+ms-0977,ms,ms-13,menari,跳舞,Ali menari di dewan.,阿里在礼堂跳舞。,meN- + tari → menari，t 脱落；词根 tari；不及物,动词;职业动词
+ms-0978,ms,ms-13,menonton,观看,Kami menonton filem bersama.,我们一起看电影。,meN- + tonton → menonton，t 脱落；词根 tonton；及物；常见宾语 filem,动词;职业动词
+ms-0979,ms,ms-13,menjahit,缝制,Ibu menjahit baju di rumah.,母亲在家缝衣服。,meN- + jahit → menjahit，men-，j 保留；词根 jahit；及物；常见宾语 baju,动词;职业动词
+ms-0980,ms,ms-13,membaiki,修理,Raju membaiki kereta di bengkel.,拉朱在修理厂修车。,meN- + baik + -i → membaiki，mem-，b 保留；词根 baik；及物；常见宾语 kereta、komputer,动词;职业动词
+ms-0981,ms,ms-13,membina,建造,Mereka membina sekolah baru.,他们建造新学校。,meN- + bina → membina，mem-，b 保留；词根 bina；及物；常见宾语 sekolah、rumah,动词;职业动词
+ms-0982,ms,ms-13,mengukir,雕刻,Pekerja itu mengukir kayu.,那位工人雕刻木头。,meN- + ukir → mengukir，meng-，元音保留；词根 ukir；及物；常见宾语 kayu,动词;职业动词
+ms-0983,ms,ms-13,menerbitkan,出版,Syarikat itu menerbitkan buku bahasa Melayu.,那家公司出版马来语书籍。,meN- + terbit + -kan → menerbitkan，t 脱落；词根 terbit；及物；常见宾语 buku,动词;职业动词
+ms-0984,ms,ms-13,menyunting,编辑,Siti menyunting laporan itu.,西蒂编辑那份报告。,meN- + sunting → menyunting，s 脱落；词根 sunting；及物；常见宾语 laporan、buku,动词;职业动词
+ms-0985,ms,ms-13,melatih,训练,Guru melatih pemain bola itu.,老师训练那位球员。,meN- + latih → melatih，me-，l 保留；词根 latih；及物；常见宾语 pemain,动词;职业动词
+ms-0986,ms,ms-13,berniaga,经商,Keluarga saya berniaga di pasar.,我的家人在市场经商。,ber- + niaga；词根 niaga；不及物,动词;职业动词
+ms-0987,ms,ms-13,bertani,务农,Bapa bertani di kampung.,父亲在乡村务农。,ber- + tani；词根 tani；不及物,动词;职业动词
+ms-0988,ms,ms-13,bertugas,执行职务,Penjaga itu bertugas pada waktu malam.,那位看守者夜间值班。,ber- + tugas；词根 tugas；不及物,动词;职业动词
+ms-0989,ms,ms-13,berkhidmat,服务；任职,Beliau berkhidmat di hospital ini.,他在这家医院任职。,ber- + khidmat；词根 khidmat；不及物,动词;职业动词
+ms-0990,ms,ms-13,berunding,商谈,Kami berunding dengan majikan tentang gaji.,我们和雇主商谈工资。,ber- + runding → berunding，r 不重写；词根 runding；不及物,动词;职业动词
+ms-0991,ms,ms-13,Saya bekerja sebagai juruteknik.,我做技术员。,Saya bekerja sebagai juruteknik.,我做技术员。,作为完整职业介绍识别；ber- + kerja → bekerja,动词;职业表达;phrase
+ms-0992,ms,ms-13,Beliau mengajar di kolej.,他在学院教书。,Beliau mengajar di kolej.,他在学院教书。,meN- + ajar → mengajar，元音保留；地点由 di 引出,动词;职业表达;phrase
+ms-0993,ms,ms-13,Kami berniaga di pasar.,我们在市场经商。,Kami berniaga di pasar.,我们在市场经商。,ber- + niaga；不及物,动词;职业表达;phrase
+ms-0994,ms,ms-13,Dia sedang mencari kerja.,他正在找工作。,Dia sedang mencari kerja.,他正在找工作。,meN- + cari → mencari，c 保留；宾语 kerja,动词;职业表达;phrase
+ms-0995,ms,ms-13,Saya ingin menjadi penulis.,我想成为作者。,Saya ingin menjadi penulis.,我想成为作者。,menjadi 表示成为；后接职业名词,动词;职业表达;phrase
+ms-0996,ms,ms-13,jawatan,职位,Jawatan itu untuk seorang juruteknik.,那个职位招一名技术员。,量词 个用 satu jawatan,名词;职业;补充
+ms-0997,ms,ms-13,gaji,工资,Gaji saya dibayar pada hari Jumaat.,我的工资在星期五发放。,量词 通常不用量词；金额用 ringgit,名词;职业;补充
+ms-0998,ms,ms-13,majikan,雇主,Majikan itu menjaga keselamatan pekerja.,那位雇主关注员工的安全。,量词 orang,名词;职业;补充
+ms-0999,ms,ms-13,kerjaya,职业生涯,Kerjaya beliau bermula di Pulau Pinang.,他的职业生涯始于槟城。,量词 通常不用量词,名词;职业;补充
+ms-1000,ms,ms-13,kontrak,合同,Kontrak itu disimpan di pejabat.,那份合同存放在办公室。,量词 份用 satu kontrak；英语借词,名词;职业;补充;英语借词
+ms-1001,ms,ms-14,bacaan,读物,Bacaan ini untuk pelajar bahasa Melayu.,这份读物面向马来语学生。,baca + -an；词根 baca；量词 份用 bahan bacaan,名词;-an 名词
+ms-1002,ms,ms-14,pakaian,衣物,Pakaian itu disimpan di dalam almari.,那些衣物存放在柜子里。,pakai + -an；词根 pakai；量词 helai,名词;-an 名词
+ms-1003,ms,ms-14,pilihan,选择,Pilihan saya ialah buku ini.,我的选择是这本书。,pilih + -an；词根 pilih；量词 通常不用量词,名词;-an 名词
+ms-1004,ms,ms-14,lukisan,绘画作品,Lukisan itu di dinding studio.,那幅画在工作室的墙上。,lukis + -an；词根 lukis；量词 幅用 buah,名词;-an 名词
+ms-1005,ms,ms-14,jahitan,缝线；缝制处,Jahitan pada baju ini baik.,这件衣服上的缝线很好。,jahit + -an；词根 jahit；量词 通常不用量词,名词;-an 名词
+ms-1006,ms,ms-14,ukiran,雕刻作品,Ukiran kayu itu dibuat oleh Ali.,那件木雕由阿里制作。,ukir + -an；词根 ukir；量词 buah,名词;-an 名词
+ms-1007,ms,ms-14,cetakan,印制版本,Cetakan baru buku itu sudah ada.,那本书的新印制版本已经有了。,cetak + -an；词根 cetak；量词 版用 satu cetakan,名词;-an 名词
+ms-1008,ms,ms-14,kiriman,寄送物,Kiriman daripada ibu sudah sampai.,母亲寄来的东西已经到了。,kirim + -an；词根 kirim；量词 份用 satu kiriman,名词;-an 名词
+ms-1009,ms,ms-14,simpanan,储蓄,Simpanan saya ada di bank.,我的储蓄存在银行。,simpan + -an；词根 simpan；量词 通常不用量词,名词;-an 名词
+ms-1010,ms,ms-14,pinjaman,借款,Pinjaman itu digunakan untuk membeli alat.,那笔借款用来购买工具。,pinjam + -an；词根 pinjam；量词 笔用 satu pinjaman,名词;-an 名词
+ms-1011,ms,ms-14,jualan,售卖品,Jualan di kedai itu ialah pakaian.,那家店的售卖品是衣物。,jual + -an；词根 jual；量词 通常不用量词,名词;-an 名词
+ms-1012,ms,ms-14,belian,购入物,Belian hari ini ialah kertas dan pen.,今天购入的是纸和笔。,beli + -an；词根 beli；量词 通常不用量词,名词;-an 名词
+ms-1013,ms,ms-14,bayaran,款项；费用,Bayaran untuk kelas itu sepuluh ringgit.,那堂课的费用是十令吉。,bayar + -an；词根 bayar；量词 笔用 satu bayaran,名词;-an 名词
+ms-1014,ms,ms-14,potongan,切下的一块,Potongan kayu itu pendek dan ringan.,那块切下的木头短而轻。,potong + -an；词根 potong；量词 块用 satu potongan,名词;-an 名词
+ms-1015,ms,ms-14,hidangan,菜肴,Hidangan itu disediakan oleh jurumasak.,那道菜由厨师准备。,hidang + -an；词根 hidang；量词 道用 satu hidangan,名词;-an 名词
+ms-1016,ms,ms-14,bungkusan,包裹,Bungkusan itu untuk Siti.,那个包裹给西蒂。,bungkus + -an；词根 bungkus；量词 buah,名词;-an 名词
+ms-1017,ms,ms-14,isian,填写内容,Isian dalam borang itu mesti jelas.,表格中的填写内容必须清楚。,isi + -an；词根 isi；量词 通常不用量词,名词;-an 名词
+ms-1018,ms,ms-14,ukuran,尺寸,Ukuran meja itu dicatat oleh pekerja.,桌子的尺寸由员工记录。,ukur + -an；词根 ukur；量词 通常不用量词,名词;-an 名词
+ms-1019,ms,ms-14,ajaran,教导,Ajaran guru itu tentang sikap baik.,那位老师的教导涉及良好态度。,ajar + -an；词根 ajar；量词 通常不用量词,名词;-an 名词
+ms-1020,ms,ms-14,salinan,副本,Salinan surat itu disimpan di sini.,那封信的副本存放在这里。,salin + -an；词根 salin；量词 份用 satu salinan,名词;-an 名词
+ms-1021,ms,ms-14,pembacaan,阅读过程,Pembacaan buku itu mengambil masa satu minggu.,阅读那本书需要一周。,peN- + baca + -an；量词 通常不用量词,名词;peN-an 名词
+ms-1022,ms,ms-14,penulisan,写作过程,Penulisan laporan itu bermula hari ini.,那份报告的写作今天开始。,peN- + tulis + -an，t 脱落；量词 通常不用量词,名词;peN-an 名词
+ms-1023,ms,ms-14,pengajaran,教学,Pengajaran bahasa Melayu di kolej itu jelas.,那所学院的马来语教学清晰。,peN- + ajar + -an；量词 通常不用量词,名词;peN-an 名词
+ms-1024,ms,ms-14,pembelajaran,学习过程,Pembelajaran bahasa memerlukan latihan.,语言学习需要练习。,pem- + belajar + -an；以 belajar 为基础，保留 bel-；量词 通常不用量词,名词;peN-an 名词
+ms-1025,ms,ms-14,pembangunan,发展；建设,Pembangunan bandar itu menyediakan peluang kerja.,那座城市的发展提供工作机会。,peN- + bangun + -an；量词 通常不用量词,名词;peN-an 名词
+ms-1026,ms,ms-14,pembinaan,建造过程,Pembinaan jambatan itu sudah bermula.,那座桥的建造已经开始。,peN- + bina + -an；量词 通常不用量词,名词;peN-an 名词
+ms-1027,ms,ms-14,penerbitan,出版过程,Penerbitan buku itu mengambil masa lama.,那本书的出版花费很长时间。,peN- + terbit + -an，t 脱落；量词 通常不用量词,名词;peN-an 名词
+ms-1028,ms,ms-14,penyuntingan,编辑过程,Penyuntingan laporan dibuat sebelum penerbitan.,报告的编辑在出版前进行。,peN- + sunting + -an，s 脱落；量词 通常不用量词,名词;peN-an 名词
+ms-1029,ms,ms-14,pendaftaran,登记；报名,Pendaftaran kelas dibuka pada hari Isnin.,课程报名星期一开放。,peN- + daftar + -an；量词 通常不用量词,名词;peN-an 名词
+ms-1030,ms,ms-14,pembayaran,付款过程,Pembayaran boleh dibuat di pejabat.,可以在办公室付款。,peN- + bayar + -an；量词 通常不用量词,名词;peN-an 名词
+ms-1031,ms,ms-14,penghantaran,运送过程,Penghantaran buku itu dibuat pada waktu pagi.,那些书在早晨运送。,peN- + hantar + -an；量词 通常不用量词,名词;peN-an 名词
+ms-1032,ms,ms-14,penyimpanan,存放过程,Penyimpanan alat memerlukan tempat bersih.,存放工具需要干净的地方。,peN- + simpan + -an，s 脱落；量词 通常不用量词,名词;peN-an 名词
+ms-1033,ms,ms-14,pengeluaran,生产；产出过程,Pengeluaran pakaian di kilang itu bermula pagi ini.,那家工厂的服装生产今天早晨开始。,peN- + keluar + -an，k 脱落；量词 通常不用量词,名词;peN-an 名词
+ms-1034,ms,ms-14,penggunaan,使用,Penggunaan alat itu mesti mengikut peraturan.,使用那个工具必须遵守规则。,peN- + guna + -an，g 保留；量词 通常不用量词,名词;peN-an 名词
+ms-1035,ms,ms-14,penyelidikan,研究,Penyelidikan itu dijalankan di makmal.,那项研究在实验室开展。,peN- + selidik + -an，s 脱落；量词 项用 satu penyelidikan,名词;peN-an 名词
+ms-1036,ms,ms-14,pelajaran,课程内容,Pelajaran hari ini tentang kata nama.,今天的课程内容是名词。,pel- + ajar + -an → pelajaran，特殊变体；量词 课用 satu pelajaran,名词;per-an 名词
+ms-1037,ms,ms-14,perjalanan,行程,Perjalanan ke Melaka mengambil masa dua jam.,去马六甲的行程需要两小时。,per- + jalan + -an；量词 次用 satu perjalanan,名词;per-an 名词
+ms-1038,ms,ms-14,pekerjaan,工作；职业,Pekerjaan beliau memerlukan pengalaman.,他的工作需要经验。,pe- + kerja + -an，写 pekerjaan；量词 份用 satu pekerjaan,名词;per-an 名词
+ms-1039,ms,ms-14,persahabatan,友谊,Persahabatan kami bermula di sekolah.,我们的友谊始于学校。,per- + sahabat + -an；量词 通常不用量词,名词;per-an 名词
+ms-1040,ms,ms-14,perniagaan,商业；生意,Perniagaan keluarga itu di Pulau Pinang.,那家人的生意在槟城。,per- + niaga + -an；量词 项用 satu perniagaan,名词;per-an 名词
+ms-1041,ms,ms-14,permainan,游戏,Permainan itu untuk semua pelajar.,那个游戏面向所有学生。,per- + main + -an；量词 种用 satu permainan,名词;per-an 名词
+ms-1042,ms,ms-14,perbualan,交谈,Perbualan kami tentang kelas esok.,我们的交谈涉及明天的课。,per- + bual + -an；量词 次用 satu perbualan,名词;per-an 名词
+ms-1043,ms,ms-14,pertemuan,会面,Pertemuan itu diadakan di pejabat.,那次会面在办公室举行。,per- + temu + -an；量词 次用 satu pertemuan,名词;per-an 名词
+ms-1044,ms,ms-14,perjumpaan,聚会；会见,Perjumpaan ahli kelab bermula pukul dua.,俱乐部成员的聚会两点开始。,per- + jumpa + -an；量词 次用 satu perjumpaan,名词;per-an 名词
+ms-1045,ms,ms-14,perhentian,停靠处,Perhentian bas itu berhampiran dengan sekolah.,那个公交停靠处在学校附近。,per- + henti + -an；量词 处用 buah,名词;per-an 名词
+ms-1046,ms,ms-14,peraturan,规则,Peraturan itu menjaga keselamatan pekerja.,那项规则保障员工安全。,per- + atur + -an；量词 条用 satu peraturan,名词;per-an 名词
+ms-1047,ms,ms-14,persediaan,准备,Persediaan majlis itu dibuat bersama.,那个活动的准备工作由大家一起做。,per- + sedia + -an；量词 通常不用量词,名词;per-an 名词
+ms-1048,ms,ms-14,perumahan,住宅区；住房,Perumahan baru itu berhampiran dengan kilang.,那个新住宅区在工厂附近。,per- + rumah + -an → perumahan，r 不重写；量词 处用 kawasan,名词;per-an 名词
+ms-1049,ms,ms-14,perancangan,规划,Perancangan projek memerlukan maklumat jelas.,项目规划需要清楚的信息。,per- + rancang + -an → perancangan，r 不重写；量词 通常不用量词,名词;per-an 名词
+ms-1050,ms,ms-14,perundingan,磋商,Perundingan dengan majikan bermula pagi ini.,与雇主的磋商今天早晨开始。,per- + runding + -an → perundingan，r 不重写；量词 次用 satu perundingan,名词;per-an 名词
+ms-1051,ms,ms-14,mendaftar,登记,Saya mendaftar untuk kelas bahasa Melayu.,我报名马来语课。,meN- + daftar → mendaftar，d 保留；不及物用法，用途由 untuk 引出,动词;派生名词相关动词
+ms-1052,ms,ms-14,menyalin,抄写,Ali menyalin alamat itu.,阿里抄写那个地址。,meN- + salin → menyalin，s 脱落；及物；常见宾语 alamat、surat,动词;派生名词相关动词
+ms-1053,ms,ms-14,mencetak,印刷,Pekerja itu mencetak buku baru.,那位员工印刷新书。,meN- + cetak → mencetak，c 保留；及物；常见宾语 buku,动词;派生名词相关动词
+ms-1054,ms,ms-14,membungkus,包装,Siti membungkus makanan untuk pekerja.,西蒂为员工包装食物。,meN- + bungkus → membungkus，b 保留；及物；常见宾语 makanan,动词;派生名词相关动词
+ms-1055,ms,ms-14,menghasilkan,产生；制作出,Pelukis itu menghasilkan lukisan baru.,那位画家创作出新画。,meN- + hasil + -kan → menghasilkan，h 保留；及物；常见宾语 lukisan,动词;派生名词相关动词
+ms-1056,ms,ms-14,merancang,计划,Kami merancang perjalanan ke Melaka.,我们计划去马六甲的行程。,meN- + rancang → merancang，r 保留；及物；常见宾语 perjalanan,动词;派生名词相关动词
+ms-1057,ms,ms-14,mengumpulkan,收集,Guru mengumpulkan jawapan pelajar.,老师收集学生的答案。,meN- + kumpul + -kan → mengumpulkan，k 脱落；及物；常见宾语 jawapan,动词;派生名词相关动词
+ms-1058,ms,ms-14,membandingkan,比较,Kami membandingkan dua laporan itu.,我们比较那两份报告。,meN- + banding + -kan → membandingkan，b 保留；及物；常见宾语 laporan,动词;派生名词相关动词
+ms-1059,ms,ms-14,menghubungkan,连接,Jambatan itu menghubungkan dua kampung.,那座桥连接两个村庄。,meN- + hubung + -kan → menghubungkan，h 保留；及物；常见宾语 kampung,动词;派生名词相关动词
+ms-1060,ms,ms-14,membentuk,形成；塑造,Pelajaran itu membentuk sikap baik.,那堂课培养良好态度。,meN- + bentuk → membentuk，b 保留；及物；常见宾语 sikap,动词;派生名词相关动词
+ms-1061,ms,ms-14,meneruskan,继续,Kami meneruskan kerja selepas rehat.,休息后我们继续工作。,meN- + terus + -kan → meneruskan，t 脱落；及物；常见宾语 kerja,动词;派生名词相关动词
+ms-1062,ms,ms-14,memerlukan,需要,Pembinaan sekolah memerlukan wang.,建造学校需要资金。,meN- + perlu + -kan → memerlukan，p 脱落；及物；常见宾语 wang,动词;派生名词相关动词
+ms-1063,ms,ms-14,mengutamakan,优先考虑,Majikan itu mengutamakan keselamatan pekerja.,那位雇主优先考虑员工安全。,meN- + utama + -kan → mengutamakan，元音保留；及物；常见宾语 keselamatan,动词;派生名词相关动词
+ms-1064,ms,ms-14,menilai,评价,Guru menilai tulisan saya.,老师评价我的文字。,meN- + nilai → menilai，n 保留；及物；常见宾语 tulisan,动词;派生名词相关动词
+ms-1065,ms,ms-14,memajukan,促进发展,Mereka memajukan perniagaan keluarga.,他们促进家族生意的发展。,meN- + maju + -kan → memajukan，m 保留；及物；常见宾语 perniagaan,动词;派生名词相关动词
+ms-1066,ms,ms-14,Pembelajaran memerlukan masa.,学习需要时间。,Pembelajaran memerlukan masa.,学习需要时间。,meN- + perlu + -kan → memerlukan；宾语 masa,动词;派生名词表达;phrase
+ms-1067,ms,ms-14,Saya memilih bahan bacaan.,我选择阅读材料。,Saya memilih bahan bacaan.,我选择阅读材料。,meN- + pilih → memilih，p 脱落；宾语 bahan bacaan,动词;派生名词表达;phrase
+ms-1068,ms,ms-14,Kami membuat persediaan bersama.,我们一起做准备。,Kami membuat persediaan bersama.,我们一起做准备。,meN- + buat → membuat；宾语 persediaan,动词;派生名词表达;phrase
+ms-1069,ms,ms-14,Perjalanan itu mengambil masa sejam.,那段行程需要一小时。,Perjalanan itu mengambil masa sejam.,那段行程需要一小时。,sejam 按完整时间表达识别；宾语 masa,动词;派生名词表达;phrase
+ms-1070,ms,ms-14,Sila baca peraturan ini.,请阅读这项规则。,Sila baca peraturan ini.,请阅读这项规则。,祈使动词 baca；宾语 peraturan,动词;派生名词表达;phrase
+ms-1071,ms,ms-14,proses,过程,Proses ini memerlukan tiga langkah.,这个过程需要三个步骤。,量词 个用 satu proses；英语借词,名词;学习与工作;补充;英语借词
+ms-1072,ms,ms-14,peringkat,阶段,Peringkat pertama ialah pendaftaran.,第一个阶段是报名。,量词 个用 satu peringkat,名词;学习与工作;补充
+ms-1073,ms,ms-14,bidang,领域,Beliau bekerja dalam bidang pengajaran bahasa.,他在语言教学领域工作。,量词 个用 satu bidang,名词;学习与工作;补充
+ms-1074,ms,ms-14,kaedah,方法,Kaedah ini memudahkan pembelajaran bahasa.,这种方法使语言学习更容易。,量词 种用 satu kaedah；阿拉伯语借词,名词;学习与工作;补充;阿拉伯语借词
+ms-1075,ms,ms-14,sumber,来源；资源,Perpustakaan ialah sumber maklumat penting.,图书馆是重要的信息来源。,量词 个用 satu sumber,名词;学习与工作;补充
+ms-1076,ms,ms-14,mutu,质量,Mutu cetakan buku itu baik.,那本书的印刷质量好。,量词 通常不用量词,名词;学习与工作;补充
+ms-1077,ms,ms-14,usaha,努力,Usaha pekerja itu menghasilkan buku baru.,那位员工的努力产生了新书。,量词 通常不用量词,名词;学习与工作;补充
+ms-1078,ms,ms-14,hubungan,关系,Hubungan antara guru dengan pelajar itu baik.,老师和学生之间的关系良好。,hubung + -an；量词 通常不用量词,名词;学习与工作;补充
+ms-1079,ms,ms-14,manfaat,益处,Bacaan ini memberikan manfaat kepada pelajar.,这份读物使学生获益。,量词 通常不用量词；阿拉伯语借词,名词;学习与工作;补充;阿拉伯语借词
+ms-1080,ms,ms-14,dokumen,文件,Dokumen itu perlu disimpan di pejabat.,那份文件需要存放在办公室。,量词 份用 satu dokumen；英语借词,名词;学习与工作;补充;英语借词
+ms-1081,ms,ms-15,kebaikan,好处；善行,Kami melihat kebaikan beliau semasa program bantuan.,我们在援助项目中看到他的善行。,ke- + baik + -an；量词 通常不用量词,名词;ke-an 形式
+ms-1082,ms,ms-15,kemajuan,进步,Kemajuan pelajar itu dicatat oleh guru.,那位学生的进步由老师记录。,ke- + maju + -an；量词 通常不用量词,名词;ke-an 形式
+ms-1083,ms,ms-15,kebudayaan,文化,Kebudayaan Malaysia dipelajari di kolej itu.,那所学院学习马来西亚文化。,ke- + budaya + -an；量词 通常不用量词,名词;ke-an 形式
+ms-1084,ms,ms-15,kehidupan,生活,Kehidupan di kampung itu aman.,那个村庄的生活安宁。,ke- + hidup + -an；量词 通常不用量词,名词;ke-an 形式
+ms-1085,ms,ms-15,kejayaan,成功,Kejayaan projek itu hasil usaha bersama.,那个项目的成功是共同努力的结果。,ke- + jaya + -an；量词 项用 satu kejayaan,名词;ke-an 形式
+ms-1086,ms,ms-15,kegagalan,失败,Kegagalan itu tidak mengakhiri usaha kami.,那次失败没有终止我们的努力。,ke- + gagal + -an；量词 次用 satu kegagalan,名词;ke-an 形式
+ms-1087,ms,ms-15,kebebasan,自由,Kebebasan memilih buku penting untuk pelajar.,自由选书对学生很重要。,ke- + bebas + -an；量词 通常不用量词,名词;ke-an 形式
+ms-1088,ms,ms-15,keadilan,公正,Keadilan penting dalam masyarakat.,公正在社会中很重要。,ke- + adil + -an；量词 通常不用量词,名词;ke-an 形式
+ms-1089,ms,ms-15,keindahan,美丽,Keindahan Pulau Pinang diceritakan oleh guru.,老师讲述槟城的美丽。,ke- + indah + -an；量词 通常不用量词,名词;ke-an 形式
+ms-1090,ms,ms-15,ketenangan,宁静,Ketenangan di perpustakaan membantu pembacaan.,图书馆的宁静有助于阅读。,ke- + tenang + -an；量词 通常不用量词,名词;ke-an 形式
+ms-1091,ms,ms-15,kepentingan,重要性,Guru menjelaskan kepentingan kebersihan.,老师说明清洁的重要性。,ke- + penting + -an；量词 通常不用量词,名词;ke-an 形式
+ms-1092,ms,ms-15,keperluan,需要；必需品,Makanan ialah keperluan semua orang.,食物是所有人的必需品。,ke- + perlu + -an；量词 项用 satu keperluan,名词;ke-an 形式
+ms-1093,ms,ms-15,kemampuan,能力,Kemampuan pekerja itu penting untuk projek ini.,那位员工的能力对这个项目很重要。,ke- + mampu + -an；量词 通常不用量词,名词;ke-an 形式
+ms-1094,ms,ms-15,kemiskinan,贫困,Pendidikan dapat mengurangkan kemiskinan.,教育能够减少贫困。,ke- + miskin + -an；量词 通常不用量词,名词;ke-an 形式
+ms-1095,ms,ms-15,kekuatan,力量,Kekuatan persatuan itu ialah usaha bersama.,那个协会的力量在于共同努力。,ke- + kuat + -an；量词 通常不用量词,名词;ke-an 形式
+ms-1096,ms,ms-15,kesatuan,团结,Kesatuan masyarakat membantu pembangunan negara.,社会团结有助于国家发展。,ke- + satu + -an；量词 通常不用量词,名词;ke-an 形式
+ms-1097,ms,ms-15,kewangan,财务,Akauntan itu menguruskan kewangan syarikat.,那位会计师管理公司的财务。,ke- + wang + -an；量词 通常不用量词,名词;ke-an 形式
+ms-1098,ms,ms-15,kedudukan,位置,Kedudukan pusat itu ditunjukkan pada peta.,那个中心的位置在地图上标出。,ke- + duduk + -an；量词 个用 satu kedudukan,名词;ke-an 形式
+ms-1099,ms,ms-15,kenyataan,声明,Kenyataan rasmi itu dibaca oleh pegawai.,那份官方声明由官员宣读。,ke- + nyata + -an；量词 份用 satu kenyataan,名词;ke-an 形式
+ms-1100,ms,ms-15,keputusan,决定,Keputusan itu dibuat dalam mesyuarat.,那个决定在会议中作出。,ke- + putus + -an；量词 项用 satu keputusan,名词;ke-an 形式
+ms-1101,ms,ms-15,kesempatan,机会,Saya menggunakan kesempatan ini untuk membantu masyarakat.,我利用这个机会帮助社会。,ke- + sempat + -an；量词 次用 satu kesempatan,名词;ke-an 形式
+ms-1102,ms,ms-15,kebesaran,伟大；尊贵,Kebesaran negara itu dicatat dalam buku sejarah.,那个国家的辉煌被记录在历史书里。,ke- + besar + -an；量词 通常不用量词；马来西亚标准义，并非简单的「太大」,名词;ke-an 形式
+ms-1103,ms,ms-15,kebangsaan,国家的；民族的,Bahasa kebangsaan Malaysia ialah bahasa Melayu.,马来西亚的国语是马来语。,ke- + bangsa + -an；形容词，后置；本课作关系修饰语,形容词;ke-an 形式
+ms-1104,ms,ms-15,kehujanan,遭雨淋,Ali kehujanan semasa berjalan ke sekolah.,阿里走去学校时淋了雨。,ke- + hujan + -an；遭受义；不及物，不另加 di-,动词;ke-an 形式
+ms-1105,ms,ms-15,kelaparan,挨饿,Mangsa banjir itu kelaparan sebelum bantuan sampai.,那位洪灾受灾者在援助抵达前挨饿。,ke- + lapar + -an；遭受义；不及物,动词;ke-an 形式
+ms-1106,ms,ms-15,kecurian,失窃,Peniaga itu kecurian wang semalam.,那位商人昨天丢了钱。,ke- + curi + -an；遭受义被动；wang 是所失之物，不再加 di-,动词;ke-an 形式
+ms-1107,ms,ms-15,kesejukan,受冻；感到寒冷,Adik itu kesejukan selepas kehujanan.,那个弟弟淋雨后感到寒冷。,ke- + sejuk + -an；遭受义；不及物,动词;ke-an 形式
+ms-1108,ms,ms-15,kepanasan,受热；热得难受,Pekerja itu kepanasan di dalam kilang.,那位员工在工厂内热得难受。,ke- + panas + -an；本课作遭受状态谓语，不及物；也可作「热度」名词,动词;ke-an 形式
+ms-1109,ms,ms-15,kelihatan,看得见；看起来,Bangunan itu kelihatan dari jambatan.,从桥上可以看见那座建筑。,ke- + lihat + -an；感知或被动状态谓语，不是普通后置形容词；不及物用法,动词;ke-an 形式
+ms-1110,ms,ms-15,kedengaran,听得见；听起来,Suara guru kedengaran dari kelas.,从教室能听见老师的声音。,ke- + dengar + -an；感知或被动状态谓语，不是普通后置形容词；不及物用法,动词;ke-an 形式
+ms-1111,ms,ms-15,pendidikan,教育,Pendidikan memberikan peluang kepada semua orang.,教育给所有人提供机会。,peN- + didik + -an；量词 通常不用量词,名词;社会与公共主题
+ms-1112,ms,ms-15,ekonomi,经济,Ekonomi bandar itu sudah baik semula.,那座城市的经济已经恢复良好。,量词 通常不用量词；英语借词,名词;社会与公共主题;英语借词
+ms-1113,ms,ms-15,budaya,文化；习俗,Budaya membaca bermula di rumah.,阅读文化始于家庭。,量词 通常不用量词,名词;社会与公共主题
+ms-1114,ms,ms-15,rakyat,国民；人民,Rakyat mendapat manfaat daripada kemudahan awam.,人民从公共设施中获益。,量词 orang；集合用法通常不用量词,名词;社会与公共主题
+ms-1115,ms,ms-15,warga,成员；居民,Warga sekolah menjaga kebersihan bersama.,学校成员共同保持清洁。,量词 orang,名词;社会与公共主题
+ms-1116,ms,ms-15,komuniti,社区群体,Komuniti itu bekerjasama menjaga taman.,那个社区群体合作维护公园。,量词 个用 satu komuniti；英语借词,名词;社会与公共主题;英语借词
+ms-1117,ms,ms-15,kebajikan,福利,Persatuan itu menjaga kebajikan pekerja.,那个协会关注员工福利。,量词 通常不用量词,名词;社会与公共主题
+ms-1118,ms,ms-15,kebakaran,火灾,Kebakaran di kilang itu menyebabkan masalah.,那家工厂的火灾造成了问题。,ke- + bakar + -an；量词 场用 satu kebakaran,名词;社会与公共主题
+ms-1119,ms,ms-15,kecemasan,紧急情况,"Dalam kecemasan, sila hubungi polis.",遇到紧急情况，请联系警方。,ke- + cemas + -an；量词 次用 satu kecemasan,名词;社会与公共主题
+ms-1120,ms,ms-15,bencana,灾害,Bencana itu menyebabkan masalah di kampung.,那场灾害在村庄造成问题。,量词 场用 satu bencana,名词;社会与公共主题
+ms-1121,ms,ms-15,banjir,洪水,Banjir itu menyebabkan jalan ditutup.,那场洪水导致道路封闭。,量词 场用 satu banjir,名词;社会与公共主题
+ms-1122,ms,ms-15,mangsa,受害者；受灾者,Mangsa banjir menerima makanan dan pakaian.,洪灾受灾者收到食物和衣物。,量词 orang,名词;社会与公共主题
+ms-1123,ms,ms-15,pusat,中心,Pusat bantuan itu di dewan sekolah.,那个援助中心设在学校礼堂。,量词 buah,名词;社会与公共主题
+ms-1124,ms,ms-15,persatuan,协会,Persatuan itu menyediakan bantuan makanan.,那个协会提供食物援助。,per- + satu + -an；量词 个用 satu persatuan,名词;社会与公共主题
+ms-1125,ms,ms-15,kempen,宣传活动,Kempen kebersihan bermula pada hari Ahad.,清洁宣传活动星期日开始。,量词 次用 satu kempen；英语借词,名词;社会与公共主题;英语借词
+ms-1126,ms,ms-15,sumbangan,捐助,Sumbangan itu digunakan untuk membeli selimut.,那笔捐助用来购买毯子。,sumbang + -an；量词 笔用 satu sumbangan,名词;社会与公共主题
+ms-1127,ms,ms-15,hak,权利,Pendidikan ialah hak semua pelajar.,教育是所有学生的权利。,量词 项用 satu hak；阿拉伯语借词,名词;社会与公共主题;阿拉伯语借词
+ms-1128,ms,ms-15,tanggungjawab,责任,Keselamatan pelajar ialah tanggungjawab sekolah.,学生安全是学校的责任。,合写；量词 项用 satu tanggungjawab,名词;社会与公共主题
+ms-1129,ms,ms-15,undang-undang,法律,Kita mesti mengikuti undang-undang negara.,我们必须遵守国家法律。,固定重叠；量词 项用 satu undang-undang,名词;社会与公共主题
+ms-1130,ms,ms-15,kawasan,区域,Kawasan itu selamat untuk penduduk.,那个区域对居民是安全的。,量词 片用 satu kawasan,名词;社会与公共主题
+ms-1131,ms,ms-15,menyumbang,捐献,Siti menyumbang wang kepada persatuan.,西蒂向协会捐款。,meN- + sumbang → menyumbang，s 脱落；及物；常见宾语 wang,动词;公共事务动词
+ms-1132,ms,ms-15,menyelamatkan,营救,Polis menyelamatkan mangsa banjir.,警察营救洪灾受灾者。,meN- + selamat + -kan → menyelamatkan，s 脱落；及物；常见宾语 mangsa,动词;公共事务动词
+ms-1133,ms,ms-15,memindahkan,转移,Sukarelawan memindahkan mangsa ke dewan.,志愿者把受灾者转移到礼堂。,meN- + pindah + -kan → memindahkan，p 脱落；及物；常见宾语 mangsa,动词;公共事务动词
+ms-1134,ms,ms-15,mengagihkan,分发,Kami mengagihkan makanan kepada penduduk.,我们向居民分发食物。,meN- + agih + -kan → mengagihkan，元音保留；及物；常见宾语 makanan,动词;公共事务动词
+ms-1135,ms,ms-15,membekalkan,供应,Persatuan membekalkan air kepada mangsa.,协会向受灾者供水。,meN- + bekal + -kan → membekalkan，b 保留；及物；常见宾语 air,动词;公共事务动词
+ms-1136,ms,ms-15,memulihkan,恢复,Penduduk memulihkan kebersihan kawasan itu.,居民恢复那个区域的清洁。,meN- + pulih + -kan → memulihkan，p 脱落；及物；常见宾语 kebersihan,动词;公共事务动词
+ms-1137,ms,ms-15,mengurangkan,减少,Bantuan itu mengurangkan masalah penduduk.,那项援助减少居民的问题。,meN- + kurang + -kan → mengurangkan，k 脱落；及物；常见宾语 masalah,动词;公共事务动词
+ms-1138,ms,ms-15,meningkatkan,提高,Program itu meningkatkan kemampuan pekerja.,那个项目提高员工的能力。,meN- + tingkat + -kan → meningkatkan，t 脱落；及物；常见宾语 kemampuan,动词;公共事务动词
+ms-1139,ms,ms-15,mencegah,预防,Kita mesti mencegah kebakaran di kilang.,我们必须预防工厂火灾。,meN- + cegah → mencegah，c 保留；及物；常见宾语 kebakaran,动词;公共事务动词
+ms-1140,ms,ms-15,bekerjasama,合作,Penduduk bekerjasama membersihkan jalan.,居民合作清扫道路。,ber- + kerjasama → bekerjasama；不及物；合写,动词;公共事务动词
+ms-1141,ms,ms-15,bertindak,采取行动,Polis bertindak segera selepas menerima laporan.,警察收到报告后立即采取行动。,ber- + tindak；词根 tindak；不及物,动词;公共事务动词
+ms-1142,ms,ms-15,menggalakkan,鼓励,Guru menggalakkan pelajar membaca buku.,老师鼓励学生读书。,meN- + galak + -kan → menggalakkan，g 保留，双 k；及物；常见宾语 pelajar,动词;公共事务动词
+ms-1143,ms,ms-15,mencadangkan,建议,Kami mencadangkan program kebersihan.,我们建议开展清洁活动。,meN- + cadang + -kan → mencadangkan，c 保留；及物；常见宾语 program,动词;公共事务动词
+ms-1144,ms,ms-15,memberitahu,告知,Siti memberitahu guru tentang banjir itu.,西蒂把那场洪水的情况告诉老师。,meN- + beritahu → memberitahu，b 保留；及物；常见宾语 guru,动词;公共事务动词
+ms-1145,ms,ms-15,melibatkan,使参与；涉及,Projek itu melibatkan semua penduduk.,那个项目涉及所有居民。,meN- + libat + -kan → melibatkan，l 保留；及物；常见宾语 penduduk,动词;公共事务动词
+ms-1146,ms,ms-15,yakni,即；也就是,"Kami memilih satu tempat, yakni dewan sekolah.",我们选了一个地点，即学校礼堂。,引出进一步说明，与 iaitu 相近,连词;公共事务连接
+ms-1147,ms,ms-15,malahan,而且；甚至,"Beliau membantu kami, malahan memberikan wang.",他帮助我们，甚至还给钱。,连接递进信息,连词;公共事务连接
+ms-1148,ms,ms-15,bahkan,甚至；而且,"Mereka menyumbang makanan, bahkan menyediakan tempat tinggal.",他们捐赠食物，甚至提供住处。,连接递进信息；标准书面语,连词;公共事务连接
+ms-1149,ms,ms-15,sedangkan,而；然而,"Ali di pusat bantuan, sedangkan Siti masih di rumah.",阿里在援助中心，而西蒂仍在家。,连接同时存在的对照,连词;公共事务连接
+ms-1150,ms,ms-15,justeru,反而；恰恰；（书面）因此,"Dia tidak menolak, justeru menyokong rancangan itu.",他没有拒绝，反而支持那个计划。,本义是「反而、恰恰」，本句即此义；马来西亚书面语和新闻里 justeru 或 justeru itu 也常用来表示「因此」，阅读时两种都会见到,连词;公共事务连接
+ms-1151,ms,ms-15,Kedua-dua mangsa sudah selamat.,两名受灾者都已安全。,Kedua-dua mangsa sudah selamat.,两名受灾者都已安全。,kedua-dua 表总数，不是第二；整句识别,动词;公共事务表达;phrase
+ms-1152,ms,ms-15,Kita bertanggungjawab menjaga kebersihan.,我们有责任保持清洁。,Kita bertanggungjawab menjaga kebersihan.,我们有责任保持清洁。,ber- + tanggungjawab；宾语 kebersihan,动词;公共事务表达;phrase
+ms-1153,ms,ms-15,Baju ini terlalu besar.,这件衣服太大。,Baju ini terlalu besar.,这件衣服太大。,本课整体识别 terlalu besar，ms-16 系统学程度词,动词;公共事务表达;phrase
+ms-1154,ms,ms-15,Bantuan sudah sampai kepada penduduk.,援助已经送到居民手中。,Bantuan sudah sampai kepada penduduk.,援助已经送到居民手中。,sampai 不及物，接受者由 kepada 引出,动词;公共事务表达;phrase
+ms-1155,ms,ms-15,Sila utamakan keselamatan semua orang.,请优先考虑所有人的安全。,Sila utamakan keselamatan semua orang.,请优先考虑所有人的安全。,utama + -kan；祈使省略 meN-；宾语 keselamatan,动词;公共事务表达;phrase
+ms-1156,ms,ms-15,adil,公正的,Ketua itu adil kepada semua pekerja.,那位负责人公正对待所有员工。,形容词，后置,形容词;社会;补充
+ms-1157,ms,ms-15,miskin,贫困的,Keluarga miskin itu menerima bantuan.,那个贫困家庭得到援助。,形容词，后置,形容词;社会;补充
+ms-1158,ms,ms-15,kuat,强壮的；强的,Pekerja itu kuat dan sihat.,那位员工强壮健康。,形容词，后置,形容词;社会;补充
+ms-1159,ms,ms-15,aman,安宁的,Kampung itu aman selepas banjir.,洪水过后，那个村庄安宁。,形容词，后置,形容词;社会;补充
+ms-1160,ms,ms-15,prihatin,关心他人的,Majikan itu prihatin terhadap pekerja.,那位雇主关心员工。,形容词，后置；常接 terhadap,形容词;社会;补充
+ms-1161,ms,ms-16,paling,最,Beg ini paling ringan antara semua beg itu.,这个包是那些包中最轻的。,置于形容词前；比较范围可由 antara 引出,副词;比较与程度
+ms-1162,ms,ms-16,amat,非常,Bilik ini amat kemas.,这个房间非常整洁。,置于形容词前，也可置于部分形容词后,副词;比较与程度
+ms-1163,ms,ms-16,terlalu,太；过于,Kerusi ini terlalu tinggi untuk adik.,这把椅子对弟弟来说太高。,表示超过合适程度，置于形容词前,副词;比较与程度
+ms-1164,ms,ms-16,agak,相当；有点,Meja itu agak berat.,那张桌子有点重。,置于形容词前，缓和程度,副词;比较与程度
+ms-1165,ms,ms-16,semakin,越来越,Bilik itu semakin kemas.,那个房间越来越整洁。,置于形容词或变化谓语前,副词;比较与程度
+ms-1166,ms,ms-16,sungguh,十分；真是,Lukisan itu sungguh indah.,那幅画真美。,程度副词，可置于形容词前,副词;比较与程度
+ms-1167,ms,ms-16,teramat,极为,Alat itu teramat penting untuk pekerja.,那个工具对员工极为重要。,程度副词，表示很高程度,副词;比较与程度
+ms-1168,ms,ms-16,terlampau,过于,Beg itu terlampau berat untuk saya.,那个包对我来说太重。,程度副词，与 terlalu 相近,副词;比较与程度
+ms-1169,ms,ms-16,begitu,那么；如此,Rumah itu begitu besar.,那所房子那么大。,本课修饰形容词，表示程度,副词;比较与程度
+ms-1170,ms,ms-16,sebegitu,那样地,Kotak ini tidak sebegitu berat.,这个箱子没有那么重。,se- + begitu；本课用来指程度,副词;比较与程度
+ms-1171,ms,ms-16,setara,同等的,Mutu dua jenama itu setara.,那两个品牌的质量同等。,形容词，后置；se- + tara；常接 dengan,形容词;比较与程度
+ms-1172,ms,ms-16,sebanding,相称的；可比的,Harga beg itu sebanding dengan mutunya.,那个包的价格与其质量相称。,形容词，后置；se- + banding；常接 dengan,形容词;比较与程度
+ms-1173,ms,ms-16,tampan,英俊的,Lelaki tampan itu jurugambar.,那个英俊的男子是摄影师。,形容词，后置,形容词;外貌与性格
+ms-1174,ms,ms-16,comel,可爱的,Kucing comel itu tidur di kerusi.,那只可爱的猫在椅子上睡觉。,形容词，后置,形容词;外貌与性格
+ms-1175,ms,ms-16,kemas,整洁的,Pakaian pekerja itu kemas.,那位员工的衣着整洁。,形容词，后置,形容词;外貌与性格
+ms-1176,ms,ms-16,kurus,瘦的,Lelaki kurus itu kuat.,那个瘦男子很强壮。,形容词，后置,形容词;外貌与性格
+ms-1177,ms,ms-16,gemuk,胖的,Kucing gemuk itu kucing Siti.,那只胖猫是西蒂的猫。,形容词，后置,形容词;外貌与性格
+ms-1178,ms,ms-16,langsing,苗条的,Penari langsing itu sedang berlatih.,那位苗条的舞者正在练习。,形容词，后置,形容词;外貌与性格
+ms-1179,ms,ms-16,tegap,健壮的；挺拔的,Pemain itu tinggi dan tegap.,那位球员高大健壮。,形容词，后置,形容词;外貌与性格
+ms-1180,ms,ms-16,gagah,强健的,Lelaki gagah itu mengangkat kotak.,那个强健的男子搬起箱子。,形容词，后置,形容词;外貌与性格
+ms-1181,ms,ms-16,anggun,优雅的,Penari itu kelihatan anggun.,那位舞者看起来优雅。,形容词，后置,形容词;外貌与性格
+ms-1182,ms,ms-16,manis,甜美的；可人的,Penampilan penari itu manis dan anggun.,那位舞者的仪表可人而优雅。,形容词，后置；本课描写面容,形容词;外貌与性格
+ms-1183,ms,ms-16,hodoh,难看的,Corak itu kelihatan hodoh pada beg ini.,那个图案放在这个包上显得难看。,形容词，后置；描述人物时注意礼貌,形容词;外貌与性格
+ms-1184,ms,ms-16,ceria,开朗的,Guru ceria itu disukai pelajar.,那位开朗的老师受到学生喜爱。,形容词，后置,形容词;外貌与性格
+ms-1185,ms,ms-16,peramah,健谈友善的,Pustakawan peramah itu selalu membantu kami.,那位健谈友善的图书管理员总帮助我们。,形容词，后置；pe- + ramah,形容词;外貌与性格
+ms-1186,ms,ms-16,pendiam,寡言的,Pelajar pendiam itu teliti dalam kerja.,那位寡言的学生做事仔细。,形容词，后置；pen- + diam,形容词;外貌与性格
+ms-1187,ms,ms-16,ramah,友好的,Pekerja itu ramah kepada tetamu.,那位员工友好对待客人。,形容词，后置,形容词;外貌与性格
+ms-1188,ms,ms-16,sopan,有礼貌的,Pelajar sopan itu menghormati guru.,那位有礼貌的学生尊重老师。,形容词，后置,形容词;外貌与性格
+ms-1189,ms,ms-16,sabar,耐心的,Guru sabar itu menjelaskan soalan semula.,那位耐心的老师再次说明题目。,形容词，后置,形容词;外貌与性格
+ms-1190,ms,ms-16,jujur,诚实的,Peniaga jujur itu memberikan maklumat yang jelas.,那位诚实的商人提供清楚的信息。,形容词，后置,形容词;外貌与性格
+ms-1191,ms,ms-16,rajin,勤奋的,Pekerja rajin itu datang awal.,那位勤奋的员工早早到来。,形容词，后置,形容词;外貌与性格
+ms-1192,ms,ms-16,malas,懒惰的,Pelajar itu malas membuat latihan.,那个学生懒得做练习。,形容词，后置,形容词;外貌与性格
+ms-1193,ms,ms-16,berani,勇敢的,Sukarelawan berani itu menyelamatkan mangsa.,那位勇敢的志愿者营救受灾者。,形容词，后置；整体词，不拆成 ber- + ani,形容词;外貌与性格
+ms-1194,ms,ms-16,pemalu,害羞的,Pelajar pemalu itu duduk di sebelah ibu.,那个害羞的学生坐在母亲旁边。,形容词，后置；pe- + malu,形容词;外貌与性格
+ms-1195,ms,ms-16,sombong,傲慢的,Ketua itu tidak sombong kepada pekerja.,那位负责人对员工不傲慢。,形容词，后置,形容词;外貌与性格
+ms-1196,ms,ms-16,rendah hati,谦虚的,Penulis itu bijak dan rendah hati.,那位作者聪明而谦虚。,形容词，后置；固定性格短语,形容词;外貌与性格
+ms-1197,ms,ms-16,murah hati,慷慨的,Peniaga murah hati itu menyumbang makanan.,那位慷慨的商人捐献食物。,形容词，后置；固定性格短语,形容词;外貌与性格
+ms-1198,ms,ms-16,baik hati,善良的,Guru baik hati itu membantu keluarga miskin.,那位善良的老师帮助贫困家庭。,形容词，后置；固定性格短语,形容词;外貌与性格
+ms-1199,ms,ms-16,cermat,谨慎仔细的,Pekerja cermat itu memeriksa alat sebelum bekerja.,那位谨慎的员工工作前检查工具。,形容词，后置,形容词;外貌与性格
+ms-1200,ms,ms-16,teliti,细致的,Pemeriksa teliti itu membaca semua dokumen.,那位细致的检查员阅读所有文件。,形容词，后置,形容词;外貌与性格
+ms-1201,ms,ms-16,bijak,聪明的,Pelajar bijak itu menyelesaikan masalah.,那位聪明的学生解决问题。,形容词，后置,形容词;外貌与性格
+ms-1202,ms,ms-16,kreatif,有创造力的,Pelukis kreatif itu menghasilkan corak baru.,那位有创造力的画家创作出新图案。,形容词，后置；英语借词,形容词;外貌与性格;英语借词
+ms-1203,ms,ms-16,rupa,外观；容貌,Rupa bangunan itu indah dan kemas.,那座建筑的外观美观整洁。,量词 通常不用量词,名词;物品与属性
+ms-1204,ms,ms-16,watak,性格,Watak Ali tidak sama dengan watak adiknya.,阿里的性格与弟弟不同。,量词 通常不用量词,名词;物品与属性
+ms-1205,ms,ms-16,sifat,性质；品性,Sifat jujur penting dalam pekerjaan.,诚实的品性在工作中很重要。,量词 种用 satu sifat,名词;物品与属性
+ms-1206,ms,ms-16,personaliti,个性,Personaliti guru itu ramah dan ceria.,那位老师的个性友好开朗。,量词 通常不用量词；英语借词,名词;物品与属性;英语借词
+ms-1207,ms,ms-16,penampilan,仪表；呈现的外貌,Penampilan pekerja itu kemas.,那位员工仪表整洁。,peN- + tampil + -an，t 脱落；量词 通常不用量词,名词;物品与属性
+ms-1208,ms,ms-16,gaya,风格；姿态,Gaya penulisan beliau jelas dan mudah.,他的写作风格清楚易懂。,量词 种用 satu gaya,名词;物品与属性
+ms-1209,ms,ms-16,saiz,大小；尺码,Saiz baju ini sama dengan baju itu.,这件衣服的尺码和那件一样。,量词 个用 satu saiz；英语借词,名词;物品与属性;英语借词
+ms-1210,ms,ms-16,bentuk,形状,Bentuk meja ini sama dengan meja itu.,这张桌子的形状与那张桌子相同。,量词 种用 satu bentuk,名词;物品与属性
+ms-1211,ms,ms-16,corak,图案,Corak pada kain itu cantik.,那块布上的图案漂亮。,量词 种用 satu corak,名词;物品与属性
+ms-1212,ms,ms-16,permukaan,表面,Permukaan meja ini bersih.,这张桌子的表面干净。,per- + muka + -an；量词 通常不用量词,名词;物品与属性
+ms-1213,ms,ms-16,ketebalan,厚度,Ketebalan buku itu menyebabkan beg berat.,那本书的厚度使包很重。,ke- + tebal + -an；量词 通常不用量词,名词;物品与属性
+ms-1214,ms,ms-16,ketinggian,高度,Ketinggian meja itu diukur oleh pekerja.,那张桌子的高度由员工测量。,ke- + tinggi + -an；量词 通常不用量词,名词;物品与属性
+ms-1215,ms,ms-16,kelebaran,宽度,Kelebaran pintu itu cukup untuk meja ini.,那扇门的宽度足以让这张桌子通过。,ke- + lebar + -an；量词 通常不用量词,名词;物品与属性
+ms-1216,ms,ms-16,kepanjangan,长度,Kepanjangan kain itu sudah diukur.,那块布的长度已经量好。,ke- + panjang + -an；量词 通常不用量词,名词;物品与属性
+ms-1217,ms,ms-16,ketahanan,耐用性,Ketahanan kasut ini amat baik.,这双鞋的耐用性很好。,ke- + tahan + -an；量词 通常不用量词,名词;物品与属性
+ms-1218,ms,ms-16,keselesaan,舒适度,Keselesaan kerusi itu penting bagi saya.,那把椅子的舒适度对我很重要。,ke- + selesa + -an；量词 通常不用量词,名词;物品与属性
+ms-1219,ms,ms-16,kecekapan,效率；熟练程度,Kecekapan pekerja itu semakin baik.,那位员工的熟练程度越来越好。,ke- + cekap + -an；量词 通常不用量词,名词;物品与属性
+ms-1220,ms,ms-16,kelajuan,速度,Kelajuan kereta itu dikurangkan oleh pemandu.,那辆车的速度被司机降低。,ke- + laju + -an；量词 通常不用量词,名词;物品与属性
+ms-1221,ms,ms-16,reka bentuk,设计,Reka bentuk beg itu mudah dan kemas.,那个包的设计简洁整齐。,名词短语；量词 种用 satu reka bentuk,名词;物品与属性
+ms-1222,ms,ms-16,jenama,品牌,Jenama ini dipilih kerana mutunya.,这个品牌因质量而被选中。,量词 个用 satu jenama,名词;物品与属性
+ms-1223,ms,ms-16,menyerupai,像；类似,Corak itu menyerupai daun.,那个图案像树叶。,meN- + serupa + -i → menyerupai，s 脱落；词根 serupa；及物；常见宾语 daun,动词;描述与比较动词
+ms-1224,ms,ms-16,menyesuaikan,调整使适合,Kami menyesuaikan saiz meja dengan bilik.,我们调整桌子的大小以适合房间。,meN- + sesuai + -kan → menyesuaikan，s 脱落；及物；常见宾语 saiz,动词;描述与比较动词
+ms-1225,ms,ms-16,mencantikkan,使美观,Bunga itu mencantikkan bilik.,那些花使房间更美观。,meN- + cantik + -kan → mencantikkan，c 保留，双 k；及物；常见宾语 bilik,动词;描述与比较动词
+ms-1226,ms,ms-16,mengemaskan,整理,Ali mengemaskan pakaian sebelum keluar.,阿里出门前整理衣着。,meN- + kemas + -kan → mengemaskan，k 脱落；及物；常见宾语 pakaian,动词;描述与比较动词
+ms-1227,ms,ms-16,menonjol,突出；显眼,Corak merah itu menonjol pada kain putih.,那个红色图案在白布上很显眼。,meN- + tonjol → menonjol，t 脱落；本课不及物,动词;描述与比较动词
+ms-1228,ms,ms-16,menghias,装饰,Siti menghias bilik dengan bunga.,西蒂用花装饰房间。,meN- + hias → menghias，h 保留；及物；常见宾语 bilik,动词;描述与比较动词
+ms-1229,ms,ms-16,membezakan,区分,Kita membezakan dua beg itu dengan melihat coraknya.,我们通过观察图案区分那两个包。,meN- + beza + -kan → membezakan，b 保留；及物；常见宾语 beg,动词;描述与比较动词
+ms-1230,ms,ms-16,bertambah,增加；变得更,Bilik itu bertambah cantik selepas dihias.,那个房间装饰后变得更漂亮。,ber- + tambah；词根 tambah；不及物,动词;描述与比较动词
+ms-1231,ms,ms-16,Beg ini lebih ringan daripada beg itu.,这个包比那个包轻。,Beg ini lebih ringan daripada beg itu.,这个包比那个包轻。,lebih + 形容词 + daripada；比较句整体识别,动词;比较表达;phrase
+ms-1232,ms,ms-16,Meja ini sama tinggi dengan meja itu.,这张桌子和那张桌子一样高。,Meja ini sama tinggi dengan meja itu.,这张桌子和那张桌子一样高。,sama + 形容词 + dengan；比较句整体识别,动词;比较表达;phrase
+ms-1233,ms,ms-16,Ini bilik terbesar di rumah kami.,这是我们家最大的房间。,Ini bilik terbesar di rumah kami.,这是我们家最大的房间。,ter- + besar，最高级；比较句整体识别,动词;比较表达;phrase
+ms-1234,ms,ms-16,"Semakin banyak latihan, semakin baik tulisan saya.",练习越多，我的文字就越好。,"Semakin banyak latihan, semakin baik tulisan saya.",练习越多，我的文字就越好。,semakin…semakin… 表两项同步变化,动词;比较表达;phrase
+ms-1235,ms,ms-16,Kasut ini tidak semahal kasut itu.,这双鞋没有那双贵。,Kasut ini tidak semahal kasut itu.,这双鞋没有那双贵。,se- + mahal，否定同等比较；比较句整体识别,动词;比较表达;phrase
+ms-1236,ms,ms-16,tahan lasak,耐磨耐用的,Beg tahan lasak itu digunakan oleh pekerja.,那个耐磨的包由员工使用。,形容词，后置；固定属性短语,形容词;物品属性;补充
+ms-1237,ms,ms-16,lembut,柔软的,Kain lembut itu untuk baju adik.,那块柔软的布用来给弟弟做衣服。,形容词，后置,形容词;物品属性;补充
+ms-1238,ms,ms-16,keras,硬的,Kayu keras itu digunakan untuk meja.,那块硬木用来做桌子。,形容词，后置,形容词;物品属性;补充
+ms-1239,ms,ms-16,tebal,厚的,Buku tebal itu berat.,那本厚书很重。,形容词，后置,形容词;物品属性;补充
+ms-1240,ms,ms-16,nipis,薄的,Kertas nipis itu di dalam fail.,那张薄纸在文件夹里。,形容词，后置,形容词;物品属性;补充

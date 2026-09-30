@@ -244,3 +244,8 @@ M2 的构词分类参考 [DBP 的 nyanyi 词条](https://prpm.dbp.gov.my/cari1?k
 外部修改检测按本次约定只比较卡片条数与 `updatedAt`：同条数、同时间戳的内容修改无法发现；检测到写入之间也没有跨进程原子锁。下载 HTML 无文件句柄，无法检测或直接保护原文件。
 
 v1 到 **2026-12-06 复盘前只修 bug，不加功能**。先按现有页面学习，再在复盘时决定是否调整。
+
+
+任务 M4 追加马来语 ms-13 至 ms-16（第 13–16 周，2026 年 12 月 28 日至 2027 年 01 月 24 日）：每课 80 条词条、155 张卡，共 320 条、620 张卡，id 为 `ms-0921` 至 `ms-1240`。每课 6 道语法或拼写题与 4 道共用阅读题；四篇课内阅读为 170–230 词、14–18 句。阅读线追加 ms-r23 至 ms-r30，共 8 篇，按周分别为 170–190、180–200、195–215、210–230 词，句数遵循各篇任务区间。任务 M4 新增 16 项验证，覆盖日期与时长、分类配额、连续 id、CSV 同步、front 去重、词类注释与拼写挖空、马来西亚拼写、题目与篇幅、词汇范围、HTML、旧行原样与浏览不改进度。`msForms` 按周开放 peN-、-an、peN-an、per-an、ke-an、se-，复用 ter- 拼写表示最高级，并检查组合、提前开放和错误拼写。原全站固定计数改用动态数量或原批次区段，M4 检查仅限定本轮课次及 id 区间，以便后续合并。 本轮收工运行 `node srs/verify.cjs`，214 项全部通过（0 失败）；5357 条旧词卡原行、旧课程与阅读、完整 state-data 和页面行为与开工 Git 基线逐项一致。
+
+M4 构词和词义核对参考 DBP 的 [pengecat 词族](https://prpm.dbp.gov.my/Cari1?d=73980&keyword=pengecat)、[kerja 派生形式](https://prpm.dbp.gov.my/Cari1?d=175768&keyword=bekerja)、[ke-an 状态用法](https://prpm.dbp.gov.my/Cari1?d=175768&keyword=kedengaran+1)、[kepanasan 释义](https://prpm.dbp.gov.my/Cari1?d=206468&keyword=kepanasan)与 [kebesaran 释义](https://prpm.dbp.gov.my/Cari1?d=175768&keyword=besar)。按马来西亚标准义说明 kebesaran，不把它直接当作「太大」；kelihatan、kedengaran 按感知或被动状态讲解，避免一律标为普通形容词。课文、阅读和题目为本轮编写，新闻场景为教学虚构，未逐页对照《Complete Malay》。
