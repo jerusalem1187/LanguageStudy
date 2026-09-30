@@ -203,3 +203,203 @@ uz-0201,uz,uz-05,Aziz ertalab ishlaydi.,阿齐兹早上工作。,Aziz ertalab is
 uz-0202,uz,uz-05,Men kechqurun yozmayman.,我晚上不写字。,Men kechqurun yozmayman. Bobur uyda ishlaydi.,我晚上不写字。博布尔在家工作。,固定短语；现在－将来时与否定式，只生成识别卡,phrase
 uz-0203,uz,uz-05,Nilufar maktabga boradi.,妮露法尔去学校。,Nilufar maktabga boradi. Bobur uyda ishlaydi.,妮露法尔去学校。博布尔在家工作。,固定短语；现在－将来时与否定式，只生成识别卡,phrase
 uz-0204,uz,uz-05,Biz bugun birga kelamiz.,我们今天一起来。,Biz bugun birga kelamiz. Bobur uyda ishlaydi.,我们今天一起来。博布尔在家工作。,固定短语；现在－将来时与否定式，只生成识别卡,phrase
+uz-0205,uz,uz-06,non,面包,Men bugun non va sut olaman.,我今天买面包和牛奶。,名词；复数 nonlar；属格 nonning；宾格 nonni；第三人称领属 noni,vocabulary
+uz-0206,uz,uz-06,sut,牛奶,Nilufar ertalab sut ichadi.,妮露法尔早上喝牛奶。,名词；复数 sutlar；属格 sutning；宾格 sutni；第三人称领属 suti,vocabulary
+uz-0207,uz,uz-06,tuxum,鸡蛋,Aziz bugun tuxum va non oladi.,阿齐兹今天买鸡蛋和面包。,名词；复数 tuxumlar；属格 tuxumning；宾格 tuxumni；第三人称领属 tuxumi,vocabulary
+uz-0208,uz,uz-06,guruch,米,Men bozordan guruch olaman.,我从市场买米。,名词；复数 guruchlar；属格 guruchning；宾格 guruchni；第三人称领属 guruchi,vocabulary
+uz-0209,uz,uz-06,goʻsht,肉,Bobur bugun goʻsht yemaydi.,博布尔今天不吃肉。,名词；复数 goʻshtlar；属格 goʻshtning；宾格 goʻshtni；第三人称领属 goʻshti,vocabulary
+uz-0210,uz,uz-06,baliq,鱼,Biz kechqurun baliq yeymiz.,我们晚上吃鱼。,名词；复数 baliqlar；属格 baliqning；宾格 baliqni；第三人称领属 baligʻi,vocabulary
+uz-0211,uz,uz-06,olma,苹果,Dilnoza menga olma beradi.,迪尔诺扎给我苹果。,名词；复数 olmalar；属格 olmaning；宾格 olmani；第三人称领属 olmasi,vocabulary
+uz-0212,uz,uz-06,banan,香蕉,Men bananni bugun yeyman.,我今天吃香蕉。,名词；复数 bananlar；属格 bananning；宾格 bananni；第三人称领属 banani,vocabulary
+uz-0213,uz,uz-06,uzum,葡萄,"Bu uzum yaxshi, men olaman.",这些葡萄很好，我要买。,名词；复数 uzumlar；属格 uzumning；宾格 uzumni；第三人称领属 uzumi,vocabulary
+uz-0214,uz,uz-06,sabzi,胡萝卜,Nilufar bozordan sabzi oladi.,妮露法尔从市场买胡萝卜。,名词；复数 sabzilar；属格 sabzining；宾格 sabzini；第三人称领属 sabzisi,vocabulary
+uz-0215,uz,uz-06,piyoz,洋葱,Men piyozni oshxonaga olaman.,我把洋葱拿到厨房。,名词；复数 piyozlar；属格 piyozning；宾格 piyozni；第三人称领属 piyozi,vocabulary
+uz-0216,uz,uz-06,kartoshka,土豆,Aziz kartoshkani bozordan oladi.,阿齐兹从市场买土豆。,名词；复数 kartoshkalar；属格 kartoshkaning；宾格 kartoshkani；第三人称领属 kartoshkasi,vocabulary
+uz-0217,uz,uz-06,pomidor,番茄,"Bu pomidor yaxshi, men olaman.",这个番茄好，我要买。,名词；复数 pomidorlar；属格 pomidorning；宾格 pomidorni；第三人称领属 pomidori,vocabulary
+uz-0218,uz,uz-06,bodring,黄瓜,Bobur bodringni bugun yeydi.,博布尔今天吃黄瓜。,名词；复数 bodringlar；属格 bodringning；宾格 bodringni；第三人称领属 bodringi,vocabulary
+uz-0219,uz,uz-06,choy,茶,Onam ertalab choy ichadi.,我母亲早上喝茶。,名词；复数 choylar；属格 choyning；宾格 choyni；第三人称领属 choyi,vocabulary
+uz-0220,uz,uz-06,qahva,咖啡,Oʻqituvchi kechqurun qahva ichmaydi.,教师晚上不喝咖啡。,名词；复数 qahvalar；属格 qahvaning；宾格 qahvani；第三人称领属 qahvasi,vocabulary
+uz-0221,uz,uz-06,suv,水,Men hozir suv ichaman.,我现在喝水。,名词；复数 suvlar；属格 suvning；宾格 suvni；第三人称领属 suvi,vocabulary
+uz-0222,uz,uz-06,shakar,糖,Bu choyga shakar kerak.,这杯茶需要糖。,名词；复数 shakarlar；属格 shakarning；宾格 shakarni；第三人称领属 shakari,vocabulary
+uz-0223,uz,uz-06,tuz,盐,Bu ovqatga tuz kerak.,这份饭菜需要盐。,名词；复数 tuzlar；属格 tuzning；宾格 tuzni；第三人称领属 tuzi,vocabulary
+uz-0224,uz,uz-06,ovqat,饭菜,Biz oshxonada ovqat yeymiz.,我们在食堂吃饭。,名词；复数 ovqatlar；属格 ovqatning；宾格 ovqatni；第三人称领属 ovqati,vocabulary
+uz-0225,uz,uz-06,narx,价格,Bu kitobning narxi yaxshi.,这本书的价格合适。,名词；复数 narxlar；属格 narxning；宾格 narxni；第三人称领属 narxi,vocabulary
+uz-0226,uz,uz-06,pul,钱,Mening pulim sumkada bor.,我的钱在包里。,名词；复数 pullar；属格 pulning；宾格 pulni；第三人称领属 puli,vocabulary
+uz-0227,uz,uz-06,doʻkon,商店,Bu doʻkonda non bor.,这家店有面包。,名词；复数 doʻkonlar；属格 doʻkonning；宾格 doʻkonni；第三人称领属 doʻkoni,vocabulary
+uz-0228,uz,uz-06,sotuvchi,售货员,Sotuvchi menga kitob beradi.,售货员给我一本书。,名词；复数 sotuvchilar；属格 sotuvchining；宾格 sotuvchini；第三人称领属 sotuvchisi,vocabulary
+uz-0229,uz,uz-06,xaridor,顾客,Xaridor bozordan olma oladi.,顾客从市场买苹果。,名词；复数 xaridorlar；属格 xaridorning；宾格 xaridorni；第三人称领属 xaridori,vocabulary
+uz-0230,uz,uz-06,arzon,便宜的,"Bu non arzon, men olaman.",这个面包便宜，我要买。,形容词；作定语通常不变形,vocabulary
+uz-0231,uz,uz-06,qimmat,贵的,"Bu qahva qimmat, lekin yaxshi.",这杯咖啡贵，但很好。,形容词；作定语通常不变形,vocabulary
+uz-0232,uz,uz-06,kerak,需要,Menga bugun yangi daftar kerak.,我今天需要一本新本子。,需要的谓语词；按本课句型使用,vocabulary
+uz-0233,uz,uz-06,yangi,新的,Aziz yangi kitobni oʻqiydi.,阿齐兹读新书。,形容词；作定语通常不变形,vocabulary
+uz-0234,uz,uz-06,eski,旧的,"Bu eski stol, lekin yaxshi.",这张桌子旧，但很好。,形容词；作定语通常不变形,vocabulary
+uz-0235,uz,uz-06,sotib olmoq,购买,Men doʻkonda choy sotib olaman.,我在商店买茶。,动词；词干 sotib ol-；现在－将来时一人称 sotib olaman、三人称 sotib oladi；sotib olaman、sotib oladi,vocabulary
+uz-0236,uz,uz-06,soʻramoq,询问,Men sotuvchidan narxni soʻrayman.,我向售货员问价格。,动词；词干 soʻra-；现在－将来时一人称 soʻrayman、三人称 soʻraydi,vocabulary
+uz-0237,uz,uz-06,Menga non kerak.,我需要面包。,"Menga non kerak, sut ham kerak.",我需要面包，也需要牛奶。,固定句型；整句只生成识别卡,phrase
+uz-0238,uz,uz-06,Bu kitobning narxi yaxshi.,这本书价格合适。,"Bu kitobning narxi yaxshi, men olaman.",这本书价格合适，我要买。,固定句型；整句只生成识别卡,phrase
+uz-0239,uz,uz-06,Men doʻkondan sut olaman.,我从商店买牛奶。,"Men doʻkondan sut olaman, Nilufar choy oladi.",我从商店买牛奶，妮露法尔买茶。,固定句型；整句只生成识别卡,phrase
+uz-0240,uz,uz-06,Shu olmani olaman.,我买这个苹果。,"Shu olmani olaman, Bobur banan oladi.",我买这个苹果，博布尔买香蕉。,固定句型；整句只生成识别卡,phrase
+uz-0241,uz,uz-06,Men suv ichaman.,我喝水。,"Men suv ichaman, Bobur choy ichadi.",我喝水，博布尔喝茶。,固定句型；整句只生成识别卡,phrase
+uz-0242,uz,uz-06,meva,水果,Men bozordan meva olaman.,我从市场买水果。,名词；复数 mevalar；属格 mevaning；宾格 mevani；第三人称领属 mevasi,vocabulary
+uz-0243,uz,uz-06,sabzavot,蔬菜,Biz har kuni sabzavot yeymiz.,我们每天吃蔬菜。,名词；复数 sabzavotlar；属格 sabzavotning；宾格 sabzavotni；第三人称领属 sabzavoti,vocabulary
+uz-0244,uz,uz-06,likopcha,盘子,Likopchada bitta olma bor.,盘子里有一个苹果。,名词；复数 likopchalar；属格 likopchaning；宾格 likopchani；第三人称领属 likopchasi；bitta 表一个；在 likopchada bitta olma bor 中整体使用,vocabulary
+uz-0245,uz,uz-07,kecha,昨天,Kecha Aziz uyda ishladi.,昨天阿齐兹在家工作。,时间副词；按本课句型使用,vocabulary
+uz-0246,uz,uz-07,oʻtgan,过去的,Oʻtgan hafta men ishladim.,上周我工作了。,形容词；作定语通常不变形,vocabulary
+uz-0247,uz,uz-07,hafta,周,Bu hafta Nilufar uyda ishlaydi.,这周妮露法尔在家工作。,名词；复数 haftalar；属格 haftaning；宾格 haftani；第三人称领属 haftasi；oʻtgan hafta 表上周,vocabulary
+uz-0248,uz,uz-07,yil,年,Bir yil oldin Bobur Toshkentda yashadi.,一年前博布尔住在塔什干。,名词；复数 yillar；属格 yilning；宾格 yilni；第三人称领属 yili,vocabulary
+uz-0249,uz,uz-07,kun,天,Kecha kun yaxshi edi.,昨天是美好的一天。,名词；复数 kunlar；属格 kunning；宾格 kunni；第三人称领属 kuni；kuni 表某天,vocabulary
+uz-0250,uz,uz-07,tun,夜晚,Kecha tunda Bobur uyda edi.,昨晚博布尔在家。,名词；复数 tunlar；属格 tunning；宾格 tunni；第三人称领属 tuni,vocabulary
+uz-0251,uz,uz-07,sayohat,旅行,Oʻtgan hafta biz sayohat qildik.,上周我们旅行了。,名词；复数 sayohatlar；属格 sayohatning；宾格 sayohatni；第三人称领属 sayohati,vocabulary
+uz-0252,uz,uz-07,uchrashuv,见面,Kecha bizning uchrashuvimiz bor edi.,昨天我们有一次见面。,名词；复数 uchrashuvlar；属格 uchrashuvning；宾格 uchrashuvni；第三人称领属 uchrashuvi,vocabulary
+uz-0253,uz,uz-07,qoʻshni,邻居,Kecha uyimizda qoʻshni bor edi.,昨天我们家有邻居来。,名词；复数 qoʻshnilar；属格 qoʻshnining；宾格 qoʻshnini；第三人称领属 qoʻshnisi,vocabulary
+uz-0254,uz,uz-07,xat,信,Nilufar kecha menga xat yozdi.,妮露法尔昨天给我写了一封信。,名词；复数 xatlar；属格 xatning；宾格 xatni；第三人称领属 xati,vocabulary
+uz-0255,uz,uz-07,xabar,消息,Aziz kecha xabar oldi.,阿齐兹昨天收到消息。,名词；复数 xabarlar；属格 xabarning；宾格 xabarni；第三人称领属 xabari,vocabulary
+uz-0256,uz,uz-07,sovgʻa,礼物,Bobur menga sovgʻa berdi.,博布尔给了我一份礼物。,名词；复数 sovgʻalar；属格 sovgʻaning；宾格 sovgʻani；第三人称领属 sovgʻasi,vocabulary
+uz-0257,uz,uz-07,surat,照片,Dilnoza kecha surat koʻrdi.,迪尔诺扎昨天看了照片。,名词；复数 suratlar；属格 suratning；宾格 suratni；第三人称领属 surati,vocabulary
+uz-0258,uz,uz-07,dars,课,Kecha maktabda dars bor edi.,昨天学校有课。,名词；复数 darslar；属格 darsning；宾格 darsni；第三人称领属 darsi,vocabulary
+uz-0259,uz,uz-07,ish,工作,Men kecha ishni tugatdim.,我昨天完成了工作。,名词；复数 ishlar；属格 ishning；宾格 ishni；第三人称领属 ishi,vocabulary
+uz-0260,uz,uz-07,voqea,事情,Bu voqea kecha boʻldi.,这件事昨天发生了。,名词；复数 voqealar；属格 voqeaning；宾格 voqeani；第三人称领属 voqeasi,vocabulary
+uz-0261,uz,uz-07,bayram,节日,Oʻtgan hafta bayram bor edi.,上周有节日。,名词；复数 bayramlar；属格 bayramning；宾格 bayramni；第三人称领属 bayrami,vocabulary
+uz-0262,uz,uz-07,tugʻilgan kun,生日,Kecha Azizning tugʻilgan kuni edi.,昨天是阿齐兹的生日。,名词；复数 tugʻilgan kunlar；属格 tugʻilgan kunning；宾格 tugʻilgan kunni；第三人称领属 tugʻilgan kuni；tugʻilgan kuni 表某人的生日,vocabulary
+uz-0263,uz,uz-07,edi,曾是,Kecha u talaba edi.,昨天他还是学生。,过去时系词；按本课句型使用；edim 是第一人称过去名词谓语,vocabulary
+uz-0264,uz,uz-07,qilmoq,做,Men kecha uyda ish qildim.,我昨天在家做了工作。,动词；词干 qil-；现在－将来时一人称 qilaman、三人称 qiladi；过去时一人称 qildim、三人称 qildi；qilaman、qiladi、qildim、qildi、qildik、qilamiz,vocabulary
+uz-0265,uz,uz-07,uchrashmoq,见面,Kecha biz Nilufar bilan uchrashdik.,昨天我们见到了妮露法尔。,动词；词干 uchrash-；现在－将来时一人称 uchrashaman、三人称 uchrashadi；过去时一人称 uchrashdim、三人称 uchrashdi；uchrashaman、uchrashadi、uchrashdim、uchrashdi、uchrashdik、uchrashamiz,vocabulary
+uz-0266,uz,uz-07,sayr qilmoq,散步,Kecha men bogʻda sayr qildim.,昨天我在公园散了步。,动词；词干 sayr qil-；现在－将来时一人称 sayr qilaman、三人称 sayr qiladi；过去时一人称 sayr qildim、三人称 sayr qildi；sayr qilaman、sayr qiladi、sayr qildim、sayr qildi、sayr qilamiz、sayr qildik,vocabulary
+uz-0267,uz,uz-07,pishirmoq,烹调,Onam kecha ovqat pishirdi.,我母亲昨天做了饭。,动词；词干 pishir-；现在－将来时一人称 pishiraman、三人称 pishiradi；过去时一人称 pishirdim、三人称 pishirdi,vocabulary
+uz-0268,uz,uz-07,yubormoq,发送,Men kecha xat yubordim.,我昨天寄了信。,动词；词干 yubor-；现在－将来时一人称 yuboraman、三人称 yuboradi；过去时一人称 yubordim、三人称 yubordi,vocabulary
+uz-0269,uz,uz-07,topmoq,找到,Bobur kecha kalitni topdi.,博布尔昨天找到了钥匙。,动词；词干 top-；现在－将来时一人称 topaman、三人称 topadi；过去时一人称 topdim、三人称 topdi,vocabulary
+uz-0270,uz,uz-07,yoʻqotmoq,丢失,Aziz kecha kalitni yoʻqotdi.,阿齐兹昨天弄丢了钥匙。,动词；词干 yoʻqot-；现在－将来时一人称 yoʻqotaman、三人称 yoʻqotadi；过去时一人称 yoʻqotdim、三人称 yoʻqotdi,vocabulary
+uz-0271,uz,uz-07,tanimoq,认识,Men kecha sotuvchini tanidim.,我昨天认出了售货员。,动词；词干 tani-；现在－将来时一人称 taniyman、三人称 taniydi；过去时一人称 tanidim、三人称 tanidi,vocabulary
+uz-0272,uz,uz-07,eslamoq,想起,Men kecha eski doʻstimni esladim.,我昨天想起了老朋友。,动词；词干 esla-；现在－将来时一人称 eslayman、三人称 eslaydi；过去时一人称 esladim、三人称 esladi,vocabulary
+uz-0273,uz,uz-07,unutmoq,忘记,Bobur kecha kalitni unutdi.,博布尔昨天忘了带钥匙。,动词；词干 unut-；现在－将来时一人称 unutaman、三人称 unutadi；过去时一人称 unutdim、三人称 unutdi,vocabulary
+uz-0274,uz,uz-07,xursand,高兴的,Nilufar kecha xursand edi.,妮露法尔昨天很高兴。,形容词；作定语通常不变形,vocabulary
+uz-0275,uz,uz-07,charchagan,疲倦的,Aziz kecha kechqurun charchagan edi.,阿齐兹昨晚很累。,形容词；作定语通常不变形,vocabulary
+uz-0276,uz,uz-07,bilan,和；用,Men kecha Bobur bilan bordim.,我昨天和博布尔一起去了。,后置词；按本课句型使用,vocabulary
+uz-0277,uz,uz-07,birinchi,第一,Birinchi dars kecha edi.,第一节课在昨天。,序数词；按本课句型使用,vocabulary
+uz-0278,uz,uz-07,oxirgi,最后的,Oxirgi dars kecha edi.,最后一节课在昨天。,形容词；作定语通常不变形,vocabulary
+uz-0279,uz,uz-07,Keyin uyga qaytdim.,后来我回家了。,"Keyin uyga qaytdim, lekin uxlamadim.",后来我回家了，但没有睡。,固定句型；整句只生成识别卡,phrase
+uz-0280,uz,uz-07,Kecha kitob oʻqidim.,昨天我读了书。,"Kecha kitob oʻqidim, keyin xat yozdim.",昨天我读了书，然后写了信。,固定句型；整句只生成识别卡,phrase
+uz-0281,uz,uz-07,Aziz talaba edi.,阿齐兹曾是学生。,"Aziz talaba edi, hozir oʻqituvchi.",阿齐兹曾是学生，现在是教师。,固定句型；整句只生成识别卡,phrase
+uz-0282,uz,uz-07,Biz kecha uchrashdik.,我们昨天见面了。,Biz kecha uchrashdik va choy ichdik.,我们昨天见面并喝了茶。,固定句型；整句只生成识别卡,phrase
+uz-0283,uz,uz-07,Men kecha bormadim.,我昨天没去。,"Men kecha bormadim, Nilufar bordi.",我昨天没去，妮露法尔去了。,固定句型；整句只生成识别卡,phrase
+uz-0284,uz,uz-07,boʻlmoq,发生；成为,Bu voqea kecha boʻldi.,这件事昨天发生了。,动词；词干 boʻl-；现在－将来时一人称 boʻlaman、三人称 boʻladi；过去时一人称 boʻldim、三人称 boʻldi；boʻldi、boʻladi、boʻlaman、boʻladi、boʻladi、boʻladi、boʻladi,vocabulary
+uz-0285,uz,uz-08,kim,谁,Kecha doʻkonda kim ishladi?,昨天谁在商店工作？,疑问词；按本课句型使用,vocabulary
+uz-0286,uz,uz-08,nima,什么,Aziz bugun nima oladi?,阿齐兹今天买什么？,疑问词；按本课句型使用,vocabulary
+uz-0287,uz,uz-08,qayer,哪里,Bu eski doʻkon qayerda?,这家旧商店在哪里？,疑问词；按本课句型使用,vocabulary
+uz-0288,uz,uz-08,qachon,什么时候,Nilufar qachon uyga qaytdi?,妮露法尔什么时候回家了？,疑问词；按本课句型使用,vocabulary
+uz-0289,uz,uz-08,nechta,多少个,Sizning nechta yangi kitobingiz bor?,您有多少本新书？,疑问词；按本课句型使用；ikkita 表两个；-ta 是计数形式，本课与 nechta 对照使用,vocabulary
+uz-0290,uz,uz-08,qancha,多少；多少钱,Bu qahva qancha turadi?,这杯咖啡多少钱？,疑问词；按本课句型使用,vocabulary
+uz-0291,uz,uz-08,nega,为什么,Nega Bobur kecha bormadi?,为什么博布尔昨天没去？,疑问词；按本课句型使用,vocabulary
+uz-0292,uz,uz-08,qanday,怎样的,Bu qanday yangi kitob?,这是一本怎样的新书？,疑问词；按本课句型使用,vocabulary
+uz-0293,uz,uz-08,qaysi,哪一个,Siz qaysi doʻkonga borasiz?,您去哪家商店？,疑问词；按本课句型使用,vocabulary
+uz-0294,uz,uz-08,emas,不是,"Men sotuvchi emasman, talabaman.",我不是售货员，是学生。,名词句否定词；按本课句型使用；emasman 是第一人称名词句否定,vocabulary
+uz-0295,uz,uz-08,oʻn bir,十一,Bu xonada oʻn bir kitob bor.,这里有十一本书。,数词；按本课句型使用,vocabulary
+uz-0296,uz,uz-08,oʻn ikki,十二,Azizda oʻn ikki daftar bor.,阿齐兹有十二本本子。,数词；按本课句型使用,vocabulary
+uz-0297,uz,uz-08,yigirma,二十,Mening sumkamda yigirma qalam bor.,我的包里有二十支笔。,数词；按本课句型使用,vocabulary
+uz-0298,uz,uz-08,oʻttiz,三十,Bu xonada oʻttiz kursi bor.,这个房间有三十把椅子。,数词；按本课句型使用,vocabulary
+uz-0299,uz,uz-08,ellik,五十,Kutubxonada ellik stol bor.,图书馆有五十张桌子。,数词；按本课句型使用,vocabulary
+uz-0300,uz,uz-08,sakson,八十,Maktabda sakson talaba bor.,学校有八十名学生。,数词；按本课句型使用,vocabulary
+uz-0301,uz,uz-08,yuz,一百,Bu bozorda yuz doʻkon bor.,这个市场有一百家商店。,数词；按本课句型使用,vocabulary
+uz-0302,uz,uz-08,ming,一千,Bu kitob yigirma ming soʻm turadi.,这本书卖两万苏姆。,数词；按本课句型使用,vocabulary
+uz-0303,uz,uz-08,soʻm,苏姆,Bu olma besh ming soʻm turadi.,这个苹果卖五千苏姆。,名词；复数 soʻmlar；属格 soʻmning；宾格 soʻmni；第三人称领属 soʻmi,vocabulary
+uz-0304,uz,uz-08,toʻlamoq,付款,Men bu kitobga yigirma ming soʻm toʻlayman.,我为这本书付两万苏姆。,动词；词干 toʻla-；现在－将来时一人称 toʻlayman、三人称 toʻlaydi；过去时一人称 toʻladim、三人称 toʻladi；表示价格时 turmoq 可作「价格为」，如 besh soʻm turadi,vocabulary
+uz-0305,uz,uz-08,dushanba,星期一,Dushanba kuni Aziz maktabga boradi.,星期一阿齐兹去学校。,星期名词；按本课句型使用,vocabulary
+uz-0306,uz,uz-08,seshanba,星期二,Seshanba kuni Nilufar uyda ishlaydi.,星期二妮露法尔在家工作。,星期名词；按本课句型使用,vocabulary
+uz-0307,uz,uz-08,chorshanba,星期三,Chorshanba kuni Bobur bogʻga boradi.,星期三博布尔去公园。,星期名词；按本课句型使用,vocabulary
+uz-0308,uz,uz-08,payshanba,星期四,Payshanba kuni Dilnoza kitob oʻqiydi.,星期四迪尔诺扎读书。,星期名词；按本课句型使用,vocabulary
+uz-0309,uz,uz-08,juma,星期五,Juma kuni biz birga uchrashamiz.,星期五我们一起见面。,星期名词；按本课句型使用,vocabulary
+uz-0310,uz,uz-08,shanba,星期六,Shanba kuni men bozorga boraman.,星期六我去市场。,星期名词；按本课句型使用,vocabulary
+uz-0311,uz,uz-08,yakshanba,星期日,Yakshanba kuni oilam uyda boʻladi.,星期日我家人在家。,星期名词；按本课句型使用,vocabulary
+uz-0312,uz,uz-08,yanvar,一月,Yanvar oyida Aziz uyda ishlaydi.,一月阿齐兹在家工作。,月份名词；按本课句型使用,vocabulary
+uz-0313,uz,uz-08,mart,三月,Mart oyida bogʻga boramiz.,三月我们去公园。,月份名词；按本课句型使用,vocabulary
+uz-0314,uz,uz-08,qirq,四十,Maktabda qirq yangi kitob bor.,学校有四十本新书。,数词；按本课句型使用,vocabulary
+uz-0315,uz,uz-08,oltmish,六十,Bu doʻkonda oltmish daftar bor.,这家店有六十本本子。,数词；按本课句型使用,vocabulary
+uz-0316,uz,uz-08,yetmish,七十,Kutubxonada yetmish eski kitob bor.,图书馆有七十本旧书。,数词；按本课句型使用,vocabulary
+uz-0317,uz,uz-08,toʻqson,九十,Kutubxonada toʻqson kitob bor.,图书馆有九十本书。,数词；按本课句型使用,vocabulary
+uz-0318,uz,uz-08,avgust,八月,Avgust oyida biz uyga qaytamiz.,八月我们回家。,月份名词；按本课句型使用,vocabulary
+uz-0319,uz,uz-08,oy,月,Mart oyida biz sayr qilamiz.,三月我们去散步。,名词；复数 oylar；属格 oyning；宾格 oyni；第三人称领属 oyi；oyida 表在某月；月名后接 oyida,vocabulary
+uz-0320,uz,uz-08,Bugun qaysi kun?,今天星期几？,"Bugun qaysi kun, Aziz?",阿齐兹，今天星期几？,固定句型；整句只生成识别卡,phrase
+uz-0321,uz,uz-08,Bu kitob qancha turadi?,这本书多少钱？,"Bu kitob qancha turadi, sotuvchi?",售货员，这本书多少钱？,固定句型；整句只生成识别卡,phrase
+uz-0322,uz,uz-08,Men sotuvchi emasman.,我不是售货员。,"Men sotuvchi emasman, talabaman.",我不是售货员，是学生。,固定句型；整句只生成识别卡,phrase
+uz-0323,uz,uz-08,Siz qachon qaytasiz?,您什么时候回来？,"Siz qachon qaytasiz, Nilufar?",妮露法尔，您什么时候回来？,固定句型；整句只生成识别卡,phrase
+uz-0324,uz,uz-08,Bu xonada nechta kitob bor?,这间房里有多少本书？,"Bu xonada nechta kitob bor, Aziz?",阿齐兹，这间房里有多少本书？,固定句型；整句只生成识别卡,phrase
+uz-0325,uz,uz-09,oq,白色的,Nilufarning oq sumkasi bor.,妮露法尔有一个白包。,形容词；作定语通常不变形；比较级 oqroq,vocabulary
+uz-0326,uz,uz-09,qora,黑色的,Boburning qora mashinasi bor.,博布尔有一辆黑车。,形容词；作定语通常不变形；比较级 qoraroq,vocabulary
+uz-0327,uz,uz-09,qizil,红色的,Bu qizil olma juda yaxshi.,这个红苹果很好。,形容词；作定语通常不变形；比较级 qizilroq,vocabulary
+uz-0328,uz,uz-09,koʻk,蓝色的,Dilnozaning koʻk daftari bor.,迪尔诺扎有一本蓝色本子。,形容词；作定语通常不变形；比较级 koʻkroq,vocabulary
+uz-0329,uz,uz-09,yashil,绿色的,Bogʻda yashil daraxtlar bor.,公园里有绿色的树。,形容词；作定语通常不变形；比较级 yashilroq,vocabulary
+uz-0330,uz,uz-09,sariq,黄色的,Bu sariq banan yaxshi.,这根黄香蕉很好。,形容词；作定语通常不变形；比较级 sariqroq,vocabulary
+uz-0331,uz,uz-09,daraxt,树,Bogʻda yashil daraxtlar bor.,公园里有绿色的树。,名词；复数 daraxtlar；属格 daraxtning；宾格 daraxtni；第三人称领属 daraxti,vocabulary
+uz-0332,uz,uz-09,osmon,天空,Bugun osmonda bulut bor.,今天天空有云。,名词；复数 osmonlar；属格 osmonning；宾格 osmonni；第三人称领属 osmoni,vocabulary
+uz-0333,uz,uz-09,rang,颜色,Bu sumkaning rangi qanday?,这个包是什么颜色？,名词；复数 ranglar；属格 rangning；宾格 rangni；第三人称领属 rangi,vocabulary
+uz-0334,uz,uz-09,katta,大的,"Toshkent katta shahar, Buxoro kichikroq.",塔什干是大城市，布哈拉小一些。,形容词；作定语通常不变形；比较级 kattaroq,vocabulary
+uz-0335,uz,uz-09,kichik,小的,"Bu kichik xona, lekin yaxshi.",这间房间小，但很好。,形容词；作定语通常不变形；比较级 kichikroq,vocabulary
+uz-0336,uz,uz-09,uzun,长的,Bu yoʻl juda uzun.,这条路很长。,形容词；作定语通常不变形；比较级 uzunroq,vocabulary
+uz-0337,uz,uz-09,qisqa,短的,Bu koʻcha ancha qisqa.,这条街比较短。,形容词；作定语通常不变形；比较级 qisqaroq,vocabulary
+uz-0338,uz,uz-09,baland,高的,Bu uy juda baland.,这栋房子很高。,形容词；作定语通常不变形；比较级 balandroq,vocabulary
+uz-0339,uz,uz-09,yogʻmoq,下雨；下雪,Bugun Toshkentda yomgʻir yogʻadi.,今天塔什干下雨。,动词；词干 yogʻ-；现在－将来时一人称 yogʻaman、三人称 yogʻadi；过去时一人称 yogʻdim、三人称 yogʻdi；yogʻadi 表下雨或下雪,vocabulary
+uz-0340,uz,uz-09,yosh,年轻的,"Aziz yosh oʻqituvchi, Bobur yoshroq.",阿齐兹是年轻教师，博布尔更年轻一些。,形容词；作定语通常不变形；比较级 yoshroq,vocabulary
+uz-0341,uz,uz-09,chiroyli,漂亮的,Nilufarning chiroyli rasmi bor.,妮露法尔有一张漂亮的画。,形容词；作定语通常不变形；比较级 chiroyliroq,vocabulary
+uz-0342,uz,uz-09,aqlli,聪明的,"Dilnoza aqlli talaba, u koʻp oʻqiydi.",迪尔诺扎是聪明的学生，她读很多书。,形容词；作定语通常不变形；比较级 aqlliroq,vocabulary
+uz-0343,uz,uz-09,mehribon,亲切的,Mening onam juda mehribon.,我母亲非常亲切。,形容词；作定语通常不变形；比较级 mehribonroq,vocabulary
+uz-0344,uz,uz-09,tinch,安静的,Bu xona juda tinch.,这间房间很安静。,形容词；作定语通常不变形；比较级 tinchroq,vocabulary
+uz-0345,uz,uz-09,issiq,热的,Bugun Toshkentda havo issiq.,今天塔什干天气热。,形容词；作定语通常不变形；比较级 issiqroq,vocabulary
+uz-0346,uz,uz-09,sovuq,冷的,Yanvar oyida Buxoro sovuq.,一月布哈拉很冷。,形容词；作定语通常不变形；比较级 sovuqroq,vocabulary
+uz-0347,uz,uz-09,iliq,暖和的,Mart oyida havo iliq.,三月天气暖和。,形容词；作定语通常不变形；比较级 iliqroq,vocabulary
+uz-0348,uz,uz-09,salqin,凉爽的,Kechqurun bogʻda havo salqin.,傍晚公园的天气凉爽。,形容词；作定语通常不变形；比较级 salqinroq,vocabulary
+uz-0349,uz,uz-09,yomgʻir,雨,Bugun Toshkentda yomgʻir yogʻadi.,今天塔什干下雨。,名词；复数 yomgʻirlar；属格 yomgʻirning；宾格 yomgʻirni；第三人称领属 yomgʻiri,vocabulary
+uz-0350,uz,uz-09,qor,雪,Yanvar oyida Samarqandda qor yogʻadi.,一月撒马尔罕下雪。,名词；复数 qorlar；属格 qorning；宾格 qorni；第三人称领属 qori,vocabulary
+uz-0351,uz,uz-09,shamol,风,Bugun shamol va yomgʻir bor.,今天有风和雨。,名词；复数 shamollar；属格 shamolning；宾格 shamolni；第三人称领属 shamoli,vocabulary
+uz-0352,uz,uz-09,havo,天气；空气,Bugun havo juda yaxshi.,今天天气很好。,名词；复数 havolar；属格 havoning；宾格 havoni；第三人称领属 havosi,vocabulary
+uz-0353,uz,uz-09,quyosh,太阳,Bugun osmonda quyosh bor.,今天有太阳。,名词；复数 quyoshlar；属格 quyoshning；宾格 quyoshni；第三人称领属 quyoshi,vocabulary
+uz-0354,uz,uz-09,bulut,云,Hozir osmonda bulut bor.,现在天空有云。,名词；复数 bulutlar；属格 bulutning；宾格 bulutni；第三人称领属 buluti,vocabulary
+uz-0355,uz,uz-09,juda,很；非常,Bu kitob juda yaxshi.,这本书很好。,程度副词；按本课句型使用,vocabulary
+uz-0356,uz,uz-09,ancha,相当；比较,Bu yoʻl ancha uzun.,这条路比较长。,程度副词；按本课句型使用,vocabulary
+uz-0357,uz,uz-09,sal,稍微,Bugun havo sal sovuq.,今天天气有点冷。,程度副词；按本课句型使用,vocabulary
+uz-0358,uz,uz-09,eng,最,Bu eng katta xona.,这是最大的房间。,最高级程度词；按本课句型使用,vocabulary
+uz-0359,uz,uz-09,koʻp,多,Dilnoza koʻp kitob oʻqiydi.,迪尔诺扎读很多书。,数量词；按本课句型使用,vocabulary
+uz-0360,uz,uz-09,Bu uy kattaroq.,这栋房子大一些。,"Bu uy kattaroq, lekin u eski.",这栋房子大一些，但它旧了。,固定句型；整句只生成识别卡,phrase
+uz-0361,uz,uz-09,Bugun havo salqin.,今天天气凉爽。,"Bugun havo salqin, biz sayr qilamiz.",今天天气凉爽，我们去散步。,固定句型；整句只生成识别卡,phrase
+uz-0362,uz,uz-09,Bu eng yaxshi kitob.,这是最好的书。,"Bu eng yaxshi kitob, Aziz oʻqiydi.",这是最好的书，阿齐兹会读它。,固定句型；整句只生成识别卡,phrase
+uz-0363,uz,uz-09,Mening sumkam qora.,我的包是黑色的。,"Mening sumkam qora, Nilufarning sumkasi oq.",我的包是黑色的，妮露法尔的包是白色的。,固定句型；整句只生成识别卡,phrase
+uz-0364,uz,uz-09,Aziz Boburdan balandroq.,阿齐兹比博布尔高。,"Aziz Boburdan balandroq, lekin yoshroq.",阿齐兹比博布尔高，但更年轻。,固定句型；整句只生成识别卡,phrase
+uz-0365,uz,uz-10,reja,计划,Mening bugun yangi rejam bor.,我今天有一个新计划。,名词；复数 rejalar；属格 rejaning；宾格 rejani；第三人称领属 rejasi,vocabulary
+uz-0366,uz,uz-10,maqsad,目标,Azizning bugun yangi maqsadi bor.,阿齐兹今天有一个新目标。,名词；复数 maqsadlar；属格 maqsadning；宾格 maqsadni；第三人称领属 maqsadi,vocabulary
+uz-0367,uz,uz-10,odat,习惯,Bu mening yaxshi odatim.,这是我的好习惯。,名词；复数 odatlar；属格 odatning；宾格 odatni；第三人称领属 odati；odatim 是我的习惯；odatim 表我的习惯,vocabulary
+uz-0368,uz,uz-10,mashq,练习,Men har kuni mashq qilaman.,我每天做练习。,名词；复数 mashqlar；属格 mashqning；宾格 mashqni；第三人称领属 mashqi,vocabulary
+uz-0369,uz,uz-10,savol,问题,Nilufar menga savol berdi.,妮露法尔问了我一个问题。,名词；复数 savollar；属格 savolning；宾格 savolni；第三人称领属 savoli,vocabulary
+uz-0370,uz,uz-10,javob,回答,Azizning javobi juda yaxshi.,阿齐兹的回答很好。,名词；复数 javoblar；属格 javobning；宾格 javobni；第三人称领属 javobi,vocabulary
+uz-0371,uz,uz-10,suhbat,谈话,Kecha bizning suhbatimiz yaxshi edi.,昨天我们的谈话很好。,名词；复数 suhbatlar；属格 suhbatning；宾格 suhbatni；第三人称领属 suhbati,vocabulary
+uz-0372,uz,uz-10,hikoya,故事,Bobur kecha hikoya oʻqidi.,博布尔昨天读了一个故事。,名词；复数 hikoyalar；属格 hikoyaning；宾格 hikoyani；第三人称领属 hikoyasi,vocabulary
+uz-0373,uz,uz-10,matn,文章,Bu matn juda qisqa.,这篇文章很短。,名词；复数 matnlar；属格 matnning；宾格 matnni；第三人称领属 matni,vocabulary
+uz-0374,uz,uz-10,lugʻat,词典,Mening yangi lugʻatim bor.,我有一本新词典。,名词；复数 lugʻatlar；属格 lugʻatning；宾格 lugʻatni；第三人称领属 lugʻati,vocabulary
+uz-0375,uz,uz-10,soʻz,词,Bu soʻzning maʼnosi qanday?,这个词是什么意思？,名词；复数 soʻzlar；属格 soʻzning；宾格 soʻzni；第三人称领属 soʻzi；soʻzlarni 是这些词的宾格复数,vocabulary
+uz-0376,uz,uz-10,maʼno,意思,Bu soʻzning maʼnosi qiziq.,这个词的意思有趣。,名词；复数 maʼnolar；属格 maʼnoning；宾格 maʼnoni；第三人称领属 maʼnosi；maʼnosi 是它的意思,vocabulary
+uz-0377,uz,uz-10,gap,句子,Men bugun besh gap yozaman.,我今天写五个句子。,名词；复数 gaplar；属格 gapning；宾格 gapni；第三人称领属 gapi；gapim 是我的句子；gapda 表句子里,vocabulary
+uz-0378,uz,uz-10,xato,错误,Bu gapda kichik xato bor.,这个句子里有一个小错误。,名词；复数 xatolar；属格 xatoning；宾格 xatoni；第三人称领属 xatosi,vocabulary
+uz-0379,uz,uz-10,toʻgʻri,正确的,"Bu javob toʻgʻri, Aziz.",阿齐兹，这个回答是对的。,形容词；作定语通常不变形；比较级 toʻgʻriroq,vocabulary
+uz-0380,uz,uz-10,qiyin,难的,Bu savol ancha qiyin.,这个问题比较难。,形容词；作定语通常不变形；比较级 qiyinroq,vocabulary
+uz-0381,uz,uz-10,oson,容易的,Bu mashq juda oson.,这道练习很容易。,形容词；作定语通常不变形；比较级 osonroq,vocabulary
+uz-0382,uz,uz-10,foydali,有用的,Bu lugʻat juda foydali.,这本词典很有用。,形容词；作定语通常不变形；比较级 foydaliroq,vocabulary
+uz-0383,uz,uz-10,muhim,重要的,Bu uchrashuv juda muhim.,这次见面很重要。,形容词；作定语通常不变形；比较级 muhimroq,vocabulary
+uz-0384,uz,uz-10,qiziq,有趣的,Boburning hikoyasi juda qiziq.,博布尔的故事很有趣。,形容词；作定语通常不变形；比较级 qiziqroq,vocabulary
+uz-0385,uz,uz-10,boʻsh,空闲的,Men kechqurun uyda boʻshman.,我晚上在家有空。,形容词；作定语通常不变形；boʻshman 是第一人称名词谓语；比较级 boʻshroq,vocabulary
+uz-0386,uz,uz-10,tayyor,准备好的,Men bugun darsga tayyorman.,我今天准备好上课了。,形容词；作定语通常不变形；比较级 tayyorroq,vocabulary
+uz-0387,uz,uz-10,tez-tez,经常,Nilufar tez-tez kutubxonaga boradi.,妮露法尔经常去图书馆。,频率副词；按本课句型使用,vocabulary
+uz-0388,uz,uz-10,odatda,通常,Biz odatda ertalab choy ichamiz.,我们通常早上喝茶。,频率副词；按本课句型使用,vocabulary
+uz-0389,uz,uz-10,faqat,只,Aziz faqat suv ichadi.,阿齐兹只喝水。,限定副词；按本课句型使用,vocabulary
+uz-0390,uz,uz-10,yana,又；再,Men yana shu kitobni oʻqiyman.,我再读这本书。,副词；按本课句型使用,vocabulary
+uz-0391,uz,uz-10,hamma,所有人,Hamma bugun maktabda edi.,今天所有人都在学校。,泛指代词；按本课句型使用；hamma 指所有人,vocabulary
+uz-0392,uz,uz-10,tekshirmoq,检查,Men bugun javobni tekshiraman.,我今天检查答案。,动词；词干 tekshir-；现在－将来时一人称 tekshiraman、三人称 tekshiradi；过去时一人称 tekshirdim、三人称 tekshirdi；tekshiraman、tekshiradi,vocabulary
+uz-0393,uz,uz-10,takrorlamoq,复习,Nilufar har kuni soʻzlarni takrorlaydi.,妮露法尔每天复习词。,动词；词干 takrorla-；现在－将来时一人称 takrorlayman、三人称 takrorlaydi；过去时一人称 takrorladim、三人称 takrorladi；takrorlaydi,vocabulary
+uz-0394,uz,uz-10,tushunmoq,理解,Men bu matnni tushunaman.,我理解这篇文章。,动词；词干 tushun-；现在－将来时一人称 tushunaman、三人称 tushunadi；过去时一人称 tushundim、三人称 tushundi,vocabulary
+uz-0395,uz,uz-10,tushuntirmoq,解释,Oʻqituvchi bu soʻzni tushuntiradi.,教师解释这个词。,动词；词干 tushuntir-；现在－将来时一人称 tushuntiraman、三人称 tushuntiradi；过去时一人称 tushuntirdim、三人称 tushuntirdi；tushuntiradi,vocabulary
+uz-0396,uz,uz-10,tanlamoq,选择,Aziz bugun yangi kitob tanlaydi.,阿齐兹今天选一本新书。,动词；词干 tanla-；现在－将来时一人称 tanlayman、三人称 tanlaydi；过去时一人称 tanladim、三人称 tanladi；tanlaydi、tanlayman,vocabulary
+uz-0397,uz,uz-10,Men har kuni mashq qilaman.,我每天做练习。,"Men har kuni mashq qilaman, keyin oʻqiyman.",我每天做练习，然后读书。,固定句型；整句只生成识别卡,phrase
+uz-0398,uz,uz-10,Kecha Bobur bilan uchrashdim.,昨天我见了博布尔。,Kecha Bobur bilan uchrashdim va choy ichdim.,昨天我见了博布尔并喝了茶。,固定句型；整句只生成识别卡,phrase
+uz-0399,uz,uz-10,Bu savol qiyin emas.,这个问题不难。,"Bu savol qiyin emas, javobi oson.",这个问题不难，答案很容易。,固定句型；整句只生成识别卡,phrase
+uz-0400,uz,uz-10,Nilufar javobni tekshiradi.,妮露法尔检查答案。,"Nilufar javobni tekshiradi, Aziz yozadi.",妮露法尔检查答案，阿齐兹做书面记录。,固定句型；整句只生成识别卡,phrase
+uz-0401,uz,uz-10,Men yangi kitob tanlayman.,我选一本新书。,"Men yangi kitob tanlayman, Bobur eski kitob oladi.",我选一本新书，博布尔拿一本旧书。,固定句型；整句只生成识别卡,phrase
+uz-0402,uz,uz-10,vaqt,时间,Bugun mening vaqtim bor.,我今天有时间。,名词；复数 vaqtlar；属格 vaqtning；宾格 vaqtni；第三人称领属 vaqti；vaqtim 是我的时间,vocabulary
+uz-0403,uz,uz-10,tanaffus,课间休息,Darsdan keyin tanaffus bor.,下课后有课间休息。,名词；复数 tanaffuslar；属格 tanaffusning；宾格 tanaffusni；第三人称领属 tanaffusi,vocabulary
+uz-0404,uz,uz-10,tartib,顺序,Bu gaplarning tartibi toʻgʻri.,这些句子的顺序正确。,名词；复数 tartiblar；属格 tartibning；宾格 tartibni；第三人称领属 tartibi,vocabulary
