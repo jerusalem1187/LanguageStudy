@@ -39803,7 +39803,8 @@
   "settings": {
     "newPerDay": {
       "es": 15,
-      "ru": 10
+      "ru": 10,
+      "ms": 10
     }
   },
   "cards": {
@@ -40167,13 +40168,14 @@
 
 // 日期、文本与数据校验。
 const COLUMNS = ['id','lang','lesson','front','back','example','example_zh','note','tags'];
-const LANGS = ['es','ru','uz','kk'];
-// 语言表：short 用于课程、阅读和统计标题，full 用于复习下拉框；cyrillic 决定衬线字体；stress 表示词条可带 U+0301 重音标记；apostrophe 表示 ʻ 与 ' 视为同一符号。
+const LANGS = ['es','ru','ms','uz','kk'];
+// 语言表：short 用于课程、阅读和统计标题，long 用于复习下拉框，newPerDay 是缺失额度的默认值；cyrillic 决定衬线字体；stress 表示词条可带 U+0301 重音标记；apostrophe 表示 ʻ 与 ' 视为同一符号。
 const LANG_INFO = {
-  es:{short:'西语',full:'西班牙语',cyrillic:false,stress:false,apostrophe:false,hint:'（保留重音符号和冠词）'},
-  ru:{short:'俄语',full:'俄语',cyrillic:true,stress:true,apostrophe:false,hint:'（可不写重音标记）'},
-  uz:{short:'乌兹别克语',full:'乌兹别克语',cyrillic:false,stress:false,apostrophe:true,hint:'（oʻ、gʻ 的撇号可用普通单引号代替）'},
-  kk:{short:'哈萨克语',full:'哈萨克语',cyrillic:true,stress:false,apostrophe:false,hint:'（注意 ә ғ қ ң ө ұ ү h і 的写法）'}
+  es:{short:'西语',long:'西班牙语',newPerDay:15,cyrillic:false,stress:false,apostrophe:false,hint:'（保留重音符号和冠词）'},
+  ru:{short:'俄语',long:'俄语',newPerDay:10,cyrillic:true,stress:true,apostrophe:false,hint:'（可不写重音标记）'},
+  ms:{short:'马来语',long:'马来语',newPerDay:10,cyrillic:false,stress:false,apostrophe:false,hint:'（按词表大小写输入）'},
+  uz:{short:'乌兹别克语',long:'乌兹别克语',newPerDay:0,cyrillic:false,stress:false,apostrophe:true,hint:'（oʻ、gʻ 的撇号可用普通单引号代替）'},
+  kk:{short:'哈萨克语',long:'哈萨克语',newPerDay:0,cyrillic:true,stress:false,apostrophe:false,hint:'（注意 ә ғ қ ң ө ұ ү h і 的写法）'}
 };
 const langLabel = lang => lang+' · '+LANG_INFO[lang].short;
 const cyrText = lang => LANG_INFO[lang].cyrillic ? 'ru-text' : '';
@@ -40219,8 +40221,8 @@ function validateState(value, now = new Date()) {
   if (!value || value.version !== 1 || !validISO(value.updatedAt) || !value.cards || typeof value.cards !== 'object' || Array.isArray(value.cards) || !Array.isArray(value.log)) throw new Error('进度格式无效，须为 version: 1 的状态 JSON。');
   const settings = value.settings?.newPerDay;
   if (!settings || typeof settings !== 'object') throw new Error('每日新卡数须为 0–999 的整数。');
-  // 旧进度文件没有新语言的额度时按 0（暂停新卡）处理，在设置页开启。
-  const limits = Object.fromEntries(LANGS.map(lang => [lang,settings[lang] === undefined ? 0 : settings[lang]]));
+  // 旧进度缺少语言额度时使用语言表默认值，已有额度仍须通过校验。
+  const limits = Object.fromEntries(LANGS.map(lang => [lang,own(settings,lang) ? settings[lang] : LANG_INFO[lang].newPerDay]));
   if (LANGS.some(lang => !Number.isInteger(limits[lang]) || limits[lang] < 0 || limits[lang] > 999)) throw new Error('每日新卡数须为 0–999 的整数。');
   const log = value.log.map(item => {
     if (!item || !validISO(item.t) || !validCardId(item.card) || !GRADES.includes(item.grade)) throw new Error('复习日志含有无效记录。');
@@ -60038,7 +60040,7 @@ function currentCard() { return session?.queue[0] || session?.again[0] || null; 
 function renderReview() {
   ensureSession();
   const card = currentCard(), today = buildQueue(rows,state,language,localDay());
-  const controls = `<div class="row"><h2>今日复习</h2><div><label for="language" class="muted">语言</label><select id="language"><option value="all" ${language==='all'?'selected':''}>全部</option>${LANGS.map(lang => `<option value="${lang}" ${language===lang?'selected':''}>${lang} · ${LANG_INFO[lang].full}</option>`).join('')}</select></div></div><div class="counts"><div class="count"><strong>${today.due.length}</strong>今日到期</div><div class="count"><strong>${today.newCards.length}</strong>今日可学新卡</div></div>`;
+  const controls = `<div class="row"><h2>今日复习</h2><div><label for="language" class="muted">语言</label><select id="language"><option value="all" ${language==='all'?'selected':''}>全部</option>${LANGS.map(lang => `<option value="${lang}" ${language===lang?'selected':''}>${lang} · ${LANG_INFO[lang].long}</option>`).join('')}</select></div></div><div class="counts"><div class="count"><strong>${today.due.length}</strong>今日到期</div><div class="count"><strong>${today.newCards.length}</strong>今日可学新卡</div></div>`;
   if (!card) return `<div class="study">${controls}<div class="panel empty"><h3>当前没有待复习卡片</h3><p>本次已评分 ${session.done} 次。新卡受每日额度限制，拼写卡在识别卡首次复习的次日开放。</p><button data-tab="lessons" class="secondary">查看课程与练习</button></div></div>`;
   const row = card.row, spelling = card.direction === 'p', inAgain = session.queue.length === 0;
   const status = !state.cards[card.id] ? '新卡' : inAgain || state.cards[card.id].ivl === 0 ? '重学' : '到期';

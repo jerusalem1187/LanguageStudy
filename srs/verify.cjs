@@ -17,7 +17,7 @@ const source = runtime.slice(0,runtime.indexOf('// 启动。')) + runtime.slice(
 globalThis.api = {localDay,addDays,validateRows,validateState,parseCSV,mergeRows,pruneLog,
 schedule,expandCards,buildQueue,spellingResult,clozeExample,mergeProgress,statistics,
 safeJSON,serializeDocument,snapshotDocument,saveFile,initialize,LESSONS,reveal,gradeCard,recognitionOnly,
-renderLessons,bindEvents,READINGS,renderReadings,validateReadings,
+renderLessons,bindEvents,READINGS,renderReadings,validateReadings,LANGS,LANG_INFO,
 openLesson(id){lesson=id;tab='lessons';render();},
 showReadings(){openReading=null;tab='readings';render();},
 openReadingItem(id){openReading=id;readingShowZh=false;tab='readings';render();},
@@ -115,7 +115,7 @@ class DocumentModel extends ElementModel {
   cloneNode() { return new DocumentModel(this.documentElement.outerHTML); }
 }
 function emptyState() {
-  return {version:1,updatedAt:'2026-09-14T00:00:00.000Z',settings:{newPerDay:{es:15,ru:10}},cards:{},log:[]};
+  return {version:1,updatedAt:'2026-09-14T00:00:00.000Z',settings:{newPerDay:{es:15,ru:10,ms:10}},cards:{},log:[]};
 }
 function fixtureHTML(rows=initialRows,state=emptyState()) {
   return html.replace(/(<script[^>]*id="cards-data"[^>]*>)[\s\S]*?(<\/script>)/,(_,a,b)=>a+JSON.stringify(rows)+b)
@@ -164,9 +164,19 @@ const s1Expanded=s1Rows.reduce((total,row)=>total+(row.tags.split(';').includes(
 function record(day='2026-09-14',grade=4) { return api.schedule(null,grade,day); }
 
 test('来源 CSV 与两个内嵌 JSON 完整一致；只有一个可执行脚本且无外部资源',() => {
-  const rows = ['es','ru'].flatMap(lang => plain(api.parseCSV(fs.readFileSync(path.join(__dirname,'cards',lang+'.csv'),'utf8'))));
+  const rows = Array.from(api.LANGS).flatMap(lang => {
+    const csv = path.join(__dirname,'cards',lang+'.csv');
+    // 预留语言尚无 CSV 时，内嵌数据也必须为空。
+    if (!fs.existsSync(csv)) {
+      assert.equal(initialRows.filter(row=>row.lang===lang).length,0,lang+' 缺少来源 CSV');
+      return [];
+    }
+    const text = fs.readFileSync(csv,'utf8');
+    // 纯表头来源表示尚无词条；页面的 CSV 导入仍拒绝没有卡片的输入。
+    return text.trim()==='id,lang,lesson,front,back,example,example_zh,note,tags' ? [] : plain(api.parseCSV(text));
+  });
   // 内嵌数据按追加顺序保留旧行；来源 CSV 各自按语言排列。
-  for (const lang of ['es','ru']) assert.deepEqual(rows.filter(row=>row.lang===lang),initialRows.filter(row=>row.lang===lang));
+  for (const lang of api.LANGS) assert.deepEqual(rows.filter(row=>row.lang===lang),initialRows.filter(row=>row.lang===lang));
   assert.equal(rows.length,3616);
   assert.equal(api.expandCards(rows).length,2895+s1Expanded+r1Expanded+s2Expanded+r2Expanded+s3Expanded+r3Expanded+s4Expanded+r4Expanded+r5Expanded+r6Expanded);
   assert.equal(rows.filter(r=>r.lang==='es').length,1993);
@@ -2015,7 +2025,7 @@ test('任务 F1：统计页的阅读一行；课程标题行的每日时长两�
   const rows=document.querySelectorAll('.stats-table').at(-1).querySelector('tbody').querySelectorAll('tr')
     .map(tr=>[tr.querySelector('th').textContent,...tr.querySelectorAll('td').map(td=>td.textContent)]);
   assert.deepEqual(rows.slice(0,2),[['es · 西语','1 / 48','4.0 / 4'],['ru · 俄语','0 / 60','—']]);
-  assert.deepEqual(rows.slice(2).map(row=>row[0]),['uz · 乌兹别克语','kk · 哈萨克语']);
+  assert.deepEqual(rows.slice(2).map(row=>row[0]),plain(a.LANGS.slice(2).map(lang=>lang+' · '+a.LANG_INFO[lang].short)));
   const expected={es:['每天 30 分钟 + 每周 3 次系统块 40 分钟','每天 25 分钟 + 每周 30 分钟语法与写作'],ru:['每天 10 分钟','每天 30 分钟 + 周末系统块 60 分钟']};
   for (const [id,lesson] of Object.entries(a.LESSONS)) {
     if (!expected[lesson.lang]) continue; // 乌兹别克语、哈萨克语未排期，不检查时长。
@@ -2026,24 +2036,24 @@ test('任务 F1：统计页的阅读一行；课程标题行的每日时长两�
   }
 });
 
-test('语言表：四种语言的复习下拉框、设置表单与统计行；旧进度缺少新语言额度时按 0 处理',() => {
+test('语言表：复习下拉框、设置表单与统计行；旧进度使用默认额度且保留预留语言行为',() => {
   const {api:a,document}=createAPI(true);a.initialize();
   const old={version:1,updatedAt:'2026-09-14T00:00:00.000Z',settings:{newPerDay:{es:15,ru:10}},cards:{},log:[]};
   const checked=a.validateState(old);
-  assert.deepEqual(plain(checked.settings.newPerDay),{es:15,ru:10,uz:0,kk:0});
+  assert.deepEqual(plain(checked.settings.newPerDay),{es:15,ru:10,ms:10,uz:0,kk:0});
   assert.throws(()=>a.validateState({...old,settings:{newPerDay:{es:15,ru:10,uz:1000}}}),/0–999/);
   assert.throws(()=>a.validateState({...old,settings:{newPerDay:{es:15,ru:'x'}}}),/0–999/);
   a.openReview('all');
   document.getElementById('app').listeners.click[0]({target:{closest:()=>document.querySelectorAll('[data-tab]').find(node=>node.dataset.tab==='review')}});
-  assert.deepEqual(document.getElementById('language').querySelectorAll('option').map(node=>node.getAttribute('value')),['all','es','ru','uz','kk']);
+  assert.deepEqual(document.getElementById('language').querySelectorAll('option').map(node=>node.getAttribute('value')),['all',...a.LANGS]);
   document.getElementById('app').listeners.click[0]({target:{closest:()=>document.querySelectorAll('[data-tab]').find(node=>node.dataset.tab==='settings')}});
-  assert.deepEqual(document.getElementById('limits').querySelectorAll('input').map(node=>node.getAttribute('name')),['es','ru','uz','kk']);
+  assert.deepEqual(document.getElementById('limits').querySelectorAll('input').map(node=>node.getAttribute('name')),plain(a.LANGS));
   document.getElementById('app').listeners.click[0]({target:{closest:()=>document.querySelectorAll('[data-tab]').find(node=>node.dataset.tab==='stats')}});
   const heads=document.querySelectorAll('.stats-table')[0].querySelector('tbody').querySelectorAll('tr').map(tr=>tr.querySelector('th').textContent);
-  assert.deepEqual(heads,['es · 西语','ru · 俄语','uz · 乌兹别克语','kk · 哈萨克语']);
+  assert.deepEqual(heads,plain(a.LANGS.map(lang=>lang+' · '+a.LANG_INFO[lang].short)));
   document.getElementById('app').listeners.click[0]({target:{closest:()=>document.querySelectorAll('[data-tab]').find(node=>node.dataset.tab==='lessons')}});
   const page=document.getElementById('app').innerHTML;
-  for (const label of ['西语课程','俄语课程','乌兹别克语课程','哈萨克语课程']) assert(page.includes('aria-label="'+label+'"'),label);
+  for (const lang of a.LANGS) assert(page.includes('aria-label="'+a.LANG_INFO[lang].short+'课程"'),lang);
   // 乌兹别克语 oʻ / gʻ 的撇号：U+02BB、U+02BC、U+2019 和普通单引号视为同一符号。
   assert.equal(a.spellingResult("o'qituvchi",'oʻqituvchi','uz').grade,4);
   assert.equal(a.spellingResult('gʼisht','gʻisht','uz').grade,4);
@@ -3722,6 +3732,98 @@ test('任务 R6：三课六篇 UI 完整，浏览内容不改变真实进度',()
     assert.doesNotMatch(page.replace(/一封信/g,''),/[死杀封炸战坑砍]/);
   }
   assert.deepEqual(plain(a.getData().state),before);
+});
+
+test('任务 M0：第三种语言注册与旧进度兼容',() => {
+  const {api:a,document,cache}=createAPI(true,html);a.initialize();
+  assert.deepEqual(plain(a.LANGS.slice(0,3)),['es','ru','ms']);
+  assert.equal(a.LANG_INFO.ms.short,'马来语');assert.equal(a.LANG_INFO.ms.long,'马来语');
+  const old=emptyState();delete old.settings.newPerDay.ms;
+  const beforeOld=plain(old),checked=a.validateState(old);
+  assert.deepEqual(plain(checked.settings.newPerDay),{es:15,ru:10,ms:10,uz:0,kk:0});
+  assert.deepEqual(old,beforeOld,'校验不能修改旧进度对象');
+  for (const lang of a.LANGS) {
+    const missing=plain(old);delete missing.settings.newPerDay[lang];
+    assert.equal(a.validateState(missing).settings.newPerDay[lang],a.LANG_INFO[lang].newPerDay);
+    for (const value of [0,999]) {
+      const valid=plain(old);valid.settings.newPerDay[lang]=value;
+      assert.equal(a.validateState(valid).settings.newPerDay[lang],value);
+    }
+    for (const value of [-1,'x',1000,1.5,null,true,undefined]) {
+      const invalid=plain(old);invalid.settings.newPerDay[lang]=value;
+      assert.throws(()=>a.validateState(invalid),/0–999/,lang+' 非法额度');
+    }
+  }
+  const cached=createAPI(true,fixtureHTML(initialRows,old));
+  cached.cache.set('language-srs:v1:/srs/index.html',JSON.stringify({state:{...old,updatedAt:'2026-09-15T00:00:00.000Z'}}));
+  cached.api.initialize();
+  assert.equal(cached.api.getData().source,'本地缓存');
+  assert.equal(cached.api.getData().state.settings.newPerDay.ms,10);
+
+  const clickTab=tab=>document.getElementById('app').listeners.click[0]({target:{closest:()=>document.querySelectorAll('[data-tab]').find(node=>node.dataset.tab===tab)}});
+  const beforeBrowse=plain(a.getData().state);
+  clickTab('lessons');
+  const page=document.getElementById('content').innerHTML;
+  assert(page.indexOf('西语课程')<page.indexOf('俄语课程'));
+  assert(page.indexOf('俄语课程')<page.indexOf('马来语课程'));
+  assert.equal(document.querySelectorAll('[data-lesson]').length,59);
+  assert.equal(document.querySelector('section[aria-label="马来语课程"]').querySelector('.course-picker').innerHTML,'');
+  assert.equal(Object.values(a.LESSONS).filter(item=>item.lang==='ms').length,0);
+  clickTab('readings');
+  const readingSections=document.querySelectorAll('section[aria-label]').map(node=>node.getAttribute('aria-label'));
+  assert(readingSections.indexOf('俄语阅读')<readingSections.indexOf('马来语阅读'));
+  assert.match(document.querySelector('section[aria-label="马来语阅读"]').textContent,/这门语言暂时没有阅读篇目。/);
+  assert.equal(Object.values(a.READINGS).filter(item=>item.lang==='ms').length,0);
+  clickTab('review');
+  assert.equal(document.getElementById('language').querySelector('option[value="ms"]').textContent,'ms · 马来语');
+  document.getElementById('app').listeners.change[0]({target:{id:'language',value:'ms'}});
+  assert.match(document.getElementById('content').textContent,/当前没有待复习卡片/);
+  clickTab('stats');
+  const [cardTable,readingTable]=document.querySelectorAll('.stats-table');
+  const rowFor=table=>table.querySelector('tbody').querySelectorAll('tr').find(row=>row.querySelector('th').textContent==='ms · 马来语');
+  assert.deepEqual(rowFor(cardTable).querySelectorAll('td').map(node=>node.textContent),['0','0','0','0','0','0','—']);
+  assert.deepEqual(rowFor(readingTable).querySelectorAll('td').map(node=>node.textContent),['0 / 0','—']);
+  assert.deepEqual(plain(a.getData().state),beforeBrowse,'浏览页面不改进度');
+  clickTab('settings');
+  const form=document.getElementById('limits'),input=document.getElementById('limit-ms');
+  assert.equal(input.getAttribute('name'),'ms');assert.equal(input.value,'10');
+  const submit=()=>document.getElementById('app').listeners.submit[0]({target:form,preventDefault(){}});
+  for (const [lang,value] of Object.entries({es:15,ru:10,ms:7})) form.elements[lang].value=String(value);
+  submit();
+  assert.equal(a.getData().state.settings.newPerDay.ms,7);
+  assert.deepEqual(plain(a.getData().state.cards),beforeBrowse.cards);
+  assert.deepEqual(plain(a.getData().state.log),beforeBrowse.log);
+  const beforeInvalid=plain(a.getData().state),cacheBeforeInvalid=[...cache];
+  form.elements.es.value='99';form.elements.ru.value='98';
+  for (const value of ['-1','x','1000','1.5']) {
+    input.value=value;submit();
+    assert.match(a.getData().notice,/每日新卡数须为 0–999 的整数/);
+    assert.deepEqual(plain(a.getData().state),beforeInvalid,'非法额度不能部分应用');
+  }
+  assert.deepEqual([...cache],cacheBeforeInvalid);
+  for (const incoming of [old,checked,{...old,settings:{newPerDay:{es:99,ru:98,ms:42}}}]) {
+    const merged=a.mergeProgress(a.getData().state,a.validateState(incoming));
+    assert.deepEqual(plain(merged.settings),beforeInvalid.settings,'合并保留本机 ms 额度');
+    assert.equal(merged.settings.newPerDay.ms,7);
+  }
+
+  assert.deepEqual(fs.readFileSync(path.join(__dirname,'cards/ms.csv')),Buffer.from('id,lang,lesson,front,back,example,example_zh,note,tags\n'));
+  assert.equal(initialRows.filter(row=>row.lang==='ms').length,0);
+  // 固定为文件进度时间，单独验证迁移与保存；避免未来运行时触发既有的 60 天日志清理。
+  const legacy=plain(initialState);delete legacy.settings.newPerDay.ms;
+  const now=new Date(initialState.updatedAt),migrated=a.validateState(legacy,now);
+  const saved=a.serializeDocument(document,initialRows,migrated,initialState.updatedAt,'file');
+  const parsed=new DocumentModel(saved),savedState=parsed.getElementById('state-data').textContent;
+  assert.deepEqual(JSON.parse(savedState),{...initialState,settings:plain(migrated.settings)});
+  const progressBytes=text=>{
+    const start=text.indexOf('\n  "cards":');assert(start>=0);
+    return Buffer.from(text.slice(start));
+  };
+  assert.deepEqual(progressBytes(savedState),progressBytes(blocks[1][1]),'cards 与 log 原始字节不变');
+  const reopened=a.validateState(JSON.parse(savedState),now);
+  const savedAgain=a.serializeDocument(parsed,JSON.parse(parsed.getElementById('cards-data').textContent),reopened,initialState.updatedAt,'file');
+  assert.deepEqual(progressBytes(new DocumentModel(savedAgain).getElementById('state-data').textContent),progressBytes(blocks[1][1]));
+  assert.equal(reopened.settings.newPerDay.ms,10);
 });
 
 // 可选的离线编辑诊断：仍使用正式检查的推导器，按位置一次报告全部缺词。
