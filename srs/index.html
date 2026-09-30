@@ -40167,7 +40167,16 @@
 
 // 日期、文本与数据校验。
 const COLUMNS = ['id','lang','lesson','front','back','example','example_zh','note','tags'];
-const LANGS = ['es','ru'];
+const LANGS = ['es','ru','uz','kk'];
+// 语言表：short 用于课程、阅读和统计标题，full 用于复习下拉框；cyrillic 决定衬线字体；stress 表示词条可带 U+0301 重音标记；apostrophe 表示 ʻ 与 ' 视为同一符号。
+const LANG_INFO = {
+  es:{short:'西语',full:'西班牙语',cyrillic:false,stress:false,apostrophe:false,hint:'（保留重音符号和冠词）'},
+  ru:{short:'俄语',full:'俄语',cyrillic:true,stress:true,apostrophe:false,hint:'（可不写重音标记）'},
+  uz:{short:'乌兹别克语',full:'乌兹别克语',cyrillic:false,stress:false,apostrophe:true,hint:'（oʻ、gʻ 的撇号可用普通单引号代替）'},
+  kk:{short:'哈萨克语',full:'哈萨克语',cyrillic:true,stress:false,apostrophe:false,hint:'（注意 ә ғ қ ң ө ұ ү h і 的写法）'}
+};
+const langLabel = lang => lang+' · '+LANG_INFO[lang].short;
+const cyrText = lang => LANG_INFO[lang].cyrillic ? 'ru-text' : '';
 const GRADES = [0,3,4,5];
 const GRADE_NAMES = ['Again','Hard','Good','Easy'];
 const CACHE_KEY = 'language-srs:v1:' + location.pathname;
@@ -40186,7 +40195,7 @@ function validDay(value) {
 const validISO = value => typeof value === 'string' && /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(?:\.\d+)?(?:Z|[+-]\d\d:\d\d)$/.test(value) && validDay(value.slice(0,10)) && Number.isFinite(Date.parse(value));
 const validId = value => typeof value === 'string' && /^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$/.test(value);
 const own = (obj,key) => Object.prototype.hasOwnProperty.call(obj,key);
-const isLetter = row => row.lang === 'ru' && row.tags.split(';').includes('letter');
+const isLetter = row => row.tags.split(';').includes('letter');
 const recognitionOnly = row => row.tags.split(';').some(tag => tag === 'letter' || tag === 'phrase');
 function validateRows(value) {
   if (!Array.isArray(value) || value.length > 50000) throw new Error('卡片应为数组，最多 50000 条词条。');
@@ -40209,7 +40218,10 @@ function pruneLog(log, now = new Date()) {
 function validateState(value, now = new Date()) {
   if (!value || value.version !== 1 || !validISO(value.updatedAt) || !value.cards || typeof value.cards !== 'object' || Array.isArray(value.cards) || !Array.isArray(value.log)) throw new Error('进度格式无效，须为 version: 1 的状态 JSON。');
   const settings = value.settings?.newPerDay;
-  if (!settings || LANGS.some(lang => !Number.isInteger(settings[lang]) || settings[lang] < 0 || settings[lang] > 999)) throw new Error('每日新卡数须为 0–999 的整数。');
+  if (!settings || typeof settings !== 'object') throw new Error('每日新卡数须为 0–999 的整数。');
+  // 旧进度文件没有新语言的额度时按 0（暂停新卡）处理，在设置页开启。
+  const limits = Object.fromEntries(LANGS.map(lang => [lang,settings[lang] === undefined ? 0 : settings[lang]]));
+  if (LANGS.some(lang => !Number.isInteger(limits[lang]) || limits[lang] < 0 || limits[lang] > 999)) throw new Error('每日新卡数须为 0–999 的整数。');
   const log = value.log.map(item => {
     if (!item || !validISO(item.t) || !validCardId(item.card) || !GRADES.includes(item.grade)) throw new Error('复习日志含有无效记录。');
     return {t:new Date(item.t).toISOString(),card:item.card,grade:item.grade};
@@ -40226,7 +40238,7 @@ function validateState(value, now = new Date()) {
     if (!validDay(first) || first > record.last) throw new Error(`首次复习日期无效：${id}`);
     cards[id] = {due:record.due,ivl:record.ivl,ease:record.ease,reps:record.reps,lapses:record.lapses,last:record.last,first};
   }
-  const result = {version:1,updatedAt:new Date(value.updatedAt).toISOString(),settings:{newPerDay:{es:settings.es,ru:settings.ru}},cards,log:pruneLog(log,now)};
+  const result = {version:1,updatedAt:new Date(value.updatedAt).toISOString(),settings:{newPerDay:limits},cards,log:pruneLog(log,now)};
   if (value.readings !== undefined) result.readings = validateReadings(value.readings);
   return result;
 }
@@ -40320,7 +40332,8 @@ function buildQueue(rows, state, lang, day) {
 function spellingResult(input, target, lang) {
   const normal = text => {
     const nfc = text.trim().normalize('NFC');
-    return lang === 'ru' ? nfc.replace(/\u0301/g,'') : nfc;
+    const noStress = LANG_INFO[lang]?.stress ? nfc.replace(/\u0301/g,'') : nfc;
+    return LANG_INFO[lang]?.apostrophe ? noStress.replace(/[\u02BB\u02BC\u2018\u2019\u0027\u0060]/g,'\u02BB') : noStress;
   };
   const actual = normal(input), expected = normal(target);
   if (actual === expected) return {grade:4,kind:'exact',message:'完全一致'};
@@ -40331,8 +40344,8 @@ function spellingResult(input, target, lang) {
 function clozeExample(row) {
   const regexEscape = value => value.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
   let target = row.front.normalize('NFC');
-  if (row.lang === 'ru') target = target.replace(/\u0301/g,'');
-  const pattern = row.lang === 'ru' ? [...target].map(c => regexEscape(c) + (/[аеёиоуыэюя]/i.test(c) ? '\u0301?' : '')).join('') : regexEscape(target);
+  if (LANG_INFO[row.lang].stress) target = target.replace(/\u0301/g,'');
+  const pattern = LANG_INFO[row.lang].stress ? [...target].map(c => regexEscape(c) + (/[аеёиоуыэюя]/i.test(c) ? '\u0301?' : '')).join('') : regexEscape(target);
   const regex = new RegExp('(^|[^\\p{L}\\p{M}\\p{N}_])('+pattern+')(?=$|[^\\p{L}\\p{M}\\p{N}_])','giu');
   const example = row.example.normalize('NFC');
   const masked = example.replace(regex,(_,prefix) => prefix+'____');
@@ -60025,13 +60038,13 @@ function currentCard() { return session?.queue[0] || session?.again[0] || null; 
 function renderReview() {
   ensureSession();
   const card = currentCard(), today = buildQueue(rows,state,language,localDay());
-  const controls = `<div class="row"><h2>今日复习</h2><div><label for="language" class="muted">语言</label><select id="language"><option value="all" ${language==='all'?'selected':''}>全部</option><option value="es" ${language==='es'?'selected':''}>es · 西班牙语</option><option value="ru" ${language==='ru'?'selected':''}>ru · 俄语</option></select></div></div><div class="counts"><div class="count"><strong>${today.due.length}</strong>今日到期</div><div class="count"><strong>${today.newCards.length}</strong>今日可学新卡</div></div>`;
+  const controls = `<div class="row"><h2>今日复习</h2><div><label for="language" class="muted">语言</label><select id="language"><option value="all" ${language==='all'?'selected':''}>全部</option>${LANGS.map(lang => `<option value="${lang}" ${language===lang?'selected':''}>${lang} · ${LANG_INFO[lang].full}</option>`).join('')}</select></div></div><div class="counts"><div class="count"><strong>${today.due.length}</strong>今日到期</div><div class="count"><strong>${today.newCards.length}</strong>今日可学新卡</div></div>`;
   if (!card) return `<div class="study">${controls}<div class="panel empty"><h3>当前没有待复习卡片</h3><p>本次已评分 ${session.done} 次。新卡受每日额度限制，拼写卡在识别卡首次复习的次日开放。</p><button data-tab="lessons" class="secondary">查看课程与练习</button></div></div>`;
   const row = card.row, spelling = card.direction === 'p', inAgain = session.queue.length === 0;
   const status = !state.cards[card.id] ? '新卡' : inAgain || state.cards[card.id].ivl === 0 ? '重学' : '到期';
   const left = session.queue.length+session.again.length;
-  const front = spelling ? `<h3 class="meaning">${esc(row.back)}</h3><p>${esc(row.example_zh)}</p><p class="example ${row.lang==='ru'?'ru-text':''}" lang="${row.lang}">${esc(clozeExample(row))}</p><label for="spelling">输入词条${row.lang==='ru'?'（可不写重音标记）':'（保留重音符号和冠词）'}</label><input id="spelling" class="answer-input" type="text" lang="${row.lang}" value="${esc(typedAnswer)}" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="done" ${revealed?'readonly':''}>` : `<div class="front ${row.lang==='ru'?'ru-text':''}" lang="${row.lang}">${esc(row.front)}</div><p class="example ${row.lang==='ru'?'ru-text':''}" lang="${row.lang}">${esc(row.example)}</p>`;
-  const back = !revealed ? `<div class="actions"><button class="primary" data-action="reveal">${spelling?'提交拼写':'翻面'}</button>${spelling?'<button data-action="unknown">不知道，显示答案</button>':''}</div>` : `<div class="back">${feedback?`<p class="feedback ${feedback.kind}" role="status">${esc(feedback.message)}。${feedback.grade===4?'建议 Good。':'正确写法：'+esc(row.front)+'；建议 '+(feedback.grade===3?'Hard':'Again')+'。'}</p>`:''}${spelling?`<p class="meaning ${row.lang==='ru'?'ru-text':''}" lang="${row.lang}">${esc(row.front)}</p><p class="example" lang="${row.lang}">${esc(row.example)}</p>`:`<p class="meaning">${esc(row.back)}</p>`}<p>${esc(row.example_zh)}</p><p class="muted">${esc(row.note)}</p><div class="grade-grid">${GRADES.map((grade,i) => {
+  const front = spelling ? `<h3 class="meaning">${esc(row.back)}</h3><p>${esc(row.example_zh)}</p><p class="example ${cyrText(row.lang)}" lang="${row.lang}">${esc(clozeExample(row))}</p><label for="spelling">输入词条${LANG_INFO[row.lang].hint}</label><input id="spelling" class="answer-input" type="text" lang="${row.lang}" value="${esc(typedAnswer)}" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="done" ${revealed?'readonly':''}>` : `<div class="front ${cyrText(row.lang)}" lang="${row.lang}">${esc(row.front)}</div><p class="example ${cyrText(row.lang)}" lang="${row.lang}">${esc(row.example)}</p>`;
+  const back = !revealed ? `<div class="actions"><button class="primary" data-action="reveal">${spelling?'提交拼写':'翻面'}</button>${spelling?'<button data-action="unknown">不知道，显示答案</button>':''}</div>` : `<div class="back">${feedback?`<p class="feedback ${feedback.kind}" role="status">${esc(feedback.message)}。${feedback.grade===4?'建议 Good。':'正确写法：'+esc(row.front)+'；建议 '+(feedback.grade===3?'Hard':'Again')+'。'}</p>`:''}${spelling?`<p class="meaning ${cyrText(row.lang)}" lang="${row.lang}">${esc(row.front)}</p><p class="example" lang="${row.lang}">${esc(row.example)}</p>`:`<p class="meaning">${esc(row.back)}</p>`}<p>${esc(row.example_zh)}</p><p class="muted">${esc(row.note)}</p><div class="grade-grid">${GRADES.map((grade,i) => {
     const next = schedule(state.cards[card.id],grade,localDay());
     return `<button class="grade ${feedback?.grade===grade?'suggested':''}" data-grade="${grade}" ${feedback?.grade===grade?'aria-label="建议评分 '+GRADE_NAMES[i]+'"':''}><strong>${i+1} · ${GRADE_NAMES[i]}</strong><span>${['再学','困难','良好','轻松'][i]}</span><small>${grade===0?'会话末尾再学':next.ivl+' 天'}</small></button>`;
   }).join('')}</div><p class="muted">建议只是默认高亮，最终评分由你决定。</p></div>`;
@@ -60044,11 +60057,11 @@ function renderExercise(exercise,i,current) {
 function renderLessons() {
   const current = LESSONS[lesson], lessonRows = rows.filter(row => row.lesson === lesson);
   const reading = current.reading, questions = reading?.questions || [];
-  return `<h2>课程</h2>${LANGS.map(lang => `<section aria-label="${lang==='es'?'西语':'俄语'}课程"><h3>${lang==='es'?'es · 西语':'ru · 俄语'}</h3><div class="course-picker">${Object.entries(LESSONS).filter(([,value])=>value.lang===lang).map(([id,value]) => `<button data-lesson="${esc(id)}" aria-pressed="${lesson===id}"><strong>${esc(id)} · ${esc(value.name)}</strong><span class="muted">第 ${value.week} 周 · ${esc(value.dates)} · ${rows.filter(row=>row.lesson===id).length} 条词条／字母 · ${value.exercises.length} 题练习</span></button>`).join('')}</div></section>`).join('')}
-  <section class="panel"><h3>${esc(lesson)} · ${esc(current.name)}</h3><p class="kicker">第 ${current.week} 周 · ${/^\d{4} 年 /.test(current.dates)?'':'2026 年 '}${esc(current.dates)}${current.dailyTime?' · '+esc(current.dailyTime):''}</p><p><strong>本课目标：</strong>${esc(current.goal)}</p><p><strong>本周写作任务：</strong>${esc(current.writingTask)}</p><h3>一、讲解</h3>${current.explanation()}</section>
-  <section class="panel"><h3>二、词表</h3><p class="muted">${lessonRows.length} 条；识别与拼写共 ${expandCards(lessonRows).length} 张卡。letter / phrase 词条只生成识别卡。窄屏表格可横向滚动。</p><details><summary>展开本课全部词条与例句</summary><div class="table-wrap" tabindex="0" aria-label="可横向滚动的词表"><table class="vocab"><thead><tr><th>词条／字母</th><th>中文</th><th>例句</th><th>说明</th></tr></thead><tbody>${lessonRows.map(row=>`<tr><td lang="${row.lang}" class="${row.lang==='ru'?'ru-text':''}">${esc(row.front)}<small>${esc(row.id)} · ${recognitionOnly(row)?'识别':'识别＋拼写'}</small></td><td>${esc(row.back)}</td><td><span lang="${row.lang}">${esc(row.example)}</span><small>${esc(row.example_zh)}</small></td><td>${esc(row.note)}<small>${esc(row.tags.split(';').join(' · '))}</small></td></tr>`).join('')}</tbody></table></div></details></section>
+  return `<h2>课程</h2>${LANGS.map(lang => `<section aria-label="${LANG_INFO[lang].short}课程"><h3>${langLabel(lang)}</h3><div class="course-picker">${Object.entries(LESSONS).filter(([,value])=>value.lang===lang).map(([id,value]) => `<button data-lesson="${esc(id)}" aria-pressed="${lesson===id}"><strong>${esc(id)} · ${esc(value.name)}</strong><span class="muted">第 ${value.week} 周${value.dates?' · '+esc(value.dates):''} · ${rows.filter(row=>row.lesson===id).length} 条词条／字母 · ${value.exercises.length} 题练习</span></button>`).join('')}</div></section>`).join('')}
+  <section class="panel"><h3>${esc(lesson)} · ${esc(current.name)}</h3><p class="kicker">第 ${current.week} 周${current.dates?' · '+(/^\d{4} 年 /.test(current.dates)?'':'2026 年 ')+esc(current.dates):''}${current.dailyTime?' · '+esc(current.dailyTime):''}</p><p><strong>本课目标：</strong>${esc(current.goal)}</p><p><strong>本周写作任务：</strong>${esc(current.writingTask)}</p><h3>一、讲解</h3>${current.explanation()}</section>
+  <section class="panel"><h3>二、词表</h3><p class="muted">${lessonRows.length} 条；识别与拼写共 ${expandCards(lessonRows).length} 张卡。letter / phrase 词条只生成识别卡。窄屏表格可横向滚动。</p><details><summary>展开本课全部词条与例句</summary><div class="table-wrap" tabindex="0" aria-label="可横向滚动的词表"><table class="vocab"><thead><tr><th>词条／字母</th><th>中文</th><th>例句</th><th>说明</th></tr></thead><tbody>${lessonRows.map(row=>`<tr><td lang="${row.lang}" class="${cyrText(row.lang)}">${esc(row.front)}<small>${esc(row.id)} · ${recognitionOnly(row)?'识别':'识别＋拼写'}</small></td><td>${esc(row.back)}</td><td><span lang="${row.lang}">${esc(row.example)}</span><small>${esc(row.example_zh)}</small></td><td>${esc(row.note)}<small>${esc(row.tags.split(';').join(' · '))}</small></td></tr>`).join('')}</tbody></table></div></details></section>
   <section class="panel"><h3>三、练习</h3><p class="muted">全课 ${current.exercises.length} 题${reading?'（含下方 '+questions.length+' 道阅读理解）':''}。页内即时判定，不计入 SRS。按词表大小写输入；输入框已关闭自动大写和拼写纠正。</p><div class="exercise-list">${current.exercises.map((exercise,i)=>questions.includes(exercise)?'':renderExercise(exercise,i,current)).join('')}</div></section>
-  ${reading?`<section class="panel"><h3>四、阅读 · ${esc(reading.title)}</h3>${reading.sentences.map(sentence=>`<div><p class="example ru-text" lang="${current.lang}">${esc(sentence.text)}</p><details><summary>查看本句中文</summary><p>${esc(sentence.zh)}</p></details></div>`).join('')}<div class="exercise-list">${questions.map(question=>renderExercise(question,current.exercises.indexOf(question),current)).join('')}</div></section>`:''}`;
+  ${reading?`<section class="panel"><h3>四、阅读 · ${esc(reading.title)}</h3>${reading.sentences.map(sentence=>`<div><p class="example ${cyrText(current.lang)}" lang="${current.lang}">${esc(sentence.text)}</p><details><summary>查看本句中文</summary><p>${esc(sentence.zh)}</p></details></div>`).join('')}<div class="exercise-list">${questions.map(question=>renderExercise(question,current.exercises.indexOf(question),current)).join('')}</div></section>`:''}`;
 }
 function readingRecord(id) {
   return state.readings && own(state.readings,id) ? state.readings[id] : null;
@@ -60061,7 +60074,7 @@ function renderReadings() {
   if (openReading && own(READINGS,openReading)) return renderReadingPage(READINGS[openReading]);
   return `<h2>阅读</h2><div class="panel"><p>每篇只用到所标课次及之前学过的词。先通读一遍，再看题；需要时展开中文。四道题全部检查后记录得分，可以重做，重做按最新一次记。页内阅读不计入 SRS。</p></div>${LANGS.map(lang => {
     const items = readingList(lang);
-    return `<section aria-label="${lang==='es'?'西语阅读':'俄语阅读'}"><h3>${lang==='es'?'es · 西语':'ru · 俄语'}</h3>${items.length?`<div class="course-picker">${items.map(item => `<button data-reading="${esc(item.id)}"><strong>${esc(item.id)} · ${esc(item.title)}</strong><span class="muted">第 ${item.week} 周 · ${esc(item.genre)} · ${item.words} 词 · 词汇到 ${esc(item.afterLesson)} · ${esc(readingStatus(item))}</span></button>`).join('')}</div>`:'<p class="muted">这门语言暂时没有阅读篇目。</p>'}</section>`;
+    return `<section aria-label="${LANG_INFO[lang].short}阅读"><h3>${langLabel(lang)}</h3>${items.length?`<div class="course-picker">${items.map(item => `<button data-reading="${esc(item.id)}"><strong>${esc(item.id)} · ${esc(item.title)}</strong><span class="muted">第 ${item.week} 周 · ${esc(item.genre)} · ${item.words} 词 · 词汇到 ${esc(item.afterLesson)} · ${esc(readingStatus(item))}</span></button>`).join('')}</div>`:'<p class="muted">这门语言暂时没有阅读篇目。</p>'}</section>`;
   }).join('')}`;
 }
 function renderReadingQuestion(item,question,i) {
@@ -60074,8 +60087,8 @@ function renderReadingPage(item) {
   const checked = works.filter(work => work?.result);
   const right = checked.filter(work => work.result.grade === 4).length;
   return `<div class="row"><h2>${esc(item.title)}</h2><button class="secondary" data-action="readings-back">返回阅读列表</button></div>
-  <section class="panel"><p class="kicker">${esc(item.id)} · 第 ${item.week} 周 · ${esc(item.genre)} · ${item.words} 词 · 词汇范围到 ${esc(item.afterLesson)}${record?' · 上次 '+esc(record.done)+'，得分 '+record.score+' / '+record.total:''}</p><div class="actions"><button data-action="reading-zh">${readingShowZh?'隐藏全部中文':'显示全部中文'}</button></div>${item.sentences.map(sentence=>`<div><p class="example${item.lang==='ru'?' ru-text':''}" lang="${item.lang}">${esc(sentence.text)}</p><details ${readingShowZh?'open':''}><summary>查看本句中文</summary><p>${esc(sentence.zh)}</p></details></div>`).join('')}</section>
-  <section class="panel"><h3>本篇重点词</h3><p class="muted">都是本篇词汇范围内学过的词，按词表形式列出。</p><div class="table-wrap" tabindex="0" aria-label="可横向滚动的重点词表"><table class="vocab"><thead><tr><th>词条</th><th>中文</th></tr></thead><tbody>${item.keyWords.map(word=>`<tr><td lang="${item.lang}"${item.lang==='ru'?' class="ru-text"':''}>${esc(word.word)}</td><td>${esc(word.zh)}</td></tr>`).join('')}</tbody></table></div></section>
+  <section class="panel"><p class="kicker">${esc(item.id)} · 第 ${item.week} 周 · ${esc(item.genre)} · ${item.words} 词 · 词汇范围到 ${esc(item.afterLesson)}${record?' · 上次 '+esc(record.done)+'，得分 '+record.score+' / '+record.total:''}</p><div class="actions"><button data-action="reading-zh">${readingShowZh?'隐藏全部中文':'显示全部中文'}</button></div>${item.sentences.map(sentence=>`<div><p class="example${LANG_INFO[item.lang].cyrillic?' ru-text':''}" lang="${item.lang}">${esc(sentence.text)}</p><details ${readingShowZh?'open':''}><summary>查看本句中文</summary><p>${esc(sentence.zh)}</p></details></div>`).join('')}</section>
+  <section class="panel"><h3>本篇重点词</h3><p class="muted">都是本篇词汇范围内学过的词，按词表形式列出。</p><div class="table-wrap" tabindex="0" aria-label="可横向滚动的重点词表"><table class="vocab"><thead><tr><th>词条</th><th>中文</th></tr></thead><tbody>${item.keyWords.map(word=>`<tr><td lang="${item.lang}"${LANG_INFO[item.lang].cyrillic?' class="ru-text"':''}>${esc(word.word)}</td><td>${esc(word.zh)}</td></tr>`).join('')}</tbody></table></div></section>
   <section class="panel"><h3>阅读题</h3><p class="muted">共 ${item.questions.length} 题，逐题点检查；全部检查后记录得分，请记得保存。</p><div class="exercise-list">${item.questions.map((question,i)=>renderReadingQuestion(item,question,i)).join('')}</div>${checked.length===item.questions.length?`<p class="feedback ${right===item.questions.length?'exact':'wrong'}">本次得分 ${right} / ${item.questions.length}，已记入阅读进度。</p>`:''}</section>
   <section class="panel"><h3>复述要点</h3><p class="muted">先合上正文用中文复述，再展开对照；月度自测的阅读复述用这一项。</p><details><summary>展开复述要点</summary><div class="lesson-text"><ul>${item.retell.map(point=>`<li>${esc(point)}</li>`).join('')}</ul></div></details></section>`;
 }
@@ -60094,8 +60107,8 @@ function exerciseFeedback(result,answer,isChoice = false) {
 }
 function renderStats() {
   const stats = statistics(rows,state,localDay()), reading = readingStatistics();
-  return `<h2>统计</h2><div class="panel"><p>按复习卡计数：同一词条的识别卡、拼写卡分别计数。letter / phrase 词条仅一张。</p><div class="table-wrap" tabindex="0" aria-label="可横向滚动的统计表"><table class="stats-table"><thead><tr><th>语言</th><th>总卡数</th><th>新卡</th><th>学习中</th><th>已掌握</th><th>今日到期</th><th>近 30 天复习数</th><th>正确率</th></tr></thead><tbody>${stats.map(s=>`<tr><th>${s.lang==='es'?'es · 西语':'ru · 俄语'}</th><td>${s.total}</td><td>${s.new}</td><td>${s.learning}</td><td>${s.mastered}</td><td>${s.due}</td><td>${s.reviews}</td><td>${s.accuracy}</td></tr>`).join('')}</tbody></table></div><p class="muted">新卡＝尚未评分（含尚未开放的拼写卡）；学习中＝已评分且间隔 &lt;21 天；已掌握＝间隔 ≥21 天。今日到期包含逾期卡和待重学卡。</p><p class="muted">最近 30 天含今天，按本地日历统计每次评分；Again 以外算对。同一张卡重学会产生多次记录。日志只保留今天及之前 59 个本地日期。</p></div>
-  <div class="panel"><h3>阅读</h3><div class="table-wrap" tabindex="0" aria-label="可横向滚动的阅读统计表"><table class="stats-table"><thead><tr><th>语言</th><th>已读 / 总篇数</th><th>平均得分</th></tr></thead><tbody>${reading.map(r=>`<tr><th>${r.lang==='es'?'es · 西语':'ru · 俄语'}</th><td>${r.done} / ${r.count}</td><td>${r.done?(r.score/r.done).toFixed(1)+' / '+Math.round(r.total/r.done):'—'}</td></tr>`).join('')}</tbody></table></div><p class="muted">按阅读页最近一次答题记录；重做同一篇按最新一次计。阅读题不写入 SRS 复习状态。</p></div>`;
+  return `<h2>统计</h2><div class="panel"><p>按复习卡计数：同一词条的识别卡、拼写卡分别计数。letter / phrase 词条仅一张。</p><div class="table-wrap" tabindex="0" aria-label="可横向滚动的统计表"><table class="stats-table"><thead><tr><th>语言</th><th>总卡数</th><th>新卡</th><th>学习中</th><th>已掌握</th><th>今日到期</th><th>近 30 天复习数</th><th>正确率</th></tr></thead><tbody>${stats.map(s=>`<tr><th>${langLabel(s.lang)}</th><td>${s.total}</td><td>${s.new}</td><td>${s.learning}</td><td>${s.mastered}</td><td>${s.due}</td><td>${s.reviews}</td><td>${s.accuracy}</td></tr>`).join('')}</tbody></table></div><p class="muted">新卡＝尚未评分（含尚未开放的拼写卡）；学习中＝已评分且间隔 &lt;21 天；已掌握＝间隔 ≥21 天。今日到期包含逾期卡和待重学卡。</p><p class="muted">最近 30 天含今天，按本地日历统计每次评分；Again 以外算对。同一张卡重学会产生多次记录。日志只保留今天及之前 59 个本地日期。</p></div>
+  <div class="panel"><h3>阅读</h3><div class="table-wrap" tabindex="0" aria-label="可横向滚动的阅读统计表"><table class="stats-table"><thead><tr><th>语言</th><th>已读 / 总篇数</th><th>平均得分</th></tr></thead><tbody>${reading.map(r=>`<tr><th>${langLabel(r.lang)}</th><td>${r.done} / ${r.count}</td><td>${r.done?(r.score/r.done).toFixed(1)+' / '+Math.round(r.total/r.done):'—'}</td></tr>`).join('')}</tbody></table></div><p class="muted">按阅读页最近一次答题记录；重做同一篇按最新一次计。阅读题不写入 SRS 复习状态。</p></div>`;
 }
 function readingStatistics() {
   return LANGS.map(lang => {
@@ -60108,7 +60121,7 @@ function readingStatistics() {
 }
 function renderSettings() {
   return `<h2>设置</h2><div class="settings-grid">
-  <section class="panel"><h3>每日新卡数</h3><form id="limits"><div class="limit-row"><div><label for="limit-es">es · 西语</label><input id="limit-es" name="es" type="number" min="0" max="999" step="1" required value="${state.settings.newPerDay.es}"></div><div><label for="limit-ru">ru · 俄语</label><input id="limit-ru" name="ru" type="number" min="0" max="999" step="1" required value="${state.settings.newPerDay.ru}"></div></div><div class="actions"><button type="submit">应用设置</button></div></form><p class="muted">0 表示暂停新卡，到期卡照常复习。两个方向分别占一个新卡名额；修改额度不会删除进度。</p></section>
+  <section class="panel"><h3>每日新卡数</h3><form id="limits"><div class="limit-row">${LANGS.map(lang => `<div><label for="limit-${lang}">${langLabel(lang)}</label><input id="limit-${lang}" name="${lang}" type="number" min="0" max="999" step="1" required value="${state.settings.newPerDay[lang]}"></div>`).join('')}</div><div class="actions"><button type="submit">应用设置</button></div></form><p class="muted">0 表示暂停新卡，到期卡照常复习。两个方向分别占一个新卡名额；修改额度不会删除进度。</p></section>
   <section class="panel"><h3>保存文件</h3><p>评分后会自动缓存。点保存把卡片和进度写入 HTML，保存后再人工提交和推送 Git。</p><div class="actions"><button class="primary" data-action="save" ${saving || !handleReady?'disabled':''}>${saving?'保存中…':overwritePending?'仍要覆盖':'保存'}</button><button data-action="save-as">另存为</button><button data-action="download-html">下载 HTML</button></div><p class="muted">Chrome / Edge 首次选择文件位置，之后复用。其他浏览器下载一份新文件。GitHub Pages 页面不能直接改仓库。</p></section>
   <section class="panel span-all"><h3>导入卡片 CSV</h3><p class="muted">按 id 更新内容和增加词条，保留已有复习状态。请保留原 id；字母行的 tags 需包含 letter；整句短语用 phrase，仅生成识别卡。</p><label for="csv-file">选择 CSV 文件</label><input id="csv-file" type="file" accept=".csv,text/csv"><label for="csv-text">或粘贴 CSV（含表头）</label><textarea id="csv-text" spellcheck="false" placeholder="id,lang,lesson,front,back,example,example_zh,note,tags"></textarea><div class="actions"><button data-action="import-csv">导入粘贴的卡片</button></div></section>
   <section class="panel span-all"><h3>导出／导入进度</h3><p>在手机导出，在电脑导入。同一张卡取 last 日期更晚的记录；同日比较该卡最近评分时间，仍相同则保留当前记录。导入保留本机的每日新卡设置。</p><div class="actions"><button data-action="copy-progress">复制进度 JSON</button><button data-action="export-progress">下载进度 JSON</button></div><label for="progress-file">选择进度 JSON 文件</label><input id="progress-file" type="file" accept=".json,application/json"><label for="progress-text">或粘贴进度 JSON</label><textarea id="progress-text" spellcheck="false" placeholder="粘贴完整状态 JSON"></textarea><div class="actions"><button data-action="import-progress">合并粘贴的进度</button></div><p class="muted">进度 JSON 不包含卡片内容。两台设备应使用相同卡片；暂时未知的卡片进度会保留，之后导入对应 CSV 即可继续。</p></section>
@@ -60226,9 +60239,9 @@ function bindEvents() {
     try {
       const form = event.target;
       if (form.id === 'limits') {
-        const es = Number(form.elements.es.value), ru = Number(form.elements.ru.value);
-        if ([es,ru].some(n => !Number.isInteger(n) || n<0 || n>999)) throw new Error('每日新卡数须为 0–999 的整数。');
-        state.settings.newPerDay = {es,ru}; resetSession(); touch(); showNotice('每日新卡数已应用，请保存文件。');
+        const limits = Object.fromEntries(LANGS.map(lang => [lang,Number(form.elements[lang].value)]));
+        if (LANGS.some(lang => !Number.isInteger(limits[lang]) || limits[lang]<0 || limits[lang]>999)) throw new Error('每日新卡数须为 0–999 的整数。');
+        state.settings.newPerDay = limits; resetSession(); touch(); showNotice('每日新卡数已应用，请保存文件。');
       } else if (form.dataset.question !== undefined && openReading && own(READINGS,openReading)) {
         const item = READINGS[openReading], i = Number(form.dataset.question), question = item.questions[i], answer = form.elements.answer.value;
         const result = spellingResult(answer,question.answer,item.lang);

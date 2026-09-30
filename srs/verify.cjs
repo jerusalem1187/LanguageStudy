@@ -2014,14 +2014,45 @@ test('任务 F1：统计页的阅读一行；课程标题行的每日时长两�
   document.getElementById('app').listeners.click[0]({target:{closest:()=>statsTab}});
   const rows=document.querySelectorAll('.stats-table').at(-1).querySelector('tbody').querySelectorAll('tr')
     .map(tr=>[tr.querySelector('th').textContent,...tr.querySelectorAll('td').map(td=>td.textContent)]);
-  assert.deepEqual(rows,[['es · 西语','1 / 48','4.0 / 4'],['ru · 俄语','0 / 60','—']]);
+  assert.deepEqual(rows.slice(0,2),[['es · 西语','1 / 48','4.0 / 4'],['ru · 俄语','0 / 60','—']]);
+  assert.deepEqual(rows.slice(2).map(row=>row[0]),['uz · 乌兹别克语','kk · 哈萨克语']);
   const expected={es:['每天 30 分钟 + 每周 3 次系统块 40 分钟','每天 25 分钟 + 每周 30 分钟语法与写作'],ru:['每天 10 分钟','每天 30 分钟 + 周末系统块 60 分钟']};
   for (const [id,lesson] of Object.entries(a.LESSONS)) {
+    if (!expected[lesson.lang]) continue; // 乌兹别克语、哈萨克语未排期，不检查时长。
     const want=expected[lesson.lang][lesson.week>=5?1:0];
     assert.equal(lesson.dailyTime,want,id+' dailyTime');
     a.openLesson(id);
     assert(document.querySelector('.kicker').textContent.includes(want),id+' 标题行时长');
   }
+});
+
+test('语言表：四种语言的复习下拉框、设置表单与统计行；旧进度缺少新语言额度时按 0 处理',() => {
+  const {api:a,document}=createAPI(true);a.initialize();
+  const old={version:1,updatedAt:'2026-09-14T00:00:00.000Z',settings:{newPerDay:{es:15,ru:10}},cards:{},log:[]};
+  const checked=a.validateState(old);
+  assert.deepEqual(plain(checked.settings.newPerDay),{es:15,ru:10,uz:0,kk:0});
+  assert.throws(()=>a.validateState({...old,settings:{newPerDay:{es:15,ru:10,uz:1000}}}),/0–999/);
+  assert.throws(()=>a.validateState({...old,settings:{newPerDay:{es:15,ru:'x'}}}),/0–999/);
+  a.openReview('all');
+  document.getElementById('app').listeners.click[0]({target:{closest:()=>document.querySelectorAll('[data-tab]').find(node=>node.dataset.tab==='review')}});
+  assert.deepEqual(document.getElementById('language').querySelectorAll('option').map(node=>node.getAttribute('value')),['all','es','ru','uz','kk']);
+  document.getElementById('app').listeners.click[0]({target:{closest:()=>document.querySelectorAll('[data-tab]').find(node=>node.dataset.tab==='settings')}});
+  assert.deepEqual(document.getElementById('limits').querySelectorAll('input').map(node=>node.getAttribute('name')),['es','ru','uz','kk']);
+  document.getElementById('app').listeners.click[0]({target:{closest:()=>document.querySelectorAll('[data-tab]').find(node=>node.dataset.tab==='stats')}});
+  const heads=document.querySelectorAll('.stats-table')[0].querySelector('tbody').querySelectorAll('tr').map(tr=>tr.querySelector('th').textContent);
+  assert.deepEqual(heads,['es · 西语','ru · 俄语','uz · 乌兹别克语','kk · 哈萨克语']);
+  document.getElementById('app').listeners.click[0]({target:{closest:()=>document.querySelectorAll('[data-tab]').find(node=>node.dataset.tab==='lessons')}});
+  const page=document.getElementById('app').innerHTML;
+  for (const label of ['西语课程','俄语课程','乌兹别克语课程','哈萨克语课程']) assert(page.includes('aria-label="'+label+'"'),label);
+  // 乌兹别克语 oʻ / gʻ 的撇号：U+02BB、U+02BC、U+2019 和普通单引号视为同一符号。
+  assert.equal(a.spellingResult("o'qituvchi",'oʻqituvchi','uz').grade,4);
+  assert.equal(a.spellingResult('gʼisht','gʻisht','uz').grade,4);
+  assert.equal(a.spellingResult('o’qituvchi','oʻqituvchi','uz').grade,4);
+  assert.equal(a.spellingResult('oqituvchi','oʻqituvchi','uz').grade,0);
+  // 哈萨克语和西语不做撇号归一；俄语重音规则不变。
+  assert.equal(a.spellingResult('кітап','кітап','kk').grade,4);
+  assert.equal(a.spellingResult('китап','кітап','kk').grade,0);
+  assert.equal(a.spellingResult('книга','кни́га','ru').grade,4);
 });
 
 // 任务 F2：俄语阅读篇目。后续建设期阅读沿用同一套推导式检查。
