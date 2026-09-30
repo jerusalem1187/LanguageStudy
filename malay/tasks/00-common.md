@@ -41,6 +41,7 @@
 ## 语言规范
 
 - 变体：马来西亚标准马来语，拼写按 Dewan Bahasa dan Pustaka 规范。只用马来西亚拼写和常用词：kerana、boleh、wang、pejabat、universiti、stesen、kesihatan、bahawa、iaitu、Isnin、Khamis、Jumaat、Ahad、Mac、Ogos、Disember、lapan、mahu、sahaja、kereta（汽车）、basikal、kasut、bilik、tandas。印尼语形式（karena、uang、kantor、universitas、bahwa、Senin、delapan、mau、saja、sepeda、sepatu、kamar）不进 front、example 和阅读；只在 note 里作对照时才出现，前面写「印尼语作」。
+- 同形异义词按马来西亚义使用，不用印尼语义：senang（容易；「高兴」要写 senang hati 或 gembira）、semalam（昨天）、kelmarin（前天）、budak（小孩）、percuma（免费的）、bisa（毒）、kereta（汽车）、pejabat（办公室）、bila（什么时候）、jemput（邀请）、ahli（成员）、tandas（厕所）。M3 审核时发现 senang 被当作「高兴」用，已更正。
 - 语体：标准书面语。代词用 saya、awak、anda、dia、beliau、kami、kita、mereka；口语代词 aku、kau、engkau 和缩略 tak、nak、dah、je、ni、tu 只在 ms-20 作识别卡出现，别的课不用。
 - 每个词条的 front 是所教的词形本身：教 belajar 就以 belajar 为 front，不以词根 ajar 为 front；note 写词根和词缀（「ber- + ajar；词根 ajar」）。meN- 动词的 note 写变形规则（「meN- + tulis → menulis，t 脱落」）。
 - 名词 note 写常用量词（「量词 buah」）；形容词 note 写「形容词，后置」；及物动词 note 写常见宾语。
