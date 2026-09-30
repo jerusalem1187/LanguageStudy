@@ -19,7 +19,7 @@ const source = runtime.slice(0,runtime.indexOf('// 启动。')) + runtime.slice(
 globalThis.api = {localDay,addDays,validateRows,validateState,parseCSV,mergeRows,pruneLog,
 schedule,expandCards,buildQueue,spellingResult,clozeExample,mergeProgress,statistics,
 safeJSON,serializeDocument,snapshotDocument,saveFile,initialize,LESSONS,reveal,gradeCard,recognitionOnly,
-renderLessons,bindEvents,READINGS,renderReadings,validateReadings,LANGS,LANG_INFO,
+renderLessons,bindEvents,READINGS,renderReadings,validateReadings,LANGS,LANG_INFO,kkLatin,
 openLesson(id){lesson=id;tab='lessons';render();},
 showReadings(){openReading=null;tab='readings';render();},
 openReadingItem(id){openReading=id;readingShowZh=false;tab='readings';render();},
@@ -4211,6 +4211,48 @@ test('K2：非短语例句去掉目标词后，同课框架最多重复三次',(
       assert(ids.length<=3,id+' 重复框架 '+frame+'（'+ids.join('、')+'）');
     }
   }
+});
+
+test('哈萨克语拉丁写法：2021 年方案逐字母转写；课程、复习卡显示，拼写卡作答前不显示；设置可关闭且不改进度',() => {
+  const pairs=[
+    ['Қазақстан','Qazaqstan'],['Менің атым Асан.','Menıñ atym Asan.'],['кітабым','kıtabym'],['үй','üi'],
+    ['Иә, мен студентпін.','İä, men studentpın.'],['шай','şai'],['ұшақ','ūşaq'],['сөйлеу','söileu'],
+    ['ғ ң ө һ х','ğ ñ ö h h'],['чемпион','tşempion'],['ащы','aştşy'],['аю','aiu'],['аяқ','aiaq'],
+    ['актёр','aktior'],['объект','obekt'],['альбом','albom'],['экран','ekran'],['цирк','tsirk'],
+    ['І і','I ı'],['Ы ы','Y y'],['Ю ю','İu iu'],['Щ щ','Ştş ştş'],['Ч ч','Tş tş'],['Ё ё','İo io']
+  ];
+  for (const [cyr,lat] of pairs) assert.equal(api.kkLatin(cyr),lat,cyr);
+  // 全部哈萨克语卡片转写后不再含西里尔字母。
+  for (const row of initialRows.filter(row=>row.lang==='kk')) for (const key of ['front','example']) assert.doesNotMatch(api.kkLatin(row[key]),/[Ѐ-ӿ]/,row.id+' '+key);
+  const {api:a,document}=createAPI(true);a.initialize();
+  const before=plain(a.getData().state);
+  a.openLesson('kk-03');
+  let page=document.getElementById('app').innerHTML;
+  assert(page.includes('class="muted latin" lang="kk-Latn"'));
+  assert(page.includes(api.kkLatin('Менің отбасымда төрт адам бар.')));
+  a.openLesson('ru-05');
+  assert(!document.getElementById('app').innerHTML.includes('class="muted latin"'),'只给哈萨克语显示');
+  const kkRow=initialRows.find(row=>row.lang==='kk'&&!row.tags.split(';').some(tag=>['letter','phrase'].includes(tag)));
+  const card=id=>a.expandCards([kkRow]).find(item=>item.direction===id);
+  // 识别卡：正面显示词条的拉丁写法。
+  a.setSession({day:'2026-09-30',lang:'kk',queue:[card('r')],again:[],done:0});
+  document.getElementById('app').listeners.click[0]({target:{closest:()=>document.querySelectorAll('[data-tab]').find(node=>node.dataset.tab==='review')}});
+  assert(document.getElementById('app').innerHTML.includes('>'+api.kkLatin(kkRow.front)+'<'),'识别卡显示拉丁写法');
+  // 拼写卡作答前的正面模板里没有拉丁写法，避免提示答案。
+  const spellingFront=runtime.slice(runtime.indexOf('const front = spelling ?'),runtime.indexOf('const back = !revealed'));
+  const beforeColon=spellingFront.slice(0,spellingFront.indexOf('` : `'));
+  assert(beforeColon.length>100 && !beforeColon.includes('latinLine'),'拼写卡正面不显示拉丁写法');
+  // 设置页开关
+  document.getElementById('app').listeners.click[0]({target:{closest:()=>document.querySelectorAll('[data-tab]').find(node=>node.dataset.tab==='settings')}});
+  assert(document.getElementById('show-latin'),'设置页有拉丁写法开关');
+  document.getElementById('app').listeners.change[0]({target:{id:'show-latin',checked:false}});
+  a.openLesson('kk-03');
+  page=document.getElementById('app').innerHTML;
+  assert(!page.includes('class="muted latin"'),'关闭后不显示');
+  document.getElementById('app').listeners.change[0]({target:{id:'show-latin',checked:true}});
+  a.openLesson('kk-03');
+  assert(document.getElementById('app').innerHTML.includes('class="muted latin"'),'重新打开后显示');
+  assert.deepEqual(plain(a.getData().state),before,'开关不写入进度');
 });
 
 // 可选的离线编辑诊断：仍使用正式检查的推导器，按位置一次报告全部缺词。
