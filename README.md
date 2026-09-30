@@ -7,7 +7,7 @@
 | 项 | 内容 |
 |---|---|
 | 起点 | 2026-09-07（第 0 周，2026-W37） |
-| 在学 | 西班牙语（第 1 周起）、俄语（第 1–4 周只做字母和读音，第 5 周起正式起步） |
+| 在学 | 西班牙语（第 1 周起）、俄语（第 1–4 周只做字母和读音，第 5 周起正式起步）、马来语（2026-09-30 决定加入，起始日期起始值 2026-10-05，课程建设中） |
 | 阶段 | 探索期：第 1–12 周，2026-09-14 至 2026-12-06；第 12 周结束时复盘 |
 | 每周投入 | 5–10 小时，计划基线 7 小时 |
 | 范围 | 当前只学读写，不学发音和听力。听说内容收在各语言 profile 的「以后加听说时」一节，探索期复盘时决定是否加 |
@@ -27,7 +27,11 @@
 | [russian/profile.md](russian/profile.md) | 俄语：同上 |
 | [russian/roadmap.md](russian/roadmap.md) | 俄语：同上 |
 | [russian/errors.md](russian/errors.md) | 俄语错题本 |
-| [srs/index.html](srs/index.html) | 自建 SRS 页面：复习、课程（西语 25 课到 A2，俄语 34 课到 A2）、阅读（分级短文，西语 48 篇、俄语 60 篇，答题得分写进进度）、统计、设置。卡片和进度嵌在文件里 |
+| [malay/profile.md](malay/profile.md) | 马来语：迁移分析（借词与中文语法结构）、难点地图、拼写要点、资源候选、探索段目标 |
+| [malay/roadmap.md](malay/roadmap.md) | 马来语：时间分配起始值、阶段总表、第 1–24 周逐周计划、阅读线编号 |
+| [malay/errors.md](malay/errors.md) | 马来语错题本 |
+| [malay/tasks/](malay/tasks/) | 马来语课程的实现任务书（M0 页面接入，M1–M6 课程与阅读），由 Codex 执行 |
+| [srs/index.html](srs/index.html) | 自建 SRS 页面：复习、课程（西语 25 课到 A2，俄语 34 课到 A2，马来语 24 课到 A2 建设中）、阅读（分级短文，西语 48 篇、俄语 60 篇，马来语 46 篇建设中，答题得分写进进度）、统计、设置。卡片和进度嵌在文件里 |
 | [srs/cards/](srs/cards/) | 卡片来源 CSV，改完在页面里导入再保存 |
 | [srs/README.md](srs/README.md) | 页面用法：打开、保存、手机进度合并、加卡片 |
 | [log/time.csv](log/time.csv) | 统一时间记录，一行一条 |
@@ -48,4 +52,5 @@
 3. 复制 `framework/templates/error-log.md` 到 `<语言代码>/errors.md`。
 4. `time.csv` 的 lang 列用新代码（ISO 639-1，如 de、fr、ja）。
 5. 周志和月度复盘模板的表里加一行。
-6. 时机：只在已有语言之一到 B1 后再加。原因见 `principles.md`。
+6. 时机：只在已有语言之一到 B1 后再加。原因见 `principles.md`。马来语是记录在案的例外（2026-09-30），见 `principles.md`「加新语言的规则」。
+7. 课程内容进 SRS 页面：先按 `malay/tasks/M0-page.md` 的方式把语言注册进 `LANGS` 和 `LANG_INFO`，再按轮次写任务书生成课程。
