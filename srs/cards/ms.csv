@@ -1239,3 +1239,603 @@ ms-1237,ms,ms-16,lembut,柔软的,Kain lembut itu untuk baju adik.,那块柔软�
 ms-1238,ms,ms-16,keras,硬的,Kayu keras itu digunakan untuk meja.,那块硬木用来做桌子。,形容词，后置,形容词;物品属性;补充
 ms-1239,ms,ms-16,tebal,厚的,Buku tebal itu berat.,那本厚书很重。,形容词，后置,形容词;物品属性;补充
 ms-1240,ms,ms-16,nipis,薄的,Kertas nipis itu di dalam fail.,那张薄纸在文件夹里。,形容词，后置,形容词;物品属性;补充
+ms-1241,ms,ms-17,jadi,所以,"Hujan turun, jadi kami berehat di rumah.",下雨了，所以我们在家休息。,引出结果；不用于说明原因,连词;原因与条件
+ms-1242,ms,ms-17,oleh sebab,因为,"Oleh sebab jalan licin, kami berjalan perlahan.",因为道路湿滑，我们走得慢。,书面语原因表达；sebab 可作名词,连词;原因与条件
+ms-1243,ms,ms-17,oleh itu,因此,"Bas belum datang; oleh itu, kami masih menunggu.",巴士还没来，因此我们仍在等。,连接前文与结果，后常加逗号,连词;原因与条件
+ms-1244,ms,ms-17,walau bagaimanapun,然而,"Hujan turun; walau bagaimanapun, majlis itu diteruskan.",下雨了，然而那场活动仍然继续。,书面语转折连接语；三个词分写,连词;原因与条件
+ms-1245,ms,ms-17,meskipun,虽然,"Meskipun letih, Siti masih membantu ibu.",虽然疲倦，西蒂仍帮助母亲。,让步从句；主句一般不再重复但是,连词;原因与条件
+ms-1246,ms,ms-17,sungguhpun,虽然；尽管,"Sungguhpun jalan jauh, mereka datang awal.",尽管路途遥远，他们仍提早来了。,较正式的让步连词,连词;原因与条件
+ms-1247,ms,ms-17,kalau,如果,"Kalau hujan turun, kita tinggal di rumah.",如果下雨，我们就待在家里。,条件连词；正式说明也常用 jika,连词;原因与条件
+ms-1248,ms,ms-17,sekiranya,如果；假如,"Sekiranya bas lewat, saya akan menghubungi awak.",如果巴士晚点，我会联系你。,书面语条件连词,连词;原因与条件
+ms-1249,ms,ms-17,andai,假如,"Andai saya ada masa, saya akan membantu mereka.",假如我有时间，我会帮助他们。,假设条件；较常见于书面表达,连词;原因与条件
+ms-1250,ms,ms-17,lantaran,由于,Kami tidak keluar lantaran hujan masih turun.,由于还在下雨，我们没有出门。,书面语原因连词,连词;原因与条件
+ms-1251,ms,ms-17,sebaliknya,相反,"Ali tidak balik; sebaliknya, dia membantu kami.",阿里没有回去，相反，他帮助了我们。,连接相反情况，也用作副词,连词;原因与条件
+ms-1252,ms,ms-17,malah,而且；甚至,"Dia membantu kami, malah membawa makanan untuk semua.",他帮助我们，而且给大家带来食物。,在前述内容上再补充一层,连词;原因与条件
+ms-1253,ms,ms-17,biarpun,即使；尽管,"Biarpun hujan turun, kami tetap datang.",即使下雨，我们仍然来。,让步连词，连写,连词;原因与条件
+ms-1254,ms,ms-17,asalkan,只要,Awak boleh ikut asalkan datang awal.,只要你早来，就可以一起去。,说明必须满足的条件,连词;原因与条件
+ms-1255,ms,ms-17,akibatnya,结果；因此,"Paip itu rosak; akibatnya, tiada bekalan air.",水管坏了，结果没有水供应。,结果连接语；akibat + -nya，按整词学习,连词;原因与条件
+ms-1256,ms,ms-17,tanah runtuh,山体滑坡,Jalan itu ditutup kerana tanah runtuh.,那条路因山体滑坡而关闭。,量词 通常不用专用量词；一次事件可说 satu kejadian tanah runtuh；复合名词,名词;生活事件
+ms-1257,ms,ms-17,ribut,暴风雨,Kami tidak keluar kerana ribut.,我们因为暴风雨而没有出门。,量词 场用 kejadian；天气现象常不用量词,名词;生活事件
+ms-1258,ms,ms-17,kilat,闪电,Saya melihat kilat dari tingkap rumah.,我从家里的窗户看到了闪电。,量词 道用 pancaran；天气描述常不用量词,名词;生活事件
+ms-1259,ms,ms-17,guruh,雷声,Adik mendengar guruh lalu menutup tingkap.,弟弟听见雷声，就关了窗。,量词 通常不用量词,名词;生活事件
+ms-1260,ms,ms-17,kemarau,旱灾；干旱,Bekalan air berkurang kerana kemarau.,供水因干旱而减少。,量词 通常不用量词；指持续干旱,名词;生活事件
+ms-1261,ms,ms-17,kemalangan,事故,Kemalangan itu berlaku di simpang jalan.,事故发生在道路交叉口。,量词 起用 kejadian；ke-…-an，按整词学习,名词;生活事件
+ms-1262,ms,ms-17,kerosakan,损坏；故障,Pegawai memeriksa kerosakan lif itu.,工作人员检查那部电梯的故障。,通常不用专用量词，可写 satu kerosakan（一处故障）；ke-…-an，按整词学习,名词;生活事件
+ms-1263,ms,ms-17,gangguan,中断；干扰,Gangguan elektrik itu menyebabkan lif berhenti.,那次停电导致电梯停止运行。,量词 次用 kali；ganggu + -an，按整词学习,名词;生活事件
+ms-1264,ms,ms-17,kelewatan,延误,Kelewatan bas itu menyebabkan saya datang lewat.,巴士的延误使我迟到了。,量词 次用 kali；ke-…-an，按整词学习,名词;生活事件
+ms-1265,ms,ms-17,pembatalan,取消,Kami membaca notis pembatalan acara itu.,我们读了那场活动的取消通知。,量词 次用 kali；peN-…-an，按整词学习,名词;生活事件
+ms-1266,ms,ms-17,wabak,疫情,Sekolah itu ditutup kerana wabak.,那所学校因疫情而关闭。,量词 通常不用专用量词，可直接说 satu wabak,名词;生活事件
+ms-1267,ms,ms-17,bekalan,供应,Bekalan air di sekolah sudah pulih.,学校的供水已经恢复。,通常不用专用量词，按所供应的实际物品计数；bekal + -an，按整词学习,名词;生活事件
+ms-1268,ms,ms-17,elektrik,电,Kami tidak dapat menggunakan elektrik pada waktu malam.,我们夜间无法用电。,量词 通常不用量词；英语借词,名词;生活事件
+ms-1269,ms,ms-17,paip,水管,Paip di dapur itu sudah rosak.,厨房里的那根水管已经坏了。,量词 batang；英语借词,名词;生活事件
+ms-1270,ms,ms-17,longkang,排水沟,Kami membersihkan longkang di depan rumah.,我们清理屋前的排水沟。,量词 条用 batang,名词;生活事件
+ms-1271,ms,ms-17,bumbung,屋顶,Angin itu menyebabkan bumbung rumah rosak.,那阵风造成屋顶损坏。,量词 座用 buah,名词;生活事件
+ms-1272,ms,ms-17,lif,电梯,Lif itu tidak boleh digunakan hari ini.,那部电梯今天不能使用。,量词 buah；英语借词,名词;生活事件
+ms-1273,ms,ms-17,kesesakan,拥堵,Kesesakan jalan menyebabkan bas lewat.,道路拥堵导致巴士晚点。,量词 通常不用量词；ke-…-an，按整词学习,名词;生活事件
+ms-1274,ms,ms-17,acara,活动项目,Acara sekolah itu bermula pada pukul lapan.,那项学校活动八点开始。,量词 项可用 acara，不另加专用量词,名词;生活事件
+ms-1275,ms,ms-17,gotong-royong,集体义务劳动,Penduduk mengadakan gotong-royong pada hari Ahad.,居民星期日开展集体义务劳动。,量词 次用 kali；固定连字符形式,名词;生活事件
+ms-1276,ms,ms-17,kenduri,宴席,Keluarga Ali menyediakan makanan untuk kenduri.,阿里一家为宴席准备食物。,量词 场用 majlis,名词;生活事件
+ms-1277,ms,ms-17,cuti umum,公共假日,Pejabat itu ditutup pada cuti umum.,那间办公室在公共假日关闭。,量词 天用 hari,名词;生活事件
+ms-1278,ms,ms-17,janji temu,预约,Saya ada janji temu dengan doktor esok.,我明天和医生有预约。,量词 次用 kali；两个词分写,名词;生活事件
+ms-1279,ms,ms-17,derma,捐款,Derma itu untuk keluarga yang memerlukan bantuan.,那笔捐款给需要帮助的家庭。,量词 笔用 sejumlah；也可直接加数额,名词;生活事件
+ms-1280,ms,ms-17,tabung,基金；筹款箱,Kami memasukkan wang ke dalam tabung itu.,我们把钱放进那个筹款箱。,量词 buah；本句指筹款箱,名词;生活事件
+ms-1281,ms,ms-17,menangguhkan,推迟,Ketua menangguhkan acara itu kerana hujan.,负责人因为下雨而推迟了活动。,meN- + tangguh + -kan → menangguhkan，men-；t 脱落；词根 tangguh；及物；常见宾语 acara、mesyuarat,动词;处理生活事件
+ms-1282,ms,ms-17,membatalkan,取消,Kami membatalkan lawatan itu kerana ribut.,我们因为暴风雨而取消了参观。,meN- + batal + -kan → membatalkan，mem-；b 保留；词根 batal；及物；常见宾语 lawatan、janji temu,动词;处理生活事件
+ms-1283,ms,ms-17,melanjutkan,延长,Kami melanjutkan masa acara itu.,我们延长那场活动的时间。,meN- + lanjut + -kan → melanjutkan，me-，l 保留；词根 lanjut；及物，常见宾语 masa acara itu,动词;处理生活事件
+ms-1284,ms,ms-17,menyelenggara,维护；保养,Pekerja menyelenggara lif itu.,工人保养那部电梯。,meN- + selenggara → menyelenggara，meny-，s 脱落；词根 selenggara；及物，常见宾语 lif、mesin；马来西亚「维护、保养」多用此形式，menyelenggarakan 多指举办,动词;处理生活事件
+ms-1285,ms,ms-17,menggantikan,替换,Kami menggantikan lampu yang rosak.,我们更换了坏灯。,meN- + ganti + -kan → menggantikan，meng-；g 保留；词根 ganti；及物；常见宾语 lampu、alat,动词;处理生活事件
+ms-1286,ms,ms-17,mengosongkan,腾空,Kami mengosongkan bilik itu sebelum acara bermula.,我们在活动开始前腾空那个房间。,meN- + kosong + -kan → mengosongkan，meng-，k 脱落；词根 kosong；及物，常见宾语 bilik itu sebelum acara bermula,动词;处理生活事件
+ms-1287,ms,ms-17,menaungi,遮蔽,Pokok besar itu menaungi rumah kami.,那棵大树为我们的房子遮阴。,meN- + naung + -i → menaungi，me-，n 保留；词根 naung；及物，常见宾语 rumah kami,动词;处理生活事件
+ms-1288,ms,ms-17,mengelakkan,避免,Kami datang awal untuk mengelakkan kesesakan.,我们提早来，以避开拥堵。,meN- + elak + -kan → mengelakkan，meng-；e 保留；词根 elak；及物；常见宾语 kesesakan、kemalangan,动词;处理生活事件
+ms-1289,ms,ms-17,mengharapkan,期望,Kami mengharapkan bantuan daripada masyarakat.,我们期望得到社会的帮助。,meN- + harap + -kan → mengharapkan，meng-；h 保留；词根 harap；及物；常见宾语 bantuan、sumbangan,动词;处理生活事件
+ms-1290,ms,ms-17,menangani,处理；应对,Kami menangani masalah bekalan air bersama-sama.,我们共同处理供水问题。,meN- + tangan + -i → menangani，men-，t 脱落；词根 tangan；及物，常见宾语 masalah bekalan air bersama-sama,动词;处理生活事件
+ms-1291,ms,ms-17,mendahulukan,优先处理,Kami mendahulukan keselamatan.,我们优先考虑安全。,meN- + dahulu + -kan → mendahulukan，men-，d 保留；词根 dahulu；及物，常见宾语 keselamatan,动词;处理生活事件
+ms-1292,ms,ms-17,menenangkan,使平静,Ibu menenangkan adik semasa ribut.,暴风雨时母亲安抚弟弟。,meN- + tenang + -kan → menenangkan，men-；t 脱落；词根 tenang；及物；常见宾语 adik、orang,动词;处理生活事件
+ms-1293,ms,ms-17,meyakinkan,使相信,Ketua meyakinkan kami bahawa dewan itu selamat.,负责人使我们相信礼堂是安全的。,meN- + yakin + -kan → meyakinkan，me-；y 保留；词根 yakin；及物；常见宾语 kami、penduduk,动词;处理生活事件
+ms-1294,ms,ms-17,menghulurkan,伸出；提供,Ali menghulurkan bantuan kepada keluarga itu.,阿里向那家人提供帮助。,meN- + hulur + -kan → menghulurkan，meng-；h 保留；词根 hulur；及物；常见宾语 bantuan、tangan,动词;处理生活事件
+ms-1295,ms,ms-17,mengutip,收集,Siti mengutip derma untuk penduduk kampung.,西蒂为村民募捐。,meN- + kutip → mengutip，meng-；k 脱落；词根 kutip；及物；常见宾语 derma、wang,动词;处理生活事件
+ms-1296,ms,ms-17,menderma,捐赠,Ali menderma wang kepada sekolah itu.,阿里向那所学校捐款。,meN- + derma → menderma，men-，d 保留；词根 derma；及物，常见宾语 wang kepada sekolah itu,动词;处理生活事件
+ms-1297,ms,ms-17,mengalir,流动,Air mengalir dari bumbung ke dalam longkang.,水从屋顶流入排水沟。,meN- + alir → mengalir，meng-；a 保留；词根 alir；不及物；常与 dari、ke 连用,动词;处理生活事件
+ms-1298,ms,ms-17,melimpah,溢出,Air longkang melimpah kerana hujan lama.,排水沟的水因为长时间下雨而溢出。,meN- + limpah → melimpah，me-；l 保留；词根 limpah；不及物,动词;处理生活事件
+ms-1299,ms,ms-17,berlaku,发生,Gangguan itu berlaku pada waktu petang.,那次中断发生在下午。,ber- + laku → berlaku；词根 laku；不及物,动词;处理生活事件
+ms-1300,ms,ms-17,bersetuju,同意,Kami bersetuju untuk membantu penduduk kampung.,我们同意帮助村民。,ber- + setuju → bersetuju；词根 setuju；不及物，后可接 untuk,动词;处理生活事件
+ms-1301,ms,ms-17,mungkin,可能,Bas itu mungkin lewat kerana hujan.,那辆巴士可能因为下雨而晚点。,表示可能性，通常放在谓语前,副词;事件评述
+ms-1302,ms,ms-17,pasti,一定,Kami pasti datang jika jalan itu selamat.,如果那条路安全，我们一定来。,表示确定,副词;事件评述
+ms-1303,ms,ms-17,sebenarnya,其实,"Sebenarnya, acara itu belum dibatalkan.",其实，那项活动还没有被取消。,句首评述；按整词学习,副词;事件评述
+ms-1304,ms,ms-17,malangnya,不幸的是,"Malangnya, paip di sekolah rosak semula.",不幸的是，学校的水管又坏了。,句首评述；malang + -nya，按整词学习,副词;事件评述
+ms-1305,ms,ms-17,mujur,幸好,"Mujur, semua orang sudah keluar dari dewan.",幸好，所有人都已经离开礼堂。,用于说明幸运的结果,副词;事件评述
+ms-1306,ms,ms-17,rupanya,原来,"Rupanya, Ali sudah membaiki lampu itu.",原来，阿里已经修好那盏灯了。,表示刚发现的情况；rupa + -nya,副词;事件评述
+ms-1307,ms,ms-17,nampaknya,看来,"Nampaknya, ribut itu akan berakhir sebentar nanti.",看来，那场暴风雨稍后就会结束。,表示根据情况作判断；nampak + -nya,副词;事件评述
+ms-1308,ms,ms-17,lazimnya,通常,"Lazimnya, acara itu diadakan pada hari Ahad.",通常，那项活动在星期日举办。,较正式的频率副词；lazim + -nya,副词;事件评述
+ms-1309,ms,ms-17,terutamanya,尤其,"Kami membantu semua penduduk, terutamanya keluarga Ali.",我们帮助所有居民，尤其是阿里一家。,按整词学习，不在本课新增名词化派生规则,副词;事件评述
+ms-1310,ms,ms-17,secara tiba-tiba,突然,Lif itu berhenti secara tiba-tiba.,那部电梯突然停了。,方式短语；tiba-tiba 是固定重叠形式,副词;事件评述
+ms-1311,ms,ms-17,"Kalau hujan, kita tunggu di sini.",如果下雨，我们就在这里等。,"Kalau hujan, kita tunggu di sini.",如果下雨，我们就在这里等。,条件从句在前，后加逗号,连词;复合句整句;phrase
+ms-1312,ms,ms-17,"Walaupun letih, saya tetap membantu.",虽然累，我仍然帮忙。,"Walaupun letih, saya tetap membantu.",虽然累，我仍然帮忙。,让步从句在前,连词;复合句整句;phrase
+ms-1313,ms,ms-17,"Oleh itu, acara ini ditangguhkan.",因此，这项活动推迟。,"Oleh itu, acara ini ditangguhkan.",因此，这项活动推迟。,结果连接语与被动形式,连词;复合句整句;phrase
+ms-1314,ms,ms-17,Saya datang kerana awak memerlukan bantuan.,我来是因为你需要帮助。,Saya datang kerana awak memerlukan bantuan.,我来是因为你需要帮助。,原因从句在后,连词;复合句整句;phrase
+ms-1315,ms,ms-17,Kita boleh pergi asalkan jalan selamat.,只要道路安全，我们就可以去。,Kita boleh pergi asalkan jalan selamat.,只要道路安全，我们就可以去。,必要条件用 asalkan,连词;复合句整句;phrase
+ms-1316,ms,ms-17,licin,滑的,Jalan licin itu dekat dengan rumah saya.,那条湿滑的路靠近我家。,形容词，后置,形容词;生活事件;补充
+ms-1317,ms,ms-17,rosak,损坏的,Lif rosak itu belum dibaiki.,那部坏电梯还没有修好。,形容词，后置,形容词;生活事件;补充
+ms-1318,ms,ms-17,lewat,晚的；迟的,Bas itu lewat kerana kesesakan jalan.,那辆巴士因为道路拥堵而晚点。,形容词，后置；也作时间状语,形容词;生活事件;补充
+ms-1319,ms,ms-17,tetap,仍然,Dia tetap datang meskipun hujan turun.,尽管下雨，他仍然来。,表示情况不变,副词;生活事件;补充
+ms-1320,ms,ms-17,pulih,恢复,Bekalan elektrik sudah pulih di kampung kami.,我们村的供电已经恢复。,词根 pulih；不及物,动词;生活事件;补充
+ms-1321,ms,ms-18,sementara,当……时；而,Siti membaca sementara Ali menyemak jadual perjalanan.,西蒂读书时，阿里核对行程表。,连接同时进行的两个动作,连词;目的与时间关系
+ms-1322,ms,ms-18,ketika,当……时,Saya sedang berkemas ketika ibu datang.,母亲来时，我正在收拾行李。,引出动作发生的时间,连词;目的与时间关系
+ms-1323,ms,ms-18,sewaktu,当……时,Kami melihat sungai sewaktu menaiki feri.,我们乘渡轮时看到了河流。,时间从句连接词；按整词学习,连词;目的与时间关系
+ms-1324,ms,ms-18,setelah,在……之后,"Setelah membeli tiket, kami masuk ke terminal.",买票后，我们进入航站楼。,后面的动作在前一动作完成后发生,连词;目的与时间关系
+ms-1325,ms,ms-18,sesudah,在……之后,"Sesudah makan, Raju menyemak bagasinya.",吃饭后，拉朱检查他的行李。,较正式的先后关系连接词,连词;目的与时间关系
+ms-1326,ms,ms-18,apabila,当；一旦,"Apabila bas tiba, kami beratur di pintu.",巴士到达时，我们在门口排队。,书面语时间连词；bila 在标准书面语中主要提问,连词;目的与时间关系
+ms-1327,ms,ms-18,sebaik sahaja,一……就……,"Sebaik sahaja tiba, kami menghubungi keluarga.",一到达，我们就联系家人。,紧接着发生的两个动作,连词;目的与时间关系
+ms-1328,ms,ms-18,selagi,只要仍；在……期间,"Selagi hujan turun, kami menunggu di dalam terminal.",只要还在下雨，我们就在航站楼内等。,表示某情况持续期间,连词;目的与时间关系
+ms-1329,ms,ms-18,sepanjang,整个……期间；沿着,Kami berbual sepanjang perjalanan ke Melaka.,去马六甲的整个路上，我们都在聊天。,后接时段或路段；按整词学习,介词;目的与时间关系
+ms-1330,ms,ms-18,sejurus,片刻后；紧接着,Kami bertolak sejurus selepas sarapan.,我们早餐后随即出发。,常用 sejurus selepas；按整词学习,副词;目的与时间关系
+ms-1331,ms,ms-18,serentak,同时,Dua buah bas itu tiba serentak.,那两辆巴士同时到达。,表示动作在同一时间发生；按整词学习,副词;目的与时间关系
+ms-1332,ms,ms-18,sebelumnya,在那之前,Saya sudah menyemak jadual satu hari sebelumnya.,我在前一天已经核对了时刻表。,sebelum + -nya，指前文所说时间之前,副词;目的与时间关系
+ms-1333,ms,ms-18,selepas itu,在那之后,"Kami membeli tiket; selepas itu, kami beratur.",我们买了票，随后排队。,衔接叙事的时间短语,副词;目的与时间关系
+ms-1334,ms,ms-18,pada mulanya,起初,"Pada mulanya, saya ingin menaiki kereta api.",起初，我想乘火车。,mula + -nya；整组学习,副词;目的与时间关系
+ms-1335,ms,ms-18,sekali gus,一并；同时,Saya membeli dua keping tiket sekali gus.,我一次买了两张票。,两个词分写，不写成一个词,副词;目的与时间关系
+ms-1336,ms,ms-18,bagasi,行李,Bagasi saya sudah dimuatkan ke dalam bas.,我的行李已经装上巴士。,集合名词；通常不用专用量词，行李包按 buah beg 计数,名词;一天与旅行
+ms-1337,ms,ms-18,pasport,护照,Siti menyimpan pasport di dalam beg kecil.,西蒂把护照放在小包里。,量词 本用 naskhah；英语借词,名词;一天与旅行
+ms-1338,ms,ms-18,visa,签证,Raju memeriksa tarikh pada visa itu.,拉朱检查那张签证上的日期。,量词 张用 keping；英语借词,名词;一天与旅行
+ms-1339,ms,ms-18,kaunter,柜台,Kami membeli tiket di kaunter itu.,我们在那个柜台买票。,量词 buah；英语借词,名词;一天与旅行
+ms-1340,ms,ms-18,terminal,航站楼；车站大楼,Bas itu bertolak dari terminal baru.,那辆巴士从新车站大楼出发。,量词 buah；英语借词,名词;一天与旅行
+ms-1341,ms,ms-18,platform,站台,Kami menunggu kereta api di platform dua.,我们在二号站台等火车。,量词 座用 buah；英语借词,名词;一天与旅行
+ms-1342,ms,ms-18,gerabak,车厢,Gerabak itu penuh dengan pelajar.,那节车厢里坐满了学生。,量词 节用 buah,名词;一天与旅行
+ms-1343,ms,ms-18,tempat duduk,座位,Tempat duduk saya dekat dengan tingkap.,我的座位靠近窗户。,量词 个用 tempat；固定名词短语,名词;一天与旅行;phrase
+ms-1344,ms,ms-18,tali pinggang,腰带,Tali pinggang itu disimpan di dalam beg.,那条腰带放在包里。,量词 条用 utas,名词;一天与旅行
+ms-1345,ms,ms-18,pintu masuk,入口,Ali menunggu kami di pintu masuk hotel.,阿里在酒店入口等我们。,量词 个用 buah,名词;一天与旅行;phrase
+ms-1346,ms,ms-18,pintu keluar,出口,Pintu keluar itu di sebelah kanan kaunter.,出口在柜台右侧。,量词 个用 buah,名词;一天与旅行;phrase
+ms-1347,ms,ms-18,ruang menunggu,候车室；等候区,Ruang menunggu itu bersih dan sejuk.,那个等候区干净又凉爽。,量词 处用 ruang；固定名词短语,名词;一天与旅行;phrase
+ms-1348,ms,ms-18,jadual perjalanan,行程表,Saya menulis jadual perjalanan untuk keluarga.,我为家人写行程表。,量词 张用 helai,名词;一天与旅行
+ms-1349,ms,ms-18,tempahan,预订,Tempahan bilik kami sudah disahkan oleh hotel.,酒店已经确认我们的房间预订。,量词 笔用 tempahan；tempah + -an，按整词学习,名词;一天与旅行
+ms-1350,ms,ms-18,penginapan,住宿,Hotel itu menyediakan penginapan dan sarapan.,那家酒店提供住宿和早餐。,量词 通常不用量词；peN-…-an，按整词学习,名词;一天与旅行
+ms-1351,ms,ms-18,destinasi,目的地,Destinasi kami hari ini ialah Pulau Pinang.,我们今天的目的地是槟城。,量词 处用 tempat；英语借词,名词;一天与旅行
+ms-1352,ms,ms-18,penerbangan,航班；飞行,Penerbangan itu ditangguhkan kerana ribut.,那个航班因为暴风雨而推迟。,量词 班用 penerbangan；peN-…-an，按整词学习,名词;一天与旅行
+ms-1353,ms,ms-18,pelepasan,出发；启程,Masa pelepasan bas itu pada pukul tujuh.,那辆巴士的出发时间是七点。,量词 通常不用量词；peN-…-an，按整词学习,名词;一天与旅行
+ms-1354,ms,ms-18,ketibaan,到达,Ketibaan feri itu diumumkan di terminal.,航站楼内播报了那艘渡轮的到达。,量词 通常不用量词；ke-…-an，按整词学习,名词;一天与旅行
+ms-1355,ms,ms-18,persinggahan,途中停留,Persinggahan kami di Melaka tidak lama.,我们在马六甲的途中停留不久。,量词 次用 kali；per-…-an，按整词学习,名词;一天与旅行
+ms-1356,ms,ms-18,pemandangan,景色,Kami menikmati pemandangan dari tingkap gerabak.,我们欣赏车厢窗外的景色。,量词 处可用 tempat；peN-…-an，按整词学习,名词;一天与旅行
+ms-1357,ms,ms-18,matahari,太阳,Kami melihat matahari dari tingkap gerabak.,我们从车厢窗口看到太阳。,通常不用专用量词，可写 satu matahari；复合词连写,名词;一天与旅行
+ms-1358,ms,ms-18,fajar,黎明,Kami bangun sebelum fajar untuk berkemas.,我们在黎明前起床收拾行李。,量词 通常不用量词,名词;一天与旅行
+ms-1359,ms,ms-18,senja,黄昏,"Pada waktu senja, kami sudah tiba di hotel.",黄昏时，我们已经到达酒店。,量词 通常不用量词,名词;一天与旅行
+ms-1360,ms,ms-18,bekal,随身携带的食物,Ibu menyediakan bekal untuk perjalanan kami.,母亲为我们的旅程准备了食物。,量词 份可按 bungkus 计数,名词;一天与旅行
+ms-1361,ms,ms-18,bertolak,出发,Kami bertolak dari Kuala Lumpur pada pukul enam.,我们六点从吉隆坡出发。,ber- + tolak → bertolak；词根 tolak；不及物,动词;旅行过程
+ms-1362,ms,ms-18,tiba,到达,Bas itu tiba sebelum tengah hari.,那辆巴士在中午前到达。,词根 tiba；不及物,动词;旅行过程
+ms-1363,ms,ms-18,singgah,顺路停留,Kami singgah di Melaka untuk makan.,我们顺路在马六甲停留吃饭。,词根 singgah；不及物，后接 di,动词;旅行过程
+ms-1364,ms,ms-18,bermalam,过夜,Kami bermalam di rumah keluarga Ali.,我们在阿里家过夜。,ber- + malam → bermalam；词根 malam；不及物,动词;旅行过程
+ms-1365,ms,ms-18,berkemas,收拾行李,Siti berkemas sebelum tidur malam ini.,西蒂今晚睡觉前收拾行李。,ber- + kemas → berkemas；词根 kemas；不及物,动词;旅行过程
+ms-1366,ms,ms-18,beratur,排队,Pelajar beratur di depan kaunter tiket.,学生在售票柜台前排队。,ber- + atur → beratur；词根 atur；不及物,动词;旅行过程
+ms-1367,ms,ms-18,beredar,离开,Kami beredar dari terminal selepas feri tiba.,渡轮到达后，我们离开航站楼。,ber- + edar → beredar；词根 edar；不及物,动词;旅行过程
+ms-1368,ms,ms-18,bersegera,赶快,Kami bersegera ke stesen supaya tidak lewat.,我们赶快去车站，以免迟到。,ber- + segera → bersegera；词根 segera；不及物,动词;旅行过程
+ms-1369,ms,ms-18,bersiap,做准备,Ali bersiap untuk pergi ke lapangan terbang.,阿里准备去机场。,ber- + siap → bersiap；词根 siap；不及物,动词;旅行过程
+ms-1370,ms,ms-18,berlepas,出发；起飞,Kami berlepas dari Kuala Lumpur pada waktu pagi.,我们早上从吉隆坡出发。,ber- + lepas → berlepas；词根 lepas；不及物，搭配 dari 表出发地,动词;旅行过程
+ms-1371,ms,ms-18,menempah,预订,Saya menempah bilik hotel melalui internet.,我通过互联网预订酒店房间。,meN- + tempah → menempah，men-；t 脱落；词根 tempah；及物；常见宾语 bilik、tiket,动词;旅行过程
+ms-1372,ms,ms-18,mengesan,查找踪迹；检测,Pegawai mengesan bagasi yang tertinggal itu.,工作人员查找那件遗留行李的去向。,meN- + kesan → mengesan，meng-；k 脱落；词根 kesan；及物；常见宾语 bagasi、kerosakan,动词;旅行过程
+ms-1373,ms,ms-18,mengejar,追赶,Ali tidak mahu mengejar bas di jalan licin.,阿里不想在湿滑的路上追赶巴士。,meN- + kejar → mengejar，meng-；k 脱落；词根 kejar；及物；常见宾语 bas、kereta api,动词;旅行过程
+ms-1374,ms,ms-18,menyemak,核对,Siti menyemak jadual sebelum membeli tiket.,西蒂买票前核对时刻表。,meN- + semak → menyemak，meny-；s 脱落；词根 semak；及物；常见宾语 jadual、tempahan,动词;旅行过程
+ms-1375,ms,ms-18,memuatkan,装载,Raju memuatkan bagasi ke dalam kereta.,拉朱把行李装进汽车。,meN- + muat + -kan → memuatkan，me-；m 保留；词根 muat；及物；常见宾语 bagasi、bekal,动词;旅行过程
+ms-1376,ms,ms-18,menurunkan,卸下；放下,Pemandu menurunkan bagasi kami di depan hotel.,司机在酒店前卸下我们的行李。,meN- + turun + -kan → menurunkan，men-；t 脱落；词根 turun；及物；常见宾语 bagasi、barang,动词;旅行过程
+ms-1377,ms,ms-18,meninggalkan,留下；离开,Jangan meninggalkan pasport di dalam teksi.,不要把护照留在出租车里。,meN- + tinggal + -kan → meninggalkan，men-；t 脱落；词根 tinggal；及物；常见宾语 pasport、rumah,动词;旅行过程
+ms-1378,ms,ms-18,melintasi,穿过,Kami melintasi pusat bandar sebelum tiba di hotel.,我们在到酒店前穿过市中心。,meN- + lintas + -i → melintasi，me-；l 保留；词根 lintas；及物；常见宾语 jalan、bandar,动词;旅行过程
+ms-1379,ms,ms-18,menyeberangi,横过,Kami menyeberangi sungai dengan bot kecil.,我们乘小船渡河。,meN- + seberang + -i → menyeberangi，meny-；s 脱落；词根 seberang；及物；常见宾语 sungai、jalan,动词;旅行过程
+ms-1380,ms,ms-18,mengembara,旅行；远游,Farid ingin mengembara ke Johor Bahru.,法里德想去新山旅行。,meN- + kembara → mengembara，meng-；k 脱落；词根 kembara；不及物；后接 ke,动词;旅行过程
+ms-1381,ms,ms-18,dahulu,先；以前,Sila semak tiket dahulu sebelum beratur.,请先核对车票，再排队。,本课用于动作先后,副词;一天的先后
+ms-1382,ms,ms-18,tadi,刚才,Saya tiba di stesen pada pukul lapan tadi.,我刚才八点到达车站。,指较近的过去,副词;一天的先后
+ms-1383,ms,ms-18,kelak,将来；日后,Saya ingin mengunjungi Pulau Pinang kelak.,我希望日后游览槟城。,较书面的将来时间词,副词;一天的先后
+ms-1384,ms,ms-18,sebentar tadi,刚才不久,Bas itu baru bertolak sebentar tadi.,那辆巴士刚刚出发。,过去的短时间,副词;一天的先后
+ms-1385,ms,ms-18,tidak lama kemudian,不久之后,"Tidak lama kemudian, feri itu tiba.",不久之后，那艘渡轮到了。,叙事时间短语,副词;一天的先后
+ms-1386,ms,ms-18,lambat-laun,迟早,"Lambat-laun, awak akan tahu jalan ke stesen.",迟早你会知道去车站的路。,固定连字符形式,副词;一天的先后
+ms-1387,ms,ms-18,seketika,片刻,Kami berehat seketika di ruang menunggu.,我们在候车室稍作休息。,时长副词；按整词学习,副词;一天的先后
+ms-1388,ms,ms-18,sepanjang hari,一整天,Kami mengembara sepanjang hari di Melaka.,我们一整天都在马六甲游览。,表示活动持续的时段,副词;一天的先后
+ms-1389,ms,ms-18,tepat pada masanya,准时,Kereta api itu tiba tepat pada masanya.,那列火车准时到达。,固定时间短语,副词;一天的先后
+ms-1390,ms,ms-18,beransur-ansur,逐渐,Hujan beransur-ansur berhenti sebelum kami bertolak.,雨在我们出发前逐渐停了。,ber- + ansur 的固定重叠副词，按整词学习,副词;一天的先后
+ms-1391,ms,ms-18,Saya datang awal supaya tidak lewat.,我提早来，以免迟到。,Saya datang awal supaya tidak lewat.,我提早来，以免迟到。,supaya 引导目的从句,连词;时间关系整句;phrase
+ms-1392,ms,ms-18,"Setelah makan, kami bertolak.",吃过饭后，我们出发了。,"Setelah makan, kami bertolak.",吃过饭后，我们出发了。,先完成吃饭，再出发,连词;时间关系整句;phrase
+ms-1393,ms,ms-18,Siti membaca sementara saya berkemas.,我收拾行李时，西蒂在读书。,Siti membaca sementara saya berkemas.,我收拾行李时，西蒂在读书。,两个动作同时进行,连词;时间关系整句;phrase
+ms-1394,ms,ms-18,Kami menunggu sehingga bas tiba.,我们一直等到巴士到达。,Kami menunggu sehingga bas tiba.,我们一直等到巴士到达。,sehingga 标记时间终点,连词;时间关系整句;phrase
+ms-1395,ms,ms-18,Hujan begitu lama sehingga kami lewat.,雨下得如此久，以致我们迟到了。,Hujan begitu lama sehingga kami lewat.,雨下得如此久，以致我们迟到了。,begitu … sehingga 表示程度与结果,连词;时间关系整句;phrase
+ms-1396,ms,ms-18,cemas,担忧的；紧张的,Ibu cemas kerana pasportnya tertinggal.,母亲因为忘带护照而着急。,形容词，后置,形容词;旅行状态;补充
+ms-1397,ms,ms-18,tergesa-gesa,匆忙的,Kami tidak mahu tergesa-gesa sewaktu berkemas.,我们不想收拾行李时匆匆忙忙。,形容词，后置；固定重叠形式，按整词学习,形容词;旅行状态;补充
+ms-1398,ms,ms-18,sempat,来得及,Kami sempat makan sebelum bas bertolak.,我们来得及在巴士出发前吃饭。,表示时间允许完成某事,助动词;旅行状态;补充
+ms-1399,ms,ms-18,perlahan-lahan,慢慢地,Kami berjalan perlahan-lahan di jalan licin.,我们在湿滑的路上慢慢走。,固定重叠副词,副词;旅行状态;补充
+ms-1400,ms,ms-18,kerap,经常,Saya kerap pergi ke Pulau Pinang.,我经常去槟城。,副词，表示频率,副词;旅行状态;补充
+ms-1401,ms,ms-19,menyebut,提到；说出,Ali menyebut nama guru itu.,阿里提到那位老师的名字。,meN- + sebut → menyebut，meny-，s 脱落；词根 sebut；及物，常见宾语 nama guru itu,动词;言语动词
+ms-1402,ms,ms-19,menyuruh,吩咐；让,Guru menyuruh kami membaca laporan itu.,老师让我们阅读那份报告。,meN- + suruh → menyuruh，meny-；s 脱落；词根 suruh；及物；常见宾语 kami、pelajar；后接动作,动词;言语动词
+ms-1403,ms,ms-19,menanyakan,询问某事,Ali menanyakan sebab pembatalan mesyuarat itu.,阿里询问会议取消的原因。,meN- + tanya + -kan → menanyakan，men-；t 脱落；词根 tanya；及物；常见宾语 sebab、nama,动词;言语动词
+ms-1404,ms,ms-19,membalas,回复,Saya membalas surat yang dihantar oleh Farid.,我回复法里德寄来的信。,meN- + balas → membalas，mem-；b 保留；词根 balas；及物；常见宾语 surat、e-mel,动词;言语动词
+ms-1405,ms,ms-19,mengakui,承认,Dia mengakui bahawa catatan itu salah.,他承认那条记录有误。,meN- + aku + -i → mengakui，meng-；a 保留；词根 aku；及物；常见宾语 kesalahan；也接 bahawa 从句,动词;言语动词
+ms-1406,ms,ms-19,menafikan,否认,Ketua menafikan berita tentang pembatalan majlis itu.,负责人否认了有关活动取消的消息。,meN- + nafi + -kan → menafikan，me-；n 保留；词根 nafi；及物；常见宾语 berita、tuduhan,动词;言语动词
+ms-1407,ms,ms-19,menegaskan,强调,Guru menegaskan bahawa semua pelajar perlu datang.,老师强调所有学生都需要来。,meN- + tegas + -kan → menegaskan，men-；t 脱落；词根 tegas；及物；常见宾语 kepentingan；也接 bahawa 从句,动词;言语动词
+ms-1408,ms,ms-19,menyatakan,表示；陈述,Ali menyatakan bahawa dia bersetuju dengan rancangan itu.,阿里表示他赞同那个计划。,meN- + nyata + -kan → menyatakan，me-；n 保留；词根 nyata；及物；常见宾语 pendapat；ny 保留，属 me-,动词;言语动词
+ms-1409,ms,ms-19,mengusulkan,提出建议,Siti mengusulkan rancangan itu.,西蒂提出那个计划。,meN- + usul + -kan → mengusulkan，meng-，u 保留；词根 usul；及物，常见宾语 rancangan itu,动词;言语动词
+ms-1410,ms,ms-19,menasihati,劝告,Ibu menasihati saya supaya datang awal.,母亲劝我早点来。,meN- + nasihat + -i → menasihati，me-；n 保留；词根 nasihat；及物；常见宾语 saya、anak,动词;言语动词
+ms-1411,ms,ms-19,mengulas,评论,Guru mengulas laporan yang saya tulis semalam.,老师评论我昨天写的报告。,meN- + ulas → mengulas，meng-；u 保留；词根 ulas；及物；常见宾语 laporan、berita,动词;言语动词
+ms-1412,ms,ms-19,berbisik,低声说话,Ali berbisik kepada Raju semasa mesyuarat.,阿里开会时对拉朱低声说话。,ber- + bisik → berbisik；词根 bisik；不及物,动词;言语动词
+ms-1413,ms,ms-19,berjanji,答应；承诺,Farid berjanji untuk menghantar laporan esok.,法里德答应明天交报告。,ber- + janji → berjanji；词根 janji；不及物,动词;言语动词
+ms-1414,ms,ms-19,bersuara,发言,Siti bersuara setelah guru meminta pendapat kami.,老师征求我们的意见后，西蒂发言了。,ber- + suara → bersuara；词根 suara；不及物,动词;言语动词
+ms-1415,ms,ms-19,mengeluh,叹息；抱怨,Ali mengeluh kerana perlu menunggu lama.,阿里因为需要等很久而抱怨。,meN- + keluh → mengeluh，meng-；k 脱落；词根 keluh；不及物,动词;言语动词
+ms-1416,ms,ms-19,menurut,据；按照,"Menurut Siti, mesyuarat itu bermula pada pukul tiga.",据西蒂说，会议三点开始。,引出消息来源；本课按介词功能学习,介词;引述与说明
+ms-1417,ms,ms-19,berdasarkan,根据,Kami menulis laporan berdasarkan maklumat yang diberikan.,我们根据提供的信息撰写报告。,ber- + dasar + -kan；词根 dasar；引出根据，按整词学习,介词;引述与说明
+ms-1418,ms,ms-19,berkenaan dengan,关于,Guru bertanya berkenaan dengan tugas yang belum siap.,老师询问尚未完成的任务。,引出话题；berkenaan 按整词学习,介词;引述与说明;phrase
+ms-1419,ms,ms-19,berhubung dengan,关于；就……而言,Saya menulis berhubung dengan mesyuarat esok.,我就明天的会议写信。,ber- + hubung；固定话题短语,介词;引述与说明;phrase
+ms-1420,ms,ms-19,misalnya,例如,"Kita boleh memilih tempat dekat, misalnya dewan sekolah.",我们可以选附近的地点，例如学校礼堂。,引出例子；misal + -nya,副词;引述与说明
+ms-1421,ms,ms-19,contohnya,例如,"Bahan itu mudah didapati, contohnya kertas dan pen.",那些材料容易获得，例如纸和笔。,contoh + -nya,副词;引述与说明
+ms-1422,ms,ms-19,selain itu,此外,"Selain itu, guru meminta kami menyemak nama tetamu.",此外，老师让我们核对来宾姓名。,补充另一个信息,副词;引述与说明
+ms-1423,ms,ms-19,tambahan pula,此外；再加上,"Jalan itu jauh; tambahan pula, hujan turun.",那条路很远；此外，还下着雨。,连词，用于补充理由；两个词分写,连词;引述与说明
+ms-1424,ms,ms-19,pendapat,意见,Pendapat Siti tentang jadual itu sangat jelas.,西蒂关于那个日程的意见很清楚。,量词 条可直接用 satu pendapat；peN-，按整词学习,名词;消息与转述
+ms-1425,ms,ms-19,cadangan,建议,Cadangan itu akan dibincangkan dalam mesyuarat.,那个建议会在会议上讨论。,量词 条可直接用 satu cadangan；cadang + -an,名词;消息与转述
+ms-1426,ms,ms-19,nasihat,劝告,Saya mendengar nasihat yang diberikan oleh ibu.,我听取母亲给的劝告。,量词 条可用条数，常写 satu nasihat,名词;消息与转述
+ms-1427,ms,ms-19,pesan,口信；嘱咐,Pesan guru sudah saya sampaikan kepada Ali.,老师的口信我已经转告阿里。,量词 条可直接用 satu pesan,名词;消息与转述
+ms-1428,ms,ms-19,arahan,指示,Arahan ketua itu mudah difahami.,负责人的那条指示容易理解。,量词 条可直接用 satu arahan；arah + -an,名词;消息与转述
+ms-1429,ms,ms-19,makluman,告知；通知,Makluman tentang acara itu dihantar melalui e-mel.,关于那项活动的通知通过电子邮件发出。,量词 则可直接用 satu makluman；按整词学习,名词;消息与转述
+ms-1430,ms,ms-19,pernyataan,陈述,Pernyataan itu berdasarkan fakta.,那项陈述以事实为依据。,量词 项用 buah；per- + nyata + -an，ny 保留,名词;消息与转述
+ms-1431,ms,ms-19,penjelasan,解释,Penjelasan guru membantu saya memahami berita itu.,老师的解释帮助我理解那条新闻。,通常不用专用量词，可写 satu penjelasan；peN-…-an，按整词学习,名词;消息与转述
+ms-1432,ms,ms-19,alasan,理由,Alasan kelewatan Ali ialah kesesakan jalan.,阿里迟到的理由是道路拥堵。,量词 条可直接用 satu alasan；alas + -an，按整词学习,名词;消息与转述
+ms-1433,ms,ms-19,bukti,证据,Foto itu ialah bukti bahawa paip sudah dibaiki.,那张照片是水管已修好的证据。,量词 项可用项数，常写 satu bukti,名词;消息与转述
+ms-1434,ms,ms-19,khabar,消息,Saya menerima khabar daripada Ali.,我收到阿里的消息。,量词 通常不用专用量词，可直接说 satu khabar；阿拉伯语借词,名词;消息与转述
+ms-1435,ms,ms-19,fakta,事实,Kami menyemak fakta sebelum menulis laporan.,我们在写报告前核查事实。,量词 项可直接用 satu fakta；英语借词,名词;消息与转述
+ms-1436,ms,ms-19,butiran,细节；事项,Sila tulis butiran mesyuarat dalam buku nota.,请在笔记本上写下会议详情。,量词 项可直接用 satu butiran；butir + -an,名词;消息与转述
+ms-1437,ms,ms-19,topik,话题,Topik yang dibincangkan itu tentang keselamatan jalan.,所讨论的话题是道路安全。,量词 个可直接用 satu topik；英语借词,名词;消息与转述
+ms-1438,ms,ms-19,isu,议题；问题,Isu itu akan dijelaskan oleh ketua.,那个问题将由负责人说明。,量词 项可直接用 satu isu；英语借词,名词;消息与转述
+ms-1439,ms,ms-19,pandangan,看法,Guru meminta pandangan semua pelajar tentang lawatan itu.,老师征求所有学生对那次参观的看法。,量词 条可直接写 satu pandangan；pandang + -an,名词;消息与转述
+ms-1440,ms,ms-19,ulasan,评论,Ulasan itu ditulis selepas buku dibaca.,那篇评论写于读完书之后。,量词 篇可直接写 satu ulasan；ulas + -an,名词;消息与转述
+ms-1441,ms,ms-19,rumusan,总结,Saya membaca rumusan mesyuarat yang dihantar oleh Siti.,我读了西蒂发来的会议总结。,量词 份可直接写 satu rumusan；rumus + -an,名词;消息与转述
+ms-1442,ms,ms-19,petikan,引文,Petikan itu diambil daripada laporan rasmi.,那段引文摘自正式报告。,量词 段可直接写 satu petikan；petik + -an,名词;消息与转述
+ms-1443,ms,ms-19,ucapan,讲话；致辞,Ucapan ketua itu pendek tetapi jelas.,负责人的致辞简短但清楚。,量词 篇可直接写 satu ucapan；ucap + -an,名词;消息与转述
+ms-1444,ms,ms-19,perbahasan,辩论；讨论,Perbahasan itu tentang pendidikan.,那场讨论涉及教育。,量词 场用 sesi；per- + bahas + -an,名词;消息与转述
+ms-1445,ms,ms-19,wawancara,访谈,Wawancara dengan guru itu disiarkan di radio.,对那位老师的访谈在电台播出了。,量词 次用 kali,名词;消息与转述
+ms-1446,ms,ms-19,temu bual,采访,Temu bual itu diadakan di pejabat sekolah.,那次采访在学校办公室进行。,量词 次用 kali；两个词分写,名词;消息与转述
+ms-1447,ms,ms-19,penceramah,演讲者,Penceramah itu bercakap tentang kesihatan.,那位演讲者谈论健康。,量词 orang；peN-，按整词学习,名词;消息与转述
+ms-1448,ms,ms-19,wakil,代表,Wakil kelas kami ialah Siti.,我们班的代表是西蒂。,量词 orang,名词;消息与转述
+ms-1449,ms,ms-19,saksi,见证人；目击者,Saksi itu menerangkan peristiwa yang dilihatnya.,那位目击者说明他所看到的事件。,量词 orang,名词;消息与转述
+ms-1450,ms,ms-19,pihak,一方；方面,Pihak sekolah telah menjawab soalan ibu bapa.,校方已经回答了家长的问题。,量词 方可用 pihak 本身,名词;消息与转述
+ms-1451,ms,ms-19,persetujuan,同意,Kami mendapat persetujuan guru untuk mengadakan lawatan.,我们获得了老师同意，可以组织参观。,量词 通常不用量词；per-…-an，按整词学习,名词;消息与转述
+ms-1452,ms,ms-19,penolakan,拒绝,Penolakan cadangan itu sudah dijelaskan oleh ketua.,负责人已经解释了为何拒绝那个建议。,量词 次用 kali；peN-…-an，按整词学习,名词;消息与转述
+ms-1453,ms,ms-19,soal jawab,问答,Sesi soal jawab itu bermula selepas ucapan.,问答环节在致辞后开始。,量词 场用 sesi；固定名词短语,名词;消息与转述
+ms-1454,ms,ms-19,memahami,理解,Saya memahami alasan yang diberikan oleh Ali.,我理解阿里给出的理由。,meN- + faham + -i → memahami，mem-；f 脱落；词根 faham；特殊形式，按整词记忆；及物；常见宾语 alasan、maklumat,动词;核实与交流
+ms-1455,ms,ms-19,mengingati,记得,Siti mengingati pesan yang disampaikan oleh ibu.,西蒂记得母亲传达的嘱咐。,meN- + ingat + -i → mengingati，meng-；i 保留；词根 ingat；及物；常见宾语 pesan、nama,动词;核实与交流
+ms-1456,ms,ms-19,mempercayai,相信,Kami mempercayai berita yang telah disahkan.,我们相信已经得到证实的消息。,memper- + percaya + -i → mempercayai；词根 percaya；特殊形式，按整词记忆；及物；常见宾语 berita、orang,动词;核实与交流
+ms-1457,ms,ms-19,menyelidik,调查研究,Kami menyelidik masalah itu.,我们调查那个问题。,meN- + selidik → menyelidik，meny-，s 脱落；词根 selidik；及物，常见宾语 masalah itu,动词;核实与交流
+ms-1458,ms,ms-19,membuktikan,证明,Laporan itu membuktikan bahawa maklumat ini tepat.,那份报告证明这项信息准确。,meN- + bukti + -kan → membuktikan，mem-，b 保留；词根 bukti；及物，常见宾语 bahawa maklumat ini tepat,动词;核实与交流
+ms-1459,ms,ms-19,mengenal pasti,辨认；确定,Kami mengenal pasti sumber berita itu.,我们确定了那条消息的来源。,meN- + kenal → mengenal，meng-；k 脱落；词根 kenal；及物；常见宾语 sumber、masalah；固定动词短语,动词;核实与交流;phrase
+ms-1460,ms,ms-19,merujuk,参考；查阅,Siti merujuk jadual yang dihantar semalam.,西蒂查阅昨天发来的日程表。,meN- + rujuk → merujuk，me-；r 保留；词根 rujuk；及物；常见宾语 jadual、laporan,动词;核实与交流
+ms-1461,ms,ms-19,merakam,录制,Raju merakam ucapan guru dengan telefon.,拉朱用手机录下老师的讲话。,meN- + rakam → merakam，me-；r 保留；词根 rakam；及物；常见宾语 ucapan、suara,动词;核实与交流
+ms-1462,ms,ms-19,menyiarkan,播出；刊登,Radio itu menyiarkan wawancara dengan guru kami.,那家电台播出对我们老师的访谈。,meN- + siar + -kan → menyiarkan，meny-；s 脱落；词根 siar；及物；常见宾语 wawancara、berita,动词;核实与交流
+ms-1463,ms,ms-19,memetik,引用,Wartawan memetik kenyataan pegawai dalam laporannya.,记者在报道中引用工作人员的声明。,meN- + petik → memetik，mem-；p 脱落；词根 petik；及物；常见宾语 kenyataan、ucapan,动词;核实与交流
+ms-1464,ms,ms-19,merumuskan,总结,Siti merumuskan pandangan ahli mesyuarat.,西蒂总结与会成员的看法。,meN- + rumus + -kan → merumuskan，me-；r 保留；词根 rumus；及物；常见宾语 pandangan、perbualan,动词;核实与交流
+ms-1465,ms,ms-19,mengemukakan,提出,Kami mengemukakan cadangan kepada pihak sekolah.,我们向校方提出建议。,meN- + kemuka + -kan → mengemukakan，meng-；k 脱落；词根 kemuka；及物；常见宾语 cadangan、soalan,动词;核实与交流
+ms-1466,ms,ms-19,meneliti,仔细审阅,Guru meneliti butiran laporan itu.,老师仔细审阅报告的细节。,meN- + teliti → meneliti，men-；t 脱落；词根 teliti；及物；常见宾语 laporan、butiran,动词;核实与交流
+ms-1467,ms,ms-19,berbincang,商讨,Kami berbincang tentang cadangan itu.,我们商讨那个建议。,ber- + bincang → berbincang；词根 bincang；不及物，搭配 tentang 表议题,动词;核实与交流
+ms-1468,ms,ms-19,berpendapat,认为,Ali berpendapat bahawa rancangan itu sesuai.,阿里认为那个计划合适。,ber- + pendapat → berpendapat；词根 pendapat；不及物；后接 bahawa 从句，pendapat 按整词学习,动词;核实与交流
+ms-1469,ms,ms-19,Dia berkata bahawa acara itu diteruskan.,他说那项活动继续进行。,Dia berkata bahawa acara itu diteruskan.,他说那项活动继续进行。,berkata 后用 bahawa 引出陈述内容,动词;转述整句;phrase
+ms-1470,ms,ms-19,Siti bertanya sama ada saya sudah makan.,西蒂问我是否已经吃饭。,Siti bertanya sama ada saya sudah makan.,西蒂问我是否已经吃饭。,是非问句转述用 sama ada,动词;转述整句;phrase
+ms-1471,ms,ms-19,Guru menyuruh kami membaca buku itu.,老师让我们读那本书。,Guru menyuruh kami membaca buku itu.,老师让我们读那本书。,menyuruh 后先放人，再放动作,动词;转述整句;phrase
+ms-1472,ms,ms-19,Buku yang saya beli itu menarik.,我买的那本书很有趣。,Buku yang saya beli itu menarik.,我买的那本书很有趣。,yang 从句中第一人称在无 meN- 动词前,动词;转述整句;phrase
+ms-1473,ms,ms-19,Orang yang membaca laporan itu guru saya.,读那份报告的人是我的老师。,Orang yang membaca laporan itu guru saya.,读那份报告的人是我的老师。,yang 从句修饰主语名词,动词;转述整句;phrase
+ms-1474,ms,ms-19,Ali memberitahu saya bahawa dia akan datang.,阿里告诉我他会来。,Ali memberitahu saya bahawa dia akan datang.,阿里告诉我他会来。,memberitahu 的对象与从句不可混淆,动词;转述整句;phrase
+ms-1475,ms,ms-19,"Tempat itu dekat, iaitu di sebelah sekolah.",那个地方很近，就在学校旁边。,"Tempat itu dekat, iaitu di sebelah sekolah.",那个地方很近，就在学校旁边。,iaitu 引出具体说明,动词;转述整句;phrase
+ms-1476,ms,ms-19,sahih,真实可靠的,Berita sahih itu datang daripada sumber rasmi.,那条可靠的消息来自官方来源。,形容词，后置,形容词;转述与判断;补充
+ms-1477,ms,ms-19,sesuai,合适的,Tempat itu sesuai untuk mesyuarat kecil.,那个地方适合开小型会议。,形容词，后置,形容词;转述与判断;补充
+ms-1478,ms,ms-19,menarik,有趣的；吸引人的,Cerita menarik itu ditulis oleh Siti.,那个有趣的故事是西蒂写的。,形容词，后置；本课只取吸引人的义项,形容词;转述与判断;补充
+ms-1479,ms,ms-19,salah,错误的,Alamat salah itu sudah diubah.,那个错误的地址已经更改。,形容词，后置,形容词;转述与判断;补充
+ms-1480,ms,ms-19,sesi,环节；一场,Sesi soal jawab itu diadakan selepas mesyuarat.,问答环节在会议后举行。,量词 场用 sesi 本身；英语借词,名词;转述与判断;补充
+ms-1481,ms,ms-20,bacalah,请读吧,Bacalah mesej ini sebelum membalas.,请先读这条消息再回复。,baca + -lah；词根 baca；-lah 连写，可软化指示；本课教附着形式,语气词;语气与强调
+ms-1482,ms,ms-20,bolehkah,可以吗,Bolehkah saya menghantar pautan ini kepada guru?,我可以把这个链接发给老师吗？,boleh + -kah；-kah 连写，构成疑问,语气词;语气与强调
+ms-1483,ms,ms-20,pun,也；即使,Saya pun sudah membaca mesej itu.,我也已经读过那条消息。,通常分写：saya pun；固定连词的连写形式另记,语气词;语气与强调
+ms-1484,ms,ms-20,sahaja,仅；只,Saya menghantar satu mesej sahaja.,我只发一条消息。,限制范围，常放在被限制部分之后,语气词;语气与强调
+ms-1485,ms,ms-20,pula,则；又,"Siti membaca mesej, saya pula membalas e-mel.",西蒂读消息，而我回复电子邮件。,用于转换话题或对照两方,语气词;语气与强调
+ms-1486,ms,ms-20,lagi,再；还,Sila semak alamat itu sekali lagi.,请再核对一次那个地址。,表示重复；也可表示继续或增加,语气词;语气与强调
+ms-1487,ms,ms-20,jua,也；仍,"Walau apa pun berlaku, saya tetap membantu jua.",无论发生什么，我仍然会帮忙。,较有书面色彩的强调词；不作为日常默认替换,语气词;语气与强调
+ms-1488,ms,ms-20,memang,确实；本来就,Maklumat dalam mesej itu memang jelas.,那条消息里的信息确实清楚。,强调情况属实，放在谓语前,副词;语气与强调
+ms-1489,ms,ms-20,sudah tentu,当然,"Sudah tentu, kami akan menjaga privasi anda.",当然，我们会保护你的隐私。,确定语气；固定表达,副词;语气与强调
+ms-1490,ms,ms-20,hanya,仅；只有,Hanya ahli kumpulan boleh membaca mesej ini.,只有群组成员可以阅读这条消息。,放在受限制的部分之前,副词;语气与强调
+ms-1491,ms,ms-20,sememangnya,确实；本来就,Maklumat itu sememangnya tepat.,那项信息确实准确。,副词，强调事实；作为完整词形学习,副词;语气与强调
+ms-1492,ms,ms-20,sesungguhnya,确实；实在,"Sesungguhnya, keselamatan akaun itu penting.",确实，账户安全很重要。,正式语体的强调副词，按整词学习,副词;语气与强调
+ms-1493,ms,ms-20,barangkali,或许,"Barangkali, pautan itu sudah tidak digunakan lagi.",或许，那个链接已经不再使用。,表示不确定的推测,副词;语气与强调
+ms-1494,ms,ms-20,agaknya,大概；看来,"Agaknya, Siti belum melihat notifikasi itu.",看来，西蒂还没有看到那个通知。,表示推测；agak + -nya,副词;语气与强调
+ms-1495,ms,ms-20,entah,不知,Entah siapa yang menghantar mesej itu.,不知道是谁发了那条消息。,表达未知；后可接疑问词,副词;语气与强调
+ms-1496,ms,ms-20,aku,我（亲近口语）,Aku dah baca mesej itu.,我已经看了那条消息。,只识别；正式写作改用 saya，使用不当可能显得不礼貌,代词;口语代词与缩略;口语;phrase
+ms-1497,ms,ms-20,kau,你（亲近口语）,Kau nak pergi ke kedai?,你想去商店吗？,只识别；正式写作按对象改用 awak 或 anda,代词;口语代词与缩略;口语;phrase
+ms-1498,ms,ms-20,engkau,你（亲近语体）,Engkau dah makan?,你已经吃饭了吗？,只识别；亲密程度与场合影响语气，正式写作不用,代词;口语代词与缩略;口语;phrase
+ms-1499,ms,ms-20,kamu,你；你们（熟悉对象）,Kamu nak ikut kami esok?,你想明天和我们一起去吗？,只识别；常用于熟悉或较年幼的对象，正式写作按关系用 anda 或 awak,代词;口语代词与缩略;口语;phrase
+ms-1500,ms,ms-20,tak,不（口语缩略）,Saya tak dapat datang hari ini.,我今天不能来。,只识别；对应标准书面语 tidak,副词;口语代词与缩略;口语;phrase
+ms-1501,ms,ms-20,dah,已经（口语缩略）,Siti dah hantar mesej kepada saya.,西蒂已经给我发消息了。,只识别；对应标准书面语 sudah,副词;口语代词与缩略;口语;phrase
+ms-1502,ms,ms-20,je,只（口语缩略）,Saya baca mesej itu je.,我只读那条消息。,只识别；对应标准书面语 sahaja,副词;口语代词与缩略;口语;phrase
+ms-1503,ms,ms-20,nak,想；要（口语缩略）,Saya nak bertemu Siti di kafe.,我想在咖啡馆见西蒂。,只识别；对应标准书面语 mahu 或 hendak,助动词;口语代词与缩略;口语;phrase
+ms-1504,ms,ms-20,ni,这（口语缩略）,Buku ni untuk Ali.,这本书给阿里。,只识别；对应标准书面语 ini,代词;口语代词与缩略;口语;phrase
+ms-1505,ms,ms-20,tu,那（口语缩略）,Mesej tu daripada Siti.,那条消息来自西蒂。,只识别；对应标准书面语 itu,代词;口语代词与缩略;口语;phrase
+ms-1506,ms,ms-20,diorang,他们（口语）,Diorang dah sampai di kafe.,他们已经到咖啡馆了。,只识别；对应标准书面语 mereka,代词;口语代词与缩略;口语;phrase
+ms-1507,ms,ms-20,kitorang,我们（不含听者，口语）,Kitorang nak tunggu di sini.,我们想在这里等。,只识别；对应标准书面语 kami,代词;口语代词与缩略;口语;phrase
+ms-1508,ms,ms-20,mana,哪里（省略介词的口语问法）,Kau tunggu mana?,你在哪里等？,只识别本课省略介词的问法；标准写作写 di mana，mana 本身并非禁用词,疑问词;口语代词与缩略;口语;phrase
+ms-1509,ms,ms-20,macam mana,怎样（口语）,Macam mana nak buka pautan ni?,怎么打开这个链接？,只识别；对应标准书面语 bagaimana,疑问词;口语代词与缩略;口语;phrase
+ms-1510,ms,ms-20,ke apa,……还是别的（口语）,Kau nak minum teh ke apa?,你想喝茶还是别的？,只识别；口语里 ke 放在句中或句末表示疑问，X ke apa 意为「X 还是别的什么」；这里 ke 不是介词；标准写作改用 adakah 或明确列出选项,疑问词;口语代词与缩略;口语;phrase
+ms-1511,ms,ms-20,mesej,消息,Saya menerima mesej daripada ahli kumpulan.,我收到群组成员发来的消息。,量词 条用则数，可直接说 satu mesej；英语借词,名词;社交与网络
+ms-1512,ms,ms-20,pautan,链接,Pautan itu membawa anda ke laman rasmi.,那个链接把你带到官方网站页面。,通常不用专用量词，可写 satu pautan；paut + -an，按整词学习,名词;社交与网络
+ms-1513,ms,ms-20,laman web,网页；网站,Laman web sekolah itu menyediakan maklumat rasmi.,学校网站提供正式信息。,量词 个用 buah；web 为英语借词,名词;社交与网络
+ms-1514,ms,ms-20,akaun,账户,Akaun saya dilindungi dengan kata laluan.,我的账户受密码保护。,通常不用专用量词，可写 satu akaun；英语借词,名词;社交与网络
+ms-1515,ms,ms-20,kata laluan,密码,Jangan berkongsi kata laluan dengan kawan.,不要和朋友分享密码。,通常不用专用量词，可写 satu kata laluan；固定名词短语,名词;社交与网络
+ms-1516,ms,ms-20,nama pengguna,用户名,Nama pengguna itu tidak sama dengan nama saya.,那个用户名与我的名字不同。,通常不用专用量词，可写 satu nama pengguna；pengguna 按整词学习,名词;社交与网络
+ms-1517,ms,ms-20,profil,个人资料；简介,Profil itu hanya boleh dilihat oleh ahli.,那个个人资料仅供成员查看。,通常不用专用量词，可写 satu profil；英语借词,名词;社交与网络
+ms-1518,ms,ms-20,kumpulan,群组,Kumpulan ini untuk pelajar kelas bahasa Melayu.,这个群组供马来语班学生使用。,通常不用专用量词，可写 satu kumpulan；kumpul + -an，按整词学习,名词;社交与网络
+ms-1519,ms,ms-20,komen,评论,Komen yang sopan membantu semua ahli kumpulan.,礼貌的评论有助于所有群组成员。,通常不用专用量词，可写 satu komen；英语借词,名词;社交与网络
+ms-1520,ms,ms-20,hantaran,发布的帖子,Hantaran itu menunjukkan jadual mesyuarat esok.,那个帖子展示明天的会议日程。,通常不用专用量词，可写 satu hantaran；hantar + -an，按整词学习,名词;社交与网络
+ms-1521,ms,ms-20,siaran langsung,直播,Siaran langsung itu bermula pada pukul dua.,那场直播两点开始。,量词 场用场数；siar + -an，按整词学习,名词;社交与网络
+ms-1522,ms,ms-20,notifikasi,通知提醒,Saya menerima notifikasi tentang mesej baru.,我收到有关新消息的通知提醒。,通常不用专用量词，可写 satu notifikasi；英语借词,名词;社交与网络
+ms-1523,ms,ms-20,privasi,隐私,Kita mesti menghormati privasi semua orang.,我们必须尊重所有人的隐私。,量词 通常不用量词；英语借词,名词;社交与网络
+ms-1524,ms,ms-20,emoji,表情符号,Emoji itu digunakan dalam mesej kepada kawan.,那个表情符号用在发给朋友的消息中。,通常不用专用量词，可写 satu emoji,名词;社交与网络
+ms-1525,ms,ms-20,skrin,屏幕,Tulisan pada skrin itu sangat kecil.,那个屏幕上的字很小。,量词 块用 buah；英语借词,名词;社交与网络
+ms-1526,ms,ms-20,aplikasi,应用程序,Aplikasi itu digunakan untuk menghantar mesej.,那个应用程序用来发送消息。,通常不用专用量词，可写 satu aplikasi；英语借词,名词;社交与网络
+ms-1527,ms,ms-20,rangkaian,网络,Rangkaian internet itu tidak dapat digunakan sekarang.,那个互联网网络目前无法使用。,通常不用专用量词，可写 satu rangkaian；rangkai + -an，按整词学习,名词;社交与网络
+ms-1528,ms,ms-20,peranti,设备,Peranti ini boleh digunakan untuk membaca e-mel.,这台设备可用于阅读电子邮件。,量词 台用 buah,名词;社交与网络
+ms-1529,ms,ms-20,panggilan video,视频通话,Panggilan video itu berakhir pada pukul empat.,那次视频通话四点结束。,量词 次用 kali；panggil + -an，按整词学习,名词;社交与网络
+ms-1530,ms,ms-20,kafe,咖啡馆,Kafe itu di sebelah kedai buku.,那家咖啡馆在书店旁边。,量词 家用 buah；英语借词,名词;社交与网络
+ms-1531,ms,ms-20,mengakses,访问；存取,Pelajar mengakses laman web rasmi sekolah.,学生访问学校官方网站。,meN- + akses → mengakses，meng-；a 保留；词根 akses；及物；常见宾语 laman web、akaun,动词;网络交流
+ms-1532,ms,ms-20,melayari,浏览,Saya melayari internet untuk mencari maklumat.,我浏览互联网查找资料。,meN- + layar + -i → melayari，me-；l 保留；词根 layar；及物；常见宾语 internet、laman web,动词;网络交流
+ms-1533,ms,ms-20,memuat naik,上传,Siti memuat naik foto acara sekolah.,西蒂上传学校活动的照片。,meN- + muat → memuat，me-；m 保留；词根 muat；及物；常见宾语 foto、video；动词短语,动词;网络交流;phrase
+ms-1534,ms,ms-20,memuat turun,下载,Saya memuat turun jadual daripada laman rasmi.,我从官方网站页面下载日程表。,meN- + muat → memuat，me-；m 保留；词根 muat；及物；常见宾语 jadual、fail；动词短语,动词;网络交流;phrase
+ms-1535,ms,ms-20,log masuk,登录,Sila log masuk sebelum membaca mesej kumpulan.,阅读群组消息前请先登录。,英语借词 log 与 masuk 组成动词短语；不及物,动词;网络交流;phrase
+ms-1536,ms,ms-20,log keluar,退出登录,Sila log keluar selepas menggunakan komputer.,用完电脑后请退出登录。,英语借词 log 与 keluar 组成动词短语；不及物,动词;网络交流;phrase
+ms-1537,ms,ms-20,berkongsi,分享,Kami berkongsi maklumat dengan ahli kumpulan.,我们和群组成员分享信息。,ber- + kongsi → berkongsi；词根 kongsi；可带宾语，常见宾语 maklumat、foto,动词;网络交流
+ms-1538,ms,ms-20,mengeklik,点击,Ali mengeklik pautan yang dihantar oleh guru.,阿里点击老师发送的链接。,meN- + klik → mengeklik，menge-；单音节，klik 保留；词根 klik；及物；常见宾语 pautan,动词;网络交流
+ms-1539,ms,ms-20,menatal,滚动屏幕,Saya menatal skrin untuk membaca mesej lama.,我滚动屏幕阅读旧消息。,meN- + tatal → menatal，men-；t 脱落；词根 tatal；及物；常见宾语 skrin、halaman,动词;网络交流
+ms-1540,ms,ms-20,memadam,删除,Dia memadam komen yang salah.,他删除那条错误的评论。,meN- + padam → memadam，mem-；p 脱落；词根 padam；及物；常见宾语 komen、mesej,动词;网络交流
+ms-1541,ms,ms-20,menyekat,屏蔽,Saya menyekat akaun yang menghantar mesej itu.,我屏蔽了发送那条消息的账户。,meN- + sekat → menyekat，meny-；s 脱落；词根 sekat；及物；常见宾语 akaun、pengguna,动词;网络交流
+ms-1542,ms,ms-20,menandai,标记,Siti menandai foto yang hendak disimpan.,西蒂标记她想保存的照片。,meN- + tanda + -i → menandai，men-；t 脱落；词根 tanda；及物；常见宾语 foto、mesej,动词;网络交流
+ms-1543,ms,ms-20,menyisipkan,插入,Saya menyisipkan pautan dalam mesej itu.,我在那条消息中插入链接。,meN- + sisip + -kan → menyisipkan，meny-，s 脱落；词根 sisip；及物，常见宾语 pautan dalam mesej itu,动词;网络交流
+ms-1544,ms,ms-20,berinteraksi,互动,Ahli kumpulan berinteraksi dengan sopan.,群组成员礼貌地互动。,ber- + interaksi → berinteraksi；词根 interaksi；不及物,动词;网络交流
+ms-1545,ms,ms-20,berhubung,保持联系,Kami berhubung melalui panggilan video.,我们通过视频通话保持联系。,ber- + hubung → berhubung；词根 hubung；不及物,动词;网络交流
+ms-1546,ms,ms-20,Dialah yang menghantar mesej itu.,就是他发了那条消息。,Dialah yang menghantar mesej itu.,就是他发了那条消息。,dia + -lah，突出施事；yang 从句承接,语气词;语气整句;phrase
+ms-1547,ms,ms-20,Saya pun mahu membantu.,我也想帮忙。,Saya pun mahu membantu.,我也想帮忙。,pun 与代词分写,语气词;语气整句;phrase
+ms-1548,ms,ms-20,Bacalah laporan itu dahulu.,请先读那份报告吧。,Bacalah laporan itu dahulu.,请先读那份报告吧。,baca + -lah 软化指示,语气词;语气整句;phrase
+ms-1549,ms,ms-20,Bolehkah awak datang lagi esok?,你明天可以再来吗？,Bolehkah awak datang lagi esok?,你明天可以再来吗？,boleh + -kah 提问；lagi 表示再一次,语气词;语气整句;phrase
+ms-1550,ms,ms-20,Saya membaca mesej rasmi sahaja.,我只阅读正式消息。,Saya membaca mesej rasmi sahaja.,我只阅读正式消息。,sahaja 限制范围，放在宾语之后,语气词;语气整句;phrase
+ms-1551,ms,ms-20,santun,有礼貌的；文雅的,Pengguna yang santun menghormati saya.,有礼貌的用户尊重我。,形容词，后置；形容言行有礼貌,形容词;书面与网络语体;补充
+ms-1552,ms,ms-20,santai,轻松随意的,Gaya santai sesuai untuk mesej kepada kawan rapat.,轻松的风格适合给亲近朋友的消息。,形容词，后置,形容词;书面与网络语体;补充
+ms-1553,ms,ms-20,ringkas,简洁的,Mesej ringkas itu mudah difahami.,那条简洁的消息容易理解。,形容词，后置,形容词;书面与网络语体;补充
+ms-1554,ms,ms-20,rapat,亲近的,Kawan rapat saya tinggal di Johor Bahru.,我的亲近朋友住在新山。,形容词，后置,形容词;书面与网络语体;补充
+ms-1555,ms,ms-20,laras,语域,Laras bahasa dalam surat rasmi itu sesuai.,那封公函的语言语域恰当。,量词 种用 jenis；本课指语言语域,名词;书面与网络语体;补充
+ms-1556,ms,ms-20,sapaan,称呼,Sapaan dalam e-mel itu sopan.,那封电子邮件中的称呼很礼貌。,通常不用专用量词，可写 satu sapaan；sapa + -an，按整词学习,名词;书面与网络语体;补充
+ms-1557,ms,ms-20,ejaan penuh,完整拼写,Gunakan ejaan penuh dalam laporan rasmi.,在正式报告中使用完整拼写。,量词 个按 perkataan 计数,名词;书面与网络语体;补充
+ms-1558,ms,ms-20,singkatan,缩略形式,Singkatan itu tidak sesuai dalam surat rasmi.,那种缩略形式不适合用在正式信件中。,通常不用专用量词，可写 satu singkatan；singkat + -an，按整词学习,名词;书面与网络语体;补充
+ms-1559,ms,ms-20,konteks,语境,Konteks mesej ini sangat penting untuk pembaca.,这条消息的语境对读者很重要。,通常不用专用量词，可写 satu konteks；英语借词,名词;书面与网络语体;补充
+ms-1560,ms,ms-20,nada,语气,Nada mesej itu sopan dan tenang.,那条消息的语气礼貌而平和。,量词 种用 jenis,名词;书面与网络语体;补充
+ms-1561,ms,ms-21,buku-buku,书籍,Buku-buku itu disusun di atas meja.,那些书摆在桌上。,量词 buah；buku 完全重叠，表示复数,名词;重叠与相互
+ms-1562,ms,ms-21,sayur-sayuran,各种蔬菜,Ibu memilih sayur-sayuran di pasar.,母亲在市场挑选各种蔬菜。,量词 通常不加量词；sayur 的带缀重叠，表示多样,名词;重叠与相互
+ms-1563,ms,ms-21,buah-buahan,各种水果,Buah-buahan ini dibawa dari kebun.,这些水果从果园运来。,量词 通常不加量词；buah 的带缀重叠，表示多样,名词;重叠与相互
+ms-1564,ms,ms-21,kanak-kanak,儿童,Kanak-kanak itu bermain di taman.,那些孩子在公园玩耍。,量词 orang；词汇化重叠，不能把 kanak 单独当作本课名词,名词;重叠与相互
+ms-1565,ms,ms-21,kuih-muih,各式糕点,Siti menyediakan kuih-muih untuk tetamu.,西蒂为客人准备各式糕点。,量词 通常不加量词；变音重叠,名词;重叠与相互
+ms-1566,ms,ms-21,lauk-pauk,各种配菜,Lauk-pauk itu dihidangkan bersama nasi.,那些配菜和米饭一起端上来。,量词 通常不加量词；变音重叠,名词;重叠与相互
+ms-1567,ms,ms-21,kura-kura,龟,Seekor kura-kura berada di tepi kolam.,一只龟在池塘边。,量词 ekor；词汇化重叠，可指一只龟,名词;重叠与相互
+ms-1568,ms,ms-21,rama-rama,蝴蝶,Rama-rama itu terbang di atas bunga.,那只蝴蝶在花朵上方飞。,量词 ekor；词汇化重叠，可指一只蝴蝶,名词;重叠与相互
+ms-1569,ms,ms-21,berjalan-jalan,散步；随意走走,Kami berjalan-jalan di pasar pada petang Ahad.,星期日下午我们在市场逛逛。,ber- + jalan；词根 jalan；部分重叠；不及物,动词;重叠与相互
+ms-1570,ms,ms-21,duduk-duduk,闲坐,Mereka duduk-duduk di depan kedai.,他们在店前闲坐。,词根 duduk 完全重叠；不及物,动词;重叠与相互
+ms-1571,ms,ms-21,berkenalan,相识；互相认识,Kami berkenalan di kelas bahasa Melayu.,我们在马来语班相识。,ber- + kenal + -an；词根 kenal；相互义；不及物,动词;重叠与相互
+ms-1572,ms,ms-21,bersalaman,握手致意,Ali dan Raju bersalaman sebelum mesyuarat.,阿里和拉朱在开会前握手致意。,ber- + salam + -an；词根 salam；相互义；不及物,动词;重叠与相互
+ms-1573,ms,ms-21,berpandangan,互相看着,Ali dan Siti berpandangan sebelum menjawab soalan.,阿里和西蒂回答问题前互相看了看。,ber- + pandang + -an；词根 pandang；本课取相互看视义；不及物,动词;重叠与相互
+ms-1574,ms,ms-21,tolong-menolong,互相帮助,Penduduk kampung tolong-menolong semasa menyediakan makanan.,村民准备食物时互相帮助。,tolong + meN- + tolong → tolong-menolong，t 脱落；相互义；不及物,动词;重叠与相互
+ms-1575,ms,ms-21,hormat-menghormati,互相尊重,Kita mesti hormat-menghormati di dalam kelas.,我们在课堂上必须互相尊重。,hormat + meN- + hormat + -i → hormat-menghormati，h 保留；相互义,动词;重叠与相互
+ms-1576,ms,ms-21,berbual-bual,闲聊,Ibu berbual-bual dengan petani di pasar.,母亲在市场和农民闲聊。,ber- + bual；词根 bual；部分重叠；不及物,动词;重叠与相互
+ms-1577,ms,ms-21,bermain-main,玩耍,Jangan bermain-main dengan pisau itu.,不要玩那把刀。,ber- + main；词根 main；部分重叠；不及物,动词;重叠与相互
+ms-1578,ms,ms-21,ketawa-ketawa,不断笑着,Mereka ketawa-ketawa semasa mendengar cerita Ali.,他们听阿里讲故事时不断笑着。,词根 ketawa 完全重叠；不及物,动词;重叠与相互
+ms-1579,ms,ms-21,sapa-menyapa,互相打招呼,Orang di pasar sapa-menyapa dengan gembira.,市场里的人高兴地互相打招呼。,sapa + meN- + sapa → sapa-menyapa，s 脱落；相互义,动词;重叠与相互
+ms-1580,ms,ms-21,kekanak-kanakan,孩子气的,Sikap kekanak-kanakan itu menyebabkan masalah.,那种孩子气的态度造成问题。,形容词，后置；ke- + kanak-kanak + -an；带缀重叠；整词学习,形容词;重叠与相互
+ms-1581,ms,ms-21,besar-besar,个个大的,Mangga di dalam bakul itu besar-besar.,篮子里的芒果个个都大。,形容词，后置；besar 完全重叠，描述多个对象,形容词;重叠与相互
+ms-1582,ms,ms-21,cantik-cantik,个个漂亮的,Bunga di taman itu cantik-cantik.,公园里的花朵朵都漂亮。,形容词，后置；cantik 完全重叠，描述多个对象,形容词;重叠与相互
+ms-1583,ms,ms-21,ramah-tamah,和蔼亲切的,Petani yang ramah-tamah itu membantu saya.,那位和蔼亲切的农民帮助我。,形容词，后置；变音重叠；形容待人态度,形容词;重叠与相互
+ms-1584,ms,ms-21,bersama-sama,一起,Kami membawa bakul itu bersama-sama.,我们一起搬那个篮子。,ber- + sama；词根 sama；重叠表示共同,副词;重叠与相互
+ms-1585,ms,ms-21,bergilir-gilir,轮流地,Kami bergilir-gilir menjaga kanak-kanak.,我们轮流照看孩子。,ber- + gilir；词根 gilir；部分重叠,副词;重叠与相互
+ms-1586,ms,ms-21,mangga,芒果,Saya membeli tiga biji mangga.,我买三个芒果。,量词 biji,名词;果蔬与集合
+ms-1587,ms,ms-21,nanas,菠萝,Ibu mengupas satu biji nanas di dapur.,母亲在厨房削一个菠萝。,量词 biji,名词;果蔬与集合
+ms-1588,ms,ms-21,betik,木瓜,Betik itu sudah ranum.,那个木瓜已经熟透。,量词 biji,名词;果蔬与集合
+ms-1589,ms,ms-21,tembikai,西瓜,Raju membawa satu biji tembikai ke rumah Ali.,拉朱带一个西瓜去阿里家。,量词 biji,名词;果蔬与集合
+ms-1590,ms,ms-21,durian,榴莲,Harga durian ini dua puluh ringgit.,这个榴莲的价格是二十令吉。,量词 biji,名词;果蔬与集合
+ms-1591,ms,ms-21,rambutan,红毛丹,Rambutan itu dipetik dari pokok di kebun.,那些红毛丹从园里的树上摘下。,量词 biji,名词;果蔬与集合
+ms-1592,ms,ms-21,manggis,山竹,Kami memilih manggis yang segar.,我们挑选新鲜的山竹。,量词 biji,名词;果蔬与集合
+ms-1593,ms,ms-21,jambu,番石榴,Siti menghiris jambu untuk adiknya.,西蒂给弟弟切番石榴。,量词 biji,名词;果蔬与集合
+ms-1594,ms,ms-21,nangka,菠萝蜜,Nangka itu besar dan berat.,那个菠萝蜜又大又重。,量词 biji,名词;果蔬与集合
+ms-1595,ms,ms-21,cempedak,尖蜜拉果,Ibu menggoreng cempedak untuk tetamu.,母亲炸尖蜜拉果招待客人。,量词 biji,名词;果蔬与集合
+ms-1596,ms,ms-21,sawi,芥菜,Petani mengikat sawi sebelum menjualnya.,农民在出售芥菜前把它扎好。,量词 ikat；成把出售,名词;果蔬与集合
+ms-1597,ms,ms-21,bayam,苋菜,Kami merebus bayam untuk makan tengah hari.,我们煮苋菜当午餐。,量词 ikat；成把出售,名词;果蔬与集合
+ms-1598,ms,ms-21,kangkung,空心菜,Ali mencuci kangkung dengan air bersih.,阿里用干净的水洗空心菜。,量词 ikat；成把出售,名词;果蔬与集合
+ms-1599,ms,ms-21,kubis,卷心菜,Ibu memotong kubis dengan pisau.,母亲用刀切卷心菜。,量词 biji,名词;果蔬与集合
+ms-1600,ms,ms-21,terung,茄子,Siti membeli terung di pasar pagi.,西蒂在早市买茄子。,量词 biji,名词;果蔬与集合
+ms-1601,ms,ms-21,bendi,秋葵,Bendi ini dimasak bersama ikan.,这些秋葵和鱼一起煮。,量词 batang,名词;果蔬与集合
+ms-1602,ms,ms-21,labu,南瓜,Sup labu itu masih panas.,那碗南瓜汤还热着。,量词 biji,名词;果蔬与集合
+ms-1603,ms,ms-21,kacang,豆子,Kacang itu disimpan di dalam bekas.,那些豆子存放在容器里。,量词 biji,名词;果蔬与集合
+ms-1604,ms,ms-21,petai,臭豆,Bapa suka makan petai dengan nasi.,父亲喜欢就着米饭吃臭豆。,量词 biji；指取出的豆粒,名词;果蔬与集合
+ms-1605,ms,ms-21,ulam,生食的蔬菜,Ibu menyediakan ulam untuk keluarga.,母亲为家人准备生食蔬菜。,量词 通常不加量词,名词;果蔬与集合
+ms-1606,ms,ms-21,menimbang,称重,Petani menimbang mangga sebelum menjualnya.,农民在出售芒果前称重。,meN- + timbang → menimbang，men-；t 脱落；词根 timbang；及物；常见宾语 mangga、sayur,动词;市场动作
+ms-1607,ms,ms-21,membalut,包裹,Penjual membalut kuih itu dengan kertas.,卖家用纸包裹那块糕点。,meN- + balut → membalut，mem-，b 保留；词根 balut；及物，常见宾语 kuih itu dengan kertas,动词;市场动作
+ms-1608,ms,ms-21,mengupas,削皮；剥皮,Bapa mengupas nanas dengan pisau.,父亲用刀削菠萝皮。,meN- + kupas → mengupas，meng-；k 脱落；词根 kupas；及物；常见宾语 nanas、buah,动词;市场动作
+ms-1609,ms,ms-21,menghiris,切薄片,Ibu menghiris timun untuk nasi lemak.,母亲切黄瓜薄片配椰浆饭。,meN- + hiris → menghiris，meng-；词根保留；词根 hiris；及物；常见宾语 timun、jambu,动词;市场动作
+ms-1610,ms,ms-21,mencincang,剁碎,Ibu mencincang daging di dapur.,妈妈在厨房剁肉。,meN- + cincang → mencincang，men-，c 保留；词根 cincang；及物，常见宾语 daging di dapur,动词;市场动作
+ms-1611,ms,ms-21,membilas,冲洗,Ali membilas sayur dengan air bersih.,阿里用清水冲洗蔬菜。,meN- + bilas → membilas，mem-；词根保留；词根 bilas；及物；常见宾语 sayur、pinggan,动词;市场动作
+ms-1612,ms,ms-21,menapis,过滤,Ibu menapis air sebelum memasak.,母亲做饭前过滤水。,meN- + tapis → menapis，men-；t 脱落；词根 tapis；及物；常见宾语 air、jus,动词;市场动作
+ms-1613,ms,ms-21,memerah,挤出汁液,Raju memerah limau untuk membuat jus.,拉朱挤柑橘汁来做果汁。,meN- + perah → memerah，mem-；p 脱落；词根 perah；及物；常见宾语 limau,动词;市场动作
+ms-1614,ms,ms-21,mengadun,拌匀,Siti mengadun tepung dengan air.,西蒂把面粉和水拌匀。,meN- + adun → mengadun，meng-；词根保留；词根 adun；及物；常见宾语 tepung,动词;市场动作
+ms-1615,ms,ms-21,mengukus,蒸,Ibu mengukus ikan di dapur.,母亲在厨房蒸鱼。,meN- + kukus → mengukus，meng-；k 脱落；词根 kukus；及物；常见宾语 ikan、kuih,动词;市场动作
+ms-1616,ms,ms-21,memanggang,烤,Bapa memanggang ayam untuk keluarga.,父亲给家人烤鸡。,meN- + panggang → memanggang，mem-；p 脱落；词根 panggang；及物；常见宾语 ayam、ikan,动词;市场动作
+ms-1617,ms,ms-21,menjajakan,兜售,Penjual menjajakan buah-buahan di pasar.,卖家在市场兜售水果。,meN- + jaja + -kan → menjajakan，men-，j 保留；词根 jaja；及物，常见宾语 buah-buahan di pasar,动词;市场动作
+ms-1618,ms,ms-21,menyisihkan,留出,Siti menyisihkan sedikit wang untuk membeli buah.,西蒂留出一点钱买水果。,meN- + sisih + -kan → menyisihkan，meny-；s 脱落；词根 sisih；及物；常见宾语 wang,动词;市场动作
+ms-1619,ms,ms-21,mengasingkan,分开,Ali mengasingkan sayur daripada buah.,阿里把蔬菜和水果分开。,meN- + asing + -kan → mengasingkan，meng-；词根保留；词根 asing；及物；常见宾语 sayur、buah,动词;市场动作
+ms-1620,ms,ms-21,mengikat,捆扎,Petani mengikat sayur dengan tali.,农民用绳子捆扎蔬菜。,meN- + ikat → mengikat，meng-；词根保留；词根 ikat；及物；常见宾语 sayur,动词;市场动作
+ms-1621,ms,ms-21,melonggarkan,松开,Ibu melonggarkan tali pada bakul.,母亲松开篮子上的绳子。,meN- + longgar + -kan → melonggarkan，me-；词根保留；词根 longgar；及物；常见宾语 tali,动词;市场动作
+ms-1622,ms,ms-21,menyapa,打招呼,Siti menyapa petani itu dengan gembira.,西蒂高兴地向那位农民打招呼。,meN- + sapa → menyapa，meny-；s 脱落；词根 sapa；及物；常见宾语 petani、kawan,动词;市场动作
+ms-1623,ms,ms-21,menegur,提醒；指出问题,Guru menegur pelajar yang bermain-main.,老师提醒正在玩闹的学生。,meN- + tegur → menegur，men-；t 脱落；词根 tegur；及物；常见宾语 pelajar,动词;市场动作
+ms-1624,ms,ms-21,bertukar,交换,Kami bertukar cerita tentang pasar itu.,我们交流关于那个市场的故事。,ber- + tukar；词根 tukar；不及物；可接 cerita 表交换的内容,动词;市场动作
+ms-1625,ms,ms-21,memborong,批量购买,Ali memborong sayur-sayuran di pasar.,阿里在市场批量购买蔬菜。,meN- + borong → memborong，mem-，b 保留；词根 borong；及物，常见宾语 sayur-sayuran di pasar,动词;市场动作
+ms-1626,ms,ms-21,segar,新鲜的,Sayur segar itu baru dibawa ke pasar.,那些新鲜蔬菜刚运到市场。,形容词，后置；用于 sayur、buah,形容词;食物与市场
+ms-1627,ms,ms-21,ranum,熟透的,Mangga ranum itu sangat manis.,那个熟透的芒果很甜。,形容词，后置；用于水果,形容词;食物与市场
+ms-1628,ms,ms-21,rangup,酥脆的,Kuih rangup ini dibuat oleh ibu.,这份酥脆的糕点是母亲做的。,形容词，后置；用于食物,形容词;食物与市场
+ms-1629,ms,ms-21,tawar,味淡的,Sup itu tawar kerana kurang garam.,那碗汤因为盐少而味淡。,形容词，后置；本课指食物味淡,形容词;食物与市场
+ms-1630,ms,ms-21,masam,酸的,Jambu ini masih masam.,这个番石榴还很酸。,形容词，后置；用于味道,形容词;食物与市场
+ms-1631,ms,ms-21,pahit,苦的,Ubat itu pahit tetapi perlu saya makan.,那种药很苦，但我需要吃。,形容词，后置；用于味道,形容词;食物与市场
+ms-1632,ms,ms-21,lemak,香浓的,Sup lemak itu dibuat dengan santan.,那碗香浓的汤用椰浆做成。,形容词，后置；本课取味道香浓义；不作名词“脂肪”,形容词;食物与市场
+ms-1633,ms,ms-21,empuk,软嫩的,Daging empuk itu dimasak oleh bapa.,那份软嫩的肉是父亲煮的。,形容词，后置；用于煮熟的食物,形容词;食物与市场
+ms-1634,ms,ms-21,rapuh,易碎的,Kuih itu rapuh dan perlu dibungkus dengan baik.,那种糕点易碎，需要包好。,形容词，后置；用于易断碎的物品,形容词;食物与市场
+ms-1635,ms,ms-21,lembik,软塌的,Kuih ini terlalu lembik.,这块糕点太软塌。,形容词，后置；本课形容食物过软,形容词;食物与市场
+ms-1636,ms,ms-21,Kami berjalan-jalan di pasar.,我们在市场逛逛。,Kami berjalan-jalan di pasar.,我们在市场逛逛。,不及物；地点用 di；整句识别,动词;市场整句;phrase
+ms-1637,ms,ms-21,Mari kita tolong-menolong.,我们来互相帮助吧。,Mari kita tolong-menolong.,我们来互相帮助吧。,mari 引出共同建议；整句识别,动词;市场整句;phrase
+ms-1638,ms,ms-21,Buah-buahan ini segar.,这些水果很新鲜。,Buah-buahan ini segar.,这些水果很新鲜。,主语加形容词谓语；整句识别,动词;市场整句;phrase
+ms-1639,ms,ms-21,Jangan bersikap kekanak-kanakan.,不要表现得孩子气。,Jangan bersikap kekanak-kanakan.,不要表现得孩子气。,ber- + sikap；否定祈使；整句识别,动词;市场整句;phrase
+ms-1640,ms,ms-21,Kita perlu hormat-menghormati.,我们需要互相尊重。,Kita perlu hormat-menghormati.,我们需要互相尊重。,相互义形式不另加 saling；整句识别,动词;市场整句;phrase
+ms-1641,ms,ms-22,Salam sejahtera,祝安好,"Salam sejahtera, saya Siti dari sekolah di Melaka.",祝安好，我是来自马六甲学校的西蒂。,通用问候，适合不确定收信人宗教背景的场合；套语识别,问候;书信套语;phrase
+ms-1642,ms,ms-22,Assalamualaikum,祝您平安,"Assalamualaikum, saya ingin mengundang tuan ke sekolah kami.",祝您平安，我想邀请您到我们学校。,阿拉伯语问候，常见于穆斯林交际；按对象与场合使用；套语识别,问候;书信套语;phrase
+ms-1643,ms,ms-22,Yang benar,谨上,Saya menulis “Yang benar” sebelum nama saya.,我在姓名前写“谨上”。,一般正式书信的结语；机构另有格式时按机构格式；套语识别,问候;书信套语;phrase
+ms-1644,ms,ms-22,Yang ikhlas,诚挚的,Siti menulis “Yang ikhlas” sebelum namanya dalam surat kepada kawan.,西蒂在给朋友的信中，在姓名前写“诚挚的”。,亲友书信常用结语；套语识别,问候;书信套语;phrase
+ms-1645,ms,ms-22,Dengan hormatnya,谨此,"Dengan hormatnya, saya memohon kebenaran untuk menggunakan dewan.",谨此申请使用礼堂的许可。,正式开头套语；套语识别,问候;书信套语;phrase
+ms-1646,ms,ms-22,merujuk perkara di atas,就上述事项,Saya merujuk perkara di atas dalam surat ini.,我在这封信中就上述事项行文。,merujuk 的宾语 perkara；套语识别,问候;书信套语;phrase
+ms-1647,ms,ms-22,untuk makluman tuan,供您知悉,Surat ini untuk makluman tuan tentang mesyuarat esok.,这封信供您了解明天的会议。,tuan 用于正式称呼；套语识别,问候;书信套语;phrase
+ms-1648,ms,ms-22,atas perhatian tuan,感谢您的关注,Terima kasih atas perhatian tuan tentang perkara ini.,感谢您对这件事的关注。,常接在 terima kasih 后；套语识别,问候;书信套语;phrase
+ms-1649,ms,ms-22,kerjasama tuan amat dihargai,非常感谢您的配合,Kerjasama tuan amat dihargai oleh sekolah.,学校非常感谢您的配合。,di- + harga + -i；被动致谢；套语识别,问候;书信套语;phrase
+ms-1650,ms,ms-22,mohon maaf atas kelewatan,为延误致歉,Saya mohon maaf atas kelewatan membalas surat tuan.,我为延迟回复您的信致歉。,mohon 在请求套语中用词根；套语识别,问候;书信套语;phrase
+ms-1651,ms,ms-22,terima kasih atas bantuan tuan,感谢您的帮助,Saya mengucapkan terima kasih atas bantuan tuan.,我向您表示感谢，感谢您的帮助。,mengucapkan 的宾语 terima kasih；套语识别,问候;书信套语;phrase
+ms-1652,ms,ms-22,saya ingin memohon,我希望申请,"Dalam surat ini, saya ingin memohon kebenaran menggunakan dewan.",在这封信中，我希望申请使用礼堂的许可。,memohon 的宾语 kebenaran；套语识别,问候;书信套语;phrase
+ms-1653,ms,ms-22,dengan segala hormatnya,谨致敬意,Saya menjemput puan dengan segala hormatnya ke majlis sekolah.,我谨致敬意，邀请女士您参加学校活动。,正式邀请的礼貌套语；套语识别,问候;书信套语;phrase
+ms-1654,ms,ms-22,semoga sihat,祝身体健康,"Kepada Ali, semoga sihat bersama keluarga di Johor Bahru.",致阿里，祝你和在新山的家人身体健康。,祝愿套语；套语识别,问候;书信套语;phrase
+ms-1655,ms,ms-22,sila beri maklum balas,请回复意见,"Tuan, sila beri maklum balas sebelum hari Jumaat.",先生，请在星期五之前回复意见。,beri 的宾语 maklum balas；套语识别,问候;书信套语;phrase
+ms-1656,ms,ms-22,saya menantikan jawapan tuan,我期待您的回复,"Untuk perkara ini, saya menantikan jawapan tuan.",对于这件事，我期待您的回复。,meN- + nanti + -kan；宾语 jawapan；套语识别,问候;书信套语;phrase
+ms-1657,ms,ms-22,"sekian, terima kasih",谨此致谢,"Saya menutup surat dengan menulis “sekian, terima kasih”.",我以“谨此致谢”结束这封信。,常见结束语；套语识别,问候;书信套语;phrase
+ms-1658,ms,ms-22,sukacita dimaklumkan,欣然通知,"Dengan ini, sukacita dimaklumkan bahawa permohonan tuan telah diluluskan.",现欣然通知，您的申请已获批准。,正式通知好消息；dimaklumkan 为被动；套语识别,问候;书信套语;phrase
+ms-1659,ms,ms-22,dukacita dimaklumkan,遗憾地通知,"Dengan ini, dukacita dimaklumkan bahawa majlis itu telah dibatalkan.",现遗憾地通知，该活动已取消。,正式通知不利消息；套语识别,问候;书信套语;phrase
+ms-1660,ms,ms-22,akhir kata,最后,"Akhir kata, saya mengucapkan terima kasih kepada semua ahli.",最后，我向所有成员表示感谢。,结束语的引入形式；套语识别,问候;书信套语;phrase
+ms-1661,ms,ms-22,perkara,事项,Perkara itu dibincangkan dalam mesyuarat.,那件事在会议上讨论。,量词 通常不用专用量词，可用 satu perkara,名词;办公与通信
+ms-1662,ms,ms-22,lampiran,附件,Lampiran itu ialah jadual lawatan.,那个附件是参观日程。,量词 通常不用专用量词，可用 satu lampiran,名词;办公与通信
+ms-1663,ms,ms-22,memo,备忘录；内部通知,Saya membaca memo daripada pengurus.,我阅读经理发来的内部通知。,量词 份用 buah；英语借词,名词;办公与通信
+ms-1664,ms,ms-22,rujukan,参考；引用,Rujukan surat ini ialah laporan sekolah.,这封信参考的是学校报告。,量词 通常不用专用量词,名词;办公与通信
+ms-1665,ms,ms-22,perenggan,段落,Perenggan pertama menjelaskan tujuan surat.,第一段说明信的目的。,量词 通常不用专用量词，可用 satu perenggan,名词;办公与通信
+ms-1666,ms,ms-22,tandatangan,签名,Tandatangan guru ada di bawah surat.,老师的签名在信的下方。,量词 通常不用专用量词,名词;办公与通信
+ms-1667,ms,ms-22,penerima,收件人,Nama penerima perlu ditulis dengan jelas.,收件人的姓名需要写清楚。,量词 orang；peN- + terima；本轮整词学习,名词;办公与通信
+ms-1668,ms,ms-22,kurier,快递员,Kurier itu menghantar surat ke pejabat.,那名快递员把信送到办公室。,量词 orang；英语借词,名词;办公与通信
+ms-1669,ms,ms-22,permohonan,申请,Permohonan kami telah diterima oleh sekolah.,我们的申请已被学校接收。,量词 通常不用专用量词,名词;办公与通信
+ms-1670,ms,ms-22,jemputan,邀请,Jemputan itu untuk ibu bapa pelajar.,那份邀请是给学生家长的。,量词 通常不用专用量词,名词;办公与通信
+ms-1671,ms,ms-22,pengesahan,确认,Kami menunggu pengesahan tarikh mesyuarat.,我们等待确认会议日期。,量词 通常不用专用量词,名词;办公与通信
+ms-1672,ms,ms-22,balasan,回复,Balasan daripada puan telah saya baca.,女士您发来的回复我已经读过。,量词 通常不用专用量词,名词;办公与通信
+ms-1673,ms,ms-22,maklum balas,反馈,Maklum balas pelajar membantu guru mengubah rancangan.,学生的反馈帮助老师修改计划。,量词 通常不用专用量词,名词;办公与通信
+ms-1674,ms,ms-22,peti masuk,收件箱,Saya memeriksa peti masuk setiap pagi.,我每天早上检查收件箱。,量词 buah,名词;办公与通信
+ms-1675,ms,ms-22,pencetak,打印机,Pencetak di pejabat itu masih baru.,办公室里的那台打印机还很新。,量词 buah；peN- + cetak；本轮整词学习,名词;办公与通信
+ms-1676,ms,ms-22,papan kekunci,键盘,Papan kekunci ini digunakan untuk menaip surat.,这个键盘用来打信。,量词 buah,名词;办公与通信
+ms-1677,ms,ms-22,pengimbas,扫描仪,Pengimbas itu di sebelah pencetak.,那台扫描仪在打印机旁边。,量词 buah；peN- + imbas → pengimbas，peng-，i 保留,名词;办公与通信
+ms-1678,ms,ms-22,direktori,目录,Nama penerima ada dalam direktori itu.,收件人的名字在那个目录中。,量词 buah；英语借词,名词;办公与通信
+ms-1679,ms,ms-22,agenda,议程,Agenda mesyuarat telah diberikan kepada semua ahli.,会议议程已发给所有成员。,量词 通常不用专用量词,名词;办公与通信
+ms-1680,ms,ms-22,minit mesyuarat,会议记录,Setiausaha menulis minit mesyuarat dengan jelas.,秘书把会议记录写得很清楚。,量词 份数常用 naskhah；minit 在此不表示分钟,名词;办公与通信
+ms-1681,ms,ms-22,penyelaras,协调员,Penyelaras itu menyediakan agenda mesyuarat.,那名协调员准备会议议程。,量词 orang；peN- + selaras → penyelaras，peny-，s 脱落,名词;办公与通信
+ms-1682,ms,ms-22,urus setia,秘书处；办事处,Sila hubungi urus setia untuk maklumat tentang program.,请联系秘书处了解活动信息。,量词 通常不用专用量词；集合称呼,名词;办公与通信
+ms-1683,ms,ms-22,cap rasmi,公章,Cap rasmi sekolah ada pada dokumen itu.,那份文件上有学校公章。,量词 枚数可直接用 satu cap；规范拼写 cap,名词;办公与通信
+ms-1684,ms,ms-22,surat iringan,附函,Surat iringan itu menerangkan tujuan permohonan.,那封附函说明申请目的。,量词 封数用 pucuk,名词;办公与通信
+ms-1685,ms,ms-22,pesanan ringkas,短信,Saya menerima pesanan ringkas daripada setiausaha.,我收到秘书发来的短信。,量词 通常不用专用量词,名词;办公与通信
+ms-1686,ms,ms-22,melampirkan,附上,Saya melampirkan jadual bersama surat ini.,我随信附上日程表。,meN- + lampir + -kan → melampirkan，me-；词根保留；词根 lampir；及物；常见宾语 jadual、dokumen,动词;通信动作
+ms-1687,ms,ms-22,mengutarakan,提出；表达,Saya mengutarakan cadangan itu dalam surat.,我在信中提出那个建议。,meN- + utara + -kan → mengutarakan，meng-，u 保留；词根 utara；及物，常见宾语 cadangan itu dalam surat,动词;通信动作
+ms-1688,ms,ms-22,memohon,申请,Kami memohon kebenaran untuk menggunakan bilik itu.,我们申请使用那个房间的许可。,meN- + mohon → memohon，me-；词根保留；词根 mohon；及物；常见宾语 kebenaran,动词;通信动作
+ms-1689,ms,ms-22,mengucapkan,表达；致以,Saya mengucapkan terima kasih kepada puan.,我向女士您表示感谢。,meN- + ucap + -kan → mengucapkan，meng-；词根保留；词根 ucap；及物；常见宾语 terima kasih,动词;通信动作
+ms-1690,ms,ms-22,menghargai,感谢；重视,Kami menghargai kerjasama semua ahli.,我们感谢所有成员的配合。,meN- + harga + -i → menghargai，meng-；词根保留；词根 harga；及物；常见宾语 kerjasama、bantuan,动词;通信动作
+ms-1691,ms,ms-22,menandatangani,签署,Ketua menandatangani surat rasmi itu.,负责人签署那封正式信。,meN- + tandatangan + -i → menandatangani，men-；t 脱落；词根 tandatangan；及物；常见宾语 surat、dokumen,动词;通信动作
+ms-1692,ms,ms-22,mengimbas,扫描,Saya mengimbas surat itu di pejabat.,我在办公室扫描那封信。,meN- + imbas → mengimbas，meng-，i 保留；词根 imbas；及物，常见宾语 surat itu di pejabat,动词;通信动作
+ms-1693,ms,ms-22,menaip,打字,Siti menaip alamat pada komputer.,西蒂在电脑上输入地址。,meN- + taip → menaip，men-；t 脱落；词根 taip；及物；常见宾语 alamat、surat,动词;通信动作
+ms-1694,ms,ms-22,menyelaraskan,协调,Kami menyelaraskan jadual mesyuarat.,我们协调会议日程。,meN- + selaras + -kan → menyelaraskan，meny-，s 脱落；词根 selaras；及物，常见宾语 jadual mesyuarat,动词;通信动作
+ms-1695,ms,ms-22,mengedarkan,分发,Kami mengedarkan agenda kepada ahli mesyuarat.,我们向与会成员分发议程。,meN- + edar + -kan → mengedarkan，meng-；词根保留；词根 edar；及物；常见宾语 agenda、surat,动词;通信动作
+ms-1696,ms,ms-22,memaklumkan,告知,Saya memaklumkan tarikh baru kepada penerima.,我把新日期告知收件人。,meN- + maklum + -kan → memaklumkan，me-；词根保留；词根 maklum；及物；常见宾语 tarikh、perubahan,动词;通信动作
+ms-1697,ms,ms-22,mengundang,邀请,Sekolah mengundang ibu bapa ke majlis itu.,学校邀请家长参加那个活动。,meN- + undang → mengundang，meng-；词根保留；词根 undang；及物；常见宾语 ibu bapa、tetamu,动词;通信动作
+ms-1698,ms,ms-22,meluluskan,批准,Ketua meluluskan permohonan kami.,负责人批准我们的申请。,meN- + lulus + -kan → meluluskan，me-；词根保留；词根 lulus；及物；常见宾语 permohonan,动词;通信动作
+ms-1699,ms,ms-22,menjadualkan,安排日程,Setiausaha menjadualkan mesyuarat pada hari Isnin.,秘书把会议安排在星期一。,meN- + jadual + -kan → menjadualkan，men-，j 保留；词根 jadual；及物，常见宾语 mesyuarat pada hari Isnin,动词;通信动作
+ms-1700,ms,ms-22,memuktamadkan,最终确定,Kami memuktamadkan rancangan itu sebelum mesyuarat.,我们在会议前最终确定那个计划。,meN- + muktamad + -kan → memuktamadkan，me-，m 保留；词根 muktamad；及物，常见宾语 rancangan itu sebelum mesyuarat,动词;通信动作
+ms-1701,ms,ms-22,mengingat,记住,Saya mengingat tarikh itu dengan menulisnya pada jadual.,我把那个日期写在日程表上来记住它。,meN- + ingat → mengingat，meng-；词根保留；词根 ingat；及物；常见宾语 tarikh,动词;通信动作
+ms-1702,ms,ms-22,menyertakan,附上,Saya menyertakan salinan surat itu.,我附上那封信的副本。,meN- + serta + -kan → menyertakan，meny-，s 脱落；词根 serta；及物，常见宾语 salinan surat itu,动词;通信动作
+ms-1703,ms,ms-22,mengurus,办理；管理,Setiausaha mengurus surat di pejabat.,秘书在办公室处理信件。,meN- + urus → mengurus，meng-；词根保留；词根 urus；及物；常见宾语 surat,动词;通信动作
+ms-1704,ms,ms-22,berurusan,办理事务；联系,Saya berurusan dengan urus setia melalui e-mel.,我通过邮件与秘书处办理事务。,ber- + urus + -an；词根 urus；不及物；此处不是相互义,动词;通信动作
+ms-1705,ms,ms-22,berbalas,互相回复,Kami berbalas surat tentang projek sekolah.,我们就学校项目互通信件。,ber- + balas；词根 balas；不及物；接 surat 表通信方式,动词;通信动作
+ms-1706,ms,ms-22,oleh sebab itu,因此,"Oleh sebab itu, mesyuarat perlu ditangguhkan.",因此，会议需要推迟。,承接前文原因，引出结果,连词;书信衔接
+ms-1707,ms,ms-22,sehubungan dengan itu,关于此事；因此,"Sehubungan dengan itu, sila hantar borang sebelum Jumaat.",关于此事，请在星期五前寄出表格。,正式书信中衔接相关事项,连词;书信衔接
+ms-1708,ms,ms-22,di samping itu,此外,"Di samping itu, sila bawa salinan surat.",此外，请带上信的副本。,补充同一主题的信息,连词;书信衔接
+ms-1709,ms,ms-22,sekalipun,即使；尽管,"Sekalipun sibuk, beliau membalas surat saya.",尽管很忙，他仍回复我的信。,连词，表示让步，与 walaupun 相近；连写,连词;书信衔接
+ms-1710,ms,ms-22,lantaran itu,因此,"Lampiran itu salah; lantaran itu, saya meminta salinan surat tersebut.",附件有误；因此，我请求那封信的副本。,连词，用于引出结果；两个词分写,连词;书信衔接
+ms-1711,ms,ms-22,Sila semak lampiran ini.,请核对这个附件。,Sila semak lampiran ini.,请核对这个附件。,及物 semak；宾语 lampiran；整句识别,动词;书信整句;phrase
+ms-1712,ms,ms-22,Saya memohon maaf atas kesalahan itu.,我为那个错误道歉。,Saya memohon maaf atas kesalahan itu.,我为那个错误道歉。,memohon 的宾语 maaf；整句识别,动词;书信整句;phrase
+ms-1713,ms,ms-22,Terima kasih kerana membalas e-mel saya.,感谢您回复我的邮件。,Terima kasih kerana membalas e-mel saya.,感谢您回复我的邮件。,kerana 引出致谢原因；整句识别,动词;书信整句;phrase
+ms-1714,ms,ms-22,Kami mengundang puan ke mesyuarat.,我们邀请您参加会议。,Kami mengundang puan ke mesyuarat.,我们邀请您参加会议。,mengundang 的宾语 puan；整句识别,动词;书信整句;phrase
+ms-1715,ms,ms-22,Saya berharap agar tuan dapat hadir.,我希望您能出席。,Saya berharap agar tuan dapat hadir.,我希望您能出席。,ber- + harap；agar 引出希望的内容；整句识别,动词;书信整句;phrase
+ms-1716,ms,ms-22,tuan,先生；您（男性敬称）,"Tuan, sila duduk di sini.",先生，请坐这里。,量词 作称呼时不用量词,名词;正式通信;补充
+ms-1717,ms,ms-22,puan,女士；您（女性敬称）,"Puan, surat ini untuk puan.",女士，这封信是给您的。,量词 作称呼时不用量词,名词;正式通信;补充
+ms-1718,ms,ms-22,perhatian,关注；注意,Perkara ini perlu perhatian semua ahli.,这件事需要所有成员关注。,量词 抽象名词通常不用量词,名词;正式通信;补充
+ms-1719,ms,ms-22,kesulitan,困难；不便,Kami memohon maaf atas kesulitan itu.,我们为那项不便致歉。,量词 通常不用；按种类说 jenis；ke- + sulit + -an,名词;正式通信;补充
+ms-1720,ms,ms-22,kerjasama,合作；配合,Kerjasama ibu bapa sangat penting bagi sekolah.,家长的配合对学校很重要。,量词 抽象名词通常不用量词,名词;正式通信;补充
+ms-1721,ms,ms-23,pada awalnya,起初,"Pada awalnya, kami tidak tahu punca kejadian itu.",起初，我们不知道那件事的起因。,连词，叙事开端；awal + -nya，pada 分写,连词;叙事连接
+ms-1722,ms,ms-23,selanjutnya,接下来,"Selanjutnya, pasukan itu memeriksa jalan raya.",接下来，那个队伍检查公路。,连词，表示叙事顺序；作为完整连接词学习,连词;叙事连接
+ms-1723,ms,ms-23,pada masa itu,在那时,"Pada masa itu, hujan masih lebat.",在那时，雨还很大。,交代事件发生时的背景,连词;叙事连接
+ms-1724,ms,ms-23,sejurus kemudian,紧接着,"Sejurus kemudian, bomba tiba di lokasi itu.",紧接着，消防人员到达那个地点。,连词，表示紧接发生的事件,连词;叙事连接
+ms-1725,ms,ms-23,beberapa hari kemudian,几天后,"Beberapa hari kemudian, jambatan itu dibuka semula.",几天后，那座桥重新开放。,表示较长的时间推进,连词;叙事连接
+ms-1726,ms,ms-23,sebelum itu,在那之前,"Sebelum itu, Ali telah membaca amaran banjir.",在那之前，阿里已读过洪水警报。,补充更早发生的事件,连词;叙事连接
+ms-1727,ms,ms-23,sejak hari itu,从那天起,"Sejak hari itu, kami selalu memeriksa bekalan air.",从那天起，我们经常检查供水。,标示延续情况的起点,连词;叙事连接
+ms-1728,ms,ms-23,pada keesokan harinya,在第二天,"Pada keesokan harinya, penduduk membersihkan rumah bersama-sama.",在第二天，居民一起打扫房屋。,以叙事中的某一天为参照；整词组学习,连词;叙事连接
+ms-1729,ms,ms-23,sementara itu,与此同时,"Sementara itu, sukarelawan menyediakan makanan di dewan.",与此同时，志愿者在礼堂准备食物。,引出同时进行的另一件事,连词;叙事连接
+ms-1730,ms,ms-23,sesudah itu,此后,"Sesudah itu, wartawan menulis laporan di pejabat.",此后，记者在办公室写报道。,较书面的后续时间连接,连词;叙事连接
+ms-1731,ms,ms-23,tatkala,当……时,"Tatkala hujan turun, kami masih di sekolah.",当雨落下时，我们仍在学校。,连词，引导时间从句；标准书面用语,连词;叙事连接
+ms-1732,ms,ms-23,pada akhir cerita,在故事结尾,"Pada akhir cerita, semua kanak-kanak pulang dengan selamat.",在故事结尾，所有孩子平安回家。,用于概述故事结构,连词;叙事连接
+ms-1733,ms,ms-23,gempa bumi,地震,Gempa bumi itu merosakkan beberapa bangunan.,那场地震损坏几栋建筑。,量词 通常不用专用量词；一次事件可说 satu kejadian gempa bumi；复合名词,名词;新闻与事件
+ms-1734,ms,ms-23,kejadian,事件,Kejadian itu berlaku pada pagi Isnin.,那件事发生在星期一早上。,量词 通常不用专用量词,名词;新闻与事件
+ms-1735,ms,ms-23,letupan,爆炸,Letupan itu berlaku pada waktu malam.,那次爆炸发生在夜间。,量词 声用 das，也可直接说 satu letupan；letup + -an,名词;新闻与事件
+ms-1736,ms,ms-23,perlanggaran,碰撞,Perlanggaran dua buah kereta itu berlaku di jalan raya.,那两辆汽车的碰撞发生在公路上。,量词 通常不用专用量词，可直接说 satu perlanggaran；per- + langgar + -an,名词;新闻与事件
+ms-1737,ms,ms-23,penghuni,住户；居住者,Penghuni rumah itu keluar dengan selamat.,那所房子的住户安全离开。,量词 orang；peN- + huni → penghuni，peng-，h 保留,名词;新闻与事件
+ms-1738,ms,ms-23,petugas,工作人员,Petugas itu membantu mangsa di pusat pemindahan.,那名工作人员在疏散中心帮助灾民。,量词 orang；pe- + tugas；词根 tugas,名词;新闻与事件
+ms-1739,ms,ms-23,bomba,消防队；消防机构,Bomba datang dengan segera selepas menerima maklumat itu.,消防队收到那个消息后立即赶来。,量词 机构称呼通常不用量词,名词;新闻与事件
+ms-1740,ms,ms-23,pasukan,队伍,Pasukan itu membawa peralatan ke kampung.,那支队伍把设备带到村庄。,量词 支数可直接用 satu pasukan,名词;新闻与事件
+ms-1741,ms,ms-23,operasi,行动,Operasi itu bermula pada pukul lapan pagi.,那次行动早上八点开始。,量词 通常不用专用量词,名词;新闻与事件
+ms-1742,ms,ms-23,pusat pemindahan,疏散中心,Keluarga Ali tinggal di pusat pemindahan.,阿里的家人住在疏散中心。,量词 buah,名词;新闻与事件
+ms-1743,ms,ms-23,kemusnahan,毁坏；毁灭,Ribut itu menyebabkan kemusnahan di kawasan ini.,那场风暴在这个地区造成毁坏。,量词 通常不用量词；ke- + musnah + -an,名词;新闻与事件
+ms-1744,ms,ms-23,pembaikan,维修,Pembaikan jalan akan bermula esok.,道路维修明天开始。,量词 抽象名词通常不用量词,名词;新闻与事件
+ms-1745,ms,ms-23,liputan,报道,Liputan akhbar itu mengenai banjir di Johor Bahru.,那家报纸的报道涉及新山的洪灾。,量词 抽象名词通常不用量词,名词;新闻与事件
+ms-1746,ms,ms-23,pengisytiharan,宣布；公告,Pengisytiharan itu disiarkan pada waktu pagi.,那项公告在早上播出。,量词 项用 buah；peN- + isytihar + -an，peng-，i 保留,名词;新闻与事件
+ms-1747,ms,ms-23,agensi,机构,Agensi itu memberikan bantuan kepada mangsa.,那个机构向灾民提供援助。,量词 buah；英语借词,名词;新闻与事件
+ms-1748,ms,ms-23,tinjauan,实地调查；走访,Tinjauan itu dijalankan di kawasan pasar.,那次走访在市场一带进行。,量词 通常不用专用量词,名词;新闻与事件
+ms-1749,ms,ms-23,sidang media,媒体发布会,Wartawan menghadiri sidang media itu.,记者出席那场媒体发布会。,量词 场用 sesi；复合名词,名词;新闻与事件
+ms-1750,ms,ms-23,lokasi,地点,Lokasi kejadian ditunjukkan pada peta.,事件发生地点标在地图上。,量词 通常不用专用量词,名词;新闻与事件
+ms-1751,ms,ms-23,daerah,地区；县,Bantuan dihantar ke daerah itu.,援助送往那个地区。,量词 通常不用，可直接说 satu daerah,名词;新闻与事件
+ms-1752,ms,ms-23,jalan raya,公路,Jalan raya itu masih basah selepas hujan.,雨后那条公路仍湿着。,量词 条数用 batang,名词;新闻与事件
+ms-1753,ms,ms-23,jurukamera,摄像师,Jurukamera itu merakam kejadian tersebut.,那名摄像师记录那件事。,量词 orang；juru + kamera，连写,名词;新闻与事件
+ms-1754,ms,ms-23,penyelamat,救援者,Penyelamat membawa kanak-kanak ke tempat selamat.,救援者把孩子带到安全地点。,量词 orang,名词;新闻与事件
+ms-1755,ms,ms-23,stok,库存,Stok makanan di pusat itu masih cukup.,那个中心的食物库存仍然充足。,量词 通常不用；英语借词,名词;新闻与事件
+ms-1756,ms,ms-23,peralatan,设备；用具,Peralatan itu disimpan di dalam lori.,那些设备存放在卡车里。,量词 集合名词通常不再重叠；不用专用量词,名词;新闻与事件
+ms-1757,ms,ms-23,kenderaan,车辆,Kenderaan tidak boleh melalui jalan itu.,车辆不能经过那条路。,量词 辆数用 buah,名词;新闻与事件
+ms-1758,ms,ms-23,suasana,气氛；环境情况,Suasana di dewan itu tenang.,礼堂里的气氛平静。,量词 抽象名词通常不用量词,名词;新闻与事件
+ms-1759,ms,ms-23,amaran,警报；警告,Penduduk membaca amaran pada notis itu.,居民阅读那张通知上的警告。,量词 通常不用专用量词,名词;新闻与事件
+ms-1760,ms,ms-23,hujan lebat,大雨,Hujan lebat turun sejak malam semalam.,从昨天夜里开始就下大雨。,量词 天气现象通常不用量词,名词;新闻与事件
+ms-1761,ms,ms-23,paras air,水位,Paras air sungai itu masih tinggi.,那条河的水位仍很高。,量词 不用量词，测量时另加单位,名词;新闻与事件
+ms-1762,ms,ms-23,punca,原因；根源,Polis sedang menyelidiki punca kemalangan itu.,警方正在调查那起事故的原因。,量词 通常不用专用量词,名词;新闻与事件
+ms-1763,ms,ms-23,menyaksikan,目睹,Siti menyaksikan kejadian itu dari kedainya.,西蒂从她的店里目睹那件事。,meN- + saksi + -kan → menyaksikan，meny-；s 脱落；词根 saksi；及物；常见宾语 kejadian,动词;叙事与报道动作
+ms-1764,ms,ms-23,menceritakan,讲述,Ali menceritakan pengalamannya kepada wartawan.,阿里向记者讲述自己的经历。,meN- + cerita + -kan → menceritakan，men-；词根保留；词根 cerita；及物；常见宾语 pengalaman、cerita,动词;叙事与报道动作
+ms-1765,ms,ms-23,menggambarkan,描写；描述,Laporan itu menggambarkan suasana di pusat pemindahan.,那篇报道描述疏散中心的情况。,meN- + gambar + -kan → menggambarkan，meng-；词根保留；词根 gambar；及物；常见宾语 suasana、keadaan,动词;叙事与报道动作
+ms-1766,ms,ms-23,mendokumentasikan,记录成文；存档,Kami mendokumentasikan kejadian itu dalam laporan.,我们在报告中记录那件事。,meN- + dokumentasi + -kan → mendokumentasikan，men-，d 保留；词根 dokumentasi；及物，常见宾语 kejadian itu dalam laporan,动词;叙事与报道动作
+ms-1767,ms,ms-23,mencatatkan,记下,Saksi mencatatkan masa kejadian itu.,证人记下那件事发生的时间。,meN- + catat + -kan → mencatatkan，men-，c 保留；词根 catat；及物，常见宾语 masa kejadian itu,动词;叙事与报道动作
+ms-1768,ms,ms-23,menghebahkan,广泛发布,Agensi itu menghebahkan maklumat tentang bantuan.,那个机构广泛发布援助信息。,meN- + hebah + -kan → menghebahkan，meng-，h 保留；词根 hebah；及物，常见宾语 maklumat tentang bantuan,动词;叙事与报道动作
+ms-1769,ms,ms-23,mendedahkan,披露,Laporan itu mendedahkan masalah bekalan air.,那篇报告披露供水问题。,meN- + dedah + -kan → mendedahkan，men-；词根保留；词根 dedah；及物；常见宾语 masalah,动词;叙事与报道动作
+ms-1770,ms,ms-23,mendakwa,声称,Saksi itu mendakwa bahawa lori telah berhenti.,那位目击者声称卡车已经停下。,meN- + dakwa → mendakwa，men-；词根保留；词根 dakwa；及物；常见宾语 kenyataan；也接 bahawa 从句,动词;叙事与报道动作
+ms-1771,ms,ms-23,menyangkal,反驳；否认,Saksi menyangkal dakwaan itu.,证人反驳那个指称。,meN- + sangkal → menyangkal，meny-，s 脱落；词根 sangkal；及物，常见宾语 dakwaan itu,动词;叙事与报道动作
+ms-1772,ms,ms-23,menyiasat,调查,Polis menyiasat punca kebakaran itu.,警方调查那场火灾的起因。,meN- + siasat → menyiasat，meny-，s 脱落；词根 siasat；及物，常见宾语 punca kebakaran itu,动词;叙事与报道动作
+ms-1773,ms,ms-23,merawat,治疗；照护,Doktor merawat mangsa di hospital.,医生在医院治疗受害者。,meN- + rawat → merawat，me-，r 保留；词根 rawat；及物，常见宾语 mangsa di hospital,动词;叙事与报道动作
+ms-1774,ms,ms-23,mengangkut,运送,Lori mengangkut bekalan makanan ke pusat pemindahan.,卡车把食品物资运到疏散中心。,meN- + angkut → mengangkut，meng-，a 保留；词根 angkut；及物，常见宾语 bekalan makanan ke pusat pemindahan,动词;叙事与报道动作
+ms-1775,ms,ms-23,menyalurkan,输送；提供,Kelab menyalurkan bantuan kepada mangsa banjir.,社团向洪灾受灾者提供援助。,meN- + salur + -kan → menyalurkan，meny-；s 脱落；词根 salur；及物；常见宾语 bantuan、bekalan,动词;叙事与报道动作
+ms-1776,ms,ms-23,membangunkan,兴建,Mereka membangunkan sekolah di daerah itu.,他们在那个地区兴建学校。,meN- + bangun + -kan → membangunkan，mem-，b 保留；词根 bangun；及物，常见宾语 sekolah di daerah itu,动词;叙事与报道动作
+ms-1777,ms,ms-23,menghalang,阻挡,Pokok itu menghalang laluan ke pasar.,那棵树挡住通往市场的路。,meN- + halang → menghalang，meng-；词根保留；词根 halang；及物；常见宾语 laluan,动词;叙事与报道动作
+ms-1778,ms,ms-23,mengawal,控制；维护,Polis mengawal keselamatan di kawasan itu.,警方维护那个区域的安全。,meN- + kawal → mengawal，meng-；k 脱落；词根 kawal；及物；常见宾语 keselamatan、kebakaran,动词;叙事与报道动作
+ms-1779,ms,ms-23,melanda,侵袭,Banjir melanda kampung itu pada malam Isnin.,洪水星期一晚上侵袭那个村庄。,meN- + landa → melanda，me-；词根保留；词根 landa；及物；常见宾语 kampung、kawasan,动词;叙事与报道动作
+ms-1780,ms,ms-23,memusnahkan,毁坏,Kebakaran itu memusnahkan sebuah kedai.,那场火灾毁掉一家商店。,meN- + musnah + -kan → memusnahkan，me-；词根保留；词根 musnah；及物；常见宾语 kedai、rumah,动词;叙事与报道动作
+ms-1781,ms,ms-23,merosakkan,损坏,Air banjir merosakkan buku di perpustakaan.,洪水损坏图书馆里的书。,meN- + rosak + -kan → merosakkan，me-；词根保留；词根 rosak；及物；常见宾语 buku、rumah,动词;叙事与报道动作
+ms-1782,ms,ms-23,menghentikan,停止；中止,Ketua menghentikan operasi pada waktu malam.,负责人在夜间中止行动。,meN- + henti + -kan → menghentikan，meng-；词根保留；词根 henti；及物；常见宾语 operasi、aktiviti,动词;叙事与报道动作
+ms-1783,ms,ms-23,menyambung,接续；继续,Pasukan itu menyambung operasi pada waktu pagi.,那个队伍在早上继续行动。,meN- + sambung → menyambung，meny-，s 脱落；词根 sambung；及物，常见宾语 operasi pada waktu pagi,动词;叙事与报道动作
+ms-1784,ms,ms-23,terjadi,发生,Kejadian itu terjadi ketika hujan lebat.,那件事发生在大雨期间。,ter- + jadi → terjadi；词根 jadi；不及物,动词;叙事与报道动作
+ms-1785,ms,ms-23,berundur,后退；撤退,Pasukan itu berundur dari kawasan tersebut.,那个队伍从那个地区撤退。,ber- + undur → berundur；词根 undur；不及物,动词;叙事与报道动作
+ms-1786,ms,ms-23,bergegas,赶紧赶往,Ali bergegas ke dewan selepas menerima berita itu.,阿里收到那个消息后赶紧前往礼堂。,ber- + gegas；词根 gegas；不及物,动词;叙事与报道动作
+ms-1787,ms,ms-23,menemu bual,采访,Wartawan menemu bual ketua pasukan di dewan.,记者在礼堂采访队长。,meN- + temu → menemu，t 脱落；与 bual 分写；及物；常见宾语 saksi、ketua,动词;叙事与报道动作;phrase
+ms-1788,ms,ms-23,panik,惊慌的,Penduduk yang panik itu ditenangkan oleh petugas.,那名惊慌的居民得到工作人员的安抚。,形容词，后置；英语借词,形容词;叙事描写
+ms-1789,ms,ms-23,lega,宽心的；松一口气的,Kami lega selepas semua kanak-kanak tiba.,所有孩子到达后，我们松了一口气。,形容词，后置；用于人物感受,形容词;叙事描写
+ms-1790,ms,ms-23,cekap,熟练高效的,Pasukan yang cekap itu menyelamatkan semua mangsa.,那支熟练高效的队伍救出所有受灾者。,形容词，后置；用于能力和办事表现,形容词;叙事描写
+ms-1791,ms,ms-23,deras,湍急的,Air sungai yang deras itu tidak selamat untuk kanak-kanak.,那湍急的河水对孩子不安全。,形容词，后置；用于水流等,形容词;叙事描写
+ms-1792,ms,ms-23,lebat,大的；密集的,Hujan lebat menyebabkan jalan ditutup.,大雨导致道路关闭。,形容词，后置；用于降雨等,形容词;叙事描写
+ms-1793,ms,ms-23,musnah,毁坏的；毁灭的,Rumah itu musnah kerana kebakaran.,那所房子因火灾而毁坏。,形容词，后置,形容词;叙事描写
+ms-1794,ms,ms-23,teruk,严重的,Kerosakan teruk itu perlu diperiksa oleh jurutera.,那处严重的损坏需要工程师检查。,形容词，后置；用于程度,形容词;叙事描写
+ms-1795,ms,ms-23,sunyi,安静的；寂静的,Pasar itu sunyi selepas semua orang beredar.,所有人离开后，市场寂静下来。,形容词，后置；用于场所,形容词;叙事描写
+ms-1796,ms,ms-23,"Pada mulanya, kami berasa cemas.",起初，我们感到焦急。,"Pada mulanya, kami berasa cemas.",起初，我们感到焦急。,ber- + rasa；叙事开头；整句识别,动词;叙事整句;phrase
+ms-1797,ms,ms-23,Berita itu telah disahkan oleh polis.,那个消息已获警方确认。,Berita itu telah disahkan oleh polis.,那个消息已获警方确认。,di- + sah + -kan；施事为 polis；整句识别,动词;叙事整句;phrase
+ms-1798,ms,ms-23,"Selepas itu, bantuan mula tiba.",之后，援助开始到达。,"Selepas itu, bantuan mula tiba.",之后，援助开始到达。,mula 引出动作开端；整句识别,动词;叙事整句;phrase
+ms-1799,ms,ms-23,"Akhirnya, semua orang pulang dengan selamat.",最后，所有人平安回家。,"Akhirnya, semua orang pulang dengan selamat.",最后，所有人平安回家。,akhirnya 引出结果；整句识别,动词;叙事整句;phrase
+ms-1800,ms,ms-23,Sumber berita mesti diperiksa dahulu.,必须先核查新闻来源。,Sumber berita mesti diperiksa dahulu.,必须先核查新闻来源。,di- + periksa；被动；整句识别,动词;叙事整句;phrase
+ms-1801,ms,ms-24,penilaian,评估,Penilaian ini membantu saya memilih latihan.,这次评估帮助我选择练习。,量词 通常不用专用量词；peN- + nilai + -an；本轮整词学习,名词;复盘与学习
+ms-1802,ms,ms-24,penguasaan,掌握,Penguasaan bahasa saya semakin baik.,我对语言的掌握越来越好。,量词 通常不用量词；peN- + kuasa + -an → penguasaan，k 脱落,名词;复盘与学习
+ms-1803,ms,ms-24,pencapaian,成果；达成情况,Pencapaian bulan ini ditulis dalam buku nota.,本月的成果记在笔记本里。,量词 抽象名词通常不用量词；peN- + capai + -an；本轮整词学习,名词;复盘与学习
+ms-1804,ms,ms-24,sasaran,目标,Sasaran saya ialah menulis e-mel yang jelas.,我的目标是写出清楚的邮件。,量词 通常不用专用量词,名词;复盘与学习
+ms-1805,ms,ms-24,strategi,策略,Strategi itu membantu saya mengingat perkataan.,那个策略帮助我记忆单词。,量词 通常不用专用量词,名词;复盘与学习
+ms-1806,ms,ms-24,pendekatan,方法；途径,Pendekatan ini membantu saya belajar.,这个方法帮助我学习。,量词 种用 jenis；peN- + dekat + -an，pen-，d 保留,名词;复盘与学习
+ms-1807,ms,ms-24,kefahaman,理解程度,Soalan itu membantu saya memeriksa kefahaman tentang berita.,那个问题帮助我检查对新闻的理解。,量词 抽象名词通常不用量词；ke- + faham + -an；本轮整词学习,名词;复盘与学习
+ms-1808,ms,ms-24,ketepatan,准确性,Ketepatan ejaan perlu diperiksa selepas menulis.,写完后需要检查拼写的准确性。,量词 抽象名词通常不用量词；ke- + tepat + -an；本轮整词学习,名词;复盘与学习
+ms-1809,ms,ms-24,kelancaran,流利程度,Latihan membaca membantu kelancaran saya.,朗读练习有助于提高我的流利程度。,量词 抽象名词通常不用量词；ke- + lancar + -an；本轮整词学习,名词;复盘与学习
+ms-1810,ms,ms-24,sebutan,发音,Guru menyemak sebutan saya.,老师检查我的发音。,量词 抽象名词通常不用量词；sebut + -an；本轮整词学习,名词;复盘与学习
+ms-1811,ms,ms-24,tatabahasa,语法,Saya menyemak tatabahasa sebelum menghantar tulisan.,我提交文章前检查语法。,量词 抽象名词通常不用量词,名词;复盘与学习
+ms-1812,ms,ms-24,kosa kata,词汇,Kosa kata tentang pasar membantu saya membaca cerita.,市场方面的词汇帮助我读故事。,量词 集合名词通常不用量词,名词;复盘与学习
+ms-1813,ms,ms-24,kesimpulan,结论,Saya menulis kesimpulan selepas membaca laporan itu.,我读完那份报告后写下结论。,量词 项用 buah；ke- + simpul + -an,名词;复盘与学习
+ms-1814,ms,ms-24,semakan,检查；复核,Semakan kedua membantu saya mencari kesalahan.,第二次检查帮助我找出错误。,量词 通常不用专用量词；semak + -an；本轮整词学习,名词;复盘与学习
+ms-1815,ms,ms-24,refleksi,反思；复盘,Refleksi ini dibuat selepas ujian membaca.,这次复盘在阅读测试后进行。,量词 通常不用专用量词,名词;复盘与学习
+ms-1816,ms,ms-24,latihan kendiri,自学练习,Saya membuat latihan kendiri setiap malam.,我每晚做自学练习。,量词 项用 jenis；latih + -an；复合名词，kendiri 表自己,名词;词缀对照
+ms-1817,ms,ms-24,pengayaan,拓展；丰富,Latihan pengayaan itu menambah kosa kata saya.,那项拓展练习增加我的词汇量。,量词 通常不用；按种类说 jenis；peN- + kaya + -an → pengayaan，k 脱落,名词;词缀对照
+ms-1818,ms,ms-24,bimbingan,指导,Saya memerlukan bimbingan guru untuk menulis dengan tepat.,我需要老师的指导来准确书写。,量词 次用 sesi；bimbing + -an,名词;词缀对照
+ms-1819,ms,ms-24,panduan,指南,Panduan itu membantu saya menyemak tatabahasa.,那份指南帮助我检查语法。,量词 buah；pandu + -an,名词;词缀对照
+ms-1820,ms,ms-24,pengulangan,重复的过程,Pengulangan ayat membantu saya mengingat imbuhan.,重复句子帮助我记住词缀。,量词 抽象名词通常不用量词；peN- + ulang + -an；词根 ulang；整词学习,名词;词缀对照
+ms-1821,ms,ms-24,ulangan,再次进行的练习,Ulangan latihan itu dibuat pada hari Ahad.,那项练习星期日重做。,量词 通常不用专用量词；ulang + -an；词根 ulang；整词学习,名词;词缀对照
+ms-1822,ms,ms-24,hafalan,背诵内容,Saya mengulang hafalan itu setiap pagi.,我每天早上复习那段背诵内容。,量词 段用 bahagian；hafal + -an,名词;词缀对照
+ms-1823,ms,ms-24,penghafalan,背诵；记诵过程,Penghafalan kosa kata memerlukan masa.,词汇的记诵需要时间。,量词 通常不用量词；peN- + hafal + -an，peng-，h 保留,名词;词缀对照
+ms-1824,ms,ms-24,penterjemahan,翻译过程,Penterjemahan laporan itu memerlukan masa.,那份报告的翻译需要时间。,量词 通常不用量词；peN- + terjemah + -an，pen-，t 保留；特殊形式，整词学习,名词;词缀对照
+ms-1825,ms,ms-24,penterjemah,译者,Penterjemah itu menyemak laporan saya.,那名译者检查我的报告。,量词 orang；peN- + terjemah → penterjemah，pen-，t 保留；特殊形式，整词学习,名词;词缀对照
+ms-1826,ms,ms-24,kesukaran,困难,Saya mencatat kesukaran yang perlu dibincangkan dengan guru.,我记录需要和老师讨论的困难。,量词 抽象名词通常不用量词；ke- + sukar + -an；词根 sukar；整词学习,名词;词缀对照
+ms-1827,ms,ms-24,tuliskan,写下（祈使）,Sila tuliskan jawapan pada kertas ini.,请把答案写在这张纸上。,tulis + -kan；词根 tulis；祈使省去 meN-；及物；常见宾语 jawapan、nama,动词;词缀对照
+ms-1828,ms,ms-24,dituliskan,被写下,Nama saya dituliskan pada borang itu oleh guru.,我的姓名由老师写在那张表格上。,di- + tulis + -kan；词根 tulis；主动形 menuliskan；被动的受事为 nama,动词;词缀对照
+ms-1829,ms,ms-24,terulang,再次发生,Kesalahan itu terulang semasa saya menulis.,那个错误在我写作时再次出现。,ter- + ulang；词根 ulang；不及物,动词;词缀对照
+ms-1830,ms,ms-24,semudah,和……一样容易的,Latihan ini semudah latihan minggu lepas.,这项练习和上周的练习一样容易。,形容词，后置；se- + mudah；词根 mudah；等比用法后接比较对象；整词学习,形容词;词缀对照
+ms-1831,ms,ms-24,Sila nilai kemajuan anda.,请评估您的进步。,Sila nilai kemajuan anda.,请评估您的进步。,及物 nilai；宾语 kemajuan；整句识别,动词;复盘整句;phrase
+ms-1832,ms,ms-24,Saya perlu menyemak ejaan semula.,我需要重新核对拼写。,Saya perlu menyemak ejaan semula.,我需要重新核对拼写。,meN- + semak；宾语 ejaan；整句识别,动词;复盘整句;phrase
+ms-1833,ms,ms-24,Apakah sasaran anda minggu depan?,您下周的目标是什么？,Apakah sasaran anda minggu depan?,您下周的目标是什么？,疑问句识别；整句识别,动词;复盘整句;phrase
+ms-1834,ms,ms-24,Saya boleh menceritakan semula berita ini.,我能复述这则新闻。,Saya boleh menceritakan semula berita ini.,我能复述这则新闻。,menceritakan 的宾语 berita；整句识别,动词;复盘整句;phrase
+ms-1835,ms,ms-24,Kesalahan itu tidak akan saya ulangi.,我不会再犯那个错误。,Kesalahan itu tidak akan saya ulangi.,我不会再犯那个错误。,被动第二式；施事 saya 紧靠 ulangi；整句识别,动词;复盘整句;phrase
+ms-1836,ms,ms-24,Bacaan ini sudah saya fahami.,这篇阅读材料我已经理解。,Bacaan ini sudah saya fahami.,这篇阅读材料我已经理解。,被动第二式；faham + -i；整句识别,动词;复盘整句;phrase
+ms-1837,ms,ms-24,Saya belajar melalui kesalahan sendiri.,我从自己的错误中学习。,Saya belajar melalui kesalahan sendiri.,我从自己的错误中学习。,melalui 引出方式；整句识别,动词;复盘整句;phrase
+ms-1838,ms,ms-24,Mari kita semak jawapan bersama-sama.,我们来一起核对答案吧。,Mari kita semak jawapan bersama-sama.,我们来一起核对答案吧。,及物 semak；宾语 jawapan；整句识别,动词;复盘整句;phrase
+ms-1839,ms,ms-24,Saya akan mengisi borang refleksi ini.,我将填写这份复盘表。,Saya akan mengisi borang refleksi ini.,我将填写这份复盘表。,meN- + isi → mengisi；宾语 borang；整句识别,动词;复盘整句;phrase
+ms-1840,ms,ms-24,Latihan ini membantu saya menulis dengan tepat.,这项练习帮助我准确地写作。,Latihan ini membantu saya menulis dengan tepat.,这项练习帮助我准确地写作。,meN- + bantu；宾语 saya；tepat 表准确；整句识别,动词;复盘整句;phrase
