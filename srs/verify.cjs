@@ -11,6 +11,8 @@ assert.equal(blocks.length,3);
 const runtime = blocks.at(-1)[1];
 new vm.Script(runtime);
 const initialRows = JSON.parse(blocks[0][1]);
+// Historical ordering checks stop at the first M3 row; later additions do not move old rows.
+const preM3Rows=initialRows.slice(0,initialRows.findIndex(r=>r.id==='ms-0641'));
 const initialState = JSON.parse(blocks[1][1]);
 const plain = value => JSON.parse(JSON.stringify(value));
 const source = runtime.slice(0,runtime.indexOf('// 启动。')) + runtime.slice(runtime.indexOf('function initialize()'),runtime.indexOf('try { initialize(); }')) + `
@@ -178,8 +180,8 @@ test('来源 CSV 与两个内嵌 JSON 完整一致；只有一个可执行脚本
   // 内嵌数据按追加顺序保留旧行；来源 CSV 各自按语言排列。
   for (const lang of api.LANGS) assert.deepEqual(rows.filter(row=>row.lang===lang),initialRows.filter(row=>row.lang===lang));
   assert.equal(rows.filter(row=>!['ms','uz','kk'].includes(row.lang)).length,3616);
-  assert.equal(rows.filter(row=>row.lang==='ms').length,640);
-  assert.equal(api.expandCards(rows).length,2895+s1Expanded+r1Expanded+s2Expanded+r2Expanded+s3Expanded+r3Expanded+s4Expanded+r4Expanded+r5Expanded+r6Expanded+ms1Expanded+ms2Expanded+api.expandCards(rows.filter(row=>['uz','kk'].includes(row.lang))).length);
+  assert.equal(rows.filter(row=>row.lang==='ms').length,920);
+  assert.equal(api.expandCards(rows).length,2895+s1Expanded+r1Expanded+s2Expanded+r2Expanded+s3Expanded+r3Expanded+s4Expanded+r4Expanded+r5Expanded+r6Expanded+ms1Expanded+ms2Expanded+ms3Expanded+api.expandCards(rows.filter(row=>['uz','kk'].includes(row.lang))).length);
   assert.equal(rows.filter(r=>r.lang==='es').length,1993);
   assert.equal(rows.filter(r=>r.lang==='ru'&&r.tags.split(';').includes('letter')).length,33);
   assert.equal(rows.filter(r=>r.lang==='ru'&&!r.tags.split(';').includes('letter')).length,1590);
@@ -383,7 +385,7 @@ test('真实嵌入进度能通过 validateState；全部进度与日志 id 都�
   assert.equal(JSON.stringify(initialState),before);
 });
 test('课程注册表都有词条、周次、日期、目标、写作任务和 10 题；阅读题属于本课练习',() => {
-  assert.deepEqual(Object.keys(api.LESSONS),['es-01','es-02','es-03','es-04','es-05','es-06','es-07','es-08','es-09','es-10','es-11','es-12','es-13','es-14','es-15','es-16','es-17','es-18','es-19','es-20','es-21','es-22','es-23','es-24','es-25','ru-01','ru-02','ru-03','ru-04','ru-05','ru-06','ru-07','ru-08','ru-09','ru-10','ru-11','ru-12','ru-13','ru-14','ru-15','ru-16','ru-17','ru-18','ru-19','ru-20','ru-21','ru-22','ru-23','ru-24','ru-25','ru-26','ru-27','ru-28','ru-29','ru-30','ru-31','ru-32','ru-33','ru-34','ms-01','ms-02','ms-03','ms-04','ms-05','ms-06','ms-07','ms-08','uz-01','uz-02','uz-03','uz-04','uz-05','uz-06','uz-07','uz-08','uz-09','uz-10','kk-01','kk-02','kk-03','kk-04','kk-05','kk-06','kk-07','kk-08','kk-09','kk-10']);
+  assert.deepEqual(Object.keys(api.LESSONS),['es-01','es-02','es-03','es-04','es-05','es-06','es-07','es-08','es-09','es-10','es-11','es-12','es-13','es-14','es-15','es-16','es-17','es-18','es-19','es-20','es-21','es-22','es-23','es-24','es-25','ru-01','ru-02','ru-03','ru-04','ru-05','ru-06','ru-07','ru-08','ru-09','ru-10','ru-11','ru-12','ru-13','ru-14','ru-15','ru-16','ru-17','ru-18','ru-19','ru-20','ru-21','ru-22','ru-23','ru-24','ru-25','ru-26','ru-27','ru-28','ru-29','ru-30','ru-31','ru-32','ru-33','ru-34','ms-01','ms-02','ms-03','ms-04','ms-05','ms-06','ms-07','ms-08','uz-01','uz-02','uz-03','uz-04','uz-05','uz-06','uz-07','uz-08','uz-09','uz-10','kk-01','kk-02','kk-03','kk-04','kk-05','kk-06','kk-07','kk-08','kk-09','kk-10','ms-09','ms-10','ms-11','ms-12']);
   for (const [id,lesson] of Object.entries(api.LESSONS)) {
     assert(initialRows.some(row=>row.lesson===id),id);
     assert.equal(lesson.lang,id.slice(0,2));assert.equal(lesson.week,Number(id.slice(3)));
@@ -397,7 +399,7 @@ test('课程注册表都有词条、周次、日期、目标、写作任务和 1
     if (lesson.reading) {
       if (lesson.lang==='ru' && ['ru-03','ru-04'].includes(id)) assert([5,6].includes(lesson.reading.sentences.length));
       if (lesson.lang==='ru' && ['ru-05','ru-06','ru-07','ru-08'].includes(id)) assert(lesson.reading.sentences.length>=8 && lesson.reading.sentences.length<=10);
-      assert.equal(lesson.reading.questions.length,['es-04','es-05','es-07','es-08','es-09','es-10','es-11','es-12','es-13','es-14','es-15','es-16','es-17','es-18','es-19','es-20','es-21','es-22','es-23','es-24','es-25','ru-05','ru-08','ru-09','ru-10','ru-11','ru-12','ru-13','ru-14','ru-15','ru-16','ru-17','ru-18','ru-19','ru-20','ru-21','ru-22','ru-23','ru-24','ru-25','ru-26','ru-27','ru-28','ru-29','ru-30','ru-31','ru-32','ru-33','ru-34','ms-02','ms-03','ms-04','ms-05','ms-06','ms-07','ms-08','uz-10','kk-10'].includes(id)?4:3);
+      assert.equal(lesson.reading.questions.length,['es-04','es-05','es-07','es-08','es-09','es-10','es-11','es-12','es-13','es-14','es-15','es-16','es-17','es-18','es-19','es-20','es-21','es-22','es-23','es-24','es-25','ru-05','ru-08','ru-09','ru-10','ru-11','ru-12','ru-13','ru-14','ru-15','ru-16','ru-17','ru-18','ru-19','ru-20','ru-21','ru-22','ru-23','ru-24','ru-25','ru-26','ru-27','ru-28','ru-29','ru-30','ru-31','ru-32','ru-33','ru-34','ms-02','ms-03','ms-04','ms-05','ms-06','ms-07','ms-08','ms-09','ms-10','ms-11','ms-12','uz-10','kk-10'].includes(id)?4:3);
       for (const sentence of lesson.reading.sentences) assert(sentence.text && sentence.zh);
       for (const question of lesson.reading.questions) {
         assert(question.options.includes(question.answer),id+' '+question.prompt);
@@ -1686,12 +1688,12 @@ test('任务 C 只追加 cards-data 与 ru.csv；已有记录顺序不变',() =>
   // 任务 E1 的西语第 9–12 周同样只追加在最后。
   assert.deepEqual(initialRows.slice(initialRows.findIndex(row=>row.id==='es-0714'),initialRows.findIndex(row=>row.id==='ru-0343')).map(row=>row.id),Array.from({length:280},(_,i)=>'es-'+String(714+i).padStart(4,'0')));
 });
-test('各课程分语言展示；阅读中文默认折叠；870 道练习按题型反馈且不写入进度',() => {
+test('各课程分语言展示；阅读中文默认折叠；910 道练习按题型反馈且不写入进度',() => {
   const {api:a,document}=createAPI(true);a.initialize();
   const before=plain(a.getData().state);
   for (const [id,lesson] of Object.entries(a.LESSONS)) {
     a.openLesson(id);
-    assert.equal(document.querySelectorAll('[data-lesson]').length,87);
+    assert.equal(document.querySelectorAll('[data-lesson]').length,91);
     const page=document.getElementById('content').innerHTML;
     assert(page.indexOf('西语课程')<page.indexOf('俄语课程'));
     assert(page.includes(lesson.goal));assert(page.includes(lesson.writingTask));
@@ -1738,7 +1740,7 @@ test('letter / phrase 标签只生成识别卡；其他词条仍有两个方向'
     const expected=row.tags.split(';').some(tag=>['letter','phrase'].includes(tag))?['r']:['r','p'];
     assert.deepEqual(plain(api.expandCards([row]).map(card=>card.direction)),expected,row.id);
   }
-  assert.equal(initialRows.filter(row=>row.tags.split(';').includes('phrase')).length,200+s3Rows.filter(row=>row.tags.split(';').includes('phrase')).length+s4Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r1Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r2Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r3Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r4Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r5Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r6Rows.filter(row=>row.tags.split(';').includes('phrase')).length+ms1Rows.filter(row=>row.tags.split(';').includes('phrase')).length+ms2Rows.filter(row=>row.tags.split(';').includes('phrase')).length+initialRows.filter(row=>['uz','kk'].includes(row.lang)&&row.tags.split(';').includes('phrase')).length);
+  assert.equal(initialRows.filter(row=>row.tags.split(';').includes('phrase')).length,200+s3Rows.filter(row=>row.tags.split(';').includes('phrase')).length+s4Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r1Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r2Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r3Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r4Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r5Rows.filter(row=>row.tags.split(';').includes('phrase')).length+r6Rows.filter(row=>row.tags.split(';').includes('phrase')).length+ms1Rows.filter(row=>row.tags.split(';').includes('phrase')).length+ms2Rows.filter(row=>row.tags.split(';').includes('phrase')).length+ms3Rows.filter(row=>row.tags.split(';').includes('phrase')).length+initialRows.filter(row=>['uz','kk'].includes(row.lang)&&row.tags.split(';').includes('phrase')).length);
   // 标签规则也适用于以后导入的西语词，不靠课次或语言写死。
   for (const tag of ['phrase','letter']) assert.deepEqual(plain(api.expandCards([{...initialRows[0],tags:'extra;'+tag}]).map(card=>card.direction)),['r']);
 });
@@ -1965,7 +1967,7 @@ test('任务 F1：阅读标签的列表与阅读页；答完四题写入进度�
   assert.deepEqual(document.querySelectorAll('[data-tab]').map(node=>node.dataset.tab),['review','lessons','readings','stats','settings']);
   a.showReadings();
   const list=document.querySelectorAll('[data-reading]');
-  assert.equal(list.length,122);
+  assert.equal(list.length,130);
   assert.deepEqual(list.map(node=>node.dataset.reading),['es','ru','ms'].flatMap(lang=>Object.values(a.READINGS).filter(item=>item.lang===lang).map(item=>item.id)));
   assert(document.getElementById('content').innerHTML.includes('未读'),'未读状态');
   const item=a.READINGS['es-r01'];
@@ -2003,7 +2005,7 @@ test('任务 F1：阅读标签的列表与阅读页；答完四题写入进度�
   assert.deepEqual(plain(a.getData().state.readings),{'es-r01':{done:today,score:4,total:4}});
   const back=document.querySelectorAll('[data-action]').find(node=>node.dataset.action==='readings-back');
   document.getElementById('app').listeners.click[0]({target:{closest:()=>back}});
-  assert.equal(document.querySelectorAll('[data-reading]').length,122,'返回按钮回到阅读列表');
+  assert.equal(document.querySelectorAll('[data-reading]').length,130,'返回按钮回到阅读列表');
   assert(document.getElementById('content').innerHTML.includes('已读 '+today+' · 4 / 4'),'列表显示已读与得分');
   // 序列化仍清空 app，readings 随状态写入并能再次读回。
   const saved=a.serializeDocument(document,initialRows,a.getData().state,'2026-09-15T10:00:00Z','file');
@@ -2082,7 +2084,7 @@ test('任务 F2 / S2 / R2 / S3：既有阅读保留 id 顺序，新篇目在末�
     ...Array.from({length:8},(_,i)=>'ru-r'+String(i+41).padStart(2,'0')),
     ...Array.from({length:6},(_,i)=>'ru-r'+String(i+49).padStart(2,'0')),
     ...Array.from({length:6},(_,i)=>'ru-r'+String(i+55).padStart(2,'0')),
-    ...Array.from({length:14},(_,i)=>'ms-r'+String(i+1).padStart(2,'0'))
+    ...Array.from({length:22},(_,i)=>'ms-r'+String(i+1).padStart(2,'0'))
   ]);
   assert.equal(Object.values(api.READINGS).filter(item=>item.lang==='ru').length,60);
 });
@@ -3865,10 +3867,10 @@ function uzKnownWords(week) {
 test('U1：旧行位于乌兹别克语行之前；新 CSV 与内嵌行一致且 id 连续',()=>{
   const oldCount=['es','ru','ms'].reduce((n,lang)=>{
     const raw=fs.readFileSync(path.join(__dirname,'cards',lang+'.csv'),'utf8');
-    return n+(raw.trim()==='id,lang,lesson,front,back,example,example_zh,note,tags'?0:api.parseCSV(raw).length);
+    return n+(raw.trim()==='id,lang,lesson,front,back,example,example_zh,note,tags'?0:api.parseCSV(raw).filter(r=>r.lang!=='ms'||Number(r.lesson.slice(3))<=8).length);
   },0);
-  assert.deepEqual(initialRows.slice(0,oldCount),initialRows.filter(row=>!['uz','kk'].includes(row.lang)));
-  assert.deepEqual(initialRows.slice(oldCount,oldCount+uzRows.length),uzRows);
+  assert.deepEqual(preM3Rows.slice(0,oldCount),preM3Rows.filter(row=>!['uz','kk'].includes(row.lang)));
+  assert.deepEqual(preM3Rows.slice(oldCount,oldCount+uzRows.length),uzRows);
   assert.deepEqual(plain(api.parseCSV(fs.readFileSync(path.join(__dirname,'cards','uz.csv'),'utf8'))),uzRows);
   assert.deepEqual(uzRows.map(row=>row.id),Array.from({length:uzRows.length},(_,i)=>'uz-'+String(i+1).padStart(4,'0')));
   assert.equal(new Set(uzRows.map(row=>row.front.toLocaleLowerCase().replace(/[’']/g,'ʻ'))).size,uzRows.length);
@@ -3946,10 +3948,10 @@ const uzRound2Ids=Array.from({length:5},(_,i)=>'uz-'+String(i+6).padStart(2,'0')
 const uzRound2Rows=uzRows.filter(row=>uzRound2Ids.includes(row.lesson));
 test('U2：五课在旧行后追加，id 连续，CSV 同步且 front 唯一',()=>{
   const priorUzCount=uzRows.filter(row=>Number(row.lesson.slice(3))<6).length;
-  const priorCount=initialRows.findIndex(row=>row.lesson==='uz-06');
+  const priorCount=preM3Rows.findIndex(row=>row.lesson==='uz-06');
   const csvRows=plain(api.parseCSV(fs.readFileSync(path.join(__dirname,'cards','uz.csv'),'utf8')));
-  assert.deepEqual(initialRows.slice(0,priorCount),initialRows.filter(row=>row.lang!=='kk'&&!uzRound2Ids.includes(row.lesson)));
-  assert.deepEqual(initialRows.slice(priorCount,priorCount+uzRound2Rows.length),uzRound2Rows);
+  assert.deepEqual(preM3Rows.slice(0,priorCount),preM3Rows.filter(row=>row.lang!=='kk'&&!uzRound2Ids.includes(row.lesson)));
+  assert.deepEqual(preM3Rows.slice(priorCount,priorCount+uzRound2Rows.length),uzRound2Rows);
   assert.deepEqual(csvRows.slice(0,priorUzCount),uzRows.slice(0,priorUzCount),'旧 uz 行按原顺序逐条一致');
   assert.deepEqual(csvRows.slice(priorUzCount),uzRound2Rows);
   assert.deepEqual(uzRows.map(row=>row.id),Array.from({length:uzRows.length},(_,i)=>'uz-'+String(i+1).padStart(4,'0')));
@@ -4048,14 +4050,14 @@ function kkKnownWords(week) {
 test('K1：旧行保持前缀，五课 CSV 与内嵌 JSON 同步且 id 连续',()=>{
   const oldCsvRows=['es','ru','ms','uz'].map(lang=>{
     const raw=fs.readFileSync(path.join(__dirname,'cards',lang+'.csv'),'utf8');
-    return raw.trim()==='id,lang,lesson,front,back,example,example_zh,note,tags'?[]:plain(api.parseCSV(raw));
+    return raw.trim()==='id,lang,lesson,front,back,example,example_zh,note,tags'?[]:plain(api.parseCSV(raw)).filter(r=>r.lang!=='ms'||Number(r.lesson.slice(3))<=8);
   });
   const oldCount=oldCsvRows.reduce((n,part)=>n+part.length,0);
-  assert.equal(initialRows.length,oldCount+kkRows.length);
-  assert.deepEqual(initialRows.slice(0,oldCount),initialRows.filter(row=>row.lang!=='kk'));
+  assert.equal(preM3Rows.length,oldCount+kkRows.length);
+  assert.deepEqual(preM3Rows.slice(0,oldCount),preM3Rows.filter(row=>row.lang!=='kk'));
   for(const [i,lang] of ['es','ru','ms','uz'].entries())
-    assert.deepEqual(initialRows.slice(0,oldCount).filter(row=>row.lang===lang),oldCsvRows[i],lang+' 旧 CSV 行');
-  assert.deepEqual(initialRows.slice(oldCount),kkRows);
+    assert.deepEqual(preM3Rows.slice(0,oldCount).filter(row=>row.lang===lang),oldCsvRows[i],lang+' 旧 CSV 行');
+  assert.deepEqual(preM3Rows.slice(oldCount),kkRows);
   assert.deepEqual(plain(api.parseCSV(fs.readFileSync(path.join(__dirname,'cards/kk.csv'),'utf8'))),kkRows);
   assert.deepEqual(kkRows.map(row=>row.id),Array.from({length:kkRows.length},(_,i)=>'kk-'+String(i+1).padStart(4,'0')));
   assert.equal(new Set(kkRows.map(row=>row.front.toLocaleLowerCase().replace(/[’']/g,"'"))).size,kkRows.length);
@@ -4143,10 +4145,10 @@ const kkRound2Ids=Array.from({length:5},(_,i)=>'kk-'+String(i+6).padStart(2,'0')
 const kkRound2Rows=kkRows.filter(row=>kkRound2Ids.includes(row.lesson));
 test('K2：新行紧接旧行，id 连续，CSV 同步且 front 唯一',()=>{
   const previous=kkRows.filter(row=>Number(row.lesson.slice(3))<=5);
-  const first=initialRows.findIndex(row=>row.lesson==='kk-06');
+  const first=preM3Rows.findIndex(row=>row.lesson==='kk-06');
   const csvRows=plain(api.parseCSV(fs.readFileSync(path.join(__dirname,'cards/kk.csv'),'utf8')));
-  assert.equal(first,initialRows.length-kkRound2Rows.length);
-  assert.deepEqual(initialRows.slice(first),kkRound2Rows);
+  assert.equal(first,preM3Rows.length-kkRound2Rows.length);
+  assert.deepEqual(preM3Rows.slice(first),kkRound2Rows);
   assert.deepEqual(csvRows.slice(0,previous.length),previous,'前五课旧行逐条保持原文');
   assert.deepEqual(csvRows.slice(previous.length),kkRound2Rows);
   assert.equal(kkRound2Rows[0].id,'kk-'+String(previous.length+1).padStart(4,'0'));
@@ -4283,7 +4285,7 @@ function msBerForm(root) {
 }
 // 词根的读音不能仅凭元音字母组数量可靠判断；这里只列已核对的单音节词根。
 // 这是构词例外与音节信息，不是阅读词汇白名单；词根仍须来自截至该课的 front。
-const MS_MONOSYLLABLES=new Set(['cat','bom','pam','lap','pos','cap','cam','cas']);
+const MS_MONOSYLLABLES=new Set(['cat','bom','pam','lap','pos','cap','cam','cas','sah']);
 function msMenRule(root) {
   if(MS_MONOSYLLABLES.has(root)) return {prefix:'menge-',keep:true};
   if(root==='kaji') return {prefix:'meng-',keep:true,exception:true};
@@ -4302,17 +4304,44 @@ function msMenForm(root) {
   const rule=msMenRule(root);
   return rule ? rule.prefix.slice(0,-1)+(rule.keep?root:root.slice(1)) : null;
 }
-const MS_AFFIX_STAGES=[
-  {from:5,prefix:true,derive:root=>[msBerForm(root)]},
-  {from:6,prefix:true,derive:root=>[msMenForm(root)].filter(Boolean)}
-];
 function msForms(front,lessonIndex) {
   const forms=new Set(msWords(front).map(word=>word.toLowerCase()));
+  // A learned active front supplies its stem spelling through its own morphology note.
+  // This is not a vocabulary snapshot: notes never add unrelated lexical items.
+  const row=initialRows.find(r=>r.lang==='ms'&&r.front.toLowerCase()===front.toLowerCase()&&Number(r.lesson.slice(3))<=lessonIndex);
+  const active=row?.note.match(/^meN- \+ ([a-z]+)(?: \+ -(kan|i))? →/);
+  const passive=row?.note.match(/^di- \+ ([a-z]+)(?: \+ -(kan|i))?/);
+  const suffixed=active?.[2]||passive?.[2];
+  const lexicalException=row?.note.includes('特殊形式');
   const roots=[...forms];
-  for(const stage of MS_AFFIX_STAGES) {
-    if(lessonIndex>=stage.from) for(const word of (stage.prefix?roots:[...forms])) for(const derived of stage.derive(word)) forms.add(derived);
+  const regularMen=root=>msMenRule(root)?.exception?null:msMenForm(root);
+  for(const root of roots) {
+    // Retain M1/M2 prefix rules; already suffixed entries are whole words, not new roots.
+    if(active||passive||suffixed||lexicalException) continue;
+    if(lessonIndex>=5) forms.add(msBerForm(root));
+    const prefixed=lessonIndex>=6?regularMen(root):null;
+    if(prefixed) forms.add(prefixed);
+    const suffixes=['',...(lessonIndex>=9?['kan']:[]),...(lessonIndex>=10?['i']:[])];
+    for(const suffix of suffixes) {
+      if(suffix) {forms.add(root+suffix);if(prefixed) forms.add(prefixed+suffix);}
+      if(lessonIndex>=11) forms.add('di'+root+suffix);
+      if(lessonIndex>=12) forms.add((root.startsWith('r')?'te':'ter')+root+suffix);
+    }
   }
-  // 先重叠，再接后附形式，允许 buku-bukunya；不生成 bukunya-bukunya。
+  if(active&&!lexicalException&&!msMenRule(active[1])?.exception) {
+    const [,root,originalSuffix='']=active;
+    const suffixes=new Set([originalSuffix,...(lessonIndex>=9?['kan']:[]),...(lessonIndex>=10?['i']:[])]);
+    for(const suffix of suffixes) {
+      const prefixed=regularMen(root);
+      if(prefixed) forms.add(prefixed+suffix);
+      // Imperatives with -kan/-i omit meN-; passive II also permits the bare stem from week 12.
+      if(suffix||lessonIndex>=12) forms.add(root+suffix);
+      if(lessonIndex>=11) forms.add('di'+root+suffix);
+      if(lessonIndex>=12) forms.add((root.startsWith('r')?'te':'ter')+root+suffix);
+    }
+  }
+  if(passive&&lessonIndex>=12) forms.add(passive[1]+(passive[2]||''));
+  // Reduplication precedes enclitics: buku-bukunya, never bukunya-bukunya.
   if(lessonIndex>=3) for(const word of [...forms]) if(!word.includes('-')) forms.add(word+'-'+word);
   if(lessonIndex>=2) for(const word of [...forms]) for(const suffix of ['nya','ku','mu']) forms.add(word+suffix);
   return forms;
@@ -4599,11 +4628,11 @@ test('任务 M2：每课 80 条、共 320 条，id 连续，CSV 同步且全 ms 
   const csv=plain(api.parseCSV(fs.readFileSync(path.join(__dirname,'cards/ms.csv'),'utf8')));
   assert.deepEqual(csv,initialRows.filter(r=>r.lang==='ms'));
   assert.equal(ms2Rows.length,320);
-  assert.deepEqual(csv.map(r=>r.id),Array.from({length:640},(_,i)=>'ms-'+String(i+1).padStart(4,'0')));
+  assert.deepEqual(csv.slice(0,640).map(r=>r.id),Array.from({length:640},(_,i)=>'ms-'+String(i+1).padStart(4,'0')));
   assert.deepEqual(ms2Rows.map(r=>r.id),Array.from({length:320},(_,i)=>'ms-'+String(i+321).padStart(4,'0')));
   assert.equal(new Set(csv.map(r=>r.front.toLowerCase())).size,csv.length);
   for(const id of M2_LESSONS) assert.equal(ms2Rows.filter(r=>r.lesson===id).length,80,id);
-  assert.deepEqual(initialRows.filter(row=>row.lang==='ms').slice(-320),ms2Rows);
+  assert.deepEqual(initialRows.filter(row=>row.lang==='ms').slice(320,640),ms2Rows);
 });
 test('任务 M2：分类配额及六种 meN- 变形覆盖完整，重复旧词以同类新词补足',()=>{
   const base=id=>ms2Rows.filter(r=>r.lesson===id);
@@ -4697,9 +4726,10 @@ test('任务 M2：四篇课内阅读各 80–120 词、10–14 句，中文与�
 });
 test('任务 M2：八篇阅读连续追加，afterLesson、周次、体裁与精确篇幅符合任务书',()=>{
   const ids=Object.keys(api.READINGS);
-  assert.deepEqual(ids.slice(-8),M2_READINGS);
-  assert.equal(ids[ids.length-9],'ms-r06');
-  assert.deepEqual(Object.values(api.READINGS).filter(r=>r.lang==='ms').map(r=>r.id),
+  const start=ids.indexOf('ms-r07');
+  assert.deepEqual(ids.slice(start,start+8),M2_READINGS);
+  assert.equal(ids[start-1],'ms-r06');
+  assert.deepEqual(Object.values(api.READINGS).filter(r=>r.lang==='ms').slice(0,14).map(r=>r.id),
     Array.from({length:14},(_,i)=>'ms-r'+String(i+1).padStart(2,'0')));
   const ranges=[[80,95,10,12],[80,95,10,12],[90,105,11,13],[85,100,10,12],[95,110,11,13],[95,115,12,14],[100,120,12,14],[100,120,11,13]];
   const genres=['日记','人物介绍','短故事','菜谱或日程','房间或城市描写','对话','邮件','通知或广告'];
@@ -4750,7 +4780,7 @@ test('任务 M2：ber-、meN- 按周开放，五类变形、单音节和保留�
     ['cari','mencari'],['dengar','mendengar'],['jual','menjual'],['syampu','mensyampu'],['ziarah','menziarah'],['tulis','menulis'],['tunggu','menunggu'],
     ['ambil','mengambil'],['gali','menggali'],['ghaib','mengghaib'],['khusus','mengkhusus'],['hantar','menghantar'],['kira','mengira'],
     ['sapu','menyapu'],['sewa','menyewa'],['cat','mengecat'],['bom','mengebom'],['lap','mengelap'],['pam','mengepam'],
-    ['proses','memproses'],['kritik','mengkritik'],['struktur','menstruktur'],['tadbir','mentadbir'],['kaji','mengkaji']
+    ['proses','memproses'],['kritik','mengkritik'],['struktur','menstruktur']
   ]) {
     assert(!msForms(root,5).has(form),root+' 提前开放');
     assert(msForms(root,6).has(form),root+' → '+form);
@@ -4769,7 +4799,7 @@ test('任务 M2：meN- 动词 front 与 note 的词根、变形和首字母保�
     const [,root,front]=m,rule=msMenRule(root);
     assert.equal(front,row.front,row.id+' note 与 front');
     assert.equal(msMenForm(root),row.front,row.id+' 变形');
-    assert(msForms(root,Number(row.lesson.slice(3))).has(row.front),row.id+' msForms 反查');
+    assert((rule.exception?msVocabulary(row.lesson):msForms(root,Number(row.lesson.slice(3)))).has(row.front),row.id+' msForms 反查');
     assert(row.note.includes(rule.prefix),row.id+' 变体说明');
     if(!rule.keep) assert(row.note.includes(root[0]+' 脱落'),row.id+' 脱落说明');
     if(rule.keep) assert(row.note.includes('保留'),row.id+' 保留说明');
@@ -4840,8 +4870,8 @@ test('任务 M2：只追加，旧 ms、es、ru 行按 id 顺序原样保留',()=
     assert.deepEqual(oldRows.filter(r=>r.lang===lang),oldCSV,lang+' 旧行逐字段及顺序');
     for(const row of oldCSV) assert.equal(rawById.get(row.id),JSON.stringify([row],null,2).slice(2,-2),row.id+' 原始行格式');
   }
-  assert.deepEqual(Object.keys(api.LESSONS).filter(id=>id.startsWith('ms-')).slice(-4),M2_LESSONS);
-  assert.deepEqual(Object.keys(api.READINGS).filter(id=>id.startsWith('ms-')).slice(-8),M2_READINGS);
+  assert.deepEqual(Object.keys(api.LESSONS).filter(id=>id.startsWith('ms-')).slice(4,8),M2_LESSONS);
+  assert.deepEqual(Object.keys(api.READINGS).filter(id=>id.startsWith('ms-')).slice(6,14),M2_READINGS);
 });
 test('任务 M2：渲染四课八篇、页内练习与中文开关不改变真实进度',()=>{
   const {api:a,document,cache}=createAPI(true,html);a.initialize();
@@ -4873,4 +4903,285 @@ test('任务 M2：渲染四课八篇、页内练习与中文开关不改变真�
   assert.deepEqual(plain(a.getData().rows),beforeRows);
   assert.equal(a.getData().dirty,dirty);
   assert.deepEqual([...cache.entries()],cacheBefore);
+});
+
+// M3 baseline: retain the literal old rows, without hashes or byte offsets.
+const M3_OLD_MS_CSV=M2_OLD_MS_CSV+"ms-0321,ms,ms-05,berjalan,走路,Saya berjalan ke sekolah setiap hari.,我每天走路去学校。,ber- + jalan → berjalan；词根 jalan；ber- 常规形式；不及物,动词;日常活动\nms-0322,ms,ms-05,berlari,跑步,Ali berlari di padang pada waktu pagi.,阿里早晨在运动场跑步。,ber- + lari → berlari；词根 lari；ber- 常规形式；不及物,动词;日常活动\nms-0323,ms,ms-05,bermain,玩；参加运动,Adik bermain bola dengan kawan.,弟弟和朋友玩球。,ber- + main → bermain；词根 main；ber- 常规形式；不及物,动词;日常活动\nms-0324,ms,ms-05,bercakap,说话,Kami bercakap dalam bahasa Melayu.,我们用马来语说话。,ber- + cakap → bercakap；词根 cakap；ber- 常规形式；不及物,动词;日常活动\nms-0325,ms,ms-05,berbual,聊天,Ibu berbual dengan kakak di rumah.,母亲和姐姐在家聊天。,ber- + bual → berbual；词根 bual；ber- 常规形式；不及物,动词;日常活动\nms-0326,ms,ms-05,berkata,说,\"Ali berkata, \"\"Saya sudah siap.\"\"\",阿里说：“我已经准备好了。”,ber- + kata → berkata；词根 kata；ber- 常规形式；不及物,动词;日常活动\nms-0327,ms,ms-05,berdiri,站立,Guru berdiri di depan kelas.,老师站在班级前面。,ber- + diri → berdiri；词根 diri；ber- 常规形式；不及物,动词;日常活动\nms-0328,ms,ms-05,berhenti,停下,Bas itu berhenti di depan sekolah.,那辆巴士在学校前停下。,ber- + henti → berhenti；词根 henti；ber- 常规形式；不及物,动词;日常活动\nms-0329,ms,ms-05,bertemu,见面,Saya bertemu dengan Siti pada hari Ahad.,我星期日和西蒂见面。,ber- + temu → bertemu；词根 temu；ber- 常规形式；不及物,动词;日常活动\nms-0330,ms,ms-05,berenang,游泳,Kami berenang di kolam pada petang Sabtu.,我们星期六下午在泳池游泳。,ber- + renang → berenang；词根 renang；be- 变体；不及物,动词;日常活动\nms-0331,ms,ms-05,berbaju,穿着上衣,Ali berbaju biru hari ini.,阿里今天穿着蓝色上衣。,ber- + baju → berbaju；词根 baju；ber- 常规形式；不及物,动词;日常活动\nms-0332,ms,ms-05,berkereta,有汽车；乘汽车,Kami berkereta ke Melaka pada hari Ahad.,我们星期日乘汽车去马六甲。,ber- + kereta → berkereta；词根 kereta；ber- 常规形式；不及物,动词;日常活动\nms-0333,ms,ms-05,berehat,休息,Bapa berehat di rumah pada waktu malam.,父亲晚上在家休息。,ber- + rehat → berehat；词根 rehat；be- 变体；不及物,动词;日常活动\nms-0334,ms,ms-05,berbasikal,骑自行车,Saya berbasikal dengan abang setiap petang.,我每天下午和哥哥骑自行车。,ber- + basikal → berbasikal；词根 basikal；ber- 常规形式；不及物,动词;日常活动\nms-0335,ms,ms-05,bersukan,从事体育运动,Kami bersukan di sekolah pada hari Jumaat.,我们星期五在学校运动。,ber- + sukan → bersukan；词根 sukan；ber- 常规形式；不及物,动词;日常活动\nms-0336,ms,ms-05,bersenam,做体操；锻炼,Ibu bersenam selama dua puluh minit.,母亲锻炼二十分钟。,ber- + senam → bersenam；词根 senam；ber- 常规形式；不及物,动词;日常活动\nms-0337,ms,ms-05,berlatih,练习,Mereka berlatih badminton pada waktu petang.,他们下午练习羽毛球。,ber- + latih → berlatih；词根 latih；ber- 常规形式；不及物,动词;日常活动\nms-0338,ms,ms-05,berkebun,做园艺；种菜,Bapa berkebun di belakang rumah.,父亲在屋后种菜。,ber- + kebun → berkebun；词根 kebun；ber- 常规形式；不及物,动词;日常活动\nms-0339,ms,ms-05,berdoa,祈祷,Keluarga itu berdoa di rumah.,那家人在家祈祷。,ber- + doa → berdoa；词根 doa；ber- 常规形式；不及物,动词;日常活动\nms-0340,ms,ms-05,berjumpa,见到；碰面,Saya berjumpa dengan guru selepas kelas.,我课后与老师见面。,ber- + jumpa → berjumpa；词根 jumpa；ber- 常规形式；不及物,动词;日常活动\nms-0341,ms,ms-05,bertanya,询问,Pelajar bertanya kepada guru tentang buku itu.,学生向老师询问那本书。,ber- + tanya → bertanya；词根 tanya；ber- 常规形式；不及物,动词;日常活动\nms-0342,ms,ms-05,bercuti,休假,Kami bercuti di Pulau Pinang minggu ini.,我们这周在槟城度假。,ber- + cuti → bercuti；词根 cuti；ber- 常规形式；不及物,动词;日常活动\nms-0343,ms,ms-05,berkumpul,集合；聚集,Para pelajar berkumpul di padang sekolah.,学生们在学校运动场集合。,ber- + kumpul → berkumpul；词根 kumpul；ber- 常规形式；不及物,动词;日常活动\nms-0344,ms,ms-05,berpayung,撑伞,Siti berpayung kerana hujan.,西蒂因为下雨而撑伞。,ber- + payung → berpayung；词根 payung；ber- 常规形式；不及物,动词;日常活动\nms-0345,ms,ms-05,berkasut,穿着鞋,Abang berkasut hitam ke sekolah.,哥哥穿着黑鞋去学校。,ber- + kasut → berkasut；词根 kasut；ber- 常规形式；不及物,动词;日常活动\nms-0346,ms,ms-05,selalu,经常,Saya selalu berjalan ke sekolah.,我经常走路去学校。,频率副词，放在动作前,副词;时间\nms-0347,ms,ms-05,sentiasa,始终；总是,Ibu sentiasa bangun pada pukul enam.,母亲总是六点起床。,表示持续或一贯,副词;时间\nms-0348,ms,ms-05,biasanya,通常,Kami biasanya bersukan pada hari Sabtu.,我们通常星期六运动。,表示一般习惯,副词;时间\nms-0349,ms,ms-05,kadang-kadang,有时,Saya kadang-kadang berkereta ke pejabat.,我有时乘汽车去办公室。,频率副词，连字符不可省,副词;时间\nms-0350,ms,ms-05,jarang,很少,Bapa jarang bercuti pada bulan Disember.,父亲很少在十二月休假。,频率低，不等于从不,副词;时间\nms-0351,ms,ms-05,tidak pernah,从未,Saya tidak pernah berenang di kolam itu.,我从未在那个泳池游泳。,否定词与体貌标记组合,副词;时间\nms-0352,ms,ms-05,setiap hari,每天,Ali belajar bahasa Melayu setiap hari.,阿里每天学马来语。,固定时间短语，setiap 后用单数名词,副词;时间\nms-0353,ms,ms-05,sering,时常,Kami sering berbual pada waktu rehat.,我们时常在休息时间聊天。,频率副词,副词;时间\nms-0354,ms,ms-05,sukan,体育运动,Saya suka sukan di sekolah.,我喜欢学校的体育运动。,量词 种类用 jenis,名词;活动与运动\nms-0355,ms,ms-05,bola,球,Adik ada dua biji bola.,弟弟有两个球。,量词 biji,名词;活动与运动\nms-0356,ms,ms-05,bola sepak,足球运动,Abang bermain bola sepak pada hari Ahad.,哥哥星期日踢足球。,量词 比赛场次用 perlawanan,名词;活动与运动\nms-0357,ms,ms-05,badminton,羽毛球运动,Kami bermain badminton setiap petang.,我们每天下午打羽毛球。,量词 比赛场次用 perlawanan,名词;活动与运动;英语借词\nms-0358,ms,ms-05,tenis,网球运动,Siti bermain tenis dengan Ali.,西蒂和阿里打网球。,量词 比赛场次用 perlawanan,名词;活动与运动;英语借词\nms-0359,ms,ms-05,pingpong,乒乓球运动,Kami bermain pingpong di sekolah.,我们在学校打乒乓球。,量词 比赛场次用 perlawanan,名词;活动与运动;英语借词\nms-0360,ms,ms-05,hoki,曲棍球运动,Kakak bermain hoki pada hari Sabtu.,姐姐星期六打曲棍球。,量词 比赛场次用 perlawanan,名词;活动与运动;英语借词\nms-0361,ms,ms-05,golf,高尔夫球运动,Bapa jarang bermain golf.,父亲很少打高尔夫球。,量词 比赛场次用 perlawanan,名词;活动与运动;英语借词\nms-0362,ms,ms-05,yoga,瑜伽,Ibu belajar yoga di rumah.,母亲在家学瑜伽。,量词 通常不用量词,名词;活动与运动;梵语借词\nms-0363,ms,ms-05,senaman,锻炼；体操,Senaman ini baik untuk saya.,这种锻炼对我有益。,量词 套用 set,名词;活动与运动\nms-0364,ms,ms-05,latihan,练习；训练,Latihan badminton kami pada pukul lima.,我们的羽毛球训练在五点。,通常不用专用量词，可写 satu latihan（一项练习）,名词;活动与运动\nms-0365,ms,ms-05,padang,运动场；草地,Padang sekolah itu besar.,那所学校的运动场很大。,量词 buah,名词;活动与运动\nms-0366,ms,ms-05,kolam,池；泳池,Kami berenang di kolam besar itu.,我们在那个大泳池游泳。,量词 buah,名词;活动与运动\nms-0367,ms,ms-05,kelab,俱乐部,Kelab sukan itu ada dua puluh orang pelajar.,那个体育俱乐部有二十名学生。,量词 buah,名词;活动与运动;英语借词\nms-0368,ms,ms-05,hobi,爱好,Hobi saya ialah berkebun.,我的爱好是园艺。,量词 通常不用量词,名词;活动与运动;英语借词\nms-0369,ms,ms-05,tangan,手,Tangan saya kecil.,我的手很小。,量词 只用 belah，双手用 pasang,名词;身体与衣物\nms-0370,ms,ms-05,kaki,脚；腿,Kaki Ali panjang.,阿里的腿很长。,量词 只用 belah，双脚用 pasang,名词;身体与衣物\nms-0371,ms,ms-05,kepala,头,Kepala kucing itu kecil.,那只猫的头很小。,一般不另用量词，按所属的人或动物计数,名词;身体与衣物\nms-0372,ms,ms-05,mata,眼睛,Mata adik besar.,弟弟的眼睛很大。,量词 只用 belah，双眼用 pasang,名词;身体与衣物\nms-0373,ms,ms-05,baju,上衣,Saya ada tiga helai baju biru.,我有三件蓝色上衣。,量词 helai,名词;身体与衣物\nms-0374,ms,ms-05,seluar,裤子,Seluar abang panjang.,哥哥的裤子很长。,量词 helai,名词;身体与衣物\nms-0375,ms,ms-05,kemeja,衬衫,Kemeja bapa baru.,父亲的衬衫是新的。,量词 helai,名词;身体与衣物;葡语借词\nms-0376,ms,ms-05,stoking,袜子,Saya ada dua pasang stoking.,我有两双袜子。,量词 pasang,名词;身体与衣物;英语借词\nms-0377,ms,ms-05,topi,帽子,Topi Siti biru.,西蒂的帽子是蓝色的。,量词 顶用 buah,名词;身体与衣物\nms-0378,ms,ms-05,tudung,头巾,Tudung Aminah cantik.,阿米娜的头巾很漂亮。,量词 helai,名词;身体与衣物\nms-0379,ms,ms-05,Saya berjalan setiap pagi.,我每天早晨走路。,Saya berjalan setiap pagi.,我每天早晨走路。,ber- + jalan；不及物；时间短语在句尾,动词;日常活动;phrase\nms-0380,ms,ms-05,Kami biasanya bersenam bersama.,我们通常一起锻炼。,Kami biasanya bersenam bersama.,我们通常一起锻炼。,ber- + senam；不及物；频率词在动作前,动词;日常活动;phrase\nms-0381,ms,ms-05,Saya tidak pernah bermain golf.,我从未打过高尔夫球。,Saya tidak pernah bermain golf.,我从未打过高尔夫球。,ber- + main；不及物；golf 是活动补语,动词;日常活动;phrase\nms-0382,ms,ms-05,Ali sedang berehat di rumah.,阿里正在家休息。,Ali sedang berehat di rumah.,阿里正在家休息。,ber- + rehat；be- 变体；不及物,动词;日常活动;phrase\nms-0383,ms,ms-05,Kita bertemu selepas kelas.,我们课后见面。,Kita bertemu selepas kelas.,我们课后见面。,ber- + temu；不及物,动词;日常活动;phrase\nms-0384,ms,ms-05,kereta,汽车,Kereta bapa besar.,父亲的汽车很大。,量词 buah,名词;日常活动;补充\nms-0385,ms,ms-05,basikal,自行车,Basikal saya baru.,我的自行车是新的。,量词 buah,名词;日常活动;补充\nms-0386,ms,ms-05,payung,伞,Payung ini untuk Siti.,这把伞给西蒂。,量词 把用 kaki,名词;日常活动;补充\nms-0387,ms,ms-05,hujan,雨,Hari ini hujan.,今天下雨。,通常不用量词；hujan 也可直接表示下雨,名词;日常活动;补充\nms-0388,ms,ms-05,gim,健身房,Gim itu di sebelah sekolah.,那间健身房在学校旁边。,量词 buah,名词;日常活动;英语借词;补充\nms-0389,ms,ms-05,selepas,在……之后,Saya berehat selepas senaman.,我锻炼后休息。,后接时间或活动，表示先后,介词;日常活动;补充\nms-0390,ms,ms-05,sebelum,在……之前,Kami mandi sebelum makan.,我们吃饭前洗澡。,后接时间或活动,介词;日常活动;补充\nms-0391,ms,ms-05,selama,持续……时间,Ali berenang selama setengah jam.,阿里游泳半小时。,后接时长,介词;日常活动;补充\nms-0392,ms,ms-05,kepada,向；对某人,Siti bertanya kepada guru.,西蒂向老师提问。,引出动作所指向的人,介词;日常活动;补充\nms-0393,ms,ms-05,tentang,关于,Kami berbual tentang sukan.,我们谈论体育。,引出话题,介词;日常活动;补充\nms-0394,ms,ms-05,bersama,一起,Kami berjalan bersama ke sekolah.,我们一起走路去学校。,ber- + sama；词根 sama；本课作副词,副词;日常活动;补充\nms-0395,ms,ms-05,letih,疲倦的,Saya letih selepas bersukan.,我运动后很累。,形容词，后置,形容词;日常活动;补充\nms-0396,ms,ms-05,sihat,健康的,Keluarga kami sihat.,我们一家人都健康。,形容词，后置,形容词;日常活动;阿拉伯语借词;补充\nms-0397,ms,ms-05,biru,蓝色的,Baju biru itu baju saya.,那件蓝色上衣是我的上衣。,形容词，后置,形容词;日常活动;补充\nms-0398,ms,ms-05,hitam,黑色的,Kasut hitam itu baru.,那双黑鞋是新的。,形容词，后置,形容词;日常活动;补充\nms-0399,ms,ms-05,merah,红色的,Bola merah itu untuk adik.,那个红球给弟弟。,形容词，后置,形容词;日常活动;补充\nms-0400,ms,ms-05,putih,白色的,Kemeja putih itu baru.,那件白衬衫是新的。,形容词，后置,形容词;日常活动;补充\nms-0401,ms,ms-06,melihat,看见,Saya melihat Siti di sekolah.,我在学校看见西蒂。,meN- + lihat → melihat，me-；l 保留；词根 lihat；及物；常见宾语 buku、kawan,动词;学习与工作\nms-0402,ms,ms-06,memasak,烹煮,Ibu memasak nasi di dapur.,母亲在厨房煮饭。,meN- + masak → memasak，me-；m 保留；词根 masak；及物；常见宾语 nasi、sayur,动词;学习与工作\nms-0403,ms,ms-06,menanti,等候,Kami menanti bas di depan sekolah.,我们在学校前等巴士。,meN- + nanti → menanti，me-；n 保留；词根 nanti；及物；常见宾语 bas、kawan,动词;学习与工作\nms-0404,ms,ms-06,merasa,品尝,Bapa merasa kopi itu.,父亲尝了尝那杯咖啡。,meN- + rasa → merasa，me-；r 保留；词根 rasa；及物；常见宾语 sup、kopi,动词;学习与工作\nms-0405,ms,ms-06,menyanyi,唱歌,Adik menyanyi di dalam bilik.,弟弟在房间里唱歌。,meN- + nyanyi → menyanyi，me-；ny 保留，不是 s 脱落；词根 nyanyi；不及物，不直接带宾语,动词;学习与工作\nms-0406,ms,ms-06,membaca,阅读,Siti membaca surat Ali.,西蒂读阿里的信。,meN- + baca → membaca，mem-；b 保留；词根 baca；及物；常见宾语 buku、surat,动词;学习与工作\nms-0407,ms,ms-06,membeli,购买,Kami membeli beras di kedai.,我们在商店买米。,meN- + beli → membeli，mem-；b 保留；词根 beli；及物；常见宾语 beras、baju,动词;学习与工作\nms-0408,ms,ms-06,memakai,穿戴；使用,Ali memakai baju putih ke sekolah.,阿里穿白色上衣去学校。,meN- + pakai → memakai，mem-；p 脱落；词根 pakai；及物；常见宾语 baju、kasut,动词;学习与工作\nms-0409,ms,ms-06,memukul,敲打；击打,Siti memukul bola itu.,西蒂击打那个球。,meN- + pukul → memukul，mem-；p 脱落；词根 pukul；及物；常见宾语 bola、gendang,动词;学习与工作\nms-0410,ms,ms-06,memproses,处理,Kerani memproses borang itu.,办事员处理那张表格。,meN- + proses → memproses，mem-；pr 辅音簇保留；词根 proses；及物；常见宾语 borang、data,动词;学习与工作\nms-0411,ms,ms-06,membawa,携带,Saya membawa beg ke sekolah.,我带着书包去学校。,meN- + bawa → membawa，mem-；b 保留；词根 bawa；及物；常见宾语 beg、buku,动词;学习与工作\nms-0412,ms,ms-06,mencari,寻找,Ali mencari pen di dalam beg.,阿里在包里找笔。,meN- + cari → mencari，men-；c 保留；词根 cari；及物；常见宾语 buku、pen,动词;学习与工作\nms-0413,ms,ms-06,mendengar,听；听见,Kami mendengar berita di radio.,我们听广播里的新闻。,meN- + dengar → mendengar，men-；d 保留；词根 dengar；及物；常见宾语 muzik、berita,动词;学习与工作\nms-0414,ms,ms-06,menjual,售卖,Kedai itu menjual sayur dan roti.,那家店卖蔬菜和面包。,meN- + jual → menjual，men-；j 保留；词根 jual；及物；常见宾语 sayur、roti,动词;学习与工作\nms-0415,ms,ms-06,menulis,书写,Saya menulis surat kepada Siti.,我给西蒂写信。,meN- + tulis → menulis，men-；t 脱落；词根 tulis；及物；常见宾语 surat、nota,动词;学习与工作\nms-0416,ms,ms-06,menunggu,等候,Mei Ling menunggu Raju di sekolah.,美玲在学校等拉朱。,meN- + tunggu → menunggu，men-；t 脱落；词根 tunggu；及物；常见宾语 bas、kawan,动词;学习与工作\nms-0417,ms,ms-06,mentadbir,管理,Beliau mentadbir sekolah itu.,他管理那所学校。,meN- + tadbir → mentadbir，men-；借词 t 保留，不是词首辅音簇；词根 tadbir；及物；常见宾语 sekolah、pejabat,动词;学习与工作\nms-0418,ms,ms-06,mencuci,洗,Adik mencuci tangan dengan sabun.,弟弟用肥皂洗手。,meN- + cuci → mencuci，men-；c 保留；词根 cuci；及物；常见宾语 tangan、baju,动词;学习与工作\nms-0419,ms,ms-06,menjawab,回答,Guru menjawab soalan saya.,老师回答我的问题。,meN- + jawab → menjawab，men-；j 保留；词根 jawab；及物；常见宾语 soalan、surat,动词;学习与工作\nms-0420,ms,ms-06,mengambil,拿取,Saya mengambil buku di atas meja.,我拿桌上的书。,meN- + ambil → mengambil，meng-；元音 a 保留；词根 ambil；及物；常见宾语 buku、air,动词;学习与工作\nms-0421,ms,ms-06,mengajar,教,Siti mengajar bahasa Melayu di sekolah.,西蒂在学校教马来语。,meN- + ajar → mengajar，meng-；元音 a 保留；词根 ajar；及物；常见宾语 bahasa、pelajar,动词;学习与工作\nms-0422,ms,ms-06,menghantar,送；寄送,Ali menghantar surat kepada Mei Ling.,阿里给美玲寄信。,meN- + hantar → menghantar，meng-；h 保留；词根 hantar；及物；常见宾语 surat、anak,动词;学习与工作\nms-0423,ms,ms-06,mengira,计算；数,Kerani mengira wang di pejabat.,办事员在办公室数钱。,meN- + kira → mengira，meng-；k 脱落；词根 kira；及物；常见宾语 wang、buku,动词;学习与工作\nms-0424,ms,ms-06,mengirim,寄送,Saya mengirim e-mel kepada guru.,我给老师发电子邮件。,meN- + kirim → mengirim，meng-；k 脱落；词根 kirim；及物；常见宾语 surat、e-mel,动词;学习与工作\nms-0425,ms,ms-06,mengkaji,研究,Mereka mengkaji bahasa Melayu di universiti.,他们在大学研究马来语。,meN- + kaji → mengkaji，meng-；k 保留，词汇例外；词根 kaji；及物；常见宾语 bahasa、resipi,动词;学习与工作\nms-0426,ms,ms-06,menggali,挖掘,Bapa menggali lubang di belakang rumah.,父亲在屋后挖洞。,meN- + gali → menggali，meng-；g 保留；词根 gali；及物；常见宾语 lubang、tanah,动词;学习与工作\nms-0427,ms,ms-06,mengukur,测量,Kakak mengukur kain itu.,姐姐测量那块布。,meN- + ukur → mengukur，meng-；元音 u 保留；词根 ukur；及物；常见宾语 meja、kain,动词;学习与工作\nms-0428,ms,ms-06,menyapu,扫,Ali menyapu lantai rumah.,阿里扫家里的地板。,meN- + sapu → menyapu，meny-；s 脱落；词根 sapu；及物；常见宾语 lantai、bilik,动词;学习与工作\nms-0429,ms,ms-06,menyewa,租用,Kami menyewa basikal di Melaka.,我们在马六甲租自行车。,meN- + sewa → menyewa，meny-；s 脱落；词根 sewa；及物；常见宾语 rumah、basikal,动词;学习与工作\nms-0430,ms,ms-06,menyimpan,保存；收好,Ibu menyimpan wang di bank.,母亲把钱存进银行。,meN- + simpan → menyimpan，meny-；s 脱落；词根 simpan；及物；常见宾语 wang、buku,动词;学习与工作\nms-0431,ms,ms-06,menyusun,排列；整理,Saya menyusun buku di atas meja.,我整理桌上的书。,meN- + susun → menyusun，meny-；s 脱落；词根 susun；及物；常见宾语 buku、kerusi,动词;学习与工作\nms-0432,ms,ms-06,mengecat,涂漆,Bapa mengecat pintu dengan berus.,父亲用刷子给门涂漆。,meN- + cat → mengecat，menge-；单音节词根完整保留；词根 cat；及物；常见宾语 dinding、pintu,动词;学习与工作\nms-0433,ms,ms-06,mengepam,打气；抽水,Ali mengepam tayar basikal.,阿里给自行车轮胎打气。,meN- + pam → mengepam，menge-；单音节词根完整保留；词根 pam；及物；常见宾语 tayar、air,动词;学习与工作\nms-0434,ms,ms-06,mengelap,擦拭,Siti mengelap meja dengan kain.,西蒂用布擦桌子。,meN- + lap → mengelap，menge-；单音节词根完整保留；词根 lap；及物；常见宾语 meja、tingkap,动词;学习与工作\nms-0435,ms,ms-06,mengepos,邮寄,Kakak mengepos surat pada hari Isnin.,姐姐星期一寄信。,meN- + pos → mengepos，menge-；单音节词根完整保留；词根 pos；及物；常见宾语 surat、borang,动词;学习与工作\nms-0436,ms,ms-06,surat,信,Surat ini daripada Ali.,这封信来自阿里。,量词 封用 pucuk,名词;学习与工作\nms-0437,ms,ms-06,sampul,信封,Saya menyimpan surat di dalam sampul.,我把信收在信封里。,量词 个用 keping,名词;学习与工作\nms-0438,ms,ms-06,borang,表格,Siti membaca borang itu.,西蒂读那张表格。,量词 张用 helai,名词;学习与工作\nms-0439,ms,ms-06,berus,刷子,Bapa membawa berus ke rumah.,父亲把刷子带回家。,量词 把用 batang,名词;学习与工作\nms-0440,ms,ms-06,cat,油漆,Cat ini merah.,这种油漆是红色的。,量词 罐用 tin,名词;学习与工作;闽南语借词\nms-0441,ms,ms-06,pam,泵；打气筒,Pam basikal itu kecil.,那个自行车打气筒很小。,量词 buah,名词;学习与工作;英语借词\nms-0442,ms,ms-06,tayar,轮胎,Tayar kereta itu baru.,那辆汽车的轮胎是新的。,量词 个用 biji,名词;学习与工作;英语借词\nms-0443,ms,ms-06,baldi,桶,Saya membawa baldi ke dapur.,我把桶拿到厨房。,量词 buah,名词;学习与工作;葡语借词\nms-0444,ms,ms-06,kain,布,Ibu membeli kain biru.,母亲买蓝布。,量词 片用 helai,名词;学习与工作\nms-0445,ms,ms-06,sabun,肥皂,Sabun ini untuk mencuci tangan.,这块肥皂用来洗手。,量词 块用 buku,名词;学习与工作\nms-0446,ms,ms-06,ubat,药,Ibu membeli ubat di klinik.,母亲在诊所买药。,量词 片用 biji，液体用 botol,名词;学习与工作\nms-0447,ms,ms-06,wang,钱,Wang saya ada di dalam beg.,我的钱在包里。,量词 金额用 ringgit,名词;学习与工作\nms-0448,ms,ms-06,cerita,故事,Cerita Ali sangat panjang.,阿里的故事很长。,量词 篇用 buah,名词;学习与工作\nms-0449,ms,ms-06,berita,新闻；消息,Berita itu tentang sekolah kami.,那条新闻是关于我们学校的。,量词 条用 buah,名词;学习与工作\nms-0450,ms,ms-06,lagu,歌曲,Lagu ini dalam bahasa Melayu.,这首歌是马来语歌。,量词 首用 buah,名词;学习与工作\nms-0451,ms,ms-06,resipi,食谱,Saya membaca resipi ibu.,我读母亲的食谱。,通常不用专用量词，可写 satu resipi（一份食谱）,名词;学习与工作;英语借词\nms-0452,ms,ms-06,beras,生米,Beras ini untuk keluarga kami.,这些米给我们一家人。,量词 袋用 kampit,名词;学习与工作\nms-0453,ms,ms-06,bawang,洋葱；葱蒜类,Ibu membeli bawang di kedai.,母亲在商店买洋葱。,量词 个用 biji,名词;学习与工作\nms-0454,ms,ms-06,minyak,油,Minyak ini untuk memasak.,这种油用来烹饪。,量词 瓶用 botol,名词;学习与工作\nms-0455,ms,ms-06,periuk,锅,Periuk itu ada di dapur.,那口锅在厨房。,量词 口用 buah,名词;学习与工作\nms-0456,ms,ms-06,sambil,一边……一边……,Siti memasak sambil mendengar radio.,西蒂一边做饭一边听广播。,连接同时发生的动作,连词;时间\nms-0457,ms,ms-06,lalu,然后；于是,Ali mengambil pen lalu menulis surat.,阿里拿起笔，然后写信。,连接先后动作,连词;时间\nms-0458,ms,ms-06,kemudian,然后,\"Saya mencuci tangan, kemudian makan nasi.\",我洗手，然后吃饭。,连接叙述的先后,副词;时间\nms-0459,ms,ms-06,akhirnya,最后；终于,Akhirnya kami bertemu di sekolah.,最后我们在学校见面了。,表示过程的末尾,副词;时间\nms-0460,ms,ms-06,segera,立刻,Saya segera menjawab e-mel guru.,我立即回复老师的电子邮件。,副词，表示不拖延,副词;时间\nms-0461,ms,ms-06,Saya sedang membaca surat.,我正在读信。,Saya sedang membaca surat.,我正在读信。,meN- + baca → membaca，b 保留；宾语 surat,动词;学习与工作;phrase\nms-0462,ms,ms-06,Ibu memasak sambil menyanyi.,母亲一边做饭一边唱歌。,Ibu memasak sambil menyanyi.,母亲一边做饭一边唱歌。,me- + masak；me- + nyanyi；此处不带宾语,动词;学习与工作;phrase\nms-0463,ms,ms-06,Ali menulis dengan pen.,阿里用笔写字。,Ali menulis dengan pen.,阿里用笔写字。,meN- + tulis → menulis，t 脱落；宾语可为 surat，本句省略,动词;学习与工作;phrase\nms-0464,ms,ms-06,Kami menyusun buku bersama.,我们一起整理书。,Kami menyusun buku bersama.,我们一起整理书。,meN- + susun → menyusun，s 脱落；宾语 buku,动词;学习与工作;phrase\nms-0465,ms,ms-06,Siti mengelap meja itu.,西蒂擦那张桌子。,Siti mengelap meja itu.,西蒂擦那张桌子。,meN- + lap → mengelap，单音节；宾语 meja,动词;学习与工作;phrase\nms-0466,ms,ms-06,kedai,商店,Kedai itu menjual beras dan sayur.,那家店卖米和蔬菜。,量词 家用 buah,名词;日常用品;补充\nms-0467,ms,ms-06,soalan,问题,Soalan guru itu tentang resipi.,老师的那个问题是关于食谱的。,通常不用专用量词，可写 satu soalan（一题）,名词;日常用品;补充\nms-0468,ms,ms-06,lubang,洞,Lubang itu kecil.,那个洞很小。,量词 个用 buah,名词;日常用品;补充\nms-0469,ms,ms-06,cili,辣椒,Ibu mencuci cili di dapur.,母亲在厨房洗辣椒。,量词 个用 biji,名词;日常用品;补充\nms-0470,ms,ms-06,daging,肉,Saya memasak daging dengan bawang.,我用洋葱煮肉。,量词 块用 ketul,名词;日常用品;补充\nms-0471,ms,ms-06,timun,黄瓜,Kakak membeli timun di kedai.,姐姐在商店买黄瓜。,量词 条用 batang,名词;日常用品;补充\nms-0472,ms,ms-06,lobak,萝卜,Saya mencuci lobak sebelum memasak.,我做饭前洗萝卜。,量词 根用 batang,名词;日常用品;补充\nms-0473,ms,ms-06,limau,柑橘；青柠,Air limau itu sejuk.,那杯青柠汁是凉的。,量词 个用 biji,名词;日常用品;补充\nms-0474,ms,ms-06,madu,蜂蜜,Madu itu di dalam gelas.,蜂蜜在玻璃杯里。,量词 瓶用 botol,名词;日常用品;补充\nms-0475,ms,ms-06,botol,瓶子,Botol itu untuk susu.,那个瓶子用来装牛奶。,量词 buah,名词;日常用品;补充\nms-0476,ms,ms-06,daripada,来自某人；由某种材料；比,Surat ini daripada guru saya.,这封信来自我的老师。,人、来源、材料和比较；地点来源用 dari,介词;学习与工作;补充\nms-0477,ms,ms-06,bersih,干净的,Meja itu sudah bersih.,那张桌子已经干净了。,形容词，后置,形容词;日常用品;补充\nms-0478,ms,ms-06,kotor,脏的,Kain kotor itu di dalam baldi.,那块脏布在桶里。,形容词，后置,形容词;日常用品;补充\nms-0479,ms,ms-06,kering,干的,Baju itu sudah kering.,那件上衣已经干了。,形容词，后置,形容词;日常用品;补充\nms-0480,ms,ms-06,basah,湿的,Kain itu masih basah.,那块布还湿着。,形容词，后置,形容词;日常用品;补充\nms-0481,ms,ms-07,di,在,Saya bekerja di Kuala Lumpur.,我在吉隆坡工作。,后接地点，分写；本课不教被动前缀 di-,介词;城市\nms-0482,ms,ms-07,ke,到；向,Kami pergi ke stesen dengan bas.,我们坐巴士去车站。,后接方向或地点，分写,介词;城市\nms-0483,ms,ms-07,dari,从,Ali datang dari Johor Bahru.,阿里从新山来。,地点、方向或时间的起点,介词;城市\nms-0484,ms,ms-07,untuk,为了；给,Buku ini untuk adik saya.,这本书给我的弟弟。,表示用途或受益者,介词;城市\nms-0485,ms,ms-07,bagi,为；对于,Latihan ini baik bagi pelajar.,这个练习对学生有益。,表示对象或受益者,介词;城市\nms-0486,ms,ms-07,mengenai,关于,Kami berbual mengenai bandar Melaka.,我们谈论马六甲城。,用法近于 tentang；本课作为介词整词学习,介词;城市\nms-0487,ms,ms-07,oleh,由,Saya membaca cerita oleh Siti.,我读西蒂写的故事。,可在名词后标作者；被动句施事用法留待 ms-11,介词;城市\nms-0488,ms,ms-07,sejak,自从,Saya tinggal di sini sejak tahun 2020.,我自2020年起住在这里。,引出持续情况的起点,介词;城市\nms-0489,ms,ms-07,hingga,直到,Ali bekerja dari pagi hingga petang.,阿里从早到下午工作。,引出时间或空间终点,介词;城市\nms-0490,ms,ms-07,sehingga,直到,Kami menunggu sehingga pukul lima.,我们一直等到五点。,引出终点或限度,介词;城市\nms-0491,ms,ms-07,sampai,直到；到,Saya berjalan dari rumah sampai sekolah.,我从家一直走到学校。,本课作介词，引出终点,介词;城市\nms-0492,ms,ms-07,antara,在……之间,Kami berehat antara pukul dua dengan pukul tiga.,我们在两点到三点之间休息。,常用 antara A dengan B,介词;城市\nms-0493,ms,ms-07,tanpa,没有；不带,Dia pergi ke sekolah tanpa beg.,他没带书包就去学校。,后接缺少的事物或动作,介词;城市\nms-0494,ms,ms-07,seperti,像,Rumah ini seperti rumah saya.,这座房子像我的家。,引出相似的事物,介词;城市\nms-0495,ms,ms-07,terhadap,对；对于,Sikapnya terhadap pelajar sangat baik.,他对学生的态度很好。,常配态度、看法等名词,介词;城市;补充\nms-0496,ms,ms-07,menerusi,经由；通过,Kami membaca berita menerusi e-mel.,我们通过电子邮件读消息。,本课作介词整词学习，不开放 -i 派生,介词;城市;补充\nms-0497,ms,ms-07,di atas,在……上面,Buku saya di atas meja.,我的书在桌上。,di 分写，atas 表上方,介词;方位\nms-0498,ms,ms-07,di bawah,在……下面,Kucing itu di bawah kerusi.,那只猫在椅子下面。,di 分写，bawah 表下方,介词;方位\nms-0499,ms,ms-07,di dalam,在……里面,Wang saya di dalam beg.,我的钱在包里。,具体空间内部,介词;方位\nms-0500,ms,ms-07,di luar,在……外面,Ali menunggu di luar sekolah.,阿里在学校外等候。,luar 表外部,介词;方位\nms-0501,ms,ms-07,di depan,在……前面,Bas berhenti di depan stesen.,巴士在车站前停下。,depan 表前方,介词;方位\nms-0502,ms,ms-07,di belakang,在……后面,Taman itu di belakang rumah.,公园在屋后。,belakang 表后方,介词;方位\nms-0503,ms,ms-07,di sebelah,在……旁边,Klinik di sebelah bank.,诊所在银行旁边。,sebelah 表旁边,介词;方位\nms-0504,ms,ms-07,di tepi,在……边上,Mereka berdiri di tepi jalan.,他们站在路边。,tepi 表边缘,介词;方位\nms-0505,ms,ms-07,di tengah,在……中间,Meja itu di tengah bilik.,那张桌子在房间中间。,tengah 表中央,介词;方位\nms-0506,ms,ms-07,di antara,在……之间,Masjid itu di antara dua buah bangunan.,清真寺在两栋建筑之间。,具体空间位置；后接两个对象或复数,介词;方位\nms-0507,ms,ms-07,hadapan,前方,Ali berdiri di hadapan sekolah.,阿里站在学校前面。,量词 通常不用量词,名词;方位\nms-0508,ms,ms-07,hujung,尽头；末端,Pejabat pos itu di hujung jalan.,邮局在路的尽头。,量词 通常不用量词,名词;方位\nms-0509,ms,ms-07,stesen,车站,Stesen itu berhampiran rumah saya.,车站在我家附近。,量词 buah,名词;城市;英语借词\nms-0510,ms,ms-07,pejabat pos,邮局,Kami mengepos surat di pejabat pos.,我们在邮局寄信。,量词 buah,名词;城市\nms-0511,ms,ms-07,pasar,市场,Ibu membeli sayur di pasar.,母亲在市场买菜。,量词 buah,名词;城市\nms-0512,ms,ms-07,masjid,清真寺,Masjid itu di tengah bandar.,那座清真寺在市中心。,量词 buah,名词;城市;阿拉伯语借词\nms-0513,ms,ms-07,taman,公园,Kami bersenam di taman setiap pagi.,我们每天早晨在公园锻炼。,量词 座用 buah,名词;城市\nms-0514,ms,ms-07,jalan,道路,Jalan ini ke stesen.,这条路通往车站。,量词 条用 batang,名词;城市\nms-0515,ms,ms-07,jambatan,桥,Jambatan itu panjang.,那座桥很长。,量词 座用 buah,名词;城市\nms-0516,ms,ms-07,lapangan terbang,机场,Bas ini ke lapangan terbang.,这辆巴士开往机场。,量词 座用 buah,名词;城市\nms-0517,ms,ms-07,perpustakaan,图书馆,Siti membaca di perpustakaan.,西蒂在图书馆读书。,量词 座用 buah,名词;城市\nms-0518,ms,ms-07,balai polis,警察局,Balai polis itu di sebelah bank.,警察局在银行旁边。,量词 座用 buah,名词;城市\nms-0519,ms,ms-07,bandar,城市,Bandar Melaka ada banyak kedai.,马六甲城有许多商店。,量词 座用 buah,名词;城市\nms-0520,ms,ms-07,kampung,村庄,Kampung saya berhampiran Johor Bahru.,我的村庄在新山附近。,量词 座用 buah,名词;城市\nms-0521,ms,ms-07,bangunan,建筑物,Bangunan itu tinggi dan putih.,那栋建筑很高，是白色的。,量词 栋用 buah,名词;城市\nms-0522,ms,ms-07,kedai buku,书店,Saya membeli buku di kedai buku itu.,我在那家书店买书。,量词 家用 buah,名词;城市\nms-0523,ms,ms-07,kedai makan,小餐馆,Kami makan di kedai makan berhampiran stesen.,我们在车站附近的小餐馆吃饭。,量词 家用 buah,名词;城市\nms-0524,ms,ms-07,pasar raya,超市,Pasar raya itu menjual susu dan roti.,那家超市卖牛奶和面包。,量词 家用 buah,名词;城市\nms-0525,ms,ms-07,pusat bandar,市中心,Pejabat saya di pusat bandar.,我的办公室在市中心。,量词 个用 buah,名词;城市\nms-0526,ms,ms-07,hentian bas,巴士停靠站,Ali menunggu di hentian bas.,阿里在巴士站等候。,量词 个用 buah,名词;城市\nms-0527,ms,ms-07,pelabuhan,港口,Pelabuhan itu di Pulau Pinang.,那个港口在槟城。,量词 座用 buah,名词;城市\nms-0528,ms,ms-07,stadium,体育场,Kami bermain bola sepak di stadium.,我们在体育场踢足球。,量词 座用 buah,名词;城市;英语借词\nms-0529,ms,ms-07,kereta api,火车,Saya ke Kuala Lumpur dengan kereta api.,我乘火车去吉隆坡。,量词 列用 buah,名词;交通\nms-0530,ms,ms-07,motosikal,摩托车,Motosikal itu di depan rumah.,那辆摩托车在屋前。,量词 辆用 buah,名词;交通;英语借词\nms-0531,ms,ms-07,kapal terbang,飞机,Kapal terbang itu besar.,那架飞机很大。,量词 架用 buah,名词;交通\nms-0532,ms,ms-07,feri,渡轮,Kami ke Pulau Pinang dengan feri.,我们坐渡轮去槟城。,量词 艘用 buah,名词;交通;英语借词\nms-0533,ms,ms-07,lori,货车,Lori itu membawa beras ke kedai.,那辆货车把米运到商店。,量词 辆用 buah,名词;交通;英语借词\nms-0534,ms,ms-07,van,厢式车,Van sekolah itu sudah sampai.,学校的厢式车已经到了。,量词 辆用 buah,名词;交通;英语借词\nms-0535,ms,ms-07,beca,三轮车,Saya melihat beca di Melaka.,我在马六甲看见三轮车。,量词 辆用 buah,名词;交通;闽南语借词\nms-0536,ms,ms-07,bot,小船,Bot itu di sebelah jambatan.,那条小船在桥旁边。,量词 艘用 buah,名词;交通;英语借词\nms-0537,ms,ms-07,Jalan terus.,一直走。,Jalan terus.,一直走。,祈使表达；jalan 作不及物动词，terus 表继续,动词;问路;phrase\nms-0538,ms,ms-07,Belok kiri.,向左转。,Belok kiri.,向左转。,不及物指路动词 belok；左为 kiri,动词;问路;phrase\nms-0539,ms,ms-07,Belok kanan.,向右转。,Belok kanan.,向右转。,不及物指路动词 belok；右为 kanan,动词;问路;phrase\nms-0540,ms,ms-07,Bagaimana hendak ke stesen?,怎样去车站？,Bagaimana hendak ke stesen?,怎样去车站？,完整问路句，hendak 表意图,动词;问路;phrase\nms-0541,ms,ms-07,Di mana perpustakaan?,图书馆在哪里？,Di mana perpustakaan?,图书馆在哪里？,地点疑问句，di mana 分写,动词;问路;phrase\nms-0542,ms,ms-07,Ikut jalan ini.,沿这条路走。,Ikut jalan ini.,沿这条路走。,及物祈使动词 ikut；常见宾语 jalan,动词;问路;phrase\nms-0543,ms,ms-07,Berhenti di sini.,在这里停下。,Berhenti di sini.,在这里停下。,ber- + henti；不及物；祈使也保留 ber-,动词;问路;phrase\nms-0544,ms,ms-07,Berjalan ke sana.,走到那里去。,Berjalan ke sana.,走到那里去。,ber- + jalan；不及物,动词;问路;phrase\nms-0545,ms,ms-07,kiri,左边,Bank itu di sebelah kiri.,银行在左边。,量词 通常不用量词,名词;城市;补充\nms-0546,ms,ms-07,kanan,右边,Stesen itu di sebelah kanan.,车站在右边。,量词 通常不用量词,名词;城市;补充\nms-0547,ms,ms-07,utara,北方,Sekolah itu di utara bandar.,学校在城市北部。,量词 通常不用量词,名词;城市;补充\nms-0548,ms,ms-07,selatan,南方,Kampung itu di selatan Melaka.,那个村庄在马六甲南边。,量词 通常不用量词,名词;城市;补充\nms-0549,ms,ms-07,timur,东方,Masjid itu di timur kampung.,清真寺在村庄东边。,量词 通常不用量词,名词;城市;补充\nms-0550,ms,ms-07,barat,西方,Pelabuhan itu di barat bandar.,港口在城市西边。,量词 通常不用量词,名词;城市;补充\nms-0551,ms,ms-07,simpang,路口；岔路,Ali menunggu di simpang itu.,阿里在那个路口等候。,量词 个用 buah,名词;城市;补充\nms-0552,ms,ms-07,lampu isyarat,交通信号灯,Bas berhenti di lampu isyarat.,巴士在信号灯前停下。,量词 组用 set,名词;城市;补充\nms-0553,ms,ms-07,peta,地图,Saya melihat peta bandar Melaka.,我查看马六甲城的地图。,量词 张用 helai,名词;城市;补充\nms-0554,ms,ms-07,laluan,路线；通道,Laluan ini untuk basikal.,这条通道供自行车使用。,通常不用专用量词，可写 satu laluan（一条通道）,名词;城市;补充\nms-0555,ms,ms-07,sikap,态度,Sikap Ali terhadap kawan sangat baik.,阿里对朋友的态度很好。,量词 通常不用量词,名词;城市;补充\nms-0556,ms,ms-07,dekat,近的,Rumah saya dekat dengan sekolah.,我家离学校近。,形容词，后置；dekat dengan,形容词;城市;补充\nms-0557,ms,ms-07,jauh,远的,Stesen itu jauh dari kampung.,车站离村庄远。,形容词，后置；jauh dari,形容词;城市;补充\nms-0558,ms,ms-07,berhampiran,靠近,Rumah saya berhampiran stesen.,我家靠近车站。,ber- + hampir + -an；词根 hampir；本课按整词学，不开放 -an；不及物,动词;城市;补充\nms-0559,ms,ms-07,masuk,进入,Ali masuk ke dalam kedai.,阿里走进商店。,不及物；地点由 ke 引出,动词;城市;补充\nms-0560,ms,ms-07,keluar,出去；出来,Siti keluar dari perpustakaan.,西蒂从图书馆出来。,不及物；地点由 dari 引出,动词;城市;补充\nms-0561,ms,ms-08,dapat,能够；得以,Esok saya akan dapat bertemu dengan guru.,明天我将能见到老师。,表示有条件实现，放在动词前,助动词;情态\nms-0562,ms,ms-08,mesti,必须；一定要,Kita mesti mencuci tangan sebelum makan.,我们吃饭前必须洗手。,义务或要求，后接动词,助动词;情态\nms-0563,ms,ms-08,harus,应该；应当,Kita harus membantu keluarga.,我们应该帮助家人。,本课表示应当，后接动词,助动词;情态\nms-0564,ms,ms-08,perlu,需要,Saya perlu membeli roti.,我需要买面包。,必要性，后接动词或名词,助动词;情态\nms-0565,ms,ms-08,mahu,想要,Saya mahu minum air limau.,我想喝青柠汁。,意愿；标准书面形式,助动词;情态\nms-0566,ms,ms-08,hendak,想要；打算,Kami hendak makan di restoran.,我们打算在餐馆吃饭。,意愿或打算；标准书面形式,助动词;情态\nms-0567,ms,ms-08,ingin,希望；想要,Saya ingin belajar memasak rendang.,我想学做仁当。,较正式的意愿表达,助动词;情态\nms-0568,ms,ms-08,pandai,擅长；会,Siti pandai memasak nasi lemak.,西蒂擅长做椰浆饭。,本课作情态性谓语，后接动词；也可作形容词,助动词;情态\nms-0569,ms,ms-08,sanggup,愿意；肯,Ali sanggup membantu saya.,阿里愿意帮助我。,表示愿意承担某事,助动词;情态\nms-0570,ms,ms-08,mampu,有能力,Kami mampu membayar bil ini.,我们有能力支付这张账单。,能力或财力，后接动词,助动词;情态\nms-0571,ms,ms-08,patut,应该,Kita patut menunggu di luar.,我们应该在外面等候。,表示合适的做法,助动词;情态;补充\nms-0572,ms,ms-08,enggan,不愿意,Adik enggan minum susu itu.,弟弟不愿喝那杯牛奶。,否定意愿，不另加 tidak,助动词;情态;补充\nms-0573,ms,ms-08,tolong,请帮忙,Tolong buka pintu itu.,请帮忙打开那扇门。,请求时后接动词原形；作及物动词「帮助」时常见宾语 saya,动词;请求与礼貌\nms-0574,ms,ms-08,minta,要；请求,Saya minta segelas air.,我要一杯水。,及物；常见宾语 air、bantuan；本课作礼貌请求,动词;请求与礼貌\nms-0575,ms,ms-08,tolong bantu saya,请帮帮我,\"Ali, tolong bantu saya.\",阿里，请帮帮我。,请求表达；及物动词 bantu 的宾语 saya,动词;请求与礼貌;phrase\nms-0576,ms,ms-08,minta air,要水,Saya minta air panas.,我要热水。,及物动词 minta；常见宾语 air,动词;请求与礼貌;phrase\nms-0577,ms,ms-08,maafkan saya,请原谅我,\"Siti, maafkan saya.\",西蒂，请原谅我。,固定礼貌表达；maaf + -kan；宾语 saya；本课按整词学，-kan 在 ms-09 系统学,动词;请求与礼貌;phrase\nms-0578,ms,ms-08,sila,请,Sila duduk di sini.,请坐这里。,邀请或礼貌指示，后接动词,语气词;请求与礼貌\nms-0579,ms,ms-08,jangan,不要；禁止,Jangan masuk ke dapur.,不要进入厨房。,禁止词，放在动词前,语气词;请求与礼貌\nms-0580,ms,ms-08,silalah,请吧,Silalah duduk di sini.,请坐这里吧。,sila + -lah，连写；本课按整词记,语气词;请求与礼貌\nms-0581,ms,ms-08,sila tunggu sebentar,请稍等,\"Ali, sila tunggu sebentar.\",阿里，请稍等。,sila + 动词 tunggu；完整请求表达,语气词;请求与礼貌;phrase\nms-0582,ms,ms-08,jangan masuk,请勿进入,\"Adik, jangan masuk.\",弟弟，不要进去。,jangan + 动词 masuk；禁止表达,语气词;请求与礼貌;phrase\nms-0583,ms,ms-08,makanan,食物,Makanan di restoran ini sedap.,这家餐馆的食物很好吃。,通常不用专用量词；按份可用 pinggan 或 bungkus,名词;食物与需求\nms-0584,ms,ms-08,minuman,饮料,Minuman ini untuk Ali.,这杯饮料给阿里。,量词 杯用 gelas,名词;食物与需求\nms-0585,ms,ms-08,sarapan,早餐,Sarapan saya roti dan telur.,我的早餐是面包和鸡蛋。,量词 set（套餐）,名词;食物与需求\nms-0586,ms,ms-08,santan,椰浆,Ibu memasak nasi dengan santan.,母亲用椰浆煮饭。,量词 杯用 cawan,名词;食物与需求\nms-0587,ms,ms-08,tepung,面粉,Tepung itu untuk membuat roti canai.,那些面粉用来做印度煎饼。,量词 袋用 kampit,名词;食物与需求\nms-0588,ms,ms-08,mentega,黄油,Saya mahu roti dengan mentega.,我想要涂黄油的面包。,量词 块用 buku,名词;食物与需求;葡语借词\nms-0589,ms,ms-08,roti canai,印度煎饼,Saya memesan dua keping roti canai.,我点两张印度煎饼。,量词 张用 keping,名词;食物与需求\nms-0590,ms,ms-08,nasi lemak,椰浆饭,Siti membeli nasi lemak untuk sarapan.,西蒂买椰浆饭当早餐。,量词 份用 bungkus 或 pinggan,名词;食物与需求\nms-0591,ms,ms-08,satay,沙爹串,Kami makan satay di Melaka.,我们在马六甲吃沙爹。,量词 串用 cucuk,名词;食物与需求\nms-0592,ms,ms-08,rendang,仁当炖肉,Rendang ini sangat sedap.,这份仁当很好吃。,量词 份用 pinggan,名词;食物与需求\nms-0593,ms,ms-08,kari,咖喱,Ibu memasak kari ayam.,母亲煮咖喱鸡。,量词 碗用 mangkuk,名词;食物与需求\nms-0594,ms,ms-08,sup,汤,Saya minta semangkuk sup panas.,我要一碗热汤。,量词 碗用 mangkuk,名词;食物与需求;英语借词\nms-0595,ms,ms-08,jus,果汁,Jus epal ini untuk adik.,这杯苹果汁给弟弟。,量词 杯用 gelas,名词;食物与需求;英语借词\nms-0596,ms,ms-08,ais,冰,Saya mahu teh tanpa ais.,我要不加冰的茶。,量词 块用 ketul,名词;食物与需求;英语借词\nms-0597,ms,ms-08,menu,菜单,Menu itu di atas meja.,菜单在桌上。,量词 naskhah（纸本）；也可直接写 satu menu,名词;食物与需求;英语借词\nms-0598,ms,ms-08,harga,价格,Harga roti ini tiga ringgit.,这种面包的价格是三令吉。,量词 通常不用量词，金额用 ringgit,名词;食物与需求\nms-0599,ms,ms-08,bil,账单,Saya membayar bil di restoran.,我在餐馆付账。,量词 张用 helai,名词;食物与需求;英语借词\nms-0600,ms,ms-08,pesanan,订单；点单,Pesanan kami dua pinggan nasi lemak.,我们点的是两盘椰浆饭。,通常不用专用量词，可写 satu pesanan（一份订单）,名词;食物与需求\nms-0601,ms,ms-08,bantuan,帮助,Kami perlu bantuan guru.,我们需要老师的帮助。,量词 通常不用量词,名词;食物与需求\nms-0602,ms,ms-08,kebenaran,许可,Saya meminta kebenaran untuk keluar.,我请求外出的许可。,量词 通常不用量词,名词;食物与需求\nms-0603,ms,ms-08,meminta,请求,Ali meminta bantuan guru.,阿里请求老师帮助。,meN- + minta → meminta，me-；m 保留；词根 minta；及物；常见宾语 bantuan、kebenaran,动词;学习与工作\nms-0604,ms,ms-08,membantu,帮助,Saya membantu ibu di dapur.,我在厨房帮母亲。,meN- + bantu → membantu，mem-；b 保留；词根 bantu；及物；常见宾语 ibu、kawan,动词;学习与工作\nms-0605,ms,ms-08,membayar,支付,Bapa membayar bil dengan wang itu.,父亲用那些钱付账。,meN- + bayar → membayar，mem-；b 保留；词根 bayar；及物；常见宾语 bil、harga,动词;学习与工作\nms-0606,ms,ms-08,memesan,点餐；订购,Kami memesan makanan di restoran.,我们在餐馆点餐。,meN- + pesan → memesan，mem-；p 脱落；词根 pesan；及物；常见宾语 nasi、minuman,动词;学习与工作\nms-0607,ms,ms-08,menerima,收到；接受,Siti menerima surat daripada Ali.,西蒂收到阿里的信。,meN- + terima → menerima，men-；t 脱落；词根 terima；及物；常见宾语 surat、bantuan,动词;学习与工作\nms-0608,ms,ms-08,membuka,打开,Ali membuka tingkap bilik.,阿里打开房间的窗户。,meN- + buka → membuka，mem-；b 保留；词根 buka；及物；常见宾语 pintu、tingkap,动词;学习与工作\nms-0609,ms,ms-08,menutup,关上,Ibu menutup pintu dapur.,母亲关上厨房的门。,meN- + tutup → menutup，men-；t 脱落；词根 tutup；及物；常见宾语 pintu、kedai,动词;学习与工作\nms-0610,ms,ms-08,meminjam,借入,Saya meminjam buku daripada Siti.,我向西蒂借书。,meN- + pinjam → meminjam，mem-；p 脱落；词根 pinjam；及物；常见宾语 buku、pen,动词;学习与工作\nms-0611,ms,ms-08,menggoreng,油炸；炒,Bapa menggoreng ikan di dapur.,父亲在厨房煎鱼。,meN- + goreng → menggoreng，meng-；g 保留；词根 goreng；及物；常见宾语 ikan、telur,动词;学习与工作\nms-0612,ms,ms-08,merebus,用水煮,Saya merebus telur untuk sarapan.,我煮鸡蛋当早餐。,meN- + rebus → merebus，me-；r 保留；词根 rebus；及物；常见宾语 telur、mi,动词;学习与工作\nms-0613,ms,ms-08,memotong,切；剪,Ibu memotong sayur dengan pisau.,母亲用刀切菜。,meN- + potong → memotong，mem-；p 脱落；词根 potong；及物；常见宾语 sayur、kain,动词;学习与工作\nms-0614,ms,ms-08,mencampur,混合,Siti mencampur tepung dengan air.,西蒂把面粉和水混合。,meN- + campur → mencampur，men-；c 保留；词根 campur；及物；常见宾语 tepung、air,动词;学习与工作\nms-0615,ms,ms-08,menambah,添加,Saya menambah garam ke dalam sup.,我往汤里加盐。,meN- + tambah → menambah，men-；t 脱落；词根 tambah；及物；常见宾语 air、garam,动词;学习与工作\nms-0616,ms,ms-08,memilih,挑选,Raju memilih makanan pada menu.,拉朱从菜单上挑选食物。,meN- + pilih → memilih，mem-；p 脱落；词根 pilih；及物；常见宾语 makanan、buku,动词;学习与工作\nms-0617,ms,ms-08,mencuba,尝试,Kami mencuba resipi baru itu.,我们尝试那个新食谱。,meN- + cuba → mencuba，men-；c 保留；词根 cuba；及物；常见宾语 resipi、makanan,动词;学习与工作\nms-0618,ms,ms-08,memegang,拿着；握着,Adik memegang gelas dengan dua tangan.,弟弟用两只手握着玻璃杯。,meN- + pegang → memegang，mem-；p 脱落；词根 pegang；及物；常见宾语 gelas、beg,动词;学习与工作\nms-0619,ms,ms-08,menjemput,邀请,Siti menjemput kami ke rumahnya.,西蒂邀请我们去她家。,meN- + jemput → menjemput，men-；j 保留；词根 jemput；及物；常见宾语 kawan、guru,动词;学习与工作\nms-0620,ms,ms-08,menghidang,端上；摆出食物,Ibu menghidang nasi dan kari.,母亲端上米饭和咖喱。,meN- + hidang → menghidang，meng-；h 保留；词根 hidang；及物；常见宾语 nasi、makanan,动词;学习与工作\nms-0621,ms,ms-08,menolak,拒绝,Ali tidak menolak bantuan kami.,阿里没有拒绝我们的帮助。,meN- + tolak → menolak，men-；t 脱落；词根 tolak；及物；常见宾语 bantuan、pesanan,动词;学习与工作\nms-0622,ms,ms-08,mengangkat,举起；搬起,Kami mengangkat meja bersama.,我们一起搬桌子。,meN- + angkat → mengangkat，meng-；元音 a 保留；词根 angkat；及物；常见宾语 meja、beg,动词;学习与工作\nms-0623,ms,ms-08,Tolong tutup pintu.,请帮忙关门。,Tolong tutup pintu.,请帮忙关门。,及物请求动词 tutup；宾语 pintu；祈使中用词根,动词;请求与计划;phrase\nms-0624,ms,ms-08,Silalah duduk.,请坐吧。,Silalah duduk.,请坐吧。,sila + -lah；duduk 不及物,动词;请求与计划;phrase\nms-0625,ms,ms-08,Saya belum boleh keluar.,我还不能出去。,Saya belum boleh keluar.,我还不能出去。,belum 在 boleh 前；keluar 不及物,动词;请求与计划;phrase\nms-0626,ms,ms-08,Kita mesti datang awal.,我们必须早到。,Kita mesti datang awal.,我们必须早到。,mesti 在动作前；datang 不及物,动词;请求与计划;phrase\nms-0627,ms,ms-08,Saya ingin memesan minuman.,我想点饮料。,Saya ingin memesan minuman.,我想点饮料。,meN- + pesan → memesan，p 脱落；宾语 minuman,动词;请求与计划;phrase\nms-0628,ms,ms-08,ringgit,令吉,Bil ini dua puluh ringgit.,这张账单是二十令吉。,量词 货币单位，本身作量词,名词;日常需求;补充\nms-0629,ms,ms-08,sen,仙；分币,Harga kuih ini lima puluh sen.,这块糕点的价格是五十仙。,量词 货币单位，本身作量词,名词;日常需求;英语借词;补充\nms-0630,ms,ms-08,pisau,刀,Pisau itu di atas meja dapur.,刀在厨房桌上。,量词 把用 bilah,名词;日常需求;补充\nms-0631,ms,ms-08,tisu,纸巾,Saya perlu tisu untuk tangan.,我需要纸巾擦手。,量词 张用 helai,名词;日常需求;英语借词;补充\nms-0632,ms,ms-08,duduk,坐,Sila duduk di sebelah saya.,请坐在我旁边。,不及物；地点由 di 引出,动词;日常需求;补充\nms-0633,ms,ms-08,buka,打开,Tolong buka tingkap itu.,请帮忙打开那扇窗。,及物；常见宾语 pintu、tingkap；祈使可用词根,动词;日常需求;补充\nms-0634,ms,ms-08,tutup,关上,Sila tutup pintu itu.,请关上那扇门。,及物；常见宾语 pintu、kedai；祈使用词根,动词;日常需求;补充\nms-0635,ms,ms-08,sebentar,一会儿,Sila tunggu sebentar di sini.,请在这里稍等。,表示短时间,副词;时间;补充\nms-0636,ms,ms-08,awal,早,Saya datang awal hari ini.,我今天来得早。,本课作时间副词,副词;时间;补充\nms-0637,ms,ms-08,segelas,一杯,Saya minta segelas air panas.,我要一杯热水。,se- + gelas，本课按完整数量表达记，不开放 se- 推导,量词;食物;补充\nms-0638,ms,ms-08,semangkuk,一碗,Ibu menghidang semangkuk sup.,母亲端上一碗汤。,se- + mangkuk，本课按完整数量表达记，不开放 se- 推导,量词;食物;补充\nms-0639,ms,ms-08,lapar,饿的,Saya lapar dan mahu makan.,我饿了，想吃饭。,形容词，后置,形容词;食物;补充\nms-0640,ms,ms-08,dahaga,渴的,Ali dahaga dan perlu air.,阿里渴了，需要水。,形容词，后置,形容词;食物;补充\n";
+const M3_OLD_PROGRESS={"cards":{"es-0001:r":{"due":"2026-09-11","ivl":4,"ease":2.6,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"es-0002:r":{"due":"2026-09-11","ivl":4,"ease":2.6,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"es-0003:r":{"due":"2026-09-11","ivl":4,"ease":2.6,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"es-0004:r":{"due":"2026-09-11","ivl":4,"ease":2.6,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"es-0005:r":{"due":"2026-09-11","ivl":4,"ease":2.6,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"es-0006:r":{"due":"2026-09-11","ivl":4,"ease":2.6,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"es-0007:r":{"due":"2026-09-11","ivl":4,"ease":2.6,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"es-0008:r":{"due":"2026-09-11","ivl":4,"ease":2.6,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"es-0009:r":{"due":"2026-09-11","ivl":4,"ease":2.6,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"es-0010:r":{"due":"2026-09-11","ivl":4,"ease":2.6,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"es-0011:r":{"due":"2026-09-11","ivl":4,"ease":2.6,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"es-0012:r":{"due":"2026-09-11","ivl":4,"ease":2.6,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"es-0013:r":{"due":"2026-09-08","ivl":1,"ease":2.5,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"es-0014:r":{"due":"2026-09-08","ivl":1,"ease":2.5,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"es-0015:r":{"due":"2026-09-08","ivl":1,"ease":2.5,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"ru-0001:r":{"due":"2026-09-08","ivl":1,"ease":2.5,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"ru-0002:r":{"due":"2026-09-08","ivl":1,"ease":2.5,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"ru-0003:r":{"due":"2026-09-08","ivl":1,"ease":2.5,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"ru-0004:r":{"due":"2026-09-08","ivl":1,"ease":2.5,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"ru-0005:r":{"due":"2026-09-08","ivl":1,"ease":2.5,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"ru-0006:r":{"due":"2026-09-08","ivl":1,"ease":2.5,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"ru-0007:r":{"due":"2026-09-08","ivl":1,"ease":2.5,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"ru-0008:r":{"due":"2026-09-08","ivl":1,"ease":2.5,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"ru-0009:r":{"due":"2026-09-08","ivl":1,"ease":2.5,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"},"ru-0010:r":{"due":"2026-09-08","ivl":1,"ease":2.5,"reps":1,"lapses":0,"last":"2026-09-07","first":"2026-09-07"}},"log":[{"t":"2026-09-07T04:00:07.567Z","card":"es-0001:r","grade":5},{"t":"2026-09-07T04:00:17.145Z","card":"es-0002:r","grade":5},{"t":"2026-09-07T04:00:24.249Z","card":"es-0003:r","grade":5},{"t":"2026-09-07T04:00:29.752Z","card":"es-0004:r","grade":5},{"t":"2026-09-07T04:00:35.774Z","card":"es-0005:r","grade":5},{"t":"2026-09-07T04:00:40.665Z","card":"es-0006:r","grade":5},{"t":"2026-09-07T04:00:48.333Z","card":"es-0007:r","grade":5},{"t":"2026-09-07T04:00:52.006Z","card":"es-0008:r","grade":5},{"t":"2026-09-07T04:03:36.337Z","card":"es-0009:r","grade":5},{"t":"2026-09-07T04:03:39.485Z","card":"es-0010:r","grade":5},{"t":"2026-09-07T04:03:45.718Z","card":"es-0011:r","grade":5},{"t":"2026-09-07T04:03:47.833Z","card":"es-0012:r","grade":5},{"t":"2026-09-07T04:03:59.508Z","card":"es-0013:r","grade":4},{"t":"2026-09-07T04:04:07.565Z","card":"es-0014:r","grade":4},{"t":"2026-09-07T04:04:11.973Z","card":"es-0015:r","grade":4},{"t":"2026-09-07T04:04:23.285Z","card":"ru-0001:r","grade":4},{"t":"2026-09-07T04:06:12.511Z","card":"ru-0002:r","grade":4},{"t":"2026-09-07T04:06:22.331Z","card":"ru-0003:r","grade":4},{"t":"2026-09-07T04:06:27.348Z","card":"ru-0004:r","grade":4},{"t":"2026-09-07T04:06:38.334Z","card":"ru-0005:r","grade":4},{"t":"2026-09-07T04:06:44.753Z","card":"ru-0006:r","grade":4},{"t":"2026-09-07T04:06:52.439Z","card":"ru-0007:r","grade":4},{"t":"2026-09-07T04:07:01.487Z","card":"ru-0008:r","grade":4},{"t":"2026-09-07T04:07:26.139Z","card":"ru-0009:r","grade":4},{"t":"2026-09-07T04:07:38.718Z","card":"ru-0010:r","grade":4}]};
+
+// 任务 M3：第 9–12 周；所有允许词形均从当前 front 与该词的构词注释推导。
+const M3_LESSONS=['ms-09','ms-10','ms-11','ms-12'];
+const M3_READINGS=Array.from({length:8},(_,i)=>'ms-r'+String(i+15).padStart(2,'0'));
+const ms3Rows=initialRows.filter(r=>M3_LESSONS.includes(r.lesson));
+const ms3Expanded=ms3Rows.reduce((n,r)=>n+(r.tags.split(';').includes('phrase')?1:2),0);
+const ms3LangSentences=lesson=>msWalk(parseNodes(lesson.explanation()))
+  .filter(n=>['p','span'].includes(n.tag)&&n.getAttribute('lang')==='ms'&&/[.!?]$/.test(n.textContent.trim()))
+  .map(n=>({text:n.textContent}));
+const M3_TEXTS=()=>[
+  ...ms3Rows.map(r=>({id:r.id,lesson:r.lesson,text:r.example})),
+  ...M3_LESSONS.flatMap(id=>[...api.LESSONS[id].reading.sentences,...ms3LangSentences(api.LESSONS[id])]
+    .map(s=>({id,lesson:id,...s}))),
+  ...M3_READINGS.flatMap(id=>api.READINGS[id].sentences.map(s=>({id,lesson:api.READINGS[id].afterLesson,...s})))
+];
+test('任务 M3：四课周次、日期、时长、目标、写作与第十周起复盘提示',()=>{
+  const start=Date.UTC(2026,9,5);
+  const short=d=>String(d.getUTCMonth()+1).padStart(2,'0')+'-'+String(d.getUTCDate()).padStart(2,'0');
+  for(const [i,id] of M3_LESSONS.entries()){
+    const l=api.LESSONS[id],week=i+9;
+    assert.equal(l.lang,'ms');assert.equal(l.week,week);
+    assert.equal(l.dates,short(new Date(start+(week-1)*7*86400000))+' 至 '+short(new Date(start+((week-1)*7+6)*86400000)));
+    assert.equal(l.dailyTime,'每天 20 分钟 + 每周 1 次系统块 30 分钟');
+    for(const field of ['name','goal','writingTask']) assert(l[field]?.trim(),id+' '+field);
+    assert.match(l.writingTask,/5 句/);
+    const first=msWalk(parseNodes(l.explanation())).find(n=>n.tag==='p').textContent;
+    assert(first.includes(l.dailyTime));
+    assert(first.includes('配合《Complete Malay》的对应单元，单元以实际教材为准'));
+    assert.equal(first.includes('时间分配以复盘结果为准'),week>=10);
+  }
+  assert.equal(initialState.settings.newPerDay.ms,10);
+});
+test('任务 M3：280 条连续 id、逐字段 CSV 同步、全语言 front 唯一与末尾追加',()=>{
+  const csv=plain(api.parseCSV(fs.readFileSync(path.join(__dirname,'cards/ms.csv'),'utf8')));
+  assert.deepEqual(csv,initialRows.filter(r=>r.lang==='ms'));
+  assert.deepEqual(csv.map(r=>r.id),Array.from({length:920},(_,i)=>'ms-'+String(i+1).padStart(4,'0')));
+  assert.equal(ms3Rows.length,280);
+  assert.equal(new Set(csv.map(r=>r.front.toLowerCase())).size,csv.length);
+  assert.deepEqual(ms3Rows.map(r=>r.id),Array.from({length:280},(_,i)=>'ms-'+String(i+641).padStart(4,'0')));
+  assert.deepEqual(initialRows.slice(-280),ms3Rows);
+  for(const [i,id] of M3_LESSONS.entries()) assert.equal(ms3Rows.filter(r=>r.lesson===id).length,[80,80,80,40][i]);
+  assert.deepEqual(Object.keys(api.LESSONS).slice(-4),M3_LESSONS);
+});
+test('任务 M3：词类配额、补充标签及五组后缀对比完整',()=>{
+  const base=id=>ms3Rows.filter(r=>r.lesson===id&&!r.tags.split(';').includes('补充'));
+  const count=(id,tag)=>base(id).filter(r=>r.tags.split(';').includes(tag)).length;
+  for(const [id,counts] of Object.entries({
+    'ms-09':{'-kan 动词':30,'日常事务':25,'连接与程度':5,'phrase':5},
+    'ms-10':{'-i 动词':25,'-kan／-i 对比':10,'参观与联系':25,'phrase':5},
+    'ms-11':{'di- 被动':20,'新闻与公共事务':25,'公共事务动词':15,'新闻连接':5,'phrase':5},
+    'ms-12':{'ter- 形式':12,'复习与学习':15,'phrase':8}
+  })) for(const [tag,n] of Object.entries(counts)) assert.equal(count(id,tag),n,id+' '+tag);
+  for(const [i,id] of M3_LESSONS.entries()) assert.equal(ms3Rows.filter(r=>r.lesson===id&&r.tags.split(';').includes('补充')).length,[15,15,10,5][i]);
+  for(const root of ['datang','jauh','tempat','hadiah','siram'])
+    for(const suffix of ['kan','i']) assert(ms3Rows.some(r=>r.lesson==='ms-10'&&r.note.startsWith('meN- + '+root+' + -'+suffix+' →')),root+' '+suffix);
+});
+test('任务 M3：词类、完整原形例句、量词与宾语注释，短语仅识别',()=>{
+  const kinds=new Set('名词 动词 形容词 代词 数词 量词 介词 连词 副词 助动词 语气词 疑问词 问候'.split(' '));
+  for(const r of ms3Rows){
+    const tags=r.tags.split(';');
+    assert(kinds.has(tags[0]),r.id);assert(!tags.includes('letter'));
+    assert(/[\u4e00-\u9fff]/.test(r.back+r.example_zh));assert(r.note.trim());
+    assert(/[.!?]$/.test(r.example),r.id+' 完整句');
+    assert(r.example.toLowerCase().includes(r.front.toLowerCase()),r.id+' 例句原形');
+    if(/[.!?]$/.test(r.front))assert(tags.includes('phrase'),r.id);
+    if(tags[0]==='名词'&&!tags.includes('phrase'))assert.match(r.note,/量词/,r.id);
+    if(tags[0]==='形容词')assert.match(r.note,/形容词，后置/,r.id);
+    if(tags[0]==='动词'&&/及物/.test(r.note)&&!/不及物/.test(r.note))assert.match(r.note,/宾语/,r.id);
+    assert.equal(api.expandCards([r]).length,tags.includes('phrase')?1:2,r.id);
+    if(!tags.includes('phrase'))assert(api.clozeExample(r).includes('____'),r.id+' 挖空');
+  }
+  assert.deepEqual(M3_LESSONS.map(id=>api.expandCards(ms3Rows.filter(r=>r.lesson===id)).length),[155,155,155,72]);
+});
+test('任务 M3：马来西亚拼写与口语范围，印尼语只能作明确注释对照',()=>{
+  const banned=new Set('karena uang kantor universitas bahwa senin delapan mau saja sepeda sepatu kamar bisa kemarin'.split(' '));
+  const informal=new Set('aku kau engkau tak nak dah je ni tu'.split(' '));
+  for(const s of [...M3_TEXTS(),...ms3Rows.map(r=>({id:r.id,text:r.front}))])
+    for(const word of msWords(s.text).map(w=>w.toLowerCase())){
+      assert(!banned.has(word),s.id+' 印尼语 '+word);
+      assert(!informal.has(word),s.id+' 口语 '+word);
+    }
+  for(const r of ms3Rows)for(const w of msWords(r.note).map(w=>w.toLowerCase()))
+    if(banned.has(w))assert(r.note.includes('印尼语作'),r.id);
+});
+test('任务 M3：每课六道语法或拼写与四道共用阅读题，答案可判',()=>{
+  for(const id of M3_LESSONS){
+    const l=api.LESSONS[id];assert.equal(l.exercises.length,10);
+    assert.equal(l.reading.questions.length,4);
+    assert.deepEqual(l.exercises.slice(6),l.reading.questions);
+    for(let i=0;i<4;i++)assert.strictEqual(l.exercises[i+6],l.reading.questions[i]);
+    assert(l.exercises.slice(0,6).every(q=>!q.prompt.startsWith('阅读')));
+    assert(l.exercises.slice(6).every(q=>q.prompt.startsWith('阅读')));
+    for(const q of l.exercises){
+      assert(q.prompt&&typeof q.answer==='string'&&q.answer.trim());
+      if(q.options){assert(q.options.includes(q.answer));assert.equal(new Set(q.options).size,q.options.length);}
+      if(q.prompt.includes('____'))assert(/[（(].+[）)]/.test(q.prompt),id+' 填空提示');
+    }
+  }
+});
+test('任务 M3：四篇课文均为 120–170 词、12–16 句且中文逐句完整',()=>{
+  for(const id of M3_LESSONS){
+    const r=api.LESSONS[id].reading,n=msWordCount(r.sentences);
+    assert(r.title);assert(n>=120&&n<=170,id+' '+n);
+    assert(r.sentences.length>=12&&r.sentences.length<=16,id);
+    for(const s of r.sentences)assert(s.text&&/[\u4e00-\u9fff]/.test(s.zh)&&/[.!?]$/.test(s.text));
+  }
+  assert.match(api.LESSONS['ms-12'].reading.title,/自测材料/);
+});
+test('任务 M3：八篇阅读线连续追加，周次、体裁、词数与句数符合各篇区间',()=>{
+  const ids=Object.keys(api.READINGS),start=ids.indexOf('ms-r15');
+  assert.equal(ids[start-1],'ms-r14');assert.deepEqual(ids.slice(start),M3_READINGS);
+  assert.deepEqual(Object.values(api.READINGS).filter(r=>r.lang==='ms').map(r=>r.id),Array.from({length:22},(_,i)=>'ms-r'+String(i+1).padStart(2,'0')));
+  const ranges=[[120,135,12,14],[120,140,13,15],[130,150,13,15],[125,145,12,14],[140,160,13,15],[130,150,12,14],[150,170,14,16],[150,170,14,16]];
+  const genres=['日常生活','对话','短故事','邮件','简单新闻','通知或广告','人物介绍','说明文'];
+  for(const [i,id] of M3_READINGS.entries()){
+    const r=api.READINGS[id],week=9+Math.floor(i/2),[min,max,smin,smax]=ranges[i];
+    assert.equal(r.id,id);assert.equal(r.lang,'ms');assert.equal(r.week,week);
+    assert.equal(r.afterLesson,'ms-'+String(week).padStart(2,'0'));assert.equal(r.genre,genres[i]);
+    assert(/[\u4e00-\u9fff]/.test(r.title));
+    assert.equal(r.words,msWordCount(r.sentences));assert(r.words>=min&&r.words<=max,id+' '+r.words);
+    assert(r.sentences.length>=smin&&r.sentences.length<=smax,id);
+    for(const s of r.sentences)assert(s.text&&/[\u4e00-\u9fff]/.test(s.zh)&&/[.!?][”"]?$/.test(s.text),id);
+    if(i%2)assert.notEqual(r.genre,api.READINGS[M3_READINGS[i-1]].genre);
+  }
+});
+test('任务 M3：阅读线三道阅读题、一道推断题、五个已学关键词与五行复述',()=>{
+  for(const id of M3_READINGS){
+    const r=api.READINGS[id],allowed=msVocabulary(r.afterLesson);
+    assert.equal(r.questions.length,4);
+    assert.equal(r.questions.filter(q=>q.prompt.startsWith('阅读')).length,3);
+    assert.equal(r.questions.filter(q=>q.prompt.startsWith('推断')).length,1);
+    for(const q of r.questions){assert(q.options.length>=3);assert(q.options.includes(q.answer));assert.equal(new Set(q.options).size,q.options.length);}
+    assert.equal(r.keyWords.length,5);assert.equal(new Set(r.keyWords.map(k=>k.word)).size,5);
+    const article=msWords(r.sentences.map(s=>s.text).join(' ')).map(w=>w.toLowerCase());
+    for(const k of r.keyWords){
+      assert(/[\u4e00-\u9fff]/.test(k.zh));
+      assert(msWords(k.word).every(w=>allowed.has(w.toLowerCase())),id+' '+k.word);
+      assert(article.includes(k.word.toLowerCase()),id+' 关键词须出现在本文 '+k.word);
+    }
+    assert.equal(r.retell.length,5);assert(r.retell.every(s=>/[\u4e00-\u9fff]/.test(s)));
+  }
+});
+test('任务 M3：所有新例句、课文、阅读线及讲解例句不超课次词汇范围',()=>{
+  const misses=M3_TEXTS().flatMap(s=>msVocabularyMisses(s.lesson,[s]).map(m=>({...m,lesson:s.lesson})));
+  assert.deepEqual(misses,[]);
+});
+test('任务 M3：后缀及被动按周开放，组合拼写、双 k、后附与反例受约束',()=>{
+  for(const [root,form,week] of [
+    ['masuk','memasukkan',9],['beli','membelikan',9],['letak','meletakkan',9],
+    ['kunjung','mengunjungi',10],['tempat','menempati',10],
+    ['baca','dibaca',11],['masuk','dimasukkan',11],['kunjung','dikunjungi',11],
+    ['buka','terbuka',12],['angkat','terangkat',12],['tulis','tertulis',12]
+  ]){
+    assert(!msForms(root,week-1).has(form),form+' 提前开放');
+    assert(msForms(root,week).has(form),form+' 未推导');
+  }
+  assert(msForms('masuk',11).has('dimasukkannya'));
+  assert(msForms('tulis',11).has('ditulisnya'));
+  assert(msForms('menyusun',11).has('disusun'));
+  assert(msForms('menyelesaikan',12).has('selesaikan'));
+  assert(msForms('mengunjungi',12).has('kunjungi'));
+  for(const [root,bad] of [
+    ['masuk','memasukan'],['letak','meletakan'],['menulis','dimenulis'],
+    ['masuk','memasukkani'],['masuk','memasukikan'],['memasukkan','memasukkankan'],
+    ['baca','pembaca'],['bantu','bantuan'],['sihat','kesihatan'],['rumah','serumah'],
+    ['kaji','mengkaji'],['punya','mempunyai']
+  ])assert(!msForms(root,12).has(bad),bad+' 不应推导');
+  assert(msVocabulary('ms-09').has('mengkaji'),'已学例外整词仍允许');
+  assert(!msVocabulary('ms-09').has('mengunjungi'),'未来词不可提前');
+  assert(msVocabularyMisses('ms-10',[{text:'Buku itu dibaca oleh Ali.'}]).length);
+  assert(msVocabularyMisses('ms-11',[{text:'Pintu itu terbuka.'}]).length);
+  assert(msVocabularyMisses('ms-09',[{text:'Memasuki muzium.'}]).length,'大写句首不能绕过');
+});
+test('任务 M3：新 meN- 词缀注释与实际词形一致，特殊形式按整词学习',()=>{
+  for(const r of ms3Rows.filter(r=>r.note.startsWith('meN- + '))){
+    const m=r.note.match(/^meN- \+ ([a-z]+)(?: \+ -(kan|i))? → ([a-z]+)/);
+    assert(m,r.id);
+    const [,root,suffix='',front]=m;assert.equal(front,r.front,r.id);
+    if(r.note.includes('特殊形式')){
+      assert.equal(front,'mengetahui');assert.match(r.note,/整词记忆/);continue;
+    }
+    assert.equal(msMenForm(root)+suffix,front,r.id);
+    assert(msForms(root,Number(r.lesson.slice(3))).has(front),r.id);
+    const rule=msMenRule(root);
+    assert(r.note.includes(rule.prefix),r.id);
+    if(!rule.keep)assert(r.note.includes(root[0]+' 脱落'),r.id);
+    if(rule.keep)assert(r.note.includes('保留'),r.id);
+  }
+});
+test('任务 M3：二十张 di- 卡注明已学或规则可推导的主动形',()=>{
+  const rows=ms3Rows.filter(r=>r.lesson==='ms-11'&&r.tags.includes('di- 被动'));
+  const allowed=msVocabulary('ms-10');assert.equal(rows.length,20);
+  for(const r of rows){
+    const active=r.note.match(/主动形 ([a-z]+)/)?.[1];
+    const stem=r.note.match(/^di- \+ ([a-z]+)(?: \+ -(kan|i))?/);
+    assert(active&&stem,r.id);
+    assert(allowed.has(active),r.id+' 主动形未学 '+active);
+    assert.equal(r.front,'di'+stem[1]+(stem[2]||''),r.id);
+    assert.equal(active,msMenForm(stem[1])+(stem[2]||''),r.id);
+  }
+});
+test('任务 M3：讲解 HTML 闭合、中文提纲、自查和各周语法与自测完整',()=>{
+  const required=[
+    ['membesarkan','menjalankan','memasukkan','membelikan','membuatkan','memberikan','mengatakan','menggunakan','menyediakan','menjelaskan','menyebabkan','mendapatkan','meletakkan','kk','12-06 月度检查点 3','探索段自测','50 词'],
+    ['mengunjungi','memasuki','menaiki','menyukai','mencintai','menghadiri','mengikuti','menyertai','memiliki','mengetahui','mendatangkan','mendatangi','menjauhkan','menjauhi','menempatkan','menempati','不能同时'],
+    ['di- + 词根','oleh','施事可以省略','diberikan','dikunjungi','前缀 di- 连写','介词 di 分写','新闻','说明文','主动转被动'],
+    ['Buku itu saya baca.','Surat ini awak tulis?','Buku itu belum saya baca.','terjatuh','tertidur','terlupa','terangkat','terbaca','terbuka','tertutup','最高级义留到 ms-16','第 5–11 周','80 词','阅读复述']
+  ];
+  for(const [i,id] of M3_LESSONS.entries()){
+    const l=api.LESSONS[id],markup=l.explanation(),stack=[];
+    for(const m of markup.matchAll(/<(\/?)([a-z][a-z0-9]*)(?:\s[^>]*)?>/gi)){
+      if(voidTags.has(m[2]))continue;
+      if(m[1])assert.equal(stack.pop(),m[2],id);else stack.push(m[2]);
+    }
+    assert.equal(stack.length,0);assert(!/<script|\bon\w+=|javascript:/i.test(markup));
+    const nodes=msWalk(parseNodes(markup));
+    assert(nodes.filter(n=>n.tag==='h4').length>=7);
+    assert(ms3LangSentences(l).length>=3);
+    assert(nodes.some(n=>n.tag==='ol'&&n.querySelectorAll('li').length===5));
+    assert(nodes.some(n=>n.tag==='ul'&&n.querySelectorAll('li').length>=4));
+    assert(markup.includes('名词短语')&&markup.includes('词缀拼写')&&markup.includes('自查'));
+    for(const s of required[i])assert(markup.includes(s),id+' '+s);
+    for(const p of nodes.filter(n=>n.tag==='p'&&n.getAttribute('lang')==='ms')){
+      const parent=nodes.find(n=>n.childNodes.includes(p)),next=parent.childNodes[parent.childNodes.indexOf(p)+1];
+      assert(next instanceof ElementModel&&/[\u4e00-\u9fff]/.test(next.textContent),id+' 中文跟随例句');
+    }
+  }
+  const table=msWalk(parseNodes(api.LESSONS['ms-12'].explanation())).find(n=>n.tag==='table');
+  assert.equal(table.querySelectorAll('tr').length,8);
+  for(let week=5;week<=11;week++)assert(table.querySelectorAll('tr').some(r=>r.querySelector('td')?.textContent===String(week)));
+});
+test('任务 M3：旧 ms／es／ru 及其他语言原行原序保留，cards 与 log 不变',()=>{
+  const oldMs=plain(api.parseCSV(M3_OLD_MS_CSV));
+  const csvText=fs.readFileSync(path.join(__dirname,'cards/ms.csv'),'utf8');
+  const csvLines=new Map(csvText.trimEnd().split('\n').slice(1).map(line=>[line.split(',')[0],line]));
+  for(const line of M3_OLD_MS_CSV.trimEnd().split('\n').slice(1))assert.equal(csvLines.get(line.split(',')[0]),line);
+  assert.deepEqual(initialRows.filter(r=>r.lang==='ms').slice(0,640),oldMs);
+  const rawRows=[...blocks[0][1].matchAll(/\n  \{\n[\s\S]*?\n  \}/g)].map(m=>m[0].slice(1));
+  assert.equal(rawRows.length,initialRows.length);
+  const rawById=new Map(rawRows.map(raw=>[JSON.parse(raw).id,raw]));
+  const oldRows=initialRows.slice(0,initialRows.findIndex(r=>r.id==='ms-0641'));
+  assert.equal(oldRows.length,5077);
+  for(const lang of ['es','ru','ms','uz','kk']){
+    const csv=lang==='ms'?oldMs:plain(api.parseCSV(fs.readFileSync(path.join(__dirname,'cards',lang+'.csv'),'utf8')));
+    assert.deepEqual(oldRows.filter(r=>r.lang===lang),csv,lang+' 旧行原序');
+    for(const r of csv)assert.equal(rawById.get(r.id),JSON.stringify([r],null,2).slice(2,-2),r.id+' 原始行');
+  }
+  assert.deepEqual({cards:initialState.cards,log:initialState.log},M3_OLD_PROGRESS);
+});
+test('任务 M3：渲染四课八篇、课内作答和中文开关均不改变用户进度或缓存',()=>{
+  const {api:a,document,cache}=createAPI(true,html);a.initialize();
+  const before=plain(a.getData().state),beforeRows=plain(a.getData().rows),dirty=a.getData().dirty,cacheBefore=[...cache.entries()];
+  for(const id of M3_LESSONS){
+    a.openLesson(id);
+    const page=document.getElementById('content').textContent;
+    for(const field of ['name','dates','dailyTime','goal','writingTask'])assert(page.includes(a.LESSONS[id][field]),id+' '+field);
+    assert.equal(document.querySelectorAll('[data-exercise]').length,10);
+    for(const form of document.querySelectorAll('[data-exercise]')){
+      form.elements.answer.value=a.LESSONS[id].exercises[Number(form.dataset.exercise)].answer;
+      document.getElementById('app').listeners.submit[0]({target:form,preventDefault(){}});
+    }
+  }
+  a.showReadings();
+  assert.deepEqual(document.querySelectorAll('[data-reading]').map(n=>n.dataset.reading).filter(id=>M3_READINGS.includes(id)),M3_READINGS);
+  for(const id of M3_READINGS){
+    a.openReadingItem(id);
+    assert(document.getElementById('content').textContent.includes(a.READINGS[id].title));
+    assert.equal(document.querySelectorAll('[data-question]').length,4);
+    const zh=()=>document.querySelectorAll('details').filter(n=>n.querySelector('summary')?.textContent==='查看本句中文');
+    assert.equal(zh().length,a.READINGS[id].sentences.length);
+    assert(zh().every(n=>n.getAttribute('open')===null));
+    a.toggleReadingZh();assert(zh().every(n=>n.getAttribute('open')!==null));a.toggleReadingZh();
+
+  }
+  assert.deepEqual(plain(a.getData().state),before);assert.deepEqual(plain(a.getData().rows),beforeRows);
+  assert.equal(a.getData().dirty,dirty);assert.deepEqual([...cache.entries()],cacheBefore);
 });
